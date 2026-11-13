@@ -1,0 +1,30 @@
+\origpage{167}{GRAPH MINORS, XVII}
+\textit{Proof.} $E(A_1 \cap A_2) = \emptyset$ from \textbf{(P1)}. For $i = 1, 2$, let $X_i = \bigcup (\tilde{c} : c \in I_i)$ and let
+\begin{equation*}
+Y_i = \bigcup (\tilde{c} : c \in I_i \text{ is a border cell}).
+\end{equation*}
+We must show that
+\begin{equation*}
+V(A_1 \cap A_2) = \gamma(X_1 \cap X_2) \cup \bigcup (\beta(n) : n \in Y_1 \cap Y_2).
+\end{equation*}
+\hspace*{12pt}(1) $\gamma(X_1 \cap X_2) \subseteq V(A_1 \cap A_2)$.
+
+\textit{Subproof.} Let $n \in X_1 \cap X_2 \cap dom(\gamma)$, and choose $c_1 \in I_1$, $c_2 \in I_2$ with $n \in \tilde{c}_1 \cap \tilde{c}_2$. By \textbf{(P2)}, $\gamma(n) \in V(\alpha(c_1)) \cap V(\alpha(\delm{C_2}\fix{c_2})) \subseteq V(A_1 \cap A_2)$, as required.\fixnote{fix:2.1-claim1}{The cell $c_2$ is meant.}
+
+\hspace*{12pt}(2) $\bigcup (\beta(n) : n \in Y_1 \cap Y_2) \subseteq V(A_1 \cap A_2)$.
+
+\textit{Subproof.} Let $n \in Y_1 \cap Y_2$, and choose border cells $c_1 \in I_1$, $c_2 \in I_2$, with $n \in \tilde{c}_1 \cap \tilde{c}_2$. Then from \textbf{(P3)}, $\beta(n) \subseteq V(\alpha(c_1)) \cap V(\alpha(c_2)) \subseteq V(A_1 \cap A_2)$ as required.
+
+\hspace*{12pt}(3) $V(A_1 \cap A_2) \subseteq \gamma(X_1 \cap X_2) \cup \bigcup (\beta(n) : n \in Y_1 \cap Y_2)$.
+
+\textit{Subproof.} Let $v \in V(A_1 \cap A_2)$. Choose $c_1 \in I_1$, $c_2 \in I_2$ with $v \in V(\alpha(c_1)), V(\alpha(c_2))$, and choose them, moreover, such that as many of $c_1, c_2$ as possible are border cells. Now if $v \in \gamma(\tilde{c}_1) \cap \gamma(\tilde{c}_2)$ then since $\gamma$ is an injection it follows that $v = \gamma(n)$ for some $n \in \tilde{c}_1 \cap \tilde{c}_2 \cap dom(\gamma) \subseteq X_1 \cap X_2 \cap dom(\gamma)$ as required. Thus, from the symmetry, we may assume that $v \notin \gamma(\tilde{c}_1)$. But
+\begin{equation*}
+v \in V(\alpha(c_1) \cap \alpha(c_2)) \subseteq V(\alpha(c_1) \cap \alpha(-c_1))
+\end{equation*}
+and so from \textbf{(P5)}, $c_1$ is a border cell, and by \textbf{(P6)}, there exists $n_1 \in \tilde{c}_1$ with $v \in \beta(n_1)$. Let $c_1$ border a cuff $\Theta$. Suppose first that $c_2$ does not border $\Theta$. Then since
+\begin{equation*}
+v \in V(\alpha(c_2) \cap \alpha(-c_2)) \cap \beta(n_1)
+\end{equation*}
+it follows from \textbf{(P5)}, \textbf{(P6)}, and \textbf{(P7)} that $v = \gamma(n)$ for some $n \in \tilde{c}_2 \cap dom(\gamma)$. By \textbf{(P4)}, $n$ borders $\Theta$ and so $c_2$ is internal; let $c$ be a cell bordering $\Theta$ with $n \in \tilde{c}$.
+
+From our initial choice of $c_1, c_2$ it follows that $c \notin I_2$, and so $c \in I_1$. But then $n \in \tilde{c} \delm{\cup}\fix{\cap} \tilde{c}_2 \subseteq X_1 \cap X_2$\fixnote{fix:2.1-claim3}{Here $n$ is in both $\tilde{c}$ and $\tilde{c}_2$, and the union is not a subset of $X_1 \cap X_2$.} as required. We may assume then that $c_2$ does border $\Theta$. Since $v \in V(\alpha(c_2) \cap \alpha(-c_2))$, it follows from \textbf{(P6)} that $v \in \beta(n_2 +)$ for some $n_2 \in \tilde{c}_2$. Since $c_1 \in I_1$ and $c_2 \in I_2$, there exist nodes $n_3, n_4$ bordering $\Theta$ such that $c_1, n_3, c_2, n_4$ are in order and $n_3$ and $n_4$ are both in $Y_1 \cap Y_2$. Since $n_1, n_3, n_2, n_4$ are in order and $v \in \beta(n_1) \cap \beta(n_2 +)$, it follows from \textbf{(P6)} that $v \in \beta(n_3 +) \cup \beta(n_4 +)$.

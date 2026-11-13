@@ -1,0 +1,34 @@
+\origpage{9}{}
+\textbf{3.2} \textit{With $\mathcal{T}, \theta, G, W$ as above, $\mathcal{T} \setminus W$ is a tangle of order $\theta - |W|$ in $G \setminus W$.}
+
+[13, theorem (2.9)] asserts
+
+\textbf{3.3} \textit{Let $\mathcal{T}$ be a tangle in a graph $G$, and let $(C, D) \in \mathcal{T}$ of order $0$. Let}
+\begin{equation*}
+\mathcal{T}' = \{(A \cap D, B \cap D) : (A, B) \in \mathcal{T}\}.
+\end{equation*}
+\textit{Then $\mathcal{T}'$ is a tangle in $\delm{B}\fix{D}$ of the same order as $\mathcal{T}$.}\fixnote{fix:3.3}{Here $B$ is a bound variable inside the definition of $\mathcal{T}'$. Each pair $(A \cap D, B \cap D)$ is a pair of subgraphs of $D$ with union $D$, so $\mathcal{T}'$ is a tangle in $D$.}
+
+From [13, theorem (2.3)] or theorem (6.1) of [6] we have
+
+\textbf{3.4} \textit{Let $G'$ be a subgraph of $G$, and let $\mathcal{T}'$ be a tangle in $G'$. Let $\mathcal{T}$ be the set of all separations $(A, B)$ of $G$ of order $< ord(\mathcal{T}')$ such that $(A \cap G', B \cap G') \in \mathcal{T}'$. Then $\mathcal{T}$ is a tangle in $G$ of order $ord(\mathcal{T}')$.}
+
+We also need the following.
+
+\textbf{3.5} \textit{Let $\mathcal{T}$ be a tangle in $G$ and let $(A_0, B_0) \in \mathcal{T}$. Then there is a tangle $\mathcal{T}_0$ in $B_0$ of order $ord(\mathcal{T}) - |V(A_0 \cap B_0)|$, such that $(A \cap B_0, B \cap B_0) \in \mathcal{T}_0$ for every $(A, B) \in \mathcal{T}$ of order $< ord(\mathcal{T}) - |V(A_0 \cap B_0)|$.}
+
+\textbf{Proof.} Let $ord(\mathcal{T}) = \theta$, and let $V(A_0 \cap B_0) = W$, where $|W| < \theta$. Then $\mathcal{T} \setminus W$ is a tangle in $G \setminus W$ of order $\theta - |W|$, by (3.2), and $(A_0 \setminus W, B_0 \setminus W) \in \mathcal{T} \setminus W$, and has order $0$. Let
+\begin{equation*}
+\mathcal{T}_1 = \{(A \cap (B_0 \setminus W), B \cap (B_0 \setminus W)) : (A, B) \in \mathcal{T} \setminus W\}.
+\end{equation*}
+By [13, theorem (2.9)], $\mathcal{T}_1$ is a tangle in $B_0 \setminus W$ of order $\theta - |W|$. Let $\mathcal{T}_0$ be the tangle of order $\theta - |W|$ in $B_0$ induced by $\mathcal{T}_1$; this exists, by (3.4). We claim that $\mathcal{T}_0$ satisfies the theorem.
+
+For let $(A, B) \in \mathcal{T}$ with order $< \theta - |W|$. Let $A'$ be the subgraph of $G$ with $E(A') = E(A)$ and $V(A') = V(A) \cup W$, and define $B'$ similarly. Then $(A', B')$ has order $< \theta$, and so $(A', B') \in \mathcal{T}$, by theorem (2.9) of [6]. Consequently, $(A' \setminus W, B' \setminus W) \in \mathcal{T} \setminus W$. From the definition of $\mathcal{T}_1$,
+\begin{equation*}
+((A' \setminus W) \cap (B_0 \setminus W), (B' \setminus W) \cap (B_0 \setminus W)) \in \mathcal{T}_1.
+\end{equation*}
+But $(A' \setminus W) \cap (B_0 \setminus W) = (A \cap B_0) \setminus W$, and $(B' \setminus W) \cap (B_0 \setminus W) = (B \cap B_0) \setminus W$, and so $((A \cap B_0) \setminus W, (B \cap B_0) \setminus W) \in \mathcal{T}_1$, that is,
+\begin{equation*}
+((A \cap B_0) \cap (B_0 \setminus W), (B \cap B_0) \cap (B_0 \setminus W)) \in \mathcal{T}_1.
+\end{equation*}
+Since $(A \cap B_0, B \cap B_0)$ is a separation of $B_0$ of order $< \theta - |W|$, we deduce from the definition of $\mathcal{T}_0$ that $(A \cap B_0, B \cap B_0) \in \mathcal{T}_0$, as required. $\square$

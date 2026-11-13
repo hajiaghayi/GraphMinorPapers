@@ -1,0 +1,50 @@
+\origpage{60}{ROBERTSON AND SEYMOUR}
+\noindent Choose an integer $N\ge 0$, maximum such that there exist
+$X_0, X_1,..., X_N\subseteq V(G)$, disjoint, with the following properties:
+\stmt
+\hspace*{12pt}(X1)\quad$\rho(G)\in X_0$, \textit{and $G\,|\,X_0$ rooted at $\rho(G)$ has a rooted minor
+isomorphic to $H$};
+
+\hspace*{12pt}(X2)\quad\textit{for $1\le i\le N$, $G\,|\,X_i$ has a minor isomorphic to $\mathbf{Y}_{\gamma-1}$.}
+\stmt
+Now all vertices of $\mathbf{Y}_{\gamma-1}$ have valency ${\le}3$, and so for $1\le i\le N$, $G\,|\,X_i$ has
+a subgraph $B_i$ which is isomorphic to a subdivision of $\mathbf{Y}_{\gamma-1}$. Moreover,
+$G\,|\,X_0$ has a subgraph $B_0$ which consists of a subgraph $H'$ isomorphic to a
+subdivision of $H$, together with a path from $\rho(G)$ to the vertex of $H'$
+corresponding to the root of $H$, such that the path has only this vertex in
+common with $H'$.
+
+Clearly we may assume that $X_i=V(B_i)$ $(0\le i\le N)$. Suppose that there
+exists $J\subseteq\{1,..., N\}$ with $|J|=\delta\cdot 2^\gamma$, and disjoint paths $P_j(j\in J)$ of $G$, such
+that
+\stmt
+\hspace*{12pt}(i)\enspace for each $j\in J$, $P_j$ has one end in $X_j$ and the other in $X_0$;
+
+\hspace*{12pt}(ii)\enspace for each $j\in J$, $P_j$ has no interior vertex in $X_0\cup\bigcup_{j'\in J}X_{j'}$.
+\stmt
+\noindent Now $B_0$ has only $2^\gamma$ vertices distinct from $\rho(G)$ of valency 1, and $B_0$ is a tree;
+and so there are paths $Q_1,..., Q_{2^\gamma}$ of $B_0$, each from $\rho(G)$ to some vertex of
+valency 1 distinct from $\rho(G)$, such that every vertex of $B_0$ is used by at least
+one of $Q_1,..., Q_{2^\gamma}$. It follows that there exists $J'\subseteq J$ with $|J'|=\delta$ $(=2^{-\gamma}|J|)$
+such that for some $i$ $(1\le i\le 2^\gamma)$, all the paths $P_j$ $(j\in J')$ have their terminal
+vertices on $Q_i$. But then $G$ has a rooted minor isomorphic to $P(\gamma, \delta)$, as can
+be seen by deleting all vertices except those in $Q_i$ and $P_j$ and $B_j$ $(j\in J')$, and
+for each $j\in J'$ contracting all edges of $P_j$ except one. Thus there there is no
+such $J$.
+
+By (2.9) (setting $V'=X_0$, $r=\delta\cdot 2^\gamma$, and $n=N$) we deduce that there
+exists $X\subseteq V(G)$ and $J\subseteq\{1,..., N\}$ with $|X|+|J|\le\Omega$, where $\Omega=\alpha^{\delta\cdot 2^\gamma}$ (and
+$\alpha=2^{\theta^4}$, as before), such that $X$ separates $X_0$ from $X_j$ for every
+$j\in\{1,..., N\}-J$. To complete the argument for Part 3, it suffices to show
+that every component of $G\backslash X$ has path-width ${\le}\max(p(\gamma, \delta-1),
+q(\gamma, 3\Omega+6))$, by (3.6)(iv), (1.4), and (1.5). Thus, let $C$ be a component of
+$G\backslash X$. There are two cases.
+\stmt
+(5.1). \textit{If $X_0$ does not contain any vertex of $C$, then $C$ has path-width
+${\le}p(\gamma, \delta-1)$.}
+\stmt
+Let $P$ be a minimal path in $G$ from $V(C)$ to $X_0$. Then $P$ has at least one
+edge, and no interior vertex in $V(C)\cup X_0$. Let $v$ be the vertex of $C$ on $P$.
+Root $C$ at $v$. Suppose that $C$ has a rooted minor isomorphic to $P(\gamma, \delta-1)$.
+Then $G$ has a rooted minor isomorphic to $P(\gamma, \delta)$, as can be seen by
+contracting all edges of $P$ except one and contracting one ``half'' of $B_0$,

@@ -1,0 +1,32 @@
+\origpage{104}{N. Robertson, P. Seymour / Journal of Combinatorial Theory, Series B 89 (2003) 77--108}
+\noindent tree-decomposition. Hence
+\begin{equation*}
+V(\tau \times T^{f_1}) \cap V(\tau \times T^{f_2}) \subseteq V(\tau(t)) \cap V(\tau \times T^{f_2}) \subseteq \bar{\pi}(\tau \times T^{f_2}),
+\end{equation*}
+and so $\tau \times T^{f_1} \subseteq \tau \times T^t \setminus \tau \times T^{f_2}$. This proves (2).
+
+\hspace*{12pt}(3) \textit{If $f_0, f_1 \in E(T)$ and the head of $f_0$ equals the tail of $f_1$, let $G_0 = \tau \times (T, \delm{f}\fix{f_0})$\fixnote{fix:6.5-claim3-f0}{Claim (3) is about the edges $f_0$ and $f_1$, and $f$ is not defined here.}; then $\tau \times T^{f_1} \subseteq G \setminus G_0$ and $G_0 \subseteq G \setminus \tau \times T^{f_1}$.}
+
+\del{The proof of (3) is very similar to that of (2) and we leave it to the reader.} \fix{\textbf{Subproof.} Let $t$ be the head of $f_0$, which is the tail of $f_1$. Then $T^{f_1} \subseteq T^t = T^{f_0}$, and so $(\tau \times T^{f_1})^- \subseteq (\tau \times T^{f_0})^-$. By 6.5.2, $G \setminus G_0$ is the rooted hypergraph $H$ with $H^- = (\tau \times T^{f_0})^-$, and so $\tau \times T^{f_1} \subseteq G \setminus G_0$. For the second statement, $T_{f_0}$ consists of the vertices of $T$ not in $T^{f_0}$, and $T_{f_1}$ of those not in $T^{f_1}$; since $V(T^{f_1}) \subseteq V(T^{f_0})$, every vertex of $T_{f_0}$ belongs to $T_{f_1}$. Hence $G_0^- = (\tau \times T_{f_0})^- \subseteq (\tau \times T_{f_1})^-$. By 6.5.1, $G \setminus \tau \times T^{f_1} = \tau \times T_{f_1}$, and so $G_0 \subseteq G \setminus \tau \times T^{f_1}$. This proves (3).}\fixnote{fix:6.5-claim3-proof-added}{The paper leaves the proof of (3) to the reader. The argument above is the one used in the formalization.}
+
+Now we complete the proof of 6.5.3. By (1) and (2), $\mathscr{L}$ is a rooted location in $\tau \times T^t$. By 6.5.1 and 6.5.2, all members of $\mathscr{L}^*$ are complemented in $G$. If $i, j \in \{1, \dots, n\}$ and $i \ne j$ then
+\begin{equation*}
+\tau \times T^{f_i} \subseteq \tau \times T_{f_j} = G \setminus \tau \times T^{f_j}
+\end{equation*}
+by 6.5.1. If $i \in \{1, \dots, n\}$ then $\tau \times (T, f_0) \subseteq G \setminus \tau \times T^{f_i}$ by (3), and
+\begin{equation*}
+(\tau \times T^{f_i})^- \subseteq (\tau \times T^{f_0})^- = (G \setminus \tau \times T^{f_0})^-
+\end{equation*}
+by 6.5.2. Hence $\mathscr{L}^*$ is a rooted location in $G$.
+
+To prove that $M(\tau \times T^t, \mathscr{L}) = M(G, \mathscr{L}^*)$, we observe first that by 6.5.1, $G \setminus \tau \times T^{f_i} = \tau \times T_{f_i}$ for $1 \le i \le n$, and by 6.5.2, $(G \setminus \tau \times (T, f))^- = (\tau \times T^t)^-$, and so
+\begin{equation*}
+M(G, \mathscr{L}^*) = (\tau \times T^t)^- \cap \bigcap_{i=1}^n (\tau \times T_{f_i})^-.
+\end{equation*}
+By (1), this is equal to $M(\tau \times T^t, \mathscr{L})$. This proves 6.5.3, and hence completes the proof of 6.5. $\square$
+
+Let $P = (G, \mu, \Delta, \phi)$ be a rootless $\Omega$-patchwork, and let $(T, \tau)$ be a tree-decomposition of $G^-$. If $(P, \mathscr{L})$ is an $\Omega$-place such that $\mathscr{L}^-$ is the location of $t_0$ in $(T, \tau)$ for some $t_0 \in V(T)$, we call the heart of $(P, \mathscr{L})$ a \textit{piece of} $P$ (\textit{at} $t_0$, \textit{under} $(T, \tau)$). For each $t_0 \in V(T)$, there is at least one piece of $P$ at $t_0$, and in general there are many, because of the arbitrary choices of the marches $\pi(A) (A \in \mathscr{L})$.
+
+\textbf{6.6.} \textit{Let $\Omega$ be a well-quasi-order, and let $\mathscr{C}$ be a well-behaved class of rootless partial $\Omega$-patchworks. Let $\mathscr{C}'$ be the class of all rootless, robust $\Omega$-patchworks $P$ such that there is a rotund, proper tree-decomposition of $\|P\|$ under which all pieces of $P$ belong to $\mathscr{C}$. Then $\mathscr{C}'$ is well-quasi-ordered by simulation.}
+
+\textbf{Proof.} Let $P = (G, \mu, \Delta, \phi) \in \mathscr{C}'$. From the definition of $\mathscr{C}'$ there exist an arborescence $T$ and a rotund, proper tree-decomposition $(T^-, \sigma)$ of $G^-$ such that all pieces of $P$ under $(T^-, \sigma)$ belong to $\mathscr{C}$. By 6.4 we may choose a rooted decomposition $(T, \tau)$ of $P$ such that $\tau(t)^- = \sigma(t)$ for each $t \in V(T)$ and consequently $\sigma = \tau^-$. Let $\mathscr{C}^*$ be the union of $\mathscr{C}$ and the class of all rootings of members of $\mathscr{C}$.

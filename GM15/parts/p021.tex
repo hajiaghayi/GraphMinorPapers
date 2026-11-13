@@ -1,0 +1,28 @@
+\origpage{132}{ROBERTSON AND SEYMOUR}
+Since $bd(\Sigma) = \emptyset$ and $H'''$ is non-null, it follows that $H'''$ is 2-cell. This proves (8).
+
+\hspace*{12pt}(9) \textit{Every component of $\eta'(M_1)$ meets $\eta(L_1)$, and every component of $\eta''(M_2)$ meets $\eta'(L_2) = \eta(L_2)$.}
+
+\textit{Subproof.} Let $C$ be a component of $M_1$ (so $\eta'(C)$ is a component of $\eta'(M_1)$). Now $M_1 \ne H'$ since $L_2$ is not null by (7), and since $H'$ is 2-cell and hence connected and $Z_1 \cap Z_2 = \emptyset$, there is a vertex $x \in V(M_1)$ incident with an edge $e$ of $H'$ not in $E(M_1)$, and with its other end not in $V(M_1)$. Then $e \in E(H)$, and so $x \in V(H)$, and since $x \in Z_1$ it follows that $x \in V(L_1)$. Moreover, $\eta(x) = \eta'(x)$ (because $\eta(e) = \eta'(e)$ and $\eta(y) = \eta'(y)$ where $e$ has ends $x, y$). Hence $\eta(x) \in V(\eta'(C)) \cap V(\eta(L_1))$, and so $\eta'(C)$ meets $\eta(L_1)$, as required. The argument for $\eta''(M_2)$ is similar. This proves (9).
+
+Let $X_1$ be the union of $V(\eta(L_1)) \cup V(\eta'(M_1))$ with the set
+\begin{equation*}
+\{\eta(x) : x \in V(H) \text{ and } d(\sigma_1, x) < \mu \text{ for some } \sigma_1 \in Z_1\}.
+\end{equation*}
+Let $X_2$ be the union of $V(\eta(L_2)) \cup V(\eta''(M_2))$ with
+\begin{equation*}
+\{\eta(x) : x \in V(H) \text{ and } d(\sigma_2, x) < \mu \text{ for some } \sigma_2 \in Z_2\}.
+\end{equation*}
+Then $X_1, X_2 \subseteq V(G)$.
+
+\hspace*{12pt}(10) \textit{Every path of $G$ from $X_1$ to $X_2$ has an internal vertex or edge in $\eta(H)$.}
+
+\textit{Subproof.} Suppose that some path of $G$ from $X_1$ to $X_2$ has no internal vertex or edge in $\eta(H)$. By (9), there is an $\eta(H)$-path with ends $\eta(t_1), \eta(t_2)$ where $d(\sigma_i, t_i) \le \mu$ for some $\sigma_i \in Z_i$ ($i = 1, 2$). Since $H, \eta, \mathcal{T}$ is $(0, \mu)$-flat by (5.1), it follows that $d(t_1, t_2) < \mu$, and so $d(\sigma_1, \sigma_2) < 3\mu \le \lambda - 2\lambda_1 - \lambda_2$ contrary to (6). This proves (10).
+
+It follows from (10) that $\eta(L_1)$ is disjoint from $\eta''(M_2)$. For each vertex or edge $x$ of $H_1$, define $\eta'''(x) = \eta(x)$ unless $x$ belongs to $M_2$, when $\eta'''(x) = \eta''(x)$. Then $\eta'''$ is an isomorphism from $H'''$ to the subgraph $\eta(H_0) \cup \eta(L_1) \cup \eta''(M_2)$ of $G$.
+
+\hspace*{12pt}(11) \textit{$a \in A(H''')$ for every $a \in A(H)$ with $d(z_2, a) > \lambda_2$, and for every vertex or edge $x$ of $H'''$, if $d(z_2, x) > \lambda_2$ then $\eta'''(x) = \eta(x)$.}
+
+\textit{Subproof.} If $a \in A(H)$ with $d(z_2, a) > \lambda_2$, then $a \cap Z_2 = \emptyset$ by (5), and so $a \in A(H''')$. The second claim follows similarly.
+
+Let $\mathcal{T}'''$ be the (unique, by (4.5)) $(4\lambda_2 + 2)$-compression of $\mathcal{T}$ in $H'''$. Then from (4.6), (8) and (11), we have

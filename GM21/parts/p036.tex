@@ -1,0 +1,23 @@
+\origpage{34}{}
+From (P4), there exists $u^* \in V(\Gamma) \cap C$ with $v \notin V(\mu(u^*))$. Let $F_i$ be the support in $C$ with ends $u_i$ and $u^*$ which does not include $s^*$ ($i = 1, 2$). For $i = 1, 2$ let $\delta_i$ be the set of all edges $e$ incident with $v$ such that $e \in E(\mu(s))$ for some space $s \subseteq F_i \cap (F_1^* \cup \dots \cup F_r^*)$. Then $\delta_1 \cap \delta_2 = \emptyset$, for by (P2) there is only one space $s \subseteq C$ with $e \in E(\mu(s))$; and $\delta_1 \cup \delta_2$ is the set of all edges of $G$ incident with $v$, because by (P1) $e$ is an edge of $\mu(s)$ for some space $s \subseteq C \cap (F_1^* \cup \dots \cup F_r^*)$. Let $G'$ be obtained from $G$ by splitting $v$ according to $\delta_1, \delta_2$, and let the two new vertices of $G'$ be $v_1, v_2$ where the edges in $\delta_i$ are incident with $v_i$ ($i = 1, 2$). For $i = 1, 2$, and for each subgraph $A$ of $G$ with $v \in V(A)$, let $\sigma_i(A)$ be the graph with the same set of edges as $A$, and with vertex set $(V(A) \setminus \{v\}) \cup \{v_i\}$, with the same incidence relation as $A$ except that the edges of $A$ that are incident with $v$ in $A$ are incident with $v_i$ in $\sigma_i(A)$. Then $\sigma_i(A)$ is a subgraph of $G'$ provided that $\delta_i$ contains all edges of $A$ incident with $v$. Define $\mu'$ by:
+\begin{align*}
+\mu'(u) &= \mu(u) \text{ if } \delm{v}\fix{u} \in V(\Gamma) \cap bd(\Sigma) \text{ and } v \notin V(\mu(u))\fixmark{fix:8-mu} \\
+\mu'(u) &= \sigma_i(\mu(u)) \text{ if } \delm{v}\fix{u} \in V(\Gamma) \cap F_i \text{ and } v \in V(\mu(u))\ (i = 1, 2) \\
+\mu'(s) &= \mu(s) \text{ if } s \text{ is a space with } s \subseteq F_1^* \cup \dots \cup F_r^* \text{ and } v \notin V(\mu(s)) \\
+\mu'(s) &= \sigma_i(\mu(s)) \text{ if } s \text{ is a space with } s \subseteq (F_1^* \cup \dots \cup F_r^*) \cap F_i \text{ and } v \in V(\mu(s))\ (i = 1, 2).
+\end{align*}
+\fixnotetext{A misprint: in the first two cases the condition is on $u$. The vertex $v$ is the one being split, and $v \notin V(\Gamma)$, as the proof of (8.2) shows, so the first two cases as printed never apply.}%
+\textbf{8.2} \textit{$\delm{\Sigma}\fix{\Gamma}, F_1^*, \dots, F_r^*, \mu'$ is a pseudo-presentation of $G'$.}\fixnote{fix:8.2}{A pseudo-presentation starts with a drawing, as in (8.3), which says ``suppose that $\Gamma, F_1^*, \dots, F_r^*, \mu$ is a pseudo-presentation''.}
+
+\textbf{Proof.} Since $v \in V(\mu(u_1) \cap \mu(u_2))$ it follows that $v \ne u_1, u_2$, and so $v \notin V(\Gamma)$. Consequently $\Gamma \subseteq G'$. Let us check that $\mu'(x) \subseteq G'$, for each unit $x$. If $x$ is a vertex this is clear, so let $x$ be a space with $x \subseteq F_1^* \cup \dots \cup F_r^*$. If $v \notin V(\mu(x))$ then $\mu'(x) = \mu(x) \subseteq G'$ as required. We assume then that $v \in V(\mu(x))$, and $x \subseteq F_1$ say. Then $\mu'(x) = \sigma_1(\mu(x))$, and every edge of $\mu(x)$ incident with $v$ belongs to $\delta_1$, by definition of $\delta_1$. Consequently $\mu'(x) \subseteq G'$, as required.
+
+We must verify (P1)-(P4). For (P1), we observe that
+\begin{equation*}
+E(G') = E(G) = E(\Gamma \cup \bigcup(\mu(F_j^*) : 1 \le j \le r)) = E(\Gamma \cup \bigcup(\mu'(F_j^*) : 1 \le j \le r))
+\end{equation*}
+and
+\begin{align*}
+V(G') &= (V(G) \setminus \{v\}) \cup \{v_1, v_2\} = (V(\Gamma \cup \bigcup(\mu(F_j^*) : 1 \le j \le r)) \setminus \{v\}) \cup \{v_1, v_2\} \\
+&\subseteq V(\Gamma) \cup \bigcup(\mu'(F_j^*) : 1 \le j \le r)
+\end{align*}
+since $v_1 \in \mu'(F_1^*)$ and $v_2 \in \mu'(F_2^*)$. The remainder of (P1) is clear and so (P1) holds.

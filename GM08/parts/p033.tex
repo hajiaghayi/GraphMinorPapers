@@ -1,0 +1,26 @@
+\origpage{287}{GRAPH MINORS. VIII}
+\textit{Proof.} We make two inductive hypotheses---that $\mathcal{C}(h', k')$ is well-rooted for all $h', k'$ with $h' < h$, and that $\mathcal{C}(h, k')$ is well-rooted for all $k' < k$.
+
+Let $\Sigma$ be a connected surface with $g(\Sigma) \le h$. We shall show first that $\mathcal{C}(\Sigma, k)$ is well-rooted. For let the cuffs of $\Sigma$ be $C_1, \dots, C_c$ in some order. Let $\mathcal{C}(\Sigma; k_1, \dots, k_c)$ denote the class of all grafts which have a drawing $\Gamma$ in $\Sigma$ with
+\begin{equation*}
+|V(\Gamma) \cap C_i| = k_i \quad (1 \le i \le c).
+\end{equation*}
+We claim that for any integers $k_1, \dots, k_c \ge 0$ with $k_1 + \dots + k_c \le k$, $\mathcal{C}(\Sigma; k_1, \dots, k_c)$ is well-rooted. For if $\Sigma$ is a sphere, disc, or cylinder then $\mathcal{C}(\Sigma; k_1, \dots, k_c) \subseteq \mathcal{B}(k)$ and the result follows from (17.3). We assume then that $\Sigma$ is not a sphere, disc, or cylinder. Let $(G_1, T_1), (G_2, T_2), \dots$ be a countable sequence of grafts in $\mathcal{C}(\Sigma; k_1, \dots, k_c)$. We may assume that $(G_1, T_1)$ is not simulated in any of $(G_2, T_2), (G_3, T_3), \dots$. By (18.1) and (18.2) there is a number $N$ such that for $i = 2, 3, \dots$, either
+
+\hspace*{12pt}(i) $(G_i, T_i) \in W(\mathcal{C}(h - 1, k + 2N + 2))$, or
+
+\hspace*{12pt}(ii) $(G_i, T_i) \in W(\mathcal{C}(h, k - 1) \oplus \mathcal{B}(2k - 1))$
+
+depending on whether (18.1)(iii) or (18.1)\delm{(v)}\fix{(iv)} applies.\fixnote{fix:18.3-proof}{Here (18.1) has only the outcomes (i)--(iv), and (iv) is the one that gives case (ii) here.} Thus in either case $(G_i, T_i) \in \mathcal{D}$, where
+\begin{equation*}
+\mathcal{D} = W(\mathcal{C}(h - 1, k + 2N + 2)) \cup W(\mathcal{C}(h, k - 1) \oplus \mathcal{B}(2k - 1)).
+\end{equation*}
+But $\mathcal{C}(h - 1, k + 2N + 2)$ is well-rooted, by our first inductive hypothesis; and $\mathcal{C}(h, k - 1)$ is well-rooted, by our second inductive hypothesis; and $\mathcal{B}(2k - 1)$ is well-rooted, by (17.3). Hence $\mathcal{D}$ is well-rooted by (13.1) and (13.3), and so there exist $j > i \ge 1$ such that $(G_i, T_i)$ is simulated in $(G_j, T_j)$. Thus $\mathcal{C}(\Sigma; k_1, \dots, k_c)$ is well-rooted, as claimed.
+
+It follows that $\mathcal{C}(\Sigma, k)$ is well-rooted. For $\mathcal{C}(\Sigma, k) = \bigcup \mathcal{C}(\Sigma; k_1, \dots, k_c)$, the union being taken over all choices of $k_1, \dots, k_c \ge 0$ with $k_1 + \dots + k_c \le k$. Since there are only finitely many such choices, $\mathcal{C}(\Sigma, k)$ is well-rooted by (4.2).
+
+Let $\mathcal{D}(h, k)$ be the union of $\mathcal{C}(\Sigma, k)$ taken over all connected surfaces $\Sigma$ with $g(\Sigma) \le h$. If $\Sigma_1 \cong \Sigma_2$ then $\mathcal{C}(\Sigma_1, k) = \mathcal{C}(\Sigma_2, k)$, and up to homeomorphism there are only finitely many connected surfaces $\Sigma$ with $g(\Sigma) \le h$. Thus there are finitely many connected surfaces $\Sigma_1, \dots, \Sigma_n$ with $g(\Sigma_i) \le h$ $(1 \le i \le n)$ such that
+\begin{equation*}
+\mathcal{D}(h, k) = \bigcup (\mathcal{C}(\Sigma_i, k) \colon 1 \le i \le n).
+\end{equation*}
+Since each $\mathcal{C}(\Sigma_i, k)$ is well-rooted, it follows from (4.2) that $\mathcal{D}(h, k)$ is well-rooted.

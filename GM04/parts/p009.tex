@@ -1,0 +1,25 @@
+\origpage{235}{GRAPH MINORS IV}
+Define $\sigma(s) = \tau(s)$, and for each $t \in U(S)$ let $\sigma(t)$ be $\tau \times T^t$. Then $(S, \sigma)$ is a star-decomposition of $\tau \times T^s$, and we call it the \textit{branching} of $(T, \tau)$ at $s$.
+
+We wish eventually to apply (2.2) to deduce results about a certain containment relation defined on a class of rooted hypergraphs. This relation is very unwieldy, however, and it is convenient to postpone its introduction as long as possible. We shall therefore proceed with a general containment relation (``simulation'') satisfying certain ``axioms;'' and we shall verify that our concrete relation does indeed satisfy these axioms later.
+
+\textit{Axiom} 1. \textit{$\mathscr{R}$ is a class of rooted hypergraphs, and if $G \in \mathscr{R}$ and $H$ is a rooted hypergraph with $H \subseteq G^-$ then $H \in \mathscr{R}$.}
+
+\textit{Axiom} 2. \textit{The relation ``$G$ is simulated in $H$'' defines a quasi-order on $\mathscr{R}$.}
+
+We assume henceforth that Axioms 1 and 2 are satisfied.
+
+A subclass of $\mathscr{R}$ is \textit{well-simulated} if it is well-quasi-ordered by simulation. The \textit{index} of a star-decomposition $(S, \sigma)$ is $\max(|\bar{\pi}(\sigma(s))| : s \in V(S))$, and the \textit{index} of a class $\mathscr{S}$ of star-decompositions is the maximum index of its members (or $\infty$ if there is no such maximum). A class $\mathscr{S}$ of star-decompositions is \textit{good} if
+
+\hspace*{12pt}(a) $\sigma \times S \in \mathscr{R}$ for each $(S, \sigma) \in \mathscr{S}$
+
+\hspace*{12pt}(b) $\mathscr{S}$ has finite index, and
+
+\hspace*{12pt}(c) for every countable sequence $(S_i, \sigma_i)$ ($i = 1, 2, ...$) of members of $\mathscr{S}$ such that the set of all tips of all the $(S_i, \sigma_i)$'s is well-simulated, there exist $i' > i \ge 1$ such that $\sigma_i \times S_i$ is simulated in $\sigma_{i'} \times S_{i'}$.
+
+Let $(T, \tau)$ be a tree-decomposition with $\tau \times T \in \mathscr{R}$. A subset $F \subseteq E(T)$ is \textit{linked} in $(T, \tau)$ if for every directed path $P$ of $T$ with first edge $f_2 \in F$ and last edge $f_1 \in F$ such that $f_1$, $f_2$ have the same order and no element of $E(P) \cap F$ has smaller order, $\tau \times T^{f_1}$ is simulated in $\tau \times T^{f_2}$. We say that $(T, \tau)$ is \textit{linked} if $E(T)$ is linked in $(T, \tau)$.
+
+\stmt
+(3.3) \textit{Let $\mathscr{S}$ be good, and let $(T_i, \tau_i)$ ($i = 1, 2, ...$) be a countable sequence of linked tree-decompositions, each branching of which is in $\mathscr{S}$. Then there exist $i' > i \ge 1$ such that $\tau_i \times T_i$ is simulated in $\tau_{i'} \times T_{i'}$.}
+
+\textit{Proof.} Let $n$ be the index of $\mathscr{S}$. We may assume that $T_1, T_2, ...$ are mutually disjoint. Let $M$ be the infinite graph with $V(M) = V(T_1 \cup T_2 \cup \cdots)$ such that for $i' > i \ge 1$, $u \in V(T_i)$ is $M$-adjacent to $v \in V(T_{i'})$ if $\tau_i \times T_i^u$ is simulated in $\tau_{i'} \times T_{i'}^v$. For each $i \ge 1$, and each $f \in E(T_i)$, let $\phi_i(f)$ be the order of $f$ in $(T_i, \tau_i)$. Then $0 \le \phi_i(f) \le n$ since each branching belongs to $\mathscr{S}$. Define ``precedes'' as before (2.2).

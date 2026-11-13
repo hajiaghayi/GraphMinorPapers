@@ -1,0 +1,45 @@
+\origpage{541}{N. Robertson, P. Seymour / Journal of Combinatorial Theory, Series B 102 (2012) 530--563}
+By 5.1, we deduce:
+
+\hspace*{12pt}(2) \textit{For $1 \le i \le t$ there is a closed disc $S_i \subseteq \Sigma$ such that}
+
+\textit{(i) $\text{bd}(S_i) \subseteq U(\Gamma)$,} \textit{(ii) $d(r_i, x) \le p + 2h + 7$ for all $x \in A(\Gamma)$ with $x \cap S_i \ne \emptyset$, and} \textit{(iii) $d(r_i, x) \ge p + 2h + 5$ for all $x \in A(\Gamma)$ with $x \nsubseteq S_i \setminus \text{bd}(S_i)$.} (3) \textit{For $1 \le i < j \le t$, $S_i \cap S_j = \emptyset$.}
+
+\textit{Subproof.} If $x$ is an atom with $x \cap S(C_i) \cap S(C_j) \ne \emptyset$, then by (2)(ii), $d(r_i, x), d(r_j, x) \le p + 2h + 7$, and so $d(r_i, r_j) \le 2p + 4h + 14 < \theta$. Consequently, $d(\text{ins}(F_i), \text{ins}(F_j)) < \theta$ contrary to hypothesis (ii). This proves (3).
+
+\hspace*{12pt}(4) \textit{For $1 \le i \le t$, $S_i \cap V(\Gamma \cap K) = \emptyset$ and $\text{ins}(F_i) \subseteq S_i$.}
+
+\textit{Subproof.} If $v \in V(\Gamma \cap K)$ then $d(v, \text{ins}(F_i)) \ge \theta$ by hypothesis (iii), and in particular $d(v, r_i) \ge \theta$. Consequently, $v \notin S_i$ by (2)(ii), and so $S_i \cap V(\Gamma \cap K) = \emptyset$. Let $z$ be an atom with $z \subseteq \text{ins}(F_i)$. By (1), $d(r_i, z) \le p$, and so $z \subseteq S_i$ by (2)(iii). This proves (4).
+
+\hspace*{12pt}(5) \textit{For $1 \le i \le t$ there are $|F_i \cap V(\Gamma)|$ mutually disjoint paths of $\Gamma \cap \Sigma'$ between $V(\Gamma) \cap F_i$ and $V(\Gamma) \cap \text{bd}(S_i)$.}
+
+\textit{Subproof.} If not, then by a form of Menger's theorem applied to $\Gamma \cap S_i$, there is a $\Gamma$-normal $O$-arc $F \subseteq \Sigma$ with $|F \cap V(\Gamma)| < |F_i \cap V(\Gamma)|$, bounding a closed disc $\Delta \subseteq S_i$ with $F_i \subseteq \Delta$. By Theorem 7.5 of [6], with $H, \Sigma, \theta, \lambda$ replaced by $\Gamma, \Sigma, \text{ord}(\mathcal{T}), p + 2h + 7$, it follows that $\Delta = \text{ins}(F)$, since
+\begin{equation*}
+2|F \cap V(\Gamma)| < 2|F_i \cap V(\Gamma)| \le 2p \le 2(\text{ord}(\mathcal{T}) - (2h + 8)).
+\end{equation*}
+This contradicts hypothesis (i), and therefore proves (5).
+
+Let $X = V(\Gamma \cap K) \cup \text{ins}(F_1) \cup \cdots \cup \text{ins}(F_t)$. Let $S = (S_1 \cup \cdots \cup S_t) \cap \Sigma'$, and let $T$ be the set of all points of $\Sigma'$ that are $h$-insulated in $\Sigma$ from $X$ by $\Gamma \cap \Sigma'$.
+
+\hspace*{12pt}(6) $R \cap \Sigma' \subseteq S \cup T$.
+
+\textit{Subproof.} Let $z \in A(\Gamma)$ such that $d(z, v) \ge \theta$ for all $v \in V(\Gamma \cap K)$. If $d(z, \text{ins}(F_i)) \le 2h + 4$ for some $i$ ($1 \le i \le t$) then $d(z, r_i) \le 2h + 4 + p$ by (1), and so $z \subseteq S_i$ by (2)(iii). We assume then that $d(z, \text{ins}(F_i)) \ge 2h + 5$ for $1 \le i \le t$. Hence $d(z, X) \ge 2h + 5$, since $\theta \ge 2h + 5$. By 5.2, $v$ is $h$-insulated in $\Sigma$ from $X$ by $\Gamma$ and hence by $\Gamma \cap \Sigma'$ (since $\Sigma \setminus \Sigma' \subseteq X$), and so $z \subseteq T$. This proves (6).
+
+\hspace*{12pt}(7) \textit{For $1 \le i \le t$, $\text{bd}(S_i) \subseteq T$.}
+
+\textit{Subproof.} Let $z \in A(\Gamma)$ with $z \subseteq \text{bd}(S_i)$. By (1)(i) and (1)(ii),
+\begin{equation*}
+p + 2h + 5 \le d(r_i, z) \le p + 2h + 7.
+\end{equation*}
+We claim that $d(z, X) \ge 2h + 5$. For let $x \in A(\Gamma)$ with $x \cap X \ne \emptyset$. If $x \cap \text{ins}(F_i) \ne \emptyset$, then by (1),
+\begin{equation*}
+p + 2h + 5 \le d(r_i, z) \le d(r_i, x) + d(x, z) \le p + d(x, z)
+\end{equation*}
+and so $d(x, z) \ge 2h + 5$. If $x \cap \text{ins}(F_j) \ne \emptyset$ for some $j \ne i$ with $1 \le j \le t$, then by hypothesis (ii),
+\begin{equation*}
+\theta \le d(\text{ins}(F_i), \text{ins}(F_j)) \le d(r_i, x) \le d(r_i, z) + d(x, z) \le d(x, z) + p + 2h + 7
+\end{equation*}
+and so $d(x, z) \ge 2h + 5$. Finally, if $x \in V(\Gamma \cap K)$, then by hypothesis (iii),
+\begin{equation*}
+\theta \le d(\text{ins}(F_i), x) \le d(r_i, x) \le d(r_i, z) + d(x, z) \le d(x, z) + p + 2h + 7
+\end{equation*}

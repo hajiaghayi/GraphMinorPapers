@@ -1,0 +1,29 @@
+\origpage{185}{GRAPH MINORS, X}
+A design is a pair $(H, M)$, where $H$ is a hypergraph and $M$ is a set of subsets of $V(H)$. If $(T, \tau)$ is a tree-decomposition of a hypergraph $G$ and $t_0 \in V(T)$, and $t_0$ has neighbours $t_1, \dots, t_k$ in $T$, then
+\begin{equation*}
+(\tau(t_0), \{V(\tau(t_0) \cap \tau(t_i)): 1 \le i \le k\})
+\end{equation*}
+is a design, called the \textit{design of $t_0$ in $(T, \tau)$}. If $\mathscr{S}$ is a class of designs, a tree-decomposition $(T, \tau)$ is said to be \textit{over $\mathscr{S}$} if for each $t_0 \in V(T)$, $\mathscr{S}$ contains the design of $t_0$ in $(T, \tau)$.
+
+Let $(H, M)$, $(H', M')$ be designs and let $Z \subseteq V(H')$ be such that (i) $H$ is a subhypergraph of $H'$ and $V(H') - V(H) \subseteq Z$ (ii) every edge of $H'$ is an edge of $H$ (iii) for every $X \in M'$ with $X \ne Z$, $X \cap V(H) \in M$.
+
+($Z$ may or may not be a member of $M'$.) In these circumstances, we say that $(H', M')$ is an \textit{$n$-enlargement} of $(H, M)$ for every integer $n \ge |Z|$. If $\mathscr{S}$ is a class of designs, we denote the class of all $n$-enlargements of members of $\mathscr{S}$ by $\mathscr{S}^n$. For any integer $n \ge 0$, we denote by $\mathscr{R}_n$ the class of all designs $(H, M)$ with $|V(H)| \le n$.
+
+A \textit{location} in a hypergraph $G$ is a set $\{(A_1, B_1), \dots, (A_k, B_k)\}$ of separations of $G$ such that $A_i \subseteq B_j$ for all distinct $i, j$ with $1 \le i, j \le k$. If $\{(A_1, B_1), \dots, (A_k, B_k)\}$ is a location in $G$, then
+\begin{equation*}
+(G \cap B_1 \cap \dots \cap B_k; \{V(A_i \cap B_i): 1 \le i \le k\})
+\end{equation*}
+is a design, which we call the \textit{design of the location}.
+
+Let $\theta \ge 1$ be an integer, and let $\mathscr{S}$ be a class of designs. We say that $\mathscr{S}$ is \textit{$\theta$-pervasive} in a hypergraph $G$ if for every subhypergraph $G'$ of $G$ and every tangle $\mathscr{T}$ in $G'$ of order $\ge \theta$ there is a location $\mathscr{L}$ in $G'$ such that $\mathscr{L} \subseteq \mathscr{T}$ and the design of $\mathscr{L}$ belongs to $\mathscr{S}$. Our object is to deduce information about the global structure of $G$ from the knowledge that a certain class of designs is $\theta$-pervasive. We show
+
+\stmt
+(11.1) \textit{For any $\theta \ge 1$, let $\mathscr{S}$ be a class of designs which is $\theta$-pervasive in a hypergraph $G$; then $G$ has a tree-decomposition over $\mathscr{S}^{3\theta - 2} \cup \mathscr{R}_{4\theta - 3}$.}
+
+We need the following lemma.
+
+\stmt
+(11.2) \textit{Let $\theta \ge 1$, let $\mathscr{S}$ be $\theta$-pervasive in $G$, and let $Z \subseteq V(G)$ with $|Z| = 3\theta - 2$. Then either} (i) \textit{there is a separation $(A, B)$ of $G$ of order $< \theta$ with}
+\begin{equation*}
+|(Z \cup V(A)) \cap V(B)|, |(Z \cup V(B)) \cap V(A)| \le 3\theta - 3
+\end{equation*}

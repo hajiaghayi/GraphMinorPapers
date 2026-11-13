@@ -1,0 +1,28 @@
+\origpage{274}{ROBERTSON AND SEYMOUR}
+\sectionhead{13. Vertex Identification}
+
+We have now finished the most difficult part of the paper. We shall have no further need for many of the preceding definitions; in particular, tree-width, paintings and foundations will not be used any more in this paper.
+
+We have established that certain classes of grafts are well-rooted. Our method for more complicated surfaces is based on making new well-rooted classes by piecing together old ones in certain ways; and the next two sections explain these constructions.
+
+Let $(G, T)$ be a graft, and let $X \subseteq V(G)$ be such that no edge of $G$ has one end in $X$ and the other in $V(G) - X$. Let $G_1$, $G_2$ be the restrictions of $G$ to $X$ and to $V(G) - X$, respectively, and let $T_1 = T \cap X$, $T_2 = T - X$. Then $(G_1, T_1)$, $(G_2, T_2)$ are grafts, and we write
+\begin{equation*}
+(G, T) = (G_1, T_1) \oplus (G_2, T_2).
+\end{equation*}
+Let $\mathscr{A}$, $\mathscr{B}$ be classes of grafts. We define $\mathscr{A} \oplus \mathscr{B}$ to be the class of all grafts of the form $A \oplus B$, where $A \in \mathscr{A}$ and $B \in \mathscr{B}$.
+
+\stmt
+(13.1) \textit{If} $\mathscr{A}, \mathscr{B}$ \textit{are well-rooted then so is} $\mathscr{A} \oplus \mathscr{B}$.
+
+\textit{Proof.} Let $A_1 \oplus B_1, A_2 \oplus B_2, \dots$ be a countable sequence of members of $\mathscr{A} \oplus \mathscr{B}$, where $A_i \in \mathscr{A}$ and $B_i \in \mathscr{B}$ $(i = 1, 2, \dots)$. By (3.2) there exist $i' > i \ge 1$ such that $A_i$ is simulated in $A_{i'}$ and $B_i$ is simulated in $B_{i'}$. But then $A_i \oplus B_i$ is simulated in $A_{i'} \oplus B_{i'}$, as required. $\square$
+
+Let $(G, T)$ be a graft and let $t_1, t_2 \in T$ be distinct. Let $G'$ be obtained from $G$ by identifying $t_1$ and $t_2$ forming a new vertex $t$ say; and let $T'$ be one of
+\begin{equation*}
+T - \{t_1, t_2\}, (T - \{t_1, t_2\}) \cup \{t\}.
+\end{equation*}
+Then $(G', T')$ is a graft, and we say it is obtained from $(G, T)$ by a \textit{vertex identification}.
+
+\stmt
+(13.2) \textit{If} $\mathscr{A}$ \textit{is well-rooted, then the class of all grafts which can be obtained from a member of} $\mathscr{A}$ \textit{by a vertex identification is well-rooted}.
+
+\textit{Proof.} Let $(H_1, U_1), (H_2, U_2), \dots$ be a countable sequence of grafts, such that for $i = 1, 2, \dots$ there exists $(G_i, T_i) \in \mathscr{A}$ such that $(H_i, U_i)$ is obtained from $(G_i, T_i)$ by a vertex identification. For $i = 1, 2, \dots$ let $t_{i_1}, t_{i_2}$ be the two vertices of $G_i$ which are identified to form $H_i$, and let $u_i$ be the vertex of $H_i$ formed by identifying $t_{i_1}$ and $t_{i_2}$. By replacing our sequence by a suitable countable subsequence, we may assume that either $u_i \in U_i$ for $i = 1, 2, \dots$, or $u_i \notin U_i$ for $i = 1, 2, \dots.$ Let $\tau_i$ be an ordering of $T_i$ with

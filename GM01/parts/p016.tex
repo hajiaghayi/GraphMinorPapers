@@ -1,0 +1,48 @@
+\origpage{54}{ROBERTSON AND SEYMOUR}
+(3.7). (i)\enspace\textit{If $G\in\mathscr{F}_\theta$, and is rooted and connected, and has no rooted
+minor isomorphic to $P(\gamma, \delta)$, then $G$ has path-width at most $p(\gamma, \delta)$, for
+$0\le\gamma\le\lambda$, $\delta\ge 2$.}
+
+\hspace*{12pt}(ii)\enspace\textit{If $G\in\mathscr{F}_\theta$, and is rooted and connected, and has no rooted minor
+isomorphic to $Q(\gamma, \delta)$, then $G$ has path-width at most $q(\gamma, \delta)$, for $1\le\gamma\le\lambda$,
+$\delta\ge 2$.}
+\stmt
+\textit{Proof of} (3.1) (assuming (3.7)). Let $G$ be a graph with no minor
+isomorphic to $\mathbf{Y}_\lambda$, where $\lambda\ge 1$ and is odd.
+
+Let $C$ be any component of $G$, and let $C$ be assigned a root, arbitrarily.
+Now $C$ has no rooted minor isomorphic to $P(\lambda, 3)$, because $P(\lambda, 3)$ has a
+minor isomorphic to $\mathbf{Y}_\lambda$. Moreover, $C\in\mathscr{F}_\theta$, by (3.5). Hence, by (3.7)(i), $C$
+has path-width $\le p(\lambda, 3)$, and so by (1.4), $G$ has path-width $\le p(\lambda, 3)$.
+\stmt
+Thus, to prove our main theorem, it suffices to prove (3.7).
+
+The proof of (3.7) is divided into three parts, as follows: In Part 1 we
+prove that (3.7)(i) is true when $\gamma=0$. In Part 2 we show that for $\gamma$ with
+$1\le\gamma\le\lambda$, if (3.7)(i) is true for $\gamma-1$ and all $\delta\ge 2$, then (3.7)(ii) is true for $\gamma$
+and all $\delta\ge 2$. Finally, in Part 3 we show that for any $\gamma$ with $1\le\gamma\le\lambda$, if
+(3.7)(ii) is true for $\gamma$ and all $\delta\ge 2$, then so is (3.7)(i). These three parts
+combined yield that (3.7) is true.
+\stmt
+\textit{Part} 1 $(\gamma=0)$. $P(0, \delta)$ is a $\delta$-vertex path, rooted at one end. We show, by
+induction on $\delta$, that for $\delta\ge 2$ every connected rooted graph with no rooted
+minor isomorphic to $P(0, \delta)$ has path-width $\le\delta-2$. If $\delta=2$ this is clear.
+We suppose then that $\delta>2$. Let $G_1,..., G_r$ be the components of $G\backslash\{\rho(G)\}$.
+For $1\le i\le r$, let $v_i$ be a vertex of $G_i$ adjacent to $\rho(G)$ in $G$. We define
+$\rho(G_i)=v_i$ $(1\le i\le r)$. Then certainly for $1\le i\le r$, $G_i$ has no rooted minor
+isomorphic to $P(0, \delta-1)$, and so by induction has path-width $\le\delta-3$.
+Hence, by (1.4), $G\backslash\{\rho(G)\}$ has path-width $\le\delta-3$, and so by (1.5), $G$ has
+path-width $\le\delta-2$. This completes the inductive argument that for $\delta\ge 2$
+every rooted connected graph with no rooted minor isomorphic to $P(0, \delta)$
+has path-width $\le\delta-2$. But by (3.6)(i), $p(0, \delta)\ge\delta-2$, and so (3.7)(i) is
+true if $\gamma=0$. This completes the argument for Part 1.
+
+\sectionhead{4. \textsc{Part} 2: \textsc{The Reduction of} $Q(\gamma, \delta)$}
+
+We now assume that $1\le\gamma\le\lambda$, and that for $\delta\ge 2$, every rooted connected
+graph in $\mathscr{F}_\theta$ with no rooted minor isomorphic to $P(\gamma-1, \delta)$ has path-width
+$\le p(\gamma-1, \delta)$. We shall prove that for all $\delta\ge 2$, every rooted connected
+graph in $\mathscr{F}_\theta$ with no rooted minor isomorphic to $Q(\gamma, \delta)$ has path-width
+$\le q(\gamma, \delta)$.
+
+Suppose then that $G\in\mathscr{F}_\theta$, and is rooted and connected, and has no

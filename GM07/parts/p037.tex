@@ -1,0 +1,17 @@
+\origpage{248}{ROBERTSON AND SEYMOUR}
+\noindent (In cases (iii) and (iv) we can always choose $X$ to have this additional property.) Let $\Sigma'$ be the surface obtained by cutting along $X$. Let $\phi \colon \Sigma' \to \Sigma$ be the associated surjection, and let $G' = \phi^{-1}(G)$ be defined as usual.
+
+Let $H'$ be a forest in $\Sigma'$ with $V(H') \cap bd(\Sigma') = V(G') \cap bd(\Sigma')$. Then $\phi(H')$ may or may not be a forest in $\Sigma$; but up to homoplasty in $\Sigma'$ there are only finitely many (bounded by a function of $\Sigma$ and $H$) forests $H'$ such that $\phi(H')$ is a forest in $\Sigma$ homoplastic to $H$. (This is easily seen, via (3.4).) Moreover, $H$ is $G$-feasible if and only if some such $H'$ is $G'$-feasible. (Again, this is easily seen.) Thus our original problem is reduced to solving ``is $H'$ $G'$-feasible?'' for all these finitely many possibilities for $H'$.
+
+From these comments (a)-(d) may be verified. Finally, we must check that we can decide which of cases (i)-(iv) hold in polynomial time; but that is straightforward, and we omit the details.
+
+A more natural problem than the one we have just solved is: let $H$ be a forest in a surface $\Sigma$. Given a graph $G$ in $\Sigma$, is there a subgraph of $G$ which is a forest homotopic to $H$? In [4] we solved this when $\Sigma$ is a sphere, disc, or cylinder, but we do not know how to solve it in general---indeed, solving it is open$^1$ even where $H$ has just one edge and $\Sigma \cong \Sigma(0, 0, c)$ for general $c$.
+
+Since we have solved the homoplasty problem, it follows that, as we claimed in the introduction, for any surface $\Sigma$ and any integer $k$, there is a polynomially bounded algorithm which, given as input a graph $G$ in $\Sigma$ and vertices $s_1, t_1, \dots, s_k, t_k$ of $G$, decides if there exist $k$ vertex-disjoint paths of $G$, linking $s_i$ and $t_i$ $(1 \le i \le k)$, respectively. For we may cut small new cuffs in $\Sigma$, each meeting $U(G)$ only in one vertex of $G$, so that $s_1, t_1, \dots, s_k, t_k$ each lie on one of the cuffs; we may extend the surface slightly, so that $G$ is proper, and no vertex of $G$ except $s_1, t_1, \dots, s_k, t_k$ lies in the boundary of the surface; and then we test for the $G$-feasibility of all the (finitely many, up to homoplasty) matchings in which $s_i$ is adjacent to $t_i$ $(1 \le i \le k)$.
+
+In [4, 6] a discussion is given of the complexity of the disjoint paths problem in general. In [6] we shall implicitly use (7.5) to give an algorithm to decide, given a graph $G = (V, E)$ (\textit{not} required to be embedded in a surface) and vertices $s_1, t_1, \dots, s_k, t_k \in V(G)$, whether there are $k$ vertex-disjoint paths linking $s_i$ and $t_i$ $(1 \le i \le k)$. This has running time $O(|V|^2 \cdot |E|)$ for fixed $k$, which is much more efficient than the algorithm we have just described.
+
+\sectionhead{11. \textsc{Appendix}}
+
+We have assumed a number of results from point-set topology, and for%
+\origfootnote[1]{\textit{Note added in proof.} This problem has recently been solved by A. Schrijver, in ``Disjoint circuits of prescribed homotopies in a graph on a surface,'' manuscript (1987).}

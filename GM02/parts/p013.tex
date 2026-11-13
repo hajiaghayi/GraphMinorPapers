@@ -1,0 +1,58 @@
+\origpage{321}{ALGORITHMIC ASPECTS OF TREE-WIDTH}
+\noindent member of $\mathscr{C}'$ has tree-width $w + 1$, as is easily seen. By (2.7), a graph has tree-width $> w$ if and only if it has a minor in $\mathscr{C}'$. Choose a representative from each isomorphism class of $\mathscr{C}'$, and let the set of these representatives be $\mathscr{C}$. Now no member of $\mathscr{C}$ is isomorphic to a minor of another, and so $\mathscr{C}$ is finite by (5.1) (with $w + 1$ replacing $w$). Moreover, a graph has tree-width $> w$ if and only if it has a minor isomorphic to a member of $\mathscr{C}$. This completes the proof.
+
+\stmt
+(5.3) \textit{For any fixed number $w$, there is a polynomial algorithm which, given a graph $G$, decides if $G$ has tree-width $> w$.}
+
+\textit{Proof.} Let $H_1, \dots, H_r$ be as in (5.2). We apply (4.9) to $G$ with $H_1, \dots, H_r$ in turn. If one of the applications yields that $G$ has tree-width $> w$, we are done. Otherwise we decide whether or not $G$ has a minor isomorphic to $H_i$, for $1 \le i \le r$, and hence decide whether or not $G$ has tree-width $> w$, by (5.2).
+
+We cannot claim to have constructed an algorithm here, because we do not know any way to find the required graphs $H_1, \dots, H_r$. Thus this is merely a nonconstructive proof of the existence of the algorithm.
+
+The argument for (5.3) can be extended to yield the following.
+
+\stmt
+(5.4) \textit{Let $\mathscr{F}$ be a set of graphs, such that for any two graphs $G$, $G'$, if $G \in \mathscr{F}$ and $G'$ is isomorphic to a minor of $G$ then $G' \in \mathscr{F}$. Suppose that there is a number $w$ such that all members of $\mathscr{F}$ have tree-width $\le w$. Then there is a polynomial algorithm to test if an arbitrary graph is in $\mathscr{F}$.}
+
+\del{The proof is left to the reader.} \fix{We give the proof. We use the following result of [11], which is (1.5) there and which
+implies (5.1): for any number $k$, in any infinite sequence $G_1, G_2, \dots$ of graphs each with
+tree-width $\le k$, there exist $i < j$ such that $G_i$ is isomorphic to a minor of $G_j$. Let $\mathscr{T}$ be the set of all
+graphs with tree-width $\le w + 1$ that are not in $\mathscr{F}$.
+
+\hspace*{12pt}(1) \textit{There is a finite set $\mathscr{C} \subseteq \mathscr{T}$ such that every
+member of $\mathscr{T}$ has a minor isomorphic to a member of $\mathscr{C}$.}
+
+Suppose not. Then we may choose $H_1, H_2, \dots \in \mathscr{T}$ in turn such that for each
+$j \ge 1$, $H_j$ has no minor isomorphic to any of $H_1, \dots, H_{j-1}$, since the set
+$\{H_1, \dots, H_{j-1}\}$ does not satisfy (1). By the result above with $k = w + 1$, there exist
+$i < j$ such that $H_i$ is isomorphic to a minor of $H_j$, a contradiction. This proves (1).
+
+Let $\mathscr{C} = \{H_1, \dots, H_r\}$ be as in (1). We claim that a graph $G$ is in $\mathscr{F}$ if
+and only if it has no minor isomorphic to one of $H_1, \dots, H_r$. If $G \in \mathscr{F}$ and $G$ has
+a minor isomorphic to $H_i$, then $H_i \in \mathscr{F}$ by the hypothesis on $\mathscr{F}$, which is
+impossible since $H_i \in \mathscr{T}$. Now let $G \notin \mathscr{F}$. Delete vertices of $G$ one at a
+time, as long as the graph remains outside $\mathscr{F}$. This gives a subgraph $M$ of $G$ with
+$M \notin \mathscr{F}$, such that $M \setminus v \in \mathscr{F}$ for every $v \in V(M)$. Then $M$ has
+tree-width $\le w + 1$. For this is true if $M$ has no vertices. Otherwise let $v \in V(M)$. Then
+$M \setminus v$ has a tree-decomposition of width $\le w$, since it is in $\mathscr{F}$, and adding $v$
+to every set of this tree-decomposition gives a tree-decomposition of $M$ of width $\le w + 1$. Hence
+$M \in \mathscr{T}$, and by (1), $M$ has a minor isomorphic to some $H_i$. Since $M$ is a subgraph of
+$G$, so has $G$. This proves the claim.
+
+The algorithm is now as in (5.3). We apply (4.9) to $G$ with $H_1, \dots, H_r$ in turn. If one of
+the applications yields that $G$ has tree-width $> w$, then $G \notin \mathscr{F}$, since all members
+of $\mathscr{F}$ have tree-width $\le w$. Otherwise we decide for $1 \le i \le r$ whether or not $G$
+has a minor isomorphic to $H_i$, and hence whether or not $G \in \mathscr{F}$. As for (5.3), this
+proves that the algorithm exists, but does not construct it.\fixnote{fix:5.4-proof-added}{The paper
+leaves this proof to the reader. The argument above, which extends the proof of (5.3), is the one
+used in the formalization.}}
+
+Alternatively formulated, we have
+
+\stmt
+(5.5) \textit{Let $\mathscr{F}$ be any set of graphs, membership of which is preserved under isomorphism and under taking minors. Suppose that some planar graph is not in $\mathscr{F}$. Then there is a polynomial algorithm to test if an arbitrary graph is in $\mathscr{F}$.}
+
+This follows easily from (4.10) and (5.4). We conjecture that the second sentence can be removed from (5.5).
+
+Independently of this paper, Arnborg, Corneil, and Proskurowski [1] have given a polynomial algorithm to test if a graph has tree-width $\le k$, for fixed $k$, and have shown the problem of determining tree-width to be \textit{NP}-complete. See also [4, 7] for related results.
+
+{\textit{Note added in proof.} March 1986: We have recently proved both the conjectures of this paper. The general DISJOINT CONNECTING PATHS problem (for any fixed index) and the problem of deciding membership of an arbitrary minor-closed class (generalizing (5.5)) can both be solved by polynomial algorithms with running times $O(|V|^2 \cdot |E|)$. We have linear time algorithms for (3.2) and (4.1).\par}

@@ -1,0 +1,38 @@
+\origpage{127}{GRAPH MINORS. XV. GIANT STEPS}
+But
+\begin{equation*}
+\eta'^{-1}(A^* \cap \eta'(H')) \cap H'' = \eta'^{-1}(A^* \cap \eta'(H') \cap \eta'(H'')) = \eta'^{-1}(A^* \cap \eta'(H''))
+\end{equation*}
+since $H'' \subseteq H'$ by (4.5)(ii); and $\eta'^{-1}(A^* \cap \eta'(H'')) = \eta^{-1}(A^* \cap \eta(H'')),$ because the restriction of $\eta$ and $\eta'$ to $H''$ are equal. Similarly,
+\begin{equation*}
+\eta'^{-1}(B^* \cap \eta'(H')) \cap H'' = \eta^{-1}(B^* \cap \eta(H'')),
+\end{equation*}
+and so it suffices to show that
+\begin{equation*}
+(\eta^{-1}(A^* \cap \eta(H'')), \eta^{-1}(B^* \cap \eta(H''))) \in \mathcal{T}''.
+\end{equation*}
+Let $A = \eta^{-1}(A^* \cap \eta(H))$, $B = \eta^{-1}(B^* \cap \eta(H))$. Then $(A, B) \in \mathcal{T}$ since $H, \eta, \mathcal{T}$ is a $\Sigma$-span. Moreover, $(A, B)$ has order at most that of $(A^*, B^*)$ and hence less than $\theta - 4\lambda - 2$. By (4.5)(iii), $(A \cap H'', B \cap H'') \in \mathcal{T}''$. But
+\begin{align*}
+A \cap H'' &= \eta^{-1}(A^* \cap \eta(H)) \cap H'' = \eta^{-1}(A^* \cap \eta(H) \cap \eta(H'')) \\
+&= \eta^{-1}(A^* \cap \eta(H''))
+\end{align*}
+and similarly $B \cap H'' = \eta^{-1}(B^* \cap \eta(H''))$, and so
+\begin{equation*}
+(\eta^{-1}(A^* \cap \eta(H'')), \eta^{-1}(B^* \cap \eta(H''))) \in \mathcal{T}''
+\end{equation*}
+as required. $\square$
+
+We shall also need the following.
+
+\stmt
+(4.7) \textit{Let $\mathcal{T}$ be a respectful tangle of order $\theta$ in a 2-cell drawing $H$ in a surface $\Sigma$. Let $z \in A(H)$, let $\lambda \ge 2$ be an integer, and let $X \subseteq V(H)$ be free with respect to $\mathcal{T}$. Suppose that $d(z, v) > 2|X| + 5\lambda + 2$ for all $v \in X$. Now let $H'$ be a 2-cell drawing in $\Sigma$ such that $a \in A(H')$ for every $a \in A(H)$ with $d(z, a) > \lambda$; and let $\mathcal{T}'$ be a $(4\lambda + 2)$-compression of $\mathcal{T}$ in $H'$. Then $X$ is free with respect to $\mathcal{T}'$.}
+
+\textit{Proof.} Suppose not; then there exists $(A, B) \in \mathcal{T}'$ with $|X \cap V(A)| > |V(A \cap B)|$. Choose such $(A, B)$ with $A$ minimal.
+
+\hspace*{12pt}(1) \textit{$A$ is connected.}
+
+\textit{Subproof.} Suppose that $A = A_1 \cup A_2$, where $A_1, A_2$ are non-null and $A_1 \cap A_2$ is null. Then $(A_1, A_2 \cup B), (A_2, A_1 \cup B) \in \mathcal{T}$, and by the minimality of $A$,
+\begin{align*}
+|X \cap V(A_1)| &\le |V(A_1 \cap (A_2 \cup B))| = |V(A_1 \cap B)| \\
+|X \cap V(A_2)| &\le |V(A_2 \cap (A_1 \cup B))| = |V(A_2 \cap B)|.
+\end{align*}

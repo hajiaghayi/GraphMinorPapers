@@ -1,0 +1,18 @@
+\origpage{228}{ROBERTSON AND SEYMOUR}
+We claim that $|\Lambda| \le w + k$. For let $M$ be the set of non-isolated vertices of $\theta^{-1}(H)$. Let $\lambda \in \Lambda$, and $d \in \lambda$. Then since $|\lambda| \ge 2$, $d$ is not an isolated vertex of $\phi^{-1}(H)$, and hence $d \in \psi^{-1}(v)$ for some $v \in M$. Moreover, $d \in bd(\Delta)$ and so $v \in U(\theta^{-1}(K)) \cup bd(\Sigma')$. If $v \in U(\theta^{-1}(K))$ then $|\psi^{-1}(v)| = 2$, and if $v \in bd(\Sigma') - U(\theta^{-1}(K))$ then $|\psi^{-1}(v)| = 1$. It follows that
+\begin{align*}
+\left| U(\lambda : \lambda \in \Lambda) \right| & \le \left| U(\psi^{-1}(v) : v \in M \cap (U(\theta^{-1}(K)) \cup bd(\Sigma'))) \right| \\
+& \le 2\left| M \cap U(\theta^{-1}(K)) \right| + |M \cap bd(\Sigma')| \\
+& \le 2w + 2k
+\end{align*}
+by (1). Since $|\lambda| \ge 2$ for each $\lambda \in \Lambda$, we deduce that $|\Lambda| \le w + k$ as claimed. Hence we may assume that
+\begin{equation*}
+|V(G) \cap \phi(F^*)| \le k + w - 1.
+\end{equation*}
+By (2.6) there is a $G$-normal $O$-arc $A$ in $\Sigma$ with $\phi(F) \subseteq A \subseteq \phi(F) \cup U(J)$ and with
+\begin{equation*}
+|V(G) \cap A| \le 2(2a + b + c)(k + w) + 2k = \mu \le \nu.
+\end{equation*}
+By hypothesis (ii) either $A$ is null-homotopic in $\Sigma$, or for some cuff $C$, $A$ is null-homotopic in $S + \hat{C}$ and $V(G) \cap C \subseteq A$. Suppose $A$ is not null-homotopic in $\Sigma$, so that the second alternative applies. Since $F$ is proper and $C \subseteq bd(\Sigma) \subseteq \phi(bd(\Delta))$, it follows that $\phi(F^*) \cap C = \emptyset$ and so $\phi(F^*)$ is contained in a single component $B$ of $A - C$. Then $\bar{B}$ is an $I$-arc, since by (iii) $|V(G) \cap C| \ge 2$, and $\phi(F) \subseteq \bar{B}$. Let the ends of $\bar{B}$ be $s'$, $t'$. Since $A$ is null-homotopic in $\Sigma + \hat{C}$ but not in $\Sigma$, it follows that $C - \{s', t'\}$ has two components $C_1'$, $C_2'$ such that $A \cap C \subseteq \bar{C}_1'$ and $C_2' \cup \bar{B}$ is a null-homotopic $O$-arc in $\Sigma$. Since $V(G) \cap C \subseteq A$ and $A \cap C \subseteq \bar{C}_1'$, it follows that $V(G) \cap C_2' = \emptyset$. Hence $C_2' \cup \bar{B}$ satisfies our original hypothesis for $A$. Thus we may choose $A$ to be null-homotopic in $\Sigma$.
+
+Now one component of $\Sigma - A$ is homeomorphic to an open disc since $A$ is null-homotopic; and the other is not, since $\Sigma \not\cong \Sigma(0, 0, 0)$. Let $S$ be the first component. Let $J' = (U(J), V(J) \cup \{\phi(s), \phi(t)\})$. Since $F$ is proper and $\phi(bd(\Delta)) = U(J)$, it follows that $\phi(F^*) \cap U(J) = \emptyset$ and consequently, since $A \subseteq \phi(F) \cup U(J)$, we infer that $A \cap U(J) = U(Q)$ for some path $Q$ in $J'$ between $\phi(s)$ and $\phi(t)$. It follows that for every edge $e$ of $J'$, either $e \subseteq S$ or $e \cap S = \emptyset$. Suppose that $e \subseteq S$ for some edge $e$ of $J'$. There is a path $P$ of $J'$ with distinct ends such that every edge of $P$ is included in $S$. Choose $P$ with as many edges as possible, and let its ends be $u$, $v$. Now $J'$ has only one region in $\Sigma$, and so not both $u$, $v \in A$; we assume that $u \in S$. For the same reason, there is only one edge of $J'$ incident with $u$ and with some vertex in $V(P) - \{u\}$. But by (2.3), there is another edge of $J'$ incident with $u$, and it

@@ -1,0 +1,36 @@
+\origpage{104}{ROBERTSON AND SEYMOUR}
+\noindent then (i) holds, and so we assume this is false, that is,
+\begin{equation*}
+\sum (w(v_j)\colon 1\le j\le i)\ge w(V(G))-k+1.
+\end{equation*}
+By the minimality of $i$,
+\begin{equation*}
+\sum (w(v_j)\colon 1\le j < i)\le k-1
+\end{equation*}
+and so
+\begin{equation*}
+w(v_i)\ge w(V(G))-2k+2\ge k
+\end{equation*}
+since $k\le (w(V(G))+2)/3$. Now $G\setminus v_i$ is connected, since $G$ is 2-connected, and so we may assume that $w(V(G)-\{v_i\})<k$, for otherwise (i) is true. But in that case (ii) is true, as required.
+
+We use (6.2) to prove the following, the main result of this section. (For a related theorem, see [7, 8].)
+
+\stmt
+(6.3) \textit{Let $G$ be a connected graph, and let $k>0$ be an integer. Then at least one of the following is true:}
+
+\hspace*{12pt}(i) \textit{there are $k$ disjoint connected subgraphs of $G$, each with at least $2(3^k - 1)^{-1}|V(G)|$ vertices;}
+
+\hspace*{12pt}(ii) \textit{there exists $X\subseteq V(G)$ with $|X|<k$ such that every component of $G\setminus X$ has fewer than $|V(G)|/3$ vertices.}
+
+\textit{Proof.} If $\mathcal{B}$ is a set of $k$ disjoint connected subgraphs of $G$, we define $d(\mathcal{B})$ to be the $k$-tuple $(b_1,..., b_k)$, where the members of $\mathcal{B}$ have vertex sets of cardinality $b_1,..., b_k$, respectively, and $b_1\le b_2\le \cdots\le b_k$. Choose such a set $\mathcal{B}$ with $d(\mathcal{B})$ lexicographically last; that is, there is no set $\mathcal{B}'$ with $d(\mathcal{B}')=(b_1',..., b_k')$ say, where for some $j$ ($1\le j\le k$), $b_j'>b_j$ and $b_i'=b_i$ for $1\le i < j$. If $b_1\ge 2(3^k - 1)^{-1}|V(G)|$ then (i) is true, and so we assume that $b_1<2(3^k - 1)^{-1}|V(G)|$ and shall prove that (ii) is true. Let $\mathcal{B}=\{B_1,..., B_k\}$, where $V(B_i)=V_i$ and $|V_i|=b_i$ ($1\le i\le k$). From the lexicographic lastness of $d(\mathcal{B})$,
+\begin{equation*}
+V_1\cup\cdots\cup V_k = V(G)
+\end{equation*}
+since $G$ is connected; and so
+\begin{equation*}
+\sum_{1\le i\le k} b_i = |V(G)|.
+\end{equation*}
+Now
+\begin{equation*}
+\sum_{1\le i\le k} 3^{i-1}b_1 < |V(G)|
+\end{equation*}

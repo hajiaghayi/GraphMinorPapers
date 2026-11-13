@@ -1,0 +1,28 @@
+\origpage{537}{N. Robertson, P. Seymour / Journal of Combinatorial Theory, Series B 102 (2012) 530--563}
+Now $\Gamma_1$ is a drawing in $\Delta$, and $L \cap \Gamma_1 \subseteq \Gamma_1$ with $V(\Gamma_1) \cap bd(\Delta) \subseteq V(L \cap \Gamma_1)$. By 3.3 and (8), there is a subgraph $L''$ of $\Gamma_1 \setminus \{v\}$ with the same effect on $V(\Gamma_1) \cap bd(\Delta) = V(C_1)$ as $L \cap \Gamma_1$. Consequently $L \cap \Gamma_1$ is not vital for $V(C_1)$ in $\Gamma_1$, because $L'' \ne L \cap \Gamma_1$ since $v \in V(L \cap \Gamma_1)$ by (6).
+
+Let $\Gamma_2$ be the drawing formed by the edges of $\Gamma$ not in $\Delta_1$, and the vertices of $\Gamma$ not in $\Delta_1 \setminus bd(\Delta_1)$. Then $(\Gamma_1, \Gamma_2)$ is a separation of $\Gamma$ with $V(\Gamma_1 \cap \Gamma_2) = V(C_1)$. Let $K_1 = \Gamma_2 \cup K$. Since $V(\Gamma \cap K) \subseteq V(\Gamma_2)$, it follows that $(\Gamma_1, K_1)$ is a separation of $G$, and $V(\Gamma_1 \cap K_1) = V(C_1)$. But $Z \subseteq V(K_1)$, and $L$ is vital for $Z$ in $G$, and $L \cap \Gamma_1$ is not vital for $(Z \cup V(\Gamma_1)) \cup V(\Gamma_1 \cap K_1) = V(C_1)$ in $\Gamma_1$, contrary to 2.7. The result follows. $\square$
+
+\sectionhead{4. Changing the drawing}
+
+3.1 allows us to delete vertices of $\Gamma$ without changing whether a subgraph exists with a desired effect on $Z$. But it can also be used in reverse, for it allows us to introduce new vertices into $\Gamma$ without changing whether the desired subgraph exists. By doing both, we can replace parts of $\Gamma$ by completely different drawings. This is quite powerful, as we shall see in this section and the next.
+
+We have a pair of subgraphs $\Gamma, K$ of a graph $G$ with $\Gamma \cup K = G$, where $\Gamma$ is a drawing in a surface $\Sigma$; and we wish to consider the effect of replacing $\Gamma$ by a new drawing $\Gamma'$ in $\Sigma$, and replacing $G$ with a new graph $G' = \Gamma' \cup K$, where $\Gamma \cap K = \Gamma' \cap K$.
+
+Let $\Gamma$ and $\Gamma'$ be drawings in a surface $\Sigma$, and let $T \subseteq \Sigma$. We say that $\Gamma'$ is a \textit{$T$-variant of $\Gamma$ in $\Sigma$} if the drawings differ only within $T$; or more precisely,
+
+\hspace*{12pt}$\bullet$ $V(\Gamma) \setminus T = V(\Gamma') \setminus T$, and
+
+\hspace*{12pt}$\bullet$ if $e \in E(\Gamma) \setminus E(\Gamma')$ or $e \in E(\Gamma') \setminus E(\Gamma)$, then $\bar{e} \subseteq T$.
+
+From 3.1 we deduce the following.
+
+\textbf{4.1.} \textit{For every integer $p \ge 0$ there exists $h \ge 1$ with the following property. Let $\Gamma, K$ be subgraphs of a graph $\Gamma \cup K$, let $\Gamma$ be a drawing in a surface $\Sigma$ and let $T$ be the set of all points of $\Sigma$ that are $h$-insulated from $V(\Gamma \cap K)$ by $\Gamma$. Let $\Gamma'$ be a $T$-variant of $\Gamma$ in $\Sigma$ with $\Gamma' \cap K = \Gamma \cap K$, let $L' \subseteq \Gamma' \cup K$, and let $Z \subseteq V(K)$ with $|Z| \le p$. Then there exists a subgraph $L$ of $\Gamma \cup K$ with the same effect on $Z$ as $L'$, with $L \cap K \subseteq L'$.}
+
+\textbf{Proof.} Now $T$ is open, for it is the union of the interiors of finitely many closed discs (namely, those discs bounded by circuits of $\Gamma$ which are ``surrounded'' by $h - 1$ disjoint other circuits). For each edge $e' \in E(\Gamma') \setminus E(\Gamma)$ we may therefore perturb $e'$ slightly (since $\bar{e}' \subseteq T$) so that $e' \cap U(\Gamma)$ is finite, while preserving the property that $\Gamma' \cap K = \Gamma \cap K$. Consequently, we may assume that there is a drawing $\Gamma^*$ in $\Sigma$ with $\Gamma^* \cap K = \Gamma \cap K$, which is a $T$-variant of $\Gamma$ such that $U(\Gamma^*) = U(\Gamma) \cup U(\Gamma')$ and $V(\Gamma) \cup V(\Gamma') \subseteq V(\Gamma^*)$. (The second inclusion may not be an equality since to make $\Gamma^*$ a drawing it must have a vertex wherever an edge $e$ of $\Gamma$ meets an edge $e' \ne e$ of $\Gamma'$.) Let $L^* \subseteq \Gamma^*$ with $U(L^*) = U(\Gamma' \cap L')$. Then by 2.6, $(K \cap L) \cup L^* \subseteq K \cup \Gamma^*$ has the same effect on $Z$ as $L'$. Consequently, $\Gamma^*$ has all the defining properties of $\Gamma'$, and we may therefore assume that $\Gamma^* = \Gamma'$, that is,
+
+\hspace*{12pt}(1) $U(\Gamma) \subseteq U(\Gamma')$ and $V(\Gamma) \subseteq V(\Gamma')$.
+
+Under condition (1), we proceed by induction on $|V(\Gamma')| + |E(\Gamma')|$. Suppose first that $U(\Gamma') = U(\Gamma)$. Since $V(\Gamma) \subseteq V(\Gamma')$ it follows from 2.6 (as above) that there is a subgraph $L \subseteq \Gamma \cup K$ with $U(L \cap \Gamma) = U(L' \cap \Gamma')$ and $L \cap K = L' \cap K$, with the same effect on $Z$ as $L'$; but then the theorem is true.
+
+We may therefore assume that $U(\Gamma') \ne U(\Gamma)$. Choose $x \in U(\Gamma') \setminus U(\Gamma)$. Choose $v \in V(\Gamma')$ so that $x = v$ if $x \in V(\Gamma')$, and $v$ is an end of $e$ if $x \in e$ for some $e \in E(\Gamma')$. We claim that $v \in T$. For $x \in T$, so if $x = v$ this is true. If $x \in e \in E(\Gamma')$ and $v$ is an end of $e$, then $e \notin E(\Gamma)$ since $x \notin U(\Gamma)$, and $v \in \bar{e} \subseteq T$ since $\Gamma'$ is a $T$-variant of $\Gamma$. This proves that $v \in T$, and hence $v$ is $h$-insulated by $\Gamma$ and hence by $\Gamma'$ from $V(\Gamma \cap K) = V(\Gamma' \cap K)$. By 3.1 with $\Gamma$ replaced by $\Gamma'$, there exists $L'' \subseteq \Gamma' \cup K$ with $v \notin V(L'')$ and $L'' \cap K \subseteq L' \cap K$, such that $L''$ has the same effect on $Z$ as $L'$. Let $\Gamma''$ be the $T$-variant

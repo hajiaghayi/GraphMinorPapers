@@ -1,0 +1,16 @@
+\origpage{235}{GRAPH MINORS. VII}
+\noindent in a path, and so we may choose mutually vertex-disjoint subpaths $N_1(C), \dots, N_{k(C)}(C)$ of $N(C)$, such that (i) $V(N_1(C)) \cup \dots \cup V(N_{k(C)}(C)) = V(N(C))$, and (ii) for $1 \le i \le k(C)$, exactly $v$ of $P_1, \dots, P_{vk(C)}$ intersect $N(C)$ in a subpath of $N_i(C)$.
+
+Suppose that $I \subseteq \{1, \dots, k(C)\}$ and $V' \subseteq V(G)$, with $|I| + |V'| < k(C)$. Put
+\begin{equation*}
+X = V' \cup \bigcup (V(N_i(C)) : i \in I).
+\end{equation*}
+We claim that there is a path of $G$ between $C$ and $N(C)$ avoiding $X$. Now $|V'| < k(C)$, and so one of $B_1(C), \dots, B_{k(C)}(C)$ does not meet $X$; $B_s(C)$ say. But since $G$ is boundary-linked, there exist $k(C)$ mutually vertex-disjoint paths of $G$, each between $C$ and $B_s(C)$ and disjoint from $N(C)$ (by a planar form of Menger's theorem, or by (5.8) with $s = 0$ applied to the portion of $\Sigma$ between $C$ and $B_s(C)$). Since fewer than $k(C)$ elements of $X$ are not in $N(C)$, it follows that there is a path of $G$ between $C$ and $B_s(C)$ which avoids $X$. Moreover, there exists $r \in \{1, \dots, k(C)\} - I$, since $|I| < k(C)$. Then $v$ of $P_1, \dots, P_{vk(C)}$ meet $N(C)$ only in $N_r(C)$ and $|V'| < k(C) < v$; thus at least one of $P_1, \dots, P_{vk(C)}$ avoids $X$. It follows that there is a path of $G$ between $C$ and $N(C)$ avoiding $X$, as claimed.
+
+Because of the above, we may deduce from Menger's theorem, applied to the graph obtained from $G$ by contracting $N_i(C)$ to a single vertex for each $i$ with $1 \le i \le k(C)$, that there are $k(C)$ mutually vertex-disjoint paths $Q_1, \dots, Q_{k(C)}$ of $G$, such that for each $i$, $Q_i$ has one end in $C$, the other in $V(N_i(C))$, and all its other vertices and edges are inside $U(N(C))$. For each $x \in V(G) \cap C$, let $t(x)$ denote the vertex of $N(C)$ such that one of $Q_1, \dots, Q_{k(C)}$ has ends $x$ and $t(x)$.
+
+Let $H(C)$ be a $G$-normal $O$-arc surrounding $C$, with $V(G) \cap H(C) = V(N(C))$, such that the points of $U(G)$ inside $H(C)$ are the points of $U(G)$ inside $U(N(C))$ together with the points in the edges of $N(C)$. Then $H(C) \subseteq Y_\beta(A(C)) \subseteq \mathscr{A}_{2kv - 1}(C)$, and $4kv - 2 < \alpha(G)$ and so by (5.3) if $C$, $C'$ are distinct cuffs, $H(C) \cap H(C') = \emptyset$ and neither is inside the other.
+
+Let $\Sigma'$ be the component which is not a cylinder of the surface obtained from $\Sigma$ by cutting along $H(C)$ for every cuff $C$. Loosely, we shall regard $\Sigma'$ as a subset of $\Sigma$. Now let us take the restriction of $G$ to $\Sigma'$, and for each cuff $C$ of $\Sigma$ and for all $x \in V(G) \cap C$, let us move each vertex of $N_i(C)$ along $\mathrm{bd}(\Sigma')$ in the appropriate direction until it becomes identified with $t(x)$, where $t(x) \in V(N_i(C))$. (Edges incident with the vertices we are moving must also be moved in the natural way, to remain incident with the moving vertex.) Let the resulting graph be $G'$. Then $G'$ is a proper graph in $\Sigma'$.
+
+Let $\phi \colon \Sigma \to \Sigma'$ be a homeomorphism such that $\phi(C) = H(C)$ for each cuff

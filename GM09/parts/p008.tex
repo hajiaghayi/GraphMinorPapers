@@ -1,0 +1,18 @@
+\origpage{47}{GRAPH MINORS. IX}
+\origfig{figures/fig2}{161bp}{\textsc{Fig}. 2. The $u$-$v$ path is an overpass.}
+
+\stmt
+(3.1) \textit{Any crooked transaction has at most one overpass.}
+
+\textit{Proof.} Let $\mathscr{P}$ be a crooked transaction, let $P_1 \in \mathscr{P}$ be an overpass, and let $P_2 \in \mathscr{P} - \{P_1\}$. Let $P_3$ be a peripheral member of $\mathscr{P} - \{P_1\}$ different from $P_2$. Then $P_2$ does not cross $P_3$; but every overpass crosses every other member of $\mathscr{P}$, and so $P_2$ is not an overpass. The result follows. $\square$
+
+If $P$ is an attachment to $\mathscr{P}$ with leg an overpass of $\mathscr{P}$, we call it an \textit{overpass attachment}.
+
+\stmt
+(3.2) \textit{Every attachment to a crooked transaction that is not exchangeable is an overpass attachment.}
+
+\textit{Proof.} Let $P$ be an attachment to $\mathscr{P}$ in $(G, \Omega)$ which is not exchangeable, where $\mathscr{P}$ is crooked, and let $(A, B)$ be a fence for $\mathscr{P}$. Let $v$ be the foot of the attachment, let $P_1 \in \mathscr{P}$ be the leg, and let $P_1$ have ends $a_1 \in A$, $b_1 \in B$. Let $P$ have ends $u, v$, let $S, T$ be the switches with ends $a_1, b_1$, respectively, and let $\mathscr{S} = (\mathscr{P} - \{P_1\}) \cup \{S\}$, $\mathscr{T} = (\mathscr{P} - \{P_1\}) \cup \{T\}$. Now $u \notin V(\mathscr{P})$ and so $u, a_1, b_1$ are distinct. We assume without loss of generality that $u \in A$ and that $(u, a_1, b_1)$ is clockwise. Let $W = V(\mathscr{P}) \cup \{u\}$. For $x \in \bar{\Omega}$, there is a unique element of $W$, denoted $x^+$, such that $x^+ \ne x$ and such that $(x, x^+, y)$ is clockwise for all $y \in W - \{x, x^+\}$. We define $x^-$ similarly. There is a unique $a \in A \cap W$ such that $a^- \notin A$, the ``first'' vertex of $A \cap W$. Similarly, let $b$ be the ``first'' vertex of $B \cap W$ and let $a', b'$ be the ``last'' vertices of $A \cap W$ and $B \cap W$, respectively. Several relationships exist amongst these vertices.
+
+\hspace*{12pt}(1) \textit{Either $u^- = b_1$, or $a_1 = a'$ and there exists $P_2 \in \mathscr{P} - \{P_1\}$ with ends $a_1^+, a_1^-$. In either case $a_1^- \ne u$.}
+
+For $\mathscr{T}$ is certainly a transaction, with fence $(A, B)$ and so it is not

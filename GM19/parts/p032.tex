@@ -1,0 +1,34 @@
+\origpage{356}{N. Robertson, P.D. Seymour / Journal of Combinatorial Theory, Series B 90 (2004) 325--385}
+\hspace*{24pt}$\circ$ $ins(F)$ contains at least two poles;
+
+\hspace*{12pt}$\bullet$ $F = F_0 \cup F_1$ with $2|E(F_0)| + |E(F_1)| \le 2n$, where $F_0$ is a path with distinct ends and $F_1$ is a circuit, satisfying
+
+\hspace*{24pt}$\circ$ one end of $\delm{F_1}\fix{F_0}$ is a pole $r^*$ say, and the other end is the unique element of $F_0 \cap F_1$,\fixnote{fix:10-distance-flaw}{Here $F_1$ is a circuit and has no ends. The path $F_0$, defined in the line above, is meant. Read this way, 10.4 holds as printed.}
+
+\hspace*{24pt}$\circ$ every vertex of $F_0$ is in $\Sigma_\chi \setminus bd(\Sigma_\chi)$ except $r^*$ and its neighbour,
+
+\hspace*{24pt}$\circ$ every vertex of $F_1 \setminus F_0$ is in $\Sigma_\chi \setminus bd(\Sigma_\chi)$, and
+
+\hspace*{24pt}$\circ$ $ins(F_1)$ contains exactly one pole and does not contain $r^*$;
+
+\hspace*{12pt}$\bullet$ $F = F_0 \cup F_1 \cup F_2$ with $2|E(F_0)| + |E(F_1)| + |E(F_2)| \le 2n$, where $F_0$ is a path and $F_1, F_2$ are circuits, satisfying
+
+\hspace*{24pt}$\circ$ $F_0 \cap F_1 = \{v_1\}$ and $F_0 \cap F_2 = \{v_2\}$ where $v_1, v_2$ are the ends of $F_0$,
+
+\hspace*{24pt}$\circ$ $U(F_0 \cup F_1) \subseteq \Sigma_\chi \setminus bd(\Sigma_\chi)$,
+
+\hspace*{24pt}$\circ$ $U(F_2) \subseteq \Sigma_\chi$ and $|U(F_2) \cap bd(\Sigma_\chi)| \le 1$,
+
+\hspace*{24pt}$\circ$ either $E(F_0) = \emptyset$ and $F_0 = F_1 \cap F_2$ or $E(F_0) \ne \emptyset$ and $F_1 \cap F_2$ is null, and
+
+\hspace*{24pt}$\circ$ for $i = 1, 2$, $ins(F_i)$ contains exactly one pole $r_i^*$, say, and $r_1^* \ne r_2^*$.
+
+By 8.5 we may choose $F$ such that every circuit of $F$ is $\lambda$-linked to $\mathscr{T}$. (To see this, choose $F$ with $ins(F)$ maximal.) In this case we call $(F, ins(F))$ a \textit{distance flaw} for $(\Gamma, \phi, \lambda, \mathscr{T})$.
+
+\textbf{10.4.} \textit{Let $\chi$ satisfy $\mathbf{S}_3$, and let $n \ge 1$ be an integer. Then there is a well-behaved set $\mathscr{C}_2(n)$ of $\chi$-places with the following property. Let $(\Gamma, \phi, \lambda, \mathscr{T}) \in \mathscr{D}$ be $n$-flawed in distance. Then there is a rooted location $\mathscr{L}$ which $(n + 1)$-isolates $\mathscr{T}$ and for which $(\Gamma, \phi, \mathscr{L}) \in \mathscr{C}_2(n)$.}
+
+\textbf{Proof.} By the argument of 10.3, it suffices to prove that if $\mathscr{D}' \subseteq \mathscr{D}$, and all members of $\mathscr{D}'$ have the same distance flaw, $(F, X)$ say, and $U(F) \cap V(\Gamma)$ is the same for all $(\Gamma, \phi, \lambda, \mathscr{T}) \in \mathscr{D}'$, then there is a well-behaved set $\mathscr{C}$ of $\chi$-places, such that for all $(\Gamma, \phi, \lambda, \mathscr{T}) \in \mathscr{D}'$ there is a rooted location $\mathscr{L}$ which $(n + 1)$-isolates $\mathscr{T}$ and for which $(\Gamma, \phi, \mathscr{L}) \in \mathscr{C}$.
+
+For each circuit $C$ of $F$, let $\pi_C$ be a march with $\bar{\pi}_C = U(C) \cap V(\Gamma)$ for every $(\Gamma, \phi, \lambda, \mathscr{T}) \in \mathscr{D}'$, and let $\Sigma_C \subseteq X$ be the disc in $\hat{\Sigma}_\chi$ bounded by $U(C)$ such that $\Sigma_C = ins(C)$ for each $(\Gamma, \phi, \lambda, \mathscr{T}) \in \mathscr{D}'$. Let $\Sigma_0$ be obtained from $\hat{\Sigma}_\chi$ by deleting the interior of each $\Sigma_C$. For each $(\Gamma, \phi, \lambda, \mathscr{T}) \in \mathscr{D}'$, let $\mathscr{L}$ be the set of all rooted hypergraphs $(\Gamma \cap \Sigma_C, \pi_C)$, as $C$ ranges over the (one or two) circuits of $F$. Let $\mathscr{C}$ be the set of all such $(\Gamma, \phi, \mathscr{L})$. As in the proof of 10.2, it suffices to show that for any countable sequence $(\Gamma_i, \phi_i, \mathscr{L}_i)$ ($i = 1, 2, \dots$) of members of $\mathscr{C}$ there exist $j > i \ge 1$ and an inflation $\sigma$ of $\Gamma_i \cap \Sigma_0$ in $\Gamma_j$ such that
+
+\hspace*{12pt}$\bullet$ for each $v \in V(\Gamma_i \cap \Sigma_0), V(\sigma(v)) \subseteq V(\Gamma_j \cap \Sigma_0)$,

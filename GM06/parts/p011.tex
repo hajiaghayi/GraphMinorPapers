@@ -1,0 +1,28 @@
+\origpage{125}{GRAPH MINORS. VI}
+\noindent \textit{tification $s = t$ in $H$ (again, moving along $S$ to $t$) and delete one edge of the circuit thus formed in $H$.}
+
+\textit{In each case the smaller problem is equivalent to the original.}
+
+Again, this is easy to see. What is less clear is what to do if none of these apply. One can show that if $\Sigma$ is a disc then one of (4.1), reduction 1 and reduction 2 will apply, and we thus obtain another form of the algorithm for the disc; and indeed the characterization (3.6) can be proved this way as well. For the cylinder it is possible that none of them apply.
+
+\stmt
+(4.2) \textit{If $\Sigma$ is a cylinder and neither (4.1) nor reduction 1 nor reduction 2 applies, then each component of $H$ has exactly one vertex in each cuff of $\Sigma$.}
+
+For the proof we need a lemma. Let $C$ be a cuff of a cylinder $\Sigma$, and let $S \subset C$ be connected. For distinct $a, b \in S$ we denote by $S(a, b)$ the component of $C - \{a, b\}$ which is contained in $S$.
+
+\stmt
+(4.3) \textit{Let $\Sigma$ be a cylinder, and let $C$ be a cuff of $\Sigma$. Let $s, t \in C$ be distinct, and let $S$ be a component of $C - \{s, t\}$. Let $K$ be a connected graph with $|V(K)| \ge 2$, properly drawn on $\Sigma$ with $V(K) \subseteq S$. Then there is an edge of $K$ with distinct ends $a, b$ say, such that $S(a, b) \cap V(K) = \emptyset$.}
+
+\textit{Proof.} Choose distinct $a, b \in S$, adjacent in $K$, so that $S(a, b)$ is minimal. Suppose that $S(a, b) \cap V(K) \ne \emptyset$, and choose
+\begin{equation*}
+c \in S(a, b) \cap V(K).
+\end{equation*}
+Since $K$ is connected, there is a vertex $d \ne c$ adjacent in $K$ to $c$, and then $d \in S(a, b) \cup \{a, b\}$. Hence $S(c, d) \subset S(a, b)$, a contradiction as required.
+
+\textit{Proof of} (4.2). No component of $H$ has fewer than two vertices in $bd(\Sigma)$, because reduction 1 cannot be applied. Let us say a component of $H$ is \textit{bad} if it has more than one vertex on some cuff of $\Sigma$. Then we must prove that no component of $H$ is bad. For distinct $a, b \in V(H) \cap bd(\Sigma)$, in the same component of $H$, let $H(a, b)$ denote the path of $H$ between $a$ and $b$.
+
+\hspace*{12pt}(1) \textit{Let $C$ be a cuff of $\Sigma$, and let $a, b \in C \cap V(H)$ be distinct. Suppose that $H(a, b)$ exists, and let $S$ be the component of $C - \{a, b\}$ homotopic to $H(a, b)$. Then for all $c, d \in S \cup \{a, b\}$, if $H(c, d)$ exists then it is homotopic to $S(c, d)$.}
+
+For if (1) is not true then $H(a, b) \cup H(c, d)$ includes a circuit, which is impossible since $H$ is a forest.
+
+Let $C$ be a cuff of $\Sigma$, and let $H'$ be a component of $H$. Let $s, t \in C - V(H)$

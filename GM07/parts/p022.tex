@@ -1,0 +1,18 @@
+\origpage{233}{GRAPH MINORS. VII}
+\noindent such that as many vertices and edges of $G$ as possible are inside $F$. (This is possible by (5.2) unless $\mathscr{A}_r(C) = \emptyset$ in which case the theorem is trivial.) Let $\Delta$ be the subset of $\Sigma + \hat{C}$ homeomorphic to $\Sigma(0, 0, 1)$ with boundary $F$.
+
+Now $\Delta \cup Y_r(F)$ is planar in $\Sigma + \hat{C}$, by (5.6), and so it suffices to prove that $\mathscr{A}_r(C) \subseteq \Delta \cup Y_r(F)$. Suppose then that $x \in \mathscr{A}_r(C) - \Delta$. Choose $X \subseteq \Sigma$ with $x \in X$ such that $X$ is solid, connected, and $G$-normal, and $X$ surrounds $C$, and $|V(G) \cap X| \le r$. By (5.2), there exists an $O$-arc $F' \subseteq X$ which surrounds $C$, and $F'$ is clearly $G$-normal, because $X$ is. Suppose that $X \cap F = \emptyset$. Then $F$ is inside $F'$, because $x \notin \Delta$; and so from our choice of $F$, $V(G) \cap F = \emptyset$ and no vertex or edge of $G$ lies in the portion of $\Sigma$ between $F$ and $F'$. But then it is easy to see (from (1.4)) that $d(x, F) = d(x, F') \le r$ and so $x \in Y_r(F)$. We may assume then that $X \cap F \ne \emptyset$; but then clearly $d(x, F) \le r$ (again, from (1.4)), and again $x \in Y_r(F)$. This completes the proof.
+
+We shall need the following, which is essentially Theorem (4.1) of [2].
+
+\stmt
+(5.8) \textit{Let $\Sigma$ be a cylinder and let $C_1, C_2$ be the two cuffs. Let $G$ be a proper graph in $\Sigma$. Let $r, s \ge 0$ be integers. Suppose that}
+
+\textit{(i) every $G$-normal $O$-arc $F$ with $|F \cap V(G)| < r$ is null-homotopic, and} \textit{(ii) every $G$-normal $I$-arc $F$ with $|F \cap V(G)| < s$ has both its ends in the same cuff.} \textit{Then there are mutually vertex-disjoint paths $P_1, \dots, P_r$ of $G$, each between $C_1$ and $C_2$, and mutually vertex-disjoint circuits $B_1, \dots, B_s$ of $G$, none null-homotopic, such that for $1 \le i \le r$ and $1 \le j \le s$ the intersection of $P_i$ and $B_j$ is a path.}
+
+Let $G$ be a proper graph in $\Sigma$. We say that $G$ is \textit{boundary-linked} if for every cuff $C$ of $\Sigma$ and every $G$-normal $O$-arc $F$ surrounding $C$, $|V(G) \cap F| \ge |V(G) \cap C|$. We now turn to a revised form of our main result.
+
+\stmt
+(5.9) \textit{Let $\Sigma \cong \Sigma(a, b, c)$, where $c \ge 2$ and $(a, b, c) \ne (0, 0, 2)$. Let $k \ge 0$ be an integer. Let $G$ be a boundary-linked proper graph in $\Sigma$ with $|V(G) \cap \mathrm{bd}(\Sigma)| \le 2k$ and with $\alpha(G) > 9k v(\Sigma, k)$, such that for every cuff $C$, $|V(G) \cap C| \ge 2$. Let $H$ be a forest in $\Sigma$ with $V(G) \cap \mathrm{bd}(\Sigma) = V(H) \cap \mathrm{bd}(\Sigma)$. Then $H$ is $G$-feasible.}
+
+\textit{Proof.} Let $v = v(\Sigma, k)$, and let $C$ be a cuff. We define $k(C) = |V(G) \cap C|$. Then, since $\Sigma$ has at least two cuffs, $2 + k(C) \le 2k$, and so $2 \le k(C) \le 2k - 2$. In particular, $k \ge 2$. Now if $C' \ne C$ is a cuff, then $C' \subseteq \mathscr{A}_{2k}(C')$, and so by (5.3), $C' \cap \mathscr{A}_{2kv - 1}(C) = \emptyset$, since

@@ -1,0 +1,23 @@
+\origpage{49}{GRAPH MINORS. XIV}
+\noindent in $\Lambda$, and $U(G^* \cap H) \subseteq U(H') \cup \Lambda$, we deduce that $U(P \cap H) - \{u, v\} \subseteq \Lambda$. Consequently (iv)(a) holds, as required. $\square$
+
+\sectionhead{10. \textsc{The} \textsc{Main} \textsc{Proof}}
+
+For an application in a future paper, let us extend (4.1) a little. (The following implies (4.1) by setting $\beta = 12$.)
+
+\stmt
+(10.1) \textit{Let $H$ be a 2-cell, rigid drawing in $\Sigma$, and let $\mathscr{T}$ be a respectful tangle in $H$ of order $\theta$, with metric $d$. Let $H$ be a subgraph of $G$, let $\beta \ge 12$ be an even integer with $\theta \ge 16\beta + 17$, and suppose that}
+
+\hspace*{12pt}(i) $d(u, v) < \beta$ \textit{for every $H$-path in $G$ with ends $u$, $v$ and}
+
+\hspace*{12pt}(ii) \textit{if $\mathscr{T}'$ is the tangle of order $\theta - 4(3\beta + 3) - 2$ obtained from $\mathscr{T}$ by clearing some $(3\beta + 3)$-zone $\Lambda$ such that $H \cap (\Sigma - \Lambda)$ is a rigid drawing in $\Sigma$, then $\Lambda$ is not an eye of $H \cap (\Sigma - \Lambda)$ in $G$ with respect to $\mathscr{T}'$.}
+
+\textit{Then there is a $\mathscr{T}$-local 3-segregation of $G$ and an arrangement of it in $\Sigma$ compatible with $H$.}
+
+\textit{Proof.} We proceed by induction on $|V(G)| + |E(G)|$. If $G = H$ then the result is true, and so we may assume that there is a bridge $J$ of $H$ in $G$. Let $G'$ be the union of $H$ and all the other bridges of $H$ in $G$. From the inductive hypothesis, there is a $\mathscr{T}$-local 3-segregation $\mathscr{S}$ of $G'$ and an arrangement $\alpha$ of $\mathscr{S}$ in $\Sigma$ compatible with $H$.
+
+If $H \cap J$ is null, then we may replace some $(A, \Omega) \in \mathscr{S}$ by $(A \cup J, \Omega)$, thereby obtaining a 3-segregation of $G$ satisfying the theorem. We assume then that there exists $u \in V(H \cap J)$. Let $z = \{u\}$. Now $d(z, v) \le \beta - 1$ for every $v \in V(H \cap J)$, by hypothesis (i). By (9.6) with $\pi = 2$, there is a $(3\beta + 3)$-zone $\Lambda$ around $z$, and a closed disc $\Delta \subseteq \Sigma$ with $bd(\Delta)$ $\alpha$-normal, satisfying (9.6)(i)--(iv).
+
+Let $\mathscr{T}'$ be the tangle of order $\theta - (12\beta + 14)$ obtained from $\mathscr{T}$ by clearing $\Lambda$. From hypothesis (ii) applied to $\mathscr{T}'$, we deduce that (9.6)(iv)(a) is false, and so (9.6)(iv)(b) is true, that is, $(G^*, \Omega^*)$ has no cross, where $G^* = \alpha^{-1}(\Delta) \cup J$, $\Omega^* = \alpha^{-1}(bd(\Delta))$. Let $\mathscr{S}_1 = \{(A, \Omega) \in \mathscr{S} : \alpha(A, \Omega) \subseteq \Delta\}$, $\mathscr{S}_2 = \mathscr{S} - \mathscr{S}_1$. By (8.1) there is a 3-segregation $\mathscr{S}^*$ of $G^*$ with $\bar{\Omega}^* \subseteq V(\mathscr{S}^*)$ and an arrangement $\alpha^*$ of $\mathscr{S}^*$ in $\Delta$, such that $\alpha^*(v) = v$ for all $v \in \bar{\Omega}^*$. Since $H \cap \Delta$ is rigid by (6.1), it follows from (6.5) that we may choose $\alpha^*$ so that $\alpha^*$ is compatible with $H \cap \Delta$.
+
+Let $(A, \Omega) \in \mathscr{S}^*$, and let $(A, B)$ be the separation of $G$ with $V(A \cap B) = \bar{\Omega}$. If $(B \cap H, A \cap H) \in \mathscr{T}$, then by (7.3), there exists $e \in E(A \cap H)$ with $d(z, e) \ge \theta - 3$, and yet $e \subseteq \Delta$, contrary to (9.6)(i). Thus $(B \cap H, A \cap H) \notin \mathscr{T}$, and since $\theta \ge 4$ and $(A \cap H, B \cap H)$ has order $\le 3$, it follows

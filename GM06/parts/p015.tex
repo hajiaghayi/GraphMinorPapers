@@ -1,0 +1,28 @@
+\origpage{129}{GRAPH MINORS. VI}
+\textit{Reduction 2. If there is a separation $(G_1, G_2)$ of $G$ with $V(G_1) \cap V(G_2) \subseteq \{s_i\}$ for some $i$, and with $P_1, \dots, P_k$ all paths of $G_1 \ne G$, replace $G$ by $G_1$.}
+
+\textit{Reduction 3. If some $s_i$ has valency 1 and its neighbour $v$ is not in $C_2$, contract the edge joining $s_i$ and $v$, moving $v$ in $\Sigma$ to $s_i$ along the edge.}
+
+\textit{Reduction 4. If for some $i$ there is a vertex $v$ of $P_i$ such that $v$ is incident with $R_i$, but not every vertex and edge of $P_i$ between $s_i$ and $v$ is incident with $R_i$, let $Q_i$ be a path in $G$ between $s_i$ and $v$ such that every vertex and edge of it is incident with $R_i$, and replace $P_i$ by the concatenation of $Q_i$ and the subpath of $P_i$ between $v$ and $C_2$.} \fix{When $k=1$, ``incident with $R_1$'' is read in the universal cover of the annulus: take the lift of $R_1$ that contains the lift of the gap following the chosen lift of $s_1$; the vertex $v$ and the part of $P_1$ before it are tested on the chosen lift of $P_1$, and the lift of $Q_1$ that starts at the chosen lift of $s_1$ must reach the same lift of $v$ through the closure of that lift of $R_1$.}\fixnote{fix:5-reduction4}{For one path the printed condition loses which side of $P_1$ is meant, and (5.6) fails. Let $s$ and $t$ be joined by three edges: a radial edge $P$, an edge $A$ close to it, and an edge $B$ that turns once around the annulus, and let the linkage be $\{P\}$. The region $R_1$ meets all of $A$ and $B$ but no inner point of $P$, so Reduction 4 at $v=t$ may replace $P$ by $B$. This changes the winding number from $0$ to $1$. The feasible winding numbers are exactly $0$ and $1$, so the next winding number is feasible before the step and not after it, contrary to (5.6). With the condition read in the universal cover, the lift of $B$ from the chosen lift of $s$ ends one turn away from the old contact, so the step is not allowed. For $k\ge 2$ this reading agrees with the printed one.}
+
+Reduction 4 does not actually reduce the size of $G$; but it is easy to check that if $(G', \mathcal{L}')$ is produced by an application of reduction 4, then one of the other reductions can be applied to $(G', \mathcal{L}')$.
+
+The basis of our algorithm is the claim that if $(G', \mathcal{L}')$ is produced from $(G, \mathcal{L})$ by applying one of these reductions, then $\theta(\mathcal{L}') + 1/k$ is feasible in $G'$ if and only if $\theta(\mathcal{L}) + 1/k$ is feasible in $G$. This will be proved as a consequence of a characterization, which will in turn be proved using the reductions.
+
+We begin with the following.
+
+\stmt
+(5.1) \textit{Suppose that none of reductions 1,..., 4 apply to $G$. Then either some $s_i$ has valency 1 and its neighbour is in $C_2$, or $\theta(\mathcal{L}) + 1/k$ is feasible.}
+
+\textit{Proof.} We may assume that no $s_i$ has valency 1. But then for each $i$ the boundary of $R_i$ meets $P_i$ in exactly the vertex $s_i$; and meets $P_{i+1}$ in a vertex different from $s_{i+1}$. Thus there is a path $Q_i$ of $G$ with initial vertex $s_i$ and terminal vertex $t_i$ say, where $t_i$ is a vertex of $P_{i+1}$ different from $s_{i+1}$, with $Q_i \subseteq \Sigma_i \cup \{s_i, t_i\}$. Let $P'_i$ be the concatenation of $Q_i$ with the subpath of $P_{i+1}$ between $t_i$ and $C_2$. Then $\{P'_1, \dots, P'_k\}$ is a linkage $\mathcal{L}'$ with
+\begin{equation*}
+\theta(\mathcal{L}') = \theta(\mathcal{L}) + \frac{1}{k}.
+\end{equation*}
+Now we turn to our characterization. If $f: [0, 1] \to \Sigma$ is continuous, we define
+\begin{equation*}
+|f| = \{f(x): 0 \le x \le 1\}.
+\end{equation*}
+We say $f$ is \textit{$G$-normal} if $e \cap |f| = \emptyset$ for every edge $e$ of $G$; that is, every point of $|f|$ is either a vertex or lies in some region of $G$. If $f$ is $G$-normal, we define $L(f) = L_G(f)$ to be
+\begin{equation*}
+|\{x \in [0, 1]: f(x) \in V(G)\}|.
+\end{equation*}

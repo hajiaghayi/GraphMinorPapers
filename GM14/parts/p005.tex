@@ -1,0 +1,29 @@
+\origpage{27}{GRAPH MINORS. XIV}
+\sectionhead{3. \textsc{Tangles}}
+
+Graphs in this paper are finite, and may have loops or multiple edges. If $G_1$ is a subgraph of $G$ we write $G_1 \subseteq G$. If $G_1, G_2 \subseteq G$ we denote the graphs
+\begin{equation*}
+(V(G_1) \cup V(G_2), E(G_1) \cup E(G_2))
+\end{equation*}
+\begin{equation*}
+(V(G_1) \cap V(G_2), E(G_1) \cap E(G_2))
+\end{equation*}
+by $G_1 \cup G_2$, $G_1 \cap G_2$ respectively; and $G_1, G_2$ are disjoint if $V(G_1 \cap G_2) = \emptyset$. A separation of $G$ is a pair $(G_1, G_2)$ of subgraphs of $G$ such that $G_1 \cup G_2 = G$ and $E(G_1 \cap G_2) = \emptyset$; its order is $|V(G_1 \cap G_2)|$. A tangle in $G$ of order $\theta$ is a set $\mathscr{T}$ of separations of $G$, each of order $<\theta$, such that
+
+\hspace*{12pt}(i) either $(A, B) \in \mathscr{T}$ or $(B, A) \in \mathscr{T}$, for every separation $(A, B)$ of $G$ of order $<\theta$,
+
+\hspace*{12pt}(ii) there do not exist $(A, B), (A', B'), (A'', B'') \in \mathscr{T}$ such that $A \cup A' \cup A'' = G$, and
+
+\hspace*{12pt}(iii) $V(A) \ne V(G)$, for all $(A, B) \in \mathscr{T}$.
+
+Tangles were introduced in [4].
+
+Of special interest to us are tangles in drawings. Let $H$ be a 2-cell drawing in $\Sigma$, and let $\mathscr{T}$ be a tangle in $H$ of order $\theta$. Let $K$ be a radial drawing of $H$. We say that $\mathscr{T}$ is respectful if for every circuit $C$ in $K$ of length $<2\theta$, there is a closed disc $\Delta \subseteq \Sigma$ bounded by $U(C)$ such that $(H \cap \Delta, H \cap \overline{\Sigma - \Delta}) \in \mathscr{T}$. Such a disc $\Delta$ is unique, and we write $ins(C) = \Delta$; $ins$ is called the inside function of $\mathscr{T}$. If $W$ is a closed walk in $K$ of length $<2\theta$, we define $ins(W)$ to be
+\begin{equation*}
+U(K') \cup \bigcup (ins(C) \colon C \text{ is a circuit of } K')
+\end{equation*}
+where $K'$ is the subgraph of $K$ formed by the vertices and edges of $W$. Let $x, y \in A(H)$ and let $x', y'$ be the corresponding atoms of $K$. We define
+\begin{equation*}
+d(x, y) = \begin{cases} 0 & \text{if } x = y \\ k & \text{if } x \ne y \text{ and there is a closed walk } W \text{ of } K \\ & \quad \text{with length } < 2\theta \text{ with } x', y' \subseteq ins(W), \\ & \quad \text{and the shortest such walk has length } 2k \\ \theta & \text{otherwise.} \end{cases}
+\end{equation*}
+(We remark that every walk in $K$ has even length since $K$ is bipartite). If $v \in V(H)$ we write $d(v, y)$ for $d(\{v\}, y)$ and so on. We call $d$ the \textit{metric of $\mathscr{T}$}. It was introduced, and shown to be a metric, in [5]. The following

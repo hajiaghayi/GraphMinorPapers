@@ -1,0 +1,31 @@
+\origpage{77}{GRAPH MINORS. XIII}
+\hspace*{12pt}(1) Choose a maximal subgraph $G_1$ of $G$ with at most $\delta$ loops at each vertex and with no $\delta + \delm{1}\fix{2}$ edges mutually parallel. Then $G_1 \in \mathcal{F}$ if and only if $G \in \mathcal{F}$, as is easily seen\fix{: a model in $G$ of a graph with at most $\delta$ edges uses at most $\delta$ loops at each vertex, and between two distinct vertices of $G$ it uses at most $\delta$ edges that represent edges of the graph and at most one more edge inside a branch set, so its edges can be chosen in $G_1$}.\fixnote{fix:4.3-proof}{As printed, $G_1$ keeps too few parallel edges. Let $\mathcal{F}$ be the class of graphs with no minor isomorphic to one vertex with two loops, so that $\delta = 2$. Two vertices joined by three parallel edges are not in $\mathcal{F}$ (contract one edge), but $G_1$, two vertices joined by two edges, is in $\mathcal{F}$. Step (1) of (4.4) keeps $|E(H)| + 1$ parallel edges, which is the bound needed.}
+
+\hspace*{12pt}(2) We apply (3.3) to $G_1$. We obtain a subgraph $G'$ of $G_1$, and a branch-decomposition of $G'$ of width $\le 3\omega$, such that either $G' = G_1$ or $G'$ has branch-width $\ge \omega$.
+
+\hspace*{12pt}(3) If $G' \ne G_1$ then $G'$ has branch-width $\ge \omega$, and so $G'$ has a minor isomorphic to $H_1$ and $G' \notin \mathcal{F}$; thus, $G \notin \mathcal{F}$ and we stop.
+
+\hspace*{12pt}(4) If $G' = G_1$, we have a branch-decomposition of $G_1$ of width $\le 3\omega$. We direct the edges of $G_1$ arbitrarily, we apply (4.1) to $G_1$ with $Z = \emptyset$ (with $3\omega$ replacing $\omega$) and compute the $\delta$-folio of $G_1$ relative to $\emptyset$. From this we deduce whether $G_1$ has a minor isomorphic to any of $H_1, \dots, H_k$ and hence determine whether $G_1 \in \mathcal{F}$. This completes the algorithm.
+
+Since at step 1 we arrange that $\varepsilon(G_1) \le O(v^2)$, the algorithm has running time $O(v^2)$. $\square$
+
+A second, similar, application of (4.1) is the following. Let $H$ be a planar graph. By (4.3) (with $\mathcal{F}$ the class of graphs with no minor isomorphic to $H$) we can test if an input graph has a minor isomorphic to $H$ in time $O(v^2)$. But what if we want to \textit{find} such a minor? The following improves a result of [13].
+
+\stmt
+(4.4) \textsc{Algorithm}.
+
+\textit{Input:} A graph $G$.
+
+\textit{Output:} Decides if there is a model of $H$ in $G$, and outputs such a model if one exists.
+
+\textit{Running time:} $O(v^2)$.
+
+\textit{Description:} Let $\omega$ be as in (4.2), with $\omega \ge 2$.
+
+\hspace*{12pt}(1) We choose a maximal subgraph $G_1$ of $G$ with at most $|E(H)|$ loops at every vertex and at most $|E(H)| + 1$ edges mutually parallel. There is a model of $H$ in $G$ if and only if there is one in $G_1$.
+
+\hspace*{12pt}(2) We apply (3.3) to $G_1$. We obtain a subgraph $G_2$ of $G_1$, and a branch-decomposition of $G_2$ of width $\le 3\omega$, such that either $G_2 = G_1$ or $G_2$ has branch-width $\ge \omega$. From the choice of $\omega$, it follows that either $G_2 = G_1$ or there is a model of $H$ in $G_2$. Consequently there is a model of $H$ in $G_1$ if and only if there is one in $G_2$.
+
+\hspace*{12pt}(3) We test if $G_2$ has an $H$-minor, and if so find a model of it in $G_2$, by using (4.1) to compute the $\varepsilon(H)$-folio of $G_2$ relative to $\emptyset$ and a modelling of it.
+
+From step (1), $|E(G_1)| \le O(v^2)$. Step (2) therefore takes time $O(v^2)$, and so does step (3). Thus the algorithm has running time $O(v^2)$ in total. $\square$

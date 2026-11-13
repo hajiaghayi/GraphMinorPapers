@@ -1,0 +1,25 @@
+\origpage{166}{ROBERTSON AND SEYMOUR}
+\textbf{(P4)} if $n_1, n_2$ are nodes bordering different cuffs, then $\beta(n_1) \cap \beta(n_2) = \emptyset$, and if $n_1$ is a node bordering a cuff $\Theta$ and $n_2 \in dom(\gamma)$ does not border $\Theta$, then $\gamma(n_2) \notin \beta(n_1)$;
+
+\textbf{(P5)} if $c$ is an internal cell then $V(\alpha(c) \cap \alpha(-c)) \subseteq \gamma(\tilde{c})$;
+
+\textbf{(P6)} if $c$ is a border cell with ends $n_1, n_2$, then
+\begin{equation*}
+V(\alpha(c) \cap \alpha(-c)) \subseteq \beta(n_1 +) \cup \beta(n_2 +);
+\end{equation*}
+\textbf{(P7)} if $n_1, n_2, n_3, n_4$ are nodes bordering the same cuff of $\Sigma$ and in order, then $\beta(n_1 +) \cap \beta(n_3 +) \subseteq \beta(n_2 +) \cup \beta(n_4 +)$.
+
+(``In order,'' here and later in the paper, refers to the order of occurrence around the cuff. We see that the conclusion of \textbf{(P7)} holds trivially unless $n_1, n_2, n_3, n_4$ are all distinct.) For readers having trouble digesting this definition, it may help at this point to jump forward to (13.1) in order to better grasp what portrayals are.
+
+Some remarks are in order. (1) Permitting $dom(\gamma) \ne N(\Gamma)$ is a helpful but artificial device to assist in removing vertices. We shall eventually be able to restrict ourselves to portrayals with $dom(\gamma) = N(\Gamma)$.
+
+\hspace*{12pt}(2) Unfortunately, we need to permit $\gamma(n_1) \in \beta(n_2)$ for distinct nodes $n_1, n_2$ bordering the same cuff. Eventually this will be eliminated, but for the moment the reader is warned that it can happen.
+
+\hspace*{12pt}(3) \textbf{(P6)} and \textbf{(P7)} tell us, in spirit, that for each cuff $\Theta$ the $\alpha(c)$'s for $c$ bordering $\Theta$ are arranged in a circle, each overlapping the next in $\beta(n +)$ (where $n$ is the common end). However, there is a possible degeneracy to beware of. If $c_1, c_2$ border $\Theta$, with ends $n_1, n_2$ and $n_2, n_3$, it is possible that $\beta(n_1 +) \cap \beta(n_3 +) \not\subseteq \beta(n_2 +)$; but any vertex in $\beta(n_1 +) \cap \beta(n_3 +) - \beta(n_2 +)$ lies in $\beta(n_4 +)$ for every $n_4 \ne n_2$ bordering $\Theta$. Eventually this degeneracy too will be eliminated.
+
+The reason for interest in portrayals is that they provide a means of ``encoding'' the hypergraph $G$ by the painting $\Gamma$, labelling the cells of $\Gamma$ appropriately; and the product of the main theorem of [2] can be converted into a portrayal. The reason we are interested in portrayals of hypergraphs and not just of graphs is that, by applying [2] to the ``1-skeleton'' of a hypergraph, we obtain a portrayal of the hypergraph, as we shall see, and this will be important in proving Nash-Williams' ``immersions'' conjecture.
+
+First, let us observe the following.
+
+\stmt
+(2.1) \textit{Given a portrayal $\pi = (\Sigma, \Gamma, \alpha, \beta, \gamma)$ of $G$, let $(I_1, I_2)$ be a partition of $C(\Gamma)$. For $i = 1, 2$, let $A_i = \bigcup (\alpha(c) : c \in I_i)$. Then $E(A_1 \cap A_2) = \emptyset$, and $V(A_1 \cap A_2) = \bigcup (\gamma(\tilde{c}_1) \cap \gamma(\tilde{c}_2) : c_1 \in I_1, c_2 \in I_2) \cup \bigcup (\beta(n) : \text{there exist border cells } c_1 \in I_1 \text{ and } c_2 \in I_2 \text{ with } n \in \tilde{c}_1 \cap \tilde{c}_2)$.}

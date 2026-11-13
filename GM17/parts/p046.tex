@@ -1,0 +1,19 @@
+\origpage{207}{GRAPH MINORS, XVII}
+\textit{Proof.} If $H$ is planar, let $p, q, z, \theta$ be as in (13.1); then the theorem is satisfied (for (13.1)(ii) cannot hold since $H$ is planar). We assume then that $H$ is non-planar. Choose $p, q_0, z_0, \theta_0$ so that (13.1) is satisfied with $p, q, z, \theta$ replaced by $p, q_0, z_0, \theta_0$. Choose $a^*, b^* \ge 0$ with $2a^* + b^*$ maximum so that $H$ cannot be drawn in $\Sigma(a^*, b^*, 0)$. Let $q = 4a^* + 2b^* + q_0$, and let $h = p(q^2 + q_0)$. Choose $\theta, z$ so that (13.3) holds (with the given $\sigma, p, h, z_0, \theta, z$).
+
+We claim that the theorem holds. For let $\mathscr{T}$ be a tangle of order $\ge \theta$ in a graph $G$. We may assume that $\mathscr{T}$ does not control an $H$-minor of $G$. By (13.1) there exists $Z_0 \subseteq V(G)$ with $|Z_0| \le z_0$, and a $(\mathscr{T} \setminus Z_0)$-central portrayal $\pi_0 = (\Sigma_0, \Gamma_0, \alpha_0, \beta_0, \gamma_0)$, of $G \setminus Z_0$ with warp $\le p$, such that $\Sigma_0$ has $\le q_0$ cuffs and $H$ cannot be drawn in $\Sigma_0$. Consequently $h_p(\pi_0) \le h$. By (13.2), there exists $Z \subseteq V(G)$ with $Z_0 \subseteq Z$ such that $|Z| \le z$, and a $(\mathscr{T} \setminus Z)$-central portrayal $\pi = (\Sigma, \Gamma, \alpha, \beta, \gamma)$ of $G \setminus Z$, such that $\pi$ is simpler than or resembles $\pi_0$, and $\pi$ is $\sigma(\Sigma, p, |Z|)$-redundant. Choose $\pi$ with maximal truth. We claim that $\pi$ is true. For if $\pi'$ is another $(\mathscr{T} \setminus Z)$-central portrayal of $G \setminus Z$ resembling $\pi$, then $\pi'$ is $\sigma(\Sigma, p, |Z|)$-redundant, because $\pi$ is, and consequently $\pi'$ is not truer than $\pi$. Since $\pi$ is $0$-redundant, it follows that it is true.
+
+Let $\Sigma$ be homeomorphic to $\Sigma(a, b, c)$, and let $\Sigma_0$ be homeomorphic to $\Sigma(a_0, b_0, c_0)$. Then
+\begin{equation*}
+c \le 4a + 2b + c \le 4a_0 + 2b_0 + c_0 \le 4a^* + 2b^* + q_0 = q.
+\end{equation*}
+Moreover, $H$ cannot be drawn in $\Sigma$, since $H$ cannot be drawn in $\Sigma_0$ and $\Sigma$ is simpler than or homeomorphic to $\Sigma_0$. The result follows. $\square$
+
+\sectionhead{14. \textsc{Hypergraph} \textsc{Form} \textsc{Of} \textsc{The} \textsc{Excluded} \textsc{Minor} \textsc{Theorem}}
+
+If $\mathscr{T}$ is a tangle in a hypergraph $G$, and $H$ is a graph, we say that $\mathscr{T}$ controls an $H$-minor of $G^*$ if there is an $H$-minor $\eta$ of $G^*$ such that for all $v \in V(H)$, there is no $(A, B) \in \mathscr{T}$ of order $< |V(H)|$ with $V(\eta(v)) \subseteq V(A)$.
+
+Our objective now is to obtain a portrayal of a hypergraph, if some tangle $\mathscr{T}$ in it fails to control an $H$-minor of $G^*$. For this we need the following lemma.
+
+\stmt
+(14.1) \textit{Let $\mathscr{T}$ be a tangle of order $\theta$ in a hypergraph $G$. Let $\theta^* \ge 1$ with $\theta^* < 2/3\theta + 1$, and let $\mathscr{T}^*$ be the set of all separations $(A', B')$ of $G^*$ of order $< \theta^*$ such that there exists $(A, B) \in \mathscr{T}$ with $V(A) = V(A')$ and $V(B) = V(B')$. Then $\mathscr{T}^*$ is a tangle in $G^*$ of order $\theta^*$.}

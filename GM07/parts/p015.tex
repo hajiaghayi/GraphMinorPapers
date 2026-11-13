@@ -1,0 +1,29 @@
+\origpage{226}{ROBERTSON AND SEYMOUR}
+\noindent of $J^+$ with vertex set $W$ and with edges the central edges of $J^+$; and let $L$ be the subgraph of $J^+$ obtained from $J^+$ by deleting the central edges and those edges which meet (and hence are subsets of) $bd(\Sigma)$.
+
+Now $\Delta$ is obtained from $\Sigma$ by cutting along $U(J - bd(\Sigma)) = U(K) \cup U(L)$. We can do so in two stages, first cutting along $U(L)$ and then cutting along $U(K)$. Let $\Sigma'$ be the surface obtained from $\Sigma$ by cutting along $U(L)$. There are natural surjections $\theta \colon \Sigma' \to \Sigma$ and $\psi \colon \Delta \to \Sigma'$ where
+\begin{equation*}
+\theta(\psi(x)) = \phi(x) \qquad (x \in \Delta).
+\end{equation*}
+Then $\theta^{-1}(K)$ is a matching in $\Sigma'$, and $\Delta$ is obtained from $\Sigma'$ by cutting along $U(\theta^{-1}(K))$.
+
+Now for each edge $e$ of $L$, $|\bar{e} \cap V(G)| \le w + 2\mu + 1$ because $e$ is either short or linking. Thus
+\begin{equation*}
+|V(G) \cap U(L)| \le 6(2a + b + c - 1)(w + 2\mu + 1) = v - 2k
+\end{equation*}
+by (2.4). We claim that every $O$-arc $F \subseteq U(L) \cup bd(\Sigma)$ is a cuff of $\Sigma$. For $F$ is $G$-normal, and
+\begin{equation*}
+|V(G) \cap F| \le |V(G) \cap U(L)| + |V(G) \cap bd(\Sigma)| \le v
+\end{equation*}
+and so by (ii), there is a closed disc $R \subseteq \Sigma + \hat{C}$ with $bd(R) = F$, for some cuff $C$ of $\Sigma$. But $F \subseteq U(J^+)$ and $J^+$ has only one region (as a graph in $\Sigma$), and so $R \cap \Sigma \subseteq bd(R)$, that is, $F = C$, as claimed.
+
+It follows that $U(L)$ includes no $O$-arc. Suppose that $U(L)$ includes an $I$-arc. Then we may choose an $I$-arc $F \subseteq U(L)$ such that no point of $F$ is in $bd(\Sigma)$ except its ends. Now
+\begin{equation*}
+|V(G) \cap F| \le |V(G) \cap U(L)| \le v
+\end{equation*}
+and so by (i), the ends of $F$ are in the same cuff $C$ of $\Sigma$. Hence there is an $O$-arc $F' \subseteq F \cup C$ with $F \subseteq F'$; but then $F'$ is not a cuff, and $F' \subseteq U(L) \cup bd(\Sigma)$, contrary to the result of the previous paragraph. We deduce that $U(L)$ includes no $I$-arc.
+
+Since $U(L)$ includes no $O$-arc or $I$-arc of $\Sigma$, it follows that $\Sigma' \cong \Sigma(a, b, c')$ for some $c' \ge c$. The cuffs of $\Sigma'$ are in 1-1 correspondence with the components of $U(L) \cup bd(\Sigma)$, and each of these components contains a vertex of $J$. Hence the number of cuffs of $\Sigma'$ is at most $2(2a + b + c - 1)$ by (2.4). Thus $c' \le 2(2a + b + c - 1)$, and from the definition of $w$ we have
+\begin{equation*}
+w \ge w(\Sigma', 2k, 3(2a + b + c - 1)).
+\end{equation*}

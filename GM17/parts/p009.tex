@@ -1,0 +1,20 @@
+\origpage{170}{ROBERTSON AND SEYMOUR}
+Now since $A \ne G$, there is some cell $c_1$ with $\alpha(c_1) \not\subseteq A$. By (1), $c_1$ borders a cuff $\Theta$. Let the cells and nodes bordering $\Theta$ be $n_1, c_1, n_2, c_2, \dots, n_k, c_k, (n_1)$ in order. For $0 \le j \le k$, let $X_j = A \cup \alpha(c_1) \cup \dots \cup \alpha(c_j)$.
+
+\hspace*{12pt}(2) \textit{For $1 \le j \le k$, every attachment of $X_j$ which is not an attachment of $A$ is in $\beta(n_1) \cup \beta(n_{j+1})$. In particular $X_j$ has fewer than $\theta$ attachments.}
+
+\textit{Subproof.} The second claim follows from the first, since $|\beta(n_{\delm{k}\fix{1}}) \cup \beta(n_{\delm{j}\fix{j+1}})| \le 2p$,\fixnote{fix:4.3-claim2}{The claim names $\beta(n_1) \cup \beta(n_{j+1})$.} and $A$ has $< \theta - 2p$ attachments. For the first claim, let $v$ be an attachment of $X_j$ which is not an attachment of $A$. Then $v \notin V(A)$, and $v \in V(\alpha(c_i))$ for some $i$ with $1 \le i \le j$, and there is an edge $e$ of $G$, incident with $v$, with $e \notin E(X_j)$. Let $c$ be a cell of $\Gamma$ with $e \in E(\alpha(c))$. Then $v \in V(\alpha(c_i) \cap \alpha(c))$. If $c$ does not border $\Theta$, then by \textbf{(P5)}, \textbf{(P6)} and \textbf{(P7)} it follows that $v = \gamma(n)$ for some $n \in \Theta \cap \operatorname{dom}(\gamma)$, and hence $v \in V(A)$, a contradiction. Thus $c$ borders $\Theta$, and $c = c_{j'}$, say, where $j < j' \le k$. Since $v \in V(\alpha(c_i) \cap \alpha(-c_i))$ and $v \notin \gamma(\tilde{c}_i)$, it follows that $v \in \beta(n_h)$ where $h = i$ or $i+1$; and similarly $v \in \beta(n_{h'})$ where $h' = j'$ or $j'+1$. Now $n_1, n_h, n_{j+1}, n_{h'}$ are in order, and so
+\begin{equation*}
+v \in \beta(n_h) \cap \beta(n_{h'}) \subseteq \beta(n_1) \cup \beta(n_{j+1}).
+\end{equation*}
+This proves (2).
+
+\hspace*{12pt}(3) \textit{For $1 \le j \le k$, $X_j$ is small.}
+
+\textit{Subproof.} $X_0$ is small; and for $1 \le j \le k$ if $X_{j-1}$ is small then so is $X_j$, from (4.1), because $X_j = X_{j-1} \cup \alpha(c_j)$ and $X_j$ has $< \theta$ attachments and $\alpha(c_j)$ is small. The result follows by induction on $j$.
+
+In particular, $X_k$ is small. But every attachment of $X_k$ is an attachment of $A$, as is easily seen, and so $X_k$ has $< \theta - 2p$ attachments. Since $\alpha(c_1) \subseteq X_k$ and $\alpha(c_1) \not\subseteq A$ it follows that $X_k \ne A$; but this contradicts the maximality of $A$, as required. $\square$
+
+\sectionhead{5. \textsc{Simplifying} A \textsc{Portrayal}}
+
+The main aim of this paper is to show that any $\mathscr{T}$-central portrayal of a hypergraph can be converted to one with nice connectivity properties (possibly by removing a few vertices) if $\mathscr{T}$ has large enough order. In this section we begin the process. Here we are concerned with $\mathscr{T}$-central portrayals such that there is no simpler $\mathscr{T}$-central portrayal of the same hypergraph.

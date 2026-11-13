@@ -1,0 +1,26 @@
+\origpage{5}{}
+\noindent \textit{ends $a$ and $b$.}
+
+\textit{Subproof.} Since $a$ is a terminal of $L_i$, it follows that $a \in V(A_i \cap B_i) \cup (Z \setminus V(A_i))$, by (2.2). Since $Z \cap V(A_i) = Z \cap V(A_j)$ it follows that if $a \notin V(A_i \cap B_i)$ then $a \in Z \setminus V(A_j)$. Similarly, either $b \in V(A_i \cap B_i)$ or $b \in Z \setminus V(A_j)$. If $a \in Z \setminus V(A_j)$ let $a' = a$, and if $a \in V(A_i \cap B_i)$, $a = v_i^t$ say, let $a' = v_j^t$. Thus $\phi_j(a') = \phi_i(a)$. Define $b'$ similarly. Now since $\phi_j(\pi_j) = \phi_i(\pi_i)$ and $\phi_i, \phi_j$ are injections, and $\{a, b\}$ is a block of $\pi_i$, it follows that $\{a', b'\}$ is a block of $\pi_j$, that is, there is a component $P'$ of $L_j$ with ends $a', b'$. There are five cases:
+
+\textit{Case 1: $a, b \in Z \setminus V(A_j)$.}
+
+Then $a = a'$ and $b = b'$. Now no internal vertex of $P'$ has degree $\ge 1$ in $M^*$, and $a, b \notin V(M^*)$, and so $P'$ is a component of $M^* \cup L_j$ satisfying (4).
+
+\textit{Case 2: $V(A_i \cap B_i)$ contains exactly one of $a, b$, say $a$.}
+
+Then $a \ne b$, and so $a' \ne b' = b$. Let $a = v_i^t$ say; then $a' = v_j^t$, and $v_j^t$ has degree $1$ in $L_j$ since it is an end of $P'$ and $E(P') \ne \emptyset$. Consequently $t \in T$, and so $P_t \cup P'$ is a component of $M^* \cup L_j$ with ends $a$ and $b$, as required.
+
+\textit{Case 3: $a \ne b$, and $a, b \in V(A_i \cap B_i)$.}
+
+Then again $a' \ne b'$. Let $a = v_i^s, b = v_i^t$; then $a' = v_j^s, b' = v_j^t$. Since $a'$ and $b'$ both have degree $1$ in $L_j$ it follows that $s, t \in T$, and so $P_s \cup P_t \cup P'$ is a component of $M^* \cup L_j$ with ends $a$ and $b$.
+
+\textit{Case 4: $a = b \in V(A_i \cap B_i)$ and $a = a'$.}
+
+Let $a = b = v_i^t$. Then $v_i^t = a = a' = v_j^t$, and so $a$ has degree $0$ in $M^*$. Moreover, since $v_i^t$ has degree $0$ in $L_i$ (because $|V(P)| = 1$) it follows from (2) that $v_j^t$ has degree $0$ in $L_j$. Hence $a = v_j^t$ has degree $0$ in $M^* \cup L_j$, and so $P$ is a component of $M^* \cup L_j$ with ends $a$ and $b$.
+
+\textit{Case 5: $a = b \in V(A_i \cap B_i)$ and $a \ne a'$.}
+
+Let $a = b = v_i^t$; then $a' = v_j^t \ne v_i^t$. Since $v_i^t$ has degree $0$ in $L_i$, it follows that $t \notin T$, and so $a$ has degree $0$ in $M^*$. Since $a \notin V(L_j)$ we deduce that $a$ has degree $0$ in $M^* \cup L_j$, and so again $P$ is a component of $M^* \cup L_j$ with ends $a$ and $b$.
+
+In each case we have found a component of $M^* \cup L_j$ with ends $a$ and $b$. This proves (4).

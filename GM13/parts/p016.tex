@@ -1,0 +1,27 @@
+\origpage{80}{ROBERTSON AND SEYMOUR}
+\hspace*{12pt}(1) \textit{There is no separation $(A, B)$ of $G$ of order $\le \xi$, such that $Z \subseteq V(A)$, $A \cap G_i$ is null for some $i$ ($1 \le i \le k$), and $B \ne G$.}
+
+\textit{Subproof.} Suppose that $(A, B)$ is such a separation, with $A \cap G_k$ null, say. By hypothesis (iii), $(A, B)$ has order $\xi$. Let $Z' = V(A \cap B)$, and for $1 \le i \le k$ let $G'_i = G_i \cap B$. Then $G'_1, \dots, G'_k$ are mutually vertex-disjoint subgraphs of $B$. Moreover,
+
+(i)' \textit{For $1 \le i \le k$, either $G'_i$ is connected or every component of $G'_i$ has a vertex in $Z'$.} For if $G'_i$ has more than one component and one of them does not meet $Z'$, then it is also a component of $G_i$ and does not meet $Z$ and does not equal $G_i$, contrary to hypothesis.
+
+(ii)' \textit{For $1 \le i < j \le k$, either $V(G'_i)$ and $V(G'_j)$ both meet $Z'$ or there is an edge of $B$ between $V(G'_i)$ and $V(G'_j)$.} For if $V(G'_i) \cap Z' = \emptyset$ then $G'_i = G_i$ and $V(G_i) \cap Z = \emptyset$. Thus there is an edge of $G$ between $V(G_i)$ and $V(G_j)$. Since $V(G'_i) \cap Z' = \emptyset$, this edge is an edge of $B$, and hence its other end is in $V(G'_j)$, as required.
+
+(iii)' \textit{For $1 \le i \le k,,$ there is no separation $(A', B')$ of $B$ of order $< \xi$ such that $Z' \subseteq V(A')$ and $G'_i \cap A'$ is null.} For if $(A', B')$ is such a separation, then $(A \cup A', B')$ is a separation of $G$ of order $< \xi$, with $Z \subseteq V(A \cup A')$ and with $G'_i \cap (A \cup A')$ null, a contradiction since $G'_i = G_i$.
+
+From (i)', (ii)', (iii)' and the minimality of $G$, we deduce, since $B$ is smaller than $G$, that for some $\mu$ with $0 \le \mu \le \xi$ there are $\kappa = k - \lfloor \frac{1}{2}(\xi - \mu) \rfloor$ non-null connected subgraphs $H'_1, \dots, H'_\kappa$ of $B$, mutually vertex-disjoint, such that
+
+\hspace*{12pt}(a) $|V(H'_i) \cap Z'| = 1$ ($1 \le i \le \xi$), $V(H'_i) \cap Z' = \emptyset$ ($\xi + 1 \le i \le \kappa$), and
+
+\hspace*{12pt}(b) for $1 \le i < j \le \kappa$, if there is no edge of $B$ between $V(H'_i)$ and $V(H'_j)$ then $i, j \le \mu$.
+
+By Menger's theorem and hypothesis (iii) there are $\xi$ paths $P_1, \dots, P_\xi$ of $A$ from $Z$ to $Z'$, mutually vertex-disjoint. Let us choose the numbering so that for $1 \le i \le \xi$ the end of $P_i$ in $Z'$ is in $V(H'_i)$. Let
+\begin{align*}
+H_i &= P_i \cup H'_i && (1 \le i \le \xi) \\
+H_i &= H'_i && (\xi + 1 \le i \le \kappa).
+\end{align*}
+Then it is easy to see that $H_1, \dots, H_\kappa$ satisfy the theorem, a contradiction. \fix{To see this, we may assume that each $P_i$ has no vertex in $Z \cup Z'$ except its ends (replacing it by a subpath if necessary). Since $|Z| = |Z'| = \xi$, each vertex of $Z$ and each vertex of $Z'$ is an end of exactly one of $P_1, \dots, P_\xi$. Since $Z \subseteq V(A)$, we have $Z \cap V(B) \subseteq Z'$. For $1 \le i \le \xi$, $H_i$ is connected, since $P_i$ and $H'_i$ are connected and both contain the end $z_i$ of $P_i$ in $Z'$. The graphs $H_1, \dots, H_\kappa$ are mutually vertex-disjoint, since the $P_i$ are disjoint subgraphs of $A$, the $H'_j$ are disjoint subgraphs of $B$, and a vertex of $P_i$ in $V(B)$ is in $V(A \cap B) = Z'$ and so equals $z_i$, which belongs to no $H'_j$ with $j \ne i$. For (a), if $1 \le i \le \xi$ then $V(H'_i) \cap Z \subseteq V(H'_i) \cap Z' = \{z_i\} \subseteq V(P_i)$, and so $V(H_i) \cap Z = V(P_i) \cap Z$, which has exactly one member. If $\xi + 1 \le i \le \kappa$, then $V(H_i) \cap Z \subseteq V(H'_i) \cap Z' = \emptyset$. For (b), every edge of $B$ is an edge of $G$, so if there is no edge of $G$ between $H_i$ and $H_j$ then there is none of $B$ between $H'_i$ and $H'_j$, and so $i, j \le \mu$.}\fixnote{fix:5.3-claim1-proof-added}{The paper says only that this is easy to see. The verification above is the one used in the formalization.} This proves (1).
+
+\hspace*{12pt}(2) \textit{Every edge of $G$ is between $V(G_i)$ and $V(G_j)$ for some choice of $i, j$ with $1 \le i < j \le k$.}
+
+\textit{Subproof.} If $e \in E(G)$ is not between any two distinct $V(G_i)$'s, contracting $e$ produces a smaller counterexample; for by (1) $e$ does not join

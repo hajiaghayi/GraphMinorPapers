@@ -1,0 +1,22 @@
+\origpage{246}{ROBERTSON AND SEYMOUR}
+For each $e \in E(G'') - \eta''(E(G))$ we define $\delta_e''$ as follows. If $e \notin \eta'(E(G'))$ we define $\delta_e'' = \delta_e'$. If $e = \eta'(f)$ where $f \in E(G')$ we define $\delta_e''$ to be the subgraph of $K_{V(G'')}$ with vertex set $V_{G''}(e)$, in which distinct ends $a, b$ of $e$ are adjacent if and only if $a \in \eta'(p)$ and $b \in \eta'(q)$ for some $p, q$ in the same component of $\delta_f$.
+
+\hspace*{12pt}(6) \textit{For each $e \in E(G'') - \eta''(E(G))$, $\delta_e'' \in \Delta''(e)$.}
+
+For if $e \notin \eta'(E(G'))$, this is clear since $\delta_e'' = \delta_e'$. Let $e = \eta'(f)$. We claim that $\delta_e''$ is a grouping. For suppose that $a, b, c \in V_{G''}(e)$ are distinct and $a, b$ are adjacent in $\delta_e''$ and so are $b, c$. Choose $p, q$ in the same component of $\delta_f$ with $a \in \eta'(p)$ and $b \in \eta'(q)$; and choose $r, s$ in the same component of $\delta_f$ with $b \in \eta'(r)$ and $c \in \eta'(s)$. Then $q = r$ since $\eta'(q) \cap \eta'(r) \neq \emptyset$, and so $p$ and $s$ are in the same component of $\delta_f$. Hence $a$ is adjacent to $c$ in $\delta_e''$. This proves that $\delta_e''$ is a grouping. If $e \notin \operatorname{dom}(\mu'')$ then $\delta_e'' \in \Delta''(e)$ since $\Delta''(e)$ is free, and we may therefore assume that $e \in \operatorname{dom}(\mu'')$. But then $\delta_e''$ is the image under $\mu'(f) \to \mu''(\eta'(f))$ of $\delta_f$, and therefore belongs to $\Delta''(e)$ since $\delta_f \in \Delta'(f)$ and $\mu'(f) \to \mu''(\eta'(f))$ maps $\Delta'(f)$ to $\Delta''(e)$. This verifies (6).
+
+Let $H''$ be
+\begin{equation*}
+N_{V(G'')} \cup \bigcup (\delta_e'' \colon e \in E(G'') - \eta''(E(G))).
+\end{equation*}
+Then $H''$ is a realization of $G'' \setminus \eta''(E(G))$, and we shall show that it realizes $\eta''$. Let $v \in V(G)$. We must show that $\eta''(v)$ is the vertex of some component of $H''$.
+
+\hspace*{12pt}(7) \textit{No edge of $H''$ joins a vertex of $\eta''(v)$ to a vertex of $V(G'') - \eta''(v)$.}
+
+For suppose that some edge of $H''$ has ends $a \in \eta''(v)$ and $b \in V(G'')$. We shall show that $b \in \eta''(v)$. Choose $v' \in \eta(v)$ with $a \in \eta'(v')$, and choose $e \in E(G'') - \eta''(E(G))$ with $a, b$ adjacent in $\delta_e''$. If $e \notin \eta'(E(G'))$ then $a, b$ are adjacent in $\delta_e' \subseteq H'$ and since $H'$ realizes $\eta'$ and $a \in \eta'(v')$ we deduce that $b \in \eta'(v') \subseteq \eta''(v)$ as required. If $e \in \eta'(E(G'))$ and $e = \eta'(f)$ where $f \in E(G')$, then there exist $p, q$ in the same component of $\delta_f$ such that $a \in \eta'(p)$ and $b \in \eta'(q)$. Since $a \in \eta'(v') \cap \eta'(p)$ we deduce that $p = v'$, and so $v', q$ are in the same component of $\delta_f$ and hence of $H$. Since $H$ realizes $\eta$ and $v' \in \eta(v)$ we deduce that $q \in \eta(v)$ and hence $b \in \eta'(q) \subseteq \eta''(v)$ as required.
+
+\hspace*{12pt}(8) \textit{If $p, q \in V(H)$ are adjacent in $H$ then there exist $a \in \eta'(p)$ and $b \in \eta'(q)$ adjacent in $H''$.}
+
+For choose $f \in E(G')$ with $p, q$ adjacent in $\delta_f$. Let $e = \eta'(f)$ and choose ends $a, b$ of $e$ such that $a \in \eta'(p)$, $b \in \eta'(q)$. Then $a, b$ are adjacent in $\delta_e''$ and hence in $H''$ as required.
+
+\hspace*{12pt}(9) \textit{If $a, b \in \eta''(v)$ then $a, b$ belong to the same component of $H''$.}

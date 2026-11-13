@@ -1,0 +1,21 @@
+\origpage{200}{ROBERTSON AND SEYMOUR}
+But $v_1 \notin \beta(n_2 +)$, since $v_1 \ne v_2$ and $v_2$ is the only vertex of $P_0$ in $\beta(n_2 +)$. Thus $v_1 \in \beta(n +)$, as required.
+
+But (1) contradicts (6.6). The result follows. $\square$
+
+\stmt
+(12.4) \textit{Let $e$ be an edge of a hypergraph $G$, such that the set of ends of $e$ is a clique of $G \setminus e$. Let $\mathscr{T}$ be a tangle in $G \setminus e$, of order $>4p+9$, inducing a tangle $\mathscr{T}'$ in $G$. Let $\pi$ be a $(2p+7)$-redundant, $\mathscr{T}$-central portrayal of $G \setminus e$ with warp $\le p$. Then there is a $\mathscr{T}'$-central portrayal of $G$ resembling $\pi$.}
+
+\textit{Proof.} There is a $(2p+7)$-redundant $\mathscr{T}$-central portrayal of $G \setminus e$ resembling $\pi$ which is true; and so we may assume that $\pi$ is true. Let $K$ be the set of ends of $e$, and let $\pi = (\Sigma, \Gamma, \alpha, \beta, \gamma)$. By (12.2), either there is a disc $\Delta \subseteq \Sigma$ such that $\alpha(\Delta)$ is small, $K \subseteq V(\alpha(\Delta))$, and $bd(\Delta)$ is a $\Gamma$-normal $O$-arc with $|bd(\Delta) \cap N(\Gamma)| \le 3$, or $K \subseteq V(\alpha(c))$ for some $c \in C(\Gamma)$. In the second case the result follows from (12.3), and so we assume that the first case applies. Let $\pi'$ be the portrayal of $G \setminus e$ obtained by applying (7.2) to $\Delta$. Then $\pi'$ resembles $\pi$, and is $\mathscr{T}$-central. Let $\pi' = (\Sigma, \Gamma', \alpha', \beta', \gamma')$, and let $c_0$ be the cell of $\Gamma'$ with $\bar{c}_0 = \Delta$. Then $K \subseteq V(\alpha'(c_0))$, and the result follows from (12.3). $\square$
+
+\stmt
+(12.5) \textit{Let $G$ be a hypergraph, and let $\mathscr{T}^*$ be a tangle in $G^*$ of order $\theta$. Let $\mathscr{T}$ be the set of all separations $(A, B)$ of $G$ of order $<\theta$ such that $A^*$ is small relative to $\mathscr{T}^*$. Then $\mathscr{T}$ is a tangle in $G$ of order $\theta$.}
+
+\textit{Proof.} We verify the three tangle axioms. For the first, if $(A, B)$ is a separation of $G$ of order $<\theta$, there is certainly a separation $(A', B')$ of $G^*$ with $V(A') = V(A)$, $V(B') = V(B)$ and $A' \subseteq A^*$, $B' \subseteq B^*$. From the symmetry we may assume that $(A', B') \in \mathscr{T}^*$; but then $A^*$ is small by [1, Theorem (2.9)], and so $(A, B) \in \mathscr{T}$. Thus either $(A, B) \in \mathscr{T}$ or $(B, A) \in \mathscr{T}$, and the first tangle axiom is satisfied. But the second and third axioms are clearly satisfied, as required.
+
+We call $\mathscr{T}$ in (12.4) the \textit{embodiment of} $\mathscr{T}^*$ \textit{in} $G$.
+
+\stmt
+(12.6) \textit{Let $G$ be a hypergraph, and let $\mathscr{T}^*$ be a tangle in $G^*$ of order $>4p+9$. Let $\mathscr{T}$ be the embodiment of $\mathscr{T}^*$ in $G$. Let $\pi = (\Sigma, \Gamma, \alpha, \beta, \gamma)$ be a $(2p+7)$-redundant, $\mathscr{T}^*$-central portrayal of $G^*$ with warp $\le p$. Then there is a $\mathscr{T}$-central portrayal of $G$ resembling $\pi$.}
+
+\textit{Proof.} We may assume that $G$ and $G^*$ are both subhypergraphs of some hypergraph, so that $G' = G \cup G^*$ is defined. Let $\mathscr{T}'$ be the embodiment of $\mathscr{T}^*$ in $G'$. If there is a $\mathscr{T}'$-central portrayal of $G'$ resembling $\pi$, then there is a $\mathscr{T}$-central portrayal of $G$ resembling $\pi$.\fixnote{fix:12.6-proof}{A gap in the proof. Removing the edges of $G^*$ from a portrayal of $G' = G \cup G^*$ can remove edges from $\alpha(c)^*$, when two vertices joined by an edge of $G^*$ in $\alpha(c)$ have their edge of $G$ in another cell. This can lower the warp of $c$, and the paper does not show that the result still resembles $\pi$. The proof is completed by moving the portrayal back cell by cell without raising the warp of any cell. A strictly smaller warp at some cuff would then give a $\mathscr{T}^*$-central portrayal of $G^*$ simpler than $\pi$, against the $(2p + 7)$-redundancy of $\pi$. So (12.6) holds as printed.} Thus, it suffices to prove the result for $G'$; that is, we may assume that $G^* \subseteq G$.

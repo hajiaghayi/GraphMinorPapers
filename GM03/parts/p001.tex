@@ -1,0 +1,34 @@
+\origpage{49}{GRAPH MINORS. III}
+{\centering
+{\Large Graph Minors. III. Planar Tree-Width\par}\medskip
+
+Neil Robertson and P. D. Seymour$^*$\par
+\textit{Department of Mathematics, Ohio State University, 231 West 18th Avenue, Columbus, Ohio 43210}\par
+\textit{Communicated by the Editors}\par
+Received January 14, 1983\par
+}
+\begin{quote}
+The ``tree-width'' of a graph is defined and it is proved that for any fixed planar graph $H$, every planar graph with sufficiently large tree-width has a minor isomorphic to $H$. This result has several applications which are described in other papers in this series.
+
+\end{quote}
+
+\sectionhead{1. \textsc{Introduction}}
+
+All graphs in this paper are finite, and may have loops or multiple edges. $V(G)$ and $E(G)$ denote the sets of vertices and edges of the graph $G$, respectively. A \textit{tree-decomposition} of a graph $G$ is a pair $(T, \mathcal{X})$, where $T$ is a tree and $\mathcal{X} = (X_t : t \in V(T))$ is a family of subsets of $V(G)$, with the following properties:
+
+\hspace*{12pt}(W1) $\bigcup_t (X_t : t \in V(T)) = V(G)$.
+
+\hspace*{12pt}(W2) For every edge $e$ of $G$ there exists $t \in V(T)$ such that $e$ has both ends in $X_t$.
+
+\hspace*{12pt}(W3) For $t, t', t'' \in V(T)$, if $t'$ is on the path of $T$ between $t$ and $t''$ then
+\begin{equation*}
+X_t \cap X_{t''} \subseteq X_{t'}.
+\end{equation*}
+The width of the tree-decomposition is
+\begin{equation*}
+\max_{t \in V(T)} (|X_t| - 1).
+\end{equation*}
+The graph $G$ has \textit{tree-width} $w$ if $w$ is minimum such that $G$ has a tree-decomposition of width $w$.
+
+Thus, for example, trees and forests have tree-width 1 (or 0 in degenerate%
+\origfootnote{Research partially supported by NSF Grant MCS 8103440.}

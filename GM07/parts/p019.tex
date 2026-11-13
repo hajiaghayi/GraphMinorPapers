@@ -1,0 +1,32 @@
+\origpage{230}{ROBERTSON AND SEYMOUR}
+\noindent and furthermore $e \in E(J)$. Therefore $U(Q) \subseteq e$ and so, by (2) again, $\phi(C_1) \subseteq e$.
+
+Now the net $(\Delta, \Pi)$ is minimal, and so if we replace the portion $U(Q)$ of $e$ between $\phi(s)$ and $\phi(t)$ by $\phi(F)$ we do not obtain a ``better'' seam graph; that is,
+\begin{equation*}
+|V(G) \cap \phi(F^*)| \ge |V(G) \cap \phi(C_1)|.
+\end{equation*}
+But
+\begin{equation*}
+|V(G) \cap \phi(C_1)| = |V(\phi^{-1}(G)) \cap C_1| \ge |\Lambda|
+\end{equation*}
+since $\phi$ acts injectively on $C_1$, and so $|V(G) \cap \phi(F^*)| \ge |\Lambda|$. This completes the proof. $\square$
+
+\sectionhead{5. The Main Result---Second Version}
+
+The preliminary form (4.6) of our main result needs refinement. The hypotheses that $c \ge 2$ and that $|V(G) \cap C| \ge 2$ for each cuff $C$ are unnatural, and were introduced for technical reasons---we shall show later how to remove them. But the principal defect of (4.6) is hypothesis (ii), which is too strong. In this section we replace it with a weaker condition.
+
+A subset $X \subseteq \Sigma$ is \textit{planar} if $X \subseteq \Delta$ for some closed disc $\Delta \subseteq \Sigma$. Thus an $O$-arc is planar if and only if it is null-homotopic. Let us say that $X \subseteq \Sigma$ is \textit{solid} if $X$ is closed and locally arc-connected (see Section 11). Thus, for example, if $G$ is a proper graph in $\Sigma$, the closure of the union of some of the regions and some of the edges of $G$ is solid.
+
+We shall assume the following fact (implied by (11.2) and (11.10)).
+
+\stmt
+(5.1) \textit{If $\Sigma$ is connected and $X \subseteq \Sigma$ is solid and $X \ne \Sigma$, then $X$ is planar if and only if every $O$-arc included in $X$ is null-homotopic.}
+
+We say that $X \subseteq \Sigma$ is \textit{near-planar} if either $X$ is planar, or $X$ is planar in $\Sigma + \hat{C}$, for some cuff $C$. We say that $X$ \textit{surrounds} cuff $C$ (in $\Sigma$) if $X$ is planar in $\Sigma + \hat{C}$ but not in $\Sigma$. It follows easily from (5.1) that
+
+\stmt
+(5.2) \textit{If $X \subseteq \Sigma$ is solid and $X$ is planar in $\Sigma + \hat{C}$, where $C$ is a cuff, then $X$ surrounds $C$ in $\Sigma$ if and only if some $O$-arc included in $X$ surrounds $C$.}
+
+Let $G$ be a proper graph in $\Sigma$. We define $\alpha(G)$ to be the minimum of $|X \cap V(G)|$, taken over all solid connected $G$-normal sets $X \subseteq \Sigma$ which are not near-planar. (It is easy to see that the minimum exists provided that $\Sigma \not\cong \Sigma(0, 0, c)$ for $c = 0$, $1$, or $2$.)
+
+If $G$ is proper in $\Sigma$, $C$ is a cuff of $\Sigma$, and $r \ge 0$ is an integer, we define

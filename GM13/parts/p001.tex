@@ -1,0 +1,24 @@
+\origpage{65}{GRAPH MINORS. XIII}
+{\centering
+{\Large Graph Minors. XIII. The Disjoint Paths Problem\par}\medskip
+
+Neil Robertson$^*$\par
+\textit{Department of Mathematics, Ohio State University, 231 West 18th Avenue, Columbus, Ohio 43210}\par
+and\par
+P. D. Seymour\par
+\textit{Bellcore, 445 South Street, Morristown, New Jersey 07960}\par
+Received September 10, 1990\par
+}
+\begin{quote}
+We describe an algorithm, which for fixed $k \ge 0$ has running time $O(|V(G)|^3)$, to solve the following problem: given a graph $G$ and $k$ pairs of vertices of $G$, decide if there are $k$ mutually vertex-disjoint paths of $G$ joining the pairs.
+
+\end{quote}
+
+\sectionhead{1. Introduction}
+
+Consider the following algorithmic problem:
+
+\textit{Disjoint Paths (DP).} Instance: A graph $G$, and pairs $(s_1, t_1), \dots, (s_k, t_k)$ of vertices of $G$. Question: Do there exist paths $P_1, \dots, P_k$ of $G$, mutually vertex-disjoint, such that $P_i$ joins $s_i$ and $t_i$ ($1 \le i \le k$)?
+
+This problem was shown to be NP-complete by Karp [8], if $k$ is a variable part of the input. For fixed $k$, however, the problem is more tractable. For instance, in [26, 27, 29] there are polynomial algorithms to solve DP with $k = 2$. (In contrast, the corresponding question for directed graphs $G$, where we seek directed paths $P_1, \dots, P_k$, is NP-complete even with $k = 2$ [5].) The main result of this paper is that for any fixed $k$ there is a polynomial algorithm to solve DP. It has running time $O(v^3)$, where%
+\origfootnote{Research partially supported by NSF Grant DMS 8504054 and partially performed under a consulting agreement with Bellcore.}

@@ -1,0 +1,36 @@
+\origpage{343}{N. Robertson, P.D. Seymour / Journal of Combinatorial Theory, Series B 90 (2004) 325--385}
+Now by 6.7 $sk(\Gamma_1), sk(\Gamma_2)$ are blocks and $rep(sk(\Gamma_1)) = rep(\Gamma_1)\ge n>k$. By 6.6, there is an enlargement $\tau'$ of $sk(\Gamma_1)$ in $sk(\Gamma_2)$ such that
+
+\hspace*{12pt}$\bullet$ $\tau'(e) = \tau(e)$ for every $e\in E(sk(\Gamma_1))$, and $\tau(v)\subseteq \tau'(v)$ for every $v\in V(sk(\Gamma_1))$,
+
+\hspace*{12pt}$\bullet$ $\bigcup(V(\tau'(v)) : v\in V(sk(\Gamma_1))) = V(sk(\Gamma_2))$, and each $\tau'(v)$ is an induced subgraph of $sk(\Gamma_2)$,
+
+\hspace*{12pt}$\bullet$ for every region $r$ of $sk(\Gamma_2)$ in $\hat{\Sigma}$, and every $v\in V(sk(\Gamma_1))$, $\tau'(v)\cap \bar{r}$ is null or connected.
+
+For each $e\in E(\Gamma_1)$, let $\sigma'(e) = \sigma(e)$, and for each $v\in V(\Gamma_1)$, let $\sigma'(v) = \tau'(v)$. Since all the $\sigma'(v)$'s are disjoint, and for $e\in E(\Gamma_1)$ if $v$ is the $i$th end of $e$ then $\sigma'(v)$ contains the $i$th end of $\sigma'(e)$ (because $\sigma(v)$ does, and $\sigma(v) = \tau(v)\subseteq \tau'(v) = \sigma'(v)$), it follows that $\sigma'$ is an inflation of $\Gamma_1$ in $\Gamma_2$ respecting $\Phi$. We claim that $\sigma'$ is linear. For let $\Theta$ be a cuff of $\Sigma$ and let $C_i$ be the circuit of $sk(\Gamma_i)$ with $U(C_i) = \Theta$ ($i = 1, 2$). Let
+\begin{equation*}
+E(C_1) = \{e_1, \dots, e_t\},
+\end{equation*}
+\begin{equation*}
+V(C_1) = \{v_1, \dots, v_t\},
+\end{equation*}
+where $e_i$ has ends $v_i$ and $v_{i+1}$ ($1\le i\le t$), where $v_{t+1}$ means $v_1$. Now $\sigma'(e_i) = \sigma(e_i)\subseteq \Theta$ for $1\le i\le t$, and for $1\le i\le t$ $\sigma(v_i)$, and hence $\tau'(v_i)$, contains an end of both $\sigma'(e_{i-1})$ and $\sigma'(e_i)$, where $e_0$ means $e_t$. Thus, by the third statement above, there is a path $P_i$ of $\tau'(v_i)$ joining an end of $\sigma'(e_{i-1})$ and an end of $\sigma'(e_i)$, with $U(P_i)\subseteq \Theta$. Since $\tau'(v_1), \dots, \tau'(v_t)$ are disjoint, it follows that $P_1, \dots, P_t$ are disjoint, and so
+\begin{equation*}
+V(P_1)\cup \dots \cup V(P_t) = V(C_2),
+\end{equation*}
+\begin{equation*}
+E(P_1)\cup \dots \cup E(P_t)\cup \{\sigma'(e_1), \dots, \sigma'(e_t)\} = E(C_2).
+\end{equation*}
+Hence every edge $e\in E(\Gamma_2)\setminus \sigma'(E(\Gamma_1))$ with $e\subseteq \Theta$ is an edge of some $P_i$ and hence of some $\sigma'(v_i)$. \fix{Moreover, if $e \in E(\Gamma_1)$ is internal, then $\sigma'(e)$ does not meet $\Theta$. For suppose it does. Then $\sigma'(e)$ is a border edge, so $\sigma'(e) \subseteq bd(\Sigma)$, and $\sigma'(e) \subseteq \Theta$ since $\sigma'(e)$ is connected; thus $\sigma'(e) \in E(C_2)$. Since $\sigma'$ is one-to-one on edges, and $e$ is not one of the border edges $e_1, \dots, e_t$, the equation for $E(C_2)$ above shows that $\sigma'(e)$ is an edge of some $P_k$, and so both its ends belong to $\sigma'(v_k)$. This is impossible, since $\sigma'(v_k)$ contains at most one end of $\sigma'(e)$, as remarked after the definition of an inflation in Section 2. Since $\Theta$ was arbitrary, $\sigma'$ maps every internal edge of $\Gamma_1$ to an internal edge of $\Gamma_2$.}\fixnote{fix:6.2-internal}{The paper deduces that $\sigma'$ is linear from the remark in Section 3 (page 329), which also needs that internal edges go to internal edges (note~\ref{fix:3-linear}). The argument above is the one used in the formalization.} Thus $\sigma'$ is linear, as required. $\square$
+
+\sectionhead{7. Tangles}
+
+A hypergraph $H$ consists of a set $V(H)$ of \textit{vertices}, a set $E(H)$ of \textit{edges}, and an incidence relation between them; the vertices incident with an edge are its \textit{ends}. A hypergraph $G$ is a \textit{subhypergraph} of $H$ (written $G\subseteq H$) if $V(G)\subseteq V(H)$, $E(G)\subseteq E(H)$, and each edge of $G$ has the same ends in $G$ and in $H$. If $A, B\subseteq H$, we define $A\cap B, A\cup B$ in the natural way. A \textit{separation} of $H$ is an ordered pair $(A, B)$ of subhypergraphs with $A\cup B = H$ and $E(A\cap B) = \emptyset$; its \textit{order} is $|V(A\cap B)|$. A \textit{tangle} of order $\theta\ge 1$ in $H$ is a set $\mathscr{T}$ of separations of $H$, all of order $<\theta$, such that
+
+\hspace*{12pt}$\bullet$ for every separation $(A, B)$ of $H$ of order $<\theta$, $\mathscr{T}$ contains either $(A, B)$ or $(B, A)$,
+
+\hspace*{12pt}$\bullet$ if $(A_i, B_i)\in \mathscr{T}$ ($i = 1, 2, 3$) then $A_1\cup A_2\cup A_3\ne H$,
+
+\hspace*{12pt}$\bullet$ if $(A, B)\in \mathscr{T}$ then $V(A)\ne V(H)$.
+
+We refer to these as the ``tangle axioms''. We define $ord(\mathscr{T})$ to be the order of $\mathscr{T}$.

@@ -1,0 +1,46 @@
+\origpage{319}{ALGORITHMIC ASPECTS OF TREE-WIDTH}
+Take a set $X$ of $2k$ new vertices $\{s_1, t_1, \dots, s_k, t_k\}$. Let $Y = V(G) - V(H)$, and for $v \in X \cup Y$, define
+\begin{align*}
+g(v) &= v \text{ if } v \in Y \\
+&= u_i \text{ if } v = s_i \ (1 \le i \le k) \\
+&= v_i \text{ if } v = t_i \ (1 \le i \le k).
+\end{align*}
+Define a simple graph $G'$ with a vertex set $X \cup Y$, in which distinct $a, b \in X \cup Y$ are adjacent if and only if $g(a), g(b)$ are adjacent in $G$. Let $\mathscr{A} = \{(s_i, t_i) : 1 \le i \le k\}$. Then $(G', \mathscr{A})$ is a terminated graph. We evidently have
+
+\stmt
+(4.4) \textit{$G'$ has tree-width at most $2k$ more than the tree-width of $G$.}
+
+This follows because we may obtain a subgraph of $G$ by deleting $2k$ vertices of $G'$. Moreover, it is easy to see the following.
+
+\stmt
+(4.5) \textit{\fix{If $H$ has no loops and no two edges with the same ends, then} $G$ topologically contains $H$ if and only if $(G', \mathscr{A})$ is feasible.}\fixnote{fix:4.5}{The printed (4.5) is false when $H$ has a loop or two edges with the same ends, because $G'$ forgets which edge of $G$ joins two vertices, so two paths of $G'$ may use the same edge of $G$. Take $V(G)=V(H)=\{u,v\}$, let $G$ have one edge $uv$, and let $H$ have two edges with ends $u,v$. Then $s_1t_1$ and $s_2t_2$ are disjoint edges of $G'$, so $(G',\mathscr{A})$ is feasible, but $G$ does not topologically contain $H$. For a loop, take $V(G)=\{u,x\}$ with one edge $ux$, and let $H$ be the vertex $u$ with one loop. The path $s_1,x,t_1$ shows feasibility, but $G$ has no cycle. The direction from containment to feasibility holds for every $H$.}
+
+We use (4.2)--(4.5) to give an algorithm as follows.
+
+\stmt
+(4.6) \textit{For any fixed graph $H_0$ and fixed integer $w$, there is a polynomial algorithm which has input graphs $G$, $H$ with $V(H) \subseteq V(G)$ such that $H$ is isomorphic to a subgraph of $H_0$, and which has output either}
+
+\hspace*{12pt}(i) \textit{$G$ topologically contains $H$, or}
+
+\hspace*{12pt}(ii) \textit{$G$ does not topologically contain $H$, or}
+
+\hspace*{12pt}(iii) \textit{$G$ has tree-width $> w$.}
+
+\textit{Proof.} If some vertex of $H$ is incident with a loop of $G$, we use (4.2) or (4.3) to eliminate the loop. If there is no such vertex, we construct $(G', \mathscr{A})$ as for (4.4) and (4.5), and apply (3.2) to $(G', \mathscr{A})$ with $w$ replaced by $w + 2k$.\fixnote{fix:4.6-proof}{By (4.5) as corrected, this step is right only when $H$ has no loops and no two edges with the same ends, and $H$, a subgraph of $H_0$, may have them. The proof is corrected by changing the construction of $G'$ so that it remembers the edges of $G$. Put one new vertex on each edge of $G$, and join each new terminal $s_i$ or $t_i$ only to the vertex of one chosen edge of $G$ at $u_i$ or $v_i$. The two ends of a loop of $H$ choose different edges. Since $k$ is fixed, there are polynomially many choices, and $G$ topologically contains $H$ if and only if the terminated graph is feasible for some choice. If $G$ has tree-width at most $w$, this graph has tree-width at most $\max(w,2)+2k$, so (3.2) is applied with $w$ replaced by $\max(w,2)+2k$, and alternative (iii) below changes in the same way. These two facts take the place of (4.5) and (4.4) in the rest of the proof.} We find either
+
+\hspace*{12pt}(i) $(G', \mathscr{A})$ is feasible, or
+
+\hspace*{12pt}(ii) $(G', \mathscr{A})$ is not feasible, or
+
+\hspace*{12pt}(iii) $G'$ has tree-width $> w + 2k$.
+
+For the first two alternatives we use (4.5) to decide whether or not $G$ topologically contains $H$, and for the third we deduce from (4.4) that $G$ has tree-width $> w$.
+
+\stmt
+(4.7) \textit{For any fixed graph $H$ and fixed integer $w$, there is a polynomial algorithm which has input a graph $G$, and which has output one of}
+
+\hspace*{12pt}(i) \textit{there is a graph isomorphic to $H$ topologically contained by $G$, or}
+
+\hspace*{12pt}(ii) \textit{there is no such graph, or}
+
+\hspace*{12pt}(iii) \textit{$G$ has tree-width $> w$.}

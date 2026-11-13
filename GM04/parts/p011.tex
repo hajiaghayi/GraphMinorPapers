@@ -1,0 +1,17 @@
+\origpage{237}{GRAPH MINORS IV}
+\noindent $(\tau \times T^{f_1})^- \subseteq H_1$ and $(\tau \times T_{f_2})^- \subseteq H_2$ of order smaller than $k$. We say that $(T, \tau)$ is \textit{rotund} if $E(T)$ is rotund in $(T, \tau)$.
+
+\stmt
+(4.1) \textit{Let $(T, \tau)$ be a tree-decomposition with $\tau \times T \in \mathscr{R}$, and let $F \subseteq E(T)$ be rotund in $(T, \tau)$. Then there is a tree-decomposition $(T, \tau')$ of $\tau \times T$, such that $\tau(t)^- = \tau'(t)^-$ for each $t \in V(T)$, and such that $F$ is linked in $(T, \tau')$.}
+
+\textit{Proof.} For each $f \in F$ we shall choose a march $\pi_f$ with $\bar{\pi}_f = \bar{\pi}(\tau \times T^f)$ in such a way that
+
+\hspace*{12pt}(1) \textit{For every directed path $P$ in $T$ with first edge $e \in F$ and last edge $f \in F$ such that $e$ and $f$ have the same order and no edge of $P$ has smaller order, $((\tau \times T^f)^-, \pi_f)$ is simulated in $((\tau \times T^e)^-, \pi_e)$.}
+
+We do so inductively, working out from the root. At a step of the induction, there is a subtree $S$ of $T$ with $o(S) = o(T)$ such that $\pi_f$ is defined for each $f \in F \cap E(S)$, and not defined for $f \in F - E(S)$; and (1) is satisfied for paths in $S$. If $F \subseteq E(S)$ the inductive definition is complete, and so we may assume that $F \nsubseteq E(S)$; and hence we may choose $f \in F - E(S)$ such that every other edge in $F$ of the path of $T$ from $o(T)$ to $f$ lies in $E(S)$. Let $Q$ be the maximal directed path of $T$ with last edge $f$ such that every edge of $Q$ has order $\ge k$, where $f$ has order $k$. If no edge of $Q$ in $F$ has order $k$ except $f$ we set $\pi_f = \pi(\tau \times T^f)$ and the inductive step is complete. We assume then that $p \ge 2$, where $f_1, f_2, ..., f_p$ are the edges of $E(Q) \cap F$ of order $k$, listed in the order in which they appear in $Q$ (whence $f_p = f$).
+
+\hspace*{12pt}(2) \textit{There is a march $\pi_f$ with $\bar{\pi}_f = \bar{\pi}(\tau \times T^f)$ such that $((\tau \times T^f)^-, \pi_f)$ is simulated in $((\tau \times T^{f_{p-1}})^-, \pi_{f_{p-1}})$.}
+
+For suppose that $(H_1, H_2)$ is a separation of $\tau \times T^{f_{p-1}}$ of order $< k$ with $(\tau \times T^f)^- \subseteq H_1^-$. Then $(K_1, K_2) = (H_1^-, H_2^- \cup (\tau \times T_{f_{p-1}})^-)$ is a separation of $(\tau \times T)^-$ of order $< k$, contrary to the rotundity of $F$ in $(T, \tau)$, for $f_{p-1}$ and $f_p = f$ both have order $k$ and no edge of the path between them has order $< k$, and yet $(\tau \times T^f)^- \subseteq K_1$ and $(\tau \times T_{f_{p-1}})^- \subseteq K_2$. Hence there is no such separation $(H_1, H_2)$, and (2) follows from Axiom 3 applied to the separation $(\tau \times T^f, ((\tau \times (T^{f_{p-1}})_f)^-, \pi_{f_{p-1}}))$ of $((\tau \times T^{f_{p-1}})^-, \pi_{f_{p-1}})$.
+
+Let $S' = S \cup Q$; we must verify that (1) remains true for every directed path $P$ of $S'$; that is, that for $1 \le i \le p-1$, $((\tau \times T^f)^-, \pi_f)$ is simulated in $((\tau \times T^{f_i})^-, \pi_{f_i})$. But from (2), $((\tau \times T^f)^-, \pi_f)$ is simulated in $((\tau \times T^{f_{p-1}})^-, \pi_{f_{p-1}})$, and that in turn is simulated in $((\tau \times T^{f_i})^-, \pi_{f_i})$ because (1) is satisfied for all directed paths $P$ of $S$. By Axiom 2, the desired result follows. This completes our inductive definition. We define $\tau'(t) = \tau(t)$ if $t$ is not the head of an edge in $F$, and $\tau'(t) = (\tau(t)^-, \pi_f)$ if $t$ is the head of $f \in F$; then $\tau'$ satisfies the theorem. $\square$

@@ -1,0 +1,32 @@
+\origpage{61}{GRAPH MINORS. IX}
+\hspace*{12pt}(2) \textit{Subject to (1), $Y_j$ is minimal.}
+
+We claim that $Y_1 \subseteq Y_2 \subseteq \dots \subseteq Y_{n-1}$ and $Z_1 \supseteq Z_2 \supseteq \dots \supseteq Z_{n-1}$. For let $i, j$ satisfy $1 \le i \le j \le n-1$. Then $(Y_i \cap Y_j, Z_i \cup Z_j)$ is a separation of $G$ with $A_i \subseteq V(Y_i \cap Y_j)$, $B_i \subseteq V(Z_i \cup Z_j)$, and hence
+\begin{equation*}
+|V((Y_i \cap Y_j) \cap (Z_i \cup Z_j))| \ge k_i.
+\end{equation*}
+Similarly
+\begin{equation*}
+|V((Y_i \cup Y_j) \cap (Z_i \cap Z_j))| \ge k_j.
+\end{equation*}
+Thus
+\begin{align*}
+k_i + k_j &\le |V((Y_i \cap Y_j) \cap (Z_i \cup Z_j))| + |V((Y_i \cup Y_j) \cap (Z_i \cap Z_j))| \\
+&\le |V(Y_i \cap Z_i)| + |V(Y_j \cap Z_j)| = k_i + k_j.
+\end{align*}
+Hence we have equality throughout, and in particular $|V((Y_i \cap Y_j) \cap (Z_i \cup Z_j))| = k_i$. Thus from condition (2), $Y_i \cap Y_j = Y_i$, and so $Y_i \subseteq Y_j$. Furthermore
+\begin{align*}
+k_i &= |V((Y_i \cap Y_j) \cap (Z_i \cup Z_j))| = |V(Y_i \cap (Z_i \cup Z_j))| \\
+&= |V(Y_i \cap Z_i)| + |V(Y_i \cap Z_j) - V(Z_i)| = k_i + |V(Y_i \cap Z_j) - V(Z_i)|.
+\end{align*}
+Hence $V(Y_i \cap Z_j) \subseteq V(Z_i)$. But $V(Y_i) \cup V(Z_i) = V(G)$ and so $V(Z_j) \subseteq V(Z_i)$. Moreover, $E(Z_j) = E(G) - E(Y_j)$, $E(Z_i) = E(G) - E(Y_i)$, and $E(Y_i) \subseteq E(Y_j)$, and so $E(Z_j) \subseteq E(Z_i)$. Hence $Z_j \subseteq Z_i$. This proves our claim that $Y_1 \subseteq Y_2 \subseteq \dots \subseteq Y_{n-1}$ and $Z_1 \supseteq Z_2 \supseteq \dots \supseteq Z_{n-1}$.
+
+Let $Y_n = Z_0 = G$, and let $Y_0$ and $Z_n$ be the null graph. For $1 \le i \le n$, let $X_i = Y_i \cap Z_{i-1}$. We claim that $(X_i: 1 \le i \le n)$ is a linear decomposition of $(G, \Omega)$. We verify conditions (i), ..., (iv) in the definition of such a decomposition.
+
+\textit{Condition} (i). Let $v \in V(G)$, and choose $i$ with $1 \le i \le n$, minimum such that $v \in V(Y_i)$. Then $v \notin V(Y_{i-1})$ and so $v \in V(Z_{i-1})$; hence $v \in V(X_i)$. Thus $V(X_1 \cup \dots \cup X_n) = V(G)$. A similar argument shows that $E(X_1 \cup \dots \cup X_n) = E(G)$ and so $X_1 \cup \dots \cup X_n = G$.
+
+\textit{Condition} (ii). Suppose that $e \in E(X_i \cap X_j)$ where $1 \le i < j \le n$. Then $e \in E(Y_i)$ and $e \in E(Z_{j-1}) \subseteq E(Z_i)$, which contradicts the fact that $E(Y_i \cap Z_i) = \emptyset$.
+
+\textit{Condition} (iii). For $i$ with $1 \le i \le n$, we have $t_i \in V(Y_i)$ and $t_i \in V(Z_{i-1})$. Hence $t_i \in V(X_i)$.
+
+\textit{Condition} (iv). For $i, i', i''$ with $1 \le i \le i' \le i'' \le n$, $X_i \cap X_{i''} \subseteq Y_i \subseteq Y_{i'}$ and $X_i \cap X_{i''} \subseteq Z_{i''-1} \subseteq Z_{i'-1}$ and so $X_i \cap X_{i''} \subseteq X_{i'}$, as required.

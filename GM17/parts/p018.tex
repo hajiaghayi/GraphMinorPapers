@@ -1,0 +1,21 @@
+\origpage{179}{GRAPH MINORS, XVII}
+\noindent \textit{ends $n_1, n_2$ and with $F \cap N(\Gamma) = \{n_1, n_2\}$. Let $\Delta \subseteq \Sigma$ be a disc with $F \subseteq bd(\Delta) \subseteq F \cup \Theta$, and for each $n \in N(\Gamma) \cap bd(\Delta)$ let $\beta(n_1+) \cap \beta(n_2+) \subseteq \beta(n+)$. Let $\pi$ have warp $\le p$ at $\Theta$, and let $|\beta(n_1+)| = |\beta(n_2+)| = p+1$. Then every linkage in $\alpha(\Delta)$ from $\beta(n_1+)$ to $\beta(n_2+)$ pairs $\gamma(n_1)$ with $\gamma(n_2)$.}
+
+\textit{Proof.} Let $\{P_0, \dots, P_p\}$ be a linkage in $\alpha(\Delta)$ from $\beta(n_1+)$ to $\beta(n_2+)$. Since $|\beta(n_1+)| = |\beta(n_2+)| = p+1$ and $|\beta(n_1)|, |\beta(n_2)| \le p$, it follows that equality holds and $n_1, n_2 \in dom(\gamma)$, and every vertex in $\beta(n_1+)$ is the initial vertex of one of $P_0, \dots, P_{\delm{n}\fix{p}}$.\fixnote{fix:7.3-paths}{Here $|\beta(n_1+)| = p + 1$, so there are $p + 1$ paths $P_0, \dots, P_p$.} Let $\gamma(n_1)$ be the initial vertex of $P_0$ say. We must show that $\gamma(n_2)$ is the terminal vertex of $P_0$.
+
+Let $M$ be the graph $P_0 \cup \dots \cup P_p$. For each internal cell $c$ with $c \subseteq \Delta$, at most one of $P_0, \dots, P_p$ has an edge in $\alpha(c)^*$ since $|V(\alpha(c) \cap \alpha(-c))| \le 3$, and so the graph $M \cap \alpha(c)^*$ may be drawn in the disc $\bar{c}$ in the natural way. Let $H$ be the union of these drawings (taken over all internal cells $c \subseteq \Delta$). Then $H$ is a drawing in $\Delta$ of a subgraph of $M$ denoted by $M \cap \Delta$. Every component of $H$ is a path with both ends in $I$, where $I = \Theta \cap bd(\Delta)$.
+
+Now $H$ is a drawing in $\Delta$; let $R$ be the region of $H$ in $\Delta$ whose closure includes $F$. Let the members of $N(\Gamma) \cap I$ in the closure of $R$ be $m_1, m_2, \dots, m_k$, in order in $I$. Hence $m_1 = n_1$ and $m_k = n_2$.
+
+Choose $i$ with $1 \le i \le k$ maximum so that $m_i \in dom(\gamma)$ and $\gamma(m_i) \in V(P_0)$, and suppose for a contradiction that $i < k$. Let $S$ be the closed line segment with $S \subseteq bd(R)$ and with ends $m_i, m_{i+1}$, such that $S \cap F = \emptyset$. Then no internal point of $S$ belongs to $N(\Gamma) \cap I$ by the definition of $m_1, \dots, m_k$. But every $s \in S$ either belongs to the drawing $H$ or belongs to $bd(\Delta)$, since $S \subseteq bd(R)$, and it follows that either $S \subseteq I$ or $S$ is part of $H$. The latter is impossible since $\gamma(m_{i+1}) \notin V(P_0)$, and so $S \subseteq I$. Since no internal point of $S$ is in $N(\Gamma) \cap I$, it follows that $S \cap N(\Gamma) = \{m_i, m_{i+1}\}$, and there is a border cell $c$ with $S = \bar{c} \cap I$ and $\tilde{c} = \{m_i, m_{i+1}\}$.
+
+Let $I_1$ be the part of $I$ between $n_1$ and $m_i$, and let $I_2$ be that between $m_{i+1}$ and $n_2$. (Thus $I_1$ and $I_2$ are either closed line segments or singleton sets.) Let
+\begin{equation*}
+B_h = \delm{\bigcap}\fix{\bigcup} (\beta(n+): n \in I_h \cap N(\Gamma)) \qquad (h = 1, 2).\fixnote{fix:7.3-Bh}{The proof uses that $s_j \in B_1$ implies $s_j \in \beta(n+)$ for some $n \in I_1 \cap N(\Gamma)$, and that $V(\alpha(c') \cap \alpha(-c')) \subseteq B_1 \cup B_2$ for every boundary cell $c' \subseteq \Delta$ other than $c$. Both need the union.}
+\end{equation*}
+Let $0 \le j \le p$. Certainly $P_j$ has initial vertex in $B_1$ and terminal vertex in $B_2$, and so there is a minimal subpath $Q_j$ of $P_j$ with vertex $s_j$ (say) in $B_1$ and terminal vertex $t_j$ in $B_2$. Consequently no internal vertex of $Q_j$ is in $B_1 \cup B_2$. We claim that $Q_j$ is a path of $\alpha(c)^*$ from $\beta(m_i+)$ to $\beta(m_{i+1}+)$.
+
+To show this, suppose first that $s_j = t_j$. Then $s_j \in \beta(n+) \cap \beta(n'+)$ where $n \in I_1 \cap N(\Gamma)$ and $n' \in I_2 \cap N(\Gamma)$. Suppose that $s_j \notin \beta(m_i+)$. Since $n_1, n, m_i, n'$ are in order it follows that
+\begin{equation*}
+s_j \in \beta(n+) \cap \beta(n'+) \subseteq \beta(n_1+) \cup \beta(m_i+)
+\end{equation*}

@@ -1,0 +1,35 @@
+\origpage{104}{ROBERTSON AND SEYMOUR}
+\noindent since $l(X') \le 2\theta$, contrary to the fact that $X'$ is $a, b$-optimal in $\Gamma'$ with respect to $\text{ins}'$. Hence $X'$ is $a, b$-optimal in $\Gamma$ with respect to $\text{ins}$, and the result follows. $\square$
+
+\sectionhead{9. The Distance Function}
+
+The results of the last section suggest a natural distance function on $\Sigma$. Our final objective is to establish some basic properties of this distance; we shall pursue it further in another paper. The sets $\{v\}$ ($v \in V(\Gamma)$) and the edges and regions of $\Gamma$ are called the \textit{atoms} of $\Gamma$; the set of atoms is denoted by $A(\Gamma)$.
+
+For $a, b \in A(\Gamma)$, let us define $d(a, b)$ as follows:
+
+\hspace*{12pt}(i) if $a = b$ then $d(a, b) = 0$
+
+\hspace*{12pt}(ii) if $a \ne b$ and $a, b \subseteq X$ for some restraint $X$, we define $d(a, b)$ to be $\min \frac{1}{2}l(X)$, taken over all such $X$
+
+\hspace*{12pt}(iii) if (i) and (ii) do not apply then $d(a, b) = \theta$.
+
+We observe that, if (ii) applies, then $d(a, b)$ is $\frac{1}{2}l(X)$, where $X$ is an $a, b$-extreme restraint (by which we mean an $a', b'$-extreme restraint for some $a' \in a$ and $b' \in b$). In general $d(a, b)$ may be non-integral; but in our applications $\Gamma$ will be a radial drawing of some painting and hence bipartite, and in that case $d(a, b)$ will be integral.
+
+\stmt
+(9.1) \textit{If $a, b, c \in A(\Gamma)$ then $d(a, b) + d(b, c) \ge d(a, c)$.}
+
+\textit{Proof.} We may assume that $d(a, b) < d(a, c)$, and so $b \ne c$, and similarly $a \ne b$. Since $d(a, c) \le \theta$, we may also assume that $d(a, b) + d(b, c) < \theta$, and so $d(a, b) = \frac{1}{2}l(X)$, $d(b, c) = \frac{1}{2}l(Y)$, where $X$, $Y$ are $a, b$-extreme and $b, c$-extreme restraints, respectively. Since $X \cap Y \ne \emptyset$, it follows from (8.8) that $X \cup Y$ is simply-connected. Moreover, $l(X \cup Y) \le l(X) + l(Y) < 2\theta$, and so $X \cup Y$ is a restraint by (8.6). Hence
+\begin{equation*}
+d(a, c) \le \frac{1}{2}l(X \cup Y) \le \frac{1}{2}l(X) + \frac{1}{2}l(Y) = d(a, b) + d(b, c)
+\end{equation*}
+as required. $\square$
+
+Let $X$ be a restraint such that either
+
+\hspace*{12pt}(i) $|X| = 1$, or
+
+\hspace*{12pt}(ii) $X$ is a line, or
+
+\hspace*{12pt}(iii) $X$ is a closed disc, or
+
+\hspace*{12pt}(iv) $X = D_1 \cup D_2$, where $D_1, D_2$ are closed discs with $|D_1 \cap D_2| = 1$,

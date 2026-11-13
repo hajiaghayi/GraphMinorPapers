@@ -1,0 +1,32 @@
+\origpage{102}{N. Robertson, P. Seymour / Journal of Combinatorial Theory, Series B 89 (2003) 77--108}
+\noindent is simulated in $enc(P_j)$. It follows that $P_i$ is simulated in $P_j$. Hence $\mathscr{C}$ is well-behaved. This proves 6.3. $\square$
+
+An \textit{arborescence} is a directed graph $T$, whose underlying graph is a tree (denoted by $T^-$), such that every vertex is the head of at most one edge. It follows that there is a unique vertex of $T$ that is the head of no edge of $T$, and we call it the \textit{root} of $T$ and denote it by $o(T)$. If $T$ is an arborescence and $t \in V(T)$, $T^t$ denotes the maximal subarborescence with root $t$. If $f \in E(T)$, then $T^f, T_f$ denote the two components of $T \setminus f$, where the head of $f$ belongs to $T^f$ (and hence $o(T)$ belongs to $T_f$).
+
+Let $P = (G, \mu, \Delta, \phi)$ be a partial $\Omega$-patchwork. A \textit{rooted decomposition} of $P$ is a pair $(T, \tau)$, where
+
+\hspace*{12pt}$\bullet$ $T$ is an arborescence, and for each $t \in V(T)$, $\tau(t) \subseteq G$ is a rooted hypergraph,
+
+\hspace*{12pt}$\bullet$ $(T^-, \tau^-)$ is a tree-decomposition of $G^-$, where $\tau^-(t) = \tau(t)^-$ for each $t \in V(T)$,
+
+\hspace*{12pt}$\bullet$ $\pi(\tau(o(T))) = \pi(G)$,
+
+\hspace*{12pt}$\bullet$ for every subarborescence $S$ of $T$, let $\tau \times S$ denote the rooted hypergraph $H$ with $H^- = \tau^- \times S^-$ and $\pi(H) = \pi(\tau(o(S)))$; then for every edge $f \in E(T)$ with head $t$,
+\begin{equation*}
+\bar{\pi}(\tau(t)) = V(\tau \times T^f) \cap V(\tau \times T_f),
+\end{equation*}
+\hspace*{12pt}$\bullet$ for every directed path $F$ of $T$ with first edge $f_1$ and last edge $f_2$ such that $f_1, f_2$ make separations under $(T^-, \tau^-)$ of the same order and no edge of $F$ makes a separation of smaller order, $P|\tau \times T^{f_2}$ is simulated in $P|\tau \times T^{f_1}$.
+
+If $(T, \tau)$ is a rooted decomposition of a partial $\Omega$-patchwork $(G, \mu, \Delta, \phi)$ and $f \in E(T)$, we define $\tau \times (T, f)$ to be the rooted hypergraph $((\tau \times T_f)^-, \pi(\tau \times T^f))$. (This makes sense because of the fourth condition above.)
+
+We need the following, an immediate consequence of a result of [2].
+
+\textbf{6.4.} \textit{Let $P = (G, \mu, \Delta, \phi)$ be a rootless, robust $\Omega$-patchwork, and let $(S, \sigma)$ be a rotund tree-decomposition of $G^-$. Let $T$ be an arborescence with $T^- = S$. Then there is a rooted decomposition $(T, \tau)$ of $P$ such that $\tau(t)^- = \sigma(t)$ for each $t \in V(T)$.}
+
+\textbf{Proof.} For each $t \in V(T)$ let $\sigma^+(t)$ be a rooted hypergraph chosen so that $(\sigma^+(t))^- = \sigma(t)$ and
+
+\hspace*{12pt}$\bullet$ if $t = o(T)$ then $\bar{\pi}(\sigma^+(T)) = \emptyset$,
+
+\hspace*{12pt}$\bullet$ if $t$ is the head of an edge $f \in E(T)$ then $\bar{\pi}(\sigma^+(t)) = V(\sigma \times T^f) \cap V(\sigma \times T_f)$.
+
+Since $(S, \sigma)$ is rotund (in the sense defined in Section 2 above), it follows that $(T, \sigma^+)$ is a ``rotund tree-decomposition'' in the sense of [2] (which is different from the sense in the present paper). Let $\mathscr{R}$ be the set of all rooted hypergraphs $H$ with $H^- \subseteq G^-$; and let us say that $H_1 \in \mathscr{R}$ is simulated in $H_2 \in \mathscr{R}$ if $P|H_1$ is simulated in $P|H_2$.

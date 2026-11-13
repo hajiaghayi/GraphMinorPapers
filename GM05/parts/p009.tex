@@ -1,0 +1,34 @@
+\origpage{100}{ROBERTSON AND SEYMOUR}
+\stmt
+(4.6) \textit{If $G \in \mathcal{F}_\theta$ then $G$ has no $(\theta_2, \theta_2)$-web.}
+
+\textit{Proof.} Suppose $G \in \mathcal{F}_\theta$ and that $G$ has a $(\theta_2, \theta_2)$-web. Delete the vertices and edges of $G$ not used by any paths in the web, forming $G'$. Then $G' \in \mathcal{F}_\theta$, and all vertices of $G'$ have valency $\le 4$. Moreover $G'$ has a $(\theta_2, \theta_2)$-web and hence a $(\phi_0, \psi_0)$-web. By (4.5) it has a $(\phi_{\theta_1}, \psi_{\theta_1})$-web with $\theta_1$ edge-disjoint spiders. But $\phi_{\theta_1} = \theta^2/2$, contradicting (4.2).
+
+\sectionhead{5. Webs and Meshes}
+
+An $(m, n)$-mesh in a graph $G$ is a pair $((A_1, ..., A_m), (B_1, ..., B_n))$, where
+
+\hspace*{12pt}(i) $A_1, ..., A_m, B_1, ..., B_n$ are all connected subgraphs of $G$;
+
+\hspace*{12pt}(ii) $A_1, ..., A_m$ are disjoint, and $B_1, ..., B_n$ are disjoint;
+
+\hspace*{12pt}(iii) each $A_i$ meets each $B_j$.
+
+The differences between meshes and webs are first that in meshes the $A_i$'s and $B_j$'s are arbitrary connected subgraphs instead of paths, as in webs, and second, that we now permit $A_i$ and $B_j$ to have common edges. The object of this section is to prove that if $G \in \mathcal{F}_\theta$ then $G$ has no $(\theta_5, \theta_6)$-mesh, where $\theta_5, \theta_6$ are as defined in Section 2. We begin with a lemma.
+
+\stmt
+(5.1) \textit{Let $v$ be a vertex of a connected graph $G$, and let $p, q \ge 0$ be integers \fix{with $p \ge 2$}.\fixnote{fix:5.1}{For $p=1$ the statement fails. Let $G$ have one vertex $v$, let $p=q=1$, and let $V_1=\{v\}$. Then (i) needs a vertex $v_1\ne v$ in $V_1\cap V(C)$, and (ii) needs a path meeting $q+1=2$ of the single set $V_1$. The only use, in the proof of (5.2) on page 102, has $p=\theta^2/2\ge 18$.} Let $V_1, ..., V_{p^q} \subseteq V(G)$ be disjoint and non-empty, with $v \in V_1 \cup \dots \cup V_{p^q}$. Then at least one of the following holds:}
+
+\hspace*{12pt}(i) \textit{there is a connected subgraph $C$ of $G$ with $v \in V(C)$, and there are $p$ vertices $v_1, ..., v_p \ne v$ of $C$, each with valency 1 in $C$, and there are distinct $j_1, ..., j_p \in \{1, ..., p^q\}$, such that}
+\begin{equation*}
+V_{j_i} \cap V(C) = \{v_i\} \qquad (1 \le i \le p);
+\end{equation*}
+\hspace*{12pt}(ii) \textit{there is a path of $G$ with initial vertex $v$, meeting exactly $q+1$ of $V_1, ..., V_{p^q}$.}
+
+\textit{Proof.} We proceed by induction on $q$. The result is trivial if $q = 0$, and we assume $q > 0$. Let $v \in V_{p^q}$, say. Choose a maximal connected subgraph $L$ of $G$ with $v \in V(L)$ such that
+\begin{equation*}
+V(L) \cap V_j = \emptyset \qquad (1 \le j < p^q).
+\end{equation*}
+Let $B_1, ..., B_n$ be the components of $G \setminus V(L)$. For $1 \le k \le n$, let $J_k$ be the set of those $j \in \{1, ..., p^q - 1\}$ such that $V_j \cap V(B_k) \ne \emptyset$.
+
+\textit{Case 1.} $|J_k| < p^{q-1}$ \textit{for all} $k$ $(1 \le k \le n)$.

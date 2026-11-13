@@ -1,0 +1,27 @@
+\origpage{72}{N. Robertson, P.D. Seymour / Journal of Combinatorial Theory, Series B 89 (2003) 43--76}
+\textit{Subproof.} This is true for $i = 1$, since $(\Lambda_1, C_1, X_1)$ is a battlefield. We proceed by induction on $i$, and suppose that $1 < i \le \delta$, and that $X_1$ is free with respect to $\mathscr{T}_{i-1}$. Let $d_{i-1}$ be the metric of $\mathscr{T}_{i-1}$. Then for each $v \in X_1$,
+\begin{align*}
+d_{i-1}(y_i, v) &\ge d_{i-1}(y_i, \Lambda_1) - 1 \ge d(y_i, y_1) - (12\beta + 14)(i - 1) - 1 \\
+&\ge \theta - (12\beta + 14)(\delta - 1) - 1 > 2\beta + 5(3\beta + 3) + 2
+\end{align*}
+and so $X_1$ is free with respect to $\mathscr{T}_i$, by theorem 4.7 of [9] (with $\mathscr{T}, H, z, \lambda, X, H'$ replaced by $\mathscr{T}_{i-1}, H_{i-1}, y_i, 3\beta + 3, X_1, H_i$). This proves (3).
+
+By theorem 4.1 of [9] there is at most one $(12\beta + 14)i$-compression of $\mathscr{T}$ in $H_i$, and so $\mathscr{T}_i$ is unique. In particular, $\mathscr{T}_i$ does not depend on the order in which $\Lambda_1, \ldots, \Lambda_i$ are cleared. From this observation and (2), (3), we deduce that for $1 \le i \le j \le \delta$, $X_i$ is free with respect to $\mathscr{T}_j$, and $(\Lambda_i \colon 1 \le i \le \delta)$ is a $\gamma$-envelope around $Y$. Let $H' = H_\delta, \mathscr{T}' = \mathscr{T}_\delta$.
+
+\hspace*{12pt}(4) \textit{For $1 \le i < j \le \delta$, if there are $\phi^2$ mutually disjoint $H'$-paths in $G$ with one end in $X_i$ and the other in $X_j$, then 8.1.1 holds.}
+
+\textit{Subproof.} Let $P_1, \ldots, P_{\phi^2}$ be such a set of paths, and let $P_k$ have ends $a_k \in X_i, b_k \in X_j$ where $a_1, \ldots, a_{\phi^2}$ are in order in $bd(\Lambda_i)$. By a theorem of Erd\"os and Szekeres [3] there exist $1 \le i_1 < i_2 < \cdots < i_\phi \le \phi^2$ such that $b_{i_1}, b_{i_2}, \ldots, b_{i_\phi}$ are in order in $bd(\Lambda_2)$ (under one of the orientations of $bd(\Lambda_2)$). The claim follows from theorem 3.5 of [9], since $\phi \ge 3$. This proves (4).
+
+In view of (4), we may assume that there exists $Z_0$ such that
+
+\hspace*{12pt}(5) \textit{$Z_0 \subseteq V(G), Z_0 \cap V(H') \subseteq X_1 \cup \cdots \cup X_\delta, |Z_0| < \kappa$, and $Z_0$ meets every $H'$-path with ends in distinct $X_i, X_j$.}
+
+\textit{Subproof.} Let $1 \le i < j \le \delta$. By (4) and Menger's theorem, we may assume that there exists $Z_{ij} \subseteq V(G)$ with $Z_{ij} \cap V(H') \subseteq X_i \cup X_j$ and $|Z_{ij}| \le \frac{1}{2}\phi^2$, such that $Z_{ij}$ meets every $H'$-path with ends in $X_i$ and $X_j$. Set $Z_0 = \cup(Z_{ij} \colon 1 \le i < j \le \delta)$; then $Z_0$ satisfies (5).
+
+We suppose, for a contradiction, that setting $Z = Z_0 \cap (V(G) \setminus V(H'))$ does not satisfy 8.1.3. Consequently, if $d'$ is the metric of $\mathscr{T}'$, it follows that there is an $H'$-path $P_0$ in $G$ with ends $s_1, s_2$, such that:
+
+\hspace*{12pt}(6) \textit{$Z_0 \cap V(P_0) \subseteq \{s_1, s_2\} \cap (X_1 \cup \cdots \cup X_\delta)$ and $d'(s_1, s_2) \ge 2\psi$.}
+
+For $i = 1, 2$ let $t_i$ be the second vertex of $P_0$ in $V(H)$ as $P_0$ is traversed from $s_i$ ($s_i$ is the first).
+
+\hspace*{12pt}(7) \textit{$d(s_1 t_1) < \psi$ and $d(s_2, t_2) < \psi$.}

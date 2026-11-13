@@ -1,0 +1,22 @@
+\origpage{332}{N. Robertson, P.D. Seymour / Journal of Combinatorial Theory, Series B 92 (2004) 325--357}
+\noindent $\eta(f) = f'$, since $f'$ is the only edge $e$ of $Q'_2$ with $\phi'_1(e) \in E(\Omega_3)$. Since $f \in dom(\mu)$ and $f' \in dom(\mu')$ it follows that $v' \in \eta(v)$, and hence $\eta$ is a realizable expansion of $Q_2$ in $Q'_2$, as required. Thus $\gamma$ is an encoding, and the theorem follows from 4.2. $\square$
+
+\textbf{4.4.} \textit{Let $\mathcal{F}_1$ be a well-behaved set of patchworks, and let $\mathcal{F}_2$ be the set of all rootless patchworks $P_2 = (G_2, \mu, \Delta)$ such that there exists $(G_1, \mu, \Delta) \in \mathcal{F}_1$ with $G_1^- = G_2^-$. Then $\mathcal{F}_2$ is well-behaved.}
+
+The proof is clear (for any realization expansion of one patchwork in another is a realizable expansion of the corresponding patchworks with roots forgotten).
+
+A patchwork $(G, \mu, \Delta)$ is \textit{active} if every vertex of $G$ is incident with some $e \in dom(\mu)$.
+
+\textbf{4.5.} \textit{Let $\mathcal{F}_1$ be a well-behaved set of active patchworks, let $k \ge 0$ and let $\mathcal{F}_2$ be the set of all patchworks $(G_2, \mu, \Delta)$ such that $|\bar{\pi}(G_2)| \le k$ and there exists $(G_1, \mu, \Delta) \in \mathcal{F}_1$ with $G_1^- = G_2^-$. Then $\mathcal{F}_2$ is well-behaved.}
+
+\textbf{Proof.} It suffices to prove that $\{(G_2, \mu, \Delta) \in \mathcal{F}_2 : |\bar{\pi}(G_2)| = k'\}$ is well-behaved, for each $k'$ with $0 \le k' \le k$. For $k' = 0$ this follows from 4.4, and in general by induction on $k'$ from 4.3. $\square$
+
+\textbf{4.6.} \textit{Let $\mathcal{F}_1$ be a well-behaved set of patchworks, and let $\mathcal{F}_2$ be a set of patchworks such that for each $P_2 = (G_2, \mu_2, \Delta_2) \in \mathcal{F}_2$ there exists $f \in E(G_2)$ such that $P_2 \setminus \{f\} \in \mathcal{F}_1$ and every end of $f$ belongs to $\bar{\pi}(G_2)$. Then $\mathcal{F}_2$ is well-behaved.}
+
+The proof is clear.
+
+Let $P_1 = (G_1, \mu_1, \Delta_1)$ be a patchwork and $f \in dom(\mu_1)$. Take a new vertex $v$ and let $G_2$ be the rooted hypergraph with $\pi(G_2) = \pi(G_1)$, $E(G_2) = E(G_1)$, $V(G_2) = V(G_1) \cup \{v\}$ where $f$ is incident with $v$ but otherwise the incidence relation is the same as for $G$. Let $\mu_2(f)$ be an arbitrary march and let $\Delta_2(f)$ be an arbitrary patch, except that $\bar{\mu}(f)$, $V(\Delta_2(f))$ are both the set of ends of $f$ in $G_2$. For $e \in dom(\mu_1) \setminus \{f\}$ let $\mu_2(e) = \mu_1(e)$, and for $e \in E(G_1) \setminus \{f\}$ let $\Delta_2(e) = \Delta_1(e)$. Then $(G_2, \mu_2, \Delta_2)$ is a patchwork, which we say is a \textit{1-vertex extension of} $(G_1, \mu_1, \Delta_1)$.
+
+\textbf{4.7.} \textit{Let $\mathcal{F}_1$ be a well-behaved set of patchworks and let $\mathcal{F}_2$ be a set of patchworks each of which is a 1-vertex extension of a member of $\mathcal{F}_1$. Then $\mathcal{F}_2$ is well-behaved.}
+
+\textbf{Proof.} Let $\Omega_2$ be a well-quasi-order, and let $N \ge 0$ be an integer such that for every $(G, \mu, \Delta) \in \mathcal{F}_1$ and every $e \in dom(\mu)$, $e$ has $\le N$ ends. Let $\Omega$ be the well-quasi-order with $E(\Omega)$ the set of all $\Omega_2$-patchworks $(G, \mu, \Delta, \phi)$ with $|E(G)| = 1$ and $|V(G)| \le N + 1$, ordered by simulation (Evidently, this is indeed a well-quasi-order.) We may assume that $E(\Omega) \cap E(\Omega_2) = \emptyset$. Let $\Omega_1 = \Omega \cup \Omega_2$.

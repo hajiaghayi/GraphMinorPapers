@@ -1,0 +1,30 @@
+\origpage{52}{ROBERTSON AND SEYMOUR}
+\noindent infinite region, $R_k = R$, and for $1 \le j \le k$ there is a vertex $v$ incident with both $R_{j-1}$ and $R_j$. The \textit{radius} $\rho(M)$ of $M$ is the minimum value of $d$ such that $d(R) \le d$ for all regions $R$ of $M$. The \textit{radius} of a planar graph is the minimum of the radii of its drawings.
+
+The object of this section is to prove that if a planar graph has radius $d$ then its tree-width is at most $3d + 1$. The proof takes several steps.
+
+\stmt
+(2.1) \textit{Any planar graph of radius $\le d$ is isomorphic to a minor of a simple planar graph with radius $\le d$.}
+
+\textit{Proof.} We replace each edge of the graph ($G$, say) by three edges in series, forming a new graph $G'$. It is clear that $G'$ is planar and has the same radius as $G$, and that $G'$ is simple. Moreover $G$ is isomorphic to a minor of $G'$, as required.
+
+Let $M$ be a drawing of a planar graph $G$. By a \textit{nested sequence of circuits} of $M$ we mean a sequence $C_1, \dots, C_d$ of circuits of $G$ such that for $1 \le j < j' \le d$, $C_j$ and $C_{j'}$ have no common vertices and $C_{j'}$ is inside $C_j$ in $M$. By a \textit{$d$-shell} of $M$ (where $d \ge 0$ is an integer) we mean a nested sequence $C_1, \dots, C_d$ of circuits of $M$ such that
+
+\hspace*{12pt}(S1) every vertex of $G$ is either in one of $V(C_1), \dots, V(C_d)$ or is inside $C_d$,
+
+\hspace*{12pt}(S2) for $1 \le j \le d$, every edge of $G$ which joins two vertices in $V(C_j)$ is in $E(C_j)$.
+
+\stmt
+(2.2) \textit{Let $G$ be a simple planar graph of radius $\le d$, where $d \ge 0$ is an integer. Then there exist a simple planar graph $G'$ with a minor isomorphic to $G$ and a drawing $M'$ of $G'$ such that $\rho(M') \le d$ and $M'$ has a $d$-shell.}
+
+\textit{Proof.} For $d' = 0, 1, \dots, d$, we shall prove by induction on $d'$ that there exist a simple planar graph $G'$ with a minor isomorphic to $G$ and a drawing $M'$ of $G'$ such that $M'$ has a $d'$-shell and $\rho(M') \le d$. This is clearly true when $d' = 0$. Now assume that $0 < d' \le d$ and assume the inductive hypothesis that there is a planar graph $G'$ with a drawing $M'$ such that
+
+\hspace*{12pt}(i) $G'$ is simple, $G$ is isomorphic to a minor of $G'$, and $\rho(M') \le d$
+
+\hspace*{12pt}(ii) $M'$ has a $(d' - 1)$-shell $C_1, \dots, C_{d'-1}$.
+
+Let $H$ be the graph obtained from $G'$ by deleting the vertices in $V(C_1), \dots, V(C_{d'-1})$ and the edges incident with them; and let $N$ be the drawing of $H$ obtained from $M'$ by the same deletion.
+
+We may assume that
+
+\hspace*{12pt}(iii) at least three vertices of $H$ are on the infinite region of $N$.

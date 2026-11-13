@@ -1,0 +1,30 @@
+\origpage{172}{ROBERTSON AND SEYMOUR}
+\textit{Proof.} Suppose that $E(P_i) \subseteq X$ for some $i$ $(1 \le i \le \theta)$. Then $V(Q_j)$ contains an end of an edge in $X$ for $1 \le j \le \theta$, since each $Q_j$ meets $P_i$. But not every $Q_j$ meets $\partial(X)$, since $|\partial(X)| < \theta$, and so for some $j$ $(1 \le j \le \theta)$, $E(Q_j) \subseteq X$, as required. $\square$
+
+If $X \subseteq E(G)$, we say that $X$ is \textit{small} (in $G$) if $|\partial(X)| < \theta$ and $X$ includes $E(P_i)$ for no $i$ $(1 \le i \le \theta)$. The following is the main lemma used to obtain the required tangle, and we are grateful to D. Kleitman and M. Saks for finding the proof.
+
+\stmt
+(7.2) \textit{If $G$ is a $\theta$-grid and $X_1, X_2, X_3 \subseteq E(G)$ with $X_1 \cup X_2 \cup X_3 = E(G)$, then not all of $X_1, X_2, X_3$ are small in $G$.}
+
+\textit{Proof.} We proceed by induction on $\theta$. If $\theta = 2$ the result is trivial, and so we assume that $\theta \ge 3$ and that the result is true for $\theta - 1$. Let $P_1, \dots, P_\theta, Q_1, \dots, Q_\theta$ be as before.
+
+If $E(Q_j) \subseteq X_1, X_2$, or $X_3$ for some $j$, the result is true by (7.1). Thus we may assume that each $E(Q_j)$ meets at least two of $X_1, X_2, X_3$, and in particular, without loss of generality, that
+\begin{equation*}
+E(Q_\theta) \cap X_1 \ne \emptyset \ne E(Q_\theta) \cap X_2.
+\end{equation*}
+We suppose that all of $X_1, X_2, X_3$ are small. Thus, for $1 \le j \le \theta$ and $1 \le k \le 3$, if $E(Q_j)$ meets $X_k$, then $V(Q_j)$ meets $\partial(X_k)$. Moreover, if both ends of $Q_j$ are incident with edges in $X_k$, then $|V(Q_j) \cap \partial(X_k)| \ge 2$. Now suppose that neither $E(P_1)$ nor $E(P_\theta)$ meets $X_3$. Then for $1 \le j \le \theta$ both ends of $Q_j$ are incident with edges in $X_1 \cup X_2$. From the above remarks, we deduce that
+\begin{equation*}
+|V(Q_j) \cap \partial(X_1)| + |V(Q_j) \cap \partial(X_2)| \ge 2.
+\end{equation*}
+By summing over $j$, we find that $|\partial(X_1)| + |\partial(X_2)| \ge 2\theta$, a contradiction. Thus one of $E(P_1), E(P_\theta)$, say $E(P_\theta)$, meets $X_3$. Hence $E(P_\theta \cup Q_\theta)$ meets each of $X_1, X_2, X_3$ and hence $V(P_\theta \cup Q_\theta)$ meets each of $\partial(X_1), \partial(X_2), \partial(X_3)$.
+
+Put $G' = G \setminus V(P_\theta \cup Q_\theta)$. Then $G'$ is a $(\theta - 1)$-grid. Put $X'_k = X_k \cap E(G')$ $(1 \le k \le 3)$. Then $X'_1 \cup X'_2 \cup X'_3 = E(G')$. Let $\partial'$ be the $\partial$ function in $G'$.
+
+Now
+\begin{equation*}
+\partial'(X'_k) \subset \partial(X_k) \qquad (1 \le k \le 3)
+\end{equation*}
+since $V(P_\theta \cup Q_\theta)$ meets $\partial(X_k)$, and so
+\begin{equation*}
+|\partial'(X'_k)| \le \theta - 2 \qquad (1 \le k \le 3).
+\end{equation*}

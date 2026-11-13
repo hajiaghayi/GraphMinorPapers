@@ -1,0 +1,32 @@
+\origpage{535}{N. Robertson, P. Seymour / Journal of Combinatorial Theory, Series B 102 (2012) 530--563}
+\textbf{Proof.} A \textit{haven of order $h$} in $G$ means a function $\beta$ assigning some component $\beta(X)$ of $G \setminus X$ to every subset $X \subseteq V(G)$ with $|X| < h$, in such a way that $\beta(X) \subseteq \beta(Y)$ for all $X, Y$ with $Y \subseteq X \subseteq V(G)$ and $|X| < h$. Now for each $X \subseteq V(G)$ with $|X| < h$, there exists $i$ with $1 \le i \le h$ such that $X \cap V(C_i) = \emptyset$, and hence there is a component $H$ of $G \setminus X$ with $C_i \subseteq H$. Since $C_i \cap D_j$ is non-null for each $j$, it follows that $D_j \subseteq H$ for every $j$ with $X \cap V(D_j) = \emptyset$, and there is such a $j$. By the same argument, $H$ includes every one of $C_1, \ldots, C_h$ which is disjoint from $X$. Define $\beta(X) = H$. Then $\beta(X) \subseteq \beta(Y)$ if $Y \subseteq X \subseteq V(G)$ and $|X| < h$, and so $\beta$ is a haven of order $h$. It was proved in Theorem 1.4 of [8] that every graph that admits a haven of order $h$ has tree-width at least $h - 1$; and hence $G$ has tree-width at least $h - 1$, as required. $\square$
+
+A line $F$ in a surface $\Sigma$ is \textit{proper} if its ends are in $bd(\Sigma)$ and no other point of $F$ is in $bd(\Sigma)$. The second lemma we need is as follows.
+
+\textbf{3.3.} \textit{Let $\Gamma$ be a drawing in a closed disc $\Delta$, and let $L \subseteq \Gamma$ with $V(\Gamma) \cap bd(\Delta) \subseteq V(L)$. Let $v \in V(\Gamma) \setminus bd(\Delta)$, and suppose that there is no subgraph of $\Gamma \setminus \{v\}$ with the same effect on $V(\Gamma) \cap bd(\Delta)$ as $L$. Then there is a $\Gamma$-normal proper line $F \subseteq \Delta$ with $v \in F \cap V(\Gamma)$, such that there are $F \cap V(\Gamma)$ components of $L$ with a vertex in $F \cap V(\Gamma)$.}
+
+\textbf{Proof.} Let the effect of $L$ on $V(\Gamma) \cap bd(\Delta)$ be $\{Z_i: 1 \le i \le k\}$ say. By Theorem 3.6 of [1], there is a $(\Gamma \setminus \{v\})$-normal proper line $F \subseteq \Delta$ such that
+\begin{equation*}
+|F \cap V(\Gamma \setminus \{v\})| < |\{i: 1 \le i \le k, F_1 \cap Z_i \ne \emptyset \ne F_2 \cap Z_i\}|
+\end{equation*}
+where $F_1$ and $F_2$ are the two lines in $bd(\Delta)$ with the same ends as $F$. Let $r$ be the region of $\Gamma \setminus \{v\}$ containing $v$. We may choose $F$ so that it is $\Gamma$-normal; for if $F \cap r = \emptyset$ then $F$ is already $\Gamma$-normal, and if $F \cap r \ne \emptyset$, choose a maximal line $F' \subseteq F$ with both ends in $\bar{r}$, and replace $F'$ in $F$ by a $\Gamma$-normal line in $\bar{r}$, with no point in $\bar{r}$ except its ends.
+
+Let us renumber $Z_1, \ldots, Z_k$ so that for $1 \le i \le k$, $Z_i$ meets both $F_1$ and $F_2$ if and only if $i \le j$. For $1 \le i \le k$, let $L_i$ be the component of $L$ with $V(L_i) \cap bd(\Delta) = Z_i$. Since for $1 \le i \le j$, $U(L_i)$ meets both $F_1$ and $F_2$, it follows that $F \cap U(L_i) \ne \emptyset$, and since $F$ is $\Gamma$-normal, there exists $v_i \in F \cap V(L_i)$. Now $L_1, \ldots, L_j$ are mutually vertex-disjoint, and so $v_1, \ldots, v_j$ are all distinct. But
+\begin{equation*}
+\{v_1, \ldots, v_j\} \subseteq F \cap V(\Gamma) \subseteq (F \cap V(\Gamma \setminus \{v\})) \cup \{v\}
+\end{equation*}
+and $|F \cap V(\Gamma \setminus \{v\})| < j$, from the choice of $j$. Consequently, we have equality throughout, and so $v \in F \cap V(\Gamma)$, and $j = |F \cap V(\Gamma)|$, and $L_1, \ldots, L_j$ all have a vertex in $F$. The result follows. $\square$
+
+\textbf{Proof of 3.1.} Let $w$ be as in 2.1, and let $h = \lceil 5w/4 \rceil + 2$. We claim that $h$ satisfies 3.1. For suppose not; then we can choose a graph $G$ satisfying (1) and (2) below.
+
+\hspace*{12pt}(1) For some $\Gamma, K, v, Z, L$ as in the theorem, with $\Gamma \cup K \subseteq G$, no subgraph $L'$ of $G \setminus \{v\}$ with $L' \cap K \subseteq L$ has the same effect on $Z$ as $L$.
+
+\hspace*{12pt}(2) Subject to (1), $|V(G)| + |E(G)|$ is minimum.
+
+Choose $\Gamma, K, v, Z, L$ as in (1). Let $\Delta_1, \ldots, \Delta_h$ be as in the definition of ``$h$-insulated'', let $C_i$ be the circuit of $\Gamma$ with $U(C_i) = bd(\Delta_i)$ ($1 \le i \le h$), and let $M = C_1 \cup \cdots \cup C_h$. It follows from (2) that $K \cup L \cup M = G$. Moreover,
+
+\hspace*{12pt}(3) $V(K) \cap \Delta_1 = \emptyset$ and hence $Z \cap \Delta_1 = \emptyset$.
+
+We deduce
+
+\hspace*{12pt}(4) $K \subseteq L$, and so $G = L \cup M$; and no subgraph of $G \setminus \{v\}$ has the same effect on $Z$ as $L$.

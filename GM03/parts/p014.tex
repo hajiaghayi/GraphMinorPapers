@@ -1,0 +1,38 @@
+\origpage{62}{ROBERTSON AND SEYMOUR}
+\noindent \textit{graphs, and $M$ does not major the $r \times s$ cylinder. Then $G$ has radius $<k$, where}
+\begin{align*}
+k &= s + \frac{1}{2}r^2 && (r\text{ even}) \\
+&= s + \frac{1}{2}(r^2 - 1) && (r\text{ odd}).
+\end{align*}
+\textit{Proof.} We proceed by induction on $r$. If $r = 0$ the result is true by (2.8). We assume then that $r > 0$. If $r$ is even, then by (4.3) $M$ does not major the $(r - 1) \times (s + r)$ cylinder, and hence by induction the radius of $G$ is
+\begin{equation*}
+< s + r + \frac{1}{2}((r - 1)^2 - 1) = s + \frac{1}{2}r^2
+\end{equation*}
+as required. If $r$ is odd we argue similarly.
+
+\stmt
+(4.5) \textit{Let $r \ge 0$, $s \ge 1$ be integers. If $G$ is a planar graph which is not expressible as the sleeve union of two planar graphs, then either $G$ has a minor isomorphic to the $r \times s$ cylinder, or it has tree-width at most}
+\begin{align*}
+&3(s + \frac{1}{2}r^2) - 2 && (r\text{ even}) \\
+&3(s + \frac{1}{2}(r^2 - 1)) - 2 && (r\text{ odd}).
+\end{align*}
+\textit{Proof.} Take a drawing $M$ of $G$. If $M$ majors the $r \times s$ cylinder then $G$ has a minor isomorphic to the $r \times s$ cylinder. If not, then $G$ has radius $<k$, where
+\begin{align*}
+k &= s + \frac{1}{2}r^2 && (r\text{ even}) \\
+&= s + \frac{1}{2}(r^2 - 1) && (r\text{ odd})
+\end{align*}
+by (4.4), and the result follows from (2.7).
+
+\sectionhead{5. \textsc{The} \textsc{Main} \textsc{Result}}
+
+Now we prove (1.4). We need two more lemmas.
+
+\stmt
+(5.1) \textit{For every planar graph $H$ there is a number $r \ge 1$ such that the $r \times r$ cylinder has a minor isomorphic to $H$.}
+
+The reader will probably have no trouble convincing himself of this. A proof of (5.1) and of a stronger result will appear in [5].
+
+\stmt
+(5.2) \textit{Let $r \ge 1$ be an integer. If $G$ is planar and has no minor isomorphic to the $r \times r$ cylinder then $G$ has tree-width $\le \frac{3}{2}(r^2 + 2r) - 2$.}
+
+\textit{Proof.} We proceed by induction on the size of $G$ (that is, $|V(G)| +$

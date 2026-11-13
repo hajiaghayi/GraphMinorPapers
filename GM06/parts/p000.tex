@@ -1,0 +1,28 @@
+\sectionhead{\textbf{About this copy}}
+
+This is a corrected copy of the paper cited above. The text is retyped from the printed paper.
+It keeps the paper's wording and the numbering of its results, equations and footnotes, and a
+marker such as \origpagemark{$N$} shows where page $N$ of the printed paper begins.
+
+The corrections come from a formalization of the Graph Minors series in the Lean proof
+assistant, \href{https://github.com/mahdi-jfri/GraphMinor}{github.com/mahdi-jfri/GraphMinor},
+in which the results of this paper are proved. Where the formalization found that a statement
+or a step of a proof is wrong as printed, this copy corrects it in place. Where the paper leaves a proof or a step to the reader, this copy adds it, also in blue. Text \del{struck
+through in red} is removed and text \fix{in blue} is inserted. Each change has a note, marked
+\textcolor{fixcolor}{\sffamily F1}, \textcolor{fixcolor}{\sffamily F2}, \dots, that gives the
+reason. The file
+\href{https://github.com/mahdi-jfri/GraphMinor/blob/main/corrections/GM06.md}{corrections/GM06.md}
+of the formalization describes each correction in full. Each note, and each item in the list below, begins with the kind of the change. A \kindname{misprint} is a wrong symbol, index or word. A \kindname{statement} is a result or a claim of the text that is false as printed. A \kindname{degenerate} is a statement that fails only in a trivial case, such as an empty graph or a parameter equal to~$0$. A \kindname{gap} is a step of a proof that does not follow as written. A \kindname{missing} is a proof that the paper omits, leaves to the reader or only sketches, and that this copy adds.
+
+The corrections and added proofs, in the order of the pages:
+\begin{enumerate}\setlength{\itemsep}{1pt}
+\item \kindtag{fix:3.1-proof-added}\hyperref[fix:3.1-proof-added]{Proof of (3.1), page 120}: the proof is added.
+\item \kindtag{fix:3.2-proof-added}\hyperref[fix:3.2-proof-added]{Proof of (3.2), page 120}: the proof, along the lines of the hint, is added.
+\item \kindtag{fix:3.6-necessity-added}\hyperref[fix:3.6-necessity-added]{Proof of (3.6), page 122}: the proof of the necessity of (i) and (ii) is added.
+\item \kindtag{fix:4.2-proof-p126}\hyperref[fix:4.2-proof-p126]{Proof of (4.2), page 126}: (4.1) and reduction 2 are applied only to consecutive vertices $a, b$ of $H'$ in $S_i$, for which $S_i(a, b)$ is a segment, and the conclusion is passed from consecutive pairs to all pairs.
+\item \kindtag{fix:4.2-proof-p127}\hyperref[fix:4.2-proof-p127]{Proof of (4.2), page 127}: ``distinct'' becomes ``consecutive'', and the step to the connectivity of $K$ is explained.
+\item \kindtag{fix:5-reduction1}\hyperref[fix:5-reduction1]{Reduction 1 in Section 5, page 128}: for $k=1$, the deleted edge must leave $s_1$ on the side of the strip that precedes $s_1$.
+\item \kindtag{fix:5-reduction4}\hyperref[fix:5-reduction4]{Reduction 4 in Section 5, page 129}: for $k=1$, the condition that $v$ is incident with $R_1$ is read in the universal cover of the annulus.
+\item \kindtag{fix:5.4-proof-added}\hyperref[fix:5.4-proof-added]{Proof of (5.4), page 130}: the details are added.
+\item \kindtag{fix:5.7-time-added}\hyperref[fix:5.7-time-added]{Algorithm (5.7), page 133}: the count that bounds the running time is added.
+\end{enumerate}

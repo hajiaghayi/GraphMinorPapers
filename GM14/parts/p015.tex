@@ -1,0 +1,26 @@
+\origpage{37}{GRAPH MINORS. XIV}
+\noindent \textit{a radial drawing of $H$, and let $D$ be a circuit of $K$ with $U(D) \subseteq \bar{\Lambda}$ and $|E(D)| < 2(\theta - \lambda)$. Then $ins(D) \subseteq \bar{\Lambda}$.}
+
+\textit{Proof.} Choose $z \in A(H)$ so that $\Lambda$ is a $\lambda$-zone around $z$. Since $H$ and $K$ both have circuits it follows that $|E(H)| \ge 2$. By (7.1) there exists $e \in E(H)$ with $d(z, e) = \theta$. Let $\Delta \subseteq \bar{\Lambda}$ be the closed disc bounded by $U(D)$; then $e \cap \Delta \subseteq e \cap \bar{\Lambda} = \emptyset$, and so $\Delta$ is the unique closed disc in $\Sigma$ which is bounded by $U(D)$ and disjoint from $e$. Now $ins(D)$ is a closed disc in $\Sigma$ bounded by $U(D)$, and we claim that $ins(D) \cap e = \emptyset$. For let $v \in V(D) \cap V(H)$. Then $d(z, v) \le \lambda$ since $v \in U(D) \subseteq \bar{\Lambda}$, and so $d(v, e) \ge \theta - \lambda$ since $d(z, e) = \theta$; and hence $ins(D) \cap e = \emptyset$, since $\frac{1}{2}|E(D)| < \theta - \lambda$ and $v \in ins(D)$. From the uniqueness of $\Delta$ we deduce that $ins(D) = \Delta$, and so $ins(D) \subseteq \bar{\Lambda}$, as required. $\square$
+
+\stmt
+(7.6) \textit{Let $H$ be a 2-cell drawing in $\Sigma$, and let $\mathscr{T}$ be a respectful tangle in $H$ of order $\theta$. Let $\lambda \ge 0$ be an integer, and let $\Lambda \subseteq \Sigma$ be a $\lambda$-zone. Let $K$ be a radial drawing of $H$, and let $D$ be a circuit of $K$ with $|E(D)| < 2(\theta - \lambda)$ and $bd(\Lambda) \subseteq ins(D)$. Then $\bar{\Lambda} \subseteq ins(D)$.}
+
+\textit{Proof.} Let $z \in A(K)$ be such that $\Lambda$ is a $\lambda$-zone around $z$. Let $\Lambda'$ be the open disc bounded by $bd(\Lambda)$ in $ins(D)$, and suppose that $\Lambda' \ne \Lambda$. Then $bd(\Lambda)$ bounds two open discs, and so $\Sigma$ is a sphere, and $\Sigma = \bar{\Lambda} \cup \Lambda'$. Moreover, $U(D) \cap \Lambda' = \emptyset$ because $\Lambda' \subseteq ins(D)$, and so $U(D) \subseteq \bar{\Lambda}$. By (7.5), $ins(D) \subseteq \bar{\Lambda}$, and so $\Lambda' \subseteq \bar{\Lambda}$, a contradiction. Thus $\Lambda' = \Lambda$, and so $\bar{\Lambda} \subseteq ins(D)$, as required. $\square$
+
+If $\alpha$ is an arrangement in a surface $\Sigma$ of a segregation $\mathscr{S}$ of $G$, a subset $X \subseteq \Sigma$ is said to be $\alpha$-normal if
+\begin{equation*}
+X \cap \alpha(A, \Omega) \subseteq \{\alpha(v) : v \in \bar{\Omega}\}
+\end{equation*}
+for all $(A, \Omega) \in \mathscr{S}$.
+
+\stmt
+(7.7) \textit{Let $H$ be a 2-cell drawing in $\Sigma$, and let $\mathscr{T}$ be a respectful tangle in $H$ of order $\theta \ge 6$. Let $z \in A(H)$, let $C_1$, $C_2$ be disjoint circuits of $H$, and let $U(C_1)$, $U(C_2)$ bound closed discs $\Delta_1$, $\Delta_2 \subseteq \Sigma$ with the following properties:}
+
+\hspace*{12pt}(i) $z \subseteq \Delta_2 - bd(\Delta_2)$, and $\Delta_2 \subseteq \Delta_1 - bd(\Delta_1)$
+
+\hspace*{12pt}(ii) $d(z, x) \le \theta - 4$ for all $x \in A(H)$ with $x \subseteq \Delta_1$
+
+\hspace*{12pt}(iii) $x \subseteq \Delta_2 - bd(\Delta_2)$ for all $x \in A(H)$ with $d(z, x) \le 3$.
+
+\textit{Let $H$ be a subgraph of $G$, let $\mathscr{S}$ be a $\mathscr{T}$-local 3-segregation of $G$, and let $\alpha$ be an arrangement of $\mathscr{S}$ in $\Sigma$ compatible with $H$. Then there is an $\alpha$-normal $O$-arc $F \subseteq \Delta_1$, bounding a closed disc in $\Delta_1$ including $\Delta_2$.}

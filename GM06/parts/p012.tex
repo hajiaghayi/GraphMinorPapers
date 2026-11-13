@@ -1,0 +1,23 @@
+\origpage{126}{ROBERTSON AND SEYMOUR}
+\noindent be distinct, and let $S$ be a component of $C - \{s, t\}$. We say that $S$ is a $C$-base for $H'$ if
+\begin{equation*}
+V(H') \cap C = V(H) \cap S
+\end{equation*}
+and if for all distinct $a, b \in V(H) \cap S$, $H(a, b)$ is homotopic to $S(a, b)$. (We permit $V(H) \cap S = \emptyset$.) If $H'$ has a $C$-base we say that $H'$ is \textit{interval-based on $C$.}
+
+\hspace*{12pt}(2) \textit{If some component of $H$ is bad, there is a bad component of $H$ which is interval-based on both cuffs of $\Sigma$.}
+
+For if each component of $H$ meets both cuffs of $\Sigma$ then clearly each component is interval-based on both cuffs of $\Sigma$, and so in this case any bad component satisfies (2). If some component meets only one cuff $C$ say, then we may choose distinct $s, t \in C - V(H)$ and a component $S$ of $C - \{s, t\}$ and a component $H'$ of $H$, such that
+
+\hspace*{12pt}(i) $V(H') \cap bd(\Sigma) \subseteq S$
+
+\hspace*{12pt}(ii) for all distinct $a, b \in V(H') \cap S$, $H(a, b)$ is homotopic to $S(a, b)$.
+
+(For since $H'$ is a tree, there is a region $R$ of $H'$ which intersects both cuffs of $\Sigma$; choose $s, t \in R \cap C$.) Let us choose $H', s, t, S$, so that in addition $|S \cap V(H)|$ is minimum. It is easy to see, using (1), that $S$ is a $C$-base for $H'$. Thus $H'$ is interval-based on both cuffs of $\Sigma$, and it is clearly bad (since $H'$ only meets one cuff of $\Sigma$). This proves (2).
+
+Now to complete the proof of (4.2), suppose for a contradiction that $H$ has a bad component. By (2) there is a bad component $H'$ of $H$, interval-based on both cuffs of $\Sigma$. Let the cuffs of $\Sigma$ be $C_1$, $C_2$, and let $S_i$ be a $C_i$-base for $H'$ ($i = 1, 2$). Let $G'$ be the subgraph of $G$ with vertex set $V(H') \cap bd\Sigma$ and with edges those edges $e$ of $G$ with distinct ends $u, v$ say, such that $H(u, v)$ is homotopic to $e$. Now reduction 1 does not apply, and hence $G'$ is not connected. Let $(X_1 X_2)$ be a partition of $V(G')$ with $X_1$, $X_2 \ne \emptyset$, such that no edge of $G'$ joins a vertex of $X_1$ to a vertex of $X_2$.
+
+Let $i \in \{1, 2\}$. Suppose $a, b \in S_i \cap V(H')$ are distinct \fix{and consecutive in $S_i$, that is, $S_i(a, b)$ contains no vertex of $H'$. Since $V(H') \cap C_i = V(H) \cap S_i$, it follows that $S_i(a, b)$ contains no vertex of $H$, and so $S_i(a, b)$ is a segment with ends $a, b$}.\fixnote{fix:4.2-proof-p126}{As printed, $a, b$ are any two vertices of $H'$ in $S_i$. But (4.1) and reduction 2 speak only of segments, and $S_i(a, b)$ is a segment only when $a, b$ are consecutive. So the paragraph is proved for consecutive $a, b$, and two later steps (at the end of this paragraph, and on page 127) pass from consecutive pairs to all pairs. The statement of (4.2) holds as printed.} Then $H(a, b)$ is homotopic to $S_i(a, b)$ because $S_i$ is a $C_i$-base for $H'$. Since (4.1)(i) does not apply, $P(a, b, S_i(a, b))$ exists; since reduction 2(ii) does not apply, every vertex of it is in $bd\Sigma$ and hence in $V(H)$; and since (4.1)(ii) does not apply, every vertex of it is in $V(H')$. We claim, moreover, that $P(a, b, S_i(a, b))$ is a subgraph of $G'$. For let $e$ be an edge of $P(a, b, S_i(a, b))$ with ends $u_1, u_2$, and let $Q_i$ be the subpath of $P(a, b, S_i(a, b))$ from $u_i$ to $b$ ($i = 1, 2$). Since (4.1)(iii) does not apply, $Q_i$ is homotopic to $H(u_i, b)$ ($i = 1, 2$), and so $H(u_1, u_2)$ is homotopic to $e$. Thus $e \in E(G')$, and our claim is proved. Hence if $a \in X_j$ then $b \in X_j$ ($j = 1, 2$). \fix{List the vertices of $V(H') \cap S_i$ in their order along $S_i$; each of them is consecutive to the next, and so all of them are in the same set $X_j$.} It follows that for some $j$,
+\begin{equation*}
+V(H') \cap S_i \subseteq X_j;
+\end{equation*}

@@ -1,0 +1,24 @@
+\origpage{240}{ROBERTSON AND SEYMOUR}
+We claim that $(T, \tau')$ is rotund. For let $P$ be a directed path of $T$ with first edge $f_2$ and last edge $f_1$, such that $f_1, f_2$ have the same order $k$ and every other edge of $P$ has order $\ge k$ in $(T, \tau')$. Let the first and last vertices of $P$ be $t_2, t_1$. By (2), there are $k$ mutually vertex-disjoint paths $Q_1, \dots, Q_k$ of $K$ between $V(\tau(t_1))$ and $V(\tau(t_2))$. Let $(H_1, H_2)$ be a separation of $G^-$ with $(\tau' \times T^{f_1})^- \subseteq H_1$ and $(\tau' \times T_{f_2})^- \subseteq H_2$. Each $Q_i$ has one end in $V(H_1)$ and the other end in $V(H_2)$, and for each $e \in E(Q_i)$ either both ends of $e$ in $K$ are ends in $G$ of some $e' \in E(G)$ or both ends of $e$ in $K$ are in $\bar{\pi}(G)$; and in either case both ends of $e$ in $K$ lie in some $V(\tau'(t))$ and hence either both lie in $V(H_1)$ or both lie in $V(H_2)$. Hence each $V(Q_i)$ meets $V(H_1 \cap H_2)$, and so $|V(H_1 \cap H_2)| \ge k$. Thus $(H_1, H_2)$ has order $\ge k$; and hence $(T, \tau')$ is rotund, as required. $\square$
+
+We introduce a fourth axiom. For each $n \ge 0$, let $\mathscr{S}_n$ denote the class of all star-decompositions $(S, \sigma)$ with $\sigma \times S \in \mathscr{R}$ and with $|V(\sigma(o(S)))| \le n$.
+
+\textit{Axiom} 4. \textit{For each $n \ge 0$, $\mathscr{S}_n$ is good.}
+
+From (5.2) we deduce
+
+\stmt
+(5.3) \textit{Let $G_i$ ($i = 1, 2, \dots$) be a countable sequence of elements of $\mathscr{R}$, each of tree-width $\le n$. Then there exist $i' > i \ge 1$ such that $G_i$ is simulated in $G_{i'}$.}
+
+\textit{Proof.} From (5.2), for each $i \ge 1$ there is a rotund tree-decomposition of $G_i$ of width $\le n$, and hence with all its branchings in $\mathscr{S}_{n + 1}$. Since $\mathscr{S}_{n + 1}$ is good and symmetric, the result follows from (4.2). $\square$
+
+\textit{Proof of} (1.5) (\textit{Sketch}). Let $G_i$ ($i = 1, 2, \dots$) be a countable sequence of graphs, each of tree-width $\le n$. Let $\mathscr{R}$ be the class of all rooted graphs $G$ such that $G^-$ is a subgraph of some $G_i$. For $H_1, H_2 \in \mathscr{R}$ we say that $H_1$ is simulated in $H_2$ if $|\bar{\pi}(H_1)| = |\bar{\pi}(H_2)|$ and there exists $H \in \mathscr{R}$ with $H^- \subseteq H_2^-$ and $\pi(H) = \pi(H_2)$, such that a rooted graph isomorphic to $H_1$ can be obtained from $H$ by edge-contraction. We verify Axioms 1--4, and (1.5) follows from (5.3). $\square$
+
+We have omitted verifying Axioms 1--4, because it is easy and we shall later carry out the verification for a more general ``concrete'' definition of simulation. \fix{This verification is carried out in Sections 6--9, and a complete proof of (1.5), by way of
+(9.1), is given on page 253.\fixnote{fix:1.5-sketch}{The paper does not verify Axioms 1--4 for the
+relation defined in the sketch above. The derivation of (1.5) from (9.1) on page 253 is complete,
+and the details added there show that simulation of the patchworks used gives minors.}}
+
+\sectionhead{6. \textsc{Patchworks}}
+
+Now we come to the second part of the paper. We introduce a concrete containment relation on a class of rooted hypergraphs, and verify that it satisfies the axioms.

@@ -1,0 +1,29 @@
+\origpage{161}{GRAPH MINORS, X}
+We claim that $(T, \alpha)$ is exact. For suppose that some fork $\{e_1, e_2\}$ with nub $t$ is non-exact. Then $t$ has valency 3 in $T$, since $T$ is ternary; let $e_3$ be the third edge of $T$ incident with $v$, and let $e_i$ have ends $t$, $t_i$ ($i = 1, 2, 3$). Let $A_1 = \alpha(t, e_1)$, $A_2 = \alpha(t, e_2)$. Define $\alpha'$ by
+\begin{align*}
+\alpha'(t, e_1) &= A_1 - A_2 \\
+\alpha'(t_1, e_1) &= \alpha(t_1, e_1) \cup A_2 = E - (A_1 - A_2) \\
+\alpha'(v, e) &= \alpha(v, e) \text{ for } (v, e) \ne (t, e_1), (t_1, e_1).
+\end{align*}
+We claim that $\kappa(A_1 - A_2) \ge \kappa(A_1)$. For if $\kappa(A_1 - A_2) \ge 0$ this is true, and so we may assume that $A_1 - A_2$ is efficient. Then $\alpha'$ is a tree-labelling over $\mathscr{A}$, and from (2),
+\begin{equation*}
+\kappa(\alpha'(t, e_1)) + \kappa(\alpha'(t_1, e_1)) \ge \kappa(\alpha(t, e_1)) + \kappa(\alpha(t_1, e_1));
+\end{equation*}
+that is,
+\begin{equation*}
+\kappa(A_1 - A_2) + \kappa(E - (A_1 - A_2)) \ge \kappa(A_1) + \kappa(E - A_1).
+\end{equation*}
+Since $\kappa(E - (A_1 - A_2)) = \kappa(A_1 - A_2)$ and $\kappa(E - A_1) = \kappa(A_1)$, it follows that $\kappa(A_1 - A_2) \ge \kappa(A_1)$, as claimed. Similarly $\kappa(A_2 - A_1) \ge \kappa(A_2)$. But since $\kappa$ is a connectivity function,
+\begin{equation*}
+\kappa(A_1) + \kappa(E - A_2) \ge \kappa(A_1 \cup (E - A_2)) + \kappa(A_1 \cap (E - A_2));
+\end{equation*}
+that is,
+\begin{equation*}
+\kappa(A_1) + \kappa(A_2) \ge \kappa(A_2 - A_1) + \kappa(A_1 - A_2).
+\end{equation*}
+Thus equality holds throughout, and in particular, $\kappa(A_1 - A_2) = \kappa(A_1)$ and $\kappa(A_2 - A_1) = \kappa(A_2)$. From the symmetry between $t_1$ and $t_2$, we may assume that $d(t) < d(t_1)$. With $\alpha'$ as before we see that $\alpha'$ is a tree-labelling over $\mathscr{A}$ and $\sum \kappa(\alpha'(v, e)) = \sum \kappa(\alpha(v, e))$. Moreover, $\{e_1, e_2\}$ is exact for $\alpha'$, and any fork of $T$ which is exact for $\alpha$ is exact for $\alpha'$ except possibly for forks $\{e, e_1\}$ with nub $t_1$. There are at most two such forks, and since $d(t_1) > d(t)$, this contradicts (3), as required. $\square$
+
+\stmt
+(3.3) \textit{Let $(T, \alpha)$ be an exact tree-labelling over $\mathscr{A}$, and let $(u, f)$ be an incidence in $T$. Let $T_0$ be the component of $T \setminus f$ which contains $u$. Then, as $(v, e)$ ranges over all incidences of $T$ such that $v$ is a leaf of $T$ and $v \in V(T_0)$, the sets $E - \alpha(v, e)$ are mutually disjoint and have union $E - \alpha(u, f)$.}
+
+\textit{Proof.} We proceed by induction on $|V(T_0)|$. If $u$ is a leaf the result is trivial, and so we may assume that $u$ is incident with three edges $f, f_1, f_2$; let $f_i$ have ends $u$, $u_i$ ($i = 1, 2$), and let $T_i$ be the component of

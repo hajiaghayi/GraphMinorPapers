@@ -1,0 +1,27 @@
+\origpage{341}{N. Robertson, P.D. Seymour / Journal of Combinatorial Theory, Series B 92 (2004) 325--357}
+\hspace*{12pt}(1) \textit{$\mathcal{L}'$ is a fine rooted location.}
+
+\textit{Subproof:} Certainly $\mathcal{L}_1$ and $\{f(A^*, B^*) : (A^*, B^*) \in \mathcal{M}(\mathcal{T}, W, \theta)\}$ are rooted locations (by 5.2, and since $P$ is rootless), and so to check that $\mathcal{L}'$ is a rooted location it suffices to show that for each $C \in \mathcal{L}_1$ and each $(A^*, B^*) \in \mathcal{M}(\mathcal{T}, W, \theta)$,
+\begin{align*}
+V(C^- \cap f(A^*, B^*)^-) &\subseteq \bar{\pi}(C) \cap \bar{\pi}(f(A^*, B^*)), \\
+E(C^- \cap f(A^*, B^*)^-) &= \emptyset.
+\end{align*}
+Suppose, therefore, that $C \in \mathcal{L}_1$ and $(A^*, B^*) \in \mathcal{M}(\mathcal{T}, W, \theta)$. Then since $C \notin \mathcal{L}_2$ it follows that not both $C^- \subseteq A^*$ and $B^* \subseteq (G \setminus C)^-$. Hence from the hypothesis of the theorem, $C^- \subseteq B^*$ and $A^* \subseteq (G \setminus C)^-$. Since $f(A^*, B^*)^- = A^*$, and
+\begin{align*}
+V(C^- \cap A^*) \subseteq V(C^- \cap (G \setminus C)^-) \cap V(A^* \cap B^*) &= \bar{\pi}(C) \cap \bar{\pi}(f(A^*, B^*)), \\
+E(C^- \cap A^*) \subseteq E(A^* \cap B^*) &= \emptyset
+\end{align*}
+it follows that $\mathcal{L}'$ is a rooted location. To see that it is fine, we observe that
+\begin{align*}
+\bigcup (C^- : C \in \mathcal{L}') &= \bigcup (C^- : C \in \mathcal{L}_1) \cup \bigcup (f(A^*, B^*)^- : (A^*, B^*) \\
+&\quad \in \mathcal{M}(\mathcal{T}, W, \theta)) \\
+&= \bigcup (C^- : C \in \mathcal{L}_1) \cup \bigcup (A^* : (A^*, B^*) \in \mathcal{M}(\mathcal{T}, W, \theta)) \\
+&\supseteq \bigcup (C^- : C \in \mathcal{L}_1) \cup \bigcup (C^- : C \in \mathcal{L}_2) = G^-
+\end{align*}
+the inclusion holding since if $C \in \mathcal{L}_2$ then $C^- \subseteq A^*$ for some $(A^*, B^*) \in \mathcal{M}(\mathcal{T}, W, \theta)$. This proves (1).
+
+\hspace*{12pt}(2) \textit{$\mathcal{L}'$ $\theta^2$-isolates $\mathcal{T}$.}
+
+\textit{Subproof:} Now $\mathcal{L}'^- \subseteq \mathcal{T}$ and its members have order $< \theta^2$. Let $\mathcal{T}'$ be a tangle of order $\ge \theta^2$, let $(A', B') \in \mathcal{L}'^-$ with $(B', A') \in \mathcal{T}'$, and let $(A, B)$ be the $(\mathcal{T}, \mathcal{T}')$-distinction. Suppose first that $(A', B') \in \mathcal{L}_1^-$. Then since $\mathcal{L}$ is $W$-suitable, either $A \subseteq A'$ and $B' \subseteq B$ or $A \subseteq A^*$ and $B^* \subseteq B$ for some $(A^*, B^*) \in \mathcal{M}(\mathcal{T}, W, \theta)$. The first is the desired conclusion, and we assume the second. Then $(B^*, A^*) \in \mathcal{T}'$ since $A \subseteq A^*$ and $(B, A) \in \mathcal{T}'$ and $\mathcal{T}'$ has order $\ge \theta^2$ and $(B^*, A^*)$ has order $< \theta \le \theta^2$. Since $(A', B') \notin \mathcal{L}_2^-$, it follows as in the proof of (1) that $A' \subseteq B^*$, and so $B^* \cup B' = G^-$, a contradiction to the second tangle axiom since $(B', A'), (B^*, A^*) \in \mathcal{T}'$. We may assume then that $(A', B') \notin \mathcal{L}_1^-$; and so $(A', B') \in \mathcal{M}(\mathcal{T}, W, \theta)$, and therefore $(A', B')$ has order $< \theta$. Since $(B', A') \in \mathcal{T}'$ it follows that $(A, B)$ has order at most that of $(A', B')$ and hence $< \theta$. From 5.1, either $A \subseteq A'$ and $B' \subseteq B$, or $A \subseteq B'$ and $A' \subseteq B$. The first is the desired conclusion and the second is impossible since $(B', A'), (B, A) \in \mathcal{T}'$. This proves (2).
+
+Now $|\bar{\pi}(f(A, B))| < \theta$ for each $(A, B) \in \mathcal{M}(\mathcal{T}, W, \theta)$, and the heart of $(P, \mathcal{L})$ in $\mathcal{F}$ is active (since $\mathcal{L}$ is fine) and hence belongs to $\mathcal{F}_1$. Consequently, $(P, \mathcal{L}')$ has heart in $\mathcal{F}_2$. This proves 5.5. $\square$

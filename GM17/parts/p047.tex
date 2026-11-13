@@ -1,0 +1,32 @@
+\origpage{208}{ROBERTSON AND SEYMOUR}
+\textit{Proof.} We verify the three tangle axioms. For the first, let $(A', B')$ be a separation of $G^*$ of order $< \theta^*$. Then there is a separation $(A, B)$ of $G$ with $V(A) = V(A')$ and $V(B) = V(B')$, and one of $(A, B), (B, A) \in \mathscr{T}$. Hence one of $(A', B')$, $(B', A') \in \mathscr{T}^*$, as required.
+
+The third axiom clearly holds, and it remains to verify the second. If $\theta^* = 1$ the result is easy, and we assume $\theta^* \ge 2$, and hence $\theta \ge 2$. We use the following two observations.
+
+\hspace*{12pt}(1) \textit{If $(A'_1, B'_1), (A'_2, B'_2) \in \mathscr{T}^*$ then $B'_1 \not\subseteq A'_2$.}
+
+\textit{Subproof.} Choose $(A_i, B_i) \in \mathscr{T}$ with $V(A_i) = V(A'_i), V(B_i) = V(B'_i)$ ($i = 1, 2$). If $B'_1 \subseteq A'_2$ then $V(B_1) \subseteq V(A_2)$, and so $(B_2, A_2) \in \mathscr{T}$ by [1, Theorem (2.9)], a contradiction.
+
+\hspace*{12pt}(2) \textit{There do not exist subhypergraphs $A'_1$, $A'_2$, $A'_3$ of $G^*$, mutually edge-disjoint, with $A'_1 \cup A'_2 \cup A'_3 = G^*$, and with $(A'_1, A'_2 \cup A'_3)$, $(A'_2, A'_3 \cup A'_1)$, $(A'_3, A'_1 \cup A'_2)$ all in $\mathscr{T}^*$.}
+
+\textit{Subproof.} Suppose that such $A'_1, A'_2, A'_3$ exists. Let
+\begin{align*}
+V(A'_1 \cap A'_2 \cap A'_3) &= W_0 \\
+V(A'_2 \cap A'_3) - V(A'_1) &= W_1 \\
+V(A'_3 \cap A'_1) - V(A'_2) &= W_2 \\
+V(A'_1 \cap A'_2) - V(A'_3) &= W_3.
+\end{align*}
+Then $W_0, W_1, W_2, W_3$ are mutually disjoint, and
+\begin{align*}
+V(A'_1 \cap (A'_2 \cup A'_3)) &= W_0 \cup W_2 \cup W_3 \\
+V(A'_2 \cap (A'_3 \cup A'_1)) &= W_0 \cup W_3 \cup W_1 \\
+V(A'_3 \cap (A'_1 \cup A'_2)) &= W_0 \cup W_1 \cup W_2.
+\end{align*}
+Hence $|W_0| + |W_2| + |W_3| \le \theta^* - 1$, and summing this and two similar inequalities, we obtain
+\begin{equation*}
+3|W_0| + 2(|W_1| + |W_2| + |W_3|) \le 3\theta^* - 3.
+\end{equation*}
+Consequently,
+\begin{equation*}
+|W_0| + |W_1| + |W_2| + |W_3| \le \frac{1}{2}(3\theta^* - 3) < \theta.
+\end{equation*}

@@ -1,0 +1,35 @@
+\origpage{86}{ROBERTSON AND SEYMOUR}
+\hspace*{12pt}(4) If there is no such vertex $v$, we set $X = X_i$ and stop. We claim that $X$ has the desired properties for the output. For certainly (i) and (iii) hold; suppose that $N(X)$ is null. Then $X_i = V(H)$ and so $i = |V(H)|$. But $X_i$ meets at most $|N(X_i)| + k(i-1)$ edges, and $N(X_i) = \emptyset$, and so
+\begin{equation*}
+|E(H)| \le k(|V(H)| - 1),
+\end{equation*}
+contrary to our choice of $H$. Thus $N(X)$ is non-null, as required.
+
+There are at most $v(G)$ iterations of the recursion, and each takes time $O(\varepsilon)$. Thus the total running time is $O(v\varepsilon)$. $\square$
+
+We use (6.3) for the following, which is related to (5.5) and to a theorem of Mader [11]. Let $p \ge 1$ be an integer.
+
+\stmt
+(6.4) \textsc{Algorithm}.
+
+\textit{Input:} A non-null simple graph $G$ with $|E(G)| \ge 2^{p-3} |V(G)|$.
+
+\textit{Output:} A model of $K_p$ in $G$.
+
+\textit{Running time:} $O(v^2)$.
+
+\textit{Description:} We may assume that $p \ge 3$, for otherwise the problem is trivial.
+
+\hspace*{12pt}(1) Choose a subgraph $H \subseteq G$ with $V(H) = V(G)$ and $|E(H)| = 2^{p-3} |V(H)|$.
+
+\hspace*{12pt}(2) We perform a recursion. Let $Y_1 = V(H)$. At the start of the $i$ th iteration we have $i-1$ disjoint connected subgraphs $G_1, \dots, G_{i-1} \subseteq H$ and a non-null subset $Y_i \subseteq V(H) - V(G_1 \cup \dots \cup G_{i-1})$ such that
+
+\hspace*{12pt}(i) there are at least $2^{p-2-i} |Y_i|$ edges of $H$ with both ends in $Y_i$,
+
+\hspace*{12pt}(ii) every vertex in $Y_i$ has a neighbour in each of $V(G_1), \dots, V(G_{i-1})$,
+
+and (iii) for $1 \le j < j' \le i-1$, each vertex of $V(G_{j'})$ has a neighbour in $V(G_j)$. The $i$ th iteration proceeds as follows.
+
+\hspace*{12pt}(3) We apply (6.3) to the restriction of $H$ to $Y_i$, taking $k = 2^{p-2-i}$. We obtain $X \subseteq Y_i$ such that the restriction of $H$ to $X$ is non-null and connected, $N(X) \cap Y_i$ is non-null, and every vertex of $N(X) \cap Y_i$ has at least $2^{p-2-i}$ neighbours in $N(X) \cap Y_i$. We set $G_i$ to be the restriction of $H$ to $X$, and $Y_{i+1} = N(X) \cap Y_i$. If $i = p-2$ the recursion terminates, and otherwise we return for the next iteration.
+
+\hspace*{12pt}(4) Let $G_{p-1}, G_p$ be one-vertex graphs with $V(G_{p-1}) = \{u\}$, $V(G_p) = \{v\}$, for some adjacent $u, v \in Y_{p-1}$. (These exist since $Y_{p-1} \ne \emptyset$ and every

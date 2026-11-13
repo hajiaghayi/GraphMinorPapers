@@ -1,0 +1,29 @@
+\origpage{257}{GRAPH MINORS. XII}
+Since $V(\Gamma_1)$, $E(\Gamma_1)$ are finite, there is a finite subset $I_0 \subseteq I$ such that
+\begin{equation*}
+\Gamma_1 \cap \Delta = \bigcup_{i \in I_0} (\Gamma_1 \cap \Delta_i) \cup (\Gamma_1 \cap F \cap \Sigma_1 \cap \Sigma_2).
+\end{equation*}
+Let $I_0 = \{1, \dots, k\}$, say. Let $(A, B) = (\Gamma_1 \cap \Delta, \Gamma_1 \cap \overline{\Sigma - \Delta})$. We wish to show that $(A, B) \in \mathscr{T}_1$. For let
+\begin{align*}
+(A_0, B_0) &= (\Gamma_1 \cap F \cap \Sigma_1 \cap \Sigma_2, \Gamma_1) \\
+(A_i, B_i) &= (\Gamma_1 \cap \Delta_i, \Gamma_1 \cap \overline{\Sigma_1 - \Delta_i}) \quad (1 \le i \le k).
+\end{align*}
+Then for $0 \le i \le k$, $(A_i, B_i) \in \mathscr{T}$ and
+\begin{equation*}
+V(A_i \cap B_i) \subseteq F \cap V(\Gamma_1) \subseteq V(A \cap B).
+\end{equation*}
+Also, $A = A_0 \cup A_1 \cup \dots \cup A_k$. By [5, Theorem (6.2)], $(B, A) \notin \mathscr{T}_1$. Since $(A, B)$ has order $|F \cap V(\Gamma)| < \theta$ it follows that $(A, B) \in \mathscr{T}_1$. We deduce, from the definition of $\mathscr{T}$, that
+\begin{equation*}
+(\Gamma \cap \Delta, \Gamma \cap \overline{\Sigma - \Delta}) \in \mathscr{T},
+\end{equation*}
+as required. $\square$
+
+We see that (5.2) follows \del{immediately} from (5.3),\fixnote{fix:5.2-proof}{The deduction is not immediate. To apply (5.3) one needs its condition (iii), that every continuous $\phi \colon S^1 \to \Sigma_2$ of length $< \theta$ with $|\phi|$ $\Gamma$-normal is null-homotopic in $\Sigma_2$, and this does not follow at once from the hypotheses of (5.2). For $\theta = 1$ it is false: in the example in the note to (5.2), the core circle of the M\"obius band $\Sigma_2$ misses $\Gamma$, so it has length 0, and it is not null-homotopic in $\Sigma_2$. For $\theta \ge 2$, (iii) holds. Let $P$ be one of the $\theta$ paths of $\Gamma \cap \Sigma_2$. The ends of the paths are opposite pairs, so each other path has one end on each of the two arcs of $\Sigma_1 \cap \Sigma_2$ between the ends of $P$. Such a path joins the two arcs and misses $P$, so cutting $\Sigma_2$ along $P$ leaves it connected, and a M\"obius band cut along a path that leaves it connected is a closed disc. So $\Sigma_2 - U(P)$ is simply-connected. Now if $|\phi|$ met all $\theta$ paths, then, since the paths are disjoint, $\phi$ would have length at least $\theta$. So $|\phi|$ misses one of the paths, say $P$, and $\phi$ is null-homotopic in $\Sigma_2 - U(P)$, and so in $\Sigma_2$. Hence (5.3) gives (5.2) for $\theta \ge 2$.} and (5.3) also implies (5.1) because by [4, Theorem (12.2)], every subset of a free set is free.
+
+\sectionhead{6. \textsc{Filling} \textsc{In} A \textsc{Disc}}
+
+The problem of this section is somewhat similar to that of the last. Let $\Gamma$ be a 2-cell drawing in a connected surface $\Sigma$, and let $F$ be a $\Gamma$-normal $O$-arc bounding a closed disc $\Delta \subseteq \Sigma$. Let $|F \cap V(\Gamma)| = \theta \ge 2$, where $\theta$ is even, and let
+\begin{equation*}
+F \cap V(\Gamma) = \{v_1, v_2, \dots, v_\theta\}
+\end{equation*}
+numbered in order on $F$. Let the components of $\Gamma \cap \Delta$ be $P_1, P_2, \dots, P_{\theta/2}$, where for $1 \le i \le \theta/2$ $P_i$ is a path with ends $v_i, v_{\theta+1-i}$. Let $e_i$ be an edge of $P_i$ ($1 \le i \le \theta/2$). Let $\Sigma_1 = \overline{\Sigma - \Delta}$, let $\Gamma_1 = \Gamma \cap \Sigma_1$ be 2-cell (in $\Sigma$), and let $\mathscr{T}_1$ be a tangle in $\Gamma_1$ of order $\theta_1 > \theta$, respectful towards $\Sigma$. Let $\mathscr{T}$ be the tangle in $\Gamma$ induced by $\mathscr{T}_1$; then $\mathscr{T}$ is clearly respectful towards $\Sigma$. Let $d$ be the metric derived from $\mathscr{T}$. Finally, let $F \cap V(\Gamma_1)$ be free with respect to $\mathscr{T}_1$.

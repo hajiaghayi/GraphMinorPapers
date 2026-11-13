@@ -1,0 +1,34 @@
+\origpage{92}{ROBERTSON AND SEYMOUR}
+\noindent values of $i$ such that $P_i \cap Q_j$ is null for all $j$ with $1 \le j \le k - 1$. For $1 \le i \le l$, let $u_i, v_k$ be the ends of $P_i$, and for $1 \le j \le k - 1$ let $s_j, t_j$ be the ends of $Q_j$. Now for any $x \in \{s_1, t_1, \dots, s_{k - 1}, t_{k - 1}\}$, $d(u_i, x) < \frac{1}{2}m$ for at most one value of $i$ ($1 \le i \le l$), since $d(u_i, u_{i'}) \ge m$ for $i \ne i'$. Thus there are at least two values of $i$ such that
+
+\hspace*{12pt}(i) $P_i \cap Q_j$ is null for $1 \le j \le k - 1$, and
+
+\hspace*{12pt}(ii) $d(u_i, x) \ge \frac{1}{2}m$ for all $x \in \{s_1, t_1, \dots, s_{k - 1}, t_{k - 1}\}$.
+
+The union of the corresponding two $P_i$'s yields an $H$-path $Q_k$, and $Q_1, \dots, Q_k$ are the desired $H$-paths. This completes the induction.
+
+In particular, the statement holds if $k = \binom{p}{2}$. Let $l = 2\binom{p}{2}^2 - \binom{p}{2} + 3$, choose $r$ as in (7.4) and let $m = 2r$. Then $l, m$ satisfy the theorem, by (7.4). $\square$
+
+\stmt
+(7.6) \textit{Let $H$ be a wall in a graph $G$. Suppose there are $k$ $(l, m + 4k)$-stars in $G$ over $H$ with distinct centers $v_1, \dots, v_k$, where $m \ge 3$. Then there is a wall $H' \subseteq H$ with $k$ external $(l, m)$-stars over $H'$, with centers $v_1, \dots, v_k$.}
+
+\textit{Proof.} Let $v_1, \dots, v_k \in V(G)$ be distinct, and each the center of an $(l, m + 4k)$-star over $H$. Let $H_0 = H$. By $k$ applications of (7.3), with $r = 0$ and setting $v = v_1, \dots, v_k$ in turn, we deduce that there are walls $H_1, \dots, H_k$ \fix{(this is possible, since $H$ has height $h \ge 2k + 2$: two ends of legs of a star over $H$ have distance $\ge m + 4k \ge 4k + 3$, and any two vertices of a wall of height $h$ have distance $\le 2h + 2$)}\fixnote{fix:7.6-height}{The proof does not check the height. Each application of (7.3) with $r = 0$ needs height $\ge 4$ and lowers the height by 2, so the $k$ applications need $h \ge 2k + 2$. The inserted reason shows that this follows from the hypotheses.} such that for $1 \le i \le k$
+
+\hspace*{12pt}(i) $H_i$ is a subgraph of $H_{i - 1}$, and $v_i \notin V(H_i)$
+
+\hspace*{12pt}(ii) $d_i \ge d_{i - 1} - 4$, where $d_0, \dots, d_k$ are the corresponding distance functions.
+
+\hspace*{12pt}(1) \textit{If $v \in V(G)$ is the center of an $(l, m + 4(k - i + 1))$-star over $H_{i - 1}$, then $v$ is the center of an $(l, m + 4(k - i))$-star over $H_i$, for $1 \le i \le k$.}
+
+\textit{Subproof.} Let $P_1 \cup \dots \cup P_l$ be an $(l, m + 4(k - i + 1))$-star over $H_{i - 1}$, with center $v$. For $1 \le j \le l$, let $P_j$ have ends $v, u_j$; and let $Q_j$ be a minimal path of $H_{i - 1}$ between $u_j$ and $V(H_i)$, with ends $u_j, w_j$ say. Now for distinct $j, j'$,
+\begin{equation*}
+d_i(u_j, u_{j'}) \ge d_{i - 1}(u_j, u_{j'}) - 4 \ge m + 4(k - i + 1) - 4 = m + 4(k - i) \ge 3.
+\end{equation*}
+\fix{Moreover $d_i(w_j, w_{j'}) \ge d_i(u_j, u_{j'})$, since a curve from $w_j$ to $w_{j'}$ can be extended along the drawings of $Q_j$ and $Q_{j'}$, which meet the drawing of $H_i$ only in $w_j$ and $w_{j'}$.}\fixnote{fix:7.6-claim1-dist}{The ends of the legs of the new star are $w_j$ and $w_{j'}$, not $u_j$ and $u_{j'}$, so the bound on $d_i(u_j, u_{j'})$ is not enough by itself. The inserted sentence gives the missing step.}
+Consequently, $u_j$ and $u_{j'}$ do not belong to the closure of the same region of $H_i$, and hence $Q_j$ and $Q_{j'}$ are vertex-disjoint. \fix{If $v \in V(Q_j)$, replace $P_j \cup Q_j$ below by the subpath of $Q_j$ between $v$ and $w_j$.}\fixnote{fix:7.6-claim1-center}{The stars of (7.6) need not be external, so the center $v$ may be a vertex of $H_{i-1}$, and then it may lie on $Q_j$ (for instance, $v = v_i$). Then $P_j \cup Q_j$ is not a path. The inserted sentence deals with this case.} It follows that
+\begin{equation*}
+(P_1 \cup Q_1) \cup (P_2 \cup Q_2) \cup \dots \cup (P_l \cup Q_l)
+\end{equation*}
+is an $(l, m + 4(k - i))$-star over $H_i$, as required.
+
+From \del{(1)}\fix{the proof of (1), used once with $H_0, H_k$ in place of $H_{i-1}, H_i$ and with $d_k \ge d_0 - 4k$ (by (ii)) in place of $d_i \ge d_{i-1} - 4$}, we deduce that $v_1, \dots, v_k$ are all centers of $(l, m)$-stars over $H_k$;\fixnote{fix:7.6-claim1-use}{Claim (1) is applied at each step $i$ to all of $v_1, \dots, v_k$, but $v_{i+1}, \dots, v_k$ may be vertices of $H_i$. If such a center $v$ lies on $Q_j$, then $v = w_j$, since $w_j$ is the only vertex of $Q_j$ in $H_i$. Then $P_j \cup Q_j$ is a circuit, and the sentence added to the proof of (1) for this case gives a leg with only one vertex. Used once, from $H_0$ to $H_k$, the proof of (1) works, because no center is in $V(H_k)$, so every new leg ends at a vertex other than its center. With these corrections, (7.6) holds as printed.} and these stars are all external since $v_1, \dots, v_k \notin V(H_k)$. The result follows. $\square$

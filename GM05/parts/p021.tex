@@ -1,0 +1,31 @@
+\origpage{112}{ROBERTSON AND SEYMOUR}
+Now $A$ is connected, since it is an $H_j$-expansion and $H_j$ is connected, and so $T(A)$ is the vertex set of a subtree of $T$. There do not exist
+\begin{align*}
+A_{11}, \dots, A_{1k} &\in \mathcal{A}_1 \\
+\vdots \qquad &\quad \vdots \\
+A_{m1}, \dots, A_{mk} &\in \mathcal{A}_m
+\end{align*}
+such that $T(A_{11}), \dots, T(A_{1k}), \dots, T(A_{mk})$ are pairwise vertex-disjoint, since otherwise the subgraphs $A_{11}, \dots, A_{1k}, \dots, A_{mk}$ would also be pairwise vertex-disjoint, yielding $k$ disjoint $H$-expansions in $G$, a contradiction. Thus by (8.6) and (8.7) there exists $Y \subseteq V(T)$ with $|Y| < mk$ such that for some $j (1 \le j \le m)$, $Y$ meets $T(A)$ for every $A \in \mathcal{A}_j$. Let $X = \bigcup (X_t : t \in Y)$. Then $X \cap V(A) \ne \emptyset$ for every $H$-expansion $A$ in $G$, and
+\begin{equation*}
+|X| \le (mk - 1)(w + 1) = k'
+\end{equation*}
+as required.
+
+We turn now to the converse of (8.8), to complete the proof of (8.2). A \textit{surface} is a compact 2-manifold. If $\Sigma$ is a connected orientable surface, we define its genus $g(\Sigma)$ as usual---that is, intuitively, the number of handles we must add to a sphere to construct $\Sigma$. We wish to extend this definition to disconnected orientable surfaces. Let $\Sigma$ be an orientable surface, with components $\Sigma_1, \dots, \Sigma_k$, numbered so that $g(\Sigma_1) \ge \cdots \ge g(\Sigma_k)$. We define $g(\Sigma)$ to be the sequence $g(\Sigma_1), \dots, g(\Sigma_k)$.
+
+We order surfaces by genus lexicographically; that is, if $\Sigma, \Sigma'$ are orientable surfaces with
+\begin{align*}
+g(\Sigma) &= g_1, \dots, g_k \\
+g(\Sigma') &= h_1, \dots, h_l,
+\end{align*}
+we say $g(\Sigma) < g(\Sigma')$ if there exists $j$ with $1 \le j \le \min(k, l)$, such that $g_j < h_j$ and $g_i = h_i$ ($1 \le i < j$). We assume the following three facts.
+
+\stmt
+(8.9) \textit{There is no infinite sequence $\Sigma_1, \Sigma_2, \dots$ of orientable surfaces with $g(\Sigma_{i+1}) < g(\Sigma_i)$ ($i = 1, 2, \dots$).}
+
+\stmt
+(8.10) \textit{Let $\Sigma$ be an orientable surface, and let $C \subseteq \Sigma$ be homeomorphic to a circle. Then one of the following holds:}
+
+\hspace*{12pt}(i) \textit{there is a closed disc $\Delta \subseteq \Sigma$ with $C = \text{bd } \Delta$;}
+
+\hspace*{12pt}(ii) \textit{there is an orientable surface $\Sigma'$ with $g(\Sigma') < g(\Sigma)$, and disjoint closed discs $\Delta_1, \Delta_2 \subseteq \Sigma'$, such that $\Sigma' - (\Delta_1 \cup \Delta_2) = \Sigma - C$.}

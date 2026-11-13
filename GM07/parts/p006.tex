@@ -1,0 +1,32 @@
+\origpage{217}{GRAPH MINORS. VII}
+\noindent \textit{$\Sigma(0, 1, 0)$. Let $J$ be the seam graph for some minimal net with respect to some proper graph $G$ in $\Sigma$. Then no vertex of $J$ has valency $\le 2$.}
+
+\textit{Proof.} Certainly $J$ has no isolated vertices. If $v$ is a vertex of valency $1$, let $J'$ be the graph obtained from $J$ by deleting $v$. Then since $\Sigma \not\cong \Sigma(0, 0, 0)$, $J'$ is the seam graph for a net which contradicts the minimality of our original net. Now suppose $v$ has valency $2$. No loop of $J$ is incident with $v$ since $\Sigma \not\cong \Sigma(0, 0, 1)$, $\Sigma(0, 1, 0)$; and so $(U(J), V(J) - \{v\})$ is a graph which again is a seam graph for a smaller net. This completes the proof.
+
+We deduce from (2.3) and (2.2) that
+
+\stmt
+(2.4) \textit{If $\Sigma \cong \Sigma(a, b, c)$ where $2a + b + c > 1$, and $J$ is the seam graph for some minimal net for $\Sigma$ (with respect to some $G$), then $|V(J)| \le 2(2a + b + c - 1)$ and $|E(J)| \le 3(2a + b + c - 1)$.}
+
+Let $(\Delta, \Pi)$ be a net for $\Sigma$. Let $J$ be the associated seam graph, and let $\phi \colon \Delta \to \Sigma$ be the associated surjection. Let $s, t \in bd(\Delta)$ be distinct, and let $C_1, C_2$ be the two components of $bd(\Delta) - \{s, t\}$. Let
+\begin{equation*}
+J' = (U(J), V(J) \cup \{\phi(s), \phi(t)\}).
+\end{equation*}
+The edges of $J'$ are of four types:
+
+\hspace*{12pt}(i) edges $e$ with $e \subseteq bd(\Sigma)$,
+
+\hspace*{12pt}(ii) edges $e$ such that for all $z \in e$, $\phi^{-1}(z) \cap C_i \ne \emptyset$ $(i = 1, 2)$,
+
+\hspace*{12pt}(iii) edges $e$ such that $e \cap bd(\Sigma) = \emptyset$ and for all $z \in e$, $\phi^{-1}(z) \subseteq C_1$,
+
+and
+
+\hspace*{12pt}(iv) edges $e$ such that $e \cap bd(\Sigma) = \emptyset$ and for all $z \in e$, $\phi^{-1}(z) \subseteq C_2$.
+
+(This follows easily from the definition of a net.)
+
+\stmt
+(2.5) \textit{There is a path of $J'$ between $\phi(s)$ and $\phi(t)$ with no edges of type (iii) or (iv).}
+
+\textit{Proof.} The image of $\bar{C}_1$ under $\phi$ yields a sequence $\phi(s) = v_0, e_1, v_1, e_2, \dots, e_k, v_k = \phi(t)$ of vertices and edges of $J'$, such that for $1 \le i \le k$, $e_i$ has ends $v_{i-1}$ and $v_i$. Each edge of $J'$ of type (iii) occurs twice in this sequence, while those of type (iv) do not occur. Let $J''$ be the subgraph of $J'$ consisting of those edges which occur exactly once in the sequence, with $V(J'') = V(J')$. By counting we find that every vertex of $J''$ distinct from $\phi(s)$ and $\phi(t)$ has even valency in $J''$, while if $\phi(s) \ne \phi(t)$ they both have odd valency. It follows that $\phi(s), \phi(t)$ are in the same component of $J''$, and the theorem is true.

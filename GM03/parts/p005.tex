@@ -1,0 +1,28 @@
+\origpage{53}{GRAPH MINORS. III}
+For if not, we may add isolated vertices to $G'$ and to $M'$ to make (iii) true without falsifying (i) or (ii).
+
+We may also assume that
+
+\hspace*{12pt}(iv) \textit{every vertex of $H$ is adjacent to at most one vertex of $C_{d'-1}$.}
+
+For we may replace every edge of $G'$ joining $V(H)$ and $V(C_{d'-1})$ by two edges in series, thereby making (iv) true without falsifying any of (i), (ii), or (iii).
+
+Let $|V(H)| = k$, say. We may also assume that
+
+\hspace*{12pt}(v) \textit{subject to (i)--(iv) and to $|V(H)| = k$, $G'$ is chosen with $|E(H)|$ maximum.}
+
+(This is possible because $G'$ is constrained to be simple and $|V(H)|$ is fixed.)
+
+Let $C_{d'}$ be the subgraph of $H$ consisting of the vertices and edges incident with the infinite region of $N$.
+
+\hspace*{12pt}(1) \textit{$C_{d'}$ is connected.}
+
+For if not, it follows from (S2) applied to $C_{d'-1}$ that there are vertices $v_1$, $v_2$ of $C_{d'}$ in different components of $C_{d'}$, and hence of $H$ but incident with the same region of $M'$. We add an edge joining them. The resulting graph still satisfies (i)--(iv), contrary to (v).
+
+\hspace*{12pt}(2) \textit{$C_{d'}$ is a circuit.}
+
+For $C_{d'}$ has at least three vertices by (iii). If it is not a circuit, it has a vertex $v$ such that $C_{d'} \setminus v$ is disconnected, and hence such that $H \setminus v$ is disconnected. Let $D$ be the vertex set of one component of $C_{d'} \setminus v$, and let
+\begin{equation*}
+D' = V(C_{d'}) - (D \cup \{v\}).
+\end{equation*}
+Let $v_1, e_1, v_2, e_2, \dots, v_k, e_k, v_{k+1}(=v_1)$ be the closed walk in $H$ which is the perimeter of the infinite region of $N$. There exist distinct $i, j$ with $1 \le i, j \le k$, such that $v_i = v_j = v$, and $v_{i-1}, v_{j+1} \in D$, and $v_{i+1}, v_{j-1} \in D'$ (where $v_0$ means $v_k$; similarly, later, $e_{k+1}$ will mean $e_1$, and $e_0$ will mean $e_k$). Now by (iv), there is at most one edge of $G'$ incident with $v$ which is not in $E(H)$; and so without loss of generality we assume that there is a region $R$ of $M'$ for which the path $v_{i-1}, e_{i-1}, v, e_i, v_{i+1}$ forms part of the perimeter, and for which (a) if $d' = 1$, $R$ is the infinite region of $M'$, and (b) if $d' > 1$, $R$ is incident with a vertex in $C_{d'-1}$. We add a new edge $e$ to $G'$ joining $v_{i-1}$ and $v_{i+1}$, and make the corresponding extension of $M'$. $R$ is thus divided into two regions, one incident with $v_{i-1}, e, v_{i+1}$ and (a) being the infinite region if $d' = 1$, and (b) being incident with a vertex of $C_{d'-1}$ if $d' > 1$, and the other a triangle bounded by $v_{i-1}, e_{i-1}, v, e_i, v_{i+1}, e$. We claim that this enlarged graph satisfies (i)--(iv), contrary to (v). Verifying this is straightforward\del{ and is left to the reader}. (The only part which is not quite

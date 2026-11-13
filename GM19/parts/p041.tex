@@ -1,0 +1,22 @@
+\origpage{365}{N. Robertson, P.D. Seymour / Journal of Combinatorial Theory, Series B 90 (2004) 325--385}
+\noindent is a path in $\Gamma^*$ from $y(x)$ to $v$ of length $\le t$, and hence a path of $\Gamma^*$ from $V(H_x)$ to $bd(W_x) \cap V(\Gamma)$ of length $\le t+1$, contradicting that $W_x$ has radius $2t$. Hence $ins(C_x) \subseteq W_x \setminus bd(W_x)$. Since $x \in ins(C_x)$ it follows that $x \in W_x \setminus bd(W_x)$. If some neighbour of $x$ is in $bd(W_x)$, then $x \in V(C_x)$ and so $x = y(x)$, and there is a path in $\Gamma^*$ from $V(H_x)$ to $bd(W_x) \cap V(\Gamma)$ of length $\le 2$, contradicting that $W_x$ has radius $2t \ge 6$. This proves (1).
+
+\hspace*{12pt}(2) \textit{For each $x \in X_2$, if $v \in bd(W_x) \cap V(\Gamma^*)$ then $d(x, v) \le 7t + 3$.}
+
+\textbf{Subproof.} There is a path of $\Gamma^*$ from $v$ to $V(H_x)$ with $\le 2t + 1$ edges. Then $d(v, y(x)) \le (2t + 1) + (4t + 2)$ since $\frac{1}{2}|E(H_x)| \le 4t + 2$; and so $d(v, x) \le 7t + 3$ since $d(y(x), x) \le t$. This proves (2).
+
+\hspace*{12pt}(3) \textit{For each component $r$ of $\hat{\Sigma}_\chi \delm{=}\fix{\setminus} \Sigma_\chi$,\fixnote{fix:12.4-claim3}{The components $r$ are those of the part of $\hat{\Sigma}_\chi$ outside $\Sigma_\chi$.} $\bar{r} \subseteq W_{r^*}$ and $\bar{r} \cap bd(W_x) = \emptyset$ for every $x \in X_2$.}
+
+\textbf{Subproof.} By (1), $W_{r^*} \setminus bd(W_{r^*})$ contains $r^*$ and all its neighbours, and so $\bar{r} \subseteq W_{r^*}$. Let $x \in X_2$ and suppose that $\bar{r} \cap bd(W_x) \ne \emptyset$. (Consequently $x \ne r^*$.) Hence $bd(W_x)$ contains a neighbour $v$ of $r^*$; and therefore $v \in V(\Gamma)$. Since $v \in bd(W_x)$, (2) implies that $d(x, v) \le 7t + 3$, and since $d(r^*, v) \le 1$ it follows that $d(x, r^*) \le 7t + 4$, a contradiction since $x \ne r^*$ and $x, r^* \in X_2$. This proves (3).
+
+\hspace*{12pt}(4) \textit{For each $e \in Z$ there exists $x \in X_2$ with $e \subseteq W_x$.}
+
+\textbf{Subproof.} Since $X_2$ satisfies 12.3, there exists $x \in X_2$ with $d(e, x) \le t$. Let $K$ be a closed walk of $\Gamma^*$ of length $\le 2t$ such that $x$ and $e$ both meet $ins(K)$. Suppose first that $U(\Gamma^* | K) \cap ins(C_x) = \emptyset$. Since $x \in ins(C_x)$ and $x \in ins(K)$, there is a circuit $C$ of $\Gamma^* | K$ with $x \in ins(C) \setminus U(C)$; and hence $ins(C_x) \subseteq ins(C) \setminus U(C)$, since $U(K) \cap ins(C_x) = \emptyset$. But $K$ has length $\le 2t$, and so $|E(C)| \le 2t$, contrary to the choice of $C_x$. This proves that $U(\Gamma^* | K) \cap ins(C_x) \ne \emptyset$.
+
+Now suppose that $U(\Gamma^* | K) \cap U(C_x) = \emptyset$. Then $U(\Gamma^* | K) \subseteq ins(C_x) \setminus U(C_x)$, and so
+\begin{equation*}
+e \subseteq ins(K) \subseteq ins(C_x) \subseteq W_x
+\end{equation*}
+by (1), as required. We may therefore assume that $K$ meets $U(C_x)$. Hence $K$ is a subwalk of a closed walk of length $\le 4t$ of which $y(x)$ is a vertex. Since $W_x$ has radius $2t$, this subwalk remains within $W_x$; and so $U(\Gamma^* | K) \subseteq W_x$. Hence $ins(K) \subseteq W_x$, and so $e \in W_x$. This proves (4).
+
+In fact we can prove that the wheels $W_x$ $(x \in X_2)$ are mutually disjoint, but that step can be avoided. Let us choose a subset $\mathscr{W} \subseteq \{W_x : x \in X_2\}$ containing just the maximal wheels. We have seen, by (2), that the sets $bd(W_x)$ $(x \in X_2)$ are mutually disjoint, and consequently that if $W_{x_1} \cap W_{x_2} \ne \emptyset$ then $W_{x_1} \subseteq W_{x_2}$ or $W_{x_2} \subseteq W_{x_1}$, and so the members of $\mathscr{W}$ are mutually disjoint; and the theorem is satisfied. $\square$

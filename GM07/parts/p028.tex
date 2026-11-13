@@ -1,0 +1,53 @@
+\origpage{239}{GRAPH MINORS. VII}
+\noindent normal, and not near-planar in $\Sigma_e$. We must show that $|V(G') \cap X| \ge r$. We may assume that $X \cap bd(\Sigma_e) \subseteq V(G')$ as is easily seen. But then $\phi_e$ is 1-1 on $X$, and $\phi_e(X)$ is solid, connected, and $G$-normal in $\Sigma$. If $\phi_e(X)$ is not near-planar in $\Sigma$, then
+\begin{equation*}
+|X \cap V(G')| = |\phi_e(X) \cap V(G)| \ge \alpha(G) \ge \frac{9}{2}r \ge r,
+\end{equation*}
+as required. We assume then that $\phi_e(X)$ is near-planar in $\Sigma$. If it is planar in $\Sigma$ then it is near-planar in $\Sigma_e$, a contradiction; thus it surrounds some cuff $C$ of $\Sigma$. Hence $\phi_e(X) \subseteq \Delta_{r'}(C)$, where $r' = |V(G) \cap \phi_e(X)| = |V(G') \cap X|$. Now $X$ is not planar in $\Sigma_e + \hat{C}$, and so $e \subseteq \Delta_{r'}(C)$. But $e \notin \Delta_{r-1}$, and so $r' \ge r$, and $|V(G') \cap X| \ge r$, as required.
+
+\stmt
+(7.2) \textit{Let $\Sigma \cong \Sigma(a, b, c)$, where $3a + 3b + c \ge 3$, and let $G$ be a boundary-linked proper graph in $\Sigma$. Let $e$ be an edge of $G$ which is not a loop, such that $\bar{e} \cap bd(\Sigma) = \emptyset$, and there is no null-homotopic $G$-normal $O$-arc $A$ with $|V(G) \cap A| \le 1$ and with $e$ inside $A$. Then $\phi_e^{-1}(G \setminus e)$ is boundary-linked in $\Sigma_e$.}
+
+\textit{Proof.} Put $G' = \phi_e^{-1}(G \setminus e)$. Let $F$ be a $G'$-normal $O$-arc of $\Sigma_e$ which surrounds some cuff $C$ of $\Sigma_e$. We must show that $|V(G') \cap F| \ge |V(G') \cap C|$. We may clearly assume that $F \cap bd(\Sigma') \subseteq V(G')$. If $C = \phi_e^{-1}(\bar{e})$ then $\phi_e(F)$ is a $G$-normal null-homotopic $O$-arc of $\Sigma$, and $e$ is inside it, and so by hypothesis, $|V(G) \cap \phi_e(F)| \ge 2$. But
+\begin{equation*}
+|V(G') \cap F| = |V(G) \cap \phi_e(F)|
+\end{equation*}
+and $|V(G') \cap C| = 2$ and the result is true. We assume then that $\phi_e(C)$ is a cuff of $\Sigma$. But then $\phi_e(F)$ is a $G$-normal $O$-arc of $\Sigma$ surrounding $\phi_e(C)$, and so
+\begin{equation*}
+|V(G) \cap \phi_e(F)| \ge |V(G) \cap \phi_e(C)|
+\end{equation*}
+and again the result is true.
+
+\stmt
+(7.3) \textit{Let $\Sigma \cong \Sigma(a, b, c)$ where $3a + 3b + c \ge 3$. Let $G$ be a proper graph in $\Sigma$, and let $r$ be an integer with $|V(G) \cap C| \le r - 1$ for every cuff $C$ of $\Sigma$, and with $2 \le r \le \frac{2}{9}\alpha(G)$. Then there is an edge $e$ of $G$ which is not a loop, such that $e \notin \Delta_{r-1}$ and $\bar{e} \cap bd(\Sigma) = \emptyset$, and such that there is no $G$-normal null-homotopic $O$-arc $F$ with $|V(G) \cap F| \le 1$ and with $e$ inside $F$.}
+
+\textit{Proof.} We proceed by induction on $|E(G)|$. If there is a $G$-normal null-homotopic $O$-arc $F$ with $|V(G) \cap F| \le 1$ and with some edge inside it, let $G'$ be the graph obtained from $G$ by deleting all vertices and edges inside $F$. It is easy to see that $\alpha(G') = \alpha(G)$, and that if the result is true for $G'$ then it is true for $G$. But it is true for $G'$ by our inductive hypothesis. \fix{We give the details. Let $\Delta$ be the closed disc with boundary $F$ that includes an edge
+inside $F$. Then $|E(G')| < |E(G)|$. Every $G$-normal set is $G'$-normal, since
+$U(G') \subseteq U(G)$ and every vertex of $G$ in $U(G')$ is a vertex of $G'$. Also
+$|V(G') \cap Y| \le |V(G) \cap Y|$ for every $Y \subseteq \Sigma$, since $V(G') \subseteq V(G)$.
+In particular $|V(G') \cap C| \le r - 1$ for every cuff $C$. We need only the inequality
+$\alpha(G) \le \alpha(G')$, so that $r \le \frac{2}{9}\alpha(G')$ and the inductive hypothesis applies
+to $G'$. Let $X'$ be a solid connected $G'$-normal set that is not near-planar, with
+$|X' \cap V(G')| = \alpha(G')$. For each cuff $C$, keep an $O$-arc in $X'$ that is not
+null-homotopic in $\Sigma + \hat{C}$, and keep one that is not null-homotopic in $\Sigma$. They
+exist by (5.1), since $X'$ is not planar in any of these surfaces. Join
+these $O$-arcs by lines in $X'$. This gives a solid connected set $X_0 \subseteq X'$, which is a finite
+union of lines, and so it misses some point $p$ in the inside of $\Delta$. If $F$ contains a vertex of
+$G$ that is not in $X_0$, we choose $p$ near this vertex, so that no point of $X_0$ is projected onto
+it below. Now project from $p$ onto $F$ the points of $X_0$ in $\Delta$, and leave the other points of
+$X_0$ fixed. The image of each kept $O$-arc is a closed curve homotopic to it, and so by (11.2) it
+includes an $O$-arc that is not null-homotopic in the same surface. Joining these $O$-arcs by lines in the image of $X_0$ gives a solid
+connected set $X$, which is not near-planar by (5.1). Let $x \in X \cap U(G)$. If $x$ is the image of a point of
+$X_0$ in $\Delta$, then $x \in F$, and so $x$ is the vertex of $G$ in $F$, since $F$ is $G$-normal. By the
+choice of $p$, then $x \in X_0$. Otherwise $x \in X_0$ and $x$ is not in the inside of $\Delta$. In both cases
+$x \in U(G')$, and so $x$ is a vertex of $G'$, since $X_0$ is $G'$-normal. So $X$ is $G$-normal and
+$X \cap V(G) \subseteq X' \cap V(G')$. Hence $\alpha(G) \le \alpha(G')$.
+
+Now let $e$ be an edge of $G'$ satisfying the theorem for $G'$. Then $e$ is an edge of $G$, it is not
+a loop, and $\bar{e} \cap bd(\Sigma) = \emptyset$. Every set in $\mathscr{A}_{r-1}(C)$ for $G$ is in
+$\mathscr{A}_{r-1}(C)$ for $G'$, by the two facts above, and so $\Delta_{r-1}$ for $G$ is included in
+$\Delta_{r-1}$ for $G'$. Hence $e \notin \Delta_{r-1}$ for $G$. Finally, a $G$-normal null-homotopic
+$O$-arc with at most one vertex of $G$ and with $e$ inside it would be a $G'$-normal $O$-arc with at
+most one vertex of $G'$ and with $e$ inside it, which is impossible. So $e$ satisfies the theorem for
+$G$.\fixnote{fix:7.3-proof-added}{The paper says that both facts are easy to see. The details above
+follow the proof in the formalization.}}

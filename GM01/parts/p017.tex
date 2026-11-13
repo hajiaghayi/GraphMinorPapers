@@ -1,0 +1,46 @@
+\origpage{55}{GRAPH MINORS}
+\noindent rooted minor isomorphic to $Q(\gamma, \delta)$. Define $\nu=\theta^{2\theta}$, and $\mu=2+4\nu+2\delta$. If
+$G$ has no rooted minor isomorphic to $P(\gamma-1, \mu)$, then by hypothesis it has
+path-width $\le p(\gamma-1, \mu)\le q(\gamma, \delta)$, by (3.6)(ii). We assume then that $G$ has a
+rooted minor isomorphic to $P(\gamma-1, \mu)$. Choose $N$ maximum such that $G$ has
+a rooted minor isomorphic to $P(\gamma-1, N)$, and then $N\ge\mu$. Choose an integer
+$T$ maximum so that $2\nu T\le N-2\delta$. Then $T\ge 2$, since $\mu\ge 4\nu+2\delta$. Put
+$n-1=\nu T$; and then
+\begin{equation*}
+N-2\delta-2\nu<2n-2\le N-2\delta
+\end{equation*}
+by the maximality of $T$.
+
+Now $G$ has a rooted minor isomorphic to $P(\gamma-1, N)$; and so, since all
+vertices of this graph have valency ${\le}3$, $G$ has a subgraph $H'$ which is
+isomorphic to a subdivision of $P(\gamma-1, N)$, with a vertex $v$ say
+corresponding to the root of $P(\gamma-1, N)$, and $G$ has a path from $v$ to $\rho(G)$,
+with no vertex except $v$ in common with $H'$. Let $H$ be the subgraph of $G$
+consisting of the vertices and edges in $H'$ together with those in the path.
+
+Now $P(\gamma-1, N)$ is formed by taking a path of $N$ vertices $v_1',..., v_N'$ say,
+and if $\gamma\ge 2$, taking $N$ disjoint copies of $\mathbf{H}_{\gamma-2}$, and joining them to $v_1',..., v_N'$
+appropriately; and then letting $v_1'$ be the root. Let $v_1,..., v_N$ be the vertices of
+$H'$ which correspond to $v_1',..., v_N'$. For $1\le j\le N-1$, let $R_j$ be the set of
+vertices of $H$ which may be joined to $v_N$ by a path of $H$ which avoids $v_j$, and
+put $R_0=V(H)$, $R_N=\varnothing$. For $1\le j<n$, let $S_j=R_{2j-2}-R_{2j}$; and put
+$S_n=R_{2n-2}$. Then $S_1,..., S_n$ are disjoint, and have union $V(H)$. For
+$1\le j\le n$, let $B_j$ be $H\,|\,S_j$. Then each $B_j$ is a connected subgraph of $G$, and
+$B_1,..., B_n$ are disjoint.
+\stmt
+(4.1). \textit{For $1\le j\le n$, $S_j$ separates $\bigcup_{1\le j'\le j}S_{j'}$ from $\bigcup_{j\le j'\le n}S_{j'}$ in $G$.}
+\stmt
+For suppose not; then there is a path of $G$ from $S_{j_1}$ to $S_{j_2}$ say, where
+$1\le j_1<j<j_2\le n$, with no interior vertices in $H$. Thus there is a path $P$ of
+$G$ from $S_{j_1}$ to $S_n$, avoiding $S_1\cup\cdots\cup S_{j_1-1}\cup S_{j_1+1}$. But then $G$ has a
+rooted minor isomorphic to $Q(\gamma, \delta)$, as can be seen by deleting all vertices
+and edges of $G$ except those in $H$ and $P$, deleting all the vertices of
+$S_{j_1+2}\cup\cdots\cup S_{n-1}$ except those in $P$, and contracting all edges in $B_1,..., B_{j_1}$
+and $P$ (note that $B_n$ has a minor isomorphic to $P(\gamma-1, 2\delta)$ since
+$N-2n+2\ge 2\delta$).
+\stmt
+(4.2). \textit{For $\nu\le j\le n$, there exists $X_j\subseteq V(G)$ with $|X_j|<\frac12\theta^2$, separating
+$\bigcup_{1\le j'\le j-\nu+1}S_{j'}$ and $\bigcup_{j\le j'\le n}S_{j'}$.}
+\stmt
+Suppose not. Then by Menger's theorem there are $\frac12\theta^2$ disjoint paths of $G$
+from $\bigcup_{1\le j'\le j-\nu+1}S_{j'}$ to $\bigcup_{j\le j'\le n}S_{j'}$, and yet these two sets are separated

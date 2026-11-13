@@ -1,0 +1,21 @@
+\origpage{87}{GRAPH MINORS. XI}
+\noindent might hope that no three little sets can have union $R(\Gamma)$; but that is false. For example, let $\Gamma$ be a $2\theta$-representative cubic drawing in a torus, such that each region is bounded by a circuit of length $< 2\theta$ and $\Gamma$ is 3-face-colourable. Let $\text{ins}$ be the (unique) slope in $\Gamma$ of order $\theta$. Since $\Gamma$ is 3-face-colourable there is a partition $(Z_1, Z_2, Z_3)$ of $R(\Gamma)$ such that for $1 \le i \le 3$, no two regions in $Z_i$ have a common edge. Since $\Gamma$ is cubic it follows that no two regions in $Z_i$ have a common vertex, and so $N(Z_i)$ is confined. Hence each $Z_i$ is little, and yet $Z_1 \cup Z_2 \cup Z_3 = R(\Gamma)$.
+
+\sectionhead{6. \textsc{Tangles} \textsc{And} \textsc{Slopes}}
+
+Now we shall prove (4.1). To do so, we need to clarify the connection between tangles and slopes. Let us say a pretangle of order $\theta \ge 1$ in a hypergraph $G$ is a set $\mathscr{T}$ of separations of $G$, all of order $< \theta$, satisfying the first and second tangle axioms. The definition of ``respectful'' for pretangles is the same as for tangles.
+
+Let $\Gamma$ be a 2-cell painting or drawing in a connected surface $\Sigma$, and let $\Gamma'$ be a radial drawing of $\Gamma$. Let $\mathscr{T}$ be a respectful pretangle in $\Gamma$ of order $\theta$. For each circuit $C$ of $\Gamma'$ of length $< 2\theta$, $U(C)$ is a $\Gamma$-normal $O$-arc with $|U(C) \cap V(\Gamma)| < \theta$, and so there is a (unique) closed disc $\Delta \subseteq \Sigma$ with $\text{bd}(\Delta) = U(C)$ and with
+\begin{equation*}
+(\Gamma \cap \Delta, \Gamma \cap \overline{\Sigma - \Delta}) \in \mathscr{T}.
+\end{equation*}
+We define $\text{ins}(C) = \Delta$. Then $\text{ins}$ is a slope in $\Gamma'$ of order $\theta$, as is easily seen. We call it the slope derived from $\mathscr{T}$.
+
+Conversely, we have the following.
+
+\stmt
+(6.1) \textit{Let $\Gamma$ be a 2-cell painting or drawing in a connected surface $\Sigma$, with $E(\Gamma) \ne \emptyset$, and let $\Gamma'$ be a radial drawing of $\Gamma$. For $A \subseteq \Gamma$, let $Z(A)$ denote the set of regions of $\Gamma'$ which include an edge of $A$. Let $\theta \ge 1$ be an integer, let $\text{ins}$ be a slope in $\Gamma'$ of order $\theta$, and let $\mathscr{T}$ be the set of all separations $(A, B)$ of $\Gamma$ of order $< \theta$ such that $Z(A)$ is small with respect to the weighting $(V(\Gamma), \theta)$ of $\Gamma'$. Then $\mathscr{T}$ is a respectful pretangle in $\Gamma$ and $\text{ins}$ is the slope derived from it.}
+
+\textit{Proof.} First, let us verify that $\mathscr{T}$ satisfies the first two tangle axioms.
+
+Let $(A, B)$ be a separation of $\Gamma$ of order $< \theta$. Now $Z(A) = R(\Gamma') - Z(B)$ (for every region of $\Gamma'$ includes a unique edge of $\Gamma$, since $E(\Gamma) \ne \emptyset$), and so $N(Z(A)) = N(Z(B))$. Thus $V(N(Z(A))) \cap V(\Gamma) \subseteq V(A \cap B)$ and so $|V(N(Z(A))) \cap V(\Gamma)| < \theta$, and therefore $N(Z(A))$ is confined. By (5.2), exactly one of $Z(A), Z(B)$ is small, and the first tangle axiom is satisfied. The second follows from (5.5). Thus $\mathscr{T}$ is a pretangle of order $\theta$.

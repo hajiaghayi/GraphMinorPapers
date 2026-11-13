@@ -1,0 +1,40 @@
+\origpage{103}{N. Robertson, P. Seymour / Journal of Combinatorial Theory, Series B 89 (2003) 77--108}
+Then, as in Section 9 of [2], Axioms 1--3 of [2] are satisfied, and so we can apply Theorem 4.1 of [2] (with $T, \tau, \mathscr{R}, F$ replaced by $T, \sigma^+, \mathscr{R}, E(T)$). We deduce that there is a rooted decomposition $(T, \tau)$ of $P$ such that $\tau(t)^- = \sigma(t)$ for each $t \in V(T)$. This proves 6.4. $\square$
+
+We need another lemma about rooted decompositions.
+
+\textbf{6.5.} \textit{Let $(T, \tau)$ be a rooted decomposition of a rootless $\Omega$-patchwork $P = (G, \mu, \Delta, \phi)$.}
+
+\hspace*{12pt}1. \textit{If $f \in E(T)$, then $\tau \times T^f$ is complemented in $G$, and $G \setminus \tau \times T^f = \tau \times T_f$.}
+
+\hspace*{12pt}2. \textit{If $f \in E(T)$ then $\tau \times (T, f)$ is complemented in $G$ and $G \setminus \tau \times (T, f)$ is the rooted hypergraph $H$ with $H^- = (\tau \times T^f)^-$ and $\bar{\pi}(H) = \emptyset$.}
+
+\hspace*{12pt}3. \textit{If $f_0 \in E(T)$ has head $t$ and $f_1, \dots, f_n$ are the edges of $T$ with tail $t$, then}
+\begin{equation*}
+\mathscr{L} = \{\tau \times T^{f_1}, \dots, \tau \times T^{f_n}\}
+\end{equation*}
+\textit{is a rooted location in $\tau \times T^t$ and $\mathscr{L}^* = \mathscr{L} \cup \{\tau \times (T, f_0)\}$ is a rooted location in $G$ and $M(\tau \times T^t, \mathscr{L}) = M(G, \mathscr{L}^*)$.}
+
+\textbf{Proof.} For 6.5.1, we observe that $\bar{\pi}(\tau \times T^f) = V(\tau \times T^f) \cap V(\tau \times T_f)$, from the fourth condition in the definition of a rooted decomposition; and also, that $((\tau \times T^f)^-, (\tau \times T_f)^-)$ is one of the separations made by $f$ under the tree-decomposition $(T^-, \tau^-)$. From these two facts it follows that $\tau \times T^f$ is complemented in $G$, and consequently $\tau \times T_f = G \setminus \tau \times T^f$ since $\tau \times T_f$ and $G$ are both rootless.
+
+For 6.5.2, let $G_0 = \tau \times (T, f)$. Since $((\tau \times T_f)^-, (\tau \times T^f)^-)$ is one of the separations made by $f$ under $(T^-, \tau^-)$, and since $G_0^- = (\tau \times T_f)^-$ and
+\begin{equation*}
+\bar{\pi}(G_0) = V(\tau \times T_f) \cap V(\tau \times T^f)
+\end{equation*}
+it follows that $G_0$ is complemented; and since $G$ and $H$ are rootless and $H^- = (\tau \times T^f)^-$, we deduce that $H = G \setminus G_0$.
+
+For 6.5.3, we observe first that
+
+\hspace*{12pt}(1) \textit{If $f \in E(T)$ has tail $t$ then $\tau \times T^f$ is complemented in $\tau \times T^t$, and}
+\begin{equation*}
+(\tau \times T^t \setminus \tau \times T^f)^- = (\tau \times T_f)^- \cap (\tau \times T^t)^-.
+\end{equation*}
+\textbf{Subproof.} We have
+\begin{equation*}
+\bar{\pi}(\tau \times T^t) = \bar{\pi}(\tau(t)) \subseteq V(\tau \times T_f),
+\end{equation*}
+and by 6.5.1, $G \setminus \tau \times T^f = \tau \times T_f$. Since $\tau \times T^f \subseteq \tau \times T^t$, it follows that $\tau \times T^f$ is complemented in $\tau \times T^t$, and the equation of (1) holds. This proves (1).
+
+\hspace*{12pt}(2) \textit{If distinct $f_1, f_2 \in E(T)$ have a common tail $t$, then $\tau \times T^{f_1} \subseteq \tau \times T^t \setminus \tau \times T^{f_2}$.}
+
+\textbf{Subproof.} $\tau \times T^{f_1}$ and $\tau \times T^{f_2}$ have no edges in common, and any vertex in them both lies in $V(\tau(t))$, from the third condition in the definition of a

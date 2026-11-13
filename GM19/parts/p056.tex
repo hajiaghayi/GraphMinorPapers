@@ -1,0 +1,26 @@
+\origpage{380}{N. Robertson, P.D. Seymour / Journal of Combinatorial Theory, Series B 90 (2004) 325--385}
+\noindent is a subset of $\text{ins}(C_i)$ for some $i$ and hence so is every edge of $G$; and by Theorem 4.3 of [6], for $1 \le i \le k$ every path $P$ of $G$ with distinct ends both in $V(C_i)$ satisfies $U(P) \subseteq \text{ins}(C_i)$. Suppose that $r^* \in \text{ins}(C_i) \setminus U(C_i)$ for some $i$. Then $X \subseteq \text{ins}(C_i)$, and $C_i$ satisfies the second statement of the theorem as required. We assume therefore that there is no such $i$.
+
+Now $r^*$ may belong to some of the $C_i$'s, say to $C_1, \dots, C_b$. Consequently $C_1, \dots, C_b$ pairwise meet in precisely $\{r^*\}$. For $1 \le i \le b$, let $X_i = X \cap \text{ins}(C_i)$, and let $X_0 = X \setminus X_1 \cup \dots \cup X_b$. Suppose that some $x \in X_0$ is not in $V(A \cap B)$. Certainly $x \in V(A)$, and so every edge of $\Gamma$ incident with $x$ is in $E(A)$. Since $\Gamma$ is 2-cell and has an edge, $x$ is incident with at least one edge, and so there exists $e \in E(A)$ incident with $x$. Hence there exists $i$ with $1 \le i \le k$ and $e \in \text{ins}(C_i)$, and so $x \in \text{ins}(C_i)$. Since $x \in X_0$ it follows that $r^* \notin V(C_i)$, and since $x$ is adjacent to $r^*$ in $\Gamma^*$ it follows that $x \in V(C_i)$. Consequently $x \in V(C_i) \cap V(\Gamma) \subseteq V(A \cap B)$, a contradiction. This proves that $X_0 \subseteq V(A \cap B)$.
+
+Consequently,
+\begin{equation*}
+\sum_{1 \le i \le b} \frac{1}{2}|E(C_i)| + |X_0| \le |V(A \cap B)| < |X|
+\end{equation*}
+and so
+\begin{equation*}
+\sum_{1 \le i \le b} \frac{1}{2}|E(C_i)| < |X \setminus X_0| = \sum_{1 \le i \le b} |X_i|.
+\end{equation*}
+Hence there exists $i$ with $1 \le i \le b$ and $\frac{1}{2}|E(C_i)| < |X_i|$, and then $C_i$ satisfies the second statement of the theorem, as required. $\square$
+
+We recall that the function $l(e_1, e_2)$ was defined in the start of Section 11.
+
+15.2. \textit{Let $\chi$ be a colour scheme, and let $(\Gamma_0, \phi_0)$ be a $\chi$-coloured painting. Then there exist $n \ge 0$ with the following property. Let $(\Gamma, \phi)$ be a $\chi$-coloured painting, such that $(\Gamma_0, \phi_0)$ and $(\Gamma, \phi)$ are similarly oriented, and there is no inflation of $(\Gamma_0, \phi_0)$ in $(\Gamma, \phi)$. Let $\mathscr{T}$ be a tangle in $\Gamma$ with metric $d$, with $\text{rep}(\mathscr{T}) > \frac{3}{2}n$. Then either}
+
+\hspace*{12pt}$\bullet$ \textit{$d(r^*_1, r^*_2) \le n$ for two distinct poles $r^*_1, r^*_2$, or}
+
+\hspace*{12pt}$\bullet$ \textit{there is a circuit $F$ of $\Gamma^*$ with $\frac{1}{2}|E(F)| \le n$ such that $\text{ins}(F)$ includes a long side or more than $\frac{1}{2}|E(F)|$ vertices of $\Phi_\chi$, or}
+
+\hspace*{12pt}$\bullet$ \textit{for some long side $S$, let the edges of $\Gamma_0$ bordering $S$ be $f_1, \dots, f_k$, in order; then there do not exist $e_1, \dots, e_k \in E(\Gamma)$, bordering $S$ in order, such that $\phi_0(f_i) \le \phi(e_i)$ ($1 \le i \le k$), $l(e_i, e_j) > \frac{1}{2}n$ ($1 \le i < j \le k$) and $l(e_i, s) > \frac{1}{2}n$ ($1 \le i \le k$) for every short side $s$ in the same cuff as $S$, or}
+
+\hspace*{12pt}$\bullet$ \textit{let $k = |E(\Gamma_0)|$; then for some internal edge $f$ of $\Gamma_0$, there do not exist $e_1, \dots, e_k \in E(\Gamma)$ such that $|\tilde{e}_i| = |\tilde{f}|$ and $\phi_0(f) \le \phi(e_i)$ ($1 \le i \le k$), $d(e_i, e_j) > n$ ($1 \le i < j \le k$) and $d(e_i, r^*) > n$ ($1 \le i \le k$) for every pole $r^*$.}

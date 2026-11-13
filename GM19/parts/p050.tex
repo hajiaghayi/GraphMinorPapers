@@ -1,0 +1,34 @@
+\origpage{374}{N. Robertson, P.D. Seymour / Journal of Combinatorial Theory, Series B 90 (2004) 325--385}
+\textbf{Subproof.} We may assume that $|E(P_{\delm{i}\fix{1}} \cup F_{\delm{i}\fix{1}})| \le 4\rho + 4$, since $|E(F)| \le 4\rho + 4$. Hence $ins(P_{\delm{i}\fix{1}} \cup F_{\delm{i}\fix{1}})$ is the disc in $\Delta_0$ bounded by $U(P_{\delm{i}\fix{1}} \cup F_{\delm{i}\fix{1}})$.\fixnote{fix:13.6-claim13}{The next sentence is about $P_1 \cup F_1$.} Now $\Delta_v \subseteq ins(P_1 \cup F_1) = \Delta$ by (11), and so
+\begin{equation*}
+(\Gamma \cap ins(P_1 \cup F_1), \Gamma \cap out(P_1 \cup F_1)) \in \mathscr{T}',
+\end{equation*}
+and $|E(P_1 \cup F_1)| \ge |E(F)|$ from the properties of $F$. Moreover,
+\begin{equation*}
+(\Gamma \cap ins(P_2 \cup F_2), \Gamma \cap out(P_2 \cup F_2)) \in \mathscr{T}',
+\end{equation*}
+for it does not belong to $\mathscr{T}'$ by the second tangle axiom, since
+\begin{equation*}
+(\Gamma \cap out(F), \Gamma \cap ins(F)), \quad (\Gamma \cap out(D_v), \Gamma \cap ins(D_v)) \in \mathscr{T}'
+\end{equation*}
+and
+\begin{equation*}
+ins(P_2 \cup F_2) \cup out(F) \cup out(D_{v_2}) = \hat{\Sigma}_\chi.
+\end{equation*}
+Again, $|E(P_2 \cup F_2)| \ge |E(F)|$ from the properties of $F$. This proves (13).
+
+\hspace*{12pt}(14) $|E(F_i)| \ge |E(P_i)|$ $(i = 1, 2)$.
+
+\textbf{Subproof.} Let $Q_i$ be the union of $F_i$ with the path of $S_{v_i}$ from $b_i$ to $h_i$. Then $|E(Q_i)| \ge \rho$ by 13.1, and hence $|E(Q_i)| \ge |E(S_{v_i})|$. But $|E(Q_i)| - |E(S_{v_i})|$ is odd, since $\Gamma^*$ is bipartite and $v, v_i$ are adjacent, and so $|E(Q_i)| \ge |E(S_{v_i})| + 1$. Hence $|E(F_i)| \ge |E(P_i)|$. This proves (14).
+
+From (13) and (14), $|E(F_i)| \ge |E(F)| - |E(F_i)|$ $(i = 1, 2)$, and so $|E(F_1)| + |E(F_2)| \ge |E(F)|$. But $|E(F_0)| + |E(F_1)| + |E(F_2)| \le |E(F)|$, and so $E(F_0) = \emptyset$, a contradiction. This completes the proof of 13.6. $\square$
+
+We shall also need the following lemma.
+
+\textbf{13.7.} \textit{With notation as in 13.6, let $S_{v_1}, S_{v_2}$ have the same inner end. Let the vertices of $S_{v_i}$ in $V(\Gamma)$ be $v_i^1, \dots, v_i^k$ in order, where $v_i^1 = v_i$ $(i = 1, 2)$. Then there are $k$ paths $P_1, \dots, P_k$ of $sk(\Gamma)$, mutually vertex-disjoint, such that $P_j$ has ends $v_1^j$ and $v_2^j$ $(1 \le j \le k)$, and such that for $1 \le j \le k$, either}
+
+\hspace*{12pt}$\bullet$ \textit{$v_1^j = v_2^j \in V(S_{v_1} \cap S_{v_2})$ and $V(P_j) = \{v_1^j\}$, or}
+
+\hspace*{12pt}$\bullet$ \textit{$v_1^j, v_2^j \notin V(S_{v_1} \cap S_{v_2})$ and $U(P_j) \subseteq \Delta_v$.}
+
+\textbf{Proof.} Choose $t$ maximum such that $v_1^1, \dots, v_1^t \in \Delta_v$ (and hence $v_2^1, \dots, v_2^t \in \Delta_v$). Let the path $S_{v_1} \cap S_{v_2}$ have ends $u \in \Delta_v$ and $h \in V(H)$. It suffices to show that there are $t$ mutually disjoint paths of $sk(\Gamma \cap \Delta_v)$ between $\{v_1^1, \dots, v_1^t\}$ and $\{v_2^1, \dots, v_2^t\}$. Suppose not; then by a form of Menger's theorem for planar graphs (see [1], for example), there exists a path $Q$ in $\Gamma^*$ with $U(Q) \subseteq \Delta_v$ from $v$ to $u$, such that $|V(Q) \cap V(\Gamma)| < t$. But then $|E(Q)| \le 2t - 1$, with equality only if $u \in V(\Gamma)$. Let $P_1$ be the path of $S_{v_1}$

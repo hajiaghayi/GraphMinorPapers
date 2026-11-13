@@ -1,0 +1,32 @@
+\sectionhead{\textbf{About this copy}}
+
+This is a corrected copy of the paper cited above. The text is retyped from the printed paper.
+It keeps the paper's wording and the numbering of its results, equations and footnotes, and a
+marker such as \origpagemark{$N$} shows where page $N$ of the printed paper begins.
+
+The corrections come from a formalization of the Graph Minors series in the Lean proof
+assistant, \href{https://github.com/mahdi-jfri/GraphMinor}{github.com/mahdi-jfri/GraphMinor},
+in which the results of this paper are proved. Where the formalization found that a statement
+or a step of a proof is wrong as printed, this copy corrects it in place. Where the paper leaves a proof or a step to the reader, this copy adds it, also in blue. Text \del{struck
+through in red} is removed and text \fix{in blue} is inserted. Each change has a note, marked
+\textcolor{fixcolor}{\sffamily F1}, \textcolor{fixcolor}{\sffamily F2}, \dots, that gives the
+reason. The file
+\href{https://github.com/mahdi-jfri/GraphMinor/blob/main/corrections/GM08.md}{corrections/GM08.md}
+of the formalization describes each correction in full. Each note, and each item in the list below, begins with the kind of the change. A \kindname{misprint} is a wrong symbol, index or word. A \kindname{statement} is a result or a claim of the text that is false as printed. A \kindname{degenerate} is a statement that fails only in a trivial case, such as an empty graph or a parameter equal to~$0$. A \kindname{gap} is a step of a proof that does not follow as written. A \kindname{missing} is a proof that the paper omits, leaves to the reader or only sketches, and that this copy adds.
+
+The corrections and added proofs, in the order of the pages:
+\begin{enumerate}\setlength{\itemsep}{1pt}
+\item \kindtag{fix:6.2-proof-added}\hyperref[fix:6.2-proof-added]{Proof of (6.2), page 264}: the omitted proof is added.
+\item \kindtag{fix:8.1-proof-added}\hyperref[fix:8.1-proof-added]{Proof of (8.1), page 268}: the adaptation of the proof of [7, Theorem (4.1)] is added.
+\item \kindtag{fix:9.1-proof}\hyperref[fix:9.1-proof]{Proof of (9.1), page 270}: the claim that $\Gamma_1$ has no $(k,\lceil\frac12 k\rceil)$-nest fails for $k=2$, and the note gives a repair.
+\item \kindtag{fix:11-derived}\hyperref[fix:11-derived]{Section 11, page 272}: $V(\Gamma_0)$ is added to the union that defines $U'$.
+\item \kindtag{fix:11.1}\hyperref[fix:11.1]{Statement of (11.1), page 272}: $(U',V')$ becomes $(U',N')$.
+\item \kindtag{fix:11.1-proof-added}\hyperref[fix:11.1-proof-added]{Proof of (11.1), page 273}: the details of applying the strengthened [7, Theorem (3.8)] to each $O$-arc in turn are added.
+\item \kindtag{fix:11.2-proof-8.4}\hyperref[fix:11.2-proof-8.4]{Proof of (11.2), page 273}: (8.4) is used with the weaker hypothesis that the vertices of $\Xi$ on $F$ are vertices of $\Gamma$.
+\item \kindtag{fix:11.2-proof-viii}\hyperref[fix:11.2-proof-viii]{Proof of (11.2), page 273}: the reference to condition (vii) becomes (viii), with (iv).
+\item \kindtag{fix:11.2-proof-added}\hyperref[fix:11.2-proof-added]{Proof of (11.2), page 273}: the rest of the verification is added.
+\item \kindtag{fix:15.1-proof}\hyperref[fix:15.1-proof]{Proof of (15.1), page 280}: the step from the maximality of $n$ is restricted to ends with at least $r$ vertices, and a proof of the other case is added.
+\item \kindtag{fix:18.1}\hyperref[fix:18.1]{Statement of (18.1), page 285}: the hypothesis that $\Sigma$ has at most one cuff or $U=\emptyset$ is added.
+\item \kindtag{fix:18.2-proof}\hyperref[fix:18.2-proof]{Proof of (18.2), page 286}: $e'$ becomes $c'$ in the Euler inequality.
+\item \kindtag{fix:18.3-proof}\hyperref[fix:18.3-proof]{Proof of (18.3), page 287}: (18.1)(v) becomes (18.1)(iv).
+\end{enumerate}

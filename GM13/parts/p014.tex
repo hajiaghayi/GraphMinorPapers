@@ -1,0 +1,26 @@
+\origpage{78}{ROBERTSON AND SEYMOUR}
+\sectionhead{5. Generic Folios}
+
+So far we have discussed how to detect small branch-width and how to solve Folio in digraphs of bounded branch-width. Now we come to the more difficult problem of how to solve Folio in digraphs of large branch-width, and here our strategy is to locate an irrelevant vertex and delete it (and repeat, until we attain small branch-width). The problem of finding such a vertex splits into two subproblems: how to find an irrelevant vertex given a large clique minor; and how to find either an irrelevant vertex or a large clique minor. We treat the former problem in this section and the next.
+
+The $\delta$-folio of a digraph $G$ relative to $Z \subseteq V(G)$ is \textit{generic} if the $\delta$-folio of the rooted digraph $(G, v_1, \dots, v_{\xi})$ contains every rooted digraph with $\xi$ roots and with detail $\le \delta$, where $|Z| = \xi$ and $Z = \{v_1, \dots, v_{\xi}\}$.
+
+\stmt
+(5.1) \textit{Let $G$ be a digraph with $|V(G)| \ge 2\xi + 3\delta$, and let $Z \subseteq V(G)$ with $|Z| = \xi$. Suppose that $u, v \in Z$, for all distinct $u, v \in V$ that are non-adjacent in $G$. Then the $\delta$-folio of $G$ relative to $Z$ is generic.}
+
+\textit{Proof.} Let $Z = \{v_1, \dots, v_{\xi}\}$, and let $(H, u_1, \dots, u_{\xi})$ be a rooted digraph with detail $\le \delta$. We must show that $(H, u_1, \dots, u_{\xi})$ is a minor of $(G, v_1, \dots, v_{\xi})$. For each $v \in V(H)$, choose $X_v \subseteq V(G)$ such that $|X_v - Z| = 1$, $X_v \cap Z = \{v_i : 1 \le i \le \xi, u_i = v\}$, and for distinct $v, v' \in V(H)$, $X_v \cap X_{v'} = \emptyset$. For each edge $e \in E(H)$, choose a non-loop edge $\phi(e)$ of $G$ with head $s_e$ and tail $t_e$, such that $s_e, t_e \notin Z \cup \bigcup(X_v : v \in V(H))$, and for distinct $e, e' \in E(H)$, $s_e, t_e, s_{e'}, t_{e'}$ are all distinct. Such choices are possible since
+\begin{equation*}
+|V(G) - Z| \ge (\xi + \delta) + 2\delta \ge |V(H)| + 2|E(H)|.
+\end{equation*}
+For each $v \in V(H)$, let $\phi(v)$ be the restriction of $G \setminus \{\phi(e) : e \in E(H)\}$ to
+\begin{equation*}
+X_v \cup \{s_e : e \in E(H) \text{ has head } v\} \cup \{t_e : e \in E(H) \text{ has tail } v\}.
+\end{equation*}
+Then $G_v$ is connected (since $X_v \not\subseteq Z$) and it is easy to see that $\phi$ is a model of $(H, u_1, \dots, u_{\xi})$ in $(G, v_1, \dots, v_{\xi})$, as required. $\square$
+
+If $G$ is a digraph and $X, Y \subseteq V(G)$ or $X, Y$ are subgraphs of $G$, an edge of $G$ is said to be \textit{between} $X$ and $Y$ if it has one end in $X$ and the other in $Y$.
+
+\stmt
+(5.2) \textit{Let $G$ be a digraph, let $Z \subseteq V(G)$ with $|Z| = \xi$, and let $k = 2\xi + 3\delta$. Suppose that there are $k$ non-null connected subgraphs $G_1, \dots, G_k$ of $G$, mutually vertex-disjoint, such that}
+
+\hspace*{12pt}(i) \textit{$|Z \cap V(G_i)| = 1$ ($1 \le i \le \xi$), and (hence) $Z \cap V(G_i) = \emptyset$ ($\xi + 1 \le i \le k$)}

@@ -1,0 +1,34 @@
+\origpage{533}{N. Robertson, P. Seymour / Journal of Combinatorial Theory, Series B 102 (2012) 530--563}
+\textit{(b) if $u, v \in Z'$ are distinct and $\alpha(u) = \alpha(v)$ then $u, v \in V(A'_i)$ for some $i$ ($1 \le i \le k$),}
+
+\textit{(c) for $1 \le i \le k$, $u, v \in Z' \cap V(A'_i)$ are $L'_i$-connected if and only if $\alpha(u), \alpha(v)$ are $L \cap A_i$-connected.}
+
+\textit{Let $L' = L'_1 \cup \cdots \cup L'_k$. Then $L'_i = L' \cap A'_i$ for $1 \le i \le k$, and $u, v \in Z'$ are $L'$-connected if and only if $\alpha(u), \alpha(v)$ are $L$-connected.}
+
+\textbf{Proof.} For $1 \le i \le k$, let $Z_i = Z \cap V(A_i)$ and $Z'_i = Z' \cap V(A'_i)$. Hypothesis (c) implies (taking $u = v$) that
+
+\hspace*{12pt}(1) For $1 \le i \le k$, if $v \in Z'_i$, then $v \in V(L'_i)$ if and only if $\alpha(v) \in V(L)$.
+
+\hspace*{12pt}(2) For $1 \le i \le k$, $L'_i = L' \cap A'_i$.
+
+\textit{Subproof.} Certainly $E(L'_i) = E(L' \cap A'_i)$ and $V(L'_i) \subseteq V(L' \cap A'_i)$. Suppose that $v \in V(L' \cap A'_i)$. Since $v \in V(L')$ there exists $j$ with $1 \le j \le k$ so that $v \in V(L'_j)$. If $j = i$ then $v \in V(L'_i)$ as required, and so we assume that $j \ne i$. Since $L'_j \subseteq A'_j$ it follows that $v \in V(A'_i \cap A'_j) \subseteq Z'$. Since $v \in V(L'_j)$ and $v \in Z'_j$, it follows from (1) that $\alpha(v) \in V(L)$. Since $v \in Z'_i$, it follows from (1) that $v \in V(L'_i)$. This proves (2).
+
+\hspace*{12pt}(3) If $u, v \in Z'$ are $L'$-connected then $\alpha(u)$ and $\alpha(v)$ are $L$-connected.
+
+\textit{Subproof.} Let $P$ be a path of $L'$ with ends $u, v \in Z'$. Let us number the vertices of $P$ in $Z'$ as $v_1, \ldots, v_n$, in order on $P$, where $u = v_1$ and $v = v_n$. We may assume that $n > 1$. Let $1 \le j < n$, and let $P_j$ be the path in $P$ with ends $v_j, v_{j+1}$. Since no internal vertex of $P_j$ is in $Z'$, there exists $i$ with $1 \le i \le k$ such that $P_j \subseteq A'_i$. Since $P_j \subseteq P \cap A'_i \subseteq L' \cap A'_i = L'_i$, it follows that $v_j, v_{j+1}$ are $L'_i$-connected. By hypothesis (c), $\alpha(v_j)$ and $\alpha(v_{j+1})$ are $L \cap A_i$-connected and hence $L$-connected. We have proved then that for $1 \le j < n$, $\alpha(v_j)$ and $\alpha(v_{j+1})$ are $L$-connected. Consequently $\alpha(u) = \alpha(v_1)$ and $\alpha(v) = \alpha(v_n)$ are $L$-connected. This proves (3).
+
+\hspace*{12pt}(4) If $u, v \in Z'$ and $\alpha(u) = \alpha(v) \in V(L)$ then $u, v$ are $L'$-connected.
+
+\textit{Subproof.} By hypothesis (b), there exists $i$ ($1 \le i \le k$) such that $u, v \in V(A'_i)$, and hence $u, v \in Z'_i$, and so $\alpha(u) = \alpha(v) \in Z_i \subseteq V(A_i)$ by hypothesis (a). Since $\alpha(u) = \alpha(v) \in V(L \cap A_i)$ and hence $\alpha(u), \alpha(v)$ are $L \cap A$-connected, it follows from hypothesis (c) that $u, v$ are $L'_i$-connected and hence $L'$-connected. This proves (4).
+
+\hspace*{12pt}(5) If $u, v \in Z'$ and there is a path $P$ of $L$ with ends $\alpha(u), \alpha(v)$ and with no internal vertex in $Z$, then $u, v$ are $L'$-connected.
+
+\textit{Subproof.} Since no internal vertex of $P$ is in $Z$, and $V(A_i \cap A_j) \subseteq Z$ for $1 \le i < j \le k$, it follows that $P \subseteq A_i$ for some $i$, and $\alpha(u), \alpha(v) \in Z_i$. By hypothesis (a), there exist $u', v' \in Z'_i$ such that $\alpha(u) = \alpha(u')$ and $\alpha(v) = \alpha(v')$. By hypothesis (c), $u'$ and $v'$ are $L'_i$-connected and hence $L'$-connected, and by (4) so are $u$ and $u'$, and so are $v$ and $v'$. Consequently $u$ and $v$ are $L'$-connected. This proves (5).
+
+\hspace*{12pt}(6) If $u, v \in Z'$ and $\alpha(u), \alpha(v)$ are $L$-connected then $u, v$ are $L'$-connected.
+
+\textit{Subproof.} Let $P$ be a path of $L$ with ends $\alpha(u), \alpha(v)$, and let $V(P) \cap Z = \{z_1, \ldots, z_n\}$ in order, where $z_1 = \alpha(u)$ and $z_n = \alpha(v)$. For $1 \le i \le n$, choose $v_i \in Z'$ with $\alpha(v_i) = z_i$, with $v_1 = u$ and $v_n = v$. (This is possible by hypothesis (a).) By (5), for $1 \le i < n$, $v_i$ and $v_{i+1}$ are $L'$-connected. Hence $u, v$ are $L'$-connected. This proves (6).
+
+From (2), (3) and (6), the result follows. This completes the proof of 2.5. $\square$
+
+Here is a corollary of 2.5. A \textit{separation} of $G$ is a pair $(A, B)$ of subgraphs with $A \cup B = G$ and $E(A \cap B) = \emptyset$.

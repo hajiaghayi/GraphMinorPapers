@@ -1,0 +1,28 @@
+\origpage{222}{ROBERTSON AND SEYMOUR}
+\stmt
+(4.2) \textit{Let $\Sigma$ be a connected surface with $bd(\Sigma) = \emptyset$, and let $Y \subseteq \Sigma$ be connected and open. Suppose that every $O$-arc included in $Y$ bounds a disc included in $Y$. Then either $\Sigma$ is a sphere and $Y = \Sigma$, or $Y$ is an open disc.}
+
+We sketch a proof. We may assume that $Y \ne \Sigma$. Let $\Sigma'$ be a universal covering space for $\Sigma$, and $\phi \colon \Sigma' \to \Sigma$ be a covering map (see [1]). Then $\Sigma'$ is either a sphere or a plane, and so the Riemann mapping theorem holds in $\Sigma'$. Thus each component of $\phi^{-1}(Y)$ is an open disc, and the result follows.
+
+\stmt
+(4.3) \textit{Let $\Sigma$ be a connected surface with at least two cuffs, and let $G$ be a proper graph in $\Sigma$. Let $v \ge 0$ be an integer, and suppose that every $G$-normal $O$-arc $F$ with $F \cap bd(\Sigma) = \emptyset$ and $|V(G) \cap F| \le v$ is null-homotopic. Let $C$ be a cuff. Then there are \del{at least $v + 1$ paths} \fix{paths $P_1, \dots, P_{v+1}$} of $G$, each with one end in $C$ and the other in $bd(\Sigma) - C$, mutually vertex-disjoint except for their ends\fix{, where $P_i$ and $P_j$ $(i \ne j)$ may be the same path if it has no internal vertex}.}\fixnote{fix:4.3}{Read with $v+1$ distinct paths, (4.3) is false. Let $\Sigma$ be a cylinder with cuffs $C, C'$, and let $G$ be one edge from a vertex in $C$ to a vertex in $C'$. Every $G$-normal $O$-arc $F$ with $F\cap bd(\Sigma)=\emptyset$ misses $U(G)$, so it lies in the open disc $\Sigma-(bd(\Sigma)\cup U(G))$ and is null-homotopic. Thus the hypothesis holds for every $v$, but $G$ has only one path. The Menger step of the proof gives the corrected form, since $X$ misses $bd(\Sigma)$ and so cannot meet a path with one edge. The proof of (4.6) uses only this form.}
+
+\textit{Proof.} Let $X \subseteq V(G)$ with $|X| \le v$ and with $X \cap bd(\Sigma) = \emptyset$. By a form of Menger's theorem, it suffices to show that there is a path of $G$ with one end in $C$ and the other in $bd(\Sigma) - C$, and with no vertex in $X$. Let
+\begin{equation*}
+Z = (\Sigma - (U(G) \cup bd(\Sigma))) \cup X.
+\end{equation*}
+Then by hypothesis (since $|X| \le v$) every $O$-arc of $\Sigma$ included in $Z$ is null-homotopic. Choose $Y$ maximal such that
+
+\hspace*{12pt}(i) $Z \subseteq Y$ (and so $r - bd(\Sigma) \subseteq Y$ for every region $r$ of $G$),
+
+\hspace*{12pt}(ii) $Y$ is a union of sets of the form $r - bd(\Sigma)$ (where $r$ is a region of $G$), $e$ (where $e$ is an edge), and $\{v\}$ (where $v$ is a vertex of $G$ not in $bd(\Sigma)$), and
+
+\hspace*{12pt}(iii) every $O$-arc included in $Y$ is null-homotopic.
+
+Then $Y \cap bd(\Sigma) = \emptyset$, from (ii). We claim first that $Y$ is connected. For if not, then from (i) there are regions $r_1, r_2$ of $G$, both incident with some edge $e$, such that $r_1 - bd(\Sigma)$, $r_2 - bd(\Sigma)$ are in different components of $Y$. But then $Y \cup e$ satisfies (i)-(iii) contrary to the maximality of $Y$. This proves our claim that $Y$ is connected.
+
+Second, from the maximality of $Y$, it is easy to see that if $v \in V(G) \cap Y$ then $e \subseteq Y$ for every edge $e$ incident with $v$. We deduce from (i) and (ii) that there is a subgraph $K$ of $G$ such that
+\begin{equation*}
+Y = \Sigma - (U(K) \cup bd(\Sigma)).
+\end{equation*}
+Third, let $F \subseteq Y$ be an $O$-arc. Then $F$ is null-homotopic in $\Sigma$, by (iii), and so there is a closed disc $\Delta \subseteq \Sigma$ with $bd(\Delta) = F$. But then $Y \cup \Delta$ satisfies (i)-(iii) (by (11.3)), and so $\Delta \subseteq Y$ from the maximality of $Y$.

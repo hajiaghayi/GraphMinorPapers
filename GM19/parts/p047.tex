@@ -1,0 +1,29 @@
+\origpage{371}{N. Robertson, P.D. Seymour / Journal of Combinatorial Theory, Series B 90 (2004) 325--385}
+\noindent and so again we have equality throughout. In particular, $\lambda(P_i \cup L) = \lambda(S_{v_i})$ ($i = 1, 2$). Since $E(S_{v_i}) \ne \emptyset$, it follows that $P_i \cup L = S_{v_i}$ ($i = 1, 2$), and so
+\begin{equation*}
+E(D_v) = (E(S_{v_1} \cup S_{v_2}) \setminus E(S_{v_1} \cap S_{v_2})) \cup E(K) \cup E(M) \subseteq E(C).
+\end{equation*}
+Hence $C = D_v$, and so $ins(F) \subseteq D_v$, as required. This proves (6).
+
+Henceforth, then, we suppose, for a contradiction, that $ins(H) \cap \Delta \nsubseteq U(C)$. In particular, $F \ne C$, by (3). Let $h \in (\Delta \setminus U(C)) \cap ins(H)$, choosing $h \notin U(H)$ if $H$ is a circuit. ($h$ is a point of the surface, but not necessarily a vertex of $\Gamma^*$.)
+
+If $P$ is a path and $u, v \in V(P)$, we denote by $P[u, v]$ the subpath of $P$ with ends $u, v$. An \textit{arc} is a path of $F$ with distinct ends both in $V(D_v)$, and with no internal vertex in $V(D_v)$ and no edge in $E(D_v)$. For every arc $P$, either $U(P) \subseteq \Delta_v$ or $U(P) \cap \Delta_v$ consists of the ends of $P$; we call these \textit{inner} and \textit{outer} arcs respectively. Since $F \ne C$ and hence $\Delta_v \nsubseteq ins(F)$, there is an inner arc; and since $D_v \ne C$ (because $h \in \Delta \setminus U(C)$) there is an outer arc.
+
+\hspace*{12pt}(7) $h \notin ins(F)$.
+
+\textbf{Subproof.} Suppose that $h \in ins(F)$. By (3), $h \in U(F) \cap U(H)$, and so $V(H) = \{h\}$ and $h \in V(F)$, and $h_1 = h_2 = h$. We claim that every arc has one end $v$. For let $P$ be an arc with ends $a, b$ say. Since $a \ne b$, we may assume that $a \ne v_1$ and $a \in V(S_{v_1})$ without loss of generality. Since $a, h \in V(F)$, it follows from 13.3 that $S_{v_1}[a, h] \subseteq F$. Since there are $\ge 2$ arcs, $a$ and $b$ do not belong to the same component of $F \cap D_v$, and hence nor do $h, b$. By 13.3, it follows that $b \notin V(S_{v_1}) \cup V(S_{v_2})$, and so $b = v$. This proves our claim that every arc has one end $v$. Hence there is exactly one outer arc, say $P_1$, and exactly one inner arc, say $P_2$.
+
+Let $P_i$ have ends $v, a_i$ ($i = 1, 2$). Since $h \in V(F)$, if $E(S_{v_1} \cap S_{v_2}) \ne \emptyset$ then $a_1 = h$, and if $E(S_{v_1} \cap S_{v_2}) = \emptyset$ then both $V(S_{v_1})$ and $V(S_{v_2})$ meet $\{a_1, a_2\}$. Thus in either case we may assume that $a_1 \in V(S_{v_1})$ and $a_2 \in V(S_{v_2})$.
+
+Let $S_i$ be the path consisting of $S_{v_i}$ and the vertex $v$ and the edge $f_i$ ($i = 1, 2$). Let $v'$ be the first vertex of $P_1$ (that is, closest to $v$) different from $v$ that belongs to $W$. Since $W$ is a wheel and the edge of $P_1$ incident with $v$ is not in $W$, it follows that $|E(P_1[v, v'])| \ge 2$, and since $G^*$ is bipartite, either $|E(P_1[v, v'])| \ge 3$ or $v' \in R^*$. But
+\begin{equation*}
+P_1[v', a_1] \cup S_1[a_1, h]
+\end{equation*}
+is a path from a vertex of $bd(W)$ (namely, $v'$) to $h$, and so it has $\ge \rho - 1$ edges, and at least $\rho$ if $v' \in R^*$, by 13.1. By combining these two paths we deduce that $P_1 \cup S_1[a_1, h]$ has $\ge \rho + 2$ edges, and consequently has strictly more edges than both $S_1$ and $S_2$.
+
+Let $S_{v_1} \cap S_{v_2}$ have ends $h, h'$. Let
+\begin{align*}
+C_1 &= P_2 \cup S_1[v, h'] \cup S_2[h', a_2], \\
+C_2 &= P_2 \cup S_2[v, a_2].
+\end{align*}
+Then $C_1, C_2$ are both circuits, bounding the two discs into which $\Delta_v$ is divided by $P_2$. Since $|E(S_1)| < |E(P_1 \cup S_1[a_1, h])|$ and since $P_1 \cup S_1[a_1, h]$, $P_2 \cup S_2[h', a_2]$ are edge-disjoint paths of $F$, it follows that $|E(C_1)| < |E(F)|$. Since $|E(S_2)| < |E(P_1 \cup S_1[a_1, h])|$

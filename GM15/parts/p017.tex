@@ -1,0 +1,28 @@
+\origpage{128}{ROBERTSON AND SEYMOUR}
+Adding, we deduce that $|X \cap V(A)| \le |V(A \cap B)|$, a contradiction. This proves (1).
+
+Now $|X \cap V(A)| > |V(A \cap B)| \ge 0$, and so we may choose $v \in X \cap V(A)$.
+
+\hspace*{12pt}(2) \textit{For every $u \in V(A)$, $d'(u, v) \le 2|X| - 2$.}
+
+\textit{Subproof.} By (1) there is a path $P$ of $A$ from $u$ to $v$. By [4, Theorem (4.1)], $|V(A \cap B)| \ge (1/2)d'(u, v)$, and so $d'(u, v) \le 2|V(A \cap B)| \le 2|X| - 2$. This proves (2).
+
+\hspace*{12pt}(3) \textit{Every $u \in V(A)$ belongs to $V(H)$ and every edge of $H'$ incident with $u$ is an edge of $H$.}
+
+\textit{Subproof.} Let $e \in E(H')$ be incident with $u \in V(A)$. Let $\sigma \in \Sigma$ with $\sigma \in e$. By (2), $d'(\sigma, v) \le 2|X|$. Hence $d(\sigma, v) \le 2|X| + 4\lambda + 2$, since $\mathscr{T}'$ is a $(4\lambda + 2)$-compression of $\mathscr{T}$. Since $d(z, v) > 2|X| + 5\lambda + 2$, it follows that $d(z, \sigma) > \lambda$. Let $a$ be the atom of $H$ with $\sigma \in a$. Then $d(z, a) > \lambda$, and so $a \in A(H')$. Hence $a = e$, and so $e \in E(H)$. Similarly, by setting $\sigma = u$ and applying (2), we deduce that $u \in V(H)$. This proves (3).
+
+From (3), $A$ is a subgraph of $H$.
+
+\hspace*{12pt}(4) \textit{For all $u \in V(A)$, every edge of $H$ incident with $u$ is an edge of $H'$.}
+
+\textit{Subproof.} Let $e \in E(H)$ be incident with $u$. Since $d'(u, v) \le 2|X| - 2$ and hence $d(u, v) \le 2|X| - 2 + 4\lambda + 2$, it follows that $d(z, u) > \lambda$ since $d(z, v) > 2|X| + 5\lambda$. Hence $d(z, e) > \lambda$, and so $e \in E(H')$. This proves (4).
+
+By (3) and (4), there is a subgraph $C$ of $H$ such that $(A, C)$ is a separation of $H$ and $A \cap B = A \cap C$. Now $H_0 = H - z^\lambda$ is a subgraph of both $H$ and $H'$; let $\mathscr{T}_0$ be the $(4\lambda + 2)$-compression of $\mathscr{T}$ in $H_0$. Since $\theta > 4\lambda + 2$, it follows from (4.4) that $(A \cap H_0, B \cap H_0) \in \mathscr{T}_0$, since $(A, B)$ has order $< |X| \le \theta - 4\lambda - 2$. Since by (4.5)(ii) $\mathscr{T}'$ is the tangle in $H'$ induced by $\mathscr{T}_0$, and $C \cap H_0 = B \cap H_0$, it follows that $(A, C) \in \mathscr{T}'$. But
+\begin{equation*}
+|X \cap V(A)| > |V(A \cap B)| = |V(A \cap C)|
+\end{equation*}
+and so $X$ is not free with respect to $\mathscr{T}$, by [2, Theorem (12.2)], a contradiction. This completes the proof. $\square$
+
+\sectionhead{5. \textsc{Flatness}}
+
+In this section we prove that, if $\lambda$ is large enough, rearranging a $(\lambda, \mu)$-flat $\Sigma$-span produces another $\Sigma$-span which is still reasonably flat. First, we need the following.

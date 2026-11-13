@@ -1,0 +1,20 @@
+\origpage{42}{}
+We deduce
+
+\textbf{10.2} \textit{For all integers} $n, p \ge 0$ \textit{there exists} $\theta \ge 1$ \textit{such that, if a graph} $G$ \textit{has a tangle of order} $\ge \theta$ \textit{and has no} $K_n$\textit{-minor then} $G$ \textit{has no vital} $p$\textit{-linkage.}
+
+\textbf{Proof.} Choose $\rho, \xi \ge 0, q \ge 1$ and $\theta_1 > \xi$ so that (10.1) holds with $\theta$ replaced by $\theta_1$. Choose $\theta_2 \ge 1$ so that for all surfaces $\Sigma$ with $c(\Sigma) \le \rho$ in which $K_n$ cannot be drawn, (9.2) holds, with $\Sigma, p, q, \theta$ replaced by $\Sigma, p + 2\zeta, q, \theta_2$. Let $\theta = \max(\theta_1, \xi + \theta_2)$. We claim that $\theta$ satisfies (10.2). For let $G$ have a tangle $\mathcal{T}$ of order $\ge \theta$, and have no $K_n$-minor. By (10.1), since $\theta \ge \theta_1$, there is a surface $\Sigma$ with $c(\Sigma) \le \rho$ in which $K_n$ cannot be drawn, and there exists $Z \subseteq V(G)$ with $|Z| \le \xi$ such that there is a portrait of $G \setminus Z$ in $\Sigma$ with depth $\le q$, surrounding $\mathcal{T} \setminus Z$. Since $\mathcal{T} \setminus Z$ has order $\ge \theta - |Z| \ge \theta_2$, it follows from (9.2) that $G \setminus Z$ has no vital $(p + 2\xi)$-linkage. Hence by (2.1), $G$ has no vital $p$-linkage, as required. $\square$
+
+\textbf{10.3} \textit{For every integer} $p \ge 0$, \textit{no graph with a} $K_n$\textit{-minor has a vital} $p$\textit{-linkage, where} $n = \lfloor\frac{5}{2}p\rfloor + 1$.
+
+\textbf{Proof.} Suppose that $L$ is a vital $p$-linkage in a graph $G$ with a $K_n$-minor. Let $Z$ be the set of terminals of $L$. By theorem (6.1) of [8], there exists $v \in V(G) \setminus Z$ such that, in the language of [8], $G$ and $G \setminus v$ have the same $0$-folio relative to $Z$. In particular, there is a linkage in $G \setminus v$ with the same pattern as $L$, a contradiction since $L$ is vital. The result follows. $\square$
+
+From (10.2) and (10.3) we deduce the following, which in view of (3.1) implies our main result (1.1).
+
+\textbf{10.4} \textit{For every integer} $p \ge 0$ \textit{there exists} $\theta \ge 1$ \textit{such that, if a graph} $G$ \textit{has a tangle of order} $\ge \theta$ \textit{then} $G$ \textit{has no vital} $p$\textit{-linkage.}
+
+\textbf{Proof.} Let $n$ be as in (10.3), and choose $\theta$ so that (10.2) is satisfied. Let $G$ be a graph with a tangle of order $\ge \theta$. If $G$ has no $K_n$-minor then by (10.2) $G$ has no vital $p$-linkage. If $G$ has a $K_n$-minor then by (10.3) $G$ has no vital $p$-linkage. The result follows. $\square$
+
+\sectionhead{11. Intertwinings}
+
+The ``intertwining conjecture'', of Lov\'asz [2] and of Milgram and Ungar [3], states that for every two graphs $G_1$ and $G_2$, there is a finite list $H_1, \dots, H_n$ of graphs, such that a graph $G$ topologically

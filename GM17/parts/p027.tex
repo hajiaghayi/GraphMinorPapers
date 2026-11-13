@@ -1,0 +1,46 @@
+\origpage{188}{ROBERTSON AND SEYMOUR}
+\hspace*{12pt}(ii) \textit{there is a linkage $\{P_1, \dots, P_q\}$ in $\alpha(c_0) \setminus \{\gamma(n_1), \gamma(n_2)\}$ from $\beta(n_1)$ to $\beta(n_2)$ such that either there is a path $P_0$ such that $\{P_0, P_1, \dots, P_q\}$ is a linkage in $\alpha(c_0)$ from $\beta(n_1 +)$ to $\beta(n_2 +)$, or there is an internal cell $c$ with $|\tilde{c}| = 3$ and $\tilde{c}_0 \subseteq \tilde{c}$.}
+
+\sectionhead{10. \textsc{Circumnavigating} A \textsc{Vortex}}
+
+Throughout this section, $\pi = (\Sigma, \Gamma, \alpha, \beta, \gamma)$ is a true, $\mathcal{T}$-central portrayal of a hypergraph $G$, with warp $p$, and it is $z$-redundant where $z \ge 2p + 3$, and $\operatorname{ord}(\mathcal{T}) > z + 2p + 2$.
+
+Assign arbitrarily an orientation to each cuff of $\Sigma$, called \textit{clockwise}. Then for each cell $c$ bordering a cuff $\Theta$, we may call one member of $\tilde{c}$ the \textit{tail} of $c$ and the other its \textit{head}, so that the head of each cell is the tail of the next as the cuff is traversed clockwise. Let $c$ be a border cell with tail $n_1$ and head $n_2$, and let $c$ have warp $q$ in $\pi$. By (9.8) we may choose a linkage $\{Q_1, \dots, Q_q\}$ of $\alpha(c)$ from $\beta(n_1)$ to $\beta(n_2)$ such that $\gamma(n_1), \gamma(n_2) \notin V(Q_1), \dots, V(Q_q)$, and either there is a linkage $\{Q_0, Q_1, \dots, Q_q\}$ of $\alpha(c)$ from $\beta(n_1 +)$ to $\beta(n_2 +)$, or there is an internal cell $c'$ with $\tilde{c} \subseteq \tilde{c}'$. Choose such a linkage $\{Q_1, \dots, Q_q\}$ arbitrarily, we call it the \textit{standard linkage} in $\alpha(c)$.
+
+Let $\Theta$ be a cuff, let $\pi$ have warp $q$ at $\Theta$, let $n_0$ be a node bordering $\Theta$, and let $v \in \beta(n_0)$. Let the nodes and cells bordering $\Theta$ be $n_0, c_1, n_1, c_2, \dots, c_k, n_k = n_0$, in clockwise order. Let $v_0 = v$, and inductively, having defined $v_0, \dots, v_{i-1}$ and $P_1, \dots, P_{i-1}$ for some $1 \le i \le k$, let $P_i$ be the path of the standard linkage in $\alpha(c_i)$ from $\beta(n_{i-1})$ to $\beta(n_i)$ with initial vertex $v_{i-1}$, and let $v_i$ be its terminal vertex. From this inductive definition we see that $v_i \in \beta(n_i)$ ($0 \le i \le k$). We define $L(v, n_0)$ to be $P_1 \cup \dots \cup P_k$.
+
+\stmt
+(10.1) \textit{With notation as before, if $v_k \ne v$ then $L(v, n_0)$ is a path, and if $v_k = v$ then $L(v, n_0)$ is a circuit; and for distinct $v, v' \in \beta(n_0)$, $L(v, n_0)$ and $L(v', n_0)$ are edge-disjoint, and if some vertex $u$ belongs to both of them then both are paths and $u$ is an initial vertex of one and a terminal vertex of the other.}
+
+The proof (using (6.6) with $|X| = 1$ and \textbf{(P6)} and \textbf{(P7)}) is clear but lengthy\del{, and we omit it}. \fix{We give the proof. By (9.8)(i), $|\beta(n_i)| = q$ for $0 \le i \le k$. So for $1 \le i \le k$, every vertex in $\beta(n_{i-1})$ is the initial vertex of exactly one path of the standard linkage in $\alpha(c_i)$, and every vertex in $\beta(n_i)$ is the terminal vertex of exactly one. For $u \in \beta(n_{i-1})$, let $P(i, u)$ be the path of this linkage with initial vertex $u$, and let $P^-(i, u) = V(P(i, u)) - \{u\}$. Then $P_i = P(i, v_{i-1})$, and we write $U(v) = P^-(1, v_0) \cup \dots \cup P^-(k, v_{k-1})$, so that $V(L(v, n_0)) = \{v\} \cup U(v)$.
+
+\hspace*{12pt}(1) \textit{Let $1 \le i \le k$ and $u \in \beta(n_{i-1})$, and let $x \in P^-(i, u)$ with $x \in V(\alpha(-c_i)) \cup \beta(n_{i-1}) \cup \beta(n_i)$. Then $x$ is the terminal vertex of $P(i, u)$, and $x \in \beta(n_i +) - \beta(n_{i-1} +)$.}
+
+\textit{Subproof.} If $x \in \beta(n_{i-1})$, then $x$ is the initial vertex of a path of the standard linkage in $\alpha(c_i)$, which is $P(i, u)$ since the paths are disjoint, and so $x = u$, which is impossible. Since also $x \ne \gamma(n_{i-1})$ by the choice of the standard linkage, $x \notin \beta(n_{i-1} +)$. If $x \in V(\alpha(-c_i))$, then $x \in \beta(n_{i-1} +) \cup \beta(n_i +)$ by \textbf{(P6)}, so $x \in \beta(n_i +)$, and $x \in \beta(n_i)$ since $x \ne \gamma(n_i)$. So in all cases $x \in \beta(n_i)$, and in the same way $x$ is the terminal vertex of $P(i, u)$. This proves (1).
+
+\hspace*{12pt}(2) \textit{Let $1 \le i, j \le k$, $u \in \beta(n_{i-1})$ and $u' \in \beta(n_{j-1})$, with $(i, u) \ne (j, u')$. Then $P^-(i, u) \cap P^-(j, u') = \emptyset$.}
+
+\textit{Subproof.} If $i = j$ then $u \ne u'$, and the claim holds since $P(i, u)$ and $P(i, u')$ are disjoint. Suppose that $i \ne j$ and $x \in P^-(i, u) \cap P^-(j, u')$. Then $x \in V(\alpha(c_j)) \subseteq V(\alpha(-c_i))$, and so $x \in \beta(n_i +) - \beta(n_{i-1} +)$ by (1); and in the same way $x \in \beta(n_j +) - \beta(n_{j-1} +)$. But $n_i, n_{j-1}, n_j, n_{i-1}$ are in order, and so $x \in \beta(n_{j-1} +) \cup \beta(n_{i-1} +)$ by \textbf{(P7)}, a contradiction. This proves (2).
+
+For $0 \le i \le k$, the map $v \mapsto v_i$ is an injection from $\beta(n_0)$ into $\beta(n_i)$, since distinct paths of a standard linkage have distinct terminal vertices. Since $n_k = n_0$ and $\beta(n_0)$ is finite, it follows that $v \mapsto v_k$ is a permutation of $\beta(n_0)$.
+
+\hspace*{12pt}(3) \textit{For each $v \in \beta(n_0)$, the sets $P^-(1, v_0), \dots, P^-(k, v_{k-1})$ are mutually disjoint; and for distinct $v, v' \in \beta(n_0)$, $U(v) \cap U(v') = \emptyset$.}
+
+\textit{Subproof.} This follows from (2), since the pairs $(i, v_{i-1})$ $(1 \le i \le k)$ are distinct, and $v_{i-1} \ne v'_{i-1}$ for $1 \le i \le k$ by the injectivity of $v \mapsto v_{i-1}$. This proves (3).
+
+\hspace*{12pt}(4) \textit{For each $v \in \beta(n_0)$, $U(v) \ne \emptyset$.}
+
+\textit{Subproof.} Suppose that $U(v) = \emptyset$. Then each $P_i$ has only one vertex, and so $v_i = v_{i-1}$ for $1 \le i \le k$. Hence $v_i = v$ for $0 \le i \le k$, and so $v \in \beta(n)$ for every node $n$ bordering $\Theta$. But this is contrary to (6.6) with $X = \{v\}$, since $z \ge 3$. This proves (4).
+
+\hspace*{12pt}(5) \textit{For all $v, u \in \beta(n_0)$, $u \in U(v)$ if and only if $u = v_k$.}
+
+\textit{Subproof.} By (4), there is a maximum $i$ such that $P^-(i, v_{i-1}) \ne \emptyset$. Then $v_i \in P^-(i, v_{i-1})$, and $v_h = v_i$ for $i \le h \le k$; so $v_k \in U(v)$. Conversely, suppose that $u \in U(v)$. Since $v \mapsto v_k$ is a permutation of $\beta(n_0)$, there exists $v' \in \beta(n_0)$ with $v'_k = u$, and then $u \in U(v')$ by what we just proved. By (3), $v' = v$, and so $u = v_k$. This proves (5).
+
+Now let $v \in \beta(n_0)$, and traverse $P_1, \dots, P_k$ in turn, starting from $v$. By (3), and since each $P_i$ is a path, no vertex of $U(v)$ is met twice. The edges traversed are distinct, since paths in different cells have no common edge by \textbf{(P1)}. If $v_k \ne v$, then $v \notin U(v)$ by (5), so no vertex is met twice, and $L(v, n_0)$ is a path from $v$ to $v_k$. If $v_k = v$, the traversal is a closed walk, with at least one edge by (4), in which no vertex is met twice except $v$, which is met only at the start and the end; so $L(v, n_0)$ is a circuit.
+
+Now let $v, v' \in \beta(n_0)$ be distinct. Suppose that some edge $e$ belongs to both $L(v, n_0)$ and $L(v', n_0)$, and choose $i, j$ such that $e$ is an edge of $P(i, v_{i-1})$ and of $P(j, v'_{j-1})$. Then $i = j$ by \textbf{(P1)}; but $v_{i-1} \ne v'_{i-1}$, so $P(i, v_{i-1})$ and $P(i, v'_{i-1})$ are distinct paths of the standard linkage in $\alpha(c_i)$, and they are disjoint, a contradiction. Thus $L(v, n_0)$ and $L(v', n_0)$ are edge-disjoint. Now let $u$ be a vertex of both. Since $U(v) \cap U(v') = \emptyset$ by (3), either $u = v$ or $u = v'$, and from the symmetry we may assume that $u = v$. Since $v \ne v'$, it follows that $v \in U(v')$, and so $v = v'_k$ by (5). Hence $v'_k \ne v'$; and $v_k \ne v$, since $v'_k = v$ and $v \mapsto v_k$ is injective. So both $L(v, n_0)$ and $L(v', n_0)$ are paths, and $u$ is the initial vertex of $L(v, n_0)$ and the terminal vertex of $L(v', n_0)$. This proves (10.1).}\fixnote{fix:10.1-proof-added}{The paper says only that the proof, using (6.6) with $|X| = 1$ and \textbf{(P6)} and \textbf{(P7)}, is clear but lengthy. Apart from the use of \textbf{(P1)} for the edges, the argument above is the one used in the formalization.}
+
+\stmt
+(10.2) \textit{There is no $(A, B) \in \mathcal{T}$ of order $\le z$ with $V(L(v, n_0)) \subseteq V(A)$.}
+
+\textit{Proof.} Suppose that such an $(A, B)$ exists, and choose it with $B$ minimal. By [1, Theorem (2.8)], $L(v, n_0) \subseteq A$. Define $P_1, \dots, P_k$ as before, and then we see that for $1 \le i \le k$, $P_i$ is a path of $(A \cap \alpha(c_i))^*$ from $\beta(n_{i-1})$ to $\beta(n_i)$. But this contradicts (6.5). $\square$

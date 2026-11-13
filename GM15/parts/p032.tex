@@ -1,0 +1,29 @@
+\origpage{143}{GRAPH MINORS. XV. GIANT STEPS}
+\stmt
+(7.9) \textit{If $\mathscr{P}$ is a crosscap transaction of cardinality $\phi$ then (S2) is true.}
+
+\textit{Proof.} This is immediate from (3.3). $\square$
+
+Let $\mathscr{T}_1$ be the $(12\beta + 14)$-compression of $\mathscr{T}$ in $H \cap (\Sigma - \Lambda_1)$.
+
+\stmt
+(7.10) \textit{$\mathscr{P}$ is not a leap transaction of cardinality $\tau_1$.}
+
+\textit{Proof.} Suppose that $\mathscr{P}$ is a leap transaction of cardinality $\tau_1$, and let $\mathscr{P} = \{P_1, \dots, P_{\tau_1}\}$, where $P_i$ has ends $v_i, v_{2\tau_1 - i}$ for $1 \le i \le \tau_1 - 1$, and $P_{\tau_1}$ has ends $v_{\tau_1}, v_{2\tau_1}$, and where $v_1, \dots, v_{2\tau_1}$ occur in $\Omega_1$ in order. By (3.4) applied to $H \cap (\Sigma - \Lambda_1), \mathscr{T}$, we deduce that there is a $\Sigma$-span $H', \eta', \mathscr{T}'$ of order $\theta - 12\beta - 14$, obtained from $H, \mathscr{T}$ by rearranging within $\beta$ of $r_1$, and $P_{\tau_1}$ is an $\eta'(H')$-path in $G$, and $d'(v_{\tau_1}, v_{2\tau_1}) \ge 2\tau_1 - 8 = \mu$. Hence $H', \eta', \mathscr{T}'$ is $\mu$-stepped. But $\beta \le \lambda$, and so $H \mathscr{T}$ is $(\beta, \mu)$-flat by (5.1), a contradiction. Thus there is no such $\mathscr{P}$. $\square$
+
+\stmt
+(7.11) \textit{If $\mathscr{P}$ is a doublecross transaction of cardinality $\tau_2$ then (S1) holds.}
+
+\textit{Proof.} For convenience, we write $\tau$ for $\tau_2$. Let $\mathscr{P} = \{P_1, \dots, P_\tau\}$, where $P_i$ has ends $v_i, v_{2\tau - 3 - i}$ for $1 \le i \le \tau - 4$, and $P_{\tau - 3}$ has ends $v_{2\tau - 3}, v_{2\tau - 1}$, $P_{\tau - 2}$ has ends $v_{2\tau - 2}, v_{2\tau}$, $P_{\tau - 1}$ has ends $v_{\tau - 3}, v_{\tau - 1}$ and $P_\tau$ has ends $v_{\tau - 2}, v_\tau$. By ``drawing'' $P_1, \dots, P_{\tau - 4}$ in $\bar{\Lambda}_1$, we see that there is a drawing $H'$ in $\Sigma$ with $U(H') \cap bd(\Lambda_1) \subseteq V(H')$, such that $H' \cap (\Sigma - \Lambda_1) = H \cap (\Sigma - \Lambda_1)$, and there is an isomorphism $\eta'$ from $H'$ to a subgraph of $G$, such that $\eta'(x) = x$ for every vertex or edge in $H'(\Sigma - \Lambda_1)$, and
+\begin{equation*}
+\eta'(H') = (H \cap (\Sigma - \Lambda_1)) \cup P_1 \cup \cdots \cup P_{\tau - 4}.
+\end{equation*}
+Let $Q_1, \dots, Q_{\tau - 4}$ be the paths of $H'$ such that $\eta'(Q_i) = P_i (1 \le i \le \tau - 4)$. Let $s_1$ be the region of $H'$ in $\Lambda$ incident with $v_{2\tau - 4}, v_{2\tau - 3}, \dots, v_{2\tau}, v_1$; and let $s_2$ be the region incident with $v_{\tau - 4}, v_{\tau - 3}, \dots, v_{\tau + 1}$. Let $\mathscr{T}'$ be the tangle in $H'$ induced by $\mathscr{T}_1$. By (3.4) applied to $H \cap (\Sigma - \Lambda_1), H'$, we see that
+
+\hspace*{12pt}(1) \textit{$H', \eta', \mathscr{T}'$ is a $\Sigma$-span of order $\theta - 12\beta - 14$, and $d'(s_1, s_2) \ge 2\tau - \delm{6}\fix{12} = \theta'$.\fixnote{fix:7.11-claim1}{The value changes together with $\tau_2$ on page 138 (see the note there). Here (3.4) is applied with $k = \tau - 3$, so it gives $2\tau - 12$.}}
+
+\hspace*{12pt}(2) \textit{$s_1$ and $s_2$ are eyes of $H', \eta', \mathscr{T}'$.}
+
+\textit{Subproof.} Now $\{v_1, \dots, v_{2\tau}\}$ is free with respect to $\mathscr{T}_1$, and hence with respect to $\mathscr{T}'$. Since any subset of a free set is free, it follows that $\{v_{2\tau - 3}, v_{2\tau - 2}, v_{2\tau - 1}, v_{2\tau}\}$ is free with respect to $\mathscr{T}'$. The region $s_1$ of $H'$ is bounded by a circuit formed by $P_1$ and part of the circuit bounding $\Lambda_1$; and hence, because of the $\eta'(H')$-paths $P_{\tau - 3}, P_{\tau - 2}$, it follows that $s_1$ is an eye. Similarly $s_2$ is an eye. This proves (2).
+
+\hspace*{12pt}(3) \textit{$r_2, \dots, r_k$ are eyes of $H \cap (\Sigma - \Lambda_1), \mathscr{T}_1$.}

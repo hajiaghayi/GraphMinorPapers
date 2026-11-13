@@ -1,0 +1,49 @@
+\origpage{45}{GRAPH MINORS}
+If possible, choose such a sequence with $r$ minimum. If $u_1, u_2,..., u_r$ are all
+on distinct paths from $P_1,..., P_m$, we contradict the result of step 1. Thus we
+may assume that for some $j\ne j'$ with $1\le j, j'\le r$, $u_j$ and $u_{j'}$ are both on $P_1$
+say, and by symmetry we may assume that either $u_j=u_{j'}$ or $u_j$ occurs before
+$u_{j'}$ on $P_1$. Consider the sequence
+\begin{equation*}
+u_{j'+1}, v_{j'+1},..., u_{j-1}, v_{j-1}, u_j, v_{j'}
+\end{equation*}
+reading the subscripts modulo $r$ if $j<j'$. The sequence has $2(j-j')$ terms if
+$j>j'$, and $2r-2(j'-j)$ terms if $j<j'$. In either case it has fewer than $2r$
+terms, and hence contradicts the minimality of $r$.
+\stmt
+\textit{Step} 3. \textit{For $u, v\in V(G)$, we say $u<v$ if there is a sequence
+$u_0, v_0,..., u_r, v_r$ with $r\ge 0$, such that $u=u_0$, $v_r=v$, and for $1\le i\le r$, $v_{i-1}$,
+$u_i$ are adjacent, joined by an edge not in any of $P_1,..., P_m$, and for
+$1\le i\le r-1$, $v_i$ occurs after $u_i$ on one of $P_1,..., P_m$, and $v_0$ occurs after $u_0$ on
+one of $P_1,..., P_m$, and either $v_r=u_r$ or $v_r$ occurs after $u_r$ on one of $P_1,..., P_m$.
+Then $(V(G), <)$ is a strict partial ordering.}
+
+We must check that if $u<v<w$, then $u<w$; and that $v\nless v$. First, if
+$u<v<w$, let
+\begin{align*}
+u&=u_0, v_0,..., u_r, v_r=v,\\
+v&=u_0', v_0',..., u_s', v_s'=w,
+\end{align*}
+be the corresponding sequences. Then the sequence
+\begin{equation*}
+u=u_0, v_0,..., u_r, v_0', u_1',..., u_s', v_s'=w
+\end{equation*}
+demonstrates that $u<w$. Second, if $v<v$, then there is a sequence
+\begin{equation*}
+v=u_0, v_0,..., u_r, v_r=v;
+\end{equation*}
+we have $r\ge 1$, since $u_0\ne v_0$, and so the sequence $u_1, v_1, u_2, v_2,..., u_{r-1}$,
+$v_{r-1}, u_r, v_0$ contradicts the result of step 2. Hence $<$ is a strict partial
+ordering.
+\stmt
+\textit{Step} 4. \textit{For each $v\in V(G)$, let $\mu(v)$ be an integer, chosen so that for $v$,
+$v'\in V(G)$, if $v<v'$, then $\mu(v)<\mu(v')$. (This is possible since $<$ is a strict
+partial ordering of $V(G)$.) Then $\mu$ satisfies our requirements.}
+\stmt
+Certainly if $v'$ occurs on some $P_i$ after $v$, then $v<v'$ and so $\mu(v)<\mu(v')$;
+hence condition (i) of (2.5) is satisfied. For any integer $t$, let $Z_t=\{v\in V(G)\colon$
+for some $i$ $(1\le i\le m)$, $v$ is the first vertex of $P_i$ with $\mu(v)\ge t\}$. Let $X_t=
+\{v\in V(G)\colon\mu(v)<t\}$, and $Y_t=V(G)-(X_t\cup Z_t)$. We must show that $Z_t$
+separates $X_t$ and $Y_t$.
+
+But $X_t\cup Y_t\cup Z_t=V(G)$, and so it is sufficient to prove no edge has one

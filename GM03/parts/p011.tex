@@ -1,0 +1,28 @@
+\origpage{59}{GRAPH MINORS. III}
+If $H$ is a minor of $G$ then each vertex $u$ of $H$ is formed by taking a nonempty subset $Z_u \subseteq V(G)$ and identifying the vertices in $Z_u$ by contraction. If $v \in Z_u$ we write $v \to u$.
+
+A \textit{separation} of a graph $G$ is a pair $(H_1, H_2)$, where $H_1, H_2$ are subgraphs of $G$ such that
+\begin{equation*}
+H_1 \cup H_2 = G, \qquad E(H_1) \cap E(H_2) = \emptyset.
+\end{equation*}
+Let $(H_1, H_2)$ be a separation of $G$. Let
+\begin{equation*}
+V(H_1) \cap V(H_2) = \{v_1, \dots, v_r\},
+\end{equation*}
+say. Let $s$ be the least \fix{positive} integer such that $2s \ge r$.\fixnote{fix:3-sleeve}{For $r=0$ the least integer $s$ with $2s\ge r$ is $s=0$, but the $r\times s$ cylinder is defined only for $s>0$ (page 54). The change affects only $r=0$, where $s$ becomes $1$. With this $s$, (3.9) holds for all $r\ge 0$.} Let $S_1, S_2$ be graphs, both isomorphic to the $r \times s$ cylinder, and let the vertex set of the central circles of $S_1, S_2$ be $\{u_1^1, \dots, u_r^1\}$ and $\{u_1^2, \dots, u_r^2\}$, respectively, in order. Suppose that $S_1$ is a proper minor of $H_2$, where $v_1 \to u_1^1, \dots, v_r \to u_r^1$, and $S_2$ is a proper minor of $H_1$ where $v_1 \to u_1^2, \dots, v_r \to u_r^2$.
+
+Let $G_k$ be the graph obtained from $H_k, S_k$ by making the identifications $v_i = u_i^k$ $(1 \le i \le r)$ $(k = 1, 2)$. We say that $G$ is the \textit{sleeve union} of $G_1, G_2$.
+
+\stmt
+(3.9) \textit{If $G$ is the sleeve union of $G_1, G_2$ then $G_1, G_2$ are both isomorphic to proper minors of $G$.}
+
+This is clear from the construction.
+
+\stmt
+(3.10) \textit{If $G$ is the sleeve union of $G_1, G_2$ then the tree-width of $G$ is the maximum of the tree-widths of $G_1, G_2$.}
+
+\textit{Proof.} Let $w$ be the maximum of the tree-widths of $G_1, G_2$. By (3.9) and (2.6), the tree-width of $G$ is at least $w$. We must prove the reverse inequality. $G_1$ has tree-width $\le w$, and so by (3.8), $H_1$ has a tree-decomposition $(T_1, \mathcal{X}_1)$ of width $\le w$, where $\mathcal{X}_1 = (X_t : t \in V(T_1))$ say, such that $\{v_1, \dots, v_r\} \subseteq X_{t_1}$ for some $t_1 \in V(T_1)$. Define $T_2, \mathcal{X}_2, t_2$ similarly for $H_2$, arranged so that $T_1, T_2$ are disjoint. Let $T$ be the tree constructed from $T_1, T_2$ by adding an edge joining $t_1, t_2$. Put $\mathcal{X} = (X_t : t \in V(T))$. It is easy to see that $(T, \mathcal{X})$ is a tree-decomposition for $G$ of width $\le w$, as required.
+
+\sectionhead{4. The Production of Cylinders}
+
+Let $r \ge 0$, $s \ge 1$ be integers, and let $M$ be a drawing of a planar graph $G$. We say that $M$ \textit{majors} the $r \times s$ cylinder if there is a nested sequence $C_1, \dots, C_s$ of circuits of $M$ and vertex-disjoint paths $P_1, \dots, P_r$ of $G$, each between $V(C_1)$ and $V(C_s)$, such that for $1 \le i \le r$ and $1 \le j \le s$, $P_i \cap C_j$ is a path.

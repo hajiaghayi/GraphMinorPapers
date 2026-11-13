@@ -1,0 +1,26 @@
+\origpage{126}{ROBERTSON AND SEYMOUR}
+\stmt
+(4.4) \textit{Let $\mathcal{T}$ be a respectful tangle of order $\theta$ in a 2-cell drawing $H$ in a surface $\Sigma$. Let $z \in A(H)$, let $\lambda \ge 2$ be an integer with $\theta > 4\lambda + 2$, and let $H' \subseteq H$ be a 2-cell subdrawing such that $a \in A(H')$ for every $a \in A(H)$ with $d(z, a) > \lambda$. Then there is a unique respectful tangle $\mathcal{T}'$ in $H'$ which is a $(4\lambda + 2)$-compression of $\mathcal{T}$, and it includes $(A \cap H', B \cap H')$ for every $(A, B) \in \mathcal{T}$ of order $< \theta - 4\lambda - 2$.}
+
+\stmt
+(4.5) \textit{Let $\mathcal{T}$ be a respectful tangle of order $\theta$ in a 2-cell drawing $H$ in a surface $\Sigma$. Let $z \in A(H)$, let $\lambda \ge 2$ be an integer with $\theta > 4\lambda + 2$, and let $H'$ be a 2-cell drawing in $\Sigma$ such that $a \in A(H')$ for every $a \in A(H)$ with $d(z, a) > \lambda$. Then}
+
+\hspace*{12pt}(i) \textit{there is a unique $(4\lambda + 2)$-compression $\mathcal{T}'$ of $\mathcal{T}$ in $H'$}
+
+\hspace*{12pt}(ii) \textit{$H - z^\lambda \subseteq H'$, and $\mathcal{T}'$ is the tangle induced in $H'$ from the unique $(4\lambda + 2)$-compression of $\mathcal{T}$ in $H - z^\lambda$}
+
+\hspace*{12pt}(iii) \textit{if $H' \subseteq H$ then $(A \cap H', B \cap H') \in \mathcal{T}'$ for every $(A, B) \in \mathcal{T}$ of order $< \theta - 4\lambda - 2$.}
+
+\textit{Proof.} By (4.3) and (4.4), there is a unique $(4\lambda + 2)$-compression of $\mathcal{T}$ in $H - z^\lambda$, $\mathcal{T}_0$ say. Since $d(z, e) > \lambda$ for every edge $e$ of $H - z^\lambda$ and $H - z^\lambda$ has no isolated vertices (unless $E(H) = \emptyset$, when $\lambda = 0$ and $H = H'$), it follows that $H - z^\lambda \subseteq H'$. Let $\mathcal{T}''$ be the tangle in $H'$ induced by $\mathcal{T}_0$. Then $\mathcal{T}''$ is a $(4\lambda + 2)$-compression, and hence $\mathcal{T}'' = \mathcal{T}'$, by (4.1). This proves (i) and (ii), and (iii) follows from (4.4). $\square$
+
+\stmt
+(4.6) \textit{Let $\mathcal{T}, \theta, H, \Sigma, z, \lambda, H', \mathcal{T}'$ be as in (4.5). Let $\mathcal{T}^*$ be a tangle in a graph $G$, and let $H, \eta, \mathcal{T}$ be a $\Sigma$-span in $G$ with respect to $\mathcal{T}^*$. Let $H'$ be rigid, and let $\eta'$ be an isomorphism from $H'$ to a subgraph of $G$, such that $\eta'(x) = \eta(x)$ for every vertex or edge $x$ of $H$ with $d(z, x) > \lambda$. Then $H', \eta', \mathcal{T}'$ is a $\Sigma$-span of order $\theta - 4\lambda - 2$, obtained from $H, \eta, \mathcal{T}$ by rearranging within $\lambda$ of $z$.}
+
+\textit{Proof.} We must verify conditions (i)-(iv) in the definition of $\Sigma$-span. Conditions (i) and (ii) are trivial, and since $\mathcal{T}'$ is a $(4\lambda + 2)$-compression it is by definition respectful, and so (iii) holds. It remains to show (iv). Let $(A^*, B^*) \in \mathcal{T}^*$ with order $< \theta - 4\lambda - 2$. We must show that
+\begin{equation*}
+(\eta'^{-1}(A^* \cap \eta'(H')), \eta'^{-1}(B^* \cap \eta'(H'))) \in \mathcal{T}'.
+\end{equation*}
+Let $H'' = H - z^\lambda$, and let $\mathcal{T}''$ be the unique $(4\lambda + 2)$-compression of $\mathcal{T}$ in $H''$. By (4.5)(ii), $\mathcal{T}'$ is the tangle induced in $H'$ by $\mathcal{T}''$; and so it suffices to show that
+\begin{equation*}
+(\eta'^{-1}(A^* \cap \eta'(H')) \cap H'', \eta'^{-1}(B^* \cap \eta'(H')) \cap H'') \in \mathcal{T}''.
+\end{equation*}

@@ -1,0 +1,24 @@
+\origpage{368}{N. Robertson, P.D. Seymour / Journal of Combinatorial Theory, Series B 90 (2004) 325--385}
+\noindent $H \ne F$ since $u \in ins(F) \setminus U(F)$. By 8.6 it follows that $U(H) \cap ins(F) \subseteq U(F)$, and in particular $h \notin ins(F) \setminus U(F)$. Thus by 13.3, since $u \in ins(F) \setminus U(F)$, it follows that $v_1, v_2 \in ins(F) \setminus U(F)$, and hence $bd(\Delta) \subseteq ins(F)$. Since the circuit $C$ of $\Gamma^*$ with $U(C) = bd(\Delta)$ satisfies $|E(C)| \le 2\rho + 2$, it follows that $\Delta = ins(C)$ because $W$ is a wheel, and $ins(C) \subseteq ins(F)$ since $U(C) \subseteq ins(F)$. Thus $\Delta \subseteq ins(F)$ and in particular, $U(H) \subseteq ins(F)$, a contradiction. Thus there is no such $\mathscr{T}$-enclave $F$.
+
+Let $H'$ be the 1-vertex graph with vertex $u$. We claim that $H'$ is a $W$-hub with radius $\rho - |E(S_{v_1} \cap S_{v_2})|$. For if $v \in V(\Gamma) \cap bd(W)$ then $S_{v_1} \cap S_{v_2}$ is a path of $S_v$ as we have seen, and so the subpath of $S_v$ from $v$ to $u$ has $|E(S_v)| - |E(S_{v_1} \cap S_{v_2})|$ edges, and hence either $\rho - |E(S_{v_1} \cap S_{v_2})|$ or one fewer. For a similar reason, there is no shorter path in $\Gamma^*$ from $v$ to $u$, for we could augment it by $S_{v_1} \cap S_{v_2}$ and obtain a path from $v$ to $V(H)$ shorter than $S_v$. It follows that $H'$ is a $W$-hub with radius $\rho - |E(S_{v_1} \cap S_{v_2})|$. Since $H$ is an optimal $W$-hub, we deduce that $E(S_{v_1} \cap S_{v_2}) = \emptyset$, and that $|V(H)| = 1$. But then $V(H) = \{h\} = \{u\}$, contrary to our supposition. This proves the first claim of the theorem, that $\Delta \cap U(H) = \emptyset$ unless $u = h$, when $\Delta \cap U(H) = \{h\}$. The second claim follows from the first claim and 13.2. $\square$
+
+Let $v \in R^* \cap bd(W)$, with neighbours $v_1, v_2$ in $\Gamma^* \cap bd(W)$. Let $f_i$ be the edge of $\Gamma^* \cap bd(W)$ with ends $v, v_i$ ($i = 1, 2$). If $S_{v_1}$ meets $S_{v_2}$ we define $\Delta_v$ to be the disc in $W$ bounded by the closure of
+\begin{equation*}
+(U(S_{v_1} \cup S_{v_2}) \setminus U(S_{v_1} \cap S_{v_2})) \cup f_1 \cup f_2.
+\end{equation*}
+If $S_{v_1}$ does not meet $S_{v_2}$, let their inner ends be $h_1, h_2$ respectively, let $P$ be the path of $H$ joining $h_1, h_2$ such that the disc in $W$ bounded by
+\begin{equation*}
+U(S_{v_1} \cup S_{v_2} \cup P) \cup \bar{f}_1 \cup \bar{f}_2
+\end{equation*}
+does not include $ins(H)$, and let $\Delta_v$ be this disc. In either case, let $D_v$ be the circuit of $\Gamma^*$ with $U(D_v) = bd(\Delta_v)$.
+
+\textbf{13.5.} \textit{With notation as above, $|E(D_v)| \le 4\rho + 4$, and $ins(D_v) = \Delta_v$.}
+
+\textbf{Proof.} Suppose that $|E(D_v)| > 4\rho + 4$. Since $|E(S_{v_1})|, |E(S_{v_2})| \le \rho$, it follows that $S_{v_1} \cap S_{v_2}$ is null. Let $P, Q, R$ be three paths of $\Gamma^*$ from $h_1$ to $h_2$, where $P \cup Q = D_v$ and $Q \cup R = H$. Now $|E(P)| \le 2\rho + 2$, and so $|E(Q)| > |E(P)|$. Since $H = Q \cup R$ is a $\mathscr{T}$-enclave, the second assertion of 8.5 implies that $ins(Q \cup R) \cap ins(P \cup R) = U(R)$, which is false. Thus $|E(D_v)| \le 4\rho + 4$. The second claim of the theorem follows since $W$ is a wheel of radius $\rho$. $\square$
+
+\textbf{13.6.} \textit{With notation as above, let $\mathscr{T}'$ be a tangle with $(\Gamma \cap out(D_v), \Gamma \cap ins(D_v)) \in \mathscr{T}'$, and let $F$ be a $\mathscr{T}$-enclave around $\mathscr{T}'$. Then $ins(F) \subseteq \Delta_v$.}
+
+\textbf{Proof.} The proof requires several steps. Let the inner end of $S_{v_i}$ be $h_i$ ($i = 1, 2$).
+
+\hspace*{12pt}(1) $|E(F)| \le |E(D_v)| \le 4\rho + 4$.

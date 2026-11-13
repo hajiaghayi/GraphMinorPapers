@@ -1,0 +1,18 @@
+\origpage{257}{GRAPH MINORS. VIII}
+\noindent graph with genus $\le g$ can be drawn on some surface in the list. Thus to prove (1.1) it suffices to prove the following.
+
+\stmt
+(1.2) \textit{For any surface $\Sigma$, every antichain whose members can all be drawn in $\Sigma$ is finite.}
+
+The key to our proof of (1.2) is to work with a slightly strengthened form, concerning graphs on $\Sigma$ with some bounded number of vertices from each graph chosen as roots. It is quite easy, using a lemma proved in [11], to show that the rooted form of (1.2) is true in general if it is true when $\Sigma$ is the sphere and all the roots lie on two distinguished regions (the so-called \textit{cylinder case}). With rather more difficulty and the aid of Higman's well-quasi-ordering theorem for finite sequences, we are able to reduce the cylinder case to the case when $\Sigma$ is the sphere and all the roots lie on one distinguished region (the \textit{disc case}). This very special case is the most difficult of all; to settle it we need the concepts of tree-width from [7, 9] and part of the theory of patchworks developed in [8]. These steps are performed more or less in reverse order.
+
+Surfaces in this paper have (possibly empty) boundary. While the presence of the boundary has no effect on the embedding capabilities of the surface, it enables us to work only with graphs drawn on a surface where the root vertices are the ones that lie on the boundary, and this is convenient for technical and notational reasons.
+
+\sectionhead{2. \textsc{Erd}\H{O}\textsc{S'} \textsc{Problem} \textsc{In} \textsc{Minors}}
+
+Here we show that Erd\H{o}s' problem can be reduced to showing that for any surface $\Sigma$, the class of minor-minimal graphs which cannot be drawn in $\Sigma$ is finite up to isomorphism. In fact, a more general statement is true. Let $P$ be a property of graphs such that if $G$ has $P$ and $H$ is isomorphic to a minor of $G$ then $H$ has $P$---we call such a property $P$ a \textit{hereditary property}. For example, if $\Sigma$ is a surface, the property ``$G$ can be drawn in $\Sigma$'' is hereditary. Let $T(P)$ denote the class of all graphs, minimal under topological containment, without property $P$, and let $S(P)$ denote the class of all graphs, minimal under minor containment, without property $P$. The main result of this section is the following.
+
+\stmt
+(2.1) \textit{For any hereditary property $P$, $T(P)$ is finite up to isomorphism if and only if $S(P)$ is finite up to isomorphism.}
+
+To obtain from this the reformulation of Erd\H{o}s' problem in terms of minors, we simply take $P$ to be the property of being drawable in $\Sigma$. To prove (2.1) we need a lemma. Let $e$ be an edge of a graph $G_1$ with distinct

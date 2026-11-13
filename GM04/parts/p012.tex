@@ -1,0 +1,20 @@
+\origpage{238}{ROBERTSON AND SEYMOUR}
+Let us say that a class $\mathscr{S}$ of star-decompositions is \textit{symmetric} if for every $(S, \sigma) \in \mathscr{S}$, and every star-decomposition $(S, \sigma')$ with $\sigma'(s)^- = \sigma(s)^-$ and $\bar{\pi}(\sigma'(s)) = \bar{\pi}(\sigma(s))$ for each $s \in V(S)$, we have $(S, \sigma') \in \mathscr{S}$.
+
+\stmt
+(4.2) \textit{Let $\mathscr{S}$ be good and symmetric, and let $(T_i, \tau_i)$ ($i = 1, 2, ...$) be a countable sequence of rotund tree-decompositions, each branching of which is in $\mathscr{S}$. Then there exist $i' > i \ge 1$ such that $\tau_i \times T_i$ is simulated in $\tau_{i'} \times T_{i'}$.}
+
+\textit{Proof.} Since $\mathscr{S}$ is good, and contains the branching of $(T_i, \tau_i)$ at $o(T_i)$, it follows that each $\tau_i \times T_i \in \mathscr{R}$. From (4.1) for each $i \ge 1$ we may choose a linked tree-decomposition $(T_i, \tau_i')$ of $\tau_i \times T_i$ such that $\tau_i'(t)^- = \tau_i(t)^-$ for each $t \in V(T_i)$. Then $\bar{\pi}(\tau_i'(t)) = \bar{\pi}(\tau_i(t))$ for all $t \in V(T_i)$, by conditions (v) and (vi) in the definition of a tree-decomposition. From the symmetry of $\mathscr{S}$, every branching of every $(T_i, \tau_i')$ is in $\mathscr{S}$. Since $\mathscr{S}$ is good, by (3.3) there exist $i' > i \ge 1$ such that $\tau_i' \times T_i = \tau_i \times T_i$ is simulated in $\tau_{i'}' \times T_{i'} = \tau_{i'} \times T_{i'}$, as required. $\square$
+
+\sectionhead{5. A \textsc{Lemma} \textsc{Of} \textsc{Thomas}}
+
+It is convenient to make use of a result of R. Thomas [13]. (We should perhaps comment on who did what in this area, because of a certain amount of circularity of reference. Theorem (1.5) was first proved in the original draft of this paper in 1982. Thomas, having heard of our result but not having seen the proof, worked out his own proof, and indeed extended (1.5) to infinite graphs and to better-quasi-ordering. He proved a lemma which we had not been able to prove in our early work and for which we had been forced to construct a clumsy substitute. Thomas' lemma is clearly better than our substitute, and we see no reason to stick to our original method.)
+
+The width of a tree-decomposition $(T, \tau)$ of a rooted hypergraph $G$ is
+\begin{equation*}
+\max(|V(\tau(t))| - 1 : t \in V(T))
+\end{equation*}
+and the \textit{tree-width} of $G$ is the minimum $w \ge 0$ such that $G$ has a tree-decomposition of width $\le w$. Thomas [13] proved (where $0$ denotes the null sequence) that
+
+\stmt
+(5.1) \textit{Let $G$ be a graph. If $(G, 0)$ has a tree-decomposition of width $\le w$, then it has a tree-decomposition $(T, \tau)$ of width $\le w$ such that for all distinct $t_1$, $t_2 \in V(T)$ and all $k \ge 0$ either there are $k$ mutually vertex-disjoint paths of $G$ from $V(\tau(t_1))$ to $V(\tau(t_2))$, or some edge of the path of $T$ between $t_1$ and $t_2$ has order $< k$.}

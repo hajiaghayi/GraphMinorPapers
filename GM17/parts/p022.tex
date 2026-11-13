@@ -1,0 +1,31 @@
+\origpage{183}{GRAPH MINORS, XVII}
+\textit{Proof.} If there is at most one such $c$, then $n$ is internal and (8.5) is violated. If there are only two, and $|\tilde{c}| = 2$ for one of them, then (8.5) is violated, unless $c$ is a border cell. $\square$
+
+\stmt
+(8.8) \textit{If $c_1, c_2$ are distinct cells with $\tilde{c}_1 \subseteq \tilde{c}_2$, then $c_1$ is a border cell, and $|\tilde{c}_2| = 3$.}
+
+\textit{Proof.} If $c_1$ is a border cell the claim follows from (8.6). Suppose then that $c_1$ is internal. If $c_2$ is a border cell, then $\tilde{c}_1 = \tilde{c}_2$ and (8.6) is violated. Thus $c_2$ is internal. Define $\Gamma' = (U(\Gamma) - c_1, N(\Gamma))$; this is a painting. Define
+\begin{align*}
+\alpha'(c_2) &= \alpha(c_1) \cup \alpha(c_2) \\
+\alpha'(c) &= \alpha(c) \quad (c \in C(\Gamma') - c_2).
+\end{align*}
+Then $(\Sigma, \Gamma', \alpha', \beta, \gamma)$ is a truer portrayal, a contradiction. $\square$
+
+\sectionhead{9. \textsc{Cell} \textsc{Connectivity} \textsc{In} A \textsc{True} \textsc{Portrayal}}
+
+Again, throughout this section $\pi = (\Sigma, \Gamma, \alpha, \beta, \gamma)$ is a true, $(2p + 3)$-redundant, $\mathcal{T}$-central portrayal of a hypergraph $G$, with warp $\le p$, and $ord(\mathcal{T}) > 4p + 5$. Now we study connectivity properties of the $\alpha(c)$'s for individual cells $c$.
+
+\stmt
+(9.1) \textit{Let $c_0$ be an internal cell, and let $v_1, v_2 \in \gamma(\tilde{c}_0)$. Then there is a path in $\alpha(c_0)^*$ from $v_1$ to $v_2$ with no other vertex in $\gamma(\tilde{c}_0)$.}
+
+\textit{Proof.} Otherwise there is a separation $(A_1, A_2)$ of $\alpha(c)$ with $v_i \in V(A_i)$ $(i = 1, 2)$ and $V(A_1 \cap A_2) \subseteq \gamma(\tilde{c}_0) - \{v_1, v_2\}$. Hence $|V(A_1 \cap A_2)| \le 1$. Choose discs $\Delta_1, \Delta_2 \subseteq \bar{c}_0$ such that
+\begin{align*}
+\Delta_1 \cap \Delta_2 &= \{n \in \tilde{c}_0 : \gamma(n) \in V(A_1 \cap A_2)\} \\
+\Delta_i &\supseteq \{n \in \tilde{c}_0 : \gamma(n) \in V(A_i)\} \quad (i = 1, 2).
+\end{align*}
+Let $c_i = \Delta_i - N(\Gamma)$ $(i = 1, 2)$, and let $\Gamma' = ((U(\Gamma) - c_0) \cup \Delta_1 \cup \Delta_2, N(\Gamma))$. Then $\Gamma'$ is a painting in $\Sigma$ with $C(\Gamma') = (C(\Gamma) - \{c_0\}) \cup \{c_1, c_2\}$. Define
+\begin{align*}
+\alpha'(c_1) &= A_1, \quad \alpha'(c_2) = A_2 \\
+\alpha'(c) &= \alpha(c) \quad (c \in C(\Gamma') - \{c_1, c_2\}).
+\end{align*}
+Then $(\Sigma, \Gamma', \alpha', \beta, \gamma)$ is a $\mathcal{T}$-central portrayal of $G$ resembling $\pi$ but truer, a contradiction. $\square$

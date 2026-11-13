@@ -1,0 +1,29 @@
+\origpage{282}{ROBERTSON AND SEYMOUR}
+\textit{Proof.} Take a framing $(\Gamma, F_1, F_2)$ of $(G, T)$ in a cylinder $\Sigma$, as in the definition of $\mathcal{A}(k, r, s)$. If we express $(G, T)$ as a concatenation by beginning with this framing and decomposing it (by the method of (15.1) and (15.2)) we express $(G, T)$ as a concatenation of tubular grafts of width $\ge r$ and index $\le k + r(r - 1)$, with the additional property that each of these grafts has a framing $(\Gamma', F_1', F_2')$, where $F_1', F_2' \subseteq \Sigma(F_1, F_2)$ are $\Gamma$-normal and $\Gamma' = \Gamma \cap \Sigma(F_1', F_2')$. But any such graft has length $< s$, since $(G, T) \in \mathcal{A}(k, r, s)$. The result follows. $\square$
+
+\stmt
+(15.4) \textit{For any integers $k, r, s \ge 0$, $\mathcal{A}(k, r, s)$ is well-rooted.}
+
+\textit{Proof.} Let $\mathcal{B}$ denote the class of grafts with index $\le k + r(r - 1) + 2s$ which embed in a disc. Then $\mathcal{B}$ is well-rooted by the result of Section 12. Let $\mathcal{B}'$ be the class of all tubular grafts with length $< s$ and index $\le k + r(r - 1)$. Then $\mathcal{B}' \subseteq W(\mathcal{B})$, and so $\mathcal{B}'$ is well-rooted by (13.3). But any member of $\mathcal{A}(k, r, s)$ is a concatenation over $\mathcal{B}'$, by (15.3), and hence $\mathcal{A}(k, r, s)$ is well-rooted by (14.5). $\square$
+
+\sectionhead{16. \textsc{Boundary-linking} \textsc{In} \textsc{Tubes}}
+
+Let $\Sigma$ be a cylinder, and let $r, s \ge 0$ be integers. A framing $(\Gamma, F_1, F_2)$ in $\Sigma$ is said to be \textit{$(r, s)$-boundary-linked} if there exist $\Gamma$-normal laminar hoops $F_1', F_2' \subseteq \Sigma(F_1, F_2)$ such that
+
+\hspace*{12pt}(i) $F_2' \subseteq \Sigma(F_1, F_1')$, $F_1' \subseteq \Sigma(F_2, F_2')$
+
+\hspace*{12pt}(ii) $(\Gamma \cap \Sigma(F_1', F_2'), F_1', F_2')$ has width $\ge r$ and length $\ge s$
+
+\hspace*{12pt}(iii) for $i = 1, 2$ there are $|V(\Gamma) \cap F_i|$ mutually vertex-disjoint paths of $\Gamma$ between $F_i$ and $F_i'$.
+
+Let $k, r, s \ge 0$ be integers, and let $\mathcal{B}(k, r, s)$ denote the class of all grafts of index $\le k$ which have framings in $\Sigma$ which are not $(r, s)$-boundary-linked. Let $\mathcal{B}(k)$ denote the class of all tubular grafts with index $\le k$. The main result of this section is the following.
+
+\stmt
+(16.1) \textit{If $\mathcal{B}(k - 1)$ is well-rooted then so is $\mathcal{B}(k, r, s)$, for any integers $k, r, s \ge 0$.}
+
+[We interpret $\mathcal{B}(-1) = \emptyset$.]
+
+The following lemma is used to prove (16.1).
+
+\stmt
+(16.2) $\mathcal{B}(k, r, s) \subseteq \mathcal{A}(k, r, s) \cup W(\mathcal{B}(k - 1) \oplus \mathcal{A}(2k, r, s + 2)) \cup W(\mathcal{B}(k - 1) \oplus \mathcal{B}(k - 1)).$

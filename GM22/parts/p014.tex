@@ -1,0 +1,42 @@
+\origpage{543}{N. Robertson, P. Seymour / Journal of Combinatorial Theory, Series B 102 (2012) 530--563}
+\textbf{6.3.} Suppose that the following hold:
+
+\hspace*{12pt}$\bullet$ $(G, u_1, \ldots, u_q)$, $(G', u'_1, \ldots, u'_q)$ and $(H, v_1, \ldots, v_q)$ are rooted digraphs;
+
+\hspace*{12pt}$\bullet$ $Z \subseteq V(G)$ with $u_1, \ldots, u_q \in Z$; $\{A_0, A_1, \ldots, A_k\}$ is a $Z$-division of $G$ with $Z \subseteq V(A_0)$, and for $1 \le i \le k$, $\pi_i$ is an ordering of $Z \cap V(A_i)$;
+
+\hspace*{12pt}$\bullet$ $Z' \subseteq V(G')$ with $u'_1, \ldots, u'_q \in Z'$; $\{A'_0, A'_1, \ldots, A'_k\}$ is a $Z'$-division of $G'$ with $Z' \subseteq V(A'_0)$; and for $1 \le i \le k$, $\pi'_i$ is an ordering of $Z' \cap V(A'_i)$;
+
+\hspace*{12pt}$\bullet$ $\delta \ge 0$ is an integer such that $(H, v_1, \ldots, v_q)$ has detail $\le \delta$, and for $1 \le i \le k$, $(A'_i, \pi'_i)$ has the same $\delta$-folio as $(A_i, \pi_i)$;
+
+\hspace*{12pt}$\bullet$ $\alpha \colon Z' \to Z$ is a function mapping $Z'$ onto $Z$ and for $1 \le i \le k$ mapping $\pi'_i$ to $\pi_i$\fix{, and $\alpha(u'_j) = u_j$ for $1 \le j \le q$};\fixnote{fix:6.3}{As printed, 6.3 is false. Nothing ties the roots of $G'$ to the roots of $G$, but the proof of Claim (9), on page 545, uses $\alpha(u'_i) = u_i$. For example, take $q = k = 1$ and $\delta = 0$. Let $G = G'$ have two vertices $a, b$ and no edges, with root $u_1 = u'_1 = a$, and let $H$ be one vertex $v_1$, its root. Let $Z = Z' = \{a, b\}$, $A_0 = A'_0 = G$, $A_1 = (\{a\}, \emptyset)$ with $\pi_1 = (a)$, and $A'_1 = (\{b\}, \emptyset)$ with $\pi'_1 = (b)$. Let $\alpha$ swap $a$ and $b$, let $\phi(v_1) = A_1$, and let $L'_0 = G'$. Every printed hypothesis holds, but a model $\phi'$ of $(H, v_1)$ in $(G', a)$ needs $\phi'(v_1)$ to be connected, to contain $a$ and to meet $A'_1$, and $a, b$ are not joined in $G'$. The paper uses 6.3 once, in Claim (12) in the proof of 7.3, on page 551, and the added hypothesis holds there, since $u_j = u'_j = w_j \in Z_0$ and $\alpha(v) = v$ for $v \in Z_0$.}
+
+\hspace*{12pt}$\bullet$ $\phi$ is a model of $(H, v_1, \ldots, v_q)$ in $(G, u_1, \ldots, u_q)$ such that $\phi(E(H)) \subseteq E(A_1 \cup \dots \cup A_k)$ and $\phi(v) \cap (A_1 \cup \dots \cup A_k)$ is non-null for each $v \in V(H)$;
+
+\hspace*{12pt}$\bullet$ there exists $L'_0 \subseteq A'_0$ such that $u, v \in Z'$ are $L'_0$-connected if and only if $\alpha(u), \alpha(v)$ are $(L \cap A_0)$-connected, where $L \subseteq G$ is minimal such that $Z \subseteq V(L)$ and $\phi(v) \subseteq L$ for each $v \in V(H)$.
+
+\textit{Then there is a model $\phi'$ of $(H, v_1, \ldots, v_q)$ in $(G', u'_1, \ldots, u'_q)$ such that}
+\begin{equation*}
+\phi'(E(H)) \subseteq E(A'_1 \cup \dots \cup A'_k)
+\end{equation*}
+\textit{and $\phi'(v) \cap (A'_1 \cup \dots \cup A'_k)$ is non-null for each $v \in V(H)$.}
+
+\textbf{Proof.} For $0 \le i \le k$, let $L_i = L \cap A_i$, let $Z_i = Z \cap V(A_i)$, and let $Z'_i = Z' \cap V(A'_i)$. From the definition of $L$, we see
+
+\hspace*{12pt}(1) \textit{For each $v \in V(H)$, $\phi(v)$ is a component of $L$, and every other component of $L$ is an isolated vertex in $Z$.}
+
+For the moment, fix $i$ with $1 \le i \le k$. Let $J$ be the digraph with vertex set the set of components of $L_i$, and edge set $\phi(E(H)) \cap E(A_i)$, where for $e \in \phi(E(H)) \cap E(A_i)$, if in $A_i$, $e$ has head (respectively, tail) $u$, then in $J$, $e$ has head (respectively, tail) the component of $L_i$ containing $u$. This exists, for if $e = \phi(f)$ where $f \in E(H)$ and $f$ has head (respectively, tail) $v$, then $u \in V(\phi(v)) \subseteq V(L)$. Let $\pi_i$ be the sequence $p_1, \ldots, p_t$, and for $1 \le j \le t$ let $P_{\delm{i}\fix{j}}$ be the component of $L_i$ with $p_{\delm{i}\fix{j}} \in V(P_{\delm{i}\fix{j}})$.\fixnote{fix:6.3-proof}{Here $i$ is fixed and $j$ runs over the terms $p_1, \ldots, p_t$ of $\pi_i$. The next sentence uses $P_1, \ldots, P_t$.} (This exists since $p_1, \ldots, p_t \in Z \subseteq V(L)$.) Then $(J, P_1, \ldots, P_t)$ is a rooted digraph.
+
+\hspace*{12pt}(2) \textit{$(J, P_1, \ldots, P_t)$ has detail $\le \delta$, and there is a model of it in $(A_i, \pi_i)$.}
+
+\textit{Subproof.} Certainly
+\begin{equation*}
+|E(J)| = |\phi(E(H)) \cap E(A_i)| \le |\phi(E(H))| = |E(H)| \le \delta.
+\end{equation*}
+If $P \in V(J)$ and $P \ne P_1, \ldots, P_t$, then $p_1, \ldots, p_t \notin V(P)$, and so $V(P) \cap Z = \emptyset$. Consequently, every edge of $G$ incident with a vertex in $P$ is an edge of $A_i$, since $V(A_i \cap A_j) \subseteq Z$ for $j \ne i$, and so every edge of $L$ incident with a vertex in $P$ is an edge of $L_i$, and hence belongs to $E(P)$. We deduce that $P$ is a component of $L$ with $u_1, \ldots, u_q \notin V(P)$. Let $v \in V(H)$ with $P = \phi(v)$; then $v \ne v_1, \ldots, v_q$, since $u_1, \ldots, u_q \notin V(P)$. But since $(H, v_1, \ldots, v_q)$ has detail at most $\delta$, there are at most $\delta$ such vertices $v$ in $H$, and consequently at most $\delta$ such vertices $P$ of $J$. This proves that $(J, P_1, \ldots, P_t)$ has detail at most $\delta$. Define $\psi(e) = e$ for $e \in E(J)$, and $\psi(P) = P$ for $P \in V(J)$; then $\psi$ is a model of $(J, P_1, \ldots, P_t)$ in $(A_i, \pi_i)$. This proves (2).
+
+Since $(A'_i, \pi'_i)$ has the same $\delta$-folio as $(A_i, \pi_i)$, it follows from (2) that there is a model of $(J, P_1, \ldots, P_t)$ in $(A'_i, \pi'_i)$. In other words,
+
+\hspace*{12pt}(3) \textit{For each component $P$ of $L_i$ there is a non-null connected subgraph $\psi_i(P) \subseteq A'_i$, and for each $e \in \phi(E(H)) \cap E(A_i)$ there is an edge $\psi_i(e) \in E(A'_i)$, with the following properties:}
+
+\hspace*{12pt}$\bullet$ \textit{for distinct components $P_1, P_2$ of $L_i$, $\psi_i(P_1) \cap \psi_i(P_2)$ is null; and if $P$ is a component of $L_i$, then $P$ contains the $j$th term of $\pi_i$ if and only if $\psi_i(P)$ contains the $j$th term of $\pi'_i$;}

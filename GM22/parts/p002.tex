@@ -1,0 +1,37 @@
+\origpage{531}{N. Robertson, P. Seymour / Journal of Combinatorial Theory, Series B 102 (2012) 530--563}
+\noindent of a linkage $L$ is the partition of its set of terminals determined by the components of $L$; that is, two terminals belong to the same block of the pattern if and only if they are the ends of some component of $L$. We say a linkage $L$ in $G$ is \textit{vital} if $V(L) = V(G)$ and there is no linkage $L' \ne L$ in $G$ with the same pattern as $L$.
+
+A \textit{tree-decomposition} of a graph $G$ is a pair $(T, W)$, where $T$ is a tree and $W = (W_t : t \in V(T))$ is a family of subgraphs of $G$, such that
+
+\hspace*{12pt}1. $\bigcup(W_t : t \in V(T)) = G$, and
+
+\hspace*{12pt}2. if $t, t', t'' \in V(T)$ and $t'$ lies on the path of $T$ between $t$ and $t''$ then $W_t \cap W_{t''} \subseteq W_{t'}$.
+
+Its \textit{width} is $\max (|V(W_t)| - 1 : t \in V(T))$, and the \textit{tree-width} of $G$ is the minimum width of a tree-decomposition of $G$. The following is Theorem 1.1 of [7], and in this paper we derive the unproved lemma of [5] from it.
+
+\textbf{1.1.} \textit{For every integer $p \ge 0$ there exists $w \ge 0$ such that every graph with a vital $p$-linkage has tree-width $\le w$.}
+
+\sectionhead{2. Vital subgraphs}
+
+We need to extend 1.1 from linkages to general subgraphs. If $L$ is a subgraph of $G$ we write $L \subseteq G$. If also $Z \subseteq V(G)$, we define the \textit{effect of} $L$ \textit{on} $Z$ to be the partition of $V(L) \cap Z$ in which two vertices belong to the same block if and only if they belong to the same component of $L$. If two subgraphs $L_1, L_2$ have the same effect on $Z$ then necessarily $V(L_1) \cap Z = V(L_2) \cap Z$. We say that a subgraph $L$ is \textit{vital for} $Z$ \textit{in} $G$ if $Z \subseteq V(L)$ and no subgraph $L' \ne L$ in $G$ has the same effect on $Z$ as $L$. We shall show
+
+\textbf{2.1.} \textit{For every integer $p \ge 0$, there exists $w \ge 0$ such that, if a graph $G$ has a subgraph which is vital for some $Z \subseteq V(G)$ with $|Z| \le p$, then $G$ has tree-width $\le w$.}
+
+We begin with the following.
+
+\textbf{2.2.} \textit{If $L$ is a subgraph of $G$, and $L$ is vital for $Z \subseteq V(G)$, then $L$ is a forest, $V(L) = V(G)$, and every vertex of $L$ not in $Z$ has degree at least 2 in $L$.}
+
+\textbf{Proof.} If $L$ has a circuit $C$, let $e \in E(C)$; then $L$ and $L \setminus \{e\}$ have the same effect on $Z$, a contradiction. Thus $L$ is a forest. If $v \in V(G) \setminus V(L)$, then $v \notin Z$ since $Z \subseteq V(L)$; let $L'$ be the forest obtained from $L$ by adding $v$. Then $L$ and $L'$ have the same effect on $Z$, a contradiction. Thus $V(L) = V(G)$. If $v \in V(L) \setminus Z$ has degree at most 1 in $L$, then $L \setminus \{v\}$ has the same effect on $Z$ as $L$, again a contradiction. The result follows. $\square$
+
+Secondly, we need
+
+\textbf{2.3.} \textit{Let $L$ be a forest, and for each $v \in V(L)$ let $d(v)$ be the degree of $v$ in $L$. Suppose that there are at most $p$ vertices of $L$ with $d(v) \le 1$. Then for all $Y \subseteq V(L)$, $\sum_{y \in Y} d(y) \le 2|Y| + p$.}
+
+\textbf{Proof.} Let $L_1, \ldots, L_t$ be the components of $L$, for $1 \le i \le t$ let $L_i$ have $p_i$ vertices of degree at most one, and let $Y_i = Y \cap V(L_i)$.
+
+\hspace*{12pt}(1) For $1 \le i \le t$, $\sum_{y \in Y_i} d(y) \le 2|Y_i| + p_i$.
+
+\textit{Subproof.} This is true if $|V(L_i)| = 1$, and so we may assume that $d(v) \ge 1$ for each $v \in V(L_i)$. Since $L_i$ is a tree,
+\begin{equation*}
+0 \le 2|V(L_i)| - 2|E(L_i)| = \sum_{v \in V(L_i)} (2 - d(v)) = \sum_{v \in Y_i} (2 - d(v)) + \sum_{v \in V(L_i) \setminus Y_i} (2 - d(v)).
+\end{equation*}

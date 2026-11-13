@@ -1,0 +1,29 @@
+\origpage{83}{GRAPH MINORS. XIII}
+\noindent $\xi = 2n$, $k = 3n$, $Z = \{s_1, \dots, s_n, t_1, \dots, t_n\}$, $Z_1 = \{s_1, t_1\}, \dots, Z_n = \{s_n, t_n\}$ and by choosing the $G_i$'s suitably from the subdivided $K_{3n}$.
+
+Let us digress for a moment to get a corollary of (5.4) of interest in ``pure'' graph theory. The following is due to Thomason [28].\fixnote{fix:5.5-thomason}{Thomason's paper [28] proves the constant $2.68$ only for all sufficiently large $p$. The bound for every $p \ge 1$ is proved in the formalization, and a written proof for $p \ge 51$ is in the folder \href{https://github.com/mahdi-jfri/GraphMinor/tree/main/docs/thomason}{docs/thomason} of the formalization.}
+
+\stmt
+(5.5) \textit{Let $p \ge 1$ be an integer, and let $G$ be a non-null simple graph with}
+\begin{equation*}
+|E(G)| \ge 2.68 p(\log_2(p))^{1/2} |V(G)|.
+\end{equation*}
+\textit{Then $G$ has a $K_p$-minor.}
+
+A graph $G$ is said to be \textit{$p$-linked}, where $p \ge 0$ is an integer, if for all $s_1, \dots, s_p$, $t_1, \dots, t_p \in V(G)$ with $s_i, t_i \ne s_j, t_j$ for $1 \le i < j \le p$, there are $p$ mutually vertex-disjoint paths of $G$ linking $s_i$ and $t_i$ for $1 \le i \le p$. It is known that for any $p$, every sufficiently connected graph is $p$-linked, but it is an open problem to determine the minimum $f(p)$ such that every $f(p)$-connected graph is $p$-linked. It seems that, up to now, the only known bounds on $f(p)$ were exponential in $p$. But from (5.4) and (5.5) we obtain that $f(p) \le 16.08 p (\log_2 (3p))^{1/2}$. More precisely,
+
+\stmt
+(5.6) \textit{For every integer $p \ge 0$, every $2p$-connected simple graph $G$ with $|E(G)| \ge 8.04 p(\log_2 3p)^{1/2} |V(G)|$ is $p$-linked.}
+
+\textit{Proof.} By (5.5) (since we may assume that $p \ge 1$ and $V(G) \ne \emptyset$) $G$ has a $K_{3p}$-minor. Hence there are $3p$ connected subgraphs $G_1, \dots, G_{3p}$ of $G$, mutually vertex-disjoint, such that for $1 \le i < j \le 3p$ there is an edge of $G$ between $G_i$ and $G_j$. Let $Z \subseteq V(G)$ with $|Z| \le 2p$. There is no separation $(A, B)$ of $G$ of order $< |Z|$ with $Z \subseteq V(A)$ and $A \cap G_i$ null for some $i$, since $G$ is $2p$-connected. From (5.4), setting $Z = \{s_1, \dots, s_p, t_1, \dots, t_p\}$, it follows that $G$ is $p$-linked, as required. $\square$
+
+\sectionhead{6. What To Do with a Clique}
+
+In this section we use (5.3) to show that, in solving Folio, if we find a large clique minor we can find an irrelevant vertex. We need the following.
+
+\stmt
+(6.1) \textit{Let $G$ be a digraph and let $Z \subseteq V(G)$ with $|Z| \le \xi$. Let $k = \lfloor \frac{5}{2}\xi \rfloor + 3\delta + 1$ and let $G_1, \dots, G_k$ be mutually vertex-disjoint connected subgraphs of $G$ such that for $1 \le i < j \le k$ there is an edge of $G$ between $G_i$ and $G_j$. Let $(A, B)$ be a separation of $G$ such that}
+
+\textit{(i) $A \cap G_i$ is null for some $i$ ($1 \le i \le k$)}
+
+\textit{(ii) $Z \subseteq V(A)$}

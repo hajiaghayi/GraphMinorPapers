@@ -1,0 +1,25 @@
+\origpage{136}{ROBERTSON AND SEYMOUR}
+We are given a cylinder $\Sigma$, a graph $G$ properly drawn on $\Sigma$, and a division $\Delta$ with
+\begin{equation*}
+\bigcup \Delta = V(G) \cap bd(\Sigma).
+\end{equation*}
+We first check that some graph drawn on $\Sigma$ realizes $\Delta$ (this is akin to checking the ``cross-free'' condition of (3.4) and can be done efficiently be adapting a planarity testing algorithm). Any realization of $\Delta$ is a forest with a homotopy class, and given the homotopy class we can test for the existence of a subgraph of $G$ in this class using ROUTED FOREST CONTAINMENT. Thus we are finished provided that we can satisfactorily bound the number of different homotopy classes to be checked.
+
+If $s, t \in V(H) \cap bd \Sigma$ lie in the same component of $H$, let $H(s, t)$ denote the path of the forest $H$ between them, as before. Let $C_1, C_2$ be the cuffs of $\Sigma$. To specify the homotopy class of $H$, it suffices to specify
+
+\hspace*{12pt}(i) the homotopy class of $H(s, t)$ for every pair of vertices $s, t \in V(H) \cap C_i$ for which $H(s, t)$ exists ($i = 1, 2$), and
+
+\hspace*{12pt}(ii) if some $\delta \in \Delta$ meets both $C_1$ and $C_2$, the homotopy class of $H(s, t)$ for some $s \in V(H) \cap C_1$ and $t \in V(H) \cap C_2$ for which $H(s, t)$ exists,
+
+as is easily seen. Let $\Sigma'$ be the disc obtained from $\Sigma$ by ``sewing'' a disc onto $C_2$. The number of possibilities involved in (i) when $i = 1$ is at most the number of regions of a forest $F$ properly drawn in $\Sigma'$ with
+\begin{equation*}
+V(F) \cap bd(\Sigma') = \bigcup \Delta \cap C_1;
+\end{equation*}
+that is, it is at most $|\bigcup \Delta \cap C_1|$. Similarly when $i = 2$ the number of possibilities is at most $|\bigcup \Delta \cap C_2|$. Thus the total number of possible assignments in (i) is at most
+\begin{equation*}
+\left| \bigcup \Delta \cap C_1 \right| \cdot \left| \bigcup \Delta \cap C_2 \right|.
+\end{equation*}
+To bound the number of assignments we need consider in (ii) we proceed as follows. Choose $s \in C_1 \cap V(H)$ and $t \in C_2 \cap V(H)$ such that $H(s, t)$ exists. (If there are no such $s, t$ then (ii) is vacuous and presents no problem.) We need only consider homotopy classes for $H(s, t)$ which are feasible in $G$. By (5.12) with $k = 1$, there are at most $|V(G)|$ of these, and we can efficiently find them by using the algorithm (5.11). Thus the total number of homotopy classes for $H$ that we need to check is at most
+\begin{equation*}
+\left| \bigcup \Delta \cap C_1 \right| \cdot \left| \bigcup \Delta \cap C_2 \right| \cdot |V(G)|.
+\end{equation*}

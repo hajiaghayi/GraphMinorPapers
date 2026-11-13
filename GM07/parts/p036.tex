@@ -1,0 +1,31 @@
+\origpage{247}{GRAPH MINORS. VII}
+\noindent bounded by a polynomial in the size of $G$. (However, it is not a practical algorithm---its existence is of interest mainly from the point of view of the theory of NP-completeness.)
+
+The essential idea is that we test if our Theorem (7.5) can be applied. If so, the forest is $G$-feasible. If not, then either
+
+\hspace*{12pt}(i) $\Sigma$ is disconnected; we can consider its components separately, or
+
+\hspace*{12pt}(ii) $\Sigma \cong \Sigma(0, 0, c)$ where $c \le 2$; for these cases an algorithm was given in [3], or
+
+\hspace*{12pt}(iii) $G$ is not boundary-linked; in which case we can cut $\Sigma$ along the relevant $O$-arc which is too short, and reduce to several problems on a surface homeomorphic to $\Sigma$, but with $|V(G) \cap \mathrm{bd}(\Sigma)|$ reduced by at least one, or
+
+\hspace*{12pt}(iv) $\omega(G)$ as defined in Section 8 is too small; in which case we can cut $\Sigma$ along the offending schism, and reduce to several problems on a surface simpler than $\Sigma$.
+
+In cases (iii) and (iv), the number of problems to which we reduce is a function of $\Sigma$ and $|V(H) \cap \mathrm{bd}(\Sigma)|$ alone, and does not depend on the size of $G$; and each of these problems is solvable in polynomial time in the size of $G$ by (say) induction on $3a + 2b + c$, and for fixed $3a + 2b + c$ by induction on $|V(H) \cap \mathrm{bd}(\Sigma)|$ (where $\Sigma \cong \Sigma(a, b, c)$). We need to check
+
+\hspace*{12pt}(a) that before the above procedure we may arrange $\Sigma, H, G$ so that $G$ is proper in $\Sigma$ and
+\begin{equation*}
+V(G) \cap \mathrm{bd}(\Sigma) = V(H) \cap \mathrm{bd}(\Sigma),
+\end{equation*}
+and that this property is preserved under the reductions;
+
+\hspace*{12pt}(b) that in case (iv), when we cut along a schism, the quantity ``$3a + 2b + c$'' is smaller, for each component of the new surface, than it was for $\Sigma$,
+
+\hspace*{12pt}(c) that in case (iii), the reduction does indeed decrease the quantity $|V(H) \cap \mathrm{bd}(\Sigma)|$ by at least one, for each component of the new surface, and
+
+\hspace*{12pt}(d) that in cases (iii) and (iv), the solution of the original problem is equivalent to the solution of a bounded number of problems on the new surface.
+
+Let us turn then to the reductions used in (iii) and (iv). We treat them together. Let $X \subseteq \Sigma$ be either a schism or an $O$-arc surrounding some cuff, and let $X$ be $G$-normal; and in addition let
+\begin{equation*}
+X \cap \mathrm{bd}(\Sigma) \subseteq V(G).
+\end{equation*}

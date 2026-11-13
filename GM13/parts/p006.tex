@@ -1,0 +1,19 @@
+\origpage{70}{ROBERTSON AND SEYMOUR}
+\stmt
+(2.3) \textit{Let $(A, B)$ be a separation of a digraph $G$, and let $Z \subseteq V(A)$. If $v \in V(B)$ is irrelevant to the $\delta$-folio of $B$ relative to $V(A \cap B)$ then it is irrelevant to the $\delta$-folio of $G$ relative to $Z$.}
+
+\fix{To see this, let $v$ be irrelevant to the $\delta$-folio of $B$ relative to $V(A \cap B)$. Then $v \notin V(A \cap B)$, and so $v \notin V(A)$, and $v \notin Z$ since $Z \subseteq V(A)$. Let $Z' = Z \cup V(A \cap B)$. Now $(A, B \setminus v)$ is a separation of $G \setminus v$, and $V(A \cap (B \setminus v)) = V(A \cap B) \subseteq Z'$. Since $Z \subseteq V(A)$ and $v \notin Z'$, we have $Z' \cap V(B) = Z' \cap V(B \setminus v) = V(A \cap B)$, and $Z' \cap V(A) = Z'$. By hypothesis the $\delta$-folios of $B$ and $B \setminus v$ relative to $V(A \cap B)$ are equal. Hence by (2.2), applied to the separations $(A, B)$ of $G$ and $(A, B \setminus v)$ of $G \setminus v$, the $\delta$-folios of $G$ and $G \setminus v$ relative to $Z'$ are equal. By (2.1), their $\delta$-folios relative to $Z$ are equal, and since $v \notin Z$, $v$ is irrelevant to the $\delta$-folio of $G$ relative to $Z$.}\fixnote{fix:2.3-proof-added}{The paper says only that (2.3) follows easily from (2.1) and (2.2). The argument above is the one used in the formalization.}
+
+The idea of our algorithm for Folio is as follows: If $G$ can be divided into trivial pieces by cutsets of bounded size we can solve Folio directly, using a method of Arnborg and Proskurowski [2]. If not there is an irrelevant vertex, and we give a procedure to find such a vertex. We delete it, and repeat the process as often as necessary, until the graph is reduced so much that the Arnborg-Proskurowski method can be applied. The first part of the paper (Sections 3 and 4) cover detecting and utilizing that $G$ has bounded ``branch-width,'' that is, that $G$ can be divided into trivial pieces by cutsets of bounded size. The remainder of the paper concerns finding an irrelevant vertex. This turns out to be easy if we can find a large clique minor (Sections 5 and 6); the main problem is what should be done if we have not found such a minor. In that case it follows from an earlier result of this series that $G$ has a large grid minor; and the remainder of the paper concerns how to exploit a large grid minor to obtain either a large clique minor or an irrelevant vertex. For this we shall make use of a lemma which is a consequence of the main results of this series and which will be proved in a future paper. (The lemma is an assertion that under certain circumstances, a given vertex is irrelevant.)
+
+\sectionhead{3. Branch-Width}
+
+A \textit{branch-decomposition} of a graph or digraph $G$ is a pair $(T, \tau)$, where
+
+\hspace*{12pt}(i) $T$ is a tree and every vertex of $T$ has valency 1 or 3
+
+\hspace*{12pt}(ii) $\tau$ is a bijection from $E(G)$ to the set of leaves of $T$.
+
+(The \textit{leaves} of $T$ are the vertices with valency 1.) For each $f \in E(T)$ the edges $e$ of $G$ are divided into two sets, depending on which component of $T \setminus f$ contains $\tau(e)$. The \textit{order} of $f$ is the number of vertices of $G$ incident with an edge in each set. The \textit{width} of $(T, \tau)$ is the maximum order of edges of $T$, and the \textit{branch-width} of $G$ is the minimum width of all branch-decompositions of $G$. (If there are no branch-decompositions of $G$, then $|E(G)| \le 1$ and $G$ has branch-width 0 by convention.) Branch-width is closely related to ``tree-width''---see [19].
+
+Our first objective is an algorithm which decides either that $G$ has branch-width $\le 3\omega$, or that $G$ has branch-width $\ge \omega$. For that we need the following lemma.

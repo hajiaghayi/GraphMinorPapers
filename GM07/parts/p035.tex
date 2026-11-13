@@ -1,0 +1,31 @@
+\origpage{246}{ROBERTSON AND SEYMOUR}
+There remain the disc and the sphere. They are both easily dealt with using (9.3).
+
+\stmt
+(9.4) \textit{Let $\Sigma$ be a closed disc with cuff $C$ and let $(H, H^+, H^-)$ be a proper digraph in $\Sigma$. Let $r$ be defined as in (9.3). Let $(G, G^+, G^-)$ be a proper digraph in $\Sigma$, such that $V(G) \cap \mathrm{bd}(\Sigma) = V(H) \cap \mathrm{bd}(\Sigma)$. Suppose that there are disjoint $G$-normal $O$-arcs $F_1, F_2$ of $\Sigma$, with $F_1$ inside $F_2$, such that}
+
+\hspace*{12pt}(i) \textit{$|V(G) \cap F| \ge 2r$ for every $G$-normal $[0, 1]$-arc $F$ with $F \cap F_1 \ne \emptyset \ne F \cap F_2$,}
+
+\hspace*{12pt}(ii) \textit{$k(F_1, F_2) \ge r$, and}
+
+\hspace*{12pt}(iii) \textit{$k(F_1, C) \ge |V(G) \cap C|$.}
+
+\textit{Then $(H, H^+, H^-)$ is a boundary-rooted minor of $(G, G^+, G^-)$.}
+
+\textit{Proof.} Choose a closed disc $\Delta \subseteq \Sigma$ with $\Delta$ inside $F_1$ and $\Delta \cap U(G) = \emptyset$. The result follows by applying (9.3) to the surface obtained from $\Sigma$ by removing the interior of $\Delta$, and to an isomorphic copy of $(H, H^+, H^-)$ in this surface.
+
+\stmt
+(9.5) \textit{Let $\Sigma$ be a sphere, and let $(H, H^+, H^-)$ be a proper digraph in $\Sigma$. Let $r$ be defined as in (9.3). Let $(G, G^+, G^-)$ be a proper digraph in $\Sigma$. Suppose that there are disjoint $G$-normal $O$-arcs $F_1, F_2$ of $\Sigma$ satisfying (i) and (ii) of (9.4). Then $(H, H^+, H^-)$ is a boundary-rooted minor of $(G, G^+, G^-)$.}
+
+\textit{Proof.} Choose a closed disc $\Delta \subseteq \Sigma$ with $\Delta \cap F_2 = \emptyset$ and $\Delta \cap U(G) = \emptyset$, such that $\Delta$ and $F_1$ lie in different components of $\Sigma - F_2$. The result follows by applying (9.4) to the surface obtained from $\Sigma$ by removing the interior of $\Delta$, and to an isomorphic copy of $(H, H^+, H^-)$ in this surface.
+
+As a consequence of (9.5) we have the following, an undirected form of which was stated without proof in [3].
+
+\stmt
+(9.6) \textit{Let $(G, G^+, G^-)$, $(H, H^+, H^-)$ be directed graphs in a sphere $\Sigma$, where $G$ is isomorphic to an $N \times N$-grid. If $N$ is sufficiently large (bounded below by a function of $H$) then $(H, H^+, H^-)$ is a minor of $(G, G^+, G^-)$.}
+
+[The $N \times N$-grid is the adjacency graph of the squares of a chessboard with $N^2$ squares.]
+
+\sectionhead{10. An Algorithm}
+
+In this section we describe how our main result (7.5) can be used to give an algorithm to test if a given forest $H$ is $G$-feasible, where $G$ is a graph in a surface $\Sigma$. For fixed $\Sigma$ and fixed $H$, the running time of the algorithm is

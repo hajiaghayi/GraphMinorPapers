@@ -1,0 +1,48 @@
+\origpage{43}{GRAPH MINORS}
+\textit{Proof}. We may assume, by deletion, that every vertex and edge of $G$ is
+either in some $P_i$ or in some $B_j$; and by contraction, that every vertex is in
+some $B_j$. For $1\le j\le n$ let $v(j)$ be the centre of the star $B_j$, and let the
+common vertex of $P_i$ and $B_j$ be $v(i, j)$ $(1\le i\le m)$. We assume, for a
+contradiction, that $m\ge\theta$ and $n\ge\theta(\theta-1)$. For $1\le k\le\theta$, let $Q_k$ be the
+subgraph of $G$ induced by
+\begin{multline*}
+\bigcup_{1\le l\le\theta-1}\{v(l, (k-1)(\theta-1)+l),\\
+v((k-1)(\theta-1)+l), v(l+1, (k-1)(\theta-1)+l)\}.
+\end{multline*}
+We see that for $1\le k\le\theta$, $Q_k$ is a path, meeting $P_1,..., P_\theta$ in that order, and
+each $P_i$ meets $Q_1,..., Q_\theta$ in that order. But then $G$ has a minor isomorphic to
+the $\theta$-grid, a contradiction.
+\stmt
+(2.3). \textit{If $P_1,..., P_m$ are disjoint paths of $G\in\mathscr{F}_\theta$, and $B_1,..., B_n$ are disjoint
+connected subgraphs of $G$, and each $P_i$ meets each $B_j$, and for $1\le j<j'\le n$
+all vertices of $B_j$ on $P_i$ occur before all vertices of $B_{j'}$, then either $m<\frac12\theta^2$ or
+$n<\theta^{2\theta-2}$.}
+\stmt
+\textit{Proof}. If possible, choose a counterexample with $|E(G)|+m$ minimum.
+Then evidently we have $m=\frac12\theta^2$.
+
+If some $P_i$ has more than one vertex in common with some $B_j$, we may
+contract the edges of $P_i$ between the two vertices of $B_j$ and produce a smaller
+counterexample, a contradiction. Thus each $P_i$ meets each $B_j$ in exactly one
+vertex, and in particular no edge is both in some $P_i$ and in some $B_j$. Each $B_j$
+is a tree, for if some $B_j$ is not, we may delete an edge from it and produce a
+smaller counterexample. Every vertex $v$ of each $B_j$ is on some $P_i$; for if not,
+we may contract some edge of $B_j$ incident with $v$ and produce a smaller
+counterexample. It follows that each $B_j$ has exactly $\frac12\theta^2$ vertices.
+
+It is elementary that for $1\le j\le n$, $B_j$ has a subgraph $Q_j$ which is either a
+path with $\theta$ vertices or a tree with $\theta$ end-vertices.
+
+For $1\le j\le n$, let $I_j\subseteq\{1,..., \frac12\theta^2\}$ be $\{i\colon P_i$ meets $Q_j$ in some vertex which,
+if $Q_j$ is not a path, is an end-vertex of $Q_j\}$. Then $|I_j|=\theta$ for all $j$, and so there
+exists $J\subseteq\{1,..., n\}$ with
+\begin{equation*}
+|J|\ge n\Big/\binom{\frac12\theta^2}{\theta}
+\end{equation*}
+such that $I_j=I_{j'}$ for $j, j'\in J$.
+
+Let $J_1\subseteq J$ be $\{j\in J\colon Q_j$ is a path$\}$ and let $J_2=J-J_1$. By (2.1),
+$|J_1|<\frac12\theta\cdot\theta!$, and by (2.2) $|J_2|<\theta(\theta-1)$. Thus
+\begin{equation*}
+|J|<\tfrac12\theta\cdot\theta!+\theta(\theta-1)
+\end{equation*}

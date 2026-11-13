@@ -1,0 +1,30 @@
+\origpage{561}{N. Robertson, P. Seymour / Journal of Combinatorial Theory, Series B 102 (2012) 530--563}
+From (3), (4) and (5) we see that (J4) holds.
+
+\hspace*{12pt}(6) \textit{For each $A \in \mathcal{A}$, there is a region of $\Gamma$ incident with $v(A)$ having non-empty intersection with $D(A)$.}
+
+\textit{Subproof.} If $v(A) \in V(A)$ then $v(A) \in V(A \cap \Gamma) \subseteq D(A)$ and the claim is true. We assume then that $v(A) \notin V(A)$. Let $P$ be a path of $G \setminus W$ between $v(A)$ and a vertex of $\bar{\pi}(A)$ with no vertex in $V(\Gamma)$ except $v(A)$. By hypothesis (v), the only vertices of $J \setminus W$ incident in $G$ with edges not in $J$ belong to $V(C_0)$, and no vertex of $P$ belongs to $V(C_0) \subseteq V(\Gamma)$ except possibly $v(A)$. Since both ends of $P$ belong to $V(J \setminus W)$, it follows that $P \subseteq J \setminus W$. Let the vertices of $P$ in $Z \cup \{v\}$ be $v_0, v_1, \dots, v_k$ in order in $P$, where $v_0 \in \bar{\pi}(A)$ and $v_k = v$. For $1 \le i \le k$, let $P_i$ be the subpath of $P$ between $v_{i-1}$ and $v_i$. For $0 \le i \le k - 1$ let $r_i$ be the region of $\Gamma$ in $\Sigma$ containing $v_i$; this exists since $v_i \in Z \subseteq \Sigma$ and $v_i \notin U(\Gamma)$. For $1 \le i \le k$, since no internal vertex of $P_i$ belongs to $Z$ and $\mathcal{A}$ is a $Z$-division of $J$, there exists $A_i \in \mathcal{A}$ such that $P_i \subseteq A_i$. For $1 \le i < k$, both $v_{i-1}$ and $v_i$ belong to $Z$ and hence to $Z \cap V(A_i) = \bar{\pi}(A_i)$. Consequently, $v_{i-1}$ and $v_i$ are ends of a line in $\text{bd}(D(A_i))$ with no internal point in $V(\Gamma)$, and hence $r_{i-1} = r_i$. Similarly, if $v_k \in Z$ then $r_{k-1}$ is incident with $v_k = v$, and since $r_0 = r_1 = \dots = r_{k-1}$ the result is true. We assume then that $v_k \notin Z$, and so $v_k \notin \bar{\pi}(A_k)$. Consequently, $v_{k-1} \in \bar{\pi}(A_k)$, and since $v_{k-1} \notin V(\Gamma)$ we deduce that $|\bar{\pi}(A_k) \cap V(\Gamma)| \le 2$, and so $|\text{bd}(D(A_k)) \cap V(\Gamma)| \le 2$. Since $V(\Gamma \cap D(A_k)) \not\subseteq \text{bd}(D(A_k))$, $\Gamma \cap D(A_k)$ is a path with both ends in $\text{bd}(D(A_k))$, and so $r_0 = r_1 = \dots = r_{k-1}$ is incident with $v = v_k \in V(\Gamma \cap D(A_k))$. This proves (6).
+
+Let $K_0 \subseteq G$ be such that $(J, K_0)$ is a separation of $G$ with $V(J \cap K_0) = V(C_0) \cup W$; this exists, from the definition of $J$.
+
+\hspace*{12pt}(7) \textit{$A \cap K_0 = N_W$ for all $A \in \mathcal{A}'$.}
+
+\textit{Subproof.} Suppose that $A \in \mathcal{A}$ and $A \cap K_0 \ne N_W$. Since $A \subseteq J$ and $E(J \cap K_0) = \emptyset$ and $V(J \cap K_0) = V(C_0) \cup W$, it follows that $V(A \cap C_0) \ne \emptyset$. Hence $d(v(A), V(C_0)) \le 3$ by (6), and so $A \notin \mathcal{A}'$. This proves (7).
+
+Let $N = \Gamma \cup N_W \cup \bigcup(A : A \in \mathcal{A}')$, and let $K = K_0 \cup \bigcup(A \setminus E(A \cap \Gamma) : A \in \mathcal{A} \setminus \mathcal{A}').$
+
+\hspace*{12pt}(8) \textit{$(N, K)$ is a separation of $G$ and $W \subseteq V(K)$, and if $v \in V(K \cap N) \setminus W$ then $v \in \Sigma$ and $d(v, \Sigma \setminus \Delta_0) \le 7$.}
+
+\textit{Subproof.} Now
+\begin{equation*}
+\Gamma \cup \bigcup(A \setminus E(A \cap \Gamma) : A \in \mathcal{A} \setminus \mathcal{A}') \cup \bigcup(A : A \in \mathcal{A}') = \bigcup(A : A \in \mathcal{A}) = J
+\end{equation*}
+and $J \cup K_0 = G$, and so $N \cup K = G$. If $e \in E(K \cap N)$, then $e \notin E(K_0)$ since $N \subseteq J$ and $E(J \cap K_0) = \emptyset$, and so $e \in E(A \setminus E(A \cap \Gamma))$ for some $A \in \mathcal{A} \setminus \mathcal{A}'$; but then $e \notin E(\Gamma)$, and $e \notin E(\bigcup(A : A \in \mathcal{A}'))$ by hypothesis (vi), and so $e \notin E(N)$, a contradiction. Thus $(N, K)$ is a separation of $G$, and $W \subseteq V(K_0) \subseteq V(K)$. Let $v \in V(K \cap N) \setminus W$. If $v \in V(K_0)$ then
+\begin{equation*}
+v \in V(K_0 \cap N) \subseteq V(K_0 \cap J) = V(C_0) \cup W
+\end{equation*}
+and so $(v, \Sigma \setminus \Delta_0) \le 1$ as required. If $v \notin V(K_0)$, let $v \in V(A \cap N)$ where $A \in \mathcal{A} \setminus \mathcal{A}'$. Either $v \in V(\Gamma)$, or $v \in V(A')$ for some $A' \in \mathcal{A}'$ and hence $v \in \bar{\pi}(A)$, and since $V(\Gamma \cap A) \subseteq D(A)$ and $\bar{\pi}(A) \subseteq D(A)$ it follows that $v \in D(A)$. By (5) and (6), $d(v, v(A)) \le 3$ (for either $v(A) \in V(A)$ or $\bar{\pi}(A) \not\subseteq V(\Gamma)$). But $d(v(A), \Sigma \setminus \Delta_0) \le 4$ since $A \notin \mathcal{A}'$, and so $d(v, \Sigma \setminus \Delta_0) \le 7$. This proves (8).
+
+\hspace*{12pt}(9) \textit{There is a closed disc $\Delta \subseteq \Sigma$ with $\text{bd}(\Delta) \subseteq U(\Gamma)$ and $v^* \notin \Delta$ and $\Sigma \setminus \Delta_0 \subseteq \Delta$, such that $d(v^*, \Delta) \ge \theta'$ and $d(v^*, x) \le \theta' + 2$ for every $x \in A(\Gamma)$ with $x \not\subseteq \Delta \setminus \text{bd}(\Delta)$.}
+
+\textit{Subproof.} This follows by 5.1 (with $\kappa, z$ replaced by $\theta', v^*$), and taking the closure of the complement of the disc given by 5.1.

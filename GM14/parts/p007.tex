@@ -1,0 +1,34 @@
+\origpage{29}{GRAPH MINORS. XIV}
+\hspace*{12pt}(iii) there are two disjoint $H$-paths in $G$ with ends $a, c$ and $b, d$ respectively.
+
+\sectionhead{4. \textsc{Statement} \textsc{Of} \textsc{The} \textsc{Theorem}}
+
+To state our main result precisely we need several further definitions. Let $H$ be a drawing in a surface $\Sigma$. If $F \subseteq \Sigma$ is an $O$-arc with $F \cap U(H) \subseteq V(H)$ and $|F \cap V(H)| \le 2$, a \textit{dial for $F$ (or for $F, H$ in case of ambiguity)} is a closed disc $\Delta \subseteq \Sigma$ with $bd(\Delta) = F$, such that either
+
+\hspace*{12pt}(i) $\Delta \cap U(H) \subseteq F$, or
+
+\hspace*{12pt}(ii) $|F \cap V(H)| = 2$ and $H \cap \Delta$ is a path joining the two vertices in $F \cap V(H)$.
+
+We say that $H$ is \textit{rigid (in $\Sigma$)} if $\Sigma$ includes a dial for every $O$-arc $F \subseteq \Sigma$ with $F \cap U(H) \subseteq V(H)$ and $|F \cap V(H)| \le 2$.
+
+Let $\Omega$ be a cyclic permutation of the elements of some set. We denote this set by $\overline{\Omega}$. If $V$ is a set and $\overline{\Omega} \subseteq V$, $\Omega$ is said to be a \textit{cyclic permutation in $V$}. If $F$ is an $O$-arc, and $X \subseteq F$ is finite, then both orientations of $F$ induce cyclic permutations of $X$, and we call these the \textit{natural orders of $X$ from $F$}.
+
+A \textit{society} is a pair $(G, \Omega)$, where $G$ is a graph and $\Omega$ is a cyclic permutation in $V(G)$. A \textit{segregation} of a graph $G$ is a set $\mathscr{S}$ of societies such that
+
+\hspace*{12pt}(i) $A \subseteq G$ for every $(A, \Omega) \in \mathscr{S}$, and $\bigcup (A \colon (A, \Omega) \in \mathscr{S}) = G$, and
+
+\hspace*{12pt}(ii) $V(A \cap A') \subseteq \overline{\Omega} \cap \overline{\Omega}'$ and $E(A \cap A') = \emptyset$ for all distinct $(A, \Omega), (A', \Omega') \in \mathscr{S}$.
+
+We write $V(\mathscr{S}) = \bigcup (\overline{\Omega} \colon (A, \Omega) \in \mathscr{S})$. A segregation $\mathscr{S}$ is a \textit{3-segregation} if $|\overline{\Omega}| \le 3$ for all $(A, \Omega) \in \mathscr{S}$. Actually, in this paper all the segregations we consider will be 3-segregations.
+
+Let $\mathscr{S} = \{(A_1, \Omega_1), \dots, (A_k, \Omega_k)\}$ be a segregation of $G$, and let $\Sigma$ be a surface. An \textit{arrangement of $\mathscr{S}$ in $\Sigma$} is a function $\alpha$ with domain $\mathscr{S} \cup V(\mathscr{S})$, such that (writing $\alpha(A, \Omega)$ for $\alpha((A, \Omega))$):
+
+\hspace*{12pt}(i) $1 \le i \le k$, $\alpha(A_i, \Omega_i)$ is a closed disc $\Delta_i \subseteq \Sigma$, and $\alpha(x) \in bd(\Delta_i)$ for each $x \in \overline{\Omega}_i$
+
+\hspace*{12pt}(ii) for $1 \le i < j \le k$, if $x \in \Delta_i \cap \Delta_j$ then $x = \alpha(v)$ for some $v \in \overline{\Omega}_i \cap \overline{\Omega}_j$; and for $1 \le i \le k$, if $x \in \Delta_i \cap bd(\Sigma)$ then $x = \alpha(v)$ for some $v \in \overline{\Omega}_i$,
+
+\hspace*{12pt}(iii) for distinct $x, y \in V(\mathscr{S})$, $\alpha(x) \ne \alpha(y)$, and
+
+\hspace*{12pt}(iv) for $1 \le i \le k$, $\Omega_i$ is mapped by $\alpha$ to a natural order of $\alpha(\Omega_i)$ from $bd(\Delta_i)$.
+
+If $\mathscr{S}$ is a 3-segregation then condition (iv) here is trivial.

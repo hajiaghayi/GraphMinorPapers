@@ -1,0 +1,23 @@
+\origpage{103}{GRAPH MINORS. XI}
+\noindent $c, b$-optimal. Since $c, b \in X$ and $X' \nsubseteq X$ (because $r' \subseteq X'$ and $r' \nsubseteq X$) this contradicts (8.9). Thus $r$ satisfies the theorem, as required. $\square$
+
+Statement (8.12) turns out to be quite significant. For instance, the result of [5], that for planar graphs branch-width is computable in polynomial time, relies heavily on (8.12), and it will also have several applications in future papers of this series.
+
+Another consequence of (8.9) is the following.
+
+\stmt
+(8.13) \textit{Let $a, b \in \Sigma$ with $\{a, b\} \cap U(\Gamma) \subseteq V(\Gamma)$; and let $X$ be a restraint with $a, b \in X$. Suppose that there is no restraint $Y$ with $X \subseteq Y$ and $l(Y) < l(X)$. Then $X$ includes an $a, b$-optimal restraint.}
+
+\textit{Proof.} We have a slope $\operatorname{ins}$ in $\Gamma$ of order $\theta$. Let $\Gamma'$ be obtained from $\Gamma$ by subdividing each edge $e \in E(\Gamma)$ $2\theta - 1$ times if $e \subseteq X$, and $2\theta$ times otherwise. (Thus, $e$ corresponds to a path of $\Gamma'$ with $2\theta$ or $2\theta + 1$ edges.) Let $C$ be a circuit of $\Gamma$, and $C'$ the circuit of $\Gamma'$ with $U(C) = U(C')$. Then
+\begin{equation*}
+2\theta |E(C)| \le |E(C')| \le (2\theta + 1) |E(C)|
+\end{equation*}
+and so $C$ has length $<2\theta$ if and only if $C'$ has length $<4\theta^2$. If $C$ has length $<2\theta$, we define $\operatorname{ins}'(C') = \operatorname{ins}(C)$. Then $\operatorname{ins}'$ is a slope in $\Gamma'$ of order $4\theta^2$.
+
+Define $\mathscr{R}$ to be the set of restraints of $\Gamma$ with respect to $\operatorname{ins}$, and $\mathscr{R}'$ to be the set of restraints of $\Gamma'$ with respect to $\operatorname{ins}'$ (replacing $2\theta$ by $4\theta^2$ in the definition of ``restraint''). Let us say that $X' \in \mathscr{R}'$ is \textit{smooth} if every vertex with valency $\le 1$ of $\Gamma' | bd(X')$ belongs to $V(\Gamma)$. Then a computation similar to that above yields that $\mathscr{R} \subseteq \mathscr{R}'$, and $\mathscr{R}$ contains precisely the smooth members of $\mathscr{R}'$.
+
+Now $X \in \mathscr{R}$ and $l'(X) = 2\theta l(X)$, where $l'$ denotes the perimeter length of $X$ in $\Gamma'$. For any $Y \in \mathscr{R}'$ with $X \subseteq Y \ne X$, we claim that $l'(Y) > l'(X)$. For if $Y$ is smooth then $Y \in \mathscr{R}$; and since some edge of the perimeter of $Y$ is not included in $X$, and since from the hypothesis $l(Y) \ge l(X)$, it follows that $l'(Y) > 2\theta l(Y) \ge 2\theta l(X) = l'(X)$ as claimed. On the other hand, if $Y$ is not smooth then, since $X$ is smooth, there exists a smooth $Y' \in \mathscr{R}'$ with $X \subseteq Y' \subseteq Y$ and with $l'(Y') < l'(Y)$. But then $l'(Y') \ge l'(X)$, since either $Y' = X$ or $l'(Y') > l'(X)$. Thus $l'(Y) > l'(Y') \ge l'(X)$. This proves our claim. In particular, $X$ is extreme (in $\Gamma'$ with respect to $\operatorname{ins}'$). Let $X' \in \mathscr{R}'$ be an $a, b$-optimal restraint (in $\Gamma'$, with respect to $\operatorname{ins}'$). By (8.9), $X' \subseteq X$. Moreover, $X'$ is smooth, since $\{a, b\} \cap U(\Gamma) \subseteq V(\Gamma)$ and $X'$ is $a, b$-optimal; and hence $X' \in \mathscr{R}$. We claim that $X'$ is $a, b$-optimal in $\Gamma$ with respect to $\operatorname{ins}$. For suppose not, and let $Y \in \mathscr{R}$ with $a, b \in Y$ and $l(Y) < l(X')$. Then $Y \in \mathscr{R}'$, and
+\begin{align*}
+l'(Y) &\le (2\theta + 1) l(Y) \le (2\theta + 1)(l(X') - 1) \\
+&= 2\theta l(X') + (l(X') - 2\theta - 1) < 2\theta l(X') \le l'(X')
+\end{align*}

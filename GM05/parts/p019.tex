@@ -1,0 +1,26 @@
+\origpage{110}{ROBERTSON AND SEYMOUR}
+\stmt
+(8.2) \textit{A graph has the Erd\"os-P\'osa property if and only if it is planar.}
+
+The following lemmas are used to derive (8.2) from our main result (1.5). We say that a simple graph $G$ is a \textit{subtree intersection graph} if there is a tree $T$ and a family $(T_v : v \in V(G))$ of subtrees of $T$ such that for distinct $v, v' \in V(G)$, $v, v'$ are adjacent in $G$ if and only if $T_v$ and $T_{v'}$ have a common vertex. We say that a simple graph $G$ is \textit{chordal} if it has no induced subgraph which is a circuit of four or more vertices. The following is shown in [2, 5].
+
+\stmt
+(8.3) \textit{$G$ is a subtree intersection graph if and only if $G$ is chordal.}
+
+(In fact for our application we need only the easier ``only if'' direction.) The following is due to Dirac [3].
+
+\stmt
+(8.4) \textit{If $G$ is chordal and non-null then $G$ has a vertex $v$ such that the vertices adjacent to $v$ are pairwise adjacent.}
+
+Our main lemma is the following.
+
+\stmt
+(8.5) \textit{Let $G$ be chordal, and let $Z_1, \dots, Z_m$ be independent subsets of $V(G)$, pairwise disjoint, and each with cardinality $k$. Let $x_1, \dots, x_m \ge 0$ be integers with $x_1 + \dots + x_m = k$. Then there exists an independent subset $X \subseteq V(G)$ with $|X \cap Z_i| = x_i$ $(1 \le i \le m)$.}
+
+\textit{Proof.} We proceed by induction on $|V(G)|$; if $G$ is null the result is true, and so we assume that $G$ is non-null, and that the theorem holds for all graphs with fewer vertices. If there is a vertex $u \in V(G)$ with $u \notin Z_1 \cup \dots \cup Z_m$ the result follows by our inductive hypothesis applied to $G \setminus u$, which is chordal. We assume then that
+\begin{equation*}
+Z_1 \cup \dots \cup Z_m = V(G).
+\end{equation*}
+By (8.4), $G$ has a vertex $v$ such that all vertices of $G$ adjacent to $v$ are pairwise adjacent. Now $v \in Z_1 \cup \dots \cup Z_m$; we assume that $v \in Z_m$ without loss of generality. If $x_m = 0$ the result follows from our inductive hypothesis applied to $G \setminus v$ with $m - 1$ independent subsets $Z_1, \dots, Z_{m-1}$. We assume then that $x_m \ne 0$. For $1 \le i \le m - 1$, choose $v_i \in Z_i$ adjacent to $v$ if possible, and otherwise arbitrarily.
+
+Every neighbor $u$ of $v$ in $G$ is one of $v_1, \dots, v_{m-1}$; for if $u$ is adjacent to $v$, then $u \notin Z_m$ (since $Z_m$ is independent) and so $u \in Z_i$ for some $i$ with $1 \le i < m$; hence $v_i$ is adjacent to $v$, but not to $u$ since $Z_i$ is independent, and so $v_i = u$. Define $x_1' = x_1, \dots, x_{m-1}' = x_{m-1}$, $x_m' = x_m - 1$, $G' = G \setminus \{v_1, \dots, v_{m-1}, v\}$, $k' = k - 1$, $Z_i' = Z_i - \{v_i\}$ $(1 \le i \le m - 1)$, $Z_m' = Z_m - \{v\}$. Then $Z_1', \dots, Z_m'$ are disjoint independent subsets of $V(G')$, each of

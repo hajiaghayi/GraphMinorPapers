@@ -1,0 +1,32 @@
+\origpage{105}{GRAPH MINORS. V}
+\noindent by our assumption, and so $b_i>3^{i-1}b_1$, for some $i$ ($1\le i\le k$). Choose $i'$ minimum such that $b_{i'}>3^{i'-1}b_1$. Then $1<i'\le k$, and $b_{i'-1}\le 3^{i'-2}b_1$ by the minimality of $i'$. Hence $b_{i'}>3b_{i'-1}$.
+
+Now for $i'\le i\le k$, $b_i\ge b_{i'}>3^{i'-1}b_1\ge 3b_1$. But $B_i$ is a connected graph, and it does not have two disjoint connected subgraphs both with at least $b_1+1$ vertices, from the lexicographic lastness of $d(\mathcal{B})$. Hence by (6.2) with $w\equiv 1$, there is a vertex $v_i$ of $B_i$ such that every component of $B_i\setminus v_i$ has at most $b_1$ vertices. Let $X=\{v_{i'},..., v_k\}$. We shall show that $X$ satisfies (ii). Let $C$ be a component of $G\setminus X$, and suppose for a contradiction that $|V(C)|\ge |V(G)|/3$. There are two cases.
+
+\textit{Case} 1. $V(C)\cap (V_1\cup\cdots\cup V_{i'-1})\ne \emptyset$.
+
+Now
+\begin{equation*}
+|V_1\cup\cdots\cup V_{i'-1}| \le b_1 + 3b_1 + \cdots + 3^{i'-2}b_1
+\end{equation*}
+by the minimality of $i'$, and so
+\begin{equation*}
+|V_1\cup\cdots\cup V_{i'-1}| \le (3^{i'-1}-1)b_1/2 \le (3^k-1)b_1/6 < |V(G)|/3.
+\end{equation*}
+Hence $V(C)\cap (V_{i'}\cup\cdots\cup V_k)\ne \emptyset$. But $C$ is connected, $V(C)\cap X=\emptyset$ and $V(G)=V_1\cup\cdots\cup V_k$, and so there exist $u\in V_1\cup\cdots\cup V_{i'-1}$, $u'\in V_{i'}\cup\cdots\cup V_k$ which are adjacent vertices of $C$, and not in $X$. Let $u\in V_j$, $u'\in V_{j'}$ say, where $1\le j\le i'-1$, $i'\le j'\le k$. Let $B$ be the component of $B_{j'}\setminus v_{j'}$ which contains $u'$. Let $B_j'=G|(V(B_j)\cup V(B))$. Then
+\begin{equation*}
+|V(B_{j'}\setminus V(B))| = b_{j'} - |V(B)| > 3b_{i'-1} - b_1 \ge b_j,
+\end{equation*}
+and $B_{j'}\setminus V(B)$, $B_j'$ are both connected; thus the set
+\begin{equation*}
+\{B_{j'}\setminus V(B), B_j'\} \cup \{B_i\colon 1\le i\le k, i\ne j, j'\}
+\end{equation*}
+contradicts the lexicographic lastness of $d(\mathcal{B})$.
+
+\textit{Case} 2. $V(C)\cap (V_1\cup\cdots\cup V_{i'-1})=\emptyset$.
+
+Hence $V(C)\subseteq (V_{i'}\cup\cdots\cup V_k)-X$. Let us say that $V'\subseteq V(G)$ is a \textit{piece} if for some $i$ ($i'\le i\le k$), $V'$ is the vertex set of a component of $B_i\setminus v_i$. Any two pieces are thus disjoint. Now $V(C)$ is a union of pieces, and
+\begin{equation*}
+|V(C)|\ge |V(G)|/3 > (3^k-1)b_1/6 \ge b_1
+\end{equation*}
+(unless $k=1$, when the theorem is trivial). Hence there are pieces $P_1,..., P_t$ say, such that $G|(P_1\cup\cdots\cup P_t)$ is connected, $|P_1\cup\cdots\cup P_t|>b_1$, and $|P_1\cup\cdots\cup P_{t-1}|\le b_1$. Now $P_t$ is a piece and so $|P_t|\le b_1$; hence

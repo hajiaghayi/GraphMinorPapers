@@ -1,0 +1,34 @@
+\origpage{381}{N. Robertson, P.D. Seymour / Journal of Combinatorial Theory, Series B 90 (2004) 325--385}
+\textbf{Proof.} Given $\chi, \Gamma_0, \phi_0$, choose $n \ge 4|V(\Gamma_0)| + 8$ and also satisfying another condition in terms of $\Gamma_0$ which we shall describe later. Now let $(\Gamma, \phi), \mathscr{T}$ be as in the theorem, and suppose for a contradiction that none of the four outcomes hold.
+
+Let $f_1, \dots, f_m$ be the internal edges of $\Gamma_0$. Choose $t$ maximum with $t \le m$ such that there exist edges $e_1, \dots, e_t$ of $\Gamma$ with the properties that
+
+\hspace*{12pt}$\bullet$ \textit{$|\tilde{e}_i| = |\tilde{f}_i|$ and $\phi(e_i) \ge \phi_0(f_i)$ ($1 \le i \le t$),}
+
+\hspace*{12pt}$\bullet$ \textit{$d(e_i, e_j) > \frac{1}{2}n$ ($1 \le i < j \le t$),}
+
+\hspace*{12pt}$\bullet$ \textit{$d(e_i, r^*) > n$ ($1 \le i \le t$) for every pole $r^*$.}
+
+We claim that $t = m$. For suppose that $t < m$. Since the fourth outcome of the theorem does not hold, there are $|E(\Gamma_0)|$ internal edges $c_1, \dots, c_k$ say of $\Gamma$, where $k = |E(\Gamma_0)|$, such that $|\tilde{c}_j| = |\tilde{f}_{t+1}|$ and $\phi(c_j) \ge \phi_0(f_{t+1})$ ($1 \le j \le k$), and $d(c_i, c_j) > n$ ($1 \le i < j \le k$), and $d(c_i, r^*) > n$ ($1 \le i \le k$) for every pole $r^*$. From the maximality of $t$, for $1 \le j \le k$ there exist $i_j$ with $1 \le i_j \le t$ such that $d(e_{i_j}, c_j) \le \frac{1}{2}n$. Since
+\begin{equation*}
+k = |E(\Gamma_0)| \ge m > t,
+\end{equation*}
+it follows that $i_j = i_{j'}$ for some $j \ne j'$; say $i_1 = i_2$, and $e_{i_1} = e$. Then $d(e, c_1), d(e, c_2) \le \frac{1}{2}n$, and so $d(c_1, c_2) \le n$, a contradiction. This proves that $t = m$.
+
+It follows, since the third outcome of the theorem does not hold, that
+
+\hspace*{12pt}(1) \textit{There is an injection $\beta \colon E(\Gamma_0) \to E(\Gamma)$ with the following properties:}
+
+\hspace*{12pt}$\bullet$ \textit{$\beta(s) = s$ for every short side $s$ of $\Phi_\chi$,}
+
+\hspace*{12pt}$\bullet$ \textit{$\beta(e)$ and $e$ have the same size, and $\phi(\beta(e)) \ge \phi_0(e)$, for all $e \in E(\Gamma_0)$,}
+
+\hspace*{12pt}$\bullet$ \textit{for each long side $S$, if the edges of $\Gamma_0$ bordering $S$ are $f_1, \dots, f_k$ in order, then $\beta(f_1), \dots, \beta(f_k)$ also border $S$ in order, and $l(\beta(f_i), \beta(f_j)) > \frac{1}{2}n$ for $1 \le i < j \le k$, and $l(\beta(f_i), s) > \frac{1}{2}n$ for $1 \le i \le k$ and every short side $s$ bordering the same cuff as $S$,}
+
+\hspace*{12pt}$\bullet$ \textit{for every internal $e \in E(\Gamma_0)$, $d(\beta(e), r^*) > n$ for every pole $r^*$, and for all distinct internal $e_1, e_2 \in E(\Gamma_0)$, $d(\beta(e_1), \beta(e_2)) > \frac{1}{2}n$.}
+
+If $F$ is a line, we denote the set of ends of $F$ by $\text{bd}(F)$.
+
+\hspace*{12pt}(2) \textit{There is a $\Phi_\chi$-preserving homeomorphism $\alpha \colon \Sigma_\chi \to \Sigma_\chi$ such that for every $e \in E(\Gamma_0)$ except short sides, $\alpha(\beta(e)) \subseteq e \setminus bd(\bar{e})$, and the orientation of $\alpha(\beta(e))$ defined by $\alpha(\gamma_\Gamma(\beta(e)))$ agrees with the orientation of $e$ defined by $\gamma_{\Gamma_0}(e)$.}
+
+\textbf{Subproof.} There is clearly an $\alpha$ satisfying these conditions for all border edges $e$; for if $e_1, e_2$ are distinct border edges and not short sides, then $\beta(e_1), \beta(e_2)$ have no common ends and have no end in common with any short side (by the third property of $\beta$ in (1), since $n > 6$); and if they border the same long side then so do $\beta(e_1), \beta(e_2)$, and the latter are in the proper order. Now for any internal $e \in E(\Gamma_0)$, $\beta(e)$ has no end in common with $\beta(e')$ for any $e' \in E(\Gamma_0) \setminus \{e\}$, and it is easy to arrange that $\alpha(\beta(e)) \subseteq e \setminus bd(\bar{e})$, and that if $|\tilde{e}| = 2$ the orientation given by $\alpha(\gamma_\Gamma(\beta(e)))$ and by $\gamma_{\Gamma_0}(e)$ agree. It remains to arrange this orientation condition when $|\tilde{e}| = 3$. Now if $\Sigma_\chi$ is orientable, this last condition is automatically satisfied, for $(\Gamma_0, \phi_0)$ and $(\Gamma, \phi)$ are

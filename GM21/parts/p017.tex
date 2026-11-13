@@ -1,0 +1,22 @@
+\origpage{15}{}
+We need the following lemma.
+
+\textbf{5.1} \textit{For every surface} $\Sigma$ \textit{and integer} $p \ge 0$, \textit{there exists} $\theta > p$ \textit{with the following property. Let} $\Gamma$ \textit{be a drawing in} $\Sigma$ \textit{with} $|V(\Gamma) \cap bd(\Sigma)| = p$, \textit{and let} $\mathcal{T}$ \textit{be a respectful tangle in} $\Gamma$ \textit{of order} $\ge \theta$. \textit{Suppose that}
+
+\hspace*{12pt}(i) \textit{there is no} $\Gamma$\textit{-normal} $O$\textit{-arc} $F \subseteq \Sigma$ \textit{such that} $|F \cap V(\Gamma)| < |C \cap V(\Gamma)|$ \textit{and} $C \subseteq ins(F)$ \textit{for some cuff} $C$ \textit{of} $\Sigma$, \textit{and}
+
+\hspace*{12pt}(ii) \textit{for every two cuffs} $C_1, C_2$, \textit{the corresponding cuff regions} $r_1, r_2$ \textit{satisfy} $d(r_1, r_2) \ge \theta$ \textit{where} $d$ \textit{is the metric of} $\mathcal{T}$.
+
+\textit{Then there is no vital linkage in} $\Gamma$ \textit{with set of terminals} $V(\Gamma) \cap bd(\Sigma)$.
+
+\textbf{Proof.} Choose $\theta'$ so that theorem (3.2) of [7] holds, with $\Sigma, t, z$, and $\theta$ replaced by $\hat{\Sigma}, c(\Sigma), p$ and $\theta'$ respectively. We may assume that $\theta' \ge p + 9$, by increasing $\theta'$ if necessary. Let $\theta = 2\theta' + 1$. We claim that $\theta$ satisfies (5.1). For let $\Gamma, \mathcal{T}$ be as in (5.1), satisfying (i) and (ii). Let $d$ be the metric of $\mathcal{T}$. Now $\Gamma$ is 2-cell in $\hat{\Sigma}$ since $\mathcal{T}$ is respectful.
+
+\hspace*{12pt}(1) \textit{There is a vertex} $v$ \textit{of} $\Gamma$ \textit{such that} $d(v, r) \ge \theta'$ \textit{for every cuff region} $r$.
+
+\textit{Subproof.} We may assume that there is at least one cuff region $r_1$ say. By [4, theorem (8.9)], there is an edge $e$ of $\Gamma$ so that $d(e, r_1) = ord(\mathcal{T})$. Let $v_1, \dots, v_n$ be a sequence of vertices of $\Gamma$ such that $v_1$ is incident with $r_1$, $v_n$ is incident with $e$, and for $1 \le i < n$ some region of $\Gamma$ in $\hat{\Sigma}$ is incident with $v_i$ and $v_i + 1$. Then $d(r_1, v_1) \le 1$, $d(e, v_n) \le 2$, and $d(v_i, v_i + 1) \le 2$ for $1 \le i < n$. Since $d(r_1, e) = ord(\mathcal{T})$, it follows (since $d$ is a metric) that $d(r_1, v_n) \ge ord(\mathcal{T}) - 2 \ge \theta'$. Consequently we may choose $i$ with $1 \le i \le n$ minimum such that $d(r_1, v_i) \ge \theta'$. Since $d(r_1, v_1) \le 1$ and $\theta' \ge 2$ it follows that $i \ge 2$. From the minimality of $i$, $d(r_1, v_{i-1}) < \theta'$. Since $d(v_{i-1}, v_i) \le 2$ it follows that $d(r_1, v_i) \le \theta' + 1$. For any cuff region $r_2 \ne r_1$,
+\begin{equation*}
+\theta \le d(r_1, r_2) \le d(r_1, v_i) + d(r_2, v_i) \le \theta' + 1 + d(r_2, v_i)
+\end{equation*}
+by (ii), and so $d(r_2, v_i) \ge \theta - \theta' - 1 = \theta'$. Thus setting $v = v_i$ satisfies (1). This proves (1).
+
+Let $v$ be as in (1).

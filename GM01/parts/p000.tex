@@ -1,0 +1,37 @@
+\sectionhead{\textbf{About this copy}}
+
+This is a corrected copy of the paper cited above. The text is retyped from the printed paper.
+It keeps the paper's wording and the numbering of its results, equations and footnotes, and a
+marker such as \origpagemark{$N$} shows where page $N$ of the printed paper begins.
+
+The corrections come from a formalization of the Graph Minors series in the Lean proof
+assistant, \href{https://github.com/mahdi-jfri/GraphMinor}{github.com/mahdi-jfri/GraphMinor},
+in which the results of this paper are proved. Where the formalization found that a statement
+or a step of a proof is wrong as printed, this copy corrects it in place. Where the paper leaves a proof or a step to the reader, this copy adds it, also in blue. Text \del{struck
+through in red} is removed and text \fix{in blue} is inserted. Each change has a note, marked
+\textcolor{fixcolor}{\sffamily F1}, \textcolor{fixcolor}{\sffamily F2}, \dots, that gives the
+reason. The file
+\href{https://github.com/mahdi-jfri/GraphMinor/blob/main/corrections/GM01.md}{corrections/GM01.md}
+of the formalization describes each correction in full. Each note, and each item in the list below, begins with the kind of the change. A \kindname{misprint} is a wrong symbol, index or word. A \kindname{statement} is a result or a claim of the text that is false as printed. A \kindname{degenerate} is a statement that fails only in a trivial case, such as an empty graph or a parameter equal to~$0$. A \kindname{gap} is a step of a proof that does not follow as written. A \kindname{missing} is a proof that the paper omits, leaves to the reader or only sketches, and that this copy adds.
+
+The corrections and added proofs, in the order of the pages:
+\begin{enumerate}\setlength{\itemsep}{1pt}
+\item \kindtag{fix:1.2-proof-added}\hyperref[fix:1.2-proof-added]{Proof of (1.2), page 40}: the derivation from (1.1), with the proofs of the observations (a) and (b), is added.
+\item \kindtag{fix:1.4-1.6-proof-added}\hyperref[fix:1.4-1.6-proof-added]{Proofs of (1.4)--(1.6), page 40}: the proofs are added.
+\item \kindtag{fix:1.7}\hyperref[fix:1.7]{Statement of (1.7), page 41}: $1<i,i'\le T$ becomes $1\le i,i'\le T$.
+\item \kindtag{fix:1.7-proof}\hyperref[fix:1.7-proof]{Proof of (1.7), page 42}: $\rho$ becomes $e$.
+\item \kindtag{fix:2.4}\hyperref[fix:2.4]{Statement of (2.4), page 44}: the hypothesis $m\ge\frac12\theta^2$ is
+added.
+\item \kindtag{fix:2.6}\hyperref[fix:2.6]{Statement of (2.6), page 46}: the hypothesis $m>0$ becomes
+$m\ge\frac12\theta^2$.
+\item \kindtag{fix:2.7-proof}\hyperref[fix:2.7-proof]{Proof of (2.7), page 48}: $v_0$ becomes $v$.
+\item \kindtag{fix:2.8}\hyperref[fix:2.8]{Statement of (2.8), page 48}: the hypothesis $d+r>0$ is added.
+\item \kindtag{fix:3.2}\hyperref[fix:3.2]{Statement of (3.2), page 51}: the exponent $(\lambda+1)/2$ becomes
+$\lambda/2+1$.
+\item \kindtag{fix:3.2-proof-added}\hyperref[fix:3.2-proof-added]{Proof of (3.2), page 51}: the induction is added.
+\item \kindtag{fix:3.3-proof-added}\hyperref[fix:3.3-proof-added]{Proof of (3.3), page 51}: the proof is added.
+\item \kindtag{fix:3.6-proof-added}\hyperref[fix:3.6-proof-added]{Proof of (3.6), page 53}: the proof of the four inequalities is added.
+\item \kindtag{fix:4.4}\hyperref[fix:4.4]{Statement of (4.4)(i), page 56}: $j\ge 1$ becomes $j\ge i$.
+\item \kindtag{fix:4.14}\hyperref[fix:4.14]{Proof of (4.14), page 59}: an extra closing bracket after
+$\gamma-1$ is removed.
+\end{enumerate}

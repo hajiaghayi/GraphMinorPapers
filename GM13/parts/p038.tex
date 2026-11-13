@@ -1,0 +1,24 @@
+\origpage{102}{ROBERTSON AND SEYMOUR}
+\stmt
+(9.4) \textsc{Algorithm}. \textit{Input:} A graph $G$, a wall $H \subseteq G$ with distance function $d$, and subwalls $H_1, \dots, H_t$ of $H$ with $d(H_i, H_j) \ge r$ ($1 \le i < j \le t$).
+
+\textit{Output:} Either (i) a model of $K_p$ in $G$, or (ii) a subset $X \subseteq V(G)$ with $|X| < \binom{p}{2}$ and a subset $I \subseteq \{1, \dots, t\}$ with $|I| \ge t - k$ such that for all $i \in I$, $H_i$ is dividing in $(G \setminus X) \cup H$.
+
+\textit{Proof} of (9.3). Let $l \ge 4$, $m \ge 0$ satisfy (7.7), and let $k, r \ge 0$ satisfy (9.2). Now we describe the algorithm for (9.4). We set $Y_1 = \emptyset$, and perform a recursion. At the beginning of the $i$ th iteration we have a set $Y_i$ of $i - 1$ ($l, m$)-stars over $H$ in $G$, with distinct centers. We proceed as follows:
+
+\hspace*{12pt}(1) If $i = \binom{p}{2}$ we apply (7.7) to obtain a model of $K_p$ in $G$, and stop.
+
+\hspace*{12pt}(2) Otherwise $i < \binom{p}{2}$. Let $X$ be the set of centers of the stars in $Y_i$. Let $G' = (G \setminus X) \cup H$. Then $H$ is a wall in $G'$, and no ($l, m$)-star in $G'$ has center in $X$ (since $l \ge 4$ and every vertex of $G'$ in $X$ has valency $\le 3$).
+
+\hspace*{12pt}(3) We test which $H_i$'s are dividing in $G'$. If at least $t - k$ of them are dividing in $G'$ we stop.
+
+\hspace*{12pt}(4) Otherwise, at least $k$ of the $H_i$'s are non-dividing. We choose $k$ of them and apply (9.2). We obtain either a model of $K_p$ in $G'$ and hence in $G$, when we stop, or an ($l, m$)-star $S$ over $H$ in $G'$, when we set $Y_{i+1} = Y_i \cup \{S\}$ and return for the next iteration.
+
+This algorithm has running time $\le C\varepsilon(G)$, where $C$ depends only on $p$, $t$, and the height of $H$, because there are at most $\binom{p}{2}$ iterations, each involving $t$ tests of ``is $H_i$ dividing?'' which takes time $O(\varepsilon)$, together possibly with an application of (7.7) or (9.2). $\square$
+
+Let $H$ be a wall in a graph $G$, with perimeter $C$. Let $W \subseteq V(G)$ be the union of $V(C)$ and the vertex set of the unique component of $G \setminus V(C)$ that contains a vertex of $H$. We define the \textit{compass} of $H$ in $G$ to be the restriction of $G$ to $W$. It follows that $H$ is a subgraph of its compass, and its compass is connected.
+
+\stmt
+(9.5) \textit{Let $H$ be a wall in a graph $G$. If $H_1$ is a dividing subwall of $H$ with compass $K_1$, then $K_1 \cap H \subseteq H_1$; and if $H_2$ is another dividing subwall of $H$ with compass $K_2$, and $H_1 \cap H_2$ is null, then $K_1 \cap K_2$ is null.}
+
+\textit{Proof.} Since $H_1$ is an induced subgraph of $H$, to prove the first claim it suffices to show that $V(K_1 \cap H) \subseteq V(H_1)$. Suppose that $t \in V(K_1 \cap H) - V(H_1)$. Since $t$ belongs to the compass of $H_1$ and not to the perimeter $C_1$ of $H_1$, there is a path of $G \setminus V(C_1)$ between $t$ and the inside of $H_1$, and hence there is an $H$-path with one end inside $H_1$ and the other end outside. But this contradicts that $H_1$ is dividing and proves the first claim.

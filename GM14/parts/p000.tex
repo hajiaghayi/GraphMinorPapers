@@ -1,0 +1,43 @@
+\sectionhead{\textbf{About this copy}}
+
+This is a corrected copy of the paper cited above. The text is retyped from the printed paper.
+It keeps the paper's wording and the numbering of its results, equations and footnotes, and a
+marker such as \origpagemark{$N$} shows where page $N$ of the printed paper begins.
+
+The corrections come from a formalization of the Graph Minors series in the Lean proof
+assistant, \href{https://github.com/mahdi-jfri/GraphMinor}{github.com/mahdi-jfri/GraphMinor},
+in which the results of this paper are proved. Where the formalization found that a statement
+or a step of a proof is wrong as printed, this copy corrects it in place. Where the paper leaves a proof or a step to the reader, this
+copy adds it, also in blue. Text \del{struck through in red} is removed and text \fix{in blue}
+is inserted. Each change has a note, marked
+\textcolor{fixcolor}{\sffamily F1}, \textcolor{fixcolor}{\sffamily F2}, \dots, that gives the
+reason. The file
+\href{https://github.com/mahdi-jfri/GraphMinor/blob/main/corrections/GM14.md}{corrections/GM14.md}
+of the formalization describes each correction in full. Each note, and each item in the list below, begins with the kind of the change. A \kindname{misprint} is a wrong symbol, index or word. A \kindname{statement} is a result or a claim of the text that is false as printed. A \kindname{degenerate} is a statement that fails only in a trivial case, such as an empty graph or a parameter equal to~$0$. A \kindname{gap} is a step of a proof that does not follow as written. A \kindname{missing} is a proof that the paper omits, leaves to the reader or only sketches, and that this copy adds.
+
+The corrections and added proofs, in the order of the pages:
+\begin{enumerate}\setlength{\itemsep}{1pt}
+\item \kindtag{fix:3.1-proof-added}\hyperref[fix:3.1-proof-added]{Proof of (3.1), page 28}: the proof is added.
+\item \kindtag{fix:3-zone}\hyperref[fix:3-zone]{Section 3, page 28}: in the definition of a $\lambda$-zone,
+``hence'' is removed, so that ``$\overline{\Lambda}$ is a closed disc'' becomes a condition.
+\item \kindtag{fix:5.1-proof-added}\hyperref[fix:5.1-proof-added]{Proof of (5.1), page 31}: the proof is added.
+\item \kindtag{fix:5.2-proof-added}\hyperref[fix:5.2-proof-added]{Proof of (5.2), page 31}: the proof that $\mathscr{R}$ is
+connected, and that the disc includes $Z$ in its interior, is added.
+\item \kindtag{fix:5.5-proof-added}\hyperref[fix:5.5-proof-added]{Proof of (5.5), page 32}: the proof is added.
+\item \kindtag{fix:6.5-proof-bd}\hyperref[fix:6.5-proof-bd]{Proof of (6.5), page 35}: a missing $\alpha$ is inserted, so
+that the text reads $bd(\alpha(A, \Omega))$.
+\item \kindtag{fix:6.5-proof-discs}\hyperref[fix:6.5-proof-discs]{Proof of (6.5), page 35}: the discs $\alpha(A, \Omega)$ are
+first moved away from $bd(\Delta)$.
+\item \kindtag{fix:7.3-proof}\hyperref[fix:7.3-proof]{Proof of (7.3), page 36}: the step $1 \ge d(z, v)$ is removed.
+\item \kindtag{fix:8.3-proof-added}\hyperref[fix:8.3-proof-added]{Proof of (8.3), page 41}: the proof is added.
+\item \kindtag{fix:8.4-claim1-step-added}\hyperref[fix:8.4-claim1-step-added]{Claim (1) in the proof of (8.4), page 41}: the
+replacement of the path $P$ is added.
+\item \kindtag{fix:8.4-claim2}\hyperref[fix:8.4-claim2]{Claim (2) in the proof of (8.4), page 42}: $B \setminus w$
+becomes $A \setminus w$, and a note explains a gap.
+\item \kindtag{fix:8.4-proof}\hyperref[fix:8.4-proof]{Proof of (8.4), page 42}: a note explains how to apply (8.2)
+when the paths end on $C_2$.
+\item \kindtag{fix:9.3-step-added}\hyperref[fix:9.3-step-added]{Proof of (9.3), page 45}: the step that contradicts the
+maximality of $\Lambda$ is added.
+\item \kindtag{fix:9-battlefield}\hyperref[fix:9-battlefield]{Section 9, page 45}: in clause (v) of the definition of a
+battlefield, $A(K)$ becomes $A(H)$.
+\end{enumerate}

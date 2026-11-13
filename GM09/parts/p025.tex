@@ -1,0 +1,76 @@
+\origpage{64}{ROBERTSON AND SEYMOUR}
+\stmt
+(10.1) \textit{Let $(G, \Omega, \Omega_0)$ be a rural neighborhood and let $(\Sigma, \Gamma, \Delta, \Delta_0)$ be a presentation with an $s$-nest. Let $X \subseteq \bar{\Omega}$ be weakly-linked, with $|X| = r$. Then we may choose an $s$-nest $(C_1, \dots, C_s)$ and disjoint paths $P_1, \dots, P_r$ of $G$ each with one end in $X$ and the other in $\bar{\Omega}_0$, such that for $1 \le i \le r$ and $1 \le j \le s$, $P_i \cap C_j$ is a path.}
+
+The proof of (10.1) is very similar to the proof of [2, Theorem (4.1)]\del{, and we omit it}\fix{, and we give it now}.
+
+\fix{We give the proof, following the proof of [2, Theorem (4.1)]. Since $X$ is weakly-linked there are
+$r$ mutually disjoint $X \to \bar{\Omega}_0$ paths, and by hypothesis there is an $s$-nest. Choose an
+$s$-nest $(C_1, \dots, C_s)$ and mutually disjoint $X \to \bar{\Omega}_0$ paths $P_1, \dots, P_r$
+such that $|E(C_1 \cup \dots \cup C_s \cup P_1 \cup \dots \cup P_r)|$ is minimum. For
+$1 \le j \le s$ let $\Delta_j$ be the closed disc bounded by the image of $C_j$, as in the definition
+of an $s$-nest. Suppose that $P_i \cap C_j$ is not a path for some $i, j$, and choose such a $j$ as
+large as possible. Each $P_i$ meets $C_j$, since it runs from a vertex in $bd(\Delta)$, which is not
+in the interior of $\Delta_j$, to a vertex in $\Delta_0 \subseteq \Delta_j$. We call a subpath $P$ of
+some $P_{i'}$ a \textit{detour} if its ends are distinct vertices of $C_j$ and no other vertex and no
+edge of $P$ is in $C_j$. A detour is drawn either in $\Delta_j$, or outside $\Delta_j$ except for its
+ends.
+
+\hspace*{12pt}(1) \textit{No detour is drawn outside $\Delta_j$ except for its ends.}
+
+For suppose that a detour $P \subseteq P_{i'}$ with ends $v, v'$ is drawn in this way. First, $P$ is
+disjoint from $C_m$ for $m \ne j$. For $m < j$ this holds since $C_m$ is drawn in the interior of
+$\Delta_j$ and $v, v' \notin V(C_m)$. Let $m > j$, and suppose that $P$ has a vertex $w$ in $C_m$.
+The path $P_{i'}$ starts outside the interior of $\Delta_m$, and so it meets $C_m$ before it reaches
+$v$ and $v'$, which are drawn in the interior of $\Delta_m$. By the choice of $j$, $P_{i'} \cap C_m$
+is a path, and so it contains the part of $P_{i'}$ between this first vertex and $w$, which contains
+$v$ or $v'$. This is impossible, since $v, v' \notin V(C_m)$. Now let $Q_1, Q_2$ be the two paths of
+$C_j$ between $v$ and $v'$. Then $P \cup Q_1$ and $P \cup Q_2$ are circuits, and since $P$ is drawn
+outside $\Delta_j$, one of them, say $P \cup Q_1$, bounds a closed disc that includes $\Delta_j$. This
+disc is included in $\Delta_{j+1}$ if $j < s$, since $P$ misses $C_{j+1}$, and in $\Delta$ if $j = s$.
+So replacing $C_j$ by $P \cup Q_1$ gives an $s$-nest. Some edge of $Q_2$ is in none of
+$P_1, \dots, P_r$. For otherwise, since these paths are disjoint and $Q_2$ is connected, $Q_2$ would
+be a subpath of $P_{i'}$ between $v$ and $v'$ other than $P$, which is impossible. Hence the
+replacement makes the union smaller, contrary to the choice of the nest and the paths. This proves
+(1).
+
+\hspace*{12pt}(2) \textit{For $1 \le i' \le r$ and each vertex $u$ of $P_{i'} \cap C_j$, the subpath
+of $P_{i'}$ from $u$ to its end in $\bar{\Omega}_0$ is drawn in $\Delta_j$.}
+
+For if it leaves $\Delta_j$ then it comes back, since its end is in $\Delta_0 \subseteq \Delta_j$, and
+so it contains a detour drawn outside $\Delta_j$ except for its ends, contrary to (1).
+
+Now $P_i \cap C_j$ is non-null and not a path, and so some subpath of $P_i$ between two vertices of
+$C_j$ is not included in $C_j$. A minimal such subpath $P$ is a detour, with ends $v, v'$ say, and by
+(1) it is drawn in $\Delta_j$. Let $Q_1, Q_2$ be the two paths of $C_j$ between $v$ and $v'$. Then $P$
+splits $\Delta_j$ into two closed discs, bounded by $P \cup Q_1$ and $P \cup Q_2$. The drawing uses no
+point in the interior of $\Delta_0$, and so we may choose $k \in \{1, 2\}$ such that every connected
+subset of $\Delta_j$ that misses $P$ and meets $Q_k$ is disjoint from $\Delta_0$. Then no $P_{i'}$
+with $i' \ne i$ meets $Q_k$. For if $u$ is a common vertex, then by (2) the subpath of $P_{i'}$ from
+$u$ to its end in $\bar{\Omega}_0$ is drawn in $\Delta_j$, and it misses $P$, since $P_{i'}$ and $P_i$
+are disjoint, and this contradicts the choice of $k$. Now replace $P$ by $Q_k$ in $P_i$. The result
+contains an $X \to \bar{\Omega}_0$ path $P'_i$, with edges in $(E(P_i) - E(P)) \cup E(Q_k)$, and
+$P'_i$ is disjoint from the other paths $P_{i'}$. The edge of $P$ incident with $v$ is in no circuit
+$C_m$, since it is not in $C_j$ and the other circuits do not contain $v$, and it is in no $P_{i'}$
+with $i' \ne i$.
+Hence replacing $P_i$ by $P'_i$ makes the union smaller, again contrary to the choice. This
+proves (10.1).\fixnote{fix:10.1-proof-added}{The paper omits the proof of (10.1). The proof above is
+the one used in the formalization.}}
+
+We deduce
+
+\stmt
+(10.2) \textit{Let $(G, \Omega, \Omega_0)$ be a rural neighborhood of breadth $\ge s$, and let $\{a_1, a_2, \dots, a_s, b_1, b_2, \dots, b_s\} \subseteq \bar{\Omega}$ be weakly-linked, where $(a_s, a_{s-1}, \dots, a_1, b_1, b_2, \dots, b_s)$ is clockwise. Then there is a transaction $\{Q_1, \dots, Q_s\}$ in $(G, \Omega)$ such that $Q_i$ has ends $a_i, b_i$ and $Q_i$ meets every path from $\Omega(a_i, b_i)$ to $\Omega(b_i, a_i) \cup \bar{\Omega}_0$ $(1 \le i \le s)$.}
+
+\textit{Proof.} We take a presentation $(\Sigma, \Gamma, \Delta, \Delta_0)$ with an $s$-nest, put $r = 2s$ and $X = \{a_1, \dots, a_s, b_1, \dots, b_s\}$, and choose $C_1, \dots, C_s$ and $P_1, \dots, P_r$ as in (10.1). We number $P_1, \dots, P_r$ so that $P_i$ has initial vertex $a_i$ ($1 \le i \le s$) and $b_{i-s}$ ($s+1 \le i \le r$). For $1 \le i \le s$, let $Q_i$ be the union of the minimal subpath of $P_i$ from $a_i$ to $V(C_{\delm{i}\fix{s+1-i}})$, the minimal subpath of $P_{s+i}$ from $b_i$ to $V(C_{\delm{i}\fix{s+1-i}})$, and the subpath of $C_{\delm{i}\fix{s+1-i}}$ from the end of the first path to the end of the second, moving clockwise around $C_{\delm{i}\fix{s+1-i}}$\fix{, that is, the one for which the disc bounded by $C_{s+1-i}$ lies on the same side of $Q_i$ as $\Omega(b_i, a_i)$}.\fixnote{fix:10.2-proof}{As printed, $Q_i$ runs along $C_i$, where $C_1$ is the innermost circuit of the nest. Then for $s \ge 2$ the path $Q_1$ runs from $a_1$ through $C_s$ to $C_1$, while $Q_s$ runs along $C_s$ from $P_s$ to $P_{2s}$, past the vertices where $P_1$ meets $C_s$, so $Q_1$ and $Q_s$ meet. With $C_{s+1-i}$ the path with the shortest interval $\Omega(a_i, b_i)$ runs along the outermost circuit, and the paths are disjoint.} Then $\{Q_1, \dots, Q_s\}$ is the desired transaction. $\square$
+
+We come now to a preliminary form of the main result of this section.
+
+\stmt
+(10.3) \textit{Let $p \ge 2$ with $p \ne 3$. Let $(G, \Omega, \Omega_0)$ be a rural neighborhood of breadth $\ge p + 4$, and let $X \subseteq \bar{\Omega}$ be weakly-linked, with $|X| \ge 2p + 8$. Let $(G \cup G_0, \Omega)$ be the composition of some society $(G_0, \Omega_0)$ with $(G, \Omega, \Omega_0)$, and suppose that there is a crooked transaction $\mathscr{P}$ in $(G \cup G_0, \Omega)$ with $|\mathscr{P}| \ge p$. Then $\mathscr{P}$ may be chosen with $V(\mathscr{P}) \subseteq X$.}
+
+\textit{Proof.} \fix{Let $X \subseteq Y \subseteq \bar{\Omega}$, and let $\mathscr{P}$ be a crooked transaction in $(G \cup G_0, \Omega)$ with $|\mathscr{P}| \ge p$ and $V(\mathscr{P}) \subseteq Y$. We show that $\mathscr{P}$ may be chosen with $V(\mathscr{P}) \subseteq X$. The theorem is the case $Y = \bar{\Omega}$.} We proceed by induction on $|\delm{\bar{\Omega}}\fix{Y} - X|$. If this number is zero the result is trivial, and so we assume that there exists $x \in \delm{\bar{\Omega}}\fix{Y} - X$. \del{Let $\Omega' = \Omega \mid (\bar{\Omega} - \{x\})$. Then $(G, \Omega', \Omega_0)$ is a rural neighborhood of breadth $\ge p + 4$, and $X \subseteq \bar{\Omega}'$. But $|\bar{\Omega}' - X| < |\bar{\Omega} - X|$, and so from our inductive hypothesis it suffices to show that $(G \cup G_0, \Omega')$ has a crooked transaction of cardinality $\ge p$, that is,}\fix{By our inductive hypothesis, applied to $Y - \{x\}$, it suffices to show} that $(G \cup G_0, \Omega)$ has a crooked transaction $\mathscr{P}$ of cardinality $\ge p$ with $\delm{x \notin V(\mathscr{P})}\fix{V(\mathscr{P}) \subseteq Y - \{x\}}$.\fixnote{fix:10.3-rural}{As printed, the proof passes to $(G, \Omega', \Omega_0)$ and calls it a rural neighborhood. But $x$ is drawn in $bd(\Delta)$ and is not in $\bar{\Omega}'$, so the presentation of $(G, \Omega, \Omega_0)$ is not a presentation of $(G, \Omega', \Omega_0)$, and a new one is needed, which the proof does not give. Here the neighborhood $(G, \Omega, \Omega_0)$ is kept, and only the set $Y$ that holds the ends shrinks.} Put $s = p + 4$, and choose $2s$ elements $a_1, \dots, a_s, b_1, \dots, b_s$ of $X$ so that
+\begin{equation*}
+(a_s, a_{s-1}, \dots, a_1, x, b_1, b_2, \dots, b_s)
+\end{equation*}
+is clockwise. By (10.2) there is a transaction $\{Q_1, \dots, Q_s\}$ in $(G, \Omega)$ such that for $1 \le i \le s$, $Q_i$ ends $a_i, b_i$ and $Q_i$ meets every path in $G$ from $\Omega(a_i, b_i)$ to $\Omega(b_i, a_i) \cup \bar{\Omega}_0$.

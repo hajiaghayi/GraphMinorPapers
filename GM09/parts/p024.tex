@@ -1,0 +1,19 @@
+\origpage{63}{GRAPH MINORS. IX}
+\hspace*{12pt}(5) \textit{For any $P \in \mathscr{P}$, the first and last edges of $P$ are in $E(G)$, and hence $V(\mathscr{P}) \subseteq \bar{\Omega}$.}
+
+For let $a$ be the first vertex of $P$, and $b$ the second. Let $e$ be the edge of $P$ joining them, and suppose that $e \notin E(G)$. Now by (4), $b \notin \bar{\Omega}_1$, and so there is a cyclic permutation $\Omega_2$ with
+\begin{equation*}
+\bar{\Omega}_2 = (\bar{\Omega}_1 - \{a\}) \cup \{b\}
+\end{equation*}
+\begin{equation*}
+\Omega_2 | (\bar{\Omega}_1 - \{a\}) = \Omega_1 | (\bar{\Omega}_1 - \{a\})
+\end{equation*}
+and with $(x, y, b)$ $\Omega_2$-clockwise whenever $(x, y, a)$ is $\Omega_1$-clockwise. Then $(G_1 \setminus a, \Omega_2, \Omega)$ is a rural neighborhood, and the composition of $(G, \Omega)$ with it has a crooked transaction of cardinality $\ge p$, contrary to (2).
+
+Now, to prove (9.1) take a plane $\Sigma$, and closed discs $\Delta_0 \subseteq \Delta \subseteq \Sigma$, and a drawing $\Gamma$ of $G_1$ in $\Sigma$ as in the definition of ``rural neighborhood.'' Let $I$ be the infinite component of $\Sigma - (\Delta_0 \cup \Gamma)$. Then all vertices of $G_1$ which are drawn in $bd(I)$ belong to $\bar{\Omega}_1$, because otherwise we could enlarge $\bar{\Omega}_1$, contrary to (2). Suppose that $E(G_1) \ne \emptyset$. Then some edge $e$ of $G_1$ must be drawn in $bd(I)$, and so its end-vertices must belong to $\bar{\Omega}_1$. By (3), $e$ is an edge of some $P \in \mathscr{P}$ and by (5) it is not the first or last edge of $P$. Therefore both end-vertices of $e$ are internal vertices of $P$ which belong to $\bar{\Omega}_1$, contradicting (4). This contradiction shows that $E(G_1) = \emptyset$, and so $\mathscr{P}$ is a crooked transaction in $(G, \Omega)$, as required. $\square$
+
+\sectionhead{10. Exploiting a Rural Neighborhood}
+
+Let $(G, \Omega, \Omega_0)$ be a rural neighborhood. Then there is a drawing $\Gamma$ in a plane $\Sigma$ and discs $\Delta, \Delta_0$ as in the definition of ``rural'' in Section 1. We call $(\Sigma, \Gamma, \Delta, \Delta_0)$ a \textit{presentation} of $(G, \Omega, \Omega_0)$. For a fixed presentation and integer $s \ge 0$, an \textit{$s$-nest} is a sequence $(C_1, \dots, C_s)$ of circuits of $G$, mutually disjoint, such that $\Delta_0 \subseteq \Delta_1 \subseteq \dots \subseteq \Delta_s \subseteq \Delta$, where $\Delta_i$ denotes the closed disc in $\Sigma$ bounded by the image under $\Gamma$ of $C_i$ ($1 \le i \le s$). If there is an $s$-nest in some presentation of $(G, \Omega, \Omega_0)$, we say that $(G, \Omega, \Omega_0)$ has \textit{breadth} $\ge s$.
+
+Again, let $(G, \Omega, \Omega_0)$ be a neighborhood. We say that $X \subseteq \bar{\Omega}$ is \textit{weakly-linked} if there are $|X|$ mutually disjoint $X \to \bar{\Omega}_0$ paths of $G$, and \textit{linked} if these paths can be chosen such that each has only its initial vertex in $\bar{\Omega}$. The object of this section is, roughly, to prove that if there is a crooked transaction $\mathscr{P}$ of cardinality $p$ in the composition of some society with some rural neighborhood $(G, \Omega, \Omega_0)$ of sufficient breadth, and $X \subseteq \bar{\Omega}$ is linked and $|X|$ is sufficiently large, then $\mathscr{P}$ may be chosen with $V(\mathscr{P}) \subseteq X$. We begin with the following lemma.

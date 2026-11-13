@@ -1,0 +1,36 @@
+\origpage{158}{ROBERTSON AND SEYMOUR}
+It follows that there is no separation $(B_1, B_2)$ of $B$ of order $0$ with $B_1, B_2$ non-null. Suppose that $e\in E(B)$ has all its ends in $V(A)$. Let $K_e$ be the hypergraph with edge set $\{e\}$ and vertex set the set of ends of $e$; then $(K_e, B\setminus e)$ is a separation of $B$. Now $K_e\nsubseteq A$ since $e\notin E(A)$, and $B\setminus e\nsubseteq A$ since $V(A)\ne V(G)$, and so
+\begin{equation*}
+|V(K_e\cap (B\setminus e))| > \min(|V(A\cap K_e)|, |V(A\cap (B\setminus e))|).
+\end{equation*}
+But the left side is the number of ends of $e$, and so is the right side, a contradiction. Thus there is no such $e$. $\square$
+
+\stmt
+(2.9) \textit{Let $\mathscr{T}$ be a tangle of order $\theta$ in a hypergraph $G$, and let $(A_1, B_1)\in \mathscr{T}$. Let $(A_2, B_2)$ be a separation of order $<\theta$. If either}
+
+\hspace*{12pt}(i) $V(B_1)\subseteq V(B_2)$, or
+
+\hspace*{12pt}(ii) $V(A_2)\subseteq V(A_1)$, or
+
+\hspace*{12pt}(iii) $\theta \ge 2$ and $E(A_2)\subseteq E(A_1)$ (equivalently, $E(B_1)\subseteq E(B_2)$)
+
+\textit{then} $(A_2, B_2)\in \mathscr{T}$.
+
+\textit{Proof.} Suppose not; then $(B_2, A_2)\in \mathscr{T}$. Choose $(A, B)\in \mathscr{T}$, extreme, with $B_2\subseteq A$ and $B\subseteq A_2$. Then $A\cup A_1\ne G$ by the second axiom. Since $A\cup B = G$ and $A_1\cup B_1 = G$ it follows that $B\nsubseteq A_1$ and $B_1\nsubseteq A$.
+
+\textit{Case} 1. $V(B_1)\subseteq V(B_2)$.
+
+Then $V(B_1)\subseteq V(B_2)\subseteq V(A)$, and $E(B_1)\cap E(B) = \emptyset$, since from (2.8) every edge of $B$ has an end in $V(G) - V(A)\subseteq V(G) - V(B_1)$. Thus $E(B_1)\subseteq E(A)$ and so $B_1\subseteq A$, a contradiction.
+
+\textit{Case} 2. $V(A_2)\subseteq V(A_1)$.
+
+Since $(B_2, A_2)\in \mathscr{T}$ and $(B_1, A_1)$ has order $<\theta$, and $V(A_2)\subseteq V(A_1)$, it follows that $(B_1, A_1)\in \mathscr{T}$, since the theorem holds in Case 1. But this contradicts (2.1).
+
+\textit{Case} 3. $\theta \ge 2$ and $E(A_2)\subseteq E(A_1)$.
+
+Since $E(B)\subseteq E(A_2)\subseteq E(A_1)$ and $B\nsubseteq A_1$, there is a vertex $v$ of $B$ with $v\notin V(A_1)$. Since $E(B)\subseteq E(A_1)$, it follows that $v$ is incident with no edge of $B$. By (2.8), $V(B) = \{v\}$ and $E(B) = \emptyset$, and since $V(A)\ne V(G)$, it follows that $V(A\cap B) = \emptyset$. By (2.8) again, $\theta = 1$, a contradiction. $\square$
+
+For future reference, we observe the following.
+
+\stmt
+(2.10) \textit{Let $\mathscr{T}$ be a tangle of order $\ge 3$ in a graph $G$, and let $(A, B)\in \mathscr{T}$. Then $B$ has a circuit.}

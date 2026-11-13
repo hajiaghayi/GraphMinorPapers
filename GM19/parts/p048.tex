@@ -1,0 +1,27 @@
+\origpage{372}{N. Robertson, P.D. Seymour / Journal of Combinatorial Theory, Series B 90 (2004) 325--385}
+\noindent and $P_1 \cup S_1[a_1, h], P_2$ are edge-disjoint paths of $F$, it follows that $|E(C_2)| < |E(F)|$. Since
+\begin{equation*}
+(\Gamma|out(D_v), \Gamma|ins(D_v)) \in \mathscr{T}'
+\end{equation*}
+and $ins(C_1) \cup ins(C_2) = ins(D_v)$, one of
+\begin{equation*}
+(\Gamma|out(C_1), \Gamma|ins(C_1)),
+\end{equation*}
+\begin{equation*}
+(\Gamma|out(C_2), \Gamma|ins(C_2))
+\end{equation*}
+belongs to $\mathscr{T}'$, contradicting that $(\Gamma|ins(F), \Gamma|out(F))$ is the $(\mathscr{T}, \mathscr{T}')$-distinction. This proves (7).
+
+\hspace*{12pt}(8) \textit{Let $P$ be an outer arc with ends $a, b$. Then $a, b \in V(S_{v_1}) \cup V(S_{v_2}) \cup \{v\}$, and $V(S_{v_1}), V(S_{v_2})$ each contain at most one of $a, b$.}
+
+\textbf{Subproof.} If say $a \notin V(S_{v_1}) \cup V(S_{v_2}) \cup \{v\}$ then $a$ is an internal vertex of the path $D_v \cap H$ (and in particular, $H$ is a circuit and $h_1 \ne h_2$). Thus the edge of $P$ incident with $a$ is included in $ins(H) \setminus H$ (since it is not in $\Delta_v$) contrary to (3). Thus, $a, b \in V(S_{v_1}) \cup V(S_{v_2}) \cup \{v\}$. If say $a, b \in V(S_{v_1})$ then by 13.3, $S_{v_1}[a, b] \subseteq F$, and so $F$ has a proper subgraph which is a circuit, a contradiction. This proves (8).
+
+Define $\Delta'_v = \Delta_v$ if $h \notin \Delta_v$, and $\Delta'_v = \Delta_v \setminus \{h\}$ if $h \in \Delta_v$. If $h \in \Delta_v$ then $V(H) = \{h\}$ and $h \in V(D_v)$, and so in both cases $\Delta'_v$ is simply-connected. Since $h \in \Delta \setminus U(C)$, $U(C)$ is non-null-homotopic in $\Delta_0 \setminus \{h\}$ (as a closed curve), and hence is not homotopic in $\Delta_0 \setminus \{h\}$ to any closed curve in $\Delta'_v$. But $C$ is the union of some outer arcs and some paths of $D_v$, and hence there is at least one outer arc that is not homotopic (as a curve with fixed endpoints) in $\Delta_0 \setminus \{h\}$ to any curve in $\Delta'_v$ with the same endpoints. But by (7), $U(F)$ is null-homotopic in $\Delta_0 \setminus \{h\}$, and so there cannot be exactly one such outer arc, since all outer arcs belong to $F$. Hence there are at least two outer arcs with this property. Let $F_0, F_1$ be distinct outer arcs, with ends $a_i, b_i$ ($i = 0, 1$) respectively, such that for $i = 0, 1$, $F_i$ is not homotopic (as a curve with fixed endpoints) in $\Delta_0 \setminus \{h\}$ to any curve in $\Delta'_v$ with endpoints $a_i, b_i$.
+
+\hspace*{12pt}(9) $\{a_0, b_0, a_1, b_1\} \nsubseteq V(S_{v_1}) \cup V(S_{v_2})$.
+
+\textbf{Subproof.} Otherwise, by (8), we may assume that $a_0, a_1 \in V(S_{v_1}) \setminus V(S_{v_2})$ and $b_0, b_1 \in V(S_{v_2}) \setminus V(S_{v_1})$. By 13.3 $F = F_1 \cup F_2 \cup S_{v_1}[a_0, a_1] \cup S_{v_2}[b_0, b_1]$, contradicting that there is an inner arc. This proves (9).
+
+\hspace*{12pt}(10) $F \cap S_{v_1} \cap S_{v_2}$ \textit{is null.}
+
+\textbf{Subproof.} We may assume that $a_0, b_0, a_1, b_1 \notin V(S_{v_1} \cap S_{v_2})$. Also we may assume that $b_0, b_1 \ne v$ and hence $b_0, b_1 \in V(S_{v_1} \cup S_{v_2}) \setminus V(S_{v_1} \cap S_{v_2})$, by (8). If $b_0, b_1$ both lie in $V(S_{v_1})$ then $F \cap S_{v_1}$ is the subpath of $S_{v_1}$ between $b_0, b_1$ by 13.3 and so $F \cap S_{v_1} \cap S_{v_2}$ is null. Thus we may assume without loss of generality that $b_1 \in V(S_{v_1}) \setminus V(S_{v_2})$ and

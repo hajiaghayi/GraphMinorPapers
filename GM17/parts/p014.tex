@@ -1,0 +1,25 @@
+\origpage{175}{GRAPH MINORS, XVII}
+\textit{Proof.} Let $Z = \beta(n_1) \cup \beta(n_2) \cup \{\gamma(n) : n \in F \cap dom(\gamma)\}$. Then $|Z| \le z$. Define $\pi' = (\Sigma, \Gamma, \alpha', \beta', \gamma')$ as in (6.2). Then $\pi'$ is not simpler than $\pi$, and so $\pi'$ resembles $\pi$. Moreover, $\pi'$ is $0$-redundant, since $\pi$ is $z$-redundant, and so by (5.3) there is a disc $\Delta \subseteq \Sigma$ with $F \subseteq bd(\Delta) \subseteq F \cup bd(\Sigma)$ such that $\alpha'(\Delta)$ is small relative to $\mathscr{T}/Z$. Hence, by (6.1), $\alpha(\Delta)$ is small relative to $\mathscr{T}$, as required. $\square$
+
+\stmt
+(6.4) \textit{Let $\pi = (\Sigma, \Gamma, \alpha, \beta, \gamma)$ be a $z$-redundant $\mathscr{T}$-central portrayal of $G$, with $warp \le p$. Let $ord(\mathscr{T}) > z + 2p + 2$, and let $F \subseteq \Sigma$ be a $\Gamma$-normal $O$-arc with $|F \cap dom(\gamma)| \le z$. Then there is a disc $\Delta \subseteq \Sigma$ with $bd(\Delta) = F$ such that $\alpha(\Delta)$ is small.}
+
+\textit{Proof.} Let $Z = \{\gamma(n) : n \in F \cap dom(\gamma)\}$. Then $|Z| \le z$. Define $\pi' = (\Sigma, \Gamma, \alpha', \beta', \gamma')$ as in (6.2); then $\pi'$ resembles $\pi$, and is $0$-redundant. The result follows from (5.4) and (6.1). $\square$
+
+\stmt
+(6.5) \textit{Let $\pi = (\Sigma, \Gamma, \alpha, \beta, \gamma)$ be a $z$-redundant $\mathscr{T}$-central portrayal of a hypergraph $G$ with $warp \le q$, let $(A, B) \in \mathscr{T}$ have order $\le z$, let $\Theta$ be a cuff of $\Sigma$, and let $\pi$ have warp $p$ at $\Theta$. Let $ord(\mathscr{T}) > z + 2q + 2$. Then there exists either}
+
+\hspace*{12pt}(i) \textit{a node $n$ bordering $\Theta$ with $|\beta(n)| = p$ and $\beta(n) \cap V(A) = \emptyset$, or}
+
+\hspace*{12pt}(ii) \textit{a cell $c$ bordering $\Theta$ with ends $n_1, n_2 \in dom(\gamma)$, such that $\gamma(n_1), \gamma(n_2) \notin V(A)$, there is no path of $(A \cap \alpha(c))^*$ between $\beta(n_1)$ and $\beta(n_2)$, and}
+\begin{equation*}
+|\beta(n_1) - V(A)| = |\beta(n_2) - V(A)| = p - 1 \ge 1.
+\end{equation*}
+\textit{Proof.} Let $Z = V(A \cap B)$; then $|Z| \le z$. Choose $c' \in C(\Gamma)$, and define a portrayal $\pi' = (\Sigma, \Gamma, \alpha', \beta', \gamma')$ of $G/Z$ as follows:
+\begin{align*}
+\alpha'(c') &= ((\alpha(c')/(Z \cap V(\alpha(c')))) \cap (B/Z)) \cup (A/Z) \\
+\alpha'(c) &= (\alpha(c)/(Z \cap V(\alpha(c)))) \cap (B/Z) && (c \in C(\Gamma), c \ne c') \\
+\beta'(n) &= \beta(n) - V(A) && (n \in N(\Gamma) \cap bd(\Sigma)) \\
+\gamma' &= \gamma \mid \{n : n \in dom(\gamma), \gamma(n) \notin V(A)\}.
+\end{align*}
+We can view this as obtained by, first, applying (6.2) to obtain a $(\mathscr{T}/Z)$-central portrayal of $G/Z$; second, restricting it to obtain a portrayal of $B/Z$; and third, adding $A/Z$ back into $\alpha(c')$ for one cell $c'$, to obtain a $(\mathscr{T}/Z)$-central portrayal of $G/Z$. This third step is possible since $(A/Z, B/Z)$ is a separation $G/Z$ of order 0, and is in $\mathscr{T}/Z$. We hope these remarks make it evident that $\pi'$ is a $(\mathscr{T}/Z)$-central portrayal of $G/Z$. Its warp at each cuff is at most that of $\pi$, but it is not simpler than $\pi$ since $\pi$ is $z$-redundant, and so its warp at every cuff, in particular at $\Theta$, equals that of $\pi$.

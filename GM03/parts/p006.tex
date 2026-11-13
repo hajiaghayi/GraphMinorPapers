@@ -1,0 +1,84 @@
+\origpage{54}{ROBERTSON AND SEYMOUR}
+\origfig{figures/fig1}{157bp}{\textsc{Figure} 1}
+
+trivial is checking the radius, using the condition $d' - 1 < d$, and this too is easy.)
+
+\fix{We give the details. Let $G''$ and $M''$ be the enlarged graph and drawing, let $H''$ be $H$
+with the new edge $e$ added, and let $N''$ be its drawing. The edge $e$ joins two vertices of $H$ and
+lies in $R$, and so (ii) and (iv) still hold, and $G$ is still isomorphic to a minor of $G''$. Since
+$v_{i-1} \in D$ and $v_{i+1} \in D'$ lie in different components of $H \setminus v$, they are distinct
+and not adjacent in $G'$, and so $G''$ is simple. The perimeter of the infinite region of $N''$ is
+the closed walk above with $v_{i-1}, e_{i-1}, v, e_i, v_{i+1}$ replaced by $v_{i-1}, e, v_{i+1}$. It
+has the same vertices, since $v = v_j$ is still on it, and so (iii) holds. It remains to show that $\rho(M'') \le d$. Call a region of $M'$ \textit{inner} if it is contained in
+the infinite region of $N$ and, when $d' > 1$, it is inside $C_{d'-1}$. Call a region of $M''$
+\textit{inner} if the same holds with $N''$ in place of $N$. The region $R$ is an inner region of
+$M'$, and $M''$ differs from $M'$ only inside $R$. So every region of $M''$ is inner, or is the
+triangle, or is a region of $M'$ that is not inner.
+
+\hspace*{12pt}($\alpha$) \textit{Let $d' > 1$ and $1 \le h \le d'-1$. Every vertex of $C_h$ is
+incident with a region of $M'$ outside $C_h$ that has distance at most $h-1$ in $M'$, by a sequence of
+regions outside $C_h$.}
+
+We use induction on $h$. By (S1) no vertex is outside $C_1$, and by (S2) no edge is outside $C_1$. So
+the infinite region of $M'$ is bounded by $C_1$, and it is incident with every vertex of $C_1$. This
+proves the case $h = 1$. Now let $1 \le h < d'-1$ and $u \in V(C_{h+1})$. Some region $Q$ of $M'$
+inside $C_h$ and outside $C_{h+1}$ is incident with $u$. By (S1) and (S2) no vertex lies strictly
+between $C_h$ and $C_{h+1}$, and every edge strictly between them has an end in $C_h$. So $Q$ is
+incident with a vertex of $C_h$, for otherwise it would be bounded by $C_{h+1}$ alone, and would
+contain $C_h$. By induction that vertex is incident with a region outside $C_h$ of distance at most
+$h-1$, by a sequence of regions outside $C_h$. Adding $Q$ to this sequence proves ($\alpha$) for
+$h+1$.
+
+Since $M''$ differs from $M'$ only inside $C_{d'-1}$, ($\alpha$) also holds for $M''$.
+
+\hspace*{12pt}($\beta$) \textit{Every inner region of $M''$ has distance at most $d'-1$ in $M''$.}
+
+If $d' = 1$, then $N'' = M''$, and the only inner region is the infinite region of $M''$. Let
+$d' > 1$, and let $Q$ be an inner region of $M''$. Then $Q$ is incident with a vertex of $C_{d'-1}$.
+For otherwise, since every vertex inside $C_{d'-1}$ is in $H$ by (S1), every edge on the boundary of $Q$
+is an edge of $H''$. Then $Q$ would be a region of $N''$, contained in the infinite region of $N''$
+and so equal to it. This is impossible, since that region contains $C_{d'-1}$ and $Q$ is inside
+$C_{d'-1}$. By ($\alpha$) with $h = d'-1$, that vertex is incident with a region of distance at most
+$d'-2$, and so $Q$ has distance at most $d'-1$.
+
+\hspace*{12pt}($\gamma$) \textit{Every vertex of $H''$ on the perimeter of the infinite region of
+$N''$ is incident with an inner region of $M''$, which has distance at most $d'-1$.}
+
+For such a vertex $x$ is incident with a region of $M''$ contained in the infinite region of $N''$.
+That region is inside $C_{d'-1}$ if $d' > 1$, since $x$ is. So it is inner, and it has distance at
+most $d'-1$ by ($\beta$).
+
+\hspace*{12pt}($\delta$) \textit{Every region $Q$ of $M''$ that is a region of $M'$ and is not inner
+has distance at most $d$ in $M''$.}
+
+Let $R_0, R_1, \dots, R_k = Q$ be regions of $M'$ as in the definition of $d(Q)$ in $M'$, with
+$k \le d$. If none of them is inner, they are regions of $M''$, and consecutive ones share a vertex
+of $M''$, and so $Q$ has distance at most $k$ in $M''$. Otherwise let $m$ be the largest index such
+that $R_m$ is inner. Then $m < k$, and $R_{m+1}, \dots, R_k$ are regions of $M''$. Moreover
+$m \ge d'-1$. For two regions incident with a common vertex are on the same side of every $C_h$ that
+does not contain that vertex, and so two consecutive regions of the sequence are separated by at most
+one of $C_1, \dots, C_{d'-1}$, while $R_0$ is outside $C_1$ and $R_m$ is inside $C_{d'-1}$. Let $w$
+be a vertex incident with $R_m$ and $R_{m+1}$. If $w \in V(H)$, then $w$ is on the perimeter of the
+infinite region of $N$, since $R_m$ is contained in that region, and this perimeter has the same
+vertices as that of $N''$. By ($\gamma$), $w$ is incident
+with a region of $M''$ of distance at most $d'-1$, and so $Q$ has distance at most
+$d'-1+k-m \le k \le d$. Otherwise $d' > 1$ and $w \in V(C_{d'-1})$, by (S1). By ($\alpha$), $w$ is
+incident with a region of $M''$ of distance at most $d'-2$, and so $Q$ has distance at most
+$d'-2+k-m < d$.
+
+Finally, $v$ is incident with the triangle, and $v$ is on the perimeter of the infinite region of
+$N''$. So the triangle has distance at most $d' \le d$, by ($\gamma$). By ($\beta$) and ($\delta$),
+every other region of $M''$ also has distance at most $d$, and so $\rho(M'') \le d$, as
+required.\fixnote{fix:2.2-claim2-proof-added}{The paper
+leaves the verification of (i)--(iv) for the enlarged graph to the reader. The argument above is the
+one used in the formalization.}}
+
+We replace every edge of $G'$ which joins two vertices of $V(C_{d'})$ but which is not in $E(C_{d'})$ by two edges in series. The graph thus obtained is a simple planar graph with a minor isomorphic to $G$, and the drawing we obtain of it has a $d'$-shell and radius $\le d$. This completes our inductive argument and hence proves (2.2).
+
+When $r \ge 0$, $s > 0$ are integers, the $r \times s$ \textit{cylinder} is the graph shown in Fig. 1, with $r$ radial lines and $s$ circles.
+
+The ``circular'' circuits are called the \textit{circles} of the cylinder, and the innermost one is called the \textit{central circle}. When $\lambda \ge 1$ is an integer, the graph $Y_\lambda$ is a tree as shown in Fig. 2.
+
+Thus $Y_\lambda$ has $3 \cdot 2^{\lambda-1}$ end-vertices. For $d, \lambda \ge 1$, take the $3 \cdot 2^{\lambda-1} \times d$ cylinder, and let $C_1, \dots, C_d$ be its circles, in order, where $C_d$ is the central circle. Identify the vertices of the central circle with the end-vertices of $Y_\lambda$, in the cyclic order provided by the drawing of Fig. 2. The resulting graph we call $N(d, \lambda)$. (See Fig. 3.) We also set $N(0, \lambda) = Y_\lambda$.
+
+\origfig{figures/fig2}{193bp}{\textsc{Figure} 2}

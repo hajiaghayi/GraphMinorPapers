@@ -1,0 +1,22 @@
+\origpage{105}{GRAPH MINORS. XIII}
+Since $H^3$ has height $h' \ge p^2 + 2$ it follows that $\varepsilon(K^3) \ge \varepsilon(H^3) \ge p^2 + 2 \ge |X| + 2$. Let there be $d_j$ edges in $G_i$ with one end in $X$ and the other in $V(K^j)$, for $1 \le j \le 3$. Then (we recall that by definition, $\varepsilon(G) = |E(G)| + |V(G)| + 1$) we have
+\begin{equation*}
+\varepsilon(K^1) + \varepsilon(K^2) + \varepsilon(K^3) - 2 + d_1 + d_2 + d_3 + |X| \le \varepsilon(G_i).
+\end{equation*}
+But $\varepsilon(K^3) \ge |X| + 2$, and so
+\begin{equation*}
+\varepsilon(K^1) + \varepsilon(K^2) + d_1 + d_2 + 2 |X| \le \varepsilon(G_i).
+\end{equation*}
+Choose one of them, $K^1$ say, so that $\varepsilon(K^1) + d_1 + |X| \le \frac{1}{2}\varepsilon(G_i)$. (5) We apply (8.6) to obtain a rural division $\mathcal{A}$ of the society of $H^1$ in $(G_i \setminus X) \cup H_i$. (6) For each interior $A \in \mathcal{A}$, we apply (7.2) to $A$ and obtain either a branch-decomposition of $A$ of width $\le \omega$, or a wall in $A$ of height $h'$.
+
+\hspace*{12pt}(7) If for each interior $A \in \mathcal{A}$ we obtain a branch-decomposition of $A$ of width $\le \omega$, we stop.
+
+\hspace*{12pt}(8) If for some interior $A \in \mathcal{A}$ we obtain a wall $H_{i+1}$ in $A$ of height $h'$, we let $G_{i+1}$ be the subgraph of $G_i$ with vertex set $V(A) \cup X$ and edges those edges of $G_i$ with an end in $V(A)$ and the other end in $V(A) \cup X$. Since $A$ is a subgraph of $K^1$, it follows that
+\begin{equation*}
+\varepsilon(G_{i+1}) \le \varepsilon(A) + d_1 + |X| \le \varepsilon(K^1) + d_1 + |X| \le \frac{1}{2}\varepsilon(G_i) \le \left(\frac{1}{2}\right)^i \varepsilon(G).
+\end{equation*}
+Let $\partial A$ be the set of all vertices $v$ of $A$ such that either $v$ is a corner of $H^1$ or $v$ is incident with an edge of $(G_i \setminus X) \cup H_i$ not in $E(A)$; then $|\partial A| \le 3$ since $\mathcal{A}$ is a division. Set $Z_{i+1} = X \cup \partial A$; then $|Z_{i+1}| \le \binom{p}{2} + 2 = s - 3$, since $|X| \le \binom{p}{2} - 1$. We return for the next iteration.
+
+We must verify that the conditions (i)-(iii) of (2) hold with $G_i, Z_i, H_i$ replaced by $G_{i+1}, Z_{i+1}, H_{i+1}$. Certainly (i) holds, as we saw above, and so does (iii). Let us verify (ii). Let $v \in V(G_{i+1} \setminus Z_{i+1})$, and let $e \in E(G)$ be incident with $v$, and suppose for a contradiction that $e \notin E(G_{i+1})$. Since $v \in V(G_{i+1} \setminus Z_{i+1}) = V(A) - \partial A$ and $V(A) \subseteq V(K^1)$ and $V(K^1) \cap Z_i = \emptyset$, it follows that $v \notin Z_i$, and so $e \in E(G_i)$. Since $e$ has one end in $V(A)$ and $e \notin E(G_{i+1})$, its other end is not in $V(A) \cup X$, and in particular, $e \in E((G_i \setminus X) \cup H_i)$. Since $A$ is internal and hence $v$ does not belong to the perimeter of $H^1$, it follows that $e \in E(K^1)$, since $v \in V(A) \subseteq V(K^1)$. But every edge of $K^1$ incident with $v$ belongs to $E(A)$, since $\mathcal{A}$ is a division of the society of $H^1$ in $(G_i \setminus X) \cup H_i$ and $v \in V(A) - \partial A$. This contradicts that $e \notin E(G_{i+1})$ as required, and completes the verification of (ii).
+
+This completes the description of the algorithm. To estimate running time we observe that step (1) takes time $O(v^2 + \varepsilon)$. Steps (3) and (5) both

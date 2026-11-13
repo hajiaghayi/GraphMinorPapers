@@ -1,0 +1,26 @@
+\origpage{114}{ROBERTSON AND SEYMOUR}
+\noindent $V(\mathscr{S})$, arrangement, $\mathscr{T}$-local, bridge, $H$-path in $G$ (called an ``$H$-pathing'' in [5], due to a typographical error).
+
+Let $(G, \Omega)$ be a society, and let the elements of $\bar{\Omega}$ be $v_1, ..., v_n$, numbered in order under $\Omega$. A transaction in $(G, \Omega)$ is a set $\mathscr{P}$ of mutually disjoint paths of $G$, each with distinct ends both in $\bar{\Omega}$, such that for some $i, j$ with $0 \le i \le j \le n$, each member of $\mathscr{P}$ has exactly one end in $\{v_{i+1}, ..., v_j\}$. For $\rho \ge 0$, a $\rho$-vortex is a society with no transaction of cardinality $> \rho$. A segregation $\mathscr{S}$ of a graph $G$ is of type $(\rho, \kappa)$, where $\rho, \kappa \ge 0$ are integers, if there are at most $\kappa$ members $(A, \Omega) \in \mathscr{S}$ with $|\bar{\Omega}| > 3$, and each is a $\rho$-vortex. Thus, segregations of type $(\rho, 0)$ are 3-segregations, for any $\rho$.
+
+If $\mathscr{T}^*$ is a tangle in $G$, a segregation $\mathscr{S}$ of $G$ is $\mathscr{T}^*$-central if for each $(A, \Omega) \in \mathscr{S}$ there is no $(A^*, B^*) \in \mathscr{T}^*$ with $B^* \subseteq A$. We denote the order of a tangle $\mathscr{T}$ by $ord(\mathscr{T})$. Let $\mathscr{T}^*$ be a tangle in $G$, and let $\Sigma$ be a surface with $bd(\Sigma) = \emptyset$. A triple $H, \eta, \mathscr{T}$ is a $\Sigma$-span of order $\theta$ (in $G$, with respect to $\mathscr{T}^*$) if
+
+\hspace*{12pt}(i) $H$ is a rigid drawing in $\Sigma$
+
+\hspace*{12pt}(ii) $\eta$ is an isomorphism from $H$ to a subgraph $\eta(H)$ of $G$
+
+\hspace*{12pt}(iii) $\mathscr{T}$ is a respectful tangle in $H$ of order $\theta$
+
+\hspace*{12pt}(iv) $\theta \le ord(\mathscr{T}^*)$, and $(A \cap \eta(H), B \cap \eta(H)) \in \eta(\mathscr{T})$, for every $(A, B) \in \mathscr{T}^*$ of order $< \theta$.
+
+($\eta(\mathscr{T})$ denotes the image of $\mathscr{T}$ under $\eta$---we shall frequently use similar notation without further explanation.) Whenever possible we shall arrange that $\eta$ is the identity function on $H$, and so $H$ itself is a subgraph of $G$; and in that case we loosely say that $H, \mathscr{T}$ is a $\Sigma$-span (without reference to $\eta$ or $\theta$).
+
+If $H$ is a 2-cell drawing in $\Sigma$, and $\mathscr{T}$ is a respectful tangle in $H$ with metric $d$, then for $\sigma \in \Sigma$ and $b \in A(H)$, we define $d(\sigma, b) = d(a, b)$ where $\sigma \in a \in A(H)$; and for $\sigma_1, \sigma_2 \in \Sigma$ we define $d(\sigma_1, \sigma_2) = d(a_1, a_2)$ where $\sigma_1 \in a_1 \in A(H)$ and $\sigma_2 \in a_2 \in A(H)$. If $H'$ is another 2-cell drawing in $\Sigma$ with a respectful tangle $\mathscr{T}'$ with metric $d'$, we say that $\mathscr{T}'$ is a $\lambda$-compression of $\mathscr{T}$ (where $\lambda \ge 0$ is an integer) if $d'(\sigma_1, \sigma_2) \ge d(\sigma_1, \sigma_2) - \lambda$ for all $\sigma_1, \sigma_2 \in \Sigma$, and $ord(\mathscr{T}') = ord(\mathscr{T}) - \lambda$.
+
+If $\Sigma, H, \eta, \mathscr{T}, H', \eta', \mathscr{T}', G^*, \mathscr{T}^*$ are as above, and $z \in A(H)$, we say that $H', \eta', \mathscr{T}'$ is obtained from $H, \eta, \mathscr{T}$ by rearranging within $\lambda$ of $z$, where $\lambda \ge 0$ is an integer, if
+
+\hspace*{12pt}(i) $a \in A(H')$ for all $a \in A(H)$ with $d(z, a) > \lambda$, where $d$ is the metric of $\mathscr{T}$,
+
+\hspace*{12pt}(ii) $\eta(x) = \eta'(x)$ for every vertex or edge $x$ of $H$ with $d(z, x) > \lambda$, and
+
+\hspace*{12pt}(iii) $\mathscr{T}'$ is a $(4\lambda + 2)$-compression of $\mathscr{T}$.

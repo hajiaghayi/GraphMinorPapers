@@ -1,0 +1,47 @@
+\origpage{59}{GRAPH MINORS}
+\noindent vertex of $D$, $d_2$ say. Let $P_3$ be the path of $H$ from $w_2$ to $S_n$, with no internal
+vertex in $S_n$.
+\stmt
+(4.12). \textit{$d_2$ is in the second end of $D$.}
+\stmt
+If not, then the second end of $D$ is disjoint from $P_1, P_2, A$ and $B$. But then
+$G$ has a rooted minor isomorphic to $Q(\gamma, \delta)$, as can be seen by deleting all
+vertices and edges of $G$ not in $D$, $P_0$, $P_1$, $P_2$, $P_3$, and $S_n$ and contracting the
+edges of $P_0$, $P_1$, $P_2$, $P_3$, and those of $D$ not incident with vertices of the
+second end.
+\stmt
+(4.13). \textit{$P_1$ and $P_2$ are disjoint.}
+\stmt
+If not, then the union of $P_1$ and $P_2$ contains a path $P_2'$ from $d_1$ to $w_2$
+avoiding $A$ and $B$. $P_2'$ then satisfies the defining conditions for $P_2$, and so
+from (4.12) we deduce $d_1$ is in the second end of $D$, which is impossible
+because the ends of $D$ are disjoint (since $4\nu+2\delta+2\ge 4$).
+\stmt
+(4.14). \textit{Conclusion.}
+\stmt
+From (4.12) and (4.13) we deduce that $G$ has a rooted minor isomorphic
+to $P(\gamma-1\delm{)}$, $(N-4\nu)+(4\nu+2\delta+2-4))=P(\gamma-1, N+2\delta-2)$,\fixnote{fix:4.14}{The brackets do not match. The tree meant is $P(\gamma-1, (N-4\nu)+(4\nu+2\delta+2-4))$, so the bracket after $\gamma-1$ is removed.} as can be
+seen by deleting all vertices of $G$ except those in $A, B, D, P_1$ and $P_2$, and
+contracting the edges in $P_1, P_2$ and the ends of $D$. This contradicts the
+maximality of $N$, and completes the argument for Part 2.
+
+\sectionhead{5. \textsc{Part} 3: \textsc{The Reduction of} $P(\gamma, \delta)$ \textsc{When} $\gamma\ge 1$}
+
+We now assume that $1\le\gamma\le\lambda$, and that for all $\delta\ge 2$, every rooted
+connected graph in $\mathscr{F}_\theta$ with no rooted minor isomorphic to $Q(\gamma, \delta)$ has path-width
+${\le}q(\gamma, \delta)$. We shall show, by induction on $\delta\ge 2$, that every rooted
+connected graph in $\mathscr{F}_\theta$ with no rooted minor isomorphic to $P(\gamma, \delta)$ has path-width
+${\le}p(\gamma, \delta)$.
+
+Suppose then that $G\in\mathscr{F}_\theta$ is a rooted connected graph with no rooted
+minor isomorphic to $P(\gamma, \delta)$. If $G$ has no rooted minor isomorphic to $Q(\gamma, 4)$,
+then by hypothesis, its path-width is ${\le}q(\gamma, 4)\le p(\gamma, \delta)$ by (3.6)(iii). Thus we
+may assume that $G$ has a rooted minor isomorphic to $Q(\gamma, 4)$.
+
+Now $P(\gamma, 2)$ is isomorphic to a rooted minor of $Q(\gamma, 4)$, and so $G$ has a
+rooted minor isomorphic to $P(\gamma, 2)$. It follows that $\delta>2$. By induction on $\delta$,
+we have that every rooted connected graph in $\mathscr{F}_\theta$ with no rooted minor
+isomorphic to $P(\gamma, \delta-1)$ has path-width ${\le}p(\gamma, \delta-1)$.
+
+Let $H$ be $\mathbf{H}_\gamma$, rooted at its vertex of valency 2. Now $H$ is isomorphic to a
+rooted minor of $Q(\gamma, 4)$ and so $G$ has a rooted minor isomorphic to $H$.

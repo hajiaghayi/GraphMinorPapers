@@ -1,0 +1,34 @@
+\origpage{134}{ROBERTSON AND SEYMOUR}
+\noindent $u, v$ say, there exists $u', v' \in V(\mathcal{P})$ so that $u, u', v, v'$ are distinct and occur in that order in $\Omega$.
+
+Let $\alpha$ be an arrangement in a surface $\Sigma$ of a segregation $\mathcal{S}$ of $G$. A subset $X \subseteq \Sigma$ is said to be $\alpha$-normal if
+\begin{equation*}
+X \cap \alpha(A, \Omega) \subseteq \{\alpha(v) : v \in \bar{\Omega}\}
+\end{equation*}
+for all $(A, \Omega) \in \mathcal{S}$. Let $F \subseteq \Sigma$ be an $\alpha$-normal $O$-arc. Let $X = \{v \in V(\mathcal{S}) : \alpha(v) \in F\}$ and $X' = \{\alpha(v) : v \in X\}$. Let $\Omega'$ be a natural order of $X'$ from $F$, and let $\Omega$ be the cyclic permutation with $\bar{\Omega} = X$ mapped to $\Omega'$ by $\alpha$. We define $\alpha^{-1}(F)$ to be $\Omega$ (or its reverse; the choice will not matter). We shall need the following theorem [1, Theorem (11.11)].
+
+\stmt
+(6.1) \textit{Let $\pi \ge 2$ be an integer, with $\pi \ne 3$, and let $(G, \Omega)$ be a society with no crooked transaction of cardinality $\pi$. Then there is a segregation $\mathcal{S}$ of $G$ of type $(3\pi + 9, 1)$ with $\bar{\Omega} \subseteq V(\mathcal{S})$, and an arrangement $\alpha$ of $\mathcal{S}$ in a closed disc $\Delta$, such that $\Omega = \alpha^{-1}(bd(\Delta))$.}
+
+Let $\mathcal{P} = \{P_1, \ldots, P_\pi\}$ be a transaction in a society $(G, \Omega)$, where $P_i$ has ends $a_i, b_i$ ($1 \le i \le \pi$). If
+
+\hspace*{12pt}(i) \textit{$\pi \ge 2$ and $a_\pi, a_{\pi-1}, \ldots, a_1, b_\pi, b_{\pi-1}, \ldots, b_1$ occur in $\Omega$ in that order, $\mathcal{P}$ is a crosscap transaction}
+
+\hspace*{12pt}(ii) \textit{$\pi \ge 3$ and $a_\pi, a_{\pi-1}, \ldots, a_2, a_1, b_2, b_3, \ldots, b_\pi, b_1$ occur in $\Omega$ in that order, $\mathcal{P}$ is a leap transaction}
+
+\hspace*{12pt}(iii) \textit{$\pi \ge 4$ and $a_\pi, a_{\pi-1}, \ldots, a_2, a_1, b_2, b_1, b_3, b_4, \ldots, b_{\pi-3}, b_{\pi-2}, b_\pi, b_{\pi-1}$ occur in $\Omega$ in that order, $\mathcal{P}$ is a doublecross transaction.}
+
+We shall need the following [1, Theorem (7.1)].
+
+\stmt
+(6.2) \textit{Let $\phi \ge 2$, $\tau_1 \ge 3$, $\tau_2 \ge 4$ be integers. Let $\mathcal{P}$ be a crooked transaction in a society $(G, \Omega)$ such that $|\mathcal{P}| \ge (\phi - 1)(2\tau_{\delm{i}\fix{1}} + \tau_2 - 7)$.\fixnote{fix:6.2}{No $i$ is bound in the statement. Section 7, which applies (6.2), sets $\pi = (\phi - 1)(2\tau_1 + \tau_2 - 7)$.} Then there exists $\mathcal{P}' \subseteq \mathcal{P}$ such that either}
+
+\hspace*{12pt}(i) \textit{$|\mathcal{P}'| = \phi$ and $\mathcal{P}'$ is a crosscap transaction, or}
+
+\hspace*{12pt}(ii) \textit{$|\mathcal{P}'| = \tau_1$ and $\mathcal{P}'$ is a leap transaction, or}
+
+\hspace*{12pt}(iii) \textit{$|\mathcal{P}'| = \tau_2$ and $\mathcal{P}'$ is a doublecross transaction.}
+
+\sectionhead{7. \textsc{The} \textsc{Main} \textsc{Proof}}
+
+Now we shall prove (1.2). Throughout this section, let $\Sigma$ be a surface with $bd(\Sigma) = \emptyset$, and let $k \ge 0$, $\phi \ge 8$, $\mu \ge 12$, $\lambda_{k+1} \ge 4$ and $\theta_{k+1} \ge 4\lambda_{k+1} + \mu + 2$ be fixed integers, with $\mu$ even. We shall show that they satisfy

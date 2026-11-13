@@ -1,0 +1,41 @@
+\sectionhead{\textbf{About this copy}}
+
+This is a corrected copy of the paper cited above. The text is retyped from the printed paper.
+It keeps the paper's wording and the numbering of its results, equations and footnotes, and a
+marker such as \origpagemark{$N$} shows where page $N$ of the printed paper begins.
+
+The corrections come from a formalization of the Graph Minors series in the Lean proof
+assistant, \href{https://github.com/mahdi-jfri/GraphMinor}{github.com/mahdi-jfri/GraphMinor},
+in which the results of this paper are proved. Where the formalization found that a statement
+or a step of a proof is wrong as printed, this copy corrects it in place. Where the paper leaves a proof or a step to the reader, this
+copy adds it, also in blue. Text \del{struck
+through in red} is removed and text \fix{in blue} is inserted. Each change has a note, marked
+\textcolor{fixcolor}{\sffamily F1}, \textcolor{fixcolor}{\sffamily F2}, \dots, that gives the
+reason. The file
+\href{https://github.com/mahdi-jfri/GraphMinor/blob/main/corrections/GM22.md}{corrections/GM22.md}
+of the formalization describes each correction in full. Each note, and each item in the list below, begins with the kind of the change. A \kindname{misprint} is a wrong symbol, index or word. A \kindname{statement} is a result or a claim of the text that is false as printed. A \kindname{degenerate} is a statement that fails only in a trivial case, such as an empty graph or a parameter equal to~$0$. A \kindname{gap} is a step of a proof that does not follow as written. A \kindname{missing} is a proof that the paper omits, leaves to the reader or only sketches, and that this copy adds.
+
+The corrections and added proofs, in the order of the pages:
+\begin{enumerate}\setlength{\itemsep}{1pt}
+\item \kindtag{fix:2.4-proof-added}\hyperref[fix:2.4-proof-added]{Proof of 2.4, page 532}: the proof is added.
+\item \kindtag{fix:3.1-claim7}\hyperref[fix:3.1-claim7]{Claim (7) in the proof of 3.1, page 536}: $2t \le \omega + 1$
+becomes $2t \le w + 1$.
+\item \kindtag{fix:5-respectful}\hyperref[fix:5-respectful]{Section 5, definition of a respectful tangle, page 539}:
+$\Sigma \cap \overline{\Sigma \setminus \Delta}$ becomes
+$\Gamma \cap \overline{\Sigma \setminus \Delta}$.
+\item \kindtag{fix:5-atoms}\hyperref[fix:5-atoms]{Section 5, definition of atoms, page 539}: ``a region of $\Sigma$
+in $\Sigma$'' becomes ``a region of $\Gamma$ in $\Sigma$''.
+\item \kindtag{fix:5.1}\hyperref[fix:5.1]{Statement of 5.1, page 539}: $z \in A(H)$ becomes $z \in A(\Gamma)$.
+\item \kindtag{fix:6.3}\hyperref[fix:6.3]{Statement of 6.3, page 543}: the hypothesis that $\alpha(u'_j) = u_j$ for
+$1 \le j \le q$ is added.
+\item \kindtag{fix:6.3-proof}\hyperref[fix:6.3-proof]{Proof of 6.3, page 543}: $P_i$ and $p_i$ become $P_j$ and $p_j$.
+\item \kindtag{fix:6.3-claim5}\hyperref[fix:6.3-claim5]{Claim (5) in the proof of 6.3, page 544}: $P_i$ and $p_i$
+become $P_j$ and $p_j$.
+\item \kindtag{fix:7.1-proof}\hyperref[fix:7.1-proof]{Proof of 7.1, page 546}: $z \in Z(\Gamma)$ becomes
+$z \in A(\Gamma)$.
+\item \kindtag{fix:7.4-claim2}\hyperref[fix:7.4-claim2]{Claim (2) in the proof of 7.4, page 553}: ``$d$ and $d'$''
+becomes ``$d$ by $d'$''.
+\item \kindtag{fix:7.4-claim7a}\hyperref[fix:7.4-claim7a]{Claim (7) in the proof of 7.4, page 554}: $N_w$ becomes $N_W$.
+\item \kindtag{fix:7.4-claim7b}\hyperref[fix:7.4-claim7b]{Claim (7) in the proof of 7.4, page 554}: $L \cup B$ becomes
+$L \cap B$.
+\end{enumerate}

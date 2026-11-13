@@ -1,0 +1,22 @@
+\origpage{355}{N. Robertson, P.D. Seymour / Journal of Combinatorial Theory, Series B 92 (2004) 325--357}
+\noindent simplify notation a little). Let $G'$ be the hypergraph with
+\begin{equation*}
+V(G') = N(\Gamma) \cup \bigcup(\beta(n) : n \in N(\Gamma) \cap \text{bd}(\Sigma))
+\end{equation*}
+and $E(G') = C(\Gamma)$, in which $c \in C(\Gamma)$ is incident with $v \in V(G')$ if and only if either $v \in \tilde{c}$, or $c$ is a border cell and $v \in \beta(n)$ for some $n \in \tilde{c}$. It follows that $(\Gamma, \beta)$ is a $(\Sigma, \rho)$-hull for $G'$, for some $(\Sigma, \rho) \in \mathcal{S}$.
+
+For each cell $c$ of $\Gamma$, let $A_c$ be a rooted hypergraph with $A_c^- = \alpha(c)$, and with $\pi(A_c)$ as follows. If $c$ is internal, let $\pi(A_c) = \gamma_\Gamma(c)$, and if $c$ is a border cell with nodes $n_1, n_2$ say, let $\pi(A_c)$ be some march with $\bar{\pi}(A_c) = \{v(n_1), v(n_2)\} \cup \beta(n_1) \cup \beta(n_2)$. Let $\mathcal{L}$ be the set $\{A_c : c \in C(\Gamma)\}$. Then $\mathcal{L}$ is a fine rooted location in $G/W$, and $G'$ is a heart of $(G/W, \mathcal{L})$. It follows from theorems 9.1 and 9.8 of [3] (and from the definition of ``warp'') that $(P/W, \mathcal{L})$ is $(\Sigma, \rho)$-shelled.
+
+It remains to check that $\mathcal{L}$ is linked to $\mathcal{T}/W$. Let $c \in C(\Gamma)$, and suppose that $(A, B) \in \mathcal{T}/W$ with $A_c^- \subseteq A$. By theorem 11.7 of [3], $(A, B)$ has order at least $|\bar{\pi}(A_c)|$; and so $\mathcal{L}$ is linked to $\mathcal{T}/W$. This proves 10.3. $\square$
+
+We deduce
+
+\textbf{10.4.} \textit{Let} $\Omega$ \textit{be a well-quasi-order and let} $p \ge 0$. \textit{Let} $P_i = (G_i, \mu_i, \Delta_i, \phi_i)$ $(i = 1, 2, \dots)$ \textit{be a countable sequence of free rootless} $\Omega$\textit{-patchworks such that for all} $i \ge 1$, $sk(G_i^-)$ \textit{has no} $K_p$ \textit{minor. Then there exist} $j > i \ge 1$ \textit{such that} $P_i$ \textit{is simulated in} $P_j$.
+
+\textit{Proof.} Take $\theta$ and $\mathcal{S}$ such that 10.3 holds (with $H = K_p$). Let $\mathcal{F}$ be the set of all patchworks which are $(\Sigma, \rho)$-hulled for some $(\Sigma, \rho) \in \mathcal{S}$. Since $\mathcal{S}$ is finite, $\mathcal{F}$ is well-behaved by 9.1. For all $i \ge 1$, if $\mathcal{T}$ is a tangle of order $\ge \theta$ in $G_i$, then $\mathcal{T}$ controls no $K_p$-minor of $sk(G_i^-)$, because there is no $K_p$-minor of $sk(G_i^-)$. By 10.3, there exists $W$ and $\mathcal{L}$ as in 10.3. By 10.2, $((G_i, \mu_i, \Delta_i)/W, \mathcal{L})$ has a heart in $\mathcal{F}$. The result follows from 7.3. $\square$
+
+As a corollary, we deduce the following form of Wagner's conjecture for directed graphs (which immediately implies the standard form of the conjecture for undirected graphs). A directed graph is a minor of another if the first can be obtained from a subgraph of the second by contracting edges.
+
+\textbf{10.5.} \textit{Let} $G_i$ $(i = 1, 2, \dots)$ \textit{be a countable sequence of directed graphs. Then there exist} $j > i \ge 1$ \textit{such that} $G_i$ \textit{is isomorphic to a minor of} $G_j$.
+
+\textit{Proof.} Let $p = 2|E(G_1)| + |V(G_1)|$; then every tournament with $p$ vertices has a minor isomorphic to $G_1$. We may therefore assume for each $i \ge 2$ that the (undirected) graph $G_i'$ underlying $G_i$ has no minor isomorphic to $K_p$, for otherwise $G_i$ has a minor isomorphic to $G_1$. Take $\theta = 1$, and let $\Omega$ be the well-quasi-order with $E(\Omega) = \{\emptyset\}$. For each $i \ge 2$ let $H_i$ be the rooted hypergraph $(G_i', \emptyset)$. Let $P_i = (H_i, \mu, \Delta, \phi)$ where for $e \in E(G_i)$, $\mu(e)$ is the one- or two-vertex sequence enumerating the ends of $e$ in $G_i$ (tail first), $\Delta(e)$ is $\{N_X$,

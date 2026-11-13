@@ -1,0 +1,25 @@
+\origpage{333}{N. Robertson, P.D. Seymour / Journal of Combinatorial Theory, Series B 92 (2004) 325--357}
+Let $Q_2 = (G_2, \mu_2, \Delta_2, \phi_2)$ be an $\Omega_2$-completion of a member of $\mathcal{F}_2$. Choose $(G_1, \mu_1, \Delta_1) \in \mathcal{F}_1$ and $f \in dom(\mu_1)$ and $v \in V(G_2)$, as in the definition of 1-vertex extension. Let $Q_1 = (G_1, \mu_1, \Delta_1, \phi_1)$ be the $\Omega_1$-completion of $(G_1, \mu_1, \Delta_1)$ where
+\begin{align*}
+\phi_1(e) &= \phi_2(e)\ (e \in E(G_1) \setminus \{f\}), \\
+\phi_1(f) &= Q_2|H,
+\end{align*}
+where $H$ is the rooted hypergraph such that $H \subseteq G_2$, $\pi(H) = \mu_1(f)$, $E(H) = \{f\}$, and $V(H)$ is the set of ends of $f$ in $G_2$. Let us define $Q_1 = \lambda(Q_2)$; then it is easy to see that $\lambda$ is an encoding, and the result follows from 4.2. $\square$
+
+\textbf{4.8.} \textit{Let $\mathcal{F}_1$ be a well-behaved set of patchworks, let $k \ge 0$, and let $\mathcal{F}_2$ be the set of all patchworks $P_2$ such that there exist $P_1 \in \mathcal{F}_1$ and a sequence}
+\begin{equation*}
+P_1 = P^0, P^1, \dots, P^{k'} = P_2
+\end{equation*}
+\textit{where $k' \le k$ and for $1 \le i \le k'$, $P^i$ is a 1-vertex extension of $P^{i-1}$. Then $\mathcal{F}_2$ is well-behaved.}
+
+\textbf{Proof.} Let us express $\mathcal{F}_2 = \mathcal{F}^0 \cup \mathcal{F}^1 \cup \dots \cup \mathcal{F}^k$, where for $P_2 \in \mathcal{F}^i$ the $k'$ above can be chosen with $k' = i$. By repeated use of 4.7, $\mathcal{F}^{k'}$ is well-behaved for each $k'$, and hence $\mathcal{F}_2$ is well-behaved. $\square$
+
+If $G$ is a hypergraph and $W \subseteq V(G)$, $G/W$ denotes the hypergraph $G'$ with $V(G') = V(G) \setminus W$ and $E(G') = E(G)$, in which $v \in V(G) \setminus W$ and $e \in E(G)$ are incident if and only if they are incident in $G$. If $\pi$ is a march in a set $V$ and $W \subseteq V$, $\pi/W$ denotes the march obtained by omitting all terms in $W$. If $G$ is a rooted hypergraph and $W \subseteq V(G)$, $G/W$ denotes $(G^- / W, \pi(G)/W)$. If $P = (G, \mu, \Delta)$ is a patchwork and $W \subseteq V(G)$, $P/W$ denotes the patchwork $(G/W, \mu', \Delta')$ where for $e \in dom(\mu)$, $\mu'(e) = \mu(e)/W$, and for $e \in E(G)$, if $Z$ denotes the set of ends of $e$ in $G$ then $\Delta'(e)$ consists of all groupings $K'$ with vertex set $Z \setminus W$ such that $K' \cup N_{W \cap Z} \in \Delta(e)$. If $P = (G, \mu, \Delta, \phi)$ is an $\Omega$-patchwork and $W \subseteq V(G)$, $P/W$ denotes the $\Omega$-patchwork $(G/W, \mu', \Delta', \phi)$, where $\mu', \Delta'$ are as before.
+
+\textbf{4.9.} \textit{Let $\mathcal{F}_1$ be a well-behaved set of patchworks, let $\theta \ge 0$, and let $\mathcal{F}_2$ be the set of all patchworks $P_2 = (G_2, \mu_2, \Delta_2)$ such that $dom(\mu_2) = E(G_2)$ and there exists $W \subseteq V(G_2)$ with $|W| \le \theta$ and $P_2/W \in \mathcal{F}_1$. Then $\mathcal{F}_2$ is well-behaved.}
+
+\textbf{Proof.} It suffices (by induction on $|W|$) to prove this when for each $P_2 = (G_2, \mu_2, \Delta_2) \in \mathcal{F}_2$ there exists $v \in V(G_2)$ such that $P_2/\{v\} \in \mathcal{F}_1$. Let $\Omega_2$ be a well-quasi-order and define $N, \Omega, \Omega_1$ as in the proof of 4.7. Let $Q_2 = (G_2, \mu_2, \Delta_2, \phi_2)$ be an $\Omega_2$-completion of a member $P_2$ of $\mathcal{F}_2$, and choose $v \in V(G_2)$ such that $P_2/\{v\} = P_1 \in \mathcal{F}_1$. Let $P_1 = (G_1, \mu_1, \Delta_1)$ and let $Q_1$ be the $\Omega_1$-completion $(G_1, \mu_1, \Delta_1, \phi_1)$ of $P_1$ where
+\begin{align*}
+\phi_1(e) &= \phi_2(e) \text{ if } e \in E(G_1) \text{ is not incident with } v \text{ in } G_2, \\
+\phi_1(e) &= Q_2|H \text{ if } e \in E(G_1) \text{ is incident with } v \text{ in } G_2,
+\end{align*}

@@ -1,0 +1,30 @@
+\origpage{316}{ROBERTSON AND SEYMOUR}
+\sectionhead{3. \textsc{The Basic Algorithm}}
+
+Now we give the details of our main algorithm. We require first
+
+\stmt
+(3.1) \textit{For any fixed integer $w$, there is a polynomial algorithm which has input a simple graph $G$ and a subset $Q$ of $V(G)$, and which has output either}
+
+\hspace*{12pt}(i) \textit{a separation $(H, H')$ of $G$ with $|V(H) \cap V(H')| \le w$, such that}
+\begin{align*}
+&|(V(H) - V(H')) \cap Q|, |(V(H') - V(H)) \cap Q| \\
+&\quad \le \tfrac{2}{3} |Q - (V(H) \cap V(H'))|,
+\end{align*}
+\textit{or}
+
+\hspace*{12pt}(ii) \textit{a (valid) statement that no such separation exists.}
+
+\textit{Proof.} We examine all subsets $X \subseteq V(G)$ of cardinality $\le w$, and check if some component of $G \setminus X$ has more than $\tfrac{2}{3}|Q - X|$ vertices which are in $Q$. If this is true for all such $X$, then no separation of the required kind exists; and if not we can produce $H, H'$, as in the proof of (2.6). Clearly this is a polynomial algorithm, since $w$ is fixed. Moreover, the running time is bounded by a polynomial in $|V(G)|$, since $G$ is simple. This concludes the proof.
+
+We shall inductively define two algorithms $A_1(n)$ and $A_2(n)$, for $n \ge 1$. Throughout, $w$ is a fixed integer. $A_1(n)$ has as input a terminated graph $(G, \mathscr{A})$ with index $\le \tfrac{5}{2}w$, where $G$ is simple and has at most $n$ vertices. It either decides whether $(G, \mathscr{A})$ is feasible or outputs that $G$ has tree-width $\ge w$. $A_2(n)$ has as input a terminated graph $(G, \mathscr{A})$ with index $\le 3w$, where $G$ is simple and has at most $n$ vertices. It either decides whether $(G, \mathscr{A})$ is feasible or outputs that $G$ has tree-width $\ge w$.
+
+\textsc{Definition of} $A_1(n)$. If $n \le 4w$ proceed by exhaustion. If $n > 4w$ (this restriction is only of importance later when analyzing running time) take two steps.
+
+\textit{Step 1.} Use the algorithm of (3.1) with $Q = V(G)$ to find a separation $(H, H')$ of $G$ where $|V(H) \cap V(H')| \le w$ and
+\begin{equation*}
+|V(H) - V(H')|, |V(H') - V(H)| \le \tfrac{2}{3}|V(G) - (V(H) \cap V(H'))|.
+\end{equation*}
+If no such separation exists, announce (by (2.6)) that $G$ has tree-width $\ge w$, and stop. If the separation has been found, go to step 2.
+
+\textit{Step 2.} Generate all crossing schemes for $\mathscr{A}$ with respect to $(H, H')$, and for each apply $A_2(\tfrac{2}{3}n + \tfrac{1}{3}w)$ to the two induced terminated graphs. If in one of these applications it is found that the graph has tree-width $\ge w$, announce that $G$ has tree-width $\ge w$. If not, then the feasibility of all these

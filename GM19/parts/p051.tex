@@ -1,0 +1,26 @@
+\origpage{375}{N. Robertson, P.D. Seymour / Journal of Combinatorial Theory, Series B 90 (2004) 325--385}
+\noindent between $v_1$ and $u$. Then $|E(P_1)| \ge 2t - 1$, with equality only if $u \notin V(\Gamma)$; and so $|E(P_1)| \ge |E(Q)| + 1$. Since $|E(S_{v_1})| \le \rho$, it follows that $|E(Q \cup (S_{v_1} \cap S_{v_2}))| \le \rho - 1$, contrary to 13.1. $\square$
+
+\sectionhead{14. Removing wheel covers}
+
+The object of this section is to prove the following.
+
+\textbf{14.1.} \textit{Let $\chi, \mathscr{S}, \mathscr{D}$ be as in Section 10, and let $\chi$ satisfy $\mathbf{S_2}$; let $\omega_0 \in E(\Omega_\chi(2)) \cup E(\Omega_\chi(3))$, and let $m \ge 1, n \ge 4$. Then there is a well-behaved set $\mathscr{C}_5(m, n, \delm{q_0}\fix{\omega_0})$ of $\chi$-places with the following property. Let $(\Gamma, \phi, \lambda, \mathscr{T}) \in \mathscr{D}$ be $(m, n, \omega_0)$-flawed internally. Then there is a rooted location $\mathscr{L}$ which $(4n \cdot 5^{2m} + 3)$-isolates $\mathscr{T}$, and for which $(\Gamma, \phi, \mathscr{L}) \in \mathscr{C}_5(m, n, \omega_0)$.}\fixnote{fix:14.1}{Here $q_0$ is not defined, and the second sentence of 14.1 has $\mathscr{C}_5(m, n, \omega_0)$.}
+
+\textbf{Proof.} Let $(\Gamma, \phi, \lambda, \mathscr{T}) \in \mathscr{D}$ be $(m, n, \omega_0)$-flawed internally. By 12.4 there is a cover $\mathscr{W}$ with $|\mathscr{W}| \le m + c(\Sigma_\chi)$, each member of which has radius $\le 2n \cdot 5^{2m}$. For each $W \in \mathscr{W}$, let $H(W)$ be an optimal $W$-hub. If $|V(H(W))| = 1$, designate some vertex of $R^* \cap bd(W)$ as \textit{singular}, and the other vertices of $R^* \cap bd(W)$ as \textit{regular}. If $|V(H(W))| > 1$, we say $r^* \in R^* \cap bd(W)$ is \textit{singular} if $S_{v_1}, S_{v_2}$ have distinct inner ends, where $v_1, v_2$ are the neighbours of $r^*$ in $\Gamma^* \cap bd(W)$, and $S_{v_1}, S_{v_2}$ are the corresponding spokes; and $r^*$ is \textit{regular} otherwise. We observe that for each $W \in \mathscr{W}$, there are most $|V(H(W))|$ singular members of $R^* \cap bd(W)$; and there is at least one (for since $H(W)$ is optimal, it follows that if $H(W)$ is a circuit then not all spokes have the same inner end). Let $S(W)$ be the set of singular vertices in $R^* \cap bd(W)$.
+
+For each $W \in \mathscr{W}$, let $N(W)$ be the set of all $v \in V(\Gamma) \cap bd(W)$ with a singular neighbour in $\Gamma^* \cap bd(W)$. Thus $|N(W)| \le 2|V(H(W))|$. Let $G(W)$ be the drawing with
+\begin{align*}
+U(G(W)) &= bd(W) \cup U(H(W)) \cup \bigcup (U(S_v) : v \in N(W)), \\
+V(G(W)) &= S(W) \cup N(W) \cup V(H(W)) \cup \bigcup (V(S_v) : v \in N(W)),
+\end{align*}
+where again $S_v$ is the spoke corresponding to $v$. We see that
+\begin{align*}
+|V(G(W))| &\le |V(H(W))| + |S(W)| + 2|S(W)|(2n \cdot 5^{2m}) \\
+&\le (8n \cdot 5^{2m} + 4)(4n \cdot 5^{2m} + 2)
+\end{align*}
+and $E(G(W))$ is similarly bounded. We call $(\bigcup(G(W) : W \in \mathscr{W}), \mathscr{W})$ an $\omega_0$-flaw in $(\Gamma, \phi, \lambda, \mathscr{T})$.
+
+By 5.2, to prove the theorem it suffices to show the following.
+
+\hspace*{12pt}(1) \textit{Let $\mathscr{D}' \subseteq \mathscr{D}$, such that each $(\Gamma, \phi, \lambda, \mathscr{T}) \in \mathscr{D}'$ is $(m, n, \omega_0)$-flawed internally and they all have the same $\omega_0$-flaw. Then there is a well-behaved set $\mathscr{C}$ of $\chi$-places such that for each $(\Gamma, \phi, \lambda, \mathscr{T}) \in \mathscr{D}'$ there is a rooted location $\mathscr{L}$ which $(4n \cdot 5^{2m} + 3)$-isolates $\mathscr{T}$ and for which $(\Gamma, \phi, \mathscr{L}) \in \mathscr{C}$.}

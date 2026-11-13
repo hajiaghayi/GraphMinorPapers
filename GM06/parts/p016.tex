@@ -1,0 +1,56 @@
+\origpage{130}{ROBERTSON AND SEYMOUR}
+Let
+\begin{equation*}
+N_i = \left\{\left(i, \frac{2j+1}{k}\pi\right): 1 \le j \le k\right\} \qquad (i = 1, 2).
+\end{equation*}
+If $f: [0, 1] \to \Sigma$ is continuous, $G$-normal, with $f(0) \in N_1, f(1) \in N_2$ and with $L_G(f)$ finite, we say $f$ is a \textit{helix} (in $G$). The following lemma is fundamental.
+
+\stmt
+(5.2) \textit{Let $\theta$ be feasible in $G$, and let $f$ be a helix. Then $L(f) \ge k|\theta(f) - \theta|$, that is,}
+\begin{equation*}
+\theta(f) - k^{-1}L(f) \le \theta \le \theta(f) + k^{-1}L(f).
+\end{equation*}
+The proof is clear. We abbreviate $\theta(f) + k^{-1}L(f)$ by $\phi(f)$ or $\phi_G(f)$. One form of our characterization is the following.
+
+\stmt
+(5.3) \textit{If $\theta$ is feasible in $G$ and $\theta + 1/k$ is not, then there is a helix $f$ with $\phi(f) = \theta$.} We prove this by means of the following two lemmas.
+
+\stmt
+(5.4) \textit{If $(G', \mathcal{L}')$ is produced from $(G, \mathcal{L})$ by one of the reductions 1,..., 4, and $\theta(\mathcal{L}') + 1/k$ is feasible in $G'$, then $\theta(\mathcal{L}) + 1/k$ is feasible in $G$.}
+
+\textit{Proof.} This is trivial for reduction 4, and almost equally trivial for the other reductions. \fix{We give the details. Let $\mathcal{L}''$ be a linkage in $G'$ with
+$\theta(\mathcal{L}'') = \theta(\mathcal{L}') + 1/k$. Suppose first that the reduction is 1, 2 or 4.
+Then $G'$ is a subgraph of $G$, and so $\mathcal{L}''$ is a linkage in $G$. Moreover
+$\theta(\mathcal{L}') = \theta(\mathcal{L})$. For reductions 1 and 2 this holds since the linkage is
+not changed. For reduction 4 with $k \ge 2$ it holds since some $P_j$ with $j \ne i$ is not changed,
+and $\theta(P)$ is the same for all members $P$ of a linkage. For reduction 4 with $k = 1$ it holds
+since, by the reading of reduction 4 given above, the lift of the new path from the chosen lift of
+$s_1$ ends at the same point as the chosen lift of $P_1$. Hence $\theta(\mathcal{L}) + 1/k$ is
+feasible in $G$.
+
+Now suppose that the reduction is 3, and let $e$ be the edge joining $s_i$ and $v$. Moving $v$ to
+$s_i$ along $e$ is done by a continuous map $\pi$ of $\Sigma$ to itself, which maps the closure of $e$
+to $s_i$, is one-to-one elsewhere, and is joined to the identity by a deformation that fixes
+$bd(\Sigma)$. Each path of $\mathcal{L}'$ is drawn as the image under $\pi$ of the corresponding path
+of $\mathcal{L}$, and so the two have the same winding number, since a deformation fixing
+$bd(\Sigma)$ does not change the winding number of a curve between points of $bd(\Sigma)$. Hence
+$\theta(\mathcal{L}') = \theta(\mathcal{L})$. The map $\pi$ maps $V(G) - \{s_i\}$ one-to-one onto
+$V(G')$, with $v$ mapped to $s_i$, and maps the edges of $G$ other than $e$ one-to-one onto the
+edges of $G'$, preserving incidence. Read each path of $\mathcal{L}''$ back in $G$ by this
+correspondence, and add $s_i$ and $e$ at the start of the path that now starts at $v$. Since $e$ is the
+only edge of $G$ at $s_i$, this gives a linkage $\mathcal{M}$ in $G$. Its image under $\pi$ is
+$\mathcal{L}''$, and so
+$\theta(\mathcal{M}) = \theta(\mathcal{L}'') = \theta(\mathcal{L}) + 1/k$, by the same argument.
+\fixnote{fix:5.4-proof-added}{The paper calls (5.4) trivial or almost trivial. The details above
+follow the proof in the formalization.}}
+
+\stmt
+(5.5) \textit{If $(G', \mathcal{L}')$ is produced from $(G, \mathcal{L})$ by one of the reductions 1,..., 4, and $f'$ is a helix in $G'$ then there is a helix $f$ in $G$ with $\phi_G(f) \le \phi_{G'}(f')$.}
+
+\textit{Proof.} Again this is trivial for reduction 4, and quite easy for reductions 2 and 3. Let us deal with reduction 1. Suppose that $e$ is an edge of $G$ incident with $s_i$ but contained in $\Sigma_{i-1}$ for some $i$, and let $G'$ be obtained from $G$ by deleting $e$. Let $f'$ be a helix in $G'$. If $|f'| \cap e = \emptyset$ we may take $f = f'$ and the theorem is true. If $|f'| \cap e \ne \emptyset$, let $R'$ the region of $G'$ in which edge $e$ of $G$ is drawn; let
+\begin{equation*}
+X = \{x \in [0, 1]: f'(x) \in R'\}
+\end{equation*}
+so that $X \ne \emptyset$; and let $\bar{X}$ be the closure of $X$. Choose $z_2 \in \bar{X}$, maximum. Then $f'(z_2) \in \bar{R}'$, and either $f'(z_2) \in N_2$ or $f'(z_2) \in V(G')$.
+
+Now we may assume that (1) \textit{There exists $z_1 \in [0, z_2)$ with $f'(z_1) \in V(G')$.}

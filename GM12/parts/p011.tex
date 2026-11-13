@@ -1,0 +1,30 @@
+\origpage{250}{ROBERTSON AND SEYMOUR}
+\noindent $u, v \in V(A)$. By [4, Theorem (2.9)] we may assume that $f \in E(A)$. By (1.1) there is a circuit $C$ of a radial graph $K$ of $\Gamma$ with $|E(C)| \le 2$ and with $f \subseteq \text{ins}(C)$. Let $P_1, P_2$ be the maximal subpaths of $P$ not using $f$, with $v_1 \in V(P_1), v_2 \in V(P_2)$. Since $|U(C) \cap V(\Gamma)| \le 1$ and $V(P_1) \cap V(P_2) = \emptyset$, we may assume that $U(C) \cap V(P_1) = \emptyset$. Since $P_1$ has one end in $\text{ins}(C)$ it follows that $v_1 \in U(P_1) \subseteq \text{ins}(C) - U(C)$, and so $g_1 \subseteq \text{ins}(C)$. But $f \subseteq \text{ins}(C)$, and so $d(f, g_1) \le 1$. This proves (1).
+
+Now $g_1, g_2$ have no common end, since $d(g_1, g_2) \ge \theta \ge 5$. Thus $E(P) \ne \emptyset$; and if $f$ is the edge of $P$ incident with $v_2$, then $d(f, g_2) \le 4$, and so $d(g_1, f) \ge \theta - 4$. Consequently for $1 \le i \le \theta - 4$ there is a first edge $f_i$ of $P$ (that is, nearest to $v_1$) with $d(g_1, f_i) \ge i$.
+
+\hspace*{12pt}(2) \textit{For $1 \le i \le \theta - 4$, $i \le d(g_1, f_i) \le i + 3$.}
+
+\textit{Subproof.} If $f_i$ is incident with $v_1$, then $d(g_1, f_i) \le 4 \le i + 3$. If $f_i$ is not incident with $v_1$, let $f$ be the edge of $P$ preceding $f_i$. From the definition of $f_i$, $d(g_1, f) \le i - 1$, but $d(f, f_i) \le 4$, and so $d(g_1, f_i) \le i + 3$. This proves (2).
+
+\hspace*{12pt}(3) \textit{For $1 \le i < j \le \theta - 4$, if $j - i \ge \theta_1 + 7$ then $d(f_i, f_j) \ge \theta_1 + 4$.}
+
+\textit{Subproof.} $d(g_1, f_j) \ge j$ and $d(g_1, f_i) \le i + 3$ by (2), and so $d(f_i, f_j) \ge j - i - 3 \ge \theta_1 + 4$.
+
+\hspace*{12pt}(4) \textit{For $2 \le i \le \theta - 5$, $f_i$ is free.}
+
+\textit{Subproof.} $d(g_1, f_i) \ge i \ge 2$, and $d(g_2, f_i) \ge d(g_1, g_2) - d(g_1, f_i) \ge \theta - i - 3 \ge 2$, and so $f_i$ is free by (1).
+
+Let $h_i = f_{(\theta_1 + 7)i}$ ($i = 1, \dots, t$). Since $(\theta_1 + 7)t = \theta - 5$ it follows from (3) and (4) that $h_1, \dots, h_t$ are all free, and $d(h_i, h_j) \ge \theta_1 + 4$ for $1 \le i < j \le t$. Let $h_i$ have ends $a_i, b_i$ ($1 \le i \le t$). For $1 \le i \le t$ let $\Delta_i \subseteq \Sigma$ be a closed disc with $\Delta_i \cap U(\Gamma) = \{a_i, b_i\} \subseteq \text{bd}(\Delta_i)$. Since $d(h_i, h_j) \ge \theta_1 + 4$ for $i \ne j$, $\Delta_1, \dots, \Delta_t$ are mutually disjoint. Let $Z = \{a_1, b_1, \dots, a_t, b_t\}$. Direct the edges of $L$, arbitrarily, and for each $v \in V(L)$ let
+\begin{equation*}
+Z_v = \{a_i; v \text{ is the head of } e_i\} \cup \{b_i; v \text{ is the tail of } e_i\}.
+\end{equation*}
+Then $\{Z_v \colon v \in V(L)\}$ is a partition of $Z$. We wish to apply (3.2) to $\Gamma, \mathscr{T}$.
+
+\hspace*{12pt}(5) \textit{$d(r_i, r_j) \ge \theta_1$ for $1 \le i < j \le t$, where $r_i$ is the region of $\Gamma$ meeting $\Delta_i$.}
+
+\textit{Subproof.} $d(r_i, h_i) \le 2$, since both ends of $h_i$ are incident with $r_i$, and similarly $d(r_j, h_j) \le 2$. Since $d(h_i, h_j) \ge \theta_1 + 4$, it follows that $d(r_i, r_j) \ge \theta_1$, as required.
+
+\hspace*{12pt}(6) \textit{For $1 \le i \le t$, $V(\Gamma) \cap \text{bd}(\Delta_i)$ is free with respect to $\mathscr{T}$.}
+
+\textit{Subproof.} $V(\Gamma) \cap \text{bd}(\Delta_i) = \{a_i, b_i\}$, and this is free since $h_i$ is free.

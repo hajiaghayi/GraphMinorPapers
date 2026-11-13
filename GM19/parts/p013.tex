@@ -1,0 +1,28 @@
+\origpage{337}{N. Robertson, P.D. Seymour / Journal of Combinatorial Theory, Series B 90 (2004) 325--385}
+Since the interiors of both $D$ and $\Delta$ are disjoint from $bd(\Sigma)$, we deduce that $u \notin bd(\Sigma)$; and since the interior of $D$ is disjoint from $U(K)$, it follows that there is no edge $f$ of $K$ with $f \subseteq \Sigma \setminus \Delta$ incident with $u$. We deduce that $U(K') \subseteq \Delta$. Since $u \notin bd(\Sigma)$, it follows that $F \cap bd(\Sigma) = \emptyset$, and so $V(K') \cap bd(\Sigma) = \emptyset$. Moreover, since $V(\Gamma) \cap \Delta \subseteq F$, it follows that
+\begin{equation*}
+V(K') \cap V(\Gamma) = V(K') \cap V(\Gamma) \cap \Delta \subseteq V(K') \cap F \subseteq \{u\}.
+\end{equation*}
+Consequently,
+\begin{equation*}
+|V(K') \cap V(\Gamma)| + |V(K') \cap bd(\Sigma)| \le 1
+\end{equation*}
+contrary to the hypothesis. This verifies the fourth condition.
+
+For the fifth, let $e_1 \in E(\Gamma_1)$ with $|\tilde{e}_1| = 3$, let $r_1$ be a region of $\Gamma_1$ in $\Sigma_1$, let $f_1$ be a component of $\bar{r}_1 \cap e_1$, and let $\bar{f}_1 \cap \tilde{e}_1 = \{v_1, v_1'\}$; we suppose that $v_1, v_1' \notin bd(\Sigma_1)$, and will show that $|\bar{r}_1 \cap V(\Gamma_1)| = 2$. Let $e = \psi(e_1)$, $f = \psi(f_1)$, $v = \psi(v_1)$, $v' = \psi(v_1')$, and let $r$ be the region of $\Gamma$ in $\Sigma$ including $\psi(r_1)$. Then $f$ is a component of $\bar{r} \cap e$, and $\bar{f} \cap \tilde{e} = \{v, v'\}$. Since $v_1, v_1' \notin bd(\Sigma_1)$, it follows that $v, v' \notin bd(\Sigma)$. Since $\Gamma$ fits $\Phi$, it follows from the fifth condition in the definition of ``fit'', applied to $\Gamma, \Phi$, that $|\bar{r} \cap V(\Gamma)| = 2$ and so $\bar{r} \cap V(\Gamma) = \{v, v'\}$. Hence $U(K) \cap bd(\bar{r}) = \emptyset$, and since each component $K'$ of $K$ contains a vertex of $\Gamma$ it follows that $U(K) \cap \bar{r} = \emptyset$. Consequently $\psi(r) = r_1$, and so $|\bar{r}_1 \cap V(\Gamma_1)| = 2$ as required. $\square$
+
+A painting $\Gamma$ in a surface $\Sigma$ is 2-cell if every region of $\Gamma$ in $\Sigma$ is homeomorphic to an open disc. Every internally 3-connected painting is 2-cell. Let $\Gamma$ be a 2-cell painting with $E(\Gamma) \ne \emptyset$. A drawing $\Gamma^*$ in $\hat{\Sigma}$ is a \textit{radial drawing} of $\Gamma$ if it satisfies the four conditions following, where $R^*$ denotes the set of vertices of $\Gamma^*$ that are not in $V(\Gamma)$:
+
+\hspace*{12pt}$\bullet$ $U(\Gamma) \cap U(\Gamma^*) = V(\Gamma) \subseteq V(\Gamma^*)$,
+
+\hspace*{12pt}$\bullet$ every region of $\Gamma$ in $\hat{\Sigma}$ contains a unique vertex of $\Gamma^*$,
+
+\hspace*{12pt}$\bullet$ $\Gamma^*$ is bipartite, and $(V(\Gamma), R^*)$ is a bipartition of it,
+
+\hspace*{12pt}$\bullet$ for every $v \in V(\Gamma)$, the edges of $\Gamma$ and of $\Gamma^*$ incident with $v$ alternate in their cyclic order around $v$.
+
+It is easy to see that such a drawing $\Gamma^*$ exists, and is unique up to homeomorphisms of $\hat{\Sigma}$ to itself that fix $U(\Gamma)$ pointwise. If $r$ is a region of $\Gamma$, the unique vertex of $\Gamma^*$ contained in $r$ is denoted by $r^*$; and if $r \nsubseteq \Sigma$ (and hence $r$ is a component of $\hat{\Sigma} \setminus \Sigma$) we call $r^*$ a \textit{pole}. We shall use the $\Gamma^*, R^*, r^*$ notation without further explanation.
+
+If $\Gamma$ is an internally 3-connected painting in $\Sigma$, we define $dist(\Gamma)$ to be the minimum of $\frac{1}{2}|E(F)|$, taken over all paths $F$ of $\Gamma^*$ with ends distinct poles. (If $c(\Sigma) \le 1$ we set $dist(\Gamma) = \infty$.) As a first application of 5.1 and 5.2 we prove the following.
+
+\textbf{5.4.} \textit{Let $\chi$ satisfy} \textbf{S}$_3$, \textit{and let $(\Gamma_i, \phi_i)$ $(i = 1, 2, \dots)$ be a similarly oriented bad sequence for $\chi$. Then for all $n \ge 0$, there exists $h \ge 0$ such that $dist(\Gamma_i) > n$ for all $i \ge h$.}

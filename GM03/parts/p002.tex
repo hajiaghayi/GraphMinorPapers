@@ -1,0 +1,30 @@
+\origpage{50}{ROBERTSON AND SEYMOUR}
+\noindent cases) and series-parallel graphs have tree-width $\le 2$. For $n \ge 1$, the complete graph $K_n$ has tree-width $n - 1$, while for $n \ge 2$ the $n \times n$ grid (this has $n^2$ vertices---it is the adjacency graph of the chessboard with $n^2$ squares) can be shown to have tree-width $n$.
+
+A graph $H$ is a \textit{minor} of a graph $G$ if $H$ can be obtained from a subgraph of $G$ by contraction. If $H \ne G$ it is a \textit{proper minor}. Other papers in this series prove theorems concerning minors of graphs chosen from a set of graphs with bounded tree-width. For example,
+
+\stmt
+(1.1) [3]. \textit{If $\mathcal{F}$ is an infinite set of graphs all with tree-width $\le w$, where $w$ is some integer, then there exist $G, G' \in \mathcal{F}$ such that $G$ is isomorphic to a minor of $G'$.}
+
+\stmt
+(1.2) [2]. \textit{If $\mathcal{F}$ is a (possibly infinite) set of graphs, all with tree-width $\le w$, where $w$ is some integer, then there is a polynomial algorithm which, given an arbitrary graph $G$, tests if there is a graph $G' \in \mathcal{F}$ such that $G$ is isomorphic to a minor of $G'$.}
+
+The purpose of this paper is to provide a useful source of sets of graphs with bounded tree-width. The set of all planar graphs is not such a set, because it contains all the grids. However, our main result may be expressed as follows.
+
+\stmt
+(1.3) \textit{Any proper subset of the set of all planar graphs which is closed under isomorphism and the taking of minors is a set of graphs with bounded tree-width.}
+
+This may be reformulated in the following more convenient form.
+
+\stmt
+(1.4) \textit{For every planar graph $H$, there is a number $w$ such that every planar graph with no minor isomorphic to $H$ has tree-width $\le w$.}
+
+\stmt
+(1.1) and (1.4) together imply that planar graphs are ``well-quasi-ordered'' by the taking of minors; more precisely,
+
+\stmt
+(1.5) \textit{If $\mathcal{F}$ is an infinite set of planar graphs, then there exist distinct $G, G' \in \mathcal{F}$ such that $G$ is isomorphic to a minor of $G'$.}
+
+\textit{Proof.} Choose $H \in \mathcal{F}$, and choose a number $w$ as in (1.4). If there exists $G \in \mathcal{F} - \{H\}$ such that $H$ is isomorphic to a minor of $G$ then (1.5) is true. If not, then by our choice of $w$, each $G \in \mathcal{F} - \{H\}$ has tree-width $\le w$, and the result follows from (1.1).
+
+We remark that in [4] we shall prove that (1.4) is true with the second occurrence of ``planar'' deleted. We are publishing the weaker version of

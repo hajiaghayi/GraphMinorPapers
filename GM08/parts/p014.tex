@@ -1,0 +1,44 @@
+\origpage{268}{ROBERTSON AND SEYMOUR}
+\noindent where $s = \lceil \frac{1}{2}r \rceil$ such that each $C_i$ is inside $F$ and such that there are $r$ mutually disjoint paths of $\Gamma$ between $C_1$ and $F$. The following may be proved by a slight adaptation of the proof of [7, Theorem (4.1)]\del{ the details of which we omit}\fix{, and we give it below}.
+
+\stmt
+(8.1) \textit{If $F$ is centred, there is a $(r, s)$-nest $(C_1, \dots, C_s)$ (where $r, s$ are as above) such that each $C_i$ is inside $F$, and there are $r$ mutually disjoint paths $P_1, \dots, P_r$ of $\Gamma$ between $C_1$ and $F$, such that the intersection of each $P_i$ and each $C_j$ is a path.}
+
+\fix{We give the adaptation. If $r = 0$ then $s = 0$, and there is nothing to prove, so we assume that $r \ge 1$. Extend $\Sigma$ to a sphere, and let $D_F$ be the closed disc in $\Sigma$ bounded by $F$. Since $F$ is centred, there are an $(r, s)$-nest $(C_1, \dots, C_s)$ with each $C_i$ inside $F$, and $r$ mutually disjoint paths of $\Gamma$ between $C_1$ and $F$. Let $D_1$ be the closed disc bounded by $C_1$ inside $F$. First we trim each of these paths, keeping its part from its last vertex in $D_1$ to its first later vertex in $F$. (The last point of the path in $D_1$ is a vertex of $C_1$, and its first later point outside the interior of $D_F$ is in $F$, and so it is a vertex, since $F$ is $\Gamma$-normal.) The trimmed paths are mutually disjoint, they meet $D_1$ only in their first vertex, and they meet $F$ only in their last vertex. Let $\Gamma'$ be the subdrawing formed by $C_1, \dots, C_s$ and the trimmed paths. It lies in $D_F$. Each vertex $v$ of $\Gamma'$ in $F$ is the last vertex of just one trimmed path, since the circuits $C_i$ are inside $F$ and miss it, and the only edge of $\Gamma'$ at $v$ is the last edge of this path, which is not a loop. A circuit uses two edges or a loop at each of its vertices, and $F$ meets $U(\Gamma)$ only in vertices. Hence no circuit of $\Gamma'$ meets $F$.
+
+The uncrossing in the proof of [7, Theorem (4.1)] needs an inner and an outer circuit that it does not change, and we add them as follows. The interior of $D_1$ contains no point of $\Gamma'$, since $C_2, \dots, C_s$ are outside $C_1$ and the trimmed paths meet $D_1$ only in $C_1$. Also no point of $\Gamma'$ is outside $D_F$. So we may add a circle $C_{in}$ in the interior of $D_1$, with a new edge from each vertex of $C_1$ to a new vertex of $C_{in}$, and a circle $C_{out}$ outside $D_F$, with a new edge from each vertex of $\Gamma'$ in $F$ to a new vertex of $C_{out}$, such that the new edges are mutually disjoint and meet $\Gamma'$ only in their ends. Let $\Gamma''$ be the drawing so obtained, and let $\Delta$ be the closed disc bounded by $C_{out}$ that includes $D_F$. Extending each trimmed path by the two new edges at its ends gives $r$ mutually disjoint paths of $\Gamma''$ between $C_{in}$ and $C_{out}$, and $C_{in}, C_1, \dots, C_s, C_{out}$ are circuits of $\Gamma''$, each inside the next.
+
+Now, as in the proof of [7, Theorem (4.1)], consider all choices of circuits $C'_1, \dots, C'_s$ of $\Gamma''$ such that $C_{in}, C'_1, \dots, C'_s, C_{out}$ are each inside the next and the disc in $\Delta$ bounded by $C'_j$ includes the disc bounded by $C_j$ $(1 \le j \le s)$, together with $r$ mutually disjoint paths $Q_1, \dots, Q_r$ of $\Gamma''$ between $C_{in}$ and $C_{out}$. We have seen that there is such a choice, and we choose one with the fewest edges in total. Then $Q_i \cap C'_j$ is a path for all $i, j$. For otherwise some $Q_i$ has a subpath with both ends in $C'_j$ and no other vertex or edge in $C'_j$. If this subpath runs outside $C'_j$, it replaces a part of $C'_j$ and gives a circuit whose disc includes the disc of $C'_j$. If it runs inside $C'_j$, a part of $C'_j$ replaces it in $Q_i$. In either case, by the proof of [7, Theorem (4.1)], we obtain another choice as above with fewer edges in total, which is impossible.
+
+The circuits $C'_1, \dots, C'_s$ miss $C_{in}$ and $C_{out}$, since each is inside the next, and so they use none of the new edges, since each new edge has an end in $C_{in}$ or $C_{out}$. So they are circuits of $\Gamma'$, and they miss $F$, since no circuit of $\Gamma'$ meets $F$. Since $C'_j$ lies in the interior of $D_F$, and the part of the sphere outside $D_F$ is connected and contains $C_{out}$, the disc in $\Delta$ bounded by $C'_j$ lies in $D_F$. That is, $C'_j$ is inside $F$. Also $D_1$ is included in the disc bounded by $C'_1$.
+
+Each $Q_i$ starts in $C_{in}$, in the interior of $D_1$, and ends in $C_{out}$, outside $D_F$. Let $Q'_i$ be its part from its last vertex in $D_1$ to its first later vertex in $F$. It is a path of $\Gamma'$, since the new edges lie in the interior of $D_1$ or outside $D_F$, apart from their ends. Since $Q'_i$ starts in $D_1$, which is included in the disc bounded by $C'_1$, and ends in $F$, which is outside this disc, $Q'_i$ meets $C'_1$. Let $P_i$ be the part of $Q'_i$ from its first vertex in $C'_1$ to its end in $F$. Then $P_1, \dots, P_r$ are mutually disjoint paths of $\Gamma$ between $C'_1$ and $F$. For the same reason $P_i$ meets $C'_s$, and its part from its start to its first vertex in $C'_s$ is a path between $C'_1$ and $C'_s$. So $(C'_1, \dots, C'_s)$ is an $(r, s)$-nest, with each $C'_j$ inside $F$. Finally, $P_i \cap C'_j$ is the intersection of the subpath $P_i$ of $Q_i$ with the path $Q_i \cap C'_j$, and so it is a path or null. It is not null, since $P_i$ runs from $C'_1$, which is $C'_j$ or inside $C'_j$, to $F$, which is outside $C'_j$.
+\fixnote{fix:8.1-proof-added}{The paper omits the details of (8.1). The argument above is the one used in the formalization.}}
+
+If $C_1, \dots, C_s$ and $P_1, \dots, P_r$ are as in (8.1), the subdrawing $C_1 \cup \dots \cup C_s \cup P_1 \cup \dots \cup P_r$ is called a \textit{sleeve} for $F$.
+
+\stmt
+(8.2) \textit{If $C$ is a boss of $\Gamma$ then every $C$-ring is centred.}
+
+\textit{Proof.} Let $(C_1, \dots, C_k)$ be a $((1 + \rho(C)), k)$-nest with $C_1 = C$, where $k = |V(\Gamma) \cap bd\ \Sigma|$. Let $F$ be a $C$-ring. There are $1 + \rho(C)$ mutually disjoint paths of $\Gamma$ between $C_1$ and $C_k$, but $|F \cap V(\Gamma)| = \rho(C)$. Hence there is a path of $\Gamma$ between $C_1$ and $C_k$ which does not meet $F$. It follows that some vertex of $C_k$ is inside $F$.
+
+Let $1 \le j \le k$, and suppose $F$ meets $C_j$. Then for $j < j' \le k$, $|F \cap C_{j'}| \ge 2$, and so
+\begin{equation*}
+|F \cap V(\Gamma)| \ge 2(k - j) + 1.
+\end{equation*}
+Hence $2(k - j) + 1 \le \rho(C)$, and so $j \ge k - \frac{1}{2}(\rho(C) - 1)$. But $\rho(C) < k$ since $C$ is a boss, and so
+\begin{equation*}
+\lceil \frac{1}{2}\rho(C)\rceil < k - \frac{1}{2}(\rho(C) - 1).
+\end{equation*}
+Thus $C_1, \dots, C_{\lceil \rho(C)/2 \rceil}$ are all inside $F$. Moreover there are $\rho(C)$ mutually disjoint paths between $C$ and $bd\ \Sigma$ by definition of $\rho(C)$, and hence between $C_1$ and $F$, as required. $\square$
+
+We shall require the following lemmas concerning centred $O$-arcs in Section 11. The ends of a $[0, 1]$-arc are defined in the natural way.
+
+\stmt
+(8.3) \textit{Let $F$ be a $\Gamma$-normal centred $O$-arc. Let $I$ be a $\Gamma$-normal $[0, 1]$-arc with ends in $F$ and with all its other points inside $F$. Then}
+\begin{equation*}
+|I \cap V(\Gamma)| \ge \min(|F_1 \cap V(\Gamma)|, |F_2 \cap V(\Gamma)|),
+\end{equation*}
+\textit{where $F_1, F_2$ are the closures of the two components into which the ends of $I$ divide $F$.}
+
+\textit{Proof.} Let $|F \cap V(\Gamma)| = r$, and let $(C_1, \dots, C_{\lceil r/2 \rceil})$ be the nest in a sleeve for $F$. For $i = 1, 2$, put $|F_i \cap V(\Gamma)| = r_i$. Then $r_1 + r_2 = r + n$ where

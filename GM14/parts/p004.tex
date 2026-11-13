@@ -1,0 +1,28 @@
+\origpage{26}{ROBERTSON AND SEYMOUR}
+\noindent $\Lambda, \Lambda', \Lambda_1$ etc., for open discs, and $\Delta, \Delta', \Delta_1, \dots$ for closed discs. $\Sigma$ will always denote a surface.) If $X \subseteq \Sigma$ its closure is denoted by $\bar{X}$. If $X$ is homeomorphic to a circle it is called an \textit{O-arc}; and if $X$ is homeomorphic to $[0, 1]$ it is called a \textit{line}, and its ends are defined in the natural way.
+
+Let $\Sigma$ be a surface. A \textit{drawing} in $\Sigma$ is a pair $(U, V)$ where $U \subseteq \Sigma$ is closed, $V \subseteq U$ is finite, and
+
+\hspace*{12pt}(i) $U \cap \operatorname{bd}(\Sigma) \subseteq V$
+
+\hspace*{12pt}(ii) there are only finitely many arc-wise connected components of $U - V$, called \textit{edges}, and
+
+\hspace*{12pt}(iii) each edge $e$ is homeomorphic to a open interval, and $\bar{e} \subseteq V \cup e$, and either $|V \cap \bar{e}| = 1$ and $\bar{e}$ is an \textit{O-arc}, or $|V \cap \bar{e}| = 2$ and $\bar{e}$ is a line with ends the points in $V \cap \bar{e}$.
+
+If $H = (U, V)$ is a drawing in $\Sigma$, we define $U(H) = U$ and $V(H) = V$, and $E(H)$ denotes the set of edges of $H$. We say $v \in V(H)$ is \textit{incident} with $e \in E(H)$ if $v \in \bar{e}$; and in this sense every drawing may be regarded as a graph. We use graph-theoretic terminology for drawings without further explanation. Each component of $\Sigma - U$ is a \textit{region} of $H$ in $\Sigma$, and the set of all regions is denoted by $R(H)$. A region $r$ is \textit{incident} with $v \in V(H)$ or $e \in E(H)$ if $v \in \bar{r}$ or $e \subseteq \bar{r}$. A drawing is \textit{2-cell} if every region is an open disc (and consequently $\operatorname{bd}(\Sigma) = \emptyset$). The \textit{atoms} of $H$ are the sets $e (e \in E(H))$, $r (r \in R(H))$ and $\{v\} (v \in V(H))$, and the set of all atoms is denoted by $A(H)$. The atoms thus form a partition of $\Sigma$.
+
+If $H$ is a drawing in $\Sigma$, and $\Delta \subseteq \Sigma$ is such that either $\bar{e} \subseteq \Delta$ or $e \cap \Delta = \emptyset$ for each $e \in E(H)$, then $(U(H) \cap \Delta, V(H) \cap \Delta)$ is a drawing in $\Sigma$ which we denote by $H \cap \Delta$.
+
+Let $H$ be a 2-cell drawing in $\Sigma$, and let $K$ be another drawing in $\Sigma$. We say that $K$ is a \textit{radial drawing} of $H$ if
+
+\hspace*{12pt}(i) $V(H) \subseteq V(K)$, and $U(H) \cap U(K) = V(H)$
+
+\hspace*{12pt}(ii) $K$ is bipartite, and $(V(H), V(K) - V(H))$ is a 2-colouring of $K$
+
+\hspace*{12pt}(iii) every region of $H$ contains a unique vertex of $K$, and
+
+\hspace*{12pt}(iv) for each $v \in V(H)$, the edges of $H$ and of $K$ incident with $v$ alternate in their cyclic order around $v$.
+
+(Roughly, $K$ is obtained from $V(H)$ by adding a vertex in each region of $H$ and making it adjacent to every vertex of $H$ incident with that region.)
+
+If $K$ is a radial drawing of $H$, then to every atom $x$ of $H$ there naturally corresponds an atom $x'$ of $K$; namely, if $x = \{v\}$ for some $v \in V(H)$ then $x' = x$, if $x \in E(H)$, then $x' \in R(K)$ includes $e$; and if $x \in R(H)$, then $x' = \{v\}$ for the unique $v \in V(K)$ with $v \in x$. We call $x'$ the \textit{atom of $K$ corresponding to $x$}.

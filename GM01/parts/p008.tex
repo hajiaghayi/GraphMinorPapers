@@ -1,0 +1,48 @@
+\origpage{46}{ROBERTSON AND SEYMOUR}
+\noindent end in $X_t$ and the other in $Y_t$. Suppose then that $u\in X_t$ and $v\in Y_t$ are
+adjacent. Let $v$ be a vertex of $P_1$ say. Since $\mu(v)\ge t$, there is a first vertex $u'$
+say of $P_1$ with $\mu(u')\ge t$. We have $u'\in Z_t$ and so $v\ne u'$, and $u'$ occurs on $P_1$
+before $v$. But $u$ and $v$ are adjacent, and are joined by an edge not in any of
+$P_1,..., P_m$; and so the sequence
+\begin{equation*}
+u', v, u, u
+\end{equation*}
+demostrates that $u'<u$. Yet $\mu(u')\ge t>\mu(u)$, a contradiction. This completes
+the proof of (2.5).
+\stmt
+(2.6). \textit{Suppose that $G\in\mathscr{F}_\theta$, and $A_1, A_2\subseteq V(G)$, and $m\delm{>0}\fix{\ge\frac12\theta^2}$ is an integer,\fixnote{fix:2.6}{With $m>0$ only, the statement fails when $n=0$. For $\theta=6$, the one-vertex graph, $A_1=A_2=V(G)$ and $m=1$, every hypothesis holds, but the conclusion is $0<0$, because $\binom{1}{18}=0$. The uses of (2.6) satisfy $m\ge\frac12\theta^2$: in (2.7), $m=\frac12\theta^2$, and in (2.8), $m=\frac12 s\theta^2$ with $s\ge 1$ by the hypothesis added to (2.8).}
+and the following conditions are satisfied}:
+
+\hspace*{12pt}(i)\enspace\textit{there is a unique set $\{P_1,..., P_m\}$ of $m$ disjoint paths in $G$ from $A_1$
+to $A_2$};
+
+\hspace*{12pt}(ii)\enspace\textit{every vertex of $G$ is in one of $P_1,..., P_m$};
+
+\hspace*{12pt}(iii)\enspace\textit{$B_1,..., B_n$ are disjoint connected subgraphs of $G$, and each $B_j$
+meets at least $\frac12\theta^2$ of $P_1,..., P_m$.}
+
+\noindent\textit{Then $n<2m\theta^{2\theta-2}\binom{m}{\frac12\theta^2}$.}
+\stmt
+\textit{Proof}. Define $s=\lceil n/2m\rceil$. Choose an integer-valued function $\mu$ on $V(G)$
+as in (2.5). Define a sequence of integers $k_1,..., k_s$ as follows:
+\begin{align*}
+&k_1=\min(k\colon\text{for some } j\ (1\le j\le n), \mu(v)<k \text{ for all } v\in V(B_j)),\\
+&k_l=\min(k\colon\text{for some } j\ (1\le j\le n), k_{l-1}\le\mu(v)<k \text{ for all } v\in V(B_j))\\
+&\hspace{20em}(2\le l\le s).
+\end{align*}
+We must show that this is well defined. Let us suppose inductively that $k_{l'}$ is
+well defined for $1\le l'<l$, where $1\le l\le s$, and we shall show that $k_l$ is well
+defined. If $l=1$ this is clear, and we assume $l>1$. For each integer $t$, let
+$Z_t=\{v\in V(G)\colon$ for some $i$, $v$ is the first vertex of $P_i$ with $\mu(v)\ge t\}$. For
+$1\le l'<l$, let
+\begin{equation*}
+J_{l'}=\{j\colon 1\le j\le n, \text{and for some } v\in V(B_j), \mu(v)<k_{l'}\}.
+\end{equation*}
+Then clearly for $l'\ge 2$, we have $J_{l'-1}\subset J_{l'}$; we claim that
+\begin{equation*}
+|J_{l'}-J_{l'-1}|\le 2m.
+\end{equation*}
+To prove that it is sufficient to show that for every $j\in J_{l'}-J_{l'-1}$, $B_j$ meets
+$(Z_{k_{l'}-1}\cup Z_{k_{l'}})$, because $|Z_t|\le m$ for every integer $t$, and $B_1,..., B_n$ are
+disjoint. Suppose then that $j\in J_{l'}-J_{l'-1}$. There exists $u\in V(B_j)$ such that
+$\mu(u)<k_{l'}$. If there exists $u'\in V(B_j)$ such that $\mu(u')\ge k_{l'}$, then $B_j$ uses a

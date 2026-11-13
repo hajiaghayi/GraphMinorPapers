@@ -1,0 +1,32 @@
+\origpage{178}{ROBERTSON AND SEYMOUR}
+\noindent and, if $(A, B)$, $(C, D)$ are separations, we say that $(A, B)$ has \textit{smaller} $\lambda$-\textit{order than} $(C, D)$ if $\lambda(A, B) < \lambda(C, D)$. The tie-breaker $\lambda$ must satisfy the following conditions:
+
+\hspace*{12pt}(i) if $(A, B)$, $(C, D)$ are separations of $G$, they have the same $\lambda$-order if and only if $(A, B) = (C, D)$ or $(A, B) = (D, C)$
+
+\hspace*{12pt}(ii) if $(A, B)$, $(C, D)$ are separations of $G$, then either $(A \cup C, B \cap D)$ has $\lambda$-order at most that of $(A, B)$ or $(A \cap C, B \cup D)$ has $\lambda$-order smaller than that of $(C, D)$
+
+\hspace*{12pt}(iii) if $(A, B)$, $(C, D)$ are separations of $G$ and $(A, B)$ has smaller order than $(C, D)$, then $(A, B)$ has smaller $\lambda$-order than $(C, D)$.
+
+We refer to these as the \textit{first}, \textit{second}, and \textit{third tie-breaker axioms}.
+
+\stmt
+(9.2) \textit{In every hypergraph there is a tie-breaker.}
+
+\textit{Proof.} Let $(\Lambda, <)$ be the set of all triples of real numbers, ordered lexicographically; thus, $(a, b, c) < (a', b', c')$ if $a < a'$, or $a = a'$ and $b < b'$, or $a = a'$ and $b = b'$ and $c < c'$. For any hypergraph $G$, let $L(G) = V(G) \cup E(G)$. Let $G$ be a hypergraph. Choose a function $\mu$ from $L(G) \times L(G)$ into the set of positive real numbers such that
+
+\hspace*{12pt}(i) $\mu(x, y) = \mu(y, x)$ for all $x, y \in L(G)$, and
+
+\hspace*{12pt}(ii) for every choice of rationals $\alpha(x, y)$ ($x, y \in L(G)$) such that $\sum_{x, y} \alpha(x, y) \mu(x, y) = 0$, we have $\alpha(x, y) = -\alpha(y, x)$ for all $x, y \in L(G)$.
+
+For each separation $(A, B)$ of $G$, define $\lambda(A, B) = (N_1, N_2, N_3)$, where
+\begin{align*}
+N_1 &= |V(A \cap B)| \\
+N_2 &= \sum (\mu(x, x) : x \in V(A \cap B)) \\
+N_3 &= \sum (\mu(x, y) : x \in L(A) - L(B), y \in L(B) - L(A)).
+\end{align*}
+\hspace*{12pt}(1) \textit{If $(A, B)$ and $(A', B')$ are separations of $G$ with the same $\lambda$-order then $(A', B') = (A, B)$ or $(B, A)$.}
+
+For let $(A, B)$ have $\lambda$-order $(N_1, N_2, N_3)$, and let $(A', B')$ have $\lambda$-order $(N_1', N_2', N_3')$. Let $V(A \cap B) = Z$, $L(A) - L(B) = X$, $L(B) - L(A) = Y$, and define $Z'$, $X'$, $Y'$ similarly. Then $(X, Y, Z)$, $(X', Y', Z')$ are partitions of $L(G)$, and we must show that $Z' = Z$ and that $(X', Y') = (X, Y)$ or $(Y, X)$. Now since $N_2 = N_2'$,
+\begin{equation*}
+\sum_{x \in Z} \mu(x, x) = \sum_{x \in Z'} \mu(x, x),
+\end{equation*}

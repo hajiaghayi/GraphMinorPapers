@@ -1,0 +1,42 @@
+\origpage{559}{N. Robertson, P. Seymour / Journal of Combinatorial Theory, Series B 102 (2012) 530--563}
+Let us apply 7.4, with $\Delta, \theta$ replaced by $\Delta', \theta'$ and with no other replacements. We recall that $\theta'$ was chosen to satisfy 7.4. Let us verify the hypothesis of 7.4. Now (J1)--(J4) and (J6), (J7) obviously still hold. For (J5), let $v \in V(\Gamma \cap K)$; then
+\begin{equation*}
+d(v, \Sigma \setminus \Delta') \ge d(v, \Sigma \setminus \Delta) \ge \theta \ge \theta'
+\end{equation*}
+since $\Delta \subseteq \Delta'$, and similarly $d(D(A), \Sigma \setminus \Delta) \ge \theta'$ for all $A \in \mathcal{A}$ with $A \cap K \ne N_W$. Hence (J5) holds. $\mathcal{B}$ is sufficient for $\phi$, and $A_1, \dots, A_t \in \mathcal{B}$. If $A \in \mathcal{B} \setminus \{A_1, \dots, A_t\}$, then $d(D(A), \Sigma \setminus \Delta') \ge \theta'$ by (2). Finally, hypothesis (i) of 7.4 is true by the choice of $A'_i$; (ii) of 7.4 holds by definition of $A_1, \dots, A_t$; and (iii) and (iv) of 7.4 hold because of (4). Thus, all the hypotheses of 7.4 hold, and the result follows from 7.4. $\square$
+
+At last we are able to formulate and prove a statement that implies Theorem 10.2 of [5]. To understand the motivation of the various hypotheses of the next result, it might help to read the final paragraph of this section before the next proof.
+
+\textbf{8.3.} \textit{For all $q, \delta \ge 0$ and $h \ge 4$, there exists $\theta \ge h$ with the following property. Let $G$ be a digraph, let $W \subseteq V(G)$ with $|W| = q$, and let $\omega$ be an ordering of $W$. Let $\Gamma \subseteq G \setminus W$ satisfy the following.}
+
+\hspace*{12pt}(i) \textit{$\Gamma$ is a drawing in a sphere $\Sigma$, and $\Gamma$ is a subdivision of a simple 3-connected graph, and there is an orientation of $\Sigma$ called clockwise.}
+
+\hspace*{12pt}(ii) \textit{$C_0$ is a circuit of $\Gamma$, and $U(C_0)$ bounds a region of $\Gamma$.}
+
+\hspace*{12pt}(iii) \textit{$\Pi \subseteq V(C_0)$ with $|\Pi| = 4$.}
+
+\hspace*{12pt}(iv) \textit{$\mathcal{T}$ is a tangle in $\Gamma$ of order $\ge \theta$, and there is no $(A, B) \in \mathcal{T}$ with order $\le 3$ such that $\Pi \subseteq V(A)$; $d$ is the metric of $\mathcal{T}$.}
+
+\hspace*{12pt}(v) \textit{$J \subseteq G$ has vertex set the union of $W$, $V(\Gamma)$, and the vertex sets of all components of $G \setminus (V(C_0) \cup W)$ which meet $V(\Gamma)$, and edge set all edges of $G$ with both ends in $V(J)$.}
+
+\hspace*{12pt}(vi) \textit{$Z \subseteq V(J) \setminus W$ with $\Pi \subseteq Z$, and $\mathcal{A}$ is a $(Z \cup W)$-division of $J$, such that $W \subseteq V(A)$ for all $A \in \mathcal{A}$.}
+
+\hspace*{12pt}(vii) \textit{For each $A \in \mathcal{A}$, $Z \cap V(A) = \bar{\pi}(A)$, and $|\bar{\pi}(A)| \le 3$, and $\pi(A)$ is a linear order of $\bar{\pi}(A)$.}
+
+\hspace*{12pt}(viii) \textit{For each $A \in \mathcal{A}$, there are $\bar{\pi}(A)$ mutually vertex-disjoint paths of $J \setminus W$ between $\bar{\pi}(A)$ and $\Pi$, and if $|\bar{\pi}(A)| = 3$ and $\pi(A)$ is $s_1, s_2, s_3$ say, these three paths can be chosen with ends $s_i, t_i$ ($i = 1, 2, 3$) so that $t_1, t_2, t_3$ occur in clockwise order in the boundary of the disc containing $U(\Gamma)$ bounded by $U(C_0)$.}
+
+\hspace*{12pt}(ix) \textit{For each $A \in \mathcal{A}$, if $u, v \in \bar{\pi}(A)$ there is a path of $A \setminus W$ between $u$ and $v$ with no internal vertex in $\bar{\pi}(A)$.}
+
+\hspace*{12pt}(x) \textit{Let $G'$ be the bipartite graph with vertex set $Z \cup \mathcal{A}$, in which $z \in Z$ and $A \in \mathcal{A}$ are adjacent if $z \in V(A)$; then $G'$ is planar, and can be drawn in a closed disc with the vertices of $\Pi$ in the boundary of the disc, in the same order in which they occur in $U(C_0)$.}
+
+(xi) \textit{For each $A \in \mathcal{A}$, there is a vertex $v(A) \in V(\Gamma)$ such that there is a path of $G \setminus W$ between $v(A)$ and a vertex of $\bar{\pi}(A)$, with no vertex in $V(\Gamma)$ except $v(A)$.}
+
+(xii) \textit{$D \subseteq \Sigma$ is a closed disc with $\text{bd}(D) \subseteq U(\Gamma)$ including the region of $\Gamma$ bounded by $U(C_0)$.} (xiii) \textit{If $A \in \mathcal{A}$ and $v(A) \in \Sigma \setminus D$ then for every $v \in V(\Gamma) \setminus D$, either $d(v, D) \le h$ or there exists $A' \in \mathcal{A}$ such that $d(v, v(A')) \le h$ and $(A', \pi(A') + \omega)$ has the same $\delta$-folio as $(A, \pi(A) + \omega)$.}
+
+(xiv) \textit{$v^* \in V(\Gamma) \setminus D$, and $d(v^*, D) \ge \theta$.}
+
+\textit{Then $(G \setminus \{v^*\}, \omega)$ has the same $\delta$-folio as $(G, \omega)$.}
+
+\textbf{Proof.} Let $\eta = h + 1$, and choose $\theta' \ge 4$ so that 8.2 holds with $\theta$ replaced by $\theta'$. Let $\theta = 2\theta' + h + 14$. We shall show that $\theta$ satisfies 8.3.
+
+Our method is to apply 8.2, and we must find suitable choices for $A', K', N'$ etc. so that (J1)--(J7) are satisfied. Let $\omega$ be $w_1, \dots, w_q$ and let $N_W$ be defined as in (J1); then (J1) is satisfied. Let $\mathcal{A}'$ be the set of all $A \in \mathcal{A}$ such that $d(v(A), V(C_0)) \ge 5$. Then (J2) holds with $\mathcal{A}$ replaced by $\mathcal{A}'$, by (vi), (viii) and (xi) ((xi) implies that $\bar{\pi}(A) \ne \emptyset$). Also, (J3) holds with $\Gamma$ and $\mathcal{T}$ as given, and with $\theta$ replaced by $\theta'$, since $\theta \ge \theta'$.

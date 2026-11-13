@@ -1,0 +1,22 @@
+\origpage{76}{ROBERTSON AND SEYMOUR}
+\noindent we may assume that $(A'_1, B'_1) = (A_1, A_0 \cap B_1)$ for some $(A_1, B_1) \in \mathcal{D}_1$. If $(A', B') = (X_v, A_0)$ for some $v \in V(C^*)$ then $A' \subseteq B'_1$ since $v \in \bar{\Omega}_0$ and $(A'_1, B'_1)$ is a separation of $(A_0, \Omega_0)$; and so we may assume that $(A', B') = (A, A_0 \cap B)$ for some $(A, B) \in \mathcal{D}_1$. But then $(A, B) \ne (A_1, B_1)$, and so $A \subseteq B_1$ since $\mathcal{D}$ is a consolidation, and $A \subseteq A_0$, and so $A \subseteq A_0 \cap B_1$; thus $A' \subseteq B'_1$ as required.
+
+\hspace*{12pt}(4) \textit{$(A_0, \Omega_0)$ has no transaction of cardinality $> 3p + 9$.}
+
+For let $C'$ be the core of $\mathcal{D}'_1$. For any $v \in V(C')$, $v \in V(A_0)$ and $v \in V(B)$ for every $(A, B) \in \mathcal{D}_1$. Since $v \in V(A_0)$, either $v \in V(C^*)$ or $v \in V(A)$ for some $(A, B) \in \mathcal{D}_1$. We deduce that either $v \in V(C^*)$ or $v \in V(A \cap B) \subseteq V(C_1)$ for some $(A, B) \in \mathcal{D}_1$. In either case $v \in V(C_1)$, and so $V(C') \subseteq V(C_1)$. We claim that $E(C') \subseteq E(C_1)$. For let $u, v \in V(C')$ be adjacent in $C'$. Then there exists $(A', B') \in \mathcal{D}'_1$ with $u, v \in V(A' \cap B')$. Hence $|V(A')| \ge 2$, and so $(A', B') = (A, A_0 \cap B)$ for some $(A, B) \in \mathcal{D}_1$, and it follows from the definition of $\mathcal{D}_1$ that $u, v$ are adjacent in $C_1$. Thus $E(C') \subseteq E(C_1)$ as claimed, and so $C' \subseteq C_1$. Since $(C_1, \Omega_0)$ has no transaction of cardinality $> 3p + 9$, nor does $(C', \Omega_0)$, and hence by (11.10) $(A_0, \Omega_0)$ has no transaction of cardinality $> 3p + 9$.
+
+Now $(C_2, \Omega, \Omega_0)$ is a rural neighborhood. Take a presentation $(\Sigma, \Gamma, \Delta, \Delta_0)$ of it, and for each $v \in V(C_2)$ let $\alpha(v)$ be the image under $\Gamma$ of $v$. Since $(C, \Omega)$ is simple and 4-connected, the image under $\Gamma$ of any triangle of $C_2$ bounds a region of the drawing. By a $\le 3$-clique we mean a complete subgraph of $C_2$ with $\le 3$ vertices. It follows that we may choose a closed disc $\beta(K) \subseteq \Delta$ for each $\le 3$-clique $K$ such that
+
+\hspace*{12pt}(i) for every $\le 3$-clique $K$, if $x \in \beta(K) \cap \Delta_0$ then $x = \alpha(v)$ for some $v \in V(K \cap A_0)$, and if $x \in \beta(K) \cap bd(\Delta)$ then $x = \alpha(v)$ for some $v \in V(K) \cap \bar{\Omega}$
+
+\hspace*{12pt}(ii) for distinct $\le 3$-cliques $K, K'$, if $x \in \beta(K) \cap \beta(K')$ then $x = \alpha(v)$ for some $v \in V(K \cap K')$
+
+\hspace*{12pt}(iii) for every $\le 3$-clique $K$ and $v \in V(C_2)$, $\alpha(v)$ is not in the interior of $\beta(K)$
+
+\hspace*{12pt}(iv) for every $\le 3$-clique $K$ and $v \in V(C_2)$, $\alpha(v) \in bd(\beta(K))$ if and only if $v \in V(K)$.
+
+Let $\mathcal{D}_2 = \{(A_1, B_1), \dots, (A_k, B_k)\}$. For $1 \le i \le k$, let $K_i$ be the clique of $C_2$ with $V(K_i) = V(A_i \cap B_i)$. By (1), $K_1, \dots, K_k$ are all distinct. For $1 \le i \le k$, let $\Omega_i$ be the cyclic permutation of $V(K_i)$ induced by the clockwise orientation of $bd(\beta(K_i))$.
+
+\hspace*{12pt}(5) \textit{$\{(A_0, \Omega_0), (A_1, \Omega_1), \dots, (A_k, \Omega_k)\}$ is a segregation of $(G, \Omega)$.}
+
+To show this we verify conditions (i), (ii), (iii) in the definition of a ``segregation.''

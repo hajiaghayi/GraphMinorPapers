@@ -1,0 +1,23 @@
+\origpage{49}{GRAPH MINORS. IX}
+\sectionhead{4. Separating $\Omega$-Paths}
+
+Let $(G, \Omega)$ be a society. An $\Omega$-path $P$ is \textit{non-separating} if there is an $\Omega$-path $P'$ such that $P'$ crosses $P$, and \textit{separating} otherwise. It is easy to see that $P$ is separating if and only if there is a separation $(G_1, G_2)$ of $G$ with $V(P) = V(G_1 \cap G_2)$, $\Omega(s, t) \subseteq V(G_1)$, and $\Omega(t, s) \subseteq V(G_2)$, where $P$ has ends $s, t$.
+
+\stmt
+(4.1) \textit{Let $\mathscr{P}$ be a transaction in $(G, \Omega)$, such that every peripheral member is non-separating. Then there is a crooked transaction $\mathscr{P}'$ in $(G, \Omega)$ with $|\mathscr{P}'| \ge |\mathscr{P}|$.}
+
+\textit{Proof.} Let the number of peripheral members of $\mathscr{P}$ be $k$. If $k = 0$ the result is true, and so we assume that $k = 1$ or $2$. We shall prove there is a transaction with cardinality at least $|\mathscr{P}|$ and with $\le k - 1$ peripheral members, all non-separating, from which the result follows.
+
+Let $(A, B)$ be a fence for $\mathscr{P}$. Choose $P \in \mathscr{P}$, peripheral in $\mathscr{P}$, and let its ends be $a \in A$, $b \in B$. Without loss of generality we assume that $\Omega(a, b) \cap V(\mathscr{P}) = \emptyset$. Now $P$ is non-separating, and so there is an $\Omega$-path $Q$ such that $Q$ crosses $P$. If $Q \cap \bigcup \mathscr{P}$ is null then $\mathscr{P} \cup \{Q\}$ is a transaction satisfying our requirement; and so we assume that $Q \cap \bigcup \mathscr{P}$ is non-null. Let $Q$ have ends $s, t$ where $s \in \Omega(a, b)$, $t \in \Omega(b, a)$. Let $Q'$ be a minimal subpath of $Q$ between $s$ and $\bigcup \mathscr{P}$. Then $Q'$ is an attachment to $\mathscr{P}$. Let its leg be $P_1$, and let the corresponding switches be $S, S'$, and let $\mathscr{P}' = (\mathscr{P} - \{P_1\}) \cup \{S\}$, $\mathscr{P}'' = \mathscr{P} - \{P_1\} \cup \{S'\}$. Both $\mathscr{P}'$ and $\mathscr{P}''$ are transactions, and so it suffices to show that in one of $\mathscr{P}', \mathscr{P}''$, every peripheral member is also peripheral in $\mathscr{P}$. Suppose not, and choose $P' \in \mathscr{P}'$ peripheral in $\mathscr{P}'$ but not in $\mathscr{P}$; and choose $P'' \in \mathscr{P}''$ similarly. Then clearly $P, P', P''$ are all distinct, and no member of $\mathscr{P} - \{P_1\}$ crosses $P'$ or $P''$. Thus $P, P', P''$ are all peripheral in the transaction $\mathscr{P} - \{P_1\}$, which is impossible. This completes the proof. $\square$
+
+Let \textbf{S} be the following statement, which we extract here because it is a common hypothesis of several lemmas which follow.
+
+\textit{Statement} \textbf{S}. \textit{$\mathscr{Q}$ is a transaction in a society $(G, \Omega)$, such that no member of $\mathscr{Q}$ has an internal vertex in $\bar{\Omega}$. A crooked transaction $\mathscr{P}$ in $(G, \Omega)$ is chosen with $|\mathscr{P}| \ge p$ (where $p \ge 2$ is some given integer), such that}
+
+\hspace*{12pt}(i) \textit{$\bigcup \mathscr{P} \cup \bigcup \mathscr{Q}$ is minimal}
+
+\hspace*{12pt}(ii) \textit{subject to (i), $|\mathscr{P}|$ is minimum,}
+
+\textit{and $(A, B)$ is a fence for $\mathscr{P}$.}
+
+If \textbf{S} is true, we define $W(\mathscr{Q})$ to be the set of those vertices $v \in V(\mathscr{Q})$ such that $v \notin V(\mathscr{P})$ and $Q \cap \bigcup \mathscr{P}$ is non-null, where $Q$ is the member of $\mathscr{Q}$ with

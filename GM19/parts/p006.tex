@@ -1,0 +1,27 @@
+\origpage{330}{N. Robertson, P.D. Seymour / Journal of Combinatorial Theory, Series B 90 (2004) 325--385}
+If $(\Gamma,\phi),(\Gamma',\phi')$ are $\chi$-coloured paintings, an \textit{inflation of $(\Gamma,\phi)$ in $(\Gamma',\phi')$} is an inflation $\sigma$ of $\Gamma$ in $\Gamma'$ respecting $\Phi_\chi$, such that $\phi\le \phi'\circ \sigma$ (with the natural meaning); and \textit{linear inflations} are defined similarly. The following is the main theorem of the paper.
+
+\textbf{3.1.} \textit{For every colour scheme $\chi$ and every countable sequence $(\Gamma_i,\phi_i)$ $(i=1,2,\dots)$ of $\chi$-coloured paintings, there exist $j>i\ge 1$ and a linear inflation of $(\Gamma_i,\phi_i)$ in $(\Gamma_j,\phi_j)$.}
+
+We begin the proof of 3.1 in the next section. But let us first verify that it implies 2.1. If $\Omega_1,\Omega_2$ are quasi-orders, $\Omega_1\times \Omega_2$ denotes their product, with element set $\{(x_1,x_2):x_1\in E(\Omega_1), x_2\in E(\Omega_2)\}$, in which $(x_1,x_2)\le (x'_1,x'_2)$ if $x_1\le x'_1$ in $\Omega_1$ and $x_2\le x'_2$ in $\Omega_2$.
+
+\textbf{Proof of 2.1} (Assuming 3.1). Let $\Sigma,\Omega,\Gamma_i,\phi_i$ ($i\ge 1$) be as in 2.1. Let $\Phi$ be a frame for $\Sigma$, such that each component of $\Phi$ is a 2-edge circuit, one edge of which is long and one short. Now $bd(\Sigma)\subseteq U(\Gamma_i)$ for each $i$. By replacing each $\Gamma_i$ by its image under a suitable homeomorphism of $\Sigma$ to itself, we may therefore assume that for each cuff $\Theta$, the short side of $\Phi$ included in $\Theta$ is an edge of each $\Gamma_i$.
+
+\hspace*{12pt}(1) \textit{We may assume that for each short side $s$ of $\Phi$,}
+
+\hspace*{12pt}$\bullet$ $\phi_1(s)\le \phi_2(s)\le \dots$, \textit{and}
+
+\hspace*{12pt}$\bullet$ \textit{for each $i\ge 1$ the direction of $s$ under $\gamma_{\Gamma_i}(s)$ agrees with its direction in $\Phi$.}
+
+\textit{Subproof.} There is an infinite subset $I\subseteq \{1,2,\dots\}$ such that for all $i,j\in I$ with $i\le j$ and every short side $s$ of $\Phi$, $\gamma_{\Gamma_i}(s)=\gamma_{\Gamma_j}(s)$ and $\phi_i(s)\le \phi_j(s)$. We may assume that $I=\{1,2,\dots\}$ by replacing our original sequence by this subsequence, and we may reverse the direction in $\Phi$ of each short side of $\Phi$ if necessary. This proves (1).
+
+For each $i\ge 1$, let $\Gamma_i=(U_i,V_i,\gamma_i)$. For $k=2,3$, let $E_i^k=\{e\in E(\Gamma_i):|\tilde{e}|=k\}$. For each $i\ge 1$ and each $e\in E_i^3$, choose a disc $\Delta\subseteq \bar{e}$ with $\Delta\cap bd(\bar{e})=\tilde{e}$, and define $s_i(e)=\Delta\setminus \tilde{e}$. Let
+\begin{equation*}
+U'_i = U(sk(\Gamma_i))\cup \bigcup (s_i(e):e\in E_i^3),
+\end{equation*}
+\begin{equation*}
+V'_i = V_i,
+\end{equation*}
+and define $\gamma'_i$ as follows. For $e\in E_i^3$, let $\gamma'_i(s_i(e))=\gamma_i(e)$. For each border edge $e$ of $\Gamma_i$, let $\gamma'_i(e)$ agree with the direction of the side of $\Phi$ containing $e$. For each internal edge $e$ of $\Gamma_i$ with $|\tilde{e}|=2$, let $\gamma'_i(e)=\gamma_i(e)$. For each internal edge $e$ of $sk(\Gamma_i)$ with $e\notin E(\Gamma_i)$, let $\gamma'_i(e)$ be an arbitrary march with $\tilde{\gamma}'_i(e)=\tilde{e}$. Let $\Gamma'_i=(U'_i,V'_i,\gamma'_i)$. We see that $\Gamma'_i$ is a painting in $\Sigma$ fitting the frame $\Phi$.
+
+Let $R$ be the well-quasi-order with $E(R)=\{-1,0,1,2,3\}$, ordered by equality. Let $\chi$ be the colour scheme with $\Sigma_\chi=\Sigma$, $\Phi_\chi=\Phi$, $\Omega_\chi(3)=\Omega_\chi(2)=\Omega\times R$, and $\Omega_\chi(S)=\Omega\times R$ for every long side $S$ of $\Phi$. For each edge $e$ of $\Gamma'_i$, define $\phi'_i(e)$ as follows. If

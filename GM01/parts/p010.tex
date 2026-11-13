@@ -1,0 +1,54 @@
+\origpage{48}{ROBERTSON AND SEYMOUR}
+\noindent isolated vertex, we can delete $v$, and if $v$ is not an isolated vertex, we can
+contract some edge incident with \del{$v_0$}\fix{$v$;}\fixnote{fix:2.7-proof}{No $v_0$ is defined here, and the vertex meant is $v$.} in either case we produce a smaller
+counterexample, which is impossible.
+
+For $1\le j\le n$, each $P_i$ meets $B_j$, by our hypothesis. By (2.6),
+\begin{equation*}
+n<2m\theta^{2\theta-2}\binom{m}{\frac12\theta^2}=\theta^{2\theta},
+\end{equation*}
+a contradiction, as required.
+\stmt
+(2.8). \textit{Let $A_1, A_2, X\subseteq V(G)$, where $G\in\mathscr{F}_\theta$, and let $B_1,..., B_n$ be disjoint
+subgraphs of $G$, each with at most $d$ components. Suppose that the following
+conditions are satisfied}:
+
+\hspace*{12pt}(i)\enspace\textit{$|X|\le rn$, for some integer $r\ge 0$};
+
+\hspace*{12pt}(ii)\enspace\textit{for $1\le j\le n$, $X\cup V(B_j)$ separates $A_1$ and $A_2$};
+
+\hspace*{12pt}(iii)\enspace\textit{there are $m$ disjoint paths in $G$ from $A_1$ to $A_2$, each avoiding $X$.}
+
+\noindent\textit{\fix{Suppose also that $d+r>0$.}\fixnote{fix:2.8}{The statement fails when $d=r=0$, so that $s=0$. Take $A_1=A_2=X=\varnothing$, $m=0$, $n=\theta^2$ and every $B_j$ empty. Then (i)--(iii) hold, but $m=0\not<\frac12 s\theta^2=0$ and $n=\theta^2\not<2^0(\theta^2+0)$. The statement holds when $d+r>0$. The proof of (2.9) applies (2.8) with $d=r$, and there $r\ge 1$, because for $r=0$ alternative (i) of (2.9) holds with $J=\varnothing$.} Let $s=d+r(\theta^2-1)$. Then either $m<\frac12 s\theta^2$ or $n<2^{s\theta^2/2}(\theta^2+2s\theta^{2\theta})$.}
+\stmt
+\textit{Proof}. If possible, choose a counterexample with $|V(G)|+|E(G)|+m$
+minimum. Then evidently we have $m=\frac12 s\theta^2$.
+
+Let $P_1,..., P_m$ be disjoint paths of $G$ from $A_1$ to $A_2$, avoiding $X$. If some
+edge of $G$ in both in some $P_i$ and in some $B_j$, we may contract it, and if
+some edge is neither in some $P_i$ nor in some $B_j$, we may delete it, in either
+case producing a smaller counterexample. It follows that
+\begin{equation*}
+E(P_1)\cup\cdots\cup E(P_m)=E(G)-(E(B_1)\cup\cdots\cup E(B_n)),
+\end{equation*}
+and so $\{P_1,..., P_m\}$ is the unique set of $m$ disjoint paths of $G$ from $A_1$ to $A_2$
+avoiding $X$.
+
+Every vertex $v$ of $V(G)-X$ is in one of $P_1,..., P_m$; for if not, and $v$ is
+isolated, we can delete it, and if $v$ is not isolated, we can contract some edge
+incident with it, in either case producing a smaller counterexample.
+
+Let $J_1\subseteq\{1,..., n\}$ be defined by $j\in J_1$ of and only if some component of
+$B_j\backslash X$ meets at least $\frac12\theta^2$ of the paths $P_1,..., P_m$. By setting $A_1'=A_1-X$,
+$A_2'=A_2-X$, and applying (2.6) to $G\backslash X$, we deduce that $|J_1|<2m\,\theta^{2\theta-2}2^m$.
+
+Now let $J_2\subseteq\{1,..., n\}$ be defined by $j\in J_2$ if and only if $|X\cap V(B_j)|>2r$.
+Since $B_1,..., B_n$ are disjoint, we have
+\begin{equation*}
+rn\ge|X|\ge\sum_{1\le j\le n}|X\cap V(B_j)|\ge 2r\,|J_2|.
+\end{equation*}
+If $r=0$, then $X=\varnothing$ and so $J_2=\varnothing$ by definition. If $r>0$, then $n\ge 2\,|J_2|$.
+Thus in either case $|J_2|\le\frac12 n$, and so there exists $J_3\subseteq\{1,..., n\}$ with
+\begin{equation*}
+|J_3|\ge\tfrac12 n-2m\,\theta^{2\theta-2}2^m
+\end{equation*}

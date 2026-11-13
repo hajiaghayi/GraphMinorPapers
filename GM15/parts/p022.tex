@@ -1,0 +1,26 @@
+\origpage{133}{GRAPH MINORS. XV. GIANT STEPS}
+\hspace*{12pt}(12) \textit{$H''', \eta''', \mathcal{T}'''$ is a $\Sigma$-span of order $\theta - 4\lambda_2 - 2$ obtained from $H, \eta, \mathcal{T}$ by rearranging within $\lambda_2$ of $z_2$.}
+
+We recall that $P$ is an $\eta''(H'')$-path with ends $\eta''(u), \eta''(v)$, where $d''(u, v) \ge \mu$.
+
+\hspace*{12pt}(13) \textit{Either $P$ meets $\eta(L_2) \cup \eta''(M_2)$, or $d(u, \sigma_2) < \mu$ for some $\sigma_2 \in Z_2$.}
+
+\textit{Subproof.} Suppose that $P$ does not meet $\eta(L_2) \cup \eta''(M_2)$. Then $u, v \in V(M_1 \cup H_0)$, and $P$ is an $\eta'(H')$-path. Since $H, \eta, \mathcal{T}$ is $(\lambda, \mu)$-flat, and $H', \eta', \mathcal{T}'$ is obtained from $H, \eta, \mathcal{T}$ by rearranging within $\lambda_1 \le \lambda$ of $z$, it follows that $d'(u, v) < \mu$. Since $d''(u, v) \ge \mu$, we deduce from (4.2) (applied to $\mathcal{T}'$, $\mathcal{T}''$ and $Z_2$) that $d'(u, v) \ge d'(u, \sigma_2)$ for some $\sigma_2 \in Z_2$, and consequently $d'(u, \sigma_2) < \mu$. By (4), for all $\sigma_1 \in Z_1$,
+\begin{equation*}
+d'(\sigma_1, \sigma_2) \ge d'(\tau, \sigma_1) - d'(\tau, \sigma_2) > \lambda - 6\lambda_1 - \lambda_2 - 2 \ge \mu > d'(u, \sigma_2)
+\end{equation*}
+and so by (4.2) (applied to $\mathcal{T}$, $\mathcal{T}'$ and $Z_1$), $d(u, \sigma_2) \le d'(u, \sigma_2) < \mu$. This proves (13).
+
+\hspace*{12pt}(14) \textit{Either $P$ meets $\eta(L_1) \cup \eta'(M_1)$, or $d(u, \sigma_1) < \mu$ for some $\sigma_1 \in Z_1$.}
+
+\textit{Subproof.} Suppose that $P$ does not meet $\eta(L_1) \cup \eta'(M_1)$. Then $P$ is an $\eta'''(H''')$-path, and so $d'''(u, v) < \mu$ by (12), since $\lambda_2 \le \lambda$. Let $W$ be a closed walk of a radial drawing of $H'''$ with length $< 2\mu$ and with $u, v \in ins'''(W)$. Suppose first that $Z_1 \cap ins'''(W) = \emptyset$. Then $W$ is a walk of a radial drawing of $H''$, and so $ins''(W) = ins'''(W)$ by (4.1), since $\mathcal{T}''$ and $\mathcal{T}'''$ are $(4\lambda_1 + 4\lambda_2 + 4)$- and $(4\lambda_2 + 2)$-compressions of $\mathcal{T}$ respectively. Hence $u, v \in ins''(W)$, and so $d''(u, v) \le d'''(u, v) < \mu$, a contradiction. We deduce that $Z_1 \cap ins'''(W) \ne \emptyset$, and so there exists $\sigma_1 \in Z_1$ with $d'''(u, \sigma_1) < \mu$. Now $Z_2$ includes all atoms of $H$ which are not atoms of $H'''$. Moreover, for all $\sigma_2 \in Z_2$, since $\mathcal{T}'''$ is a $(4\lambda_2 + 2)$-compression of $\mathcal{T}$, and by (6),
+\begin{equation*}
+d'''(\sigma_1, \sigma_2) \ge d(\sigma_1, \sigma_2) - 4\lambda_2 - 2 > (\lambda - 2\lambda_1 - \lambda_2) - 4\lambda_2 - 2 \ge \mu > d'''(\sigma_1, u).
+\end{equation*}
+Hence by (4.2) applied to $\mathcal{T}$, $\mathcal{T}'''$ and $Z_2$, we deduce that $d(\sigma_1, u) \le d'''(\sigma_1, u) < \mu$. This proves (14).
+
+From (13) and (14) it follows that $P$ meets $X_1$ and $X_2$; but this contradicts (10). We deduce that there is no such $P$, that is, $H'', \eta'', \mathcal{T}''$ is not $\mu$-stepped. Since $\mathcal{T}'$ has order $\theta - 4\lambda_1 - 2 \ge 4\lambda_2 + \mu + 2$, it follows that $H', \eta', \mathcal{T}'$ is $(\lambda_2, \mu)$-flat, as required. $\square$
+
+\sectionhead{6. \textsc{Crooked} \textsc{Transactions}}
+
+If $\mathcal{P}$ is a transaction in a society $(G, \Omega)$, we denote the set of ends of members of $\mathcal{P}$ by $V(\mathcal{P})$. We say $\mathcal{P}$ is crooked if for every $P \in \mathcal{P}$ with ends

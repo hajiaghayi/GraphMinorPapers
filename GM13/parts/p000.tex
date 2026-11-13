@@ -1,0 +1,51 @@
+\sectionhead{\textbf{About this copy}}
+
+This is a corrected copy of the paper cited above. The text is retyped from the printed paper.
+It keeps the paper's wording and the numbering of its results, equations and footnotes, and a
+marker such as \origpagemark{$N$} shows where page $N$ of the printed paper begins.
+
+The corrections come from a formalization of the Graph Minors series in the Lean proof
+assistant, \href{https://github.com/mahdi-jfri/GraphMinor}{github.com/mahdi-jfri/GraphMinor},
+in which the results of this paper are proved. Where the formalization found that a statement
+or a step of a proof is wrong as printed, this copy corrects it in place. Where the paper leaves a proof or a step to the reader, this copy adds it, also in blue. Text \del{struck
+through in red} is removed and text \fix{in blue} is inserted. Each change has a note, marked
+\textcolor{fixcolor}{\sffamily F1}, \textcolor{fixcolor}{\sffamily F2}, \dots, that gives the
+reason. The file
+\href{https://github.com/mahdi-jfri/GraphMinor/blob/main/corrections/GM13.md}{corrections/GM13.md}
+of the formalization describes each correction in full. Each note, and each item in the list below, begins with the kind of the change. A \kindname{misprint} is a wrong symbol, index or word. A \kindname{statement} is a result or a claim of the text that is false as printed. A \kindname{degenerate} is a statement that fails only in a trivial case, such as an empty graph or a parameter equal to~$0$. A \kindname{gap} is a step of a proof that does not follow as written. A \kindname{missing} is a proof that the paper omits, leaves to the reader or only sketches, and that this copy adds.
+
+The corrections and added proofs, in the order of the pages:
+\begin{enumerate}\setlength{\itemsep}{1pt}
+\item \kindtag{fix:2.1-proof-added}\hyperref[fix:2.1-proof-added]{Proof of (2.1), page 69}: the proof is added.
+\item \kindtag{fix:2.2-proof-added}\hyperref[fix:2.2-proof-added]{Proof of (2.2), page 69}: the proof is added.
+\item \kindtag{fix:2.3-proof-added}\hyperref[fix:2.3-proof-added]{Proof of (2.3), page 70}: the proof is added.
+\item \kindtag{fix:3.3-step3-proof-added}\hyperref[fix:3.3-step3-proof-added]{Algorithm (3.3), step (3), page 73}: the check that
+(i)--(iii) still hold is added.
+\item \kindtag{fix:3.3-step6-proof-added}\hyperref[fix:3.3-step6-proof-added]{Algorithm (3.3), step (6), page 74}: the proof that
+deleting an edge lowers the branch-width by at most one is added.
+\item \kindtag{fix:4.3-proof}\hyperref[fix:4.3-proof]{Proof of (4.3), step (1), page 77}: $G_1$ may have up to
+$\delta + 1$ mutually parallel edges, not $\delta$, and a reason is given for ``as is easily
+seen''.
+\item \kindtag{fix:5.3-claim1-proof-added}\hyperref[fix:5.3-claim1-proof-added]{Claim (1) in the proof of (5.3), page 80}: the
+check is added.
+\item \kindtag{fix:7-wall-proof-added}\hyperref[fix:7-wall-proof-added]{Section 7, page 89}: the construction of a wall from a
+model of an elementary wall, in time $O(\varepsilon)$, is added.
+\item \kindtag{fix:7.3-proof-added}\hyperref[fix:7.3-proof-added]{Proof of (7.3), page 90}: the proof is added.
+\item \kindtag{fix:7.6-height}\hyperref[fix:7.6-height]{Proof of (7.6), page 92}: a reason is added why the walls
+$H_1, \dots, H_k$ exist, that is, why $H$ is high enough.
+\item \kindtag{fix:7.6-claim1-dist}\hyperref[fix:7.6-claim1-dist]{Claim (1) in the proof of (7.6), page 92}: a bound is added
+on the distance between the new ends $w_j$ and $w_{j'}$.
+\item \kindtag{fix:7.6-claim1-center}\hyperref[fix:7.6-claim1-center]{Claim (1) in the proof of (7.6), page 92}: the case where
+the center $v$ lies on $Q_j$ is added.
+\item \kindtag{fix:7.6-claim1-use}\hyperref[fix:7.6-claim1-use]{Proof of (7.6), page 92}: the proof of Claim (1) is used
+once, from $H_0$ to $H_k$, instead of Claim (1) at each step.
+\item \kindtag{fix:7.7-proof-added}\hyperref[fix:7.7-proof-added]{Proof of (7.7), page 93}: the algorithm is described,
+with its running time.
+\item \kindtag{fix:8.4-proof-added}\hyperref[fix:8.4-proof-added]{Proof of (8.4), page 95}: the proof is added.
+\item \kindtag{fix:9.2-F-proof-added}\hyperref[fix:9.2-F-proof-added]{Proof of (9.2), page 99}: the method is added by which
+the algorithm finds a graph that may replace $F$, and searches it.
+\item \kindtag{fix:10.1}\hyperref[fix:10.1]{Algorithm (10.1), page 107}: the width $\omega + q$ becomes
+$\max(\omega, 2) + q$.
+\item \kindtag{fix:10.5-step2}\hyperref[fix:10.5-step2]{Algorithm (10.5), step (2), page 109}: in the width,
+$\omega + \xi$ becomes $\max(\omega, 2) + \xi$.
+\end{enumerate}

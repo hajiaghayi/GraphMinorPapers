@@ -1,0 +1,26 @@
+\origpage{243}{GRAPH MINORS IV}
+\hspace*{12pt}(ii) $\eta(v_1) \cap \eta(v_2) = \emptyset$ for distinct $v_1, v_2 \in V(G)$, and $\eta(e_1) \neq \eta(e_2)$ for distinct $e_1, e_2 \in E(G)$
+
+\hspace*{12pt}(iii) for each $v \in V(G)$ and $e \in E(G)$, $e$ is incident with $v$ in $G$ if and only if $\eta(v)$ contains an end of $\eta(e)$ in $G'$, and $e$ is a loop of $G$ with end $v$ if and only if $\eta(v)$ contains every end of $\eta(e)$ in $G'$
+
+\hspace*{12pt}(iv) for each $v \in V(G)$ there is a connected subgraph of $G' \setminus \eta(E(G))$ with vertex set $\eta(v)$.
+
+(If $\eta \colon A \to B$ is a function and $X \subseteq A$ we denote $\{\eta(x) \colon x \in X\}$ by $\eta(X)$.) If our graphs were directed, and we wanted our minor relation to preserve edge-directions, we would replace (iii) by
+
+(iii)' for each $v \in V(G)$ and $e \in E(G)$, $v$ is the head (respectively, tail) of $e$ in $G$ if and only if $\eta(v)$ contains the head (respectively, tail) of $\eta(e)$ in $G'$.
+
+If in addition we wanted no non-loop edge of $G'$ to correspond to a loop of $G$ we would add
+
+\hspace*{12pt}(v) for each $e \in E(G)$, $e$ and $\eta(e)$ have the same number of ends.
+
+If $G, G'$ were rooted graphs and we wanted our relation to take roots to roots, we would demand
+
+\hspace*{12pt}(vi) $\pi(G)$ and $\pi(G')$ have the same length $k$ say, and for $1 \le i \le k$, $\eta(v)$ contains the $i$th term of $\pi(G')$ where $v$ is the $i$th term of $\pi(G)$.
+
+Thus, we can regard (i), (ii), (iii)', (iv), (v), (vi) as natural. As we said, our $\Omega$-patchwork relation is not much different. There are three principal differences:
+
+\hspace*{12pt}(i) Our edges are labelled from $\Omega$, and we demand that the relation respect this ordering.
+
+\hspace*{12pt}(ii) Edges in $\Omega$-patchworks may have more than two ends. For graphs, if an edge is to be removed (when producing a minor) it is either deleted or contracted. For patchworks, an edge $e$ may be removed in a greater variety of ways; in effect, we choose a member $\delta$ of $\Delta(e)$ and contract each component of $\delta$ to a single vertex. (Thus, a graph may be ``mimicked'' by a patchwork by defining $\Delta(e) = \{K_{V(e)}, N_{V(e)}\}$ for each edge $e$ of the graph.)
+
+\hspace*{12pt}(iii) An edge may also ``shrink``---become incident with only some of the vertices with which it was previously incident. However, this is only permitted for edges not in $\operatorname{dom}(\mu)$. (We remark that the ``shrinking'' feature is not needed for Wagner's conjecture, but seems to be required for Nash-Williams' conjecture. Our approach to the latter is to show that the class of all $\Omega$-patchworks with a bounded number of roots and in which all

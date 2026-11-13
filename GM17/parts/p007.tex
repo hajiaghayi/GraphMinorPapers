@@ -1,0 +1,28 @@
+\origpage{168}{ROBERTSON AND SEYMOUR}
+From the symmetry we assume that $v \in \beta(n_3 +)$. But $n_3 \in Y_1 \cap Y_2$, and so either
+\begin{equation*}
+v \in \beta(n_3) \subseteq \bigcup (\beta(n) : n \in Y_1 \cap Y_2)
+\end{equation*}
+or $n_3 \in dom(\gamma)$ and
+\begin{equation*}
+v = \gamma(n_3) \in \{\gamma(n) : n \in X_1 \cap X_2 \cap dom(\gamma)\}.
+\end{equation*}
+This proves (3). From (1)--(3) the result follows. $\square$
+
+\sectionhead{3. \textsc{Warp} \textsc{Of} A \textsc{Portrayal}}
+
+If $V$ is a finite set, $K_V$ denotes the complete graph with vertex set $V$; that is, the edges of $K_V$ are the 2-element subsets of $V$, with the natural incidence relation. If $G$ is a hypergraph, its 1-\textit{skeleton} is the subgraph of $K_{V(G)}$ in which distinct $u, v \in V(G)$ are adjacent if there is an edge of $G$ incident with both $u$ and $v$. We denote the 1-skeleton of $G$ by $G^*$.
+
+A \textit{linkage} in a hypergraph $G$ is a set $\{P_1, \dots, P_p\}$ of mutually vertex-disjoint paths of $G^*$. (Paths have no ``repeated'' vertices, and we recognize the one-vertex path; each path has an \textit{initial vertex} and a \textit{terminal vertex}.) If $\{P_1, \dots, P_p\}$ is a linkage and for $1 \le i \le p$, $P_i$ has initial vertex $s_i$ and terminal vertex $t_i$, we say $\{P_1, \dots, P_p\}$ is \textit{from} $\{s_1, \dots, s_p\}$ \textit{to} $\{t_1, \dots, t_p\}$ and it \textit{pairs} $s_i$ with $t_i (1 \le i \le p)$.
+
+Let $\pi = (\Sigma, \Gamma, \alpha, \beta, \gamma)$ be a portrayal of $G$, and let $c \in C(\Gamma)$ border a cuff $\Theta$, with ends $n_1, n_2$. For $p \ge 0$ we say that $c$ has \textit{warp} $\le p$ (in $\pi$) if
+
+\hspace*{12pt}(i) $|\beta(n_1)|, |\beta(n_2)| \le p$, and
+
+\hspace*{12pt}(ii) if $|\beta(n_1 +)| = |\beta(n_2 +)| = p + 1$, then every linkage in $\alpha(c)^*$ from $\beta(n_1 +)$ to $\beta(n_2 +)$ pairs $\gamma(n_1)$ with $\gamma(n_2)$.
+
+The \textit{warp} of $c$ is the minimum $p \ge 0$ such that $c$ has warp $\le p$; and $\pi$ has \textit{warp $p$ at $\Theta$} if $p$ is the maximum warp of all the cells bordering $\Theta$. The \textit{warp} of $\pi$ is the maximum of \fix{1 and} the warp of $\pi$ at $\Theta$, over all cuffs $\Theta$ \del{(or 1 if $bd(\Sigma) = \emptyset$)}.\fixnote{fix:3-warp}{As printed, (5.1) fails when $\Sigma$ has one cuff at which $\pi$ has warp $0$. Pasting a disc onto that cuff gives a surface without boundary, where every portrayal has warp $1$, so no portrayal on a simpler surface is simpler than $\pi$. For example, a portrayal in the closed disc $\Sigma(0, 0, 1)$ with $\beta(n) = \emptyset$ for all nodes $n$ on the cuff has warp $0$. With the warp at least $1$, capping a cuff of warp $0$ does not raise the warp, and (5.1) holds.}
+
+\sectionhead{4. \textsc{Tangles}}
+
+If $\theta \ge 1$ is an integer, a \textit{tangle of order $\theta$} in a hypergraph $G$ is a set $\mathscr{T}$ of separations of $G$ each of order $< \theta$, such that

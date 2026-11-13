@@ -1,0 +1,35 @@
+\origpage{343}{N. Robertson, P.D. Seymour / Journal of Combinatorial Theory, Series B 92 (2004) 325--357}
+\textit{Proof.} We must verify the three axioms. Suppose first that $(A, B)$, $(C, D)$ are separations and $\lambda(A, B) = \lambda(C, D)$. We may assume that $f \in E(A)$ and $f \in E(C)$. Hence $|V(A \cap B)| = |V(C \cap D)|$, and $Z(G) \setminus Z(A) = Z(G) \setminus Z(C)$, that is, $A = C$, since the $v$'s are rationally independent; and for the same reason, $V(A \cap B) = V(C \cap D)$. Since $E(A) = E(C)$ it follows that $E(B) = E(D)$; and since $V(A \cap B) = V(C \cap D)$, it follows that $B = D$. Thus $(A, B) = (C, D)$. This proves the first axiom, for the ``if'' part of the first axiom is clear.
+
+For the second axiom, let $(A, B)$, $(C, D)$ be separations, and suppose that $\lambda(A \cup C, B \cap D) > \lambda(A, B)$ and $\lambda(A \cap C, B \cup D) \ge \lambda(C, D)$. Now $(A \cup C, B \cap D)$ has order at least that of $(A, B)$, and $(A \cap C, B \cup D)$ has order at least that of $(C, D)$. But the sum of the orders of $(A \cup C, B \cap D)$ and $(A \cap C, B \cup D)$ equals the sum of the orders of $(A, B)$ and $(C, D)$, and so we have equality; that is, $(A \cup C, B \cap D)$ has the same order as $(A, B)$, and $(A \cap C, B \cup D)$ has the same order as $(C, D)$.
+
+Suppose first that $f \in E(A)$. Since $\lambda(A \cup C, B \cap D) > \lambda(A, B)$, it follows that
+\begin{equation*}
+\Sigma(v(x) : x \in Z(A \cup C)) \le \Sigma(v(x) : x \in Z(A))
+\end{equation*}
+and so $C \subseteq A$ (since $v(x) > 0$ for all $x$). Hence $V((A \cup C) \cap (B \cap D)) \subseteq V(A \cap B)$, and so equality holds since these two sets have the same cardinality. But then $\lambda(A \cup C, B \cap D) = \lambda(A, B)$, a contradiction.
+
+Thus $f \in E(B)$. Suppose that $f \in E(D)$. Since $\lambda(A \cap C, B \cup D) \ge \lambda(C, D)$ we deduce, as above, that $B \subseteq D$ and $V((A \cap C) \cap (B \cup D)) = V(C \cap D)$, and so $\lambda(A \cap C, B \cup D) = \lambda(C, D)$. By the first axiom, $(A \cap C, B \cup D) = (C, D)$ or $(D, C)$, and since $f \in E(D)$ it follows that $(A \cap C, B \cup D) = (C, D)$. Thus $C \subseteq A$ and $B \subseteq D$, and so $(A \cup C, B \cap D) = (A, B)$. But $\lambda(A \cup C, B \cap D) \ne \lambda(A, B)$, a contradiction.
+
+We have shown then that $f \notin E(A)$ and $f \notin E(D)$, and so $f \in E(B \cap C)$. Since $\lambda(A \cup C, B \cap D) > \lambda(A, B)$ it follows that
+\begin{equation*}
+\Sigma(v(x) : x \in Z(A \cup C)) \le \Sigma(v(x) : x \in Z(B)).
+\end{equation*}
+Since $\lambda(A \cap C, B \cup D) \ge \lambda(C, D)$ it follows that
+\begin{equation*}
+\Sigma(v(x) : x \in Z(B \cup D)) \le \Sigma(v(x) : x \in Z(C)).
+\end{equation*}
+But $Z(A \cup C) \supseteq Z(C)$ and $Z(B \cup D) \supseteq Z(B)$, and so we have equality throughout, that is $Z(A \cup C) = Z(C)$ and $Z(B \cup D) = Z(B)$; and consequently $A \subseteq C$ and $D \subseteq B$. Moreover,
+\begin{equation*}
+\Sigma(v(x) : x \in Z(B)) = \Sigma(v(x) : x \in Z(C))
+\end{equation*}
+and so $B = C$. Since $(A, B)$ is a separation and $A \subseteq C = B$, it follows that $B = G$.
+
+From comparing the third components of the tie-breaker, we deduce
+\begin{equation*}
+\Sigma(v(x) : x \in V((A \cup C) \cap B \cap D)) > \Sigma(v(x) : x \in V(A \cap B)),
+\end{equation*}
+that is,
+\begin{equation*}
+\Sigma(v(x) : x \in V(D)) > \Sigma(v(x) : x \in V(A))
+\end{equation*}

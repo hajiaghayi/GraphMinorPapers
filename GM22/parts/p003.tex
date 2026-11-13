@@ -1,0 +1,36 @@
+\origpage{532}{N. Robertson, P. Seymour / Journal of Combinatorial Theory, Series B 102 (2012) 530--563}
+But $2 - d(v) \le 1$ for all $v \in V(L_i) \setminus Y_i$, with equality for at most $p_i$ vertices $v$; and so the last term above is at most $p_i$. Hence $\sum_{v \in Y_i} (2 - d(v)) + p_i \ge 0$ and so (1) holds.
+
+From (1), the result follows by summing over $i$ ($1 \le i \le t$). $\square$
+
+We also need the following\del{, and we leave its proof to the reader}.
+
+\textbf{2.4.} \textit{Let $L$ be a subgraph of $G$, vital for $Z \subseteq V(G)$, and let $e \in E(L)$ with both ends in $Z$. Then $L \setminus \{e\}$ is vital for $Z$ in $G$.}
+
+\fix{\textbf{Proof.} Let $e$ have ends $u, v$; thus $u, v \in Z$. Certainly $Z \subseteq V(L) = V(L \setminus \{e\})$. By 2.2, $L$ is a forest, and so $u$ and $v$ belong to different components of $L \setminus \{e\}$. Now let $L' \subseteq G$ have the same effect on $Z$ as $L \setminus \{e\}$; we must show that $L' = L \setminus \{e\}$. Since $u, v \in Z$, it follows that $u, v \in V(L')$ and that they belong to different components of $L'$; and in particular $e \notin E(L')$. Let $L''$ be the subgraph of $G$ obtained from $L'$ by adding $e$, so that $L'' \setminus \{e\} = L'$. For $x, y \in Z$, $x$ and $y$ belong to the same component of $L''$ if and only if either they belong to the same component of $L'$, or one of them belongs to the same component of $L'$ as $u$ and the other to the same component of $L'$ as $v$; and the same holds with $L'', L'$ replaced by $L, L \setminus \{e\}$. Since $L'$ and $L \setminus \{e\}$ have the same effect on $Z$, and $u, v \in Z$, it follows that $L''$ and $L$ have the same effect on $Z$. Since $L$ is vital for $Z$, we deduce that $L'' = L$, and so $L' = L'' \setminus \{e\} = L \setminus \{e\}$. This proves 2.4. $\square$}\fixnote{fix:2.4-proof-added}{The paper leaves the proof of 2.4 to the reader. The argument above is the one used in the formalization.}
+
+\textbf{Proof of 2.1.} Choose $w \ge 0$ so that 1.1 is satisfied with $p$ replaced by $7p$. We claim that $w$ satisfies 2.1. For let $L$ be a subgraph of a graph $G$, vital for $Z \subseteq V(G)$, where $|Z| \le p$. From 2.2, $L$ is a forest, $V(L) = V(G)$ and every vertex of $L$ not in $Z$ has degree at least 2 in $L$. Consequently, $L$ has $\le p$ vertices with degree at most 1. Let $Y$ be the set of vertices of $L$ with degree at least 3. From 2.3,
+\begin{equation*}
+3|Y| \le \sum_{y \in Y} d(y) \le 2|Y| + p
+\end{equation*}
+where $d(y)$ denotes the degree of $y$ in $L$; and hence $|Y| \le p$. Let $X = Y \cup Z$; then $|X| \le 2p$, and so from 2.3 again,
+\begin{equation*}
+\sum_{y \in X} d(y) \le 2|X| + p \le 5p.
+\end{equation*}
+Let $Z'$ be the set of all vertices in $X$ and all their neighbours in $L$. Then
+\begin{equation*}
+|Z'| \le |X| + \sum_{y \in X} d(y) \le 7p.
+\end{equation*}
+Since $Z \subseteq Z'$ it follows that $L$ is vital for $Z'$ in $G$. Let $F$ be the set of all edges in $L$ with both ends in $Z'$. Then by 2.4, $L \setminus F$ is vital for $Z'$ in $G$.
+
+\hspace*{12pt}(1) $L \setminus F$ is a linkage in $G$ with set of terminals $Z'$.
+
+\textit{Subproof.} If $v \in V(L)$ has degree at least 3 in $L$ then $v \in Y \subseteq X$ and so all edges of $L$ incident with $v$ are in $F$; and hence $v$ has degree 0 in $L \setminus F$. Consequently, every vertex of $L \setminus F$ has degree at most 2. If $v \in Z'$, then either $v \in X$ and hence $v$ has degree 0 in $L \setminus F$, or $v \notin X$ and $v$ has a neighbour in $X$ in $L$, which implies that $v$ has degree at least 2 in $L$ and at most 1 in $L \setminus F$. Thus each vertex in $Z'$ is a terminal of $L \setminus F$. Conversely, let $v \in V(G) \setminus Z'$. Then $v \notin X = Y \cup Z$, and so $v$ has degree 2 in $L$ (for by 2.2, $Z$ contains every vertex of $L$ with degree at most 1). Since $v \notin X$, no edge incident with $v$ is in $F$, and so $v$ has degree 2 in $L \setminus F$, and hence is not a terminal of $L \setminus F$. This proves (1).
+
+It follows from (1) that $L \setminus F$ is a vital $7p$-linkage in $G$. By 1.1, $G$ has tree-width $\le w$, as required. $\square$
+
+If $G$ is a graph and $Z \subseteq V(G)$, a \textit{$Z$-division} of $G$ is a set $\{A_1, \ldots, A_k\}$ of subgraphs of $G$, such that $A_1 \cup \cdots \cup A_k = G$, and $E(A_i \cap A_j) = \emptyset$ and $V(A_i \cap A_j) \subseteq Z$ for $1 \le i < j \le k$. If $L \subseteq G$, we say $u, v \in V(G)$ are \textit{$L$-connected} if $u, v \in V(L)$ and $u, v$ belong to the same component of $L$.
+
+\textbf{2.5.} \textit{Let $L$ be a subgraph of a graph $G$, let $Z \subseteq V(G)$, and let $\{A_1, \ldots, A_k\}$ be a $Z$-division of $G$. Let $G'$ be a graph, let $Z' \subseteq V(G')$, and let $\{A'_1, \ldots, A'_k\}$ be a $Z'$-division of $G'$. Let $\alpha : Z' \to Z$ be a function, and for $1 \le i \le k$ let $L'_i \subseteq A'_i$, such that}
+
+\textit{(a) for $1 \le i \le k$, $\alpha$ maps $Z' \cap V(A'_i)$ onto $Z \cap V(A_i)$, and}

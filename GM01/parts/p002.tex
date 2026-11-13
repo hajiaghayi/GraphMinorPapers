@@ -1,0 +1,164 @@
+\origpage{40}{ROBERTSON AND SEYMOUR}
+There are three attractive features of the theorem which serve as its
+motivation. First, the theorem is, in a sense, sharp, for it can be reformulated
+as follows:
+\stmt
+(1.2). \textit{Let $\mathscr{F}$ be a set of graphs. Then the following are equivalent}:
+
+\hspace*{12pt}(i)\enspace \textit{for some integer $w$, every $G\in\mathscr{F}$ has path-width $\le w$};
+
+\hspace*{12pt}(ii)\enspace \textit{there is a forest $H$ such that no $G\in\mathscr{F}$ has a minor isomorphic
+to $H$.}
+
+It is easy to prove the equivalence of (1.2) with (1.1) by making use of
+two observations: (a) if $H$ is a minor of $G$, then its path-width is no greater
+than the path-width of $G$, and (b) there are trees with arbitrarily large path-width
+(e.g., the tree $\mathbf{Y}_\lambda$ defined later has path-width $\lceil\frac12(\lambda+1)\rceil$, for any
+integer $\lambda\ge 1$, where $\lceil x\rceil$ is the least integer not less than $x$).
+
+\fix{We give the details. For (a), let $H$ be isomorphic to a minor of $G$. Then $H$ is isomorphic
+to a graph obtained from a subgraph $G'$ of $G$ by contracting a set $C$ of edges. For each
+$v\in V(H)$ let $Y(v)$ be the vertex set of the component of the graph with vertex set $V(G')$ and
+edge set $C$ that is contracted to $v$, and for each edge $e$ of $H$ let $f(e)$ be the
+corresponding edge of $G'$. Then the sets $Y(v)$ $(v\in V(H))$ are disjoint, each $G|Y(v)$ is
+connected, and for each edge $e$ of $H$ with ends $v,v'$, the edge $f(e)$ has one end in $Y(v)$
+and the other in $Y(v')$. (These are the conditions (M1)--(M3) of Section 3.) We use the
+following.
+
+\hspace*{12pt}(1) \textit{Let $X_1,\dots,X_r$ be a path-decomposition of $G$, let $K$ be a
+connected subgraph of $G$, and let $1\le i\le j\le l\le r$. If $K$ has a vertex in $X_i$ and a
+vertex in $X_l$, then $K$ has a vertex in $X_j$.}
+
+Suppose not, and let $x\in V(K)\cap X_i$ and $y\in V(K)\cap X_l$. We claim that every vertex of
+$K$ is in some $X_t$ with $t\le j$. This holds for $x$, since $i\le j$. Let $z,w$ be adjacent
+vertices of $K$, where $z\in X_t$ for some $t\le j$. By (W1) some $X_s$ contains both $z$ and $w$.
+If $s>j$, then $z\in X_t\cap X_s\subseteq X_j$ by (W2), which is impossible since $K$ has no vertex
+in $X_j$. So $s\le j$, and $w\in X_s$. Since $K$ is connected, every vertex of $K$ is reached from
+$x$ by such steps, and the claim follows. In particular $y\in X_t$ for some $t\le j$, and so
+$y\in X_t\cap X_l\subseteq X_j$ by (W2), which is impossible. This proves (1).
+
+Now let $X_1,\dots,X_r$ be a path-decomposition of $G$ with $|X_i|\le k+1$ $(1\le i\le r)$. For
+$1\le i\le r$ let $X'_i$ be the set of all $v\in V(H)$ with $Y(v)\cap X_i\ne\varnothing$. We claim
+that $X'_1,\dots,X'_r$ is a path-decomposition of $H$ with $|X'_i|\le k+1$ $(1\le i\le r)$. For
+(W1), let $e$ be an edge of $H$ with ends $v,v'$. Then $f(e)$ has an end $a\in Y(v)$ and an end
+$b\in Y(v')$, and by (W1) for $G$ some $X_i$ contains $a$ and $b$. So $v,v'\in X'_i$. For (W2), let
+$1\le i\le j\le l\le r$ and $v\in X'_i\cap X'_l$. Then $G|Y(v)$ is a connected subgraph of $G$ with
+a vertex in $X_i$ and a vertex in $X_l$, and so it has a vertex in $X_j$, by (1). Thus $v\in X'_j$.
+For the sizes, choose for each $v\in X'_i$ a vertex in $Y(v)\cap X_i$. Since the sets $Y(v)$ are
+disjoint, distinct members of $X'_i$ give distinct vertices of $X_i$, and so
+$|X'_i|\le|X_i|\le k+1$. This proves (a).
+
+For (b) we prove that $\mathbf{Y}_{2k+1}$ has path-width $>k$ for every integer $k\ge 0$. (This is
+the lower bound above for odd $\lambda$, which is all that we need.) For $k=0$ it is true, since
+$\mathbf{Y}_1$ has an edge, and by (W1) some set of any path-decomposition contains both of its
+ends. Let $k\ge 0$, suppose that $\mathbf{Y}_{2k+1}$ has path-width $>k$, and let
+$\mathbf{Y}=\mathbf{Y}_{2k+3}$. Let $c$ be the vertex of valency 3 of the copy of $K_{1,3}$ from
+which $\mathbf{Y}$ is built, and let $K_1, K_2, K_3$ be the components of $\mathbf{Y}\backslash\{c\}$.
+Each $K_j$ is isomorphic to the tree $\mathbf{H}_{2k+2}$ of Section 3, and so it has a minor
+isomorphic to $\mathbf{Y}_{2k+1}$, by (3.3). Hence $K_j$ has path-width $>k$, by (a). Now suppose
+that $X_1,\dots,X_r$ is a path-decomposition of $\mathbf{Y}$ with $|X_i|\le k+2$ $(1\le i\le r)$. For
+$j=1,2,3$ the sets $X_i\cap V(K_j)$ $(1\le i\le r)$ form a path-decomposition of $K_j$, and so
+$|X_{i_j}\cap V(K_j)|\ge k+2$ for some $i_j$. Then $X_{i_j}\subseteq V(K_j)$ and
+$X_{i_j}\ne\varnothing$. Since $K_1,K_2,K_3$ are disjoint, $i_1, i_2, i_3$ are distinct, and we may
+assume that $i_1<i_2<i_3$. The graph $\mathbf{Y}\backslash V(K_2)$ is connected, since $c$ is
+adjacent to a vertex of $K_1$ and to a vertex of $K_3$. It contains $K_1$ and $K_3$, and so it has
+a vertex in $X_{i_1}$ and a vertex in $X_{i_3}$. By (1) it has a vertex in $X_{i_2}$. But
+$X_{i_2}\subseteq V(K_2)$, which is impossible. Thus $\mathbf{Y}_{2k+3}$ has path-width $>k+1$, and
+(b) follows by induction.
+
+Now assume (1.1), and let $\mathscr{F}$ be a set of graphs. If (i) holds, let
+$H=\mathbf{Y}_{2w+1}$, which is a tree. If some $G\in\mathscr{F}$ had a minor isomorphic to $H$,
+then $H$ would have path-width $\le w$ by (a), contrary to (b). So (ii) holds. If (ii) holds, (1.1)
+applied to $H$ gives (i).\fixnote{fix:1.2-proof-added}{The paper leaves the derivation of (1.2)
+from (1.1), and the proofs of the observations (a) and (b), to the reader. The argument above is
+the one used in the formalization. It uses (3.3), whose proof does not depend on (1.2).}}
+
+The second attractive feature of (1.1) is that it dovetails nicely with the
+main theorem of [3]; the two results together yield the following:
+\stmt
+(1.3). \textit{Let $G_1, G_2,...,$ be a countable sequence of graphs, such that $G_1$ is a
+forest. Then there exist $j>i\ge 1$ such that $G_i$ is isomorphic to a minor of $G_j$.}
+\stmt
+(This implies the final result mentioned in the abstract, as may easily be
+seen.) Theorem (1.3) is relevant to an interesting conjecture of Wagner
+(unpublished), that (1.3) is true even without the hypothesis that $G_1$ is a
+forest. See [3] for a more complete discussion.
+
+And third (see [1]), (1.1) yields a ``good'' algorithm to test if an arbitrary
+graph $G$ has a minor isomorphic to a fixed forest $H$. (``Good'' here is in its
+technical sense of ``polynomially bounded.'' It is not a practical algorithm;
+the exponent of the polynomial, although constant, is enormous.)
+
+For the purposes of this paper we need the following three facts about
+path-width (the proofs are easy).
+\stmt
+(1.4). \textit{If every connected component of $G$ has path-width $\le k$, then $G$ has
+path-width $\le k$.}
+\stmt
+(1.5). \textit{If $X\subseteq V(G)$ and $G\backslash X$ has path-width $\le k$, then $G$ has path-width $\le k+|X|$.}
+
+($G\backslash X$ denotes the result of deleting $X$.)
+\stmt
+(1.6). \textit{If $X_1,..., X_r\subseteq V(G)$ is a path-decomposition of $G$, and for
+$1\le i\le r-1$, $|X_i\cap X_{i+1}|\le k$, and for $1\le i\le r$,}
+\begin{equation*}
+G\backslash\bigcup(X_j\colon 1\le j\le r, j\ne i)
+\end{equation*}
+\textit{has path-width $\le k'$, then $G$ has path-width $\le k'+2k$.}
+
+\fix{We give the proofs. First, if $G$ has path-width $\le k$, then it has a path-decomposition
+$X_1,\dots,X_r$ with $|X_i|\le k+1$ $(1\le i\le r)$ in which every vertex is in some $X_i$. For by
+(W1) a vertex in no $X_i$ is incident with no edge, and we may add the set $\{v\}$ at the end of
+the sequence for each such vertex $v$. Then (W1) and (W2) still hold.
+
+For (1.4), take a path-decomposition of each component of $G$ with sets of size $\le k+1$, and
+write these sequences one after another. The result is a path-decomposition of $G$. For every edge
+of $G$ is an edge of some component, and each vertex is in sets of only one of the sequences,
+since the sets of each sequence are subsets of the vertex set of its component.
+
+For (1.5), take a path-decomposition $X_1,\dots,X_r$ of $G\backslash X$ with $|X_i|\le k+1$
+$(1\le i\le r)$ in which every vertex of $G\backslash X$ is in some $X_i$. We claim that
+$X_1\cup X,\dots,X_r\cup X,X$ is a path-decomposition of $G$. Its sets have size $\le k+1+|X|$,
+and so this will prove (1.5). For (W1), every set contains $X$, and so an edge with both ends in
+$X$ has both ends in the last set. An edge with just one end in $X$ has its other end in some
+$X_i$, and so both ends in $X_i\cup X$. An edge with no end in $X$ is an edge of $G\backslash X$, and
+so both its ends are in some $X_i$. For (W2), a vertex in $X$ is in every set, and a vertex not in
+$X$ is in $X_i\cup X$ exactly when it is in $X_i$, and is not in the last set.
+
+For (1.6), let $X_1,\dots,X_r$ be as in (1.6). For $1\le i\le r$ let
+$B_i=X_i\cap\bigcup(X_j\colon j\ne i)$ and $G_i=G\backslash\bigcup(X_j\colon j\ne i)$. A vertex in
+$X_i\cap X_j$ with $j<i$ is in $X_{i-1}$, and one with $j>i$ is in $X_{i+1}$, by (W2). So
+$B_i\subseteq(X_{i-1}\cap X_i)\cup(X_i\cap X_{i+1})$ (where $X_0=X_{r+1}=\varnothing$), and
+$|B_i|\le 2k$. By hypothesis and the first paragraph, $G_i$ has a path-decomposition
+$Z_{i1},\dots,Z_{im_i}$ with $|Z_{ij}|\le k'+1$ $(1\le j\le m_i)$ in which every vertex of $G_i$ is
+in some set. We call the sequence
+\begin{equation*}
+(Z_{i1}\cap X_i)\cup B_i,\;\dots,\;(Z_{im_i}\cap X_i)\cup B_i,\;B_i
+\end{equation*}
+the \textit{refinement} of $X_i$. Its sets are subsets of $X_i$ of size $\le k'+1+2k$, and each of
+them contains $B_i$.
+
+\hspace*{12pt}(2) \textit{For $1\le i\le r$, the refinement of $X_i$ is a path-decomposition of
+$G|X_i$, and every vertex of $X_i$ is in some set of it.}
+
+A vertex of $X_i-B_i$ is in no $X_j$ with $j\ne i$, and so it is a vertex of $G_i$, and it is in
+some $Z_{ij}$. The vertices of $B_i$ are in the last set. For (W1), let $e$ be an edge of $G|X_i$
+with ends $u,v$. If $u,v\notin B_i$, then $u,v\notin\bigcup(X_j\colon j\ne i)$, so $e$ is an edge of
+$G_i$, and some $Z_{ij}$ contains $u$ and $v$, by (W1) for $G_i$. Then $(Z_{ij}\cap X_i)\cup B_i$
+contains both. If $u\in B_i$, then $v$ is in some set of the refinement, as we just saw, and $u$
+is in every set. The case $v\in B_i$ is the same. For (W2), a vertex of $B_i$ is in every set, and a
+vertex $v\in X_i-B_i$ is in $(Z_{ij}\cap X_i)\cup B_i$ exactly when $v\in Z_{ij}$, and is not in the
+last set. So (W2) follows from (W2) for $Z_{i1},\dots,Z_{im_i}$. This proves (2).
+
+Now write the refinements of $X_1,\dots,X_r$ one after another. We claim that the result is a
+path-decomposition of $G$. Since its sets have size $\le k'+1+2k$, this will prove (1.6). For
+(W1), let $e$ be an edge with ends $u,v$. By (W1), $u,v\in X_i$ for some $i$. So $e$ is an edge of
+$G|X_i$, and some set of the refinement of $X_i$ contains $u$ and $v$, by (2). For (W2), let $v$ be
+in a set of the refinement of $X_i$ and in a later set of the refinement of $X_l$, where $i\le l$,
+and consider a set between them, in the refinement of $X_j$ with $i\le j\le l$. If $i=l$, then
+$j=i$, and $v$ is in the set by (2). Suppose that $i<l$. The sets of the refinements of $X_i$ and
+$X_l$ are subsets of $X_i$ and $X_l$, and so $v\in X_i\cap X_l$, and $v\in X_j$ by (W2). Since $i<l$,
+one of $i,l$ is not $j$, and so $v$ is in $X_j$ and in some other set $X_{j'}$. Hence $v\in B_j$. So $v$ is in every
+set of the refinement of $X_j$.\fixnote{fix:1.4-1.6-proof-added}{The paper says that the proofs of
+(1.4)--(1.6) are easy and does not give them. The arguments above are the ones used in the
+formalization.}}

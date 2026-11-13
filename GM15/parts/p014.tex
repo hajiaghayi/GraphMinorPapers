@@ -1,0 +1,18 @@
+\origpage{125}{GRAPH MINORS. XV. GIANT STEPS}
+\noindent \textit{for every $W$ which is a closed walk of a common subdrawing of $K_1$ and $K_2$, if $ins_1(W)$, $ins_2(W)$ are both defined then they are equal. In particular, if $H_1 = H_2$ and $\lambda_1 \ge \lambda_2$, then $\mathcal{T}_1 \subseteq \mathcal{T}_2$.}
+
+\textit{Proof.} Since $ins_i(W)$ is determined by $ins_i(C)$ for the circuits $C$ of the subdrawing formed by the vertices and edges in $W$, it suffices to show that $ins_1(C) = ins_2(C)$ for every $C$ with $|E(C)| < 2\min(\theta - \lambda_1, \theta - \lambda_2)$ which is a circuit of both $K_1$ and $K_2$. Choose $v \in V(C)$. By [3, Theorem (8.12)], there exists $\sigma \in \Sigma$ with $d(v, \sigma) = \theta$, and hence with $d_i(v, \sigma) \ge \theta - \lambda$ for $i = 1, 2$. Hence $\sigma \notin ins_1(C)$ and $\sigma \notin ins_2(C)$, and so $ins_1(C) = ins_2(C)$, since there is at most one closed disc in $\Sigma$ bounded by $U(C)$ not containing $\sigma$.
+
+In particular, let $H_1 = H_2$ and $\lambda_1 \ge \lambda_2$; and hence we may assume that $K_1 = K_2 = K$. Then $ins_1(C) = ins_2(C)$ for every circuit $C$ of $K$ with $< 2(\theta - \lambda_1)$ edges, and hence $\mathcal{T}_1 \subseteq \mathcal{T}_2$ by [3, Theorem (6.3)]. $\square$
+
+\stmt
+(4.2) \textit{Let $H, H'$ be 2-cell drawings in a surface $\Sigma$, and let $Z \subseteq \Sigma$ include every atom of $H$ which is not in $A(H')$. (Hence $Z$ includes every atom of $H'$ not in $A(H)$.) Let $\mathcal{T}, \mathcal{T}'$ be respectful tangles in $H, H'$ respectively, such that, for some $\lambda \ge 0$, one of $\mathcal{T}, \mathcal{T}'$ is a $\lambda$-compression of the other. Then for all $x, y \in \Sigma$, if $d(x, y) < d(x, \sigma)$ for all $\sigma \in Z$, and $d(x, y) < ord(\mathcal{T})$, then $d'(x, y) \le d(x, y)$.}
+
+\textit{Proof.} Let $K$ be a radial drawing of $H$. Since $d(x, y) < ord(\mathcal{T})$, there is a closed walk $W$ of $K$ of length $2d(x, y)$ such that $ins(W) \cap a$, $ins(W) \cap b \ne \emptyset$, where $a, b \in A(H)$ include $x, y$ respectively. Thus $K$ may be chosen so that $x, y \in ins(W)$. Now no atom of $H$ which intersects $ins(W)$ also intersects $Z$, since $d(x, y) < d(x, \sigma)$ for all $\sigma \in Z$. Consequently every atom of $H$ which intersects $ins(W)$ is an atom of $H'$, and we may therefore choose a radial drawing $K'$ of $H'$ such that $W$ is a walk of $K'$. If $d(x, y) \ge ord(\mathcal{T}')$ then certainly $d(x, y) \ge d'(x, y)$ as required; and so we may assume that $d(x, y) < ord(\mathcal{T}')$, and $ins'(W)$ is defined. By (4.1), $ins(W) = ins'(W)$, and so $x, y \in ins'(W)$, and $d'(x, y) \le d(x, y)$ as required. $\square$
+
+Let $H$ be a 2-cell drawing in $\Sigma$, let $\mathcal{T}$ be a respectful tangle in $H$ of order $\theta$ with metric $d$, let $\lambda \ge 0$ be an integer with $\lambda < \theta$, let $z \in A(H)$, and let $H'$ be the subdrawing of $H$ formed by all edges $e$ of $H$ with $d(z, e) > \lambda$, and their ends (or $H' = H$, if $E(H) = \emptyset$). We define $H - z^\lambda = H'$ (we shall only use this notation when the hidden parameters $\Sigma, \mathcal{T}$ are obvious). [4, Theorem (7.11)] implies that
+
+\stmt
+(4.3) \textit{If $H, \Sigma, \mathcal{T}, \theta, d, \lambda, z$ are as above then $H - z^\lambda$ is 2-cell.}
+
+[4, Theorem (7.10)] implies

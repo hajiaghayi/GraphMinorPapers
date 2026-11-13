@@ -1,0 +1,32 @@
+\origpage{534}{N. Robertson, P. Seymour / Journal of Combinatorial Theory, Series B 102 (2012) 530--563}
+\textbf{2.6.} \textit{Let $(A, B)$ be a separation of a graph $G$, let $Z \subseteq V(G)$ with $V(A \cap B) \subseteq Z$, and let $L' \subseteq A$ with the same effect on $Z \cap V(A)$ as $L \cap A$. Then $L' \cup (L \cap B) \subseteq G$ has the same effect on $Z$ as $L$.}
+
+\textbf{Proof.} Let $A_1 = A'_1 = A$, $A_2 = A'_2 = B$, $G = G'$, and $Z = Z'$, and let $\alpha : Z' \to Z$ be the identity. Let $L_1 = L \cap A$, $L'_1 = L'$, $L_2 = L'_2 = L \cap B$. The result follows from 2.5. $\square$
+
+From 2.6 we deduce
+
+\textbf{2.7.} \textit{Let $L$ be a subgraph of $G$, vital for $Z \subseteq V(G)$, and let $(A, B)$ be a separation of $G$. Then $L \cap A$ is vital for $(Z \cap V(A)) \cup V(A \cap B)$ in $A$.}
+
+\textbf{Proof.} Let $Z' = Z \cup V(A \cap B)$. Then $L$ is vital for $Z'$ in $G$, and so by 2.6, $L \cap A$ is vital for $Z'$ in $A$, as required. $\square$
+
+\sectionhead{3. Drawings in a disc}
+
+In this section we prove the result outlined in the first paragraph of Section 1. A \textit{surface} is a connected compact 2-manifold, possibly with boundary. If $\Sigma$ is a surface, a subset $X \subseteq \Sigma$ is an \textit{O-arc} if it is homeomorphic to a circle, and a \textit{line} if it is homeomorphic to the unit interval $[0, 1]$. The boundary of $\Sigma$ is denoted by $bd(\Sigma)$, and the components of $bd(\Sigma)$ are called the \textit{cuffs} of $\Sigma$; each cuff is an O-arc. If $X \subseteq \Sigma$, its topological closure is denoted by $\bar{X}$.
+
+A \textit{drawing} in $\Sigma$ is a pair $(U, V)$, where $U \subseteq \Sigma$ is closed, $V \subseteq U$ is finite, $U \cap bd(\Sigma) \subseteq V$, $U \setminus V$ has only finitely many arc-wise connected components, called \textit{edges}, and for each edge $e$, either $\bar{e}$ is an O-arc and $|\bar{e} \cap V| = 1$, or $\bar{e}$ is a line and $\bar{e} \cap V$ is the set of ends of $\bar{e}$. If $\Gamma = (U, V)$ is a drawing in $\Sigma$, we write $U(\Gamma) = U$ and $V(\Gamma) = V$. We use graph-theoretic terminology for drawings in the natural way. If $\Gamma$ is a drawing in $\Sigma$, we say $X \subseteq \Sigma$ is \textit{$\Gamma$-normal} if $X \cap U(\Gamma) \subseteq V(\Gamma)$. The \textit{regions} of $\Gamma$ in $\Sigma$ are the components of $\Sigma \setminus U(\Gamma)$. Note that in this paper, we do not insist that $V(\Gamma)$ meets every cuff.
+
+If $\Gamma$ is a drawing in $\Sigma$, and $T \subseteq \Sigma$ has the property that either $e \cap T = \emptyset$ or $\bar{e} \subseteq T$ for every $e \in E(\Gamma)$, we define $\Gamma \cap T$ to be the subdrawing $(U(\Gamma) \cap T, V(\Gamma) \cap T)$ of $\Gamma$. Let $\Gamma$ be a drawing in a surface $\Sigma$, and let $Y \subseteq \Sigma$. We say $x \in \Sigma$ is \textit{$h$-insulated (in $\Sigma$) from $Y$ (by $\Gamma$)} if there are $h$ disjoint circuits of $\Gamma$, all bounding discs in $\Sigma$ disjoint from $Y$ and containing $x$ in their interiors; or more precisely, there are $h$ closed discs $\Delta_1, \ldots, \Delta_h \subseteq \Sigma$ such that
+
+\hspace*{12pt}$\bullet$ $x \in \Delta_h \setminus bd(\Delta_h)$, and $Y \cap \Delta_1 = \emptyset$,
+
+\hspace*{12pt}$\bullet$ for $1 \le i < h$, $\Delta_{i+1} \subseteq \Delta_i \setminus bd(\Delta_i)$,
+
+\hspace*{12pt}$\bullet$ for $1 \le i \le h$, $bd(\Delta_i) \subseteq U(\Gamma)$.
+
+The main result of this section is the following. (We remark that in the following theorem, while $\Gamma$ is a drawing in a surface $\Sigma$, all that matters is the part of $\Gamma$ within the insulating discs around $v$; the remainder could be added to $K$ and removed from $\Gamma$ without changing anything significant. We wrote it in this form because this is convenient for applications, later.)
+
+\textbf{3.1.} \textit{For every integer $p \ge 0$ there exists $h \ge 1$ with the following property. Let $\Gamma, K$ be subgraphs of a graph $G$ with $G = \Gamma \cup K$, and let $\Gamma$ be a drawing in a surface $\Sigma$. Let $v \in V(\Gamma)$ be $h$-insulated from $V(\Gamma \cap K)$ by $\Gamma$, let $Z \subseteq V(K)$ with $|Z| \le p$, and let $L \subseteq G$. Then there is a subgraph $L'$ of $G \setminus \{v\}$ with the same effect on $Z$ as $L$ and with $L' \cap K \subseteq L$.}
+
+To prove 3.1 we need two lemmas.
+
+\textbf{3.2.} \textit{Let $C_1, \ldots, C_h$ be mutually vertex-disjoint connected subgraphs of a graph $G$, and also let $D_1, \ldots, D_h$ be mutually vertex-disjoint connected subgraphs of $G$. Suppose that $C_i \cap D_j$ is non-null for $1 \le i, j \le h$. Then $G$ has tree-width at least $h - 1$.}

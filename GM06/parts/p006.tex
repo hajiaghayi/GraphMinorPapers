@@ -1,0 +1,128 @@
+\origpage{120}{ROBERTSON AND SEYMOUR}
+Here (ii) is possible since any region of $G$ contains at most one segment, because $G$ is connected. Henceforth by $G^*$ we shall mean not only the abstract dual graph but also a drawing of it satisfying the above conditions.
+
+Standard arguments from duality theory for graphs on the sphere may be used to obtain the following lemma, whose proof is \del{left to the reader}\fix{given below}.
+
+\stmt
+(3.1) \textit{If $G$ is connected and properly drawn on a disc $\Sigma$, then $G^{**} = G$. (More precisely, the drawing of $G$ is a drawing of $G^{**}$.)}
+
+\fix{We give the argument. We read ``in the usual way'' as follows. Each region of $G$ contains
+exactly one vertex of $G^*$, and each vertex of $G^*$ lies in a region of $G$. For each edge $e$ of
+$G$, the corresponding edge $e^*$ of $G^*$ meets the drawing of $G$ only in points of $e$, the edge
+$e$ meets the drawing of $G^*$ only in points of $e^*$, and $e, e^*$ have exactly one point in
+common. The ends of $e^*$ are the vertices of $G^*$ in the regions of $G$ incident with $e$, and each
+region of $G^*$ incident with $e^*$ contains a point of $e$. Finally, distinct vertices of $G$ lie in
+distinct regions of $G^*$. Then (3.1) says that the drawing of $G$ satisfies these conditions with
+the roles of $G$ and $G^*$ exchanged, and also condition (ii) above with the roles exchanged.
+
+No vertex of $G$ lies in the drawing of $G^*$, since the vertices of $G^*$ lie in regions of $G$, and
+each edge $e^*$ meets the drawing of $G$ only in points of $e$. So each vertex of $G$ lies in a region
+of $G^*$. Next let $e$ be an edge of $G$ with ends $u, v$. Removing from $e$ its point in $e^*$ leaves
+two connected pieces, one with $u$ and one with $v$ in its closure. They are disjoint from the
+drawing of $G^*$, and so they lie in the regions of $G^*$ containing $u$ and $v$ respectively. Hence
+these two regions are incident with $e^*$, since they contain points of $e$ arbitrarily close to the
+point in $e^*$. They are the only regions of $G^*$ incident with $e^*$, since every such region
+contains a point of $e$.
+
+Now let $r$ be a region of $G^*$. Then $r$ contains at most one vertex of $G$, since distinct
+vertices of $G$ lie in distinct regions of $G^*$. If $r$ is incident with some edge $e^*$, then $r$
+contains an end of $e$, by the previous paragraph. If $r$ is incident with no edge of $G^*$, then
+every point of the frontier of $r$ is a vertex of $G^*$. Since $\Sigma$ minus finitely many points is
+connected, it follows that $r$ includes $\Sigma$ minus the vertices of $G^*$, and so $r$ contains
+every vertex of $G$. There is such a vertex, since $G$ is connected. Thus each region of $G^*$
+contains exactly one vertex of $G$. Next, if $V(G) \cap bd(\Sigma)$ is non-empty, then by (ii) above
+its points alternate around $bd(\Sigma)$ with those of $V(G^*) \cap bd(\Sigma)$, and so each segment
+of $bd(\Sigma)$ with respect to $V(G^*) \cap bd(\Sigma)$ contains exactly one vertex of $G$. If
+$V(G) \cap bd(\Sigma)$ is empty, then so is $V(G^*) \cap bd(\Sigma)$, since there are no segments.
+Next, distinct vertices of $G^*$ lie in distinct regions of $G$, since each region of $G$ contains
+only one vertex of $G^*$. Finally, let $e$ be an edge of $G$. The conditions on the points of $e$ and
+$e^*$ are symmetric in $e$ and $e^*$. The ends of $e$ are the vertices of $G$ in the regions of $G^*$
+incident with $e^*$, by the second paragraph. Each region of $G$ incident with $e$ contains an end of
+$e^*$, and so contains a point of $e^*$, since it is open and the end is in the closure of $e^*$.
+This proves (3.1).\fixnote{fix:3.1-proof-added}{The paper leaves (3.1) to the reader. The argument
+above is the one used in the formalization, which reads ``in the usual way'' by the conditions
+stated at its start.}}
+
+Now we return to the Disjoint Connecting Subgraphs problem. Let $G$ be a graph drawn on a disc $\Sigma$, and let $\Delta$ be a division with
+\begin{equation*}
+\bigcup \Delta \subseteq V(G) \cap bd(\Sigma).
+\end{equation*}
+We are concerned with deciding if $\Delta$ is feasible in $G$. By slightly enlarging $\Sigma$ we may arrange that
+
+\hspace*{12pt}(i) $G$ is properly drawn on $\Sigma$, and
+
+\hspace*{12pt}(ii) $\bigcup \Delta = V(G) \cap bd(\Sigma)$
+
+and for the rest of this section we shall assume that (i) and (ii) hold.
+
+\stmt
+(3.2) \textit{Let $G$ be a connected graph, properly drawn on a disc $\Sigma$. Let $\Delta$ be a cross-free division with}
+\begin{equation*}
+\bigcup \Delta = V(G) \cap bd(\Sigma).
+\end{equation*}
+\textit{Let the drawing of $G^*$ be chosen so that}
+\begin{equation*}
+\bigcup \Delta^* = V(G^*) \cap bd(\Sigma).
+\end{equation*}
+\textit{Then $\Delta$ is feasible in $G$ if and only if $\Delta^*$ is feasible in $G^*$.}
+
+This can be proved using standard duality arguments\del{, and is left to the reader}. (Hint: a realization of $\Delta^*$ in $G^*$ may be obtained from some of the edges of $G^*$ corresponding to edges of $G$ not used by some given realization of $\Delta$ in $G$.)
+
+\fix{We give the argument, which follows the hint. Let $U = V(G^*) \cap bd(\Sigma)$. Suppose
+first that $\Delta$ is feasible in $G$, and let $H$ be a realization of $\Delta$ in $G$. Let $K^*$ be
+the subgraph of $G^*$ with vertex set $V(G^*)$ whose edges are the edges $e^*$ for the edges $e$ of
+$G$ not in $H$. We claim that for $u_1, u_2 \in U$, there is a path of $K^*$ between $u_1$ and $u_2$
+if and only if $u_1$ and $u_2$ belong to the same member of $\Delta^*$.
+
+Suppose that there is such a path $P$, and that $\{v_1, v_2\}$ crosses $\{u_1, u_2\}$ for some
+$\delta \in \Delta$ and $v_1, v_2 \in \delta$. Let $Q$ be the path of $H(\delta)$ between $v_1$ and
+$v_2$. The drawings of $P$ and $Q$ are compact connected subsets of $\Sigma$, and their ends on
+$bd(\Sigma)$ cross, and so they meet. Let $z$ be a common point. Then $z$ is in the drawing of $G$,
+and so it is not a vertex of $G^*$, since the vertices of $G^*$ lie in regions of $G$. So $z$ lies in an edge $f^*$ of $K^*$. Since $f^*$
+meets the drawing of $G$ only in points of $f$, the point $z$ lies in $f$. But $f$ meets no vertex of
+$G$ and no other edge of $G$, and $f$ is not an edge of $H$, and so $z$ is not in $Q$. This is a
+contradiction, and so $u_1, u_2$ belong to the same member of $\Delta^*$.
+
+Conversely, suppose that they do. Let $\Gamma$ be the drawing of the subgraph of $G$ with vertex set
+$V(G)$ and edge set $E(H)$. We show first that no component of $\Gamma$ has two vertices $v_1, v_2$ in
+$bd(\Sigma)$ such that $\{v_1, v_2\}$ crosses $\{u_1, u_2\}$. Such vertices are in
+$\bigcup \Delta$, which is a subset of $V(H)$, and they are joined by a path of $H$. So they lie in
+the same component $H(\delta)$ of $H$, and hence both belong to $\delta$, since every other member of
+$\Delta$ is included in another component of $H$. Since $u_1, u_2$ are in the same member of
+$\Delta^*$, it follows that $\{v_1, v_2\}$ does not cross $\{u_1, u_2\}$. Next we show that $u_1$ and
+$u_2$ lie in the same region of $\Gamma$. Let $B_1, B_2$ be the two arcs of $bd(\Sigma)$ with ends
+$u_1, u_2$. Let $K_1$ be the union of the drawings of the components of $\Gamma$ whose vertices in
+$bd(\Sigma)$ all lie in $B_2$, and let $K_2$ be the union of the drawings of the other components.
+Then $K_1, K_2$ are disjoint closed sets with union the drawing of $\Gamma$. The arc $B_1$ is disjoint
+from $K_1$, since $u_1, u_2$ are not in the drawing of $\Gamma$. The arc $B_2$ is disjoint from
+$K_2$, since a component in $K_2$ has a vertex in $bd(\Sigma) - B_2$, and a vertex in $B_2$ would make
+a pair that crosses $\{u_1, u_2\}$. By Janiszewski's theorem, applied in the disc to $K_1$ and $K_2$,
+the points $u_1, u_2$ lie in the same component of $\Sigma$ minus $K_1 \cup K_2$, that is, in the same
+region $r$ of $\Gamma$. Now let $Z$ be the set of regions of $G$ whose vertex of $G^*$ is joined to
+$u_1$ by a path of $K^*$, and let $r_1, r_2$ be the regions of $G$ containing $u_1, u_2$. Both are
+included in $r$, since they are connected and disjoint from the drawing of $\Gamma$, and $r_1 \in Z$.
+Each point of $r$ lies in a region of $G$ included in $r$, or in an edge of $G$ not in $H$, and such an
+edge lies in $r$ together with every region of $G$ incident with it. Since $r$ is connected, it
+follows that if $r_2 \notin Z$, then some edge $e$ of $G$ not in $H$ is incident with a region in $Z$
+and a region not in $Z$. But then $e^*$ is an edge of $K^*$ joining the vertices of $G^*$ in these
+two regions, which is impossible. Hence $r_2 \in Z$, and since $u_2$ is the vertex of $G^*$ in $r_2$,
+this proves the claim.
+
+By the claim, each member of $\Delta^*$ is included in the vertex set of a component of $K^*$, and
+distinct members of $\Delta^*$ are included in distinct components. Choosing a spanning tree in each
+of these components gives a realization of $\Delta^*$ in $G^*$. So $\Delta^*$ is feasible in $G^*$.
+
+Now suppose that $\Delta^*$ is feasible in $G^*$. Since $G$ is connected, (3.1) applies, and so the
+drawing of $G$ is a drawing of the dual of $G^*$, and $V(G) \cap bd(\Sigma)$ contains exactly one
+point of each segment of $bd(\Sigma)$ with respect to $U$. Hence what we just proved applies to $G^*$
+and $\Delta^*$ in place of $G$ and $\Delta$, and shows that $\Delta^{**}$ is feasible in $G$. Since
+$\Delta$ is cross-free, $\Delta^{**} = \Delta$ by (2.2), and so $\Delta$ is feasible in
+$G$.\fixnote{fix:3.2-proof-added}{The paper leaves (3.2) to the reader, with the hint given. The
+argument above is the one used in the formalization, which uses the hint.}}
+
+We shall make use of the following observations.
+
+\stmt
+(3.3) (i) \textit{If $|\delta| = 1$ for some $\delta \in \Delta$, and $\delta = \{v\}$ say, then $\Delta$ is feasible in $G$ if and only if $\Delta - \{\delta\}$ is feasible in the graph obtained from $G$ by deleting $v$.}
+
+\hspace*{12pt}(ii) \textit{If $G$ has a component $G'$ with no vertex in $bd(\Sigma)$ then $\Delta$ is feasible in $G$ if and only if it is feasible in the graph obtained from $G$ by deleting $V(G')$.}

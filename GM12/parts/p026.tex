@@ -1,0 +1,25 @@
+\origpage{265}{GRAPH MINORS. XII}
+We may therefore assume that there is no such $O$-arc $F$, and so $\bar{r} - r$ is an $O$-arc. Let $\Gamma_1$ be a drawing in $\Sigma$ dual to $\Gamma$, in the usual sense of surface duals. For each $a \in A(\Gamma)$ there corresponds an atom of $\Gamma_1$ in the natural way, which we denote by $a^*$. Now $\Gamma_1$ is 2-cell, and has a common radial drawing with $\Gamma$. By [5, Theorem (6.6)], there is a respectful tangle $\mathscr{T}_1$ of order $\theta$ in $\Gamma_1$, with metric $d_1$, such that $d_1(a^*, b^*) = d(a, b)$ for all $a, b \in A(\Gamma)$. Since $\bar{r} - r$ is an $O$-arc, it follows that $\Gamma_2 = \Gamma_1 \setminus r^*$ is 2-cell. By (7.3) applied to $\Gamma_1$, there is a respectful tangle $\mathscr{T}_2$ of order $\theta - 1$ in $\Gamma_2$, with metric $d_2$, such that, if $r_2$ is the region of $\Gamma_2$ containing $r^*$, then
+\begin{align*}
+\text{(v)} \quad & d_2(a, b) \ge d_1(a, b) - 2 \text{ for all } a, b \in A(\Gamma_1) \cap A(\Gamma_2), \text{ and} \\
+\text{(vi)} \quad & d_2(a, r_2) \ge d_1(a, r^*) - 1 \text{ for all } a \in A(\Gamma_1) \cap A(\Gamma_2).
+\end{align*}
+Let $\Gamma_3$ be a drawing in $\Sigma$ dual to $\Gamma_2$---roughly, $\Gamma_3$ is obtained from $\Gamma$ by contracting all edges of $\Gamma$ included in $\bar{r} - r$. For each atom $a$ of $\Gamma_2$ we denote by $a^*$ the corresponding atom of $\Gamma_3$. Thus, $r_2^*$ is the vertex of $\Gamma_3$ formed by contracting all the edges of $\Gamma$ in $\bar{r} - r$, and we may arrange that $r_2^* \in r$, and $\Gamma_2 \setminus r_2^* = \Gamma \setminus Z$. Let $\mathscr{T}_3$ be the respectful tangle of order $\theta - 1$ in $\Gamma_3$ dual to $\mathscr{T}_2$ in the sense of [5, Theorem (6.6)];\fixnote{fix:7.5-proof}{A gap in the proof: when $\theta = 3$ this uses [5, Theorem (6.6)] for order 2, where it fails for a drawing with a loop (see the notes to (6.5) and (6.6) in Graph Minors XI), and $\Gamma_3$ may have loops. The step still holds here because $\mathscr{T}_2$ comes from the tangle $\mathscr{T}_1$ of order 3. A loop of $\Gamma_3$ with no small side would give three small sides of $\mathscr{T}_1$ that cover $\Gamma_1$, against the second tangle axiom. So the pretangle induced in $\Gamma_3$ is a tangle, and (7.5) holds as printed.} thus, $d_3(a^*, b^*) = d_2(a, b)$ for all $a, b \in A(\Gamma_2)$, where $d_3$ is the metric of $\mathscr{T}_3$. Now let us apply (7.4) to $\Gamma_3, \mathscr{T}_3, r_2^*$. Since $\Gamma_3 \setminus r_2^* = \Gamma \setminus Z$, we deduce that there is a 2-cell subdrawing $\Gamma'$ of $\Gamma \setminus Z$ and a respectful tangle $\mathscr{T}'$ of order $\theta - 2$ in $\Gamma'$ with metric $d'$, such that if $r'$ is the region of $\Gamma'$ containing $r_2^*$, then
+\begin{align*}
+\text{(vii)} \quad & U(\Gamma_3) \subseteq U(\Gamma') \cup r' \\
+\text{(viii)} \quad & d'(a, b) \ge d_3(a, b) - 2 \text{ for all } a, b \in A(\Gamma_3) \cap A(\Gamma') \\
+\text{(ix)} \quad & d'(a, r') \ge d_3(a, r_2^*) - 1 \text{ for all } a \in A(\Gamma_3) \cap A(\Gamma'), \text{ and} \\
+\text{(x)} \quad & d_3(a, r_2^*) \le 2 \text{ for all } a \in A(\Gamma_3) \text{ with } a \subseteq r'.
+\end{align*}
+We claim that $\Gamma', \mathscr{T}', r'$ satisfy the theorem. Certainly $r'$ is the region of $\Gamma'$ including $r$, because $r_2^* \in r \cap r'$. Now $Z \subseteq r'$ and so every edge of $\Gamma$ incident with a member of $Z$ is included in $r'$; and by (vii),
+\begin{equation*}
+U(\Gamma \setminus Z) \subseteq U(\Gamma_3) \subseteq U(\Gamma') \cup r'.
+\end{equation*}
+Consequently, $U(\Gamma) \subseteq U(\Gamma') \cup r'$, and so (i) holds. For (ii), let $a, b \in A(\Gamma) \cap A(\Gamma')$. Then $a \cap r' = \emptyset$, and so $a^* \in A(\Gamma_2)$, and $a = a^{**} \in A(\Gamma_3)$. Similarly $b^* \in A(\Gamma_2)$ and $b = b^{**} \in A(\Gamma_3)$. By (viii) and (v),
+\begin{equation*}
+d'(a, b) \ge d_3(a, b) - 2 = d_2(a^*, b^*) - 2 \ge d_1(a^*, b^*) - 4 = d(a, b) - 4
+\end{equation*}
+and so (ii) holds. For (iii), let $a \in A(\Gamma) \cap A(\Gamma')$; then $a^* \in A(\Gamma_2)$ and $a = a^{**} \in A(\Gamma_3)$. By (ix) and (vi),
+\begin{equation*}
+d'(a, r') \ge d_3(a, r_2^*) - 1 = d_2(a^*, r_2) - 1 \ge d_1(a^*, r^*) - 2 = d(a, r) - 2,
+\end{equation*}

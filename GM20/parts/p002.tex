@@ -1,0 +1,20 @@
+\origpage{326}{N. Robertson, P.D. Seymour / Journal of Combinatorial Theory, Series B 92 (2004) 325--357}
+It was shown in [3] that
+
+\textbf{1.2.} \textit{For every graph $H$, if $G$ has no minor isomorphic to $H$, then every ``highly connected component'' of $G$ can ``almost'' be drawn on a surface on which $H$ cannot be drawn.}
+
+(The meanings of ``highly connected component'' and ``almost'' here are complicated and we shall postpone the exact statement of this theorem as long as possible. Surfaces are connected and compact.)
+
+We may assume the surface in 1.2 is without boundary; and since up to homeomorphism there are only finitely many such surfaces in which $H$ cannot be drawn, to prove 1.1 and hence Wagner's conjecture it suffices to show that
+
+\textbf{1.3.} \textit{If $\Sigma_1, \ldots, \Sigma_n$ are surfaces then for every infinite set $\mathcal{F}$ of graphs, if every highly connected component of every member of $\mathcal{F}$ can almost be drawn in one of $\Sigma_1, \ldots, \Sigma_n$, then some member of $\mathcal{F}$ is isomorphic to a minor of another member of $\mathcal{F}$.}
+
+To prove 1.3 we use the main results of two other papers of this series [4,5]. The main result of [4] asserts that, if $\mathcal{F}$ is an infinite set of graphs and all the highly connected components of all members of $\mathcal{F}$ have a certain ``well-behaved'' structure, then some member of $\mathcal{F}$ is isomorphic to a minor of another member of $\mathcal{F}$. It therefore suffices to show that the hypothesis of 1.3 implies that all these highly connected components have a well-behaved structure. To show this, we apply the main result of [5], which asserts that for any infinite set of hypergraphs all drawable in a fixed surface (where the edges of the hypergraphs all have two or three ends, and each edge is labeled from a fixed well-quasi-order), some member of the set is isomorphic to a minor of another (with an appropriate definition of ``minor'' for hypergraphs).
+
+In Sections 2--10 we finish the proof of Wagner's conjecture, and in Section 11 we prove a slight strengthening.
+
+\sectionhead{2. Hypergraphs and tangles}
+
+For the purposes of this paper, a hypergraph $G$ consists of a finite set $V(G)$ of \textit{vertices}, a finite set $E(G)$ of \textit{edges}, and an incidence relation between them. The vertices incident with an edge are the \textit{ends} of the edge (A hypergraph is thus a graph if every edge has one or two ends.) A hypergraph $H$ is a \textit{subhypergraph} of a hypergraph $G$ (written $H \subseteq G$) if $V(H) \subseteq V(G)$, $E(H) \subseteq E(G)$, and for every $v \in V(G)$ and $e \in E(H)$, $e$ is incident with $v$ in $G$ if and only if $v \in V(H)$ and $e$ is incident with $v$ in $H$. If $G_1, G_2$ are subhypergraphs of $G$ we denote by $G_1 \cup G_2, G_1 \cap G_2$ the subhypergraphs with vertex sets $V(G_1) \cup V(G_2)$, $V(G_1) \cap V(G_2)$ and edge sets $E(G_1) \cup E(G_2)$, $E(G_1) \cap E(G_2)$, respectively. A \textit{separation} of $G$ is an ordered pair $(G_1, G_2)$ of subhypergraphs with $G_1 \cup G_2 = G$ and $E(G_1 \cap G_2) = \emptyset$, and its \textit{order} is $|V(G_1 \cap G_2)|$.
+
+A central idea in our approach is that of a \textit{tangle} in a hypergraph, which was introduced in [2]. Intuitively, a tangle of order $\theta$ is a ``$\theta$-connected component'' of the hypergraph, which therefore resides on one side or the other of every separation of order $< \theta$. Formally, let $G$

@@ -1,0 +1,29 @@
+\origpage{197}{GRAPH MINORS, XVII}
+\stmt
+(12.1) \textit{Let $\mathscr{T}$ be a tangle of order $> 4p+9$ in a hypergraph $G$, let $\pi = (\Sigma, \Gamma, \alpha, \beta, \gamma)$ be a true, $(2p+7)$-redundant, $\mathscr{T}$-central portrayal of $G$ with warp $\le p$, and let $\Theta$ be a cuff of $\Sigma$. For every clique $K$ of $G$ with}
+\begin{equation*}
+K \subseteq \bigcup (V(\alpha(c)) \colon c \in C(\Gamma) \text{ bordering } \Theta)
+\end{equation*}
+\textit{there is a cell $c$ bordering $\Theta$ with $K \subseteq V(\alpha(c))$.}
+
+\textit{Proof.} We proceed by induction on $|K|$.
+
+\hspace*{12pt}(1) \textit{If $|K| \le 2$ the result is true.}
+
+\textit{Subproof.} If $|K| \le 1$ it is clear, and so let $|K| = 2$, $K = \{x_1, x_2\}$ say. Let $e \in E(G)$ incident with $x_1, x_2$ and choose $c \in C(\Gamma)$ with $e \in E(\alpha(c))$. If $c$ borders $\Theta$ the result holds, and so we assume it does not. For $i = 1, 2$ there exists $c_i \in C(\Gamma)$ bordering $\Theta$ with $x_i \in V(\alpha(c_i))$, and since $x_i \in V(\alpha(c)) \subseteq V(\alpha(-c_i))$ there exists $n_i \in \tilde{c}_i$ with $x_i \in \beta(n_i+)$. Moreover, $x_1, x_2 \in V(\alpha(c) \cap \alpha(-c))$. If $c$ is a border cell, bordering a cuff $\Theta' \ne \Theta$ say, then by (P6), $\{x_1, x_2\} \subseteq \beta(n'_1+) \cup \beta(n'_2+)$ for some two nodes $n'_1, n'_2$ bordering $\Theta'$. It follows from (P4) that $x_1 \notin \beta(n_1)$, and so $x_1 = \gamma(n_1)$ since $x_1 \in \beta(n_1+)$; but since $n_1 \ne n'_1, n'_2$ it follows that $x_1 \in \beta(n'_1) \cup \beta(n'_2)$ contrary to (P4). Hence $c$ is an internal cell, and so by (P5), $\{x_1, x_2\} \subseteq \gamma(\tilde{c}) \subseteq \gamma(V(\Gamma))$. By (9.8)(i), $x_i \notin \beta(n_i)$, and so $x_i = \gamma(n_i)$ ($i = 1, 2$). Since $x_i \in \gamma(\tilde{c})$ it follows that $n_i \in \tilde{c}$ since $\gamma$ is an injection ($i = 1, 2$). Hence there is a $\Gamma$-normal $O$-arc $F$ with $F \cap N(\Gamma) = \{n_1, n_2\}$; and so by (8.3), there is a border cell $c'$ with $n_1, n_2 \in \tilde{c}'$. Then $K \subseteq V(\alpha(c'))$ as required. This proves (1).
+
+Thus we may assume that $|K| \ge 3$. Choose $x_1, x_2, x_3 \in K$, distinct. From our inductive hypothesis there are cells $c_1, c_2, c_3$ bordering $\Theta$ with
+\begin{equation*}
+K - \{x_i\} \subseteq V(\alpha(c_i)) \qquad (i = 1, 2, 3),
+\end{equation*}
+and we may suppose (for a contradiction) that $x_i \notin V(\alpha(c_i))$ ($i = 1, 2, 3$) for otherwise the theorem holds. Hence $c_1, c_2, c_3$ are all distinct.
+
+\hspace*{12pt}(2) \textit{$\{x_1, x_2, x_3\} \cap \beta(n+) \ne \emptyset$ for all $n \in N(\Gamma) \cap \Theta$.}
+
+\textit{Subproof.} We may assume that $c_1, n, c_2, c_3$ are in order. For $i = 1, 2$, since $x_3 \in V(\alpha(c_i) \cap \alpha(-c_i))$ there is an end $n_i$ of $c_i$ so that $x_3 \in \beta(n_i+)$ by (P6). Let $n_3$ be an end of $c_3$. By (P7)
+\begin{equation*}
+x_3 \in \beta(n_1+) \cap \beta(n_2+) \subseteq \beta(n_3+) \cap \beta(n+).
+\end{equation*}
+But $x_3 \notin \beta(n_3+)$ since $x_3 \notin V(\alpha(c_3))$, and so $x_3 \in \beta(n+)$. This proves (2).
+
+But (2) contradicts (6.6) (taking $z = 9$). The result follows. $\square$

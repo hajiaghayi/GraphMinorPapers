@@ -1,0 +1,33 @@
+\origpage{180}{ROBERTSON AND SEYMOUR}
+\noindent and so $s_j \in \beta(n_1+)$; and similarly $s_j \in \beta(n_2+)$. Hence
+\begin{equation*}
+s_j \in \beta(n_1+) \cap \beta(n_2+) \subseteq \beta(m_i+),
+\end{equation*}
+a contradiction. Thus $s_j \in \beta(m_i+)$ and similarly $s_j \in \beta(m_{i+1}+)$, and $Q_j$ is a subpath of $\alpha(c)^*$ from $\beta(m_i+)$ to $\beta(m_{i+1}+)$ as required.
+
+We may therefore assume that $s_j \ne t_j$. From the minimality of $Q_j$, no vertex of $Q_j$ is in $B_1 \cap B_2$. Now $Q_j \nsubseteq M$, since every component of $M$ has intersection with $B_1 \cup B_2$ either included in $B_1$ or in $B_2$. Since no internal vertex of $Q_j$ is in $B_1 \cup B_2$ it follows that no edge of $Q_j$ is in $M$. Hence for every edge $e$ of $Q_j$ there is a boundary cell $c' \subseteq \Delta$ with $e \in E(\alpha(c')^*)$. Since no internal vertex of $Q_j$ belongs to
+\begin{equation*}
+V(\alpha(c') \delm{\cup}\fix{\cap} \alpha(-c')) \subseteq B_1 \cup B_2\fixmark{fix:7.3-p180}
+\end{equation*}
+\fixnotetext{A misprint: the union contains all of $\alpha(c')$, and the next sentence has $V(\alpha(c') \cap \alpha(-c'))$. The inclusion for the intersection holds once $B_1$ and $B_2$ are unions, as in the note to the definition of $B_h$ on page 179.}%
+for any boundary cell $c'$, we deduce that for some boundary cell $c' \subseteq \Delta$, $Q_j$ is a path of $\alpha(c')^*$. But $V(Q_j)$ meets $B_1 - B_2$ and $B_2 - B_1$, and so $V(\alpha(c') \cap \alpha(-c'))$ is not a subset of $B_1$ or $B_2$. Consequently $c' = c$ and our claim holds.
+
+It follows that $\{Q_0, \dots, Q_p\}$ is a linkage in $\alpha(c)$ from $\beta(m_i+)$ to $\beta(m_{i+1}+)$. Hence $|\beta(m_{i+1}+)| = p+1$ and so $m_{i+1} \in dom(\gamma)$; and from the warp condition for $c$, the linkage pairs $\gamma(m_i)$ with $\gamma(m_{i+1})$. But $\gamma(m_i)$ is the initial vertex of $Q_0$, and so $\gamma(m_{i+1})$ is its terminal vertex, and in particular, $\gamma(m_{i+1}) \in V(P_0)$ contrary to the maximality of $i$.
+
+Hence $i = k$, and the result holds. $\square$
+
+\stmt
+(7.4) \textit{Let $\pi = (\Sigma, \Gamma, \alpha, \beta, \gamma)$ be a $(2p+3)$-redundant $\mathcal{T}$-central portrayal of a hypergraph $G$, with warp $\le p$, and let $ord(\mathcal{T}) > 4p+5$. Let $F \subseteq \Sigma$ be a $\Gamma$-normal $I$-arc with $|F \cap N(\Gamma)| = 2$. Let $\Delta \subseteq \Sigma$ be a disc with $F \subseteq bd(\Delta) \subseteq F \cup bd(\Sigma)$, such that $\alpha(\Delta)$ is small. Define $\Gamma' = (U(\Gamma) \cup \Delta, N(\Gamma) \cap \overline{\Sigma - \Delta})$ and let $c'$ be the cell $\Delta - (F \cap N(\Gamma))$. Define}
+\begin{align*}
+\alpha'(c') &= \alpha(\Delta) \\
+\alpha'(c) &= \alpha(c) \quad (c \in C(\Gamma') - \{c'\}) \\
+\beta' &= \beta \mid (N(\Gamma') \cap bd(\Sigma)) \\
+\gamma' &= \gamma \mid N(\Gamma').
+\end{align*}
+\textit{Then $\pi' = (\Sigma, \Gamma', \alpha', \beta', \gamma')$ is a $\mathcal{T}$-central portrayal of $G$ resembling $\pi$.}
+
+\textit{Proof.} \textbf{(P1)}--\textbf{(P5)} and \textbf{(P7)} are easily verified\del{, and we omit them}. \fix{We give the details. Every cell of $\Gamma$ is disjoint from $F$, since $F$ is $\Gamma$-normal; and the frontier of $\Delta$ in $\Sigma$ is included in $F$, since $bd(\Delta) \subseteq F \cup bd(\Sigma)$. So every cell of $\Gamma$ is a subset of $\Delta$ or of $\Sigma - \Delta$, and we let $I_1, I_2$ be the sets of cells of the first and the second kind. Then $\alpha(\Delta) = \cup(\alpha(c) \colon c \in I_1)$. From the definition of $\Gamma'$, its cells are $c'$ and the members of $I_2$, its nodes are the nodes of $\Gamma$ not in $\Delta - \{n_1, n_2\}$, $\tilde{c}' = \{n_1, n_2\}$, and $\tilde{c}$ is the same in $\Gamma'$ as in $\Gamma$ for $c \in I_2$. Moreover $c'$ is a border cell, since $bd(\Delta) - F$ is a nonempty subset of $bd(\Sigma)$; and for $i = 1, 2$ the cell of $\Gamma$ that contains the points of $bd(\Delta) - F$ near $n_i$ is a border cell $c_i \in I_1$ with $n_i \in \tilde{c}_i$. Now \textbf{(P1)} holds, since $\alpha'(c') \cup \cup(\alpha'(c) \colon c \in I_2) = \cup(\alpha(c) \colon c \in C(\Gamma)) = G$, and the hypergraphs $\alpha(c)$ $(c \in C(\Gamma))$ have no common edges. \textbf{(P2)} holds for $c'$, since if $n_i \in dom(\gamma)$ then $\gamma(n_i) \in V(\alpha(c_i)) \subseteq V(\alpha(\Delta))$ by \textbf{(P2)} for $\pi$; and \textbf{(P3)} holds for $c'$, since $\beta(n_i) \subseteq V(\alpha(c_i)) \subseteq V(\alpha(\Delta))$ by \textbf{(P3)} for $\pi$, as $c_i$ is a border cell. For the cells in $I_2$, these conditions and \textbf{(P4)} are the same as for $\pi$, since $\beta'$ and $\gamma'$ are restrictions of $\beta$ and $\gamma$ and the cuffs are unchanged. For \textbf{(P5)}, let $c$ be an internal cell of $\Gamma'$. Then $c \in I_2$, and $\alpha'(-c) \subseteq \alpha(-c)$ since $\alpha'(c') = \alpha(\Delta)$; so \textbf{(P5)} for $c$ follows from \textbf{(P5)} for $\pi$. For \textbf{(P7)}, the nodes of $\Gamma'$ bordering a cuff are nodes of $\Gamma$ bordering it, in the same order, and $\beta'$ agrees with $\beta$ on them.}\fixnote{fix:7.4-axioms-added}{The paper omits the verification of \textbf{(P1)}--\textbf{(P5)} and \textbf{(P7)}. The argument above is the one used in the formalization.} Let the ends of $F$ be $n_1, n_2$. For \textbf{(P6)}, it suffices to show that
+\begin{equation*}
+V(\alpha'(c') \cap \alpha'(-c')) \subseteq \beta(n_1+) \cup \beta(n_2+).
+\end{equation*}
+But this follows from (2.1), setting $I_1 = \{c \in C(\Gamma): c \subseteq \Delta\}$, $I_2 = C(\Gamma) - I_1$.

@@ -1,0 +1,25 @@
+\origpage{171}{GRAPH MINORS, X}
+\stmt
+(6.2) \textit{Let $\mathscr{T}$ be a tangle of order $\theta$ in a hypergraph $G$, and let $W \subseteq V(G)$ with $|W| < \theta$. Let $\mathscr{T}'$ be the set of all separations $(A', B')$ of $G/W$ such that there exists $(A, B) \in \mathscr{T}$ with $W \subseteq V(A \cap B)$, $A/W = A'$, and $B/W = B'$. Then $\mathscr{T}'$ is a tangle in $G/W$ of order $\theta - |W|$.}
+
+\textit{Proof.} Certainly every member of $\mathscr{T}'$ has order $< \theta - |W|$. For any separation $(A', B')$ of $G/W$ of order $< \theta - |W|$, there is a separation $(A, B)$ of $G$ of order $< \theta$ with $W \subseteq V(A \cap B)$, $A/W = A'$, and $B/W = B'$, and since $\mathscr{T}$ contains one of $(A, B)$, $(B, A)$, it follows that $\mathscr{T}'$ contains one of $(A', B')$, $(B', A')$. Thus the first axiom is satisfied.
+
+For the second, suppose that $(A'_i, B'_i) \in \mathscr{T}'$ $(1 \le i \le 3)$. Choose $(A_i, B_i) \in \mathscr{T}$ with $W \subseteq V(A_i \cap B_i)$, $A_i/W = A'_i$, and $B_i/W = B'_i$ $(1 \le i \le 3)$. Since $A_1 \cup A_2 \cup A_3 \ne G$, it follows that $A'_1 \cup A'_2 \cup A'_3 \ne G/W$, and hence the second axiom holds.
+
+For the third, let $(A', B') \in \mathscr{T}'$. Choose $(A, B) \in \mathscr{T}$ with $W \subseteq V(A \cap B)$, $A/W = A'$, and $B/W = B'$. Then $V(A) \ne V(G)$, and so $V(A') \ne V(G/W)$, as required. $\square$
+
+We denote the tangle $\mathscr{T}'$ of (6.2) by $\mathscr{T}/W$. We observe
+
+\stmt
+(6.3) \textit{Let $\mathscr{T}, \theta, G, W$ be as in (6.2), and let $(A, B)$ be a separation of $G$. Then $(A/W, B/W) \in \mathscr{T}/W$ if and only if $(A, B) \in \mathscr{T}$ and $|V(A \cap B) - W| < \theta - |W|$.}
+
+\textit{Proof.} Let $A^+$ be a subhypergraph of $G$ with $V(A^+) = V(A) \cup W$ and $E(A^+) = E(A)$, and define $B^+$ similarly. Then $(A^+, B^+)$ is a separation of $G$, $W \subseteq V(A^+ \cap B^+)$, $A^+/W = A/W$, and $B^+/W = B/W$. By definition of $\mathscr{T}/W$, $(A^+, B^+) \in \mathscr{T}$ if and only if $(A/W, B/W) \in \mathscr{T}/W$. But by (2.9), $(A^+, B^+) \in \mathscr{T}$ if and only if $|V(A^+ \cap B^+)| < \theta$ and $(A, B) \in \mathscr{T}$. Since $|V(A^+ \cap B^+)| = |W| + |V(A \cap B) - W|$, the result follows. $\square$
+
+\sectionhead{7. A Tangle in a Grid}
+
+Let $\theta \ge 2$ be an integer. Let $G$ be a simple graph with $V(G) = \{(i, j) : 1 \le i, j \le \theta\}$, where $(i, j)$ and $(i', j')$ are adjacent if $|i' - i| + |j' - j| = 1$. We call $G$ a \textit{$\theta$-grid}. The object of this section is to prove the existence of a natural tangle of order $\theta$ in a $\theta$-grid.
+
+Let $G$ be the $\theta$-grid defined above. For $1 \le i \le \theta$, let $P_i$ be the path of $G$ with vertex set $\{(i, j) : 1 \le j \le \theta\}$, and for $1 \le j \le \theta$, define $Q_j$ similarly. When $X \subseteq E(G)$, we define $\partial(X)$ to be the set of vertices $v \in \del{X}\fix{V(G)}$\fixnote{fix:7-boundary}{Here $X$ is a set of edges, so its members are not vertices. With $v \in V(G)$, (7.1)--(7.3) hold as printed.} such that $v$ is incident with an edge in $X$ and with an edge in $E(G) - X$.
+
+\stmt
+(7.1) \textit{If $X \subseteq E(G)$ and $|\partial(X)| < \theta$ then $X$ includes $E(P_i)$ for some $i$ $(1 \le i \le \theta)$ if and only if $X$ includes $E(Q_j)$ for some $j$ $(1 \le j \le \theta)$.}

@@ -1,0 +1,35 @@
+\origpage{138}{ROBERTSON AND SEYMOUR}
+\textit{Proof.} Now $\mu \ge 12$ is even and $\theta \ge 16\mu + 17$. Moreover $d(u, v) < \mu$ for every $H$-path $P$ in $G_0$ with ends $u, v$ because $H, \mathcal{T}$ is $(0, \mu)$-flat by (5.1). The result follows from (7.3) and [5, Theorem (10.1)] (taking $\beta = \mu$). $\square$
+
+If $\alpha$ is an arrangement in a surface $\Sigma$ of a segregation $\mathcal{S}$ of $G$, and $\Delta \subseteq \Sigma$ is a closed disc with $\text{bd}(\Delta)$ $\alpha$-normal, we define $\alpha^{-1}(\Delta)$ to be the subgraph of $G$ formed by
+\begin{equation*}
+\bigcup (A \colon (A, \Omega) \in \mathcal{S} \text{ and } \alpha(A, \Omega) \subseteq \Delta)
+\end{equation*}
+together with all $v \in V(\mathcal{S})$ such that $\alpha(v) \in \Delta$.
+
+Henceforth, in this section, we assume that $\mathcal{S}_0$, $\alpha_0$ are as in (7.4). Let $\tau_1 = 4 + \mu/2$, $\tau_2 = \delm{3}\fix{6} + \theta'/2$\fixnote{fix:7-tau2}{A gap in the proof of (7.11), page 143: only the $\tau - 4$ paths $P_1, \dots, P_{\tau - 4}$ are drawn into $H'$, so (3.4) is applied with $k = \tau - 3$, and it gives $d'(s_1, s_2) \ge 2(\tau - 3) - 6 = 2\tau - 12$, not $2\tau - 6$. With $\tau_2 = 3 + \theta'/2$ this is $\theta' - 6 < \theta'$. Taking $\tau_2 = 6 + \theta'/2$, and hence $\pi = (\phi - 1)(7 + \mu + \theta'/2)$, gives $2\tau - 12 = \theta'$. The constants of (1.2) are only claimed to exist, so (1.2) holds as printed.}; then $\pi = (\phi - 1)(2\tau_1 + \tau_2 - 7)$. Let $\beta = 2\pi + 8$.
+
+\stmt
+(7.5) \textit{For} $1 \le i \le k$ \textit{there is a} $(3\beta + 3)$\textit{-zone} $\Lambda_i$ \textit{around} $r_i$ \textit{and a closed disc} $\Delta_i \subseteq \Sigma$ \textit{with} $\text{bd}(\Delta_i)$ $\alpha_0$\textit{-normal, with the following properties:}
+
+\hspace*{12pt}(i) $\Delta_1, \dots, \Delta_k$ \textit{are mutually disjoint, and for} $1 \le i \le k$, $V(J_i \cap H) \subseteq \Delta_i$
+
+\hspace*{12pt}(ii) $d(r_i, x) \le 3\beta + 6$ \textit{for all} $x \in A(H)$ \textit{with} $x \cap \Delta_i \ne \emptyset$
+
+\hspace*{12pt}(iii) $x \subseteq \Delta_i - \text{bd}(\Delta_i)$ \textit{for every} $x \in A(H)$ \textit{with} $d(r_i, x) < \beta$
+
+\hspace*{12pt}(iv) $H \cap \overline{\Sigma - \Delta_i}$ \textit{has a circuit, and} $H \cap \overline{\Sigma - \Lambda_i}$ \textit{is rigid}
+
+\hspace*{12pt}(v) \textit{for} $1 \le i \le k$, \textit{one of the following holds:}
+
+\hspace*{12pt}(a) \textit{there is a crooked transaction} $\mathcal{P}$ \textit{of cardinality} $\pi$ \textit{in} $(G_0 \cup J_i, \Omega_i)$ \textit{(where} $\Omega_i$ \textit{is a natural order of} $V(H) \cap \text{bd}(\Lambda_i)$ \textit{from} $\text{bd}(\Lambda_i)$\textit{) such that} $V(\mathcal{P})$ \textit{is free with respect to the} $(12\beta + 14)$\textit{-compression of} $\mathcal{T}$ \textit{in} $H \cap (\Sigma - \Lambda_i)$, \textit{and each} $P \in \mathcal{P}$ \textit{meets} $H \cap (\Sigma - \Lambda_i)$ \textit{precisely in the ends of} $P$
+
+\hspace*{12pt}(b) \textit{there is no crooked transaction of cardinality} $\pi$ \textit{in} $(J_i \cup \alpha_0^{-1}(\Delta_i), \alpha_0^{-1}(\text{bd}(\Delta_i)))$.
+
+\textit{Proof.}
+
+\hspace*{12pt}(1) \textit{For} $1 \le i \le k$, \textit{every} $v \in V(J_i \cap H)$ \textit{satisfies} $d(r_i, v) \le \theta' + 13\mu + 13$.
+
+\textit{Subproof.} Let $B$ be a bridge of $H$ in $G$ with $B \subseteq J_i$ and $v \in V(B)$. By definition of $J_i$, there exists $u \in V(B \cap H)$ with $d(r_i, u) \le \theta' + 12\mu + 14$. Now since $B$ is a bridge, there is an $H$-path in $G$ with ends $u, v$. Since $H, \mathcal{T}$ is $(0, \mu)$-flat it follows that $d(u, v) < \mu$, and so $d(r_i, v) < \theta' + 13\mu + 14$. This proves (1).
+
+Now $\pi \ge 0$, $\pi \ne 1, 3$, and $\beta = 2\pi + 8$ is even, and $\theta \ge 16\beta + 17$. Since $\theta' + 13\mu + 13 < \beta$, we deduce from [5, Theorem (9.6)] (with the substitutions $z \to r_i$, $G \to G_0 \cup J_i$, $J \to J_i$, $G' \to G_0$, $\mathcal{S} \to \mathcal{S}_0$, $\alpha \to \alpha_0$) that there s a $(3\beta + 3)$-zone $\Lambda_i$ around $r_i$, and a closed disc $\Delta_i \subseteq \Sigma$ with $\text{bd}(\Delta_i)$ $\alpha_0$-normal, satisfying (ii)-(v) of the theorem.

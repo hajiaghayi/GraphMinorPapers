@@ -1,0 +1,26 @@
+\origpage{165}{GRAPH MINORS, XVII}
+\noindent (Thus, a painting is something like a drawing, except that we use discs instead of line segments, and cells can have up to three ``ends'' instead of two.) We define $U(\Gamma) = U$ and $N(\Gamma) = N$. The members of $N(\Gamma)$ are called the \textit{nodes} of $\Gamma$. The set of cells of $\Gamma$ is denoted by $C(\Gamma)$. A \textit{region} of $\Gamma$ is a component of $\Sigma - U$. Thus, each region is a connected open set disjoint from $bd(\Sigma)$. A node $n$ is a \textit{border node} if $n \in bd(\Sigma)$, and otherwise it is \textit{internal}. Similarly, a cell $c$ is a \textit{border cell} if $c \cap bd(\Sigma) \ne \emptyset$ and otherwise it is \textit{internal}. (The reader should note that $\tilde{c}$ may contain border nodes even if $c$ is an internal cell.) The members of $\tilde{c}$ are the \textit{ends} of $c$. A node $n$ and cell $c$ are said to \textit{border} a cuff $\Theta$ if $n \in \Theta$ and $c \cap \Theta \ne \emptyset$. A subset $X \subseteq \Sigma$ is \textit{$\Gamma$-normal} if $X \cap U(\Gamma) \subseteq N(\Gamma)$.
+
+\sectionhead{2. \textsc{Hypergraphs} \textsc{And} \textsc{Their} \textsc{Portrayal}}
+
+A hypergraph $G$ consists of a finite set $V(G)$ of vertices, a finite set $E(G)$ of edges, and an incidence relation between them. The vertices incident with an edge $e$ are called the \textit{ends} of $e$. Thus $G$ is a graph if and only if every edge has one or two ends. We say a hypergraph $H$ is a \textit{subhypergraph} of $G$ if $V(H) \subseteq V(G)$, $E(H) \subseteq E(G)$, and every $e \in E(H)$ has the same ends in $H$ and in $G$; and we denote this by $H \subseteq G$. A \textit{separation} of a hypergraph $G$ is a pair $(A, B)$ of subhypergraphs with $A \cup B = G$ and $E(A \cap B) = \emptyset$ (defining $A \cup B$, $A \cap B$ in the natural way) and its \textit{order} is $|V(A \cap B)|$.
+
+Let $G$ be a hypergraph. A \textit{portrayal} $\pi = (\Sigma, \Gamma, \alpha, \beta, \gamma)$ of $G$ consists of
+
+\hspace*{12pt}(i) a non-null connected surface $\Sigma$;
+
+\hspace*{12pt}(ii) a painting $\Gamma$ in $\Sigma$;
+
+\hspace*{12pt}(iii) a function $\alpha$ which assigns to each cell $c$ of $\Gamma$ a subhypergraph $\alpha(c)$ of $G$;
+
+\hspace*{12pt}(iv) a function $\beta$ which assigns to each border node $n$ of $\Gamma$ a subset $\beta(n)$ of $V(G)$;
+
+\hspace*{12pt}(v) an injection $\gamma$ from a subset $dom(\gamma)$ of $N(\Gamma)$ into $V(G)$.
+
+satisfying the axioms below. For any $X \subseteq N(\Gamma)$ we denote $\{\gamma(n) \colon n \in X \cap dom(\gamma)\}$ by $\gamma(X)$; for each $c_0 \in C(\Gamma)$ we denote $\cup (\alpha(c) \colon c \in C(\Gamma) - \{c_0\})$ by $\alpha(-c_0)$; and for each border node $n$ we define $\beta(n+) = \beta(n)$ if $n \notin dom(\gamma)$, and $\beta(n+) = \beta(n) \cup \{\gamma(n)\}$ if $n \in dom(\gamma)$. The axioms are as follows:
+
+\textbf{(P1)} $G = \cup (\alpha(c) \colon c \in C(\Gamma))$, and $E(\alpha(c) \cap \alpha(c')) = \emptyset$ for distinct cells $c, c'$;
+
+\textbf{(P2)} $\gamma(\tilde{c}) \subseteq V(\alpha(c))$ for each cell $c$;
+
+\textbf{(P3)} $\gamma(n) \notin \beta(n)$ for each $n \in dom(\gamma) \cap bd(\Sigma)$, and $\beta(n) \subseteq V(\alpha(c))$ for each border cell $c$ and each $n \in \tilde{c}$;

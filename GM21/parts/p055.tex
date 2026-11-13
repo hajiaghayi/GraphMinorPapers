@@ -1,0 +1,42 @@
+\origpage{53}{}
+\noindent is a $(w + 1)$-chain, since no vertex of $C$ is bad. Hence $G \setminus Z$ is a $(w + 1)(n + 1)$-chain, since $P \setminus B$ has $\le n + 1$ components, and so $G$ is a $((w + 1)n + (w + 1)(n + 1))$-chain, as required. \fix{We give the proof in full. It follows the sketch, but with the linked tree-decompositions used in the proof of (12.3) in place of a linked path-decomposition, so that no variation of (11.2) is needed.}
+
+\fix{Choose $w'$ so that (1.1) holds with $w$ replaced by $w'$, choose $n$ so that (2.6) holds with $k$ replaced by $w' + 1$, and let $p' = p + 12 \cdot 2^n (w' + 1)$. Let $G$ have a vital $p$-linkage $L$. If $E(G) = \emptyset$, every vertex of $G$ is a terminal of $L$, so $|V(G)| \le p$, and $G$ is a $p$-chain, with both sets equal to $V(G)$ and the one-vertex paths; so we assume that $E(G) \ne \emptyset$. For a tree-decomposition $(T, W)$ of $G$, we say that $t \in V(T)$ is \textit{good} if $t$ has exactly two neighbours $u, u'$, and, with $S = V(W(t) \cap W(u))$ and $S' = V(W(t) \cap W(u'))$, either (a) $S = S' = V(W(t))$, or (b) every vertex of $W(t)$ is in $S \cup S'$, $W(t)$ has exactly one edge, with distinct ends $v, v'$, and $S = X \cup \{v\}$, $S' = X \cup \{v'\}$ where $v, v' \notin X$. Other vertices are \textit{bad}. By (1.1) and (11.2), $G$ has a linked tree-decomposition $(T, W)$ with width $\le w'$ in which every vertex of $T$ has degree $\le 3$; choose one with as few bad vertices as possible. As in the proof of (12.3), we may assume that no edge of $G$ belongs to two of the graphs $W(t)$; deleting the extra copies keeps good vertices good, since in case (b) the edge of $W(t)$ is in no other $W(u)$ (its ends are not both in $S$ or both in $S'$).}
+
+\fix{\hspace*{12pt}(1) \textit{Claim (1) of the proof of (12.3) holds with $N(T)$ replaced by the set of bad vertices.}}
+
+\fix{\textit{Subproof.} Let $(P, W')$ and $(T^*, W^*)$ be as in that proof; by (12.2), $(T^*, W^*)$ is a linked tree-decomposition of width $\le w'$ whose vertices have degree $\le 3$. Each vertex of $P$ other than $s_1, s_2$ is good in $(T^*, W^*)$, by (12.1)(ii), (iii) and the property of $(P, W')$ given there, since the sets it shares with its two neighbours are the sets $W'(e)$ of its two edges. A good vertex of $T_1 \cup T_2$ stays good, since it keeps its graph and the sets it shares with its neighbours (for $s_i$, the neighbour in $T_0$ is replaced by its neighbour in $P$, and the shared set is $W(f_i)$ in both cases). So every bad vertex of $T^*$ is a bad vertex of $T$ in $T_1 \cup T_2$, and by the choice of $(T, W)$, no vertex of $T_0$ is bad. This proves (1).}
+
+\fix{\hspace*{12pt}(2) \textit{Every path of $T$ has at most $n$ bad vertices,}}
+
+\fix{by the argument of Claim (2) in the proof of (12.3), using (1). Let $N$ be the set of bad vertices. Every vertex of $T$ not in $N$ has degree $2$, so $N \ne \emptyset$ (as $T$ has a vertex of degree $\le 1$). Choose $r \in N$; by the argument for $|N(T)| \le 2^n$ in the proof of (12.3), with $N$ in place of $N(T)$ (it uses only that $T$ has maximum degree $\le 3$ and that the vertices not in $N$ have degree $\le 2$), each of the at most three branches at $r$ contains at most $2^n - 1$ members of $N$, and so $|N| \le 3 \cdot 2^n$. Let $Z = \bigcup (V(W(t)) : t \in N)$; then $|Z| \le |N|(w' + 1)$.}
+
+\fix{Let $C$ be a component of $T \setminus N$. Its vertices have degree $2$ in $T$, so $C$ is a path $t_1 \dots t_m$, and $T$ has edges $t_0 t_1$ and $t_m t_{m+1}$ with $t_0, t_{m+1} \in N$. Let $K_C = \bigcup (W(t_j) : 1 \le j \le m)$, $S = V(W(t_0) \cap W(t_1))$ and $S' = V(W(t_m) \cap W(t_{m+1}))$. The edges $t_j t_{j+1}$ ($0 \le j \le m$) give separations of $G$ as in (12.1), and since $t_1, \dots, t_m$ are good, the path-decomposition of $G$ with graphs $W(R), W(t_1), \dots, W(t_m), W(R')$, where $R$ and $R'$ are the components of $T \setminus \{t_0 t_1, t_m t_{m+1}\}$ that contain $t_0$ and $t_{m+1}$, satisfies (12.1)(i)--(iii) and the condition added to the converse of (12.1) (in case (a) the graph $W(t_j)$ may have any number of edges, but all of them have both ends in the set it shares with its neighbours, and this does not affect the proof of the converse). By the converse of (12.1), there is a unique set of $|S|$ mutually vertex-disjoint paths of $K_C$ between $S$ and $S'$, and every vertex of $K_C$ is on one of them. A vertex of $K_C$ in $Z$ is in $S \cup S'$, since the path of $T$ from $t_j$ to a vertex of $N$ uses $t_1 t_0$ or $t_m t_{m+1}$. So $K_C \setminus Z = K_C \setminus (S \cup S')$, and this is a $(w' + 1)$-chain, formed by the same paths without their ends; for another such set of paths would extend to another set in $K_C$.}
+
+\fix{The graphs $K_C \setminus Z$ for the components $C$ of $T \setminus N$ cover $V(G) \setminus Z$, are mutually vertex-disjoint (a vertex in graphs of two components is in a graph at a bad vertex between them), and no edge of $G \setminus Z$ joins two of them (each edge is in one graph $W(t)$). There are at most $3|N|$ of them, since each $C$ contains a neighbour of a bad vertex. Taking the union of the sets of paths, $G \setminus Z$ is a $3|N|(w' + 1)$-chain (a path of $G \setminus Z$ stays in one of these graphs), and adding the vertices of $Z$ to both sets of this chain, as one-vertex paths, $G$ is a $(3|N|(w' + 1) + |Z|)$-chain. (In a set of paths between the enlarged sets, a vertex of $Z$ is the first vertex of one path and the last of another, which are then the same one-vertex path.) Since $3|N|(w' + 1) + |Z| \le 12 \cdot 2^n (w' + 1) \le p'$, $G$ is a $p'$-chain.}\fixnote{fix:12.4-proof-added}{The paper only sketches the proof of (12.4). The proof above is the one used in the formalization.} $\square$
+
+\sectionhead{References}
+
+[1] D. B. A. Epstein, ``Curves on 2-manifolds and isotopies'', \textit{Acta Math.} 115 (1966), 83--107.
+
+[2] L. Lov\'asz, in \textit{Combinatorics} (Proc. Fifth Hungarian Colloq., Keszthely, 1976), Vol. II, p. 1208, North-Holland, Amsterdam, 1978.
+
+[3] M. Milgram and P. Ungar, \textit{Amer. Math. Monthly}, 85 (1978), no. 8, 664--666.
+
+[4] S. Poljak and D. Turzik, ``Some equivalent formulations of the intersection problem of finitely generated classes of graphs,'' \textit{Acta. Sci. Math. (Szeged)} 41 (1979), No. 3--4, 357--364.
+
+[5] N. Robertson and P. D. Seymour, ``Graph minors. VII. Disjoint paths on a surface'', \textit{J. Combinatorial Theory, Ser. B}, 45 (1988), 212--254.
+
+[6] N. Robertson and P. D. Seymour, ``Graph minors. X. Obstructions to tree-decomposition'', \textit{J. Combinatorial Theory, Ser. B}, 52 (1991), 153--190.
+
+[7] N. Robertson and P. D. Seymour, ``Graph minors. XII. Distance on a surface'', \textit{J. Combinatorial Theory, Ser. B}, 64 (1995), 240--272.
+
+[8] N. Robertson and P. D. Seymour, ``Graph Minors. XIII. The disjoint paths problem'', \textit{J. Combinatorial Theory, Ser. B}, 63 (1995), 65--110.
+
+[9] N. Robertson and P. D. Seymour, ``Graph minors. XVI. Excluding a non-planar graph'', \textit{J. Combinatorial Theory, Ser. B}, 89 (2003), 43--76.
+
+[10] N. Robertson and P. D. Seymour, ``Graph minors. XVII. Taming a vortex'', \textit{J. Combinatorial Theory, Ser. B}, 77 (1999), 162--210.
+
+[11] N. Robertson and P. D. Seymour, ``Graph minors. XX. Wagner's conjecture'', \textit{J. Combinatorial Theory, Ser. B}, 92 (2004), 325--357.
+
+[12] N. Robertson, P. D. Seymour and R. Thomas, ``Quickly excluding a planar graph'', \textit{J. Combinatorial Theory, Ser. B}, 62 (1994), 323--348.

@@ -1,0 +1,27 @@
+\origpage{94}{ROBERTSON AND SEYMOUR}
+\stmt
+(7.4) \textit{If $\Sigma$ is connected and $X \subseteq \Sigma$ is nice, then $X$ is simply-connected if and only if $X$ is arc-wise connected and every $O$-arc $F \subseteq X$ bounds a disc in $X$.}
+
+\stmt
+(7.5) \textit{If $\Sigma$ is connected, $X \subseteq \Sigma$ is closed and nice and $X \ne \Sigma$, and $Y \subseteq \Sigma$ is finite, and $X \cap Y = \emptyset$, and every $O$-arc in $X$ is null-homotopic in $\Sigma - Y$, then there is a closed disc $\Delta \subseteq \Sigma - Y$ with $X \subseteq \Delta$.}
+
+\textit{Proof.} Choose disjoint closed discs $D_y$ ($y \in Y$) such that $X \cap D_y = \emptyset$ and $y \in D_y - bd(D_y)$ ($y \in Y$). Let
+\begin{equation*}
+\Sigma' = \Sigma - \bigcup_{y \in Y} (D_y - bd(D_y)).
+\end{equation*}
+Then $\Sigma'$ is a compact 2-manifold with boundary. Every $O$-arc in $X$ is null-homotopic in $\Sigma'$, and so by [3, Theorem (11.10)] applied to $\Sigma'$, there is a closed disc $\Delta \subseteq \Sigma'$ with $X \subseteq \Delta$. The result follows. $\square$
+
+\stmt
+(7.6) \textit{If $\Sigma$ is connected, and $X \subseteq \Sigma$ is closed, nice, and simply-connected, then $\Sigma - X$ is arc-wise connected.}
+
+\textit{Proof.} Let $a, b \in \Sigma - X$ be distinct. From (7.5) (with $Y = \{a, b\}$) there is a closed disc $\Delta \subseteq \Sigma - \{a, b\}$ with $X \subseteq \Delta$. But $\Sigma - \Delta$ is arc-wise connected and $X \cap (\Sigma - \Delta) = \emptyset$, and so $a, b$ belong to the same arc-wise connected component of $\Sigma - X$. The result follows. $\square$
+
+\stmt
+(7.7) \textit{If $\Sigma$ is connected, $X, Y \subseteq \Sigma$ and $bd(X)$, $bd(Y)$ are both arc-wise connected, and $X \cap Y \ne \emptyset$, $X \cup Y \ne \Sigma$, and $bd(X) \cap bd(Y) = \emptyset$, then either $X \subseteq Y$ or $Y \subseteq X$.}
+
+\textit{Proof.} Since $\emptyset \ne X \cup Y \ne \Sigma$, there exists $z \in bd(X \cup Y)$. Since $bd(X \cup Y) \subseteq bd(X) \cup bd(Y)$ we may assume that $z \in bd(X)$. Since $bd(X) \cap bd(Y) = \emptyset$ it follows that $z \notin bd(Y)$. Since $z$ belongs to the closure of $\Sigma - (X \cup Y)$ and hence to the closure of $\Sigma - Y$, it follows that $z \notin \bar{Y}$. Thus $bd(X) \nsubseteq Y$. Since $bd(X)$ is arc-wise connected and $bd(X) \cap bd(Y) = \emptyset$, it follows that $bd(X) \cap Y = \emptyset$. Since $X \cap Y \ne \emptyset$ we deduce that $Y \subseteq X$, as required. $\square$
+
+\stmt
+(7.8) \textit{If $X, Y \subseteq \Sigma$ are closed and simply-connected and $X \cap Y \ne \emptyset$ is arc-wise connected, then $X \cup Y$ is simply-connected.}
+
+\textit{Proof.} Certainly $X \cup Y$ is arc-wise connected. By (3.1), any continuous $\phi \colon S^1 \to X \cup Y$ is homotopic in $X \cup Y$ to some continuous $\phi' \colon S^1 \to Y$; but $\phi'$ is null-homotopic in $Y$, and hence in $X \cup Y$, because $Y$ is simply-connected. The result follows. $\square$

@@ -1,0 +1,49 @@
+\origpage{221}{GRAPH MINORS. VII}
+But from (1), (3), and (3.3), the result follows.
+
+\stmt
+(3.5) \textit{For every matching $G$ in $\Sigma$ and every homoplasty class $\mathscr{B}$ there exists $H \in \mathscr{B}$ with $U(G) \cap U(H)$ finite.}
+
+\del{The proof is left to the reader.}
+\fix{We give a proof. Let $H_0 \in \mathscr{B}$, and let $Y = V(H_0) \cap bd(\Sigma)$. Choose the
+$I$-arcs $F_y$ $(y \in Y)$ and the set $X$ as in the proof of (3.4), and thicken $H_0$ as in the proof
+of (3.4)(1). This gives mutually disjoint closed discs, one around each component of $H_0$ that
+meets $bd(\Sigma)$, whose insides miss $bd(\Sigma)$, and an $X$-matching $G_1$ in their boundaries
+that surrounds $H_0$. Moreover, $G_1$ surrounds every $Y$-forest whose edges and vertices off
+$bd(\Sigma)$ lie in the insides of these discs, provided that any two points of $Y$ in the same disc
+are joined by a path of the forest. We build such a forest $H$ with $U(G) \cap U(H)$ finite.
+
+First, any two points $y, y'$ of $Y$ in the same disc $D$ are joined by an $I$-arc whose interior lies
+in the inside of $D$ and which meets $U(G)$ in only finitely many points. To see this, leave $y$ along
+a short arc into the inside of $D$ that meets $U(G)$ at most in $y$. This is possible since $G$ is a
+matching, and so near $y$ the set $U(G)$ is empty or a single arc of an edge ending at $y$. Do the same
+at $y'$. The inside of $D$ is open and connected, and near each of its points the set $U(G)$ is empty
+or an arc, since the vertices of $G$ are in $bd(\Sigma)$. Hence the far ends of the two short arcs are
+joined in the inside of $D$ by a curve that meets $U(G)$ in finitely many points, and this curve
+contains an arc with the same ends.
+
+Now choose one point $r_D$ of $Y$ in each disc $D$. For each other point $y$ of $Y$, take an $I$-arc
+as above from $y$ to the point $r_D$ of its disc. Add these arcs one at a time, and cut each at the
+first point where it meets what has been built already, starting from $y$. Each new arc meets the
+earlier ones in one end only, so the union is the drawing of a forest $H$. Its vertices in
+$bd(\Sigma)$ are the points of $Y$, each of them is joined in $H$ to the point $r_D$ of its disc, and
+$U(G) \cap U(H)$ is finite. So $G_1$ surrounds both $H_0$ and $H$, and by (3.4)(2) they are
+homotopic. Hence $H \in \mathscr{B}$, taking the identity for $\alpha$ in the definition of
+homoplastic.\fixnote{fix:3.5-proof-added}{The paper leaves (3.5) to the reader. The argument above
+is the one used in the formalization.}}
+
+\stmt
+(3.6) \textit{For every surface $\Sigma$ and all integers $k, n \ge 0$ there is an integer $w(\Sigma, k, n)$ such that for every matching $G$ in $\Sigma$ with $|V(G)| \le 2n$ and every forest $H$ in $\Sigma$ with $|V(H) \cap bd(\Sigma)| \le k$, there is a forest $H'$ homoplastic to $H$ with $|U(G) \cap U(H')| \le w(\Sigma, k, n)$.}
+
+\textit{Proof.} Since $|V(G)| \le 2n$ and $|V(H) \cap bd(\Sigma)| \le k$, there are only finitely many ways to choose $V(G)$ and $V(H) \cap bd(\Sigma)$, up to homeomorphism of $\Sigma$. Thus it suffices to show that for finite $X, Y \subseteq bd(\Sigma)$, there is an integer $w$ such that for every $X$-matching $G$ and $Y$-forest $H$, there is a $Y$-forest $H'$ homoplastic to $H$ with $|U(G) \cap U(H')| \le w$. By (3.3) and (3.4), it suffices to show that for every congruence class $\mathscr{A}$ of $X$-matchings and every homoplasty class $\mathscr{B}$ of $Y$-forests there is an integer $w$ such that for every $G \in \mathscr{A}$ there exists $H \in \mathscr{B}$ with $|U(G) \cap U(H)| \le w$. Choose $G_0 \in \mathscr{A}$ and $H_0 \in \mathscr{B}$ with $U(G_0) \cap U(H_0)$ finite (this is possible by (3.5)), and let $w = |U(G_0) \cap U(H_0)|$. We claim that $w$ satisfies our requirements. For let $G \in \mathscr{A}$, and let $\alpha \colon \Sigma \to \Sigma$ be a homeomorphism with $\alpha(U(G_0)) = U(G)$ and $\alpha(x) = x$ ($x \in bd(\Sigma)$). Let $H = \alpha(H_0)$; then $H \in \mathscr{B}$, and $|U(G) \cap U(H)| = w$, as required.
+
+\sectionhead{4. The Main Result---First Version}
+
+Let $G$ be a graph in $\Sigma$, and let $H$ be a forest in $\Sigma$. If there exists a forest $H'$ homoplastic to $H$ which is a subgraph of $G$, we say that $H$ is \textit{$G$-feasible}. We are concerned with sufficient conditions for $G$-feasibility.
+
+Now we apply our results about minimal nets (in particular (2.6)) to prove a preliminary form of our main theorem. We need the following lemma, which is Theorem (3.6) of [4], stated in different language.
+
+\stmt
+(4.1) \textit{Let $G$ be a proper graph in a closed disc $\Delta$ and let $H$ be a forest in $\Delta$ with $V(H) \cap bd(\Delta) = V(G) \cap bd(\Delta)$. Then $H$ is $G$-feasible if and only if for every $G$-normal proper $I$-arc $F$ with ends $s, t$ say, $|V(G) \cap (F - \{s, t\})| \ge |\Lambda|$ where $C_1, C_2$ are the two components of $bd(\Delta) - \{s, t\}$, and $\Lambda$ is the set of vertex sets of the components of $H$ which intersect both $C_1$ and $C_2$, and contain neither $s$ nor $t$.}
+
+We shall also need the following four lemmas.

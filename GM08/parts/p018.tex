@@ -1,0 +1,25 @@
+\origpage{272}{ROBERTSON AND SEYMOUR}
+\noindent in $\Sigma$ and where all the terms in the sequence $\tau$ are distinct. Let $*$ be some new element. We define a quasi-order $\mathbf{Q}_k = (\mathscr{A}(k) \cup \{*\}, \le)$ as follows. For $q_1, q_2 \in \mathscr{A}(k) \cup \{*\}$,
+\begin{align*}
+q_1 \le q_2 & \quad \text{if } q_1, q_2 \in \mathscr{A}(k) \text{ and } q_1 \text{ is simulated in } q_2 \\
+q_1 \le q_2 & \quad \text{if } q_1 = q_2 = * \\
+q_1 \nle q_2 & \quad \text{otherwise.}
+\end{align*}
+Let $(G, \tau) \in \mathscr{A}(k)$, with index exactly $k$, and let $(G, T)$ be its underlying graft. Then $(G, T)$ embeds in $\Sigma$, and so it has a drawing which is cellular, as is easily seen. Let $\Gamma$ be such a drawing. Let $\{F_1, \dots, F_t\}$ be a foundation for $\Gamma$. For $1 \le i \le t$, let $\alpha_i$ be an ordering of $V(\Gamma) \cap F_i$ and let $\psi_i$ be the corresponding ordering of the corresponding subset of $V(G)$. Let $\pi$ be the ordering of $V(\Gamma) \cap \text{bd } \Sigma$ where for $1 \le n \le k$, $\pi(n)$ is the point of $\Sigma$ representing the $n\text{th}$ term of $\tau$. For $1 \le i \le t$, let $\Sigma_i$ be the union of $F_i$ and the set of points inside $F_i$, and let
+\begin{equation*}
+\Sigma_0 = \overline{\Sigma - (\Sigma_1 \cup \dots \cup \Sigma_t)}
+\end{equation*}
+For $0 \le i \le t$, let $\Gamma_i = \Gamma \cap \Sigma_i$, and let $G_i$ be the subgraph of $G$ corresponding to $\Gamma_i$. Then for each $i \ge 1$, $(G_i, \psi_i) \in \mathscr{A}(k - 1)$. For each edge $e$ of $\Gamma_0$, let $D(e)$ be a disc with $e \subseteq D(e) \subseteq \Sigma$, such that
+\begin{align*}
+D(e) \cap U(\Gamma) & = \bar{e} \\
+D(e) \cap \Sigma_i & \subseteq \bar{e} && (1 \le i \le t) \\
+D(e) \cap D(e') & \subseteq \bar{e} \cap \bar{e}' && \text{for distinct edges } e, e' \text{ of } \Gamma_0.
+\end{align*}
+(This is the procedure of ``thickening'' edges discussed earlier---it is possible since $\Gamma$ is cellular.) Let
+\begin{equation*}
+U' = \Sigma_1 \cup \dots \cup \Sigma_t \cup \bigcup (D(e) : e \in E(\Gamma_0)) \fix{\cup V(\Gamma_0)},\fixmark{fix:11-derived}
+\end{equation*}
+where $E(\Gamma_0)$ denotes the set of edges of $\Gamma_0$; and let $N' = V(\Gamma_0)$. Then $(U', N')$ is a painting.\fixnotetext{The union must contain $N'$, since a painting needs $N'\subseteq U'$. A drawing with one isolated vertex and no edges has an empty foundation, and then the printed union is empty while $N'$ is not. The added nodes give no new cells and keep the boundary roots.} The closures of its cells are the sets $\Sigma_1, \dots, \Sigma_t$ and the sets $D(e)$ ($e \in E(\Gamma_0)$). For each cell $f$ of $(U', N')$, we define $\mu_f = \alpha_i$ and $\phi(f) = (G_i, \psi_i)$ if $\bar{f} = \Sigma_i$ for some $i$, $1 \le i \le t$; and we define $\mu_f$ to be some ordering of $\bar{f} - f$, and $\phi(f) = *$, if $\bar{f} = D(e)$ for some $e \in E(\Gamma_0)$. Then $(U', N', \pi, \mu, \phi)$ is a $\mathbf{Q}_{k - 1}$-portrait. We call it a $\mathbf{Q}_{k - 1}$-\textit{portrait derived from} $(G, \tau)$ (via $\Gamma$).
+
+\stmt
+(11.1) \textit{With notation as above, the tree-width of} $(U', \delm{V'}\fix{N'})$\fixnote{fix:11.1}{The painting defined above is $(U',N')$, and no $V'$ is defined.} \textit{is no greater than the tree-width of any corresponding truncation of} $\Gamma$.

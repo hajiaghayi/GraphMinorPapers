@@ -1,0 +1,25 @@
+\origpage{177}{GRAPH MINORS, XVII}
+\hspace*{12pt}(3) \textit{For each cell $c$ bordering $\Theta$ with ends $n_1, n_2 \in dom(\gamma)$, if $\gamma(n_1), \gamma(n_2) \notin W$ and $|\beta(n_1) - W| = |\beta(n_2) - W| = q - 1$ then $W \cap \beta(n_1) \cap \beta(n_2) \ne \emptyset$.}
+
+\textit{Subproof.} We assume that $n_2$ follows $n_1$. Let $x \in X \cap \beta(n_1 +)$. Since $\gamma(n_1) \notin W$ it follows that $x \ne \gamma(n_1)$ and so $x \in \beta(n_1)$. Since $\gamma(n_1) \notin W$ it also follows that $\gamma(n_1) \ne y(x)$, and so $n_1$ is not the terminal of $x$. Consequently $x \in \beta(n_2 +)$. Since $x \ne \gamma(n_2)$ it follows that $x \in \beta(n_2)$, and so $x \in W \cap \beta(n_1) \cap \beta(n_2)$ as required.
+
+Let $A$ be the subhypergraph of $G$ with $V(A) = W$ and $E(A) = \emptyset$. Then $(A, G) \in \mathscr{T}$ since $|V(A)| \le 3k < ord(\mathscr{T})$, and so $A$ is small. But (2), (3) contradict (6.5). $\square$
+
+\stmt
+(6.7) \textit{Let $\pi = (\Sigma, \Gamma, \alpha, \beta, \gamma)$ be a $z$-redundant $\mathscr{T}$-central portrayal of $G$ with $warp \le p$. Let $ord(\mathscr{T}) > z + 2p + 2$, and let $F$ be a $\Sigma$-normal $I$-arc with ends $n_1, n_2$ and with $|F \cap dom(\gamma)| \le z - 2p - 1$. Let $\Delta$ be as in (6.3). Then $\beta(n_1 +) \cap \beta(n_2 +) \subseteq \beta(n+)$ for all $n \in N(\Gamma) \cap \Delta \cap bd(\Sigma)$.}
+
+\textit{Proof.} Let $\Theta$ be the cuff with $n_1, n_2 \in \Theta$, and let $\pi$ have warp $q$ at $\Theta$. Suppose that $n' \in N(\Gamma) \cap \Delta \cap bd(\Sigma)$ and $v \in \beta(n_1 +) \cap \beta(n_2 +) - \beta(n'+)$. Let $F' = \Delta \cap \Theta$, and let $F''$ be the other closed line segment in $\Theta$ with ends $n_1, n_2$. From \textbf{(P7)}, $v \in \beta(n+)$ for all $n \in N(\Gamma) \cap F''$.
+
+If there exists $n \in N(\Gamma) \cap \Theta$ such that $\gamma(n) = v$ and $\beta(n) \ne \emptyset$, choose $u \in \beta(n)$, and otherwise let $u = v$. Let $A \subseteq G$ be the hypergraph with $E(A) = E(\alpha(\Delta))$, $V(A) = (\alpha(\Delta)) \cup \{u\}$. Now $\alpha(\Delta)$ has at most $|F \cap dom(\gamma)| + 2p < z$ attachments, and so $A$ has at most $z$ attachments. Since $\alpha(\Delta)$ is small it follows from (4.1) (ii) that $A$ is small. Since $ord(\mathscr{T}) > z + 2p + 2$, (6.5) implies that there exists either
+
+\hspace*{12pt}(i) a node $n \in N(\Gamma) \cap \Theta$ with $|\beta(n)| = q$ and $\beta(n) \cap V(A) = \emptyset$, or
+
+\hspace*{12pt}(ii) a cell $c$ bordering $\Theta$ with ends $m_1, m_2 \in dom(\gamma)$, such that $\gamma(m_1), \gamma(m_2) \notin V(A)$ and $V(A) \cap \beta(m_1) \cap \beta(m_2) = \emptyset$.
+
+If (i) occurs, then since
+\begin{equation*}
+|\beta(n) \cap V(A)| = 0 < q = |\beta(n)|
+\end{equation*}
+by (5.1), it follows that $n \notin F'$, and so $n \in F''$. Consequently, $v \in \beta(n+)$. Since $\beta(n) \cap V(A) = \emptyset$ and $v \in V(A)$, it follows that $v = \gamma(n)$, and so $u \in \beta(n)$ since $\beta(n) \ne \emptyset$ (since $\gamma$ is an injection). Hence $u \in V(A) \cap \beta(n) = \emptyset$, a contradiction.
+
+If (ii) occurs, then since $\gamma(m_1) \notin V(A)$ it follows that $c \cap \Theta \subseteq F''$ and so $m_1, m_2 \in F''$. Consequently $v \in \beta(m_1 +) \cap \beta(m_2 +)$, and since $v \in V(A)$ and $\gamma(m_1), \gamma(m_2) \notin V(A)$ it follows that $v \ne \gamma(m_1), \gamma(m_2)$, and so $v \in \beta(m_1) \cap \beta(m_2)$. But this contradicts the truth of (ii).

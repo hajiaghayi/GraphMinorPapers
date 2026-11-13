@@ -1,0 +1,28 @@
+\origpage{66}{N. Robertson, P.D. Seymour / Journal of Combinatorial Theory, Series B 89 (2003) 43--76}
+\noindent $\theta - |Z| \ge 4\lambda + 2\psi + 2$, and so from the definition of $(\lambda, 2\psi)$-level we deduce the following. (For ``rearranging'' see [9, section 1].)
+
+\hspace*{12pt}(3) \textit{There is a $\Sigma$-span $H', \eta', \mathcal{T}''$ in $G \setminus Z$ with respect to $\mathcal{T}^* \setminus Z$, of order $\theta - |Z| - 4\lambda - 2$, obtained from $H, \mathcal{T}_0$ by rearranging with $\lambda$ of some $z \in A(H)$, and there is an $\eta'(H')$-path in $G \setminus Z$ with ends $\eta'(s), \eta'(t)$, such that $d(z, s), d(z, t) \le \lambda$ and $d''(s, t) \ge 2\psi$, where $d''$ is the metric of $\mathcal{T}''$.}
+
+Let $\lambda'$ be an integer with
+\begin{equation*}
+\lambda + \frac{1}{4}|Z| \le \lambda' < \lambda + \frac{1}{4}|Z| + 1.
+\end{equation*}
+Now $\mathcal{T}''$ has order $\theta - |Z| - 4\lambda - 2$; let $\mathcal{T}'$ be the truncation of $\mathcal{T}''$ to order $\theta - 4\lambda' - 2$.
+
+\hspace*{12pt}(4) \textit{$H', \eta', \mathcal{T}'$ is a $\Sigma$-span in $G$ with respect to $\mathcal{T}^*$, obtained from $H, \mathcal{T}$ by rearranging within $\lambda'$ of $z$, and $d'(s, t) \ge 2\psi$ where $d'$ is the metric of $\mathcal{T}'$.}
+
+\textit{Subproof.} Now $H', \eta', \mathcal{T}'$ is a $\Sigma$-span in $G \setminus Z$ with respect to $\mathcal{T}^* \setminus Z$, and hence in $G$ with respect to $\mathcal{T}^*$ by 7.4. Let $a \in A(H)$ with $d(a, z) > \lambda'$. Then
+\begin{equation*}
+d_0(a, z) = \min(d(a, z), \theta - |Z|) > \lambda' \ge \lambda
+\end{equation*}
+and so $z \in A(H')$ (because $H', \eta', \mathcal{T}''$ is obtained from $H, \mathcal{T}_0$ by rearranging within $\lambda$ of $z$). Similarly if $x$ is a vertex or edge of $H$ with $d(x, z) > \lambda'$, then $d_0(x, z) > \lambda$ and so $\eta'(x) = x$. Since $\mathcal{T}'$ is the $(4\lambda' + 2)$-compression of $\mathcal{T}$ in $H'$, the first claim follows. For the second, we observe that
+\begin{equation*}
+d'(s, t) = \min(d''(s, t), \theta - 4\lambda' - 2) \ge 2\psi.
+\end{equation*}
+This proves (4).
+
+\hspace*{12pt}(5) \textit{For each vertex $w \in V(\eta'(H')) \setminus V(H)$, there is a path $Q$ of $\eta'(H')$ from $w$ to a vertex $x \in V(H)$, such that no vertex of $Q$ belongs to $H$ except $x$, and $d(z, x) \le \lambda' + 2$.}
+
+\textit{Subproof.} Let $Q$ be a minimal path of $\eta'(H')$ from $w$ to $V(H)$, and let its ends be $w, x$. Then $x \in V(H)$, and no vertex of $Q$ belongs to $H$ except $x$, by the minimality of $Q$. Suppose that $d(z, x) \ge \lambda' + 3$. Then $x \in V(H')$ and $\eta'(x) = x$ by (4). Since $x \ne w$, there is an edge $e$ of $Q$ incident with $x$; let $e = \eta'(f)$ where $f \in E(H')$. Since $\eta'(f)$ is incident with $\eta'(x) = x$, it follows that $f$ is incident with $x$. Let $a \in A(H)$, with $x \in \bar{a}$ and $a \cap f \ne \emptyset$. Since $x \in \bar{a}$, it follows that $d(a, x) \le 2$, and so $d(z, a) \ge \lambda' + 1$, since $d(z, x) \ge \lambda' + 3$. By (4), we deduce that $a \in A(H')$ and so $a = f$, since $a \cap f \ne \emptyset$ and $f \in E(H')$. Consequently $f \in E(H)$ and $d(z, f) \ge \lambda' + 1$. By (4) again $e = \eta'(f) = f$, and so $e \in E(H)$, contrary to the minimality of $Q$. This proves (5).
+
+Let $v \in X$, and let $\{P_1, \ldots, P_{\zeta + \tau}\}$ be a horn at $v$ over $H, \mathcal{T}$ of breadth $\ge \theta$, and let $P_i$ have ends $v$, $u_i(1 \le i \le \zeta + \tau)$.

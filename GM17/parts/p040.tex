@@ -1,0 +1,22 @@
+\origpage{201}{GRAPH MINORS, XVII}
+Let $X = E(G) - E(G^*)$, so that $G \setminus X = G^*$. Then $\mathscr{T}$ is the tangle in $G$ induced by $\mathscr{T}^*$; for if $(A, B) \in \mathscr{T}$ then $A^*$ is small relative to $\mathscr{T}^*$, and so certainly $A \cap G^*$ is small relative to $\mathscr{T}^*$. Let $X = \{x_1, \dots, x_n\}$. For $0 \le i \le n$, let $G_i = G \setminus (X - \{x_1, \dots, x_i\})$, and let $\mathscr{T}_i$ be the embodiment of $\mathscr{T}^*$ in $G_i$. Thus $G_0 = G^*$, and $\mathscr{T}_0 = \mathscr{T}^*$; and for $1 \le i \le n$, $G_{i-1} = G_i \setminus x_i$, and $\mathscr{T}_i$ is the tangle induced in $G_i$ by $\mathscr{T}_{i-1}$; and the set of ends of $x_i$ is a clique of $G_{i-1}$. We claim that for $0 \le i \le n$ there is a $(2p+7)$-redundant, $\mathscr{T}_i$-central portrayal of $G_i$ resembling $\pi$. For this holds for $i = 0$. Inductively, suppose that it holds for $i = j$; then by (12.4) there is a $\mathscr{T}_{j+1}$-central portrayal $\pi'$ of $G_{j+1}$ resembling $\pi$. Moreover, $\pi'$ is $(2p+7)$-redundant, for if $Z \subseteq V(G_{j+1})$ with $|Z| \le 2p+7$ and there is a $(\mathscr{T}/Z)$-central portrayal of $G_{j+1}/Z$ simpler than $\pi'$, then by deleting $x_1, \dots, x_{j+1}$ we obtain a $(\mathscr{T}^*/Z)$-central portrayal of $G^*/Z$ simpler than $\pi$, a contradiction. Thus the claim holds for $i = j+1$, and hence for $0 \le i \le n$. In particular, its truth for $i = n$ yields the theorem. $\square$
+
+\sectionhead{13. \textsc{Excluding} A \textsc{Minor}}
+
+Let $G$ and $H$ be graphs. By an \textit{$H$-minor} of $G$ we mean a function $\eta$ with domain $V(H) \cup E(H)$, such that
+
+\hspace*{12pt}(i) $\eta(v)$ is a non-null connected subgraph of $G$ for each $v \in V(H)$, and $\eta(u)$ and $\eta(v)$ are disjoint for all distinct $u, v \in V(H)$;
+
+\hspace*{12pt}(ii) $\eta(e) \in E(G)$ for each $e \in E(H)$, and $\eta(e) \ne \eta(f)$ for all distinct $e, f \in E(H)$;
+
+\hspace*{12pt}(iii) if $e \in E(H)$ has distinct ends $u, v$ then $\eta(e)$ has one end in $V(\eta(u))$ and the other in $V(\eta(v))$;
+
+\hspace*{12pt}(iv) if $e \in E(H)$ is a loop with end $v$, then $\eta(e)$ has both ends in $V(\eta(v))$ and $e \notin E(\eta(v))$.
+
+If $\mathscr{T}$ is a tangle in a graph $G$ and $\eta$ is an $H$-minor of $G$, we say $\mathscr{T}$ \textit{controls} $\eta$ if for each $v \in V(H)$ here is no $(A, B) \in \mathscr{T}$ of order $< |V(H)|$ such that $V(\eta(v)) \subseteq V(A)$.
+
+If $G$ is a graph and $Z \subseteq V(G)$, we denote by $G \setminus Z$ the graph obtained by deleting $Z$. If $\mathscr{T}$ is a tangle in $G$ of order $> |Z|$, then $\mathscr{T} \setminus Z$ denotes the set
+\begin{equation*}
+\{(A \setminus Z, B \setminus Z) \colon (A, B) \in \mathscr{T}, Z \subseteq V(A \cap B)\}.
+\end{equation*}
+It is shown in [1, Theorem (8.5)] that $\mathscr{T} \setminus Z$ is a tangle in $G \setminus Z$ of order $\operatorname{ord}(\mathscr{T}) - |Z|.$

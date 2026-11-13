@@ -1,0 +1,31 @@
+\origpage{7}{}
+\hspace*{12pt}1. \textit{$A_i \subseteq A_j$ and $B_j \subseteq B_i$, for $1 \le i < j \le n$}
+
+\hspace*{12pt}2. \textit{if $1 \le i < i' \le n$, and $|V(A_i \cap B_i)| = |V(A_{i'} \cap B_{i'})| = k'$ say, and $|V(A_j \cap B_j)| > k'$ for all $j$ with $i < j < i'$, then there is a linkage $M_{ii'}$ in $B_i \cap A_{i'}$ with $k'$ components, each with one end in $V(A_i \cap B_i)$ and the other in $V(A_{i'} \cap B_{i'})$.}
+
+\textit{Then there exist $i, i'$ as in (ii) such that $L \cap B_i \cap A_{i'} = M_{ii'}$.}
+
+\textbf{Proof.} For $0 \le k' \le k$ let $n(k') = (2p + 1)(p + k' + 1)^{2(p+k')} + 1$, and for $0 \le k' \le k$ let
+\begin{equation*}
+m(k') = n(0)n(1)n(2)\dots n(k').
+\end{equation*}
+Let $n = m(k)$; we shall show it satisfies the theorem. For let $G, L$ and $(A_i, B_i)$ $(1 \le i \le n)$ and the $M_{ii'}$ be as in the theorem. Since there are at least $m(k)$ values of $i$ with $1 \le i \le n$ such that $|V(A_i \cap B_i)| \le k$, there exists $k' \le k$ minimum such that
+\begin{equation*}
+|\{i : 1 \le i \le n, |V(A_i \cap B_i)| \le k'\}| \ge m(k').
+\end{equation*}
+If $k' = 0$, then from (2.5) (with $k$ replaced by $0$) applied to the sequence of all $(A_i, B_i)$ of order $0$, we find the desired $M_{ii'}$, as required. We assume then that $k' > 0$. From the minimality of $k'$, it follows that
+\begin{equation*}
+|\{i : 1 \le i \le n, |V(A_i \cap B_i)| \le k' - 1\}| \le m(k' - 1) - 1,
+\end{equation*}
+and so
+\begin{equation*}
+|\{i : 1 \le i \le n, |V(A_i \cap B_i)| \le k'\}| \ge n(k')(|\{i : 1 \le i \le n, |V(A_i \cap B_i)| \le k' - 1\}| + 1).
+\end{equation*}
+By examining the intervals between consecutive members of the second set, it follows that there exist $i_1, i_2$ with $1 \le i_1 < i_2 \le n$, such that
+\begin{align*}
+|\{i : i_1 \le i \le i_2, |V(A_i \cap B_i)| = k'\}| &\ge n(k') \\
+\{i : i_1 \le i \le i_2, |V(A_i \cap B_i)| < k'\} &= \emptyset.
+\end{align*}
+Then the result follows, from (2.5) applied to the sequence $(A_i, B_i)$ $(i_1 \le i \le i_2, |V(A_i \cap B_i)| = k')$. $\square$
+
+Similarly, we have

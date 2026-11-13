@@ -1,0 +1,30 @@
+\origpage{137}{GRAPH MINORS. VI}
+Moreover we can find all these homotopy classes efficiently, and so we have a polynomially bounded algorithm for DISJOINT CONNECTING SUBGRAPHS on the cylinder.
+
+One can do much better than this. The algorithm above was given for its simplicity, but we sketch another approach. Once again we have at most
+\begin{equation*}
+\left| \bigcup \Delta \cap C_1 \right| \cdot \left| \bigcup \Delta \cap C_2 \right|
+\end{equation*}
+possibilities for the homotopy classes of the $H(s, t)$'s where $s, t$ are in the same cuff of $\Sigma$. Having chosen one of the possibilities to check, we can now apply reduction arguments like those in section 4 to reduce to the case where each $\delta \in \Delta$ has
+\begin{equation*}
+|\delta \cap C_1| = |\delta \cap C_2| = 1.
+\end{equation*}
+This case can be solved easily with at most $|\bigcup \Delta \cap C_1|$ applications of (5.7).
+
+So far we have considered our problem DISJOINT CONNECTING SUBGRAPHS on a disc and on a cylinder. What about other surfaces? As mentioned in the introduction, it will be shown in [3] that there is a polynomially bounded algorithm to solve this problem on any fixed surface provided that $|\bigcup \Delta|$ is kept bounded. This is not a complete generalization of the results of this paper, because
+
+\hspace*{12pt}(i) in this paper we do not need to keep $|\bigcup \Delta|$ bounded, and
+
+\hspace*{12pt}(ii) we have no structural characterization in general.
+
+However, a full analogue does exist when $\Sigma$ is the M\"obius band. Working with ROUTED FOREST CONTAINMENT, one reduces (using the methods of section 4) to the case when each component of the forest $H$ is a path with only its end-vertices in $bd(\Sigma)$, and none of these paths is homotopic to a portion of $bd(\Sigma)$. In that case, a necessary and sufficient condition for $G$ to contain a subgraph homotopic to $H$ is that there is no closed sequence
+\begin{equation*}
+v_0, R_1, v_1, R_2, \dots, v_{k-1}, R_k, v_k = v_0
+\end{equation*}
+of vertices and regions of $G$ (in which consecutive members are incident) which is ``homotopic'' to $bd(\Sigma)$ and with
+\begin{equation*}
+k < |bd(\Sigma) \cap V(G)|.
+\end{equation*}
+It is possible to base a polynomially bounded algorithm on that fact, but we omit the details.
+
+Let $G$ be a planar graph, and let $s_1, t_1, \dots, s_k, t_k$ be distinct vertices of $G$,

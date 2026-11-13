@@ -1,0 +1,23 @@
+\origpage{173}{GRAPH MINORS, X}
+By our inductive hypothesis, one of $X'_1$, $X'_2$, $X'_3$ is not small in $G'$. By (7.1), we may choose $i', j'$ with $1 \le i', j' \le \theta - 1$, and $1 \le k \le 3$ such that
+\begin{equation*}
+E((P_{i'} \cup Q_{j'}) \cap G') \subseteq X'_k.
+\end{equation*}
+If $k = 1$ or $2$, then every $V(Q_j)$ contains an end of an edge in $X_k$ ($1 \le j \le \theta$); for if $j = \theta$, this was shown earlier, and if $j < \theta$, then $V(Q_j)$ meets $V(P_{i'})$. Hence each $V(Q_j)$ meets $\partial(X_k)$, and so $|\partial(X_k)| \ge \theta$, a contradiction. Similarly, if $k = 3$, then every $V(P_i)$ meets $\partial(X_k)$, and again we have a contradiction. This completes the proof. $\square$
+
+From (7.2) we may infer the existence of the desired tangle. Given a $\theta$-grid $G$ with $P_1, \dots, P_\theta, Q_1, \dots, Q_\theta$ as before, let $\mathscr{T}$ be the set of all separations $(A, B)$ of $G$ of order $<\theta$ such that $E(A)$ is small.
+
+\stmt
+(7.3) $\mathscr{T}$ \textit{is a tangle in} $G$ \textit{of order} $\theta$.
+
+\textit{Proof.} Let $(A, B)$ be a separation of $G$ of order $<\theta$. Suppose that neither $E(A)$ nor $E(B)$ is small. Choose $h, i$ with $1 \le h, i \le \theta$ such that $E(P_h) \subseteq E(A)$ and $E(P_i) \subseteq E(B)$. Thus $V(P_h) \subseteq V(A)$ and $V(P_i) \subseteq V(B)$. For $1 \le j \le \theta$, $\emptyset \ne V(Q_j \cap P_h) \subseteq V(Q_j \cap A)$, and similarly $V(Q_j \cap B) \ne \emptyset$, and so $V(Q_j \cap A \cap B) \ne \emptyset$ since $(A, B)$ is a separation. But then $|V(A \cap B)| \ge \theta$, a contradiction. Thus one of $E(A), E(B)$ is small, and so $\mathscr{T}$ satisfies the first axiom. That $\mathscr{T}$ is a tangle then follows from (7.2). $\square$
+
+The following was shown in [3].
+
+\stmt
+(7.4) \textit{For every} $\theta \ge 2$ \textit{there exists} $\phi \ge 0$ \textit{such that every graph with tree-width} $\ge \phi$ \textit{has a} $\theta$\textit{-grid minor.}
+
+Since any graph with a $\theta$-grid minor has tree-width $\ge \theta$, one can say, roughly, that a graph has large tree-width if and only if it has a large grid minor. But (5.2) tells us that a graph has large tree-width if and only if it has a tangle of large order. One might therefore hope for a direct connection between tangles and grid minors, not via tree-width. The connection in one direction is easy, as follows. Let $H$ be a minor of $G$, isomorphic to a $\theta$-grid. Then the tangle in $H$ described in (7.3) induces a tangle $\mathscr{T}$ in $G$ of order $\theta$, by (6.1). A kind of converse is provided by the following strengthening of (7.4), proved in [7].
+
+\stmt
+(7.5) \textit{For every} $\theta \ge 2$ \textit{there exists} $\phi \ge 0$ \textit{such that for every graph} $G$ \textit{and every tangle} $\mathscr{T}$ \textit{in} $G$ \textit{of order} $\ge \phi$, \textit{the truncation of} $\mathscr{T}$ \textit{to order} $\theta$ \textit{is the tangle induced by some} $\theta$\textit{-grid minor of} $G$.

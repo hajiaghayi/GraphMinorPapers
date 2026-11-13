@@ -1,0 +1,54 @@
+\origpage{133}{GRAPH MINORS. VI}
+Let $h \colon [0, 1] \to \Sigma$ be defined by
+\begin{equation*}
+h(x) = \left( 2, \left( \frac{2i-x}{k} + 2\theta(\mathscr{L}) \right) \pi \right) \qquad (0 \le x \le 1).
+\end{equation*}
+Let $f \colon [0, 1] \to \Sigma$ be defined by
+\begin{align*}
+f(x) &= g(2x) && (0 \le x \le \frac{1}{2}) \\
+&= h(2x - 1) && (\frac{1}{2} \le x \le 1).
+\end{align*}
+Then $f$ is a helix, $L(f) = 1$ and $\theta(f) = \theta(\mathscr{L}) - 1/k$. Hence $\phi(f) = \theta(\mathscr{L})$, as required. As a corollary we have the following justification for our algorithm.
+
+\stmt
+(5.6) \textit{If $(G', \mathscr{L}')$ is produced from $(G, \mathscr{L})$ by one of the reductions 1,..., 4, then $\theta(\mathscr{L}') + 1/k$ is feasible in $G'$ if and only if $\theta(\mathscr{L}) + 1/k$ is feasible in $G$.}
+
+\textit{Proof.} ``Only if'' follows from (5.4). To prove ``if'', suppose that $\theta(\mathscr{L}') + 1/k$ is not feasible in $G'$. Then by (5.3) there is a helix $f'$ in $G'$ with $\phi(f') = \theta(\mathscr{L}')$, and by (5.5) there is a helix $f$ in $G$ with $\phi(f) \le \phi(f')$. But $\theta(\mathscr{L}') = \theta(\mathscr{L})$, and so
+\begin{equation*}
+\phi(f) \le \phi(f') = \theta(\mathscr{L}') = \theta(\mathscr{L}).
+\end{equation*}
+Hence by (5.2), $\theta(\mathscr{L}) + 1/k$ is not feasible in $G$. Let us state the algorithm.
+
+\stmt
+(5.7) \textit{Algorithm to decide if $\theta(\mathscr{L}) + 1/k$ is feasible.} We apply any of the reductions which can be applied, transforming to smaller equivalent problems by (5.6). If none of the reductions apply we determine feasibility by (5.1).
+
+The algorithm can easily be adapted to provide us with a linkage $\mathscr{L}'$ satisfying $\theta(\mathscr{L}') = \theta(\mathscr{L}) + 1/k$ if one exists. Its running time is polynomially bounded, as may easily be checked. \fix{We check this. We apply reduction 4 only when none of reductions 1, 2, 3 applies. Each of
+reductions 1, 2, 3 makes $|V(G)| + |E(G)|$ smaller, and reduction 4 does not change $G$. After an
+application of reduction 4 one of the other reductions applies, as we observed after the list of
+reductions, and so no two successive steps both use reduction 4. Let $b = 0$ if the last step used
+reduction 4, and $b = 1$ otherwise (in particular before the first step). A step by reduction 1, 2
+or 3 decreases $|V(G)| + |E(G)|$ by at least $1$ and increases $b$ by at most $1$, and a step by
+reduction 4 decreases $b$ from $1$ to $0$. Hence each step decreases $2(|V(G)| + |E(G)|) + b$ by at
+least $1$. This number is $2(|V(G)| + |E(G)|) + 1$ for the original graph, and at least $1$ at the
+end, since the last step does not use reduction 4. So the number of steps is at most twice
+$|V(G)| + |E(G)|$ for the original graph.
+Each step takes polynomial time. The regions of $G$, the strips $\Sigma_i$, and the vertices and
+edges incident with each $R_i$ may be read from the drawing, and with them reductions 1, 2 and 3 are
+tested directly. For reduction 4, a vertex $v$ and a path $Q_i$ may be found by a search from $s_i$
+in the subgraph of the vertices and edges incident with $R_i$, read on the side of $P_i$ that
+reduction 4 refers to. When no reduction applies, (5.1) asks only whether some $s_i$ has
+valency $1$ and a neighbour in $C_2$. To find a linkage $\mathcal{L}'$ with
+$\theta(\mathcal{L}') = \theta(\mathcal{L}) + 1/k$, at the end we build the paths $Q_i$ of the proof
+of (5.1) by following the boundary of $R_i$ from $s_i$ until it first meets $P_{i+1}$. Then we undo
+the steps in reverse order. Deletions need no change, since a linkage of a subgraph is a linkage of
+the graph, and a contraction by reduction 3 is undone by adding the contracted edge at the start of
+the path that begins at its end, as in the proof of (5.4).\fixnote{fix:5.7-time-added}{The paper says
+that the running time may easily be checked. The count above, with the measure
+$2(|V(G)| + |E(G)|) + b$, is the one used in the formalization.}}
+
+As further corollaries we have
+
+\stmt
+(5.8) \textit{If $\theta$ is feasible in $G$, the following are equivalent:} (i) \textit{there is a helix $f$ in $G$ with $\phi(f) = \theta$} (ii) \textit{$\theta + 1/k$ is not feasible} (iii) \textit{no $\theta' > \theta$ is feasible.}
+
+\textit{Proof.} By (5.2), (i) $\Rightarrow$ (iii). Trivially (iii) $\Rightarrow$ (ii), and by (5.3), (ii) $\Rightarrow$ (i).

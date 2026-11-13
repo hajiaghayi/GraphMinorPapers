@@ -1,0 +1,33 @@
+\origpage{264}{ROBERTSON AND SEYMOUR}
+\noindent subdrawing $\Gamma'$ of $\Gamma \setminus Z$, and a respectful tangle $\mathscr{T}'$ of order $\theta - 2$ in $\Gamma'$, with metric $d'$, such that if $r'$ is the region of $\Gamma'$ with $r \subseteq r'$, then
+\begin{align*}
+\text{(i)} \quad & U(\Gamma) \subseteq U(\Gamma') \cup r' \\
+\text{(ii)} \quad & d'(a, b) \ge d(a, b) - 4 \text{ for all } a, b \in A(\Gamma) \cap A(\Gamma') \\
+\text{(iii)} \quad & d'(a, r') \ge d(a, r) - 2 \text{ for all } a \in A(\Gamma) \cap A(\Gamma'), \text{ and} \\
+\text{(iv)} \quad & d(a, r) \le 3 \text{ for all } a \in A(\Gamma) \text{ with } a \subseteq r'.
+\end{align*}
+\textit{Proof.} We proceed by induction on $|E(\Gamma)|$. First, suppose that there is a $\Gamma$-normal $O$-arc $F \subseteq \Sigma$ with $F \cap V(\Gamma) = \{v\}$ for some $v \in V(\Gamma)$, and with $F \subseteq r \cup \{v\}$, such that $ins(F)$ includes an edge of $\Gamma$. Let $\Delta = ins(F)$, let $\Gamma'' = \Gamma | \overline{\Sigma - \Delta}$, and let $r''$ be the region of $\Gamma''$ with $r \subseteq r''$. By (7.2), $\Gamma''$ is 2-cell and there is a respectful tangle $\mathscr{T}''$ of order $\theta$ in $\Gamma_1$, with metric $d''$, such that
+\begin{align*}
+\text{(v)} \quad & d''(a, b) \ge d(a, b) \text{ for all } a, b \in A(\Gamma) \cap A(\Gamma''), \text{ and} \\
+\text{(vi)} \quad & d''(a, r'') \ge d(a, r) \text{ for all } a \in A(\Gamma) \cap A(\Gamma'').
+\end{align*}
+Let $Z''$ be the set of all vertices of $\Gamma''$ incident with $r''$. From the inductive hypothesis, there is a 2-cell subdrawing $\Gamma'$ of $\Gamma'' \setminus Z''$, and a respectful tangle $\mathscr{T}'$ of order $\theta - 2$ in $\Gamma'$, with metric $d'$, such that if $r'$ is the region of $\Gamma'$ with $r'' \subseteq r'$, then
+\begin{align*}
+\text{(i$'$)} \quad & U(\Gamma'') \subseteq U(\Gamma') \cup r' \\
+\text{(ii$'$)} \quad & d'(a, b) \ge d''(a, b) - 4 \text{ for all } a, b \in A(\Gamma'') \cap A(\Gamma') \\
+\text{(iii$'$)} \quad & d'(a, r') \ge d''(a, r'') - 2 \text{ for all } a \in A(\Gamma'') \cap A(\Gamma'), \text{ and} \\
+\text{(iv$'$)} \quad & d''(a, r'') \le 3 \text{ for all } a \in A(\Gamma'') \text{ with } a \subseteq r'.
+\end{align*}
+We claim that $\Gamma'$, $\mathscr{T}'$, $r'$ satisfy the theorem. Certainly $\Gamma'$ is a subdrawing of $\Gamma \setminus Z$, since $Z \cap V(\Gamma'') \subseteq Z''$; and $r \subseteq r'' \subseteq r'$. To verify (i), by (i$'$),
+\begin{equation*}
+U(\Gamma) \subseteq U(\Gamma'') \cup ins(F) \subseteq U(\Gamma'') \cup r'' \subseteq U(\Gamma') \cup r'.
+\end{equation*}
+Hence (i) holds. For (ii), let $a, b \in A(\Gamma) \cap A(\Gamma')$; then $a, b \in A(\Gamma'')$, and by (ii$'$) and (v),
+\begin{equation*}
+d'(a, b) \ge d''(a, b) - 4 \ge d(a, b) - 4.
+\end{equation*}
+Hence (ii) holds. For (iii), let $a \in A(\Gamma) \cap A(\Gamma')$; then $a \in A(\Gamma'')$, and by (iii$'$) and (vi),
+\begin{equation*}
+d'(a, r') \ge d''(a, r'') - 2 \ge d(a, r) - 2.
+\end{equation*}
+Hence (iii) holds. For (iv), let $a \in A(\Gamma)$ with $a \subseteq r'$. If $a \notin A(\Gamma'')$, then $a \cap ins(F) \ne \emptyset$, and so $d(a, r) \le 1 \le 3$. If $a \in A(\Gamma'')$, then by (vi) and (iv$'$), $d(a, r) \le d''(a, r'') \le 3$. Hence in either case (iv) holds.

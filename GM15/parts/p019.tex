@@ -1,0 +1,36 @@
+\origpage{130}{ROBERTSON AND SEYMOUR}
+\noindent $u, v \in V(H'')$ and $d''(u, v) \ge \mu$. Since $\mathscr{T}'$ is a $(4\lambda_1 + 2)$-compression of $\mathscr{T}$, and $\mathscr{T}''$ is a $(4\lambda_2 + 2)$-compression of $\mathscr{T}'$, we deduce
+
+\hspace*{12pt}(1) \textit{For all $\sigma_1, \sigma_2 \in \Sigma$, $d'(\sigma_1, \sigma_2) \ge d(\sigma_1, \sigma_2) - 4\lambda_1 - 2$ and $d''(\sigma_1, \sigma_2) \ge d'(\sigma_1, \sigma_2) - 4\lambda_2 - 2$.}
+
+Let $Z_1$ be the union of all atoms $a$ of $H$ with $d(z_1, a) \le \lambda_1$, and let $Z_2$ be the union of all atoms $a$ of $H'$ with $d'(z_1, a) \le \lambda_2$. Then, again immediately from the definitions, we have
+
+\hspace*{12pt}(2) \textit{$Z_1$ includes every $a \in A(H) - A(H')$, and $Z_2$ includes every $a \in A(H') - A(H'')$.}
+
+Choose $\tau \in \Sigma$ with $\tau \in z_2$, and let $z_3 \in A(H)$ with $\tau \in z_3$.
+
+\hspace*{12pt}(3) \textit{$d(z_1, z_3) > \lambda - \lambda_1$.}
+
+\textit{Subproof.} Suppose not. Let $\mathscr{T}^0$ be the $(\theta - 4\lambda - 2)$-truncation of $\mathscr{T}''$. (This exists, since $\operatorname{ord}(\mathscr{T}'') = \theta - 4(\lambda_1 + \lambda_2) - 4 \ge \theta - 4\lambda - 2 \ge 1$.) We claim that $H'', \eta'', \mathscr{T}^0$ is a $\Sigma$-span obtained from $H, \eta, \mathscr{T}$ by rearranging within $\lambda$ of $z_3$, and it is $\mu$-stepped. Certainly it is a $\Sigma$-span, because $H'', \eta'', \mathscr{T}''$ is a $\Sigma$-span and $\mathscr{T}^0 \subseteq \mathscr{T}''$; and it is $\mu$-stepped, because
+\begin{equation*}
+d^0(u, v) = \max(\theta - 4\lambda - 2, d''(u, v)) \ge \mu
+\end{equation*}
+since $\theta \ge 4\lambda + \mu + 2$ and $d''(u, v) \ge \mu$. To see that $H'', \eta'', \mathscr{T}^0$ is obtained from $H, \eta, \mathscr{T}$ by rearranging within $\lambda$ of $z_3$, we must check that
+
+\hspace*{12pt}(i) $a \in A(H'')$ for all $a \in A(H)$ with $d(z_3, a) > \lambda$
+
+\hspace*{12pt}(ii) $\eta(x) = \eta''(x)$ for every vertex or edge $x$ of $H$ with $d(z_3, x) > \lambda$,
+
+and
+
+\hspace*{12pt}(iii) $\mathscr{T}^0$ is a $\lambda$-compression of $\mathscr{T}$.
+
+To show (i), let $a \in A(H)$ with $d(z_3, a) > \lambda$. Since by hypothesis $d(z_1, z_3) \le \lambda - \lambda_1$, it follows that $d(z_1, a) > \lambda_1$, and so $a \cap Z_1 = \emptyset$. Consequently, by (2), $a \in A(H')$. Now $d(\tau, a) > \lambda$, and so $d'(\tau, a) > \lambda - 4\lambda_1 - 2$ since $\mathscr{T}'$ is a $(4\lambda_1 + 2)$-compression of $\mathscr{T}$. Since $\lambda - 4\lambda_1 - 2 \ge \lambda_2$, it follows that $a \cap Z_2 = \emptyset$ and so $a \in A(H'')$, by (2). This proves (i), and (ii) follows immediately. For (iii), let $\sigma_1, \sigma_2 \in \Sigma$. Then
+\begin{align*}
+d^0(\sigma_1, \sigma_2) &= \min(\theta - 4\lambda - 2, d''(\sigma_1, \sigma_2)) \\
+&\ge \min(\theta - 4\lambda - 2, d(\sigma_1, \sigma_2) - 4(\lambda_1 + \lambda_2) - 4)
+\end{align*}
+by (1); and
+\begin{equation*}
+\min(\theta - 4\lambda - 2, d(\sigma_1, \sigma_2) - 4(\lambda_1 + \lambda_2) - 4) \ge d(\sigma_1, \sigma_2) - 4\lambda - 2
+\end{equation*}

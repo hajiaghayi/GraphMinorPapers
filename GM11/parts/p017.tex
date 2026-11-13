@@ -1,0 +1,20 @@
+\origpage{88}{ROBERTSON AND SEYMOUR}
+Let us verify that $\mathscr{T}$ is respectful. Let $F$ be a $\Gamma$-normal $O$-arc with $|F \cap V(\Gamma)| < \theta$. If $|F \cap V(\Gamma)| = 0$ then $F \subseteq r$ for some region $r$ of $\Gamma$, and since $\Gamma$ is 2-cell there is a closed disc $\Delta \subseteq r$ with $F = bd(\Delta)$. Since $\emptyset = Z(\Gamma \cap \Delta)$ is small it follows that $(\Gamma \cap \Delta, \Gamma \cap \overline{\Sigma - \Delta}) \in \mathscr{T}$, as required. Thus we may assume that $|F \cap V(\Gamma)| \ge 1$. We proceed by induction on $|F \cap V(\Gamma)| = k$ say. Suppose first that $F \cap r$ is connected for every region $r$ of $\Gamma$ such that $F \cap r$ is non-null. Then $F \cap r \ne \emptyset$ for precisely $k$ regions $r$ of $\Gamma$, and we may assume, by perturbing $F$ slightly, that $F = U(C)$ for a circuit $C$ of $\Gamma'$ (unless $k = 1$ and $F$ is null-homotopic, when we are finished). Since $|F \cap V(\Gamma)| < \theta$, it follows that $C$ has length $< 2\theta$, and so $ins(C)$ exists; let $\Delta = ins(C)$, and let $A = \Gamma \cap \Delta$, $B = \Gamma \cap \overline{\Sigma - \Delta}$. Then $Z(A)$ is small, because $C = N(Z(A))$, and so $(A, B) \in \mathscr{T}$ as required. Thus we may assume that for some region $r$ of $\Gamma$, $F \cap r$ has more than one component.
+
+Choose a minimal line $F' \subseteq r$ with ends in different components of $F \cap r$, and let $F_1, F_2, F$ be the three $O$-arcs included in $F \cup F'$. Then $F_i$ is $\Gamma$-normal and $|F_i \cap V(\Gamma)| < k$ ($i = 1, 2$), and so from the inductive hypothesis, there are closed discs $\Delta_i$ such that $bd(\Delta_i) = F_i$ and
+\begin{equation*}
+(\Gamma \cap \Delta_i, \Gamma \cap \overline{\Sigma - \Delta_i}) \in \mathscr{T}
+\end{equation*}
+for $i = 1, 2$. If $\Delta_1 \subseteq \Delta_2$ then since $F_1 \cap F_2 = F'$, it follows that $\Delta = \overline{\Delta_2 - \Delta_1}$ is a closed disc and $bd(\Delta) = F$. But then $\Gamma \cap \Delta \subseteq \Gamma \cap \Delta_2$ and $(\Gamma \cap \Delta_2, \Gamma \cap \overline{\Sigma - \Delta_2}) \in \mathscr{T}$, and so $(\Gamma \cap \overline{\Sigma - \Delta}, \Gamma \cap \Delta) \notin \mathscr{T}$ since $(\Gamma \cap \Delta_2) \cup (\Gamma \cap \overline{\Sigma - \Delta}) = \Gamma$. Consequently,
+\begin{equation*}
+(\Gamma \cap \Delta, \Gamma \cap \overline{\Sigma - \Delta}) \in \mathscr{T},
+\end{equation*}
+as required. Thus we may assume that $\Delta_1 \not\subseteq \Delta_2$ and similarly $\Delta_2 \not\subseteq \Delta_1$. Hence $\Delta_1 \cap \Delta_2 = F'$, and $\Delta = \Delta_1 \cup \Delta_2$ is a closed disc with $bd(\Delta) = F$. Moreover,
+\begin{equation*}
+(\Gamma \cap \Delta_1) \cup (\Gamma \cap \Delta_2) \cup (\Gamma \cap \overline{\Sigma - \Delta}) = \Gamma
+\end{equation*}
+and so $(\Gamma \cap \overline{\Sigma - \Delta}, \Gamma \cap \Delta) \notin \mathscr{T}$, by the second tangle axiom: and hence $(\Gamma \cap \Delta, \Gamma \cap \overline{\Sigma - \Delta}) \in \mathscr{T}$ as required. This proves that $\mathscr{T}$ is respectful.
+
+It remains to check that $ins$ is the slope derived from $\mathscr{T}$. To see this, let $C$ be a circuit of $\Gamma'$ of length $< 2\theta$. We must verify that $(\Gamma \cap \Delta, \Gamma \cap \overline{\Sigma - \Delta}) \in \mathscr{T}$, where $\Delta = ins(C)$. Certainly this separation has order $< \theta$, and so it suffices to show that $Z(\Gamma \cap \Delta)$ is small. But every element of $Z(\Gamma \cap \Delta)$ is a subset of $ins(C)$, and $|V(C) \cap V(\Gamma)| < \theta$, and so $Z(\Gamma \cap \Delta)$ is small, as required. $\square$
+
+We call $\mathscr{T}$ defined as in (6.1) the \textit{pretangle induced from} $ins$. Next, we wish to show that this provides a 1-1 correspondence between respectful

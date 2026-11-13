@@ -1,0 +1,20 @@
+\origpage{67}{GRAPH MINORS. XIII}
+As an application, let $\mathscr{F}$ be a class of graphs such that if $G \in \mathscr{F}$ and $H$ is isomorphic to a minor of $G$ then $H \in \mathscr{F}$. (Such a class is \textit{minor-closed}.) We shall show in [23] that there is a finite list $H_1, \dots, H_k$ of graphs, such that a general graph $G$ is in $\mathscr{F}$ if and only if it has no minor isomorphic to any of $H_1, \dots, H_k$. We deduce that there is an $O(v^3)$ algorithm for
+
+\textit{$\mathscr{F}$-Membership.} Instance: A graph $G$. Question: Is $G \in \mathscr{F}$?
+
+For we use the algorithm for \textit{$H$-Minor Containment} to test for the presence of $H_1, \dots, H_k$ as minors. (This proves the existence of the algorithm; however, we do not know how to \textit{find} the algorithm, even for concrete classes of $\mathscr{F}$, because we do not know how to find $H_1, \dots, H_k$.) We show also that if $\mathscr{F}$ does not contain every planar graph, there is an $O(v^2)$ algorithm to determine membership.
+
+For example,
+
+\hspace*{12pt}(i) Let $\Sigma$ be a surface; there is an $O(v^3)$ algorithm to test if a graph $G$ may be drawn in $\Sigma$. This improves a result of Filotti, Miller, and Reif [4].
+
+\hspace*{12pt}(ii) Let $\omega \ge 0$ be an integer; there is an $O(v^2)$ algorithm to test if a graph $G$ has tree-width $\le \omega$ (or branch-width $\le \omega$, similarly). (For definitions, see [15] and Section 3.) This improves a result of Arnborg, Corneil, and Proskurowski [1].
+
+We remark that for both the above examples, the finiteness of the list $H_1, \dots, H_k$ of excluded minors does not depend on the result of [23]; it is shown in [17, 14], respectively.
+
+A clarification: how can the above algorithms have running time just dependent on $v$ and not on the number of edges? Certainly, for simple graphs, if the number of edges is large enough in terms of $v$ then the problems (i) and (ii) are both easily answered (the answer is ``no''). But what about graphs with multiple edges? We would like to be able to construct the underlying simple graph $H$ of a graph $G$ in time which depends only on $|E(H)|$, not on $|E(G)|$. This can of course be done if our graphs are presented with an appropriate data structure, and we assume this is so. Similarly, we shall always assume that we can decide, for a graph $G$ and vertices $u, v$ of $G$, whether there are at least $k$ edges of $G$ joining $u$ and $v$, in time only dependent on $k$.
+
+\sectionhead{2. Folios}
+
+To solve the problems of the last section, we shall solve a common generalization of \textit{Disjoint Connected Subgraphs} and \textit{$H$-Minor Containment},

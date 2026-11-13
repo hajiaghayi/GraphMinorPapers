@@ -1,0 +1,30 @@
+\origpage{70}{ROBERTSON AND SEYMOUR}
+Thus (i) holds. (ii) holds because of (11.4). To verify (iii), let $T \subseteq G$ be a triangle. If $T \subseteq H_2$ then by (11.3) either no edge of $T$ is internal, or no edge of $T$ is external; that is, either $T \subseteq G_2$, or $T \subseteq G^* \subseteq G_1$, as required. Thus we may assume that $T \not\subseteq H_2$, and so some edge $e$ of $T$ is in $E(H_1)$. Thus every edge of $T \cap H_2$ has an end in $V(H_1)$, and so is not external, by (11.3). Hence $T \subseteq G_1$, as required. $\square$
+
+Let $(G, \Omega)$ be a society. A set $\mathcal{D}$ of separations of $(G, \Omega)$ is a \textit{consolidation} of $(G, \Omega)$ if
+
+\hspace*{12pt}(i) $|V(A \cap B)| \le 3$ for all $(A, B) \in \mathcal{D}$
+
+\hspace*{12pt}(ii) $A \subseteq B'$ for all distinct $(A, B), (A', B') \in \mathcal{D}$
+
+\hspace*{12pt}(iii) $\bigcup (A: (A, B) \in \mathcal{D}) = G$
+
+\hspace*{12pt}(iv) for each $(A, B) \in \mathcal{D}$ and every choice of distinct $u, v \in V(A \cap B)$ there is a path of $A$ with ends $u, v$ and with no internal vertex in $B$.
+
+\stmt
+(11.6) \textit{Every society has a consolidation.}
+
+\textit{Proof.} Let $(G, \Omega)$ be a society. For each vertex or edge $x$ of $G$, let $A_x$ be the subgraph of $G$ consisting just of $x$ (and its ends, if $x$ is an edge). Let $B_x = G$ if $x$ is a vertex, and let $B_x = G \setminus x$ if $x$ is an edge. Then the set of all such $(A_x, B_x)$ is a consolidation. $\square$
+
+\stmt
+(11.7) \textit{If $\mathcal{D}$ is a consolidation of $(G, \Omega)$ and $C = \bigcap (B: (A, B) \in \mathcal{D})$ then $E(C) = \emptyset$, $\bar{\Omega} \subseteq V(C)$, $A \cap B \subseteq C$ for every $(A, B) \in \mathcal{D}$ and $A_1 \cap A_2 \subseteq C$ for every two distinct separations $(A_1, B_1), (A_2, B_2) \in \mathcal{D}$.}
+
+\textit{Proof.} For each edge $e \in E(G)$ there exists $(A, B) \in \mathcal{D}$ with $e \in E(A)$, and so $e \notin E(B)$; hence, $e \notin E(C)$ and so $E(C) = \emptyset$. For each $(A, B) \in \mathcal{D}$, $\bar{\Omega} \subseteq V(B)$ and so $\bar{\Omega} \subseteq V(C)$. Suppose that $(A, B) \in \mathcal{D}$. Then $A \cap B \subseteq B'$ for every $(A', B') \in \mathcal{D}$; for this is trivial if $(A, B) = (A', B')$, and otherwise $A \cap B \subseteq A \subseteq B'$. Thus $A \cap B \subseteq C$ follows. Finally, assume that $(A_1, B_1), (A_2, B_2) \in \mathcal{D}$ are distinct. Then $A_1 \cap A_2 \subseteq A_1 \cap B_1 \subseteq C$, by (ii) and the preceding part of (11.7), as required. $\square$
+
+Let $\mathcal{D}$ be a consolidation of $(G, \Omega)$. Its \textit{core} is the simple graph $C$ with $V(C) = \bigcap (V(B): (A, B) \in \mathcal{D})$ in which distinct vertices $u, v$ are adjacent if there exists $(A, B) \in \mathcal{D}$ with $u, v \in V(A \cap B)$. Note that $\bar{\Omega} \subseteq V(C)$.
+
+\stmt
+(11.8) \textit{Let $\mathcal{D}$ be a consolidation of $(G, \Omega)$ with core $C$. Let $C_1, C_2 \subseteq C$ with $C_1 \cup C_2 = C$ and $\bar{\Omega} \subseteq V(C_2)$. Let $\mathcal{D} = \mathcal{D}_1 \cup \mathcal{D}_2$, where $\mathcal{D}_1 \cap \mathcal{D}_2 = \emptyset$ and $V(A \cap B) \subseteq V(C_i)$ for $i = 1, 2$ and all $(A, B) \in \mathcal{D}_i$. Let $C^*$ be the graph with $V(C^*) = V(C_1 \cap C_2)$ and $E(C^*) = \emptyset$. Let}
+\begin{equation*}
+G_i = C^* \cup \bigcup (A: (A, B) \in \mathcal{D}_i) \qquad (i = 1, 2).
+\end{equation*}

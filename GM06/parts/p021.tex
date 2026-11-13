@@ -1,0 +1,34 @@
+\origpage{135}{GRAPH MINORS. VI}
+\noindent the maximum being taken over all $\theta_1, \theta_2$ which are both feasible in $G$. In turn, we can bound that with the following theorem.
+
+\stmt
+(5.12) \textit{If $\theta_1, \theta_2$ are both feasible in $G$ then}
+\begin{equation*}
+|\theta_1 - \theta_2| \le \frac{1}{k^2} |V(G)|.
+\end{equation*}
+\textit{Proof.} Let $\mathcal{L}_i$ be a linkage with $\theta(\mathcal{L}_i) = \theta_i$ ($i = 1, 2$). For each $P \in \mathcal{L}_2$ there is a helix $f$ in $G$ with
+\begin{align*}
+|f| \cap V(G) &= V(P) \\
+\theta(f) &= \theta(P)
+\end{align*}
+as is easily seen. By (5.2),
+\begin{equation*}
+L(f) \ge k |\theta(f) - \theta(\mathcal{L}_1)|
+\end{equation*}
+and so
+\begin{equation*}
+|V(P)| \ge k |\theta_2 - \theta_1|.
+\end{equation*}
+But distinct $P$'s in $\mathcal{L}_2$ are vertex-disjoint; and so
+\begin{equation*}
+|V(G)| \ge k^2 |\theta_2 - \theta_1|
+\end{equation*}
+as required.
+
+It follows that the running time of the algorithm (5.11) is polynomially bounded. This, and the methods described in the last section, evidently yield a polynomially bounded algorithm for the general ROUTED FOREST CONTAINMENT problem on the cylinder.
+
+We mention that for ROUTED FOREST CONTAINMENT on the disc we gave an algorithm and a structural characterization, while for the problem on the cylinder we have only given an algorithm for the general case and a characterization for the special case treated in this section. It is possible to find a structural characterization for the general problem on the cylinder by combining conditions like those of (3.6)(ii) with those of (5.10)(ii), (iii), but we omit the details.
+
+\sectionhead{6. \textsc{Conclusion}}
+
+We thus have a polynomially bounded algorithm to solve ROUTED FOREST CONTAINMENT on the cylinder. Let us see how to use it to solve DISJOINT CONNECTING SUBGRAPHS on the cylinder.

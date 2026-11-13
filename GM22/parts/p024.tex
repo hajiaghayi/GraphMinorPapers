@@ -1,0 +1,34 @@
+\origpage{553}{N. Robertson, P. Seymour / Journal of Combinatorial Theory, Series B 102 (2012) 530--563}
+\hspace*{12pt}(i) \textit{for $1 \le i \le t$, $(A'_i, \pi(A'_i) + \omega)$ has the same $\delta$-folio as $(A_i, \pi(A_i) + \omega)$,}
+
+\hspace*{12pt}(ii) \textit{for $1 \le i \le t$, $D(A_i) \cap \Delta = \emptyset$,}
+
+\hspace*{12pt}(iii) \textit{for $1 \le i \le t$, $d(v^*, D(A'_i)) \ge \theta$ and $D(A'_i) \cap \Delta = \emptyset$,}
+
+\hspace*{12pt}(iv) \textit{for $1 \le i < j \le t$, $d(D(A'_i), D(A'_j)) \ge \theta$.}
+
+\textit{Then there is a model of $(H, \chi)$ in $(G \setminus \{v^*\}, \omega)$.}
+
+\textbf{Proof.} Choose $\theta$ so that 7.3 is satisfied. We claim that 7.4 is satisfied. For let the hypotheses of 7.4 hold, and suppose the conclusion does not hold for some $G$. For the given graph $G$, let us choose the counterexample such that
+
+\hspace*{12pt}(1) \textit{$|E(\Gamma)|$ is maximum; subject to that condition, $\Gamma \cup V(\phi(v) \colon v \in V(H))$ is minimal; and subject to those two conditions, $\bigcup(\phi(v) \colon v \in V(H))$ is minimal.}
+
+Let $K_1 = K \cup \bigcup(A \in \mathcal{A} \colon d(D(A), \Sigma \setminus \Delta) \ge \theta)$. Let us say $A \in \mathcal{A}$ is \textit{good} if $\bar{\pi}(A) \subseteq V(\Gamma)$ and for all $u, v \in \bar{\pi}(A)$ there is a path of $\Gamma \cap A$ with ends $u, v$ and with no internal vertex in $\bar{\pi}(A)$. We say $A \in \mathcal{A}$ is \textit{bad} if it is not good.
+
+\hspace*{12pt}(2) \textit{If $A \in \mathcal{A}$ is bad then either $d(D(A), \Sigma \setminus \Delta) \ge \theta$, or $D(A) \cap U(\Gamma) = \emptyset$.}
+
+\textit{Subproof.} Suppose that $D(A) \cap U(\Gamma) \ne \emptyset$ and $d(D(A), \Sigma \setminus \Delta) < \theta$. Since $bd(D(A))$ is $\Gamma$-normal and $D(A) = ins(bd(D(A)))$ and $\Gamma$ is 2-cell, it follows that $bd(D(A)) \cap V(\Gamma) \ne \emptyset$. Now by (J7), since $A$ is bad, either
+
+\hspace*{12pt}$\bullet$ $V(\Gamma \cap A) \subseteq \bar{\pi}(A)$ and $E(\Gamma \cap A) = \emptyset$, or
+
+\hspace*{12pt}$\bullet$ $|\bar{\pi}(A)| = 3$, $\bar{\pi}(A) \subseteq V(\Gamma)$, some $v \in \bar{\pi}(A)$ has degree 0 in $\Gamma \cap A$, and $(\Gamma \cap A) \setminus \{v\}$ is a path with both ends in $\bar{\pi}(A)$, or
+
+\hspace*{12pt}$\bullet$ $|\bar{\pi}(A)| = 3$ and $\Gamma \cap A$ is a path with both ends in $\bar{\pi}(A)$, possibly with an internal vertex in $\bar{\pi}(A)$.
+
+In each case, there exist distinct $u, v \in \bar{\pi}(A)$ such that there is no path of $\Gamma \cap A$ with ends $u, v$ and with no internal vertex in $\bar{\pi}(A)$, and since $\bar{\pi}(A) \cap V(\Gamma) \ne \emptyset$, we may choose such a pair $u, v$ with $u \in V(\Gamma)$. But by (J7), there is a path of $A \setminus W$ with ends $u, v$ and with no internal vertex in $\bar{\pi}(A)$; let us choose $Q \subseteq A \setminus W$ minimal such that $(\Gamma \cap A) \cup Q$ includes such a path. It follows that $Q$ is a path with distinct ends both in $V(\Gamma \cap A) \cup \{v\}$, with no internal vertex in $V(\Gamma \cap A) \cup \bar{\pi}(A)$. By (i) and (ii) above, it follows that there is a line $I$ in $D(A)$ with ends the ends of $Q$ and with no internal point in $U(\Gamma) \cup bd(D(A))$. We may assume that $Q$ is a drawing in $\Sigma$ and $U(Q) = I$. Let $\Gamma' = \Gamma \cup Q$; then $\Gamma'$ is 2-cell, since $\Gamma$ is 2-cell and at least one end of $I$ is in $V(\Gamma)$. Let $\mathcal{T}'$ be the set of all separations $(C, D)$ of $\Gamma'$ of order $< \theta$ such that $(C \cap \Gamma, D \cap \Gamma) \in \mathcal{T}$; then $\mathcal{T}'$ is a respectful tangle in $\Gamma'$ of order $\theta$. Let $d'$ be its metric; then if $a, b \in A(\Gamma)$ and $a', b' \in A(\Gamma')$ and $a' \subseteq a$ and $b' \subseteq b$, then $d'(a', b') \ge d(a, b)$. If we replace $\Gamma$ by $\Gamma'$ and $d$ \del{and}\fix{by} $d'$\fixnote{fix:7.4-claim2}{Here $d$ is replaced by $d'$, the metric of the tangle $\mathcal{T}'$ in $\Gamma'$ defined just before.} then (J1)--(J6) remain satisfied, as is easily seen. Also, (J7) remains satisfied, as we see as follows. Let $A_0 \in \mathcal{A}$, and suppose that $(C, D)$ is a separation of $G \setminus W$ with order $< |\bar{\pi}(A_0)|$ such that $A_0 \setminus W \subseteq C$ and $(C \cap \Gamma', D \cap \Gamma') \in \mathcal{T}'$. Then $(C \cap \Gamma, D \cap \Gamma) \in \mathcal{T}$, since $(D \cap \Gamma, C \cap \Gamma) \notin \mathcal{T}$ by definition of $\mathcal{T}'$; and this contradicts the truth of (J7) for $\Gamma, \mathcal{T}$. Thus there is no such $A_0, C, D$. Now let $A_0 \in \mathcal{A}$. If $A_0 \ne A$ then $E(A_0 \cap \Gamma') = E(A_0 \cap \Gamma)$, and
+\begin{equation*}
+V(A_0 \cap \Gamma) \subseteq V(A_0 \cap \Gamma') \subseteq V(A_0 \cap \Gamma) \cup \bar{\pi}(A_0)
+\end{equation*}
+and so $A_0 \cap \Gamma'$ satisfies (J7); while if $A = A_0$ then again $A_0 \cap \Gamma'$ satisfies (J7) by the choice of $Q$. This proves that (J7) remains satisfied. Now $\mathcal{B}$ remains sufficient for $\phi$, since that does not depend on $\Gamma$ or $\mathcal{T}$; and since all distances are increased by replacing $\Gamma$ by $\Gamma'$ and $\mathcal{T}$ by $\mathcal{T}'$ (more precisely, $d'(a', b') \ge d(a, b)$ as we said above), the hypotheses of 7.4 remain satisfied. But this contradicts (1), and therefore proves (2).
+
+\hspace*{12pt}(3) \textit{If $F \subseteq \Sigma$ is an $O$-arc with $F \cap U(\Gamma) = \emptyset$ and $F \cap D(A) = \emptyset$ for each $A \in \mathcal{A}$, then $ins(F) \cap U(\Gamma) = \emptyset$ and $ins(F) \cap D(A) = \emptyset$ for all $A \in \mathcal{A}$ with $d(D(A), \Sigma \setminus \Delta) < \theta$.}

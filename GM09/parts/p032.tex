@@ -1,0 +1,33 @@
+\origpage{71}{GRAPH MINORS. IX}
+\textit{Then $(G_1, G_2)$ is a separation of $(G, \Omega)$, $G_1 \cap G_2 = C^*$, $V(G_1) \cap V(C) = V(C_1)$, and $V(G_2) \cap V(C) = V(C_2)$.}
+
+\textit{Proof.} (1) $G_1 \cup G_2 = G.$
+
+For $G_1 \cup G_2 \subseteq G$, and
+\begin{equation*}
+G = \bigcup (A: (A, B) \in \mathcal{D}) = \bigcup (A: (A, B) \in \mathcal{D}_1) \cup \bigcup (A: (A, B) \in \mathcal{D}_2) \subseteq G_1 \cup G_2.
+\end{equation*}
+\hspace*{12pt}(2) $G_1 \cap G_2 = C^*.$
+
+Certainly $C^* \subseteq G_1 \cap G_2$. For the converse inclusion, it suffices to show that $A_1 \cap A_2 \subseteq C^*$ for $(A_1, B_1) \in \mathcal{D}_1$ and $(A_2, B_2) \in \mathcal{D}_2$. But $A_2 \subseteq B_1$, and so $A_1 \cap A_2 \subseteq A_1 \cap B_1 \subseteq C_1$, and similarly $A_1 \cap A_2 \subseteq C_2$; and hence $V(A_1 \cap A_2) \subseteq V(C_1 \cap C_2) = V(C^*)$; and $E(A_1 \cap A_2) = \emptyset$, and so $A_1 \cap A_2 \subseteq C^*$, as required.
+
+\hspace*{12pt}(3) $V(G_1) \cap V(C) = V(C_1)$ \textit{and} $V(G_2) \cap V(C) = V(C_2).$
+
+Let $X_i = V(G_i) \cap V(C)$ for $i = 1, 2$. Then
+\begin{align*}
+X_i &= V(C^*) \cup \bigcup (V(A \cap C): (A, B) \in \mathcal{D}_i) \\
+&\subseteq V(C_1) \cup \bigcup (V(A \cap B): (A, B) \in \mathcal{D}_i)
+\end{align*}
+since $V(C^*) \subseteq V(C_i)$ and $V(C) \subseteq V(B)$ for each $(A, B) \in \mathcal{D}$. But $V(A \cap B) \subseteq V(C_i)$ for each $(A, B) \in \mathcal{D}_i$, and so $X_i \subseteq V(C_i)$. Using (1) and (2)
+\begin{align*}
+X_1 \cup X_2 &= V(G_1 \cup G_2) \cap V(C) = V(C) = V(C_1 \cup C_2), \\
+X_1 \cap X_2 &= V(G_1 \cap G_2) \cap V(C) = V(C^*) = V(C_1 \cap C_2),
+\end{align*}
+which implies that $X_i = V(C_i)$ for $i = 1, 2$, as required for (3).
+
+Now, $\bar{\Omega} \subseteq V(C_2) \subseteq V(G_2)$, by (3), and $E(C^*) = \emptyset$. Thus (1) and (2) imply $(G_1, G_2)$ is a separation of $(G, \Omega)$. Along with (2) and (3) this completes the proof. $\square$
+
+\stmt
+(11.9) \textit{Let $\mathcal{D}$ be a consolidation of $(G, \Omega)$ chosen so that its core $C$ has as few vertices as possible. Then $(C, \Omega)$ is 4-connected.}
+
+\textit{Proof.} Suppose that $(C, \Omega)$ is not 4-connected. Then there is a 3-separation $(C_1, C_2)$ of $(C, \Omega)$, and by choosing $(C_1, C_2)$ with $C_1$ minimal, we find that for every choice of distinct $u, v \in V(C_1 \cap C_2)$ there is a path of $C_1$ between $u$ and $v$ with no internal vertex in $C_2$; and no two vertices of $C_1 \cap C_2$ are adjacent in $C_1$. Let $\mathcal{D}_1 = \{(A, B) \in \mathcal{D}: V(A \cap B) \subseteq V(C_1)\}$, $\mathcal{D}_2 = \mathcal{D} - \mathcal{D}_1$. We claim that $V(A \cap B) \subseteq V(C_2)$ for all $(A, B) \in \mathcal{D}_2$. For since $(A, B) \notin \mathcal{D}_1$, there exists $v \in V(A \cap B) - V(C_1)$, and so by (11.7) with

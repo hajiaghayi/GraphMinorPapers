@@ -1,0 +1,20 @@
+\origpage{219}{GRAPH MINORS. VII}
+\noindent respectively, such that $\Sigma$ is obtained from $\Sigma^*$ by pasting $f = g$. There are, up to homeomorphism, only finitely many possibilities for $\Sigma^*$ and hence for $(\Sigma^*, X, Y, f(0), g(0))$. But the similarity class of $F$ is determined by the homeomorphism class of $(\Sigma^*, X, Y, f(0), g(0))$ and the result follows.
+
+Now let $\Sigma$ be a surface. Two proper $I$-arcs $F, F'$, are \textit{parallel} if there is a homeomorphism $\alpha \colon \Sigma \to \Sigma$ such that $\alpha(F) = F'$ and $\alpha(x) = x$ for all $x \in bd(\Sigma)$. The equivalence classes of this equivalence relation we call \textit{parallel classes}. We observe that if $F, F'$ are parallel then they are similar.
+
+\stmt
+(3.2) \textit{For any fixed $\Sigma$ and $s, t \in bd(\Sigma)$, there are only finitely many parallel classes of $I$-arcs with ends $s, t$.}
+
+\textit{Proof.} Let $\Sigma \cong \Sigma(a, b, c)$. By (3.1) it suffices to show that if $\mathcal{F}$ is a set of mutually similar proper $I$-arcs in $\Sigma$, each with ends $s, t$, then $\mathcal{F}$ is divided by parallelness into only finitely many classes. Let us assign an orientation to each cuff of $\Sigma$. For each homeomorphism $\alpha \colon \Sigma \to \Sigma$, its signature is the function $\sigma_\alpha$ mapping each cuff $C$ to $(\alpha(C), \pm 1)$, where we choose $+1$ if the orientation of $C$ is mapped under $\alpha$ to the orientation of the cuff $\alpha(C)$, and $-1$ otherwise. The signature is \textit{null} if for each cuff $C$, $\sigma_\alpha(C) = (C, 1)$. We observe
+
+\hspace*{12pt}(1) \textit{Let $F, F' \in \mathcal{F}$. If there is a homeomorphism $\alpha \colon \Sigma \to \Sigma$ with $\alpha(F) = F'$\fix{, $\alpha(s) = s$, $\alpha(t) = t$,} and with null signature, then $F$ is parallel to $F'$.}\fixnote{fix:3.2-claim1}{Here $s,t$ are the common ends of the members of $\mathcal{F}$. Without this condition the claim can fail. Let $\Sigma$ be an annulus, let $s,t$ be opposite points of one cuff, and let $\alpha$ be the rotation by a half-turn, which has null signature and swaps $s$ and $t$. Let $F$ be a proper $I$-arc with ends $s,t$ that cuts off a disc together with one of the two arcs of that cuff between $s$ and $t$. Then $\alpha(F)$ cuts off a disc together with the other arc, so no homeomorphism fixing $bd(\Sigma)$ pointwise maps $F$ to $\alpha(F)$. With the condition, the rest of the proof sorts $\mathcal{F}$ by the signature and by the permutation of $\{s,t\}$, which still gives finitely many classes.}
+
+Choose $F^* \in \mathcal{F}$. For each $F \in \mathcal{F}$ there exists a homeomorphism $\alpha_F \colon \Sigma \to \Sigma$ with $\alpha_F(F^*) = F$. Now for $F, F' \in \mathcal{F}$, if $\alpha_F$ and $\alpha_{F'}$ have the same signature, then $F$ is parallel to $F'$ by (1), for $\alpha = \alpha_{F'} \cdot \alpha_F^{-1}$ satisfies the hypothesis of (1). Yet there are only finitely many possible signatures, and the result follows.
+
+A \textit{matching} in a surface $\Sigma$ is a proper graph $G$ in $\Sigma$ with $V(G) \subseteq bd(\Sigma)$, in which every vertex has valency $1$. For $X \subseteq bd(\Sigma)$, an \textit{$X$-matching} is a matching $G$ with $V(G) = X$. Two $X$-matchings $G, G'$ in $\Sigma$ are said to be \textit{congruent} if there is a homeomorphism $\alpha \colon \Sigma \to \Sigma$ such that $\alpha(U(G)) = U(G')$ and $\alpha(x) = x$ for all $x \in bd(\Sigma)$. We call the equivalence classes of this equivalence relation \textit{congruence classes}.
+
+\stmt
+(3.3) \textit{For any surface $\Sigma$ and finite $X \subseteq bd(\Sigma)$, there are only finitely many congruence classes of $X$-matchings.}
+
+\textit{Proof.} We proceed by induction on $|X|$. There are only finitely many possibilities for the pairing of the members of $X$ given by the edges of the matching. Having fixed that pairing, there are by (3.2) essentially only finitely many choices for the first edge of the matching. Having fixed that

@@ -1,0 +1,27 @@
+\origpage{255}{GRAPH MINORS. XII}
+\textit{Let $\Gamma$ be a drawing in $\Sigma$, such that $C_1 \cup \dots \cup C_t$ is $\Gamma$-normal, and let $\Gamma_1 = \Gamma \cap \hat{\Sigma}_1$. Let $\mathscr{T}_1$ be a tangle in $\Gamma_1$ of order $\theta$, respectful towards $\hat{\Sigma}_1$, and let $\mathscr{T}$ be a tangle in $\Gamma$ induced by $\mathscr{T}_1$. Suppose that}
+
+\hspace*{12pt}(i) \textit{for $1 \le i < j \le t$, every $\Gamma_1$-normal line $F \subseteq \Sigma_1$ with one end in $C_i$ and the other in $C_j$ satisfies $|F \cap V(\Gamma_1)| \ge \theta$}
+
+\hspace*{12pt}(ii) \textit{for $1 \le i \le t$, $|C_i \cap V(\Gamma_1)| \ge \theta$ and every $X \subseteq C_i \cap V(\Gamma)$ with $|X| \le \theta$ is free with respect to $\mathscr{T}_1$, and}
+
+\hspace*{12pt}(iii) \textit{every continuous $\phi \colon S^1 \to \Sigma_2$ of length $< \theta$ with $|\phi|$ $\Gamma$-normal is null-homotopic in $\Sigma_2$.}
+
+\textit{Then $\mathscr{T}$ is respectful towards $\Sigma$.}
+
+The proof of (5.3) uses the following lemma.
+
+\stmt
+(5.4) \textit{Under the same hypotheses, let $F$ be a $\Gamma$-normal line with $F \subseteq \Sigma_1$, with ends in $C_1 \cup \dots \cup C_t$, and with no other point in $C_1 \cup \dots \cup C_t$, such that $|F \cap V(\Gamma)| < \theta$. Then there is a $\Gamma$-normal line $\tilde{F} \subseteq C_1 \cup \dots \cup C_t$, with the same ends as $F$, such that $|\tilde{F} \cap V(\Gamma)| \le |F \cap V(\Gamma)|$, and such that there is a closed disc $\Delta \subseteq \Sigma_1$ bounded by $F \cup \tilde{F}$, with $(\Gamma_1 \cap \Delta, \Gamma_1 \cap \overline{\Sigma_1 - \Delta}) \in \mathscr{T}_1$.}
+
+\textit{Proof.} Let the ends of $F$ be $a, b$, where $a \in C_i, b \in C_j$. Now $i = j$, from (5.3)(i). We assume $i = j = 1$ without loss of generality. Let $P$ be a line with $P \subseteq D_1 \cup \{a, b\}$, with ends $a, b$. Then $P \cup F$ is a $\Gamma_1$-normal $O$-arc in $\hat{\Sigma}_1$, of length $< \theta$, and so there is a closed disc $\Delta_1 \subseteq \hat{\Sigma}_1$ bounded by $P \cup F$, satisfying:
+
+\hspace*{12pt}(1) $(\Gamma_1 \cap \Delta_1, \Gamma_1 \cap \overline{\hat{\Sigma}_1 - \Delta_1}) \in \mathscr{T}_1.$
+
+Let $\Delta_1 \cap C_1 = \tilde{F}$; then $\tilde{F}$ is a line with ends $a, b$ and with $\tilde{F} \subseteq C_1 \cup \dots \cup C_t$. Let $\Delta$ be the closed disc in $\Delta_1$ bounded by the $O$-arc $F \cup \tilde{F}$. Then
+\begin{equation*}
+(\Gamma_1 \cap \Delta, \Gamma_1 \cap \overline{\Sigma_1 - \Delta}) = (\Gamma_1 \cap \Delta_1, \Gamma_1 \cap \overline{\hat{\Sigma}_1 - \Delta_1}) \in \mathscr{T}_1
+\end{equation*}
+by (1). We claim that $\Delta \subseteq \Sigma_1$. For suppose not; then $D_i \cap \Delta \ne \emptyset$ for some $i \ge 2$, say $i = 2$, and so $D_2 \subseteq \Delta_1$, because $bd(\Delta_1) \subseteq \Sigma_1$. But $V(\Gamma_1) \cap C_2$ includes a subset of cardinality $\theta$, which is free with respect to $\mathscr{T}_1$, by (ii); and yet $V(\Gamma_1) \cap C_2 \subseteq V(\Gamma_1 \cap \Delta_1)$, and the separation of (1) has order $|F \cap V(\Gamma_1)| < \theta$, a contradiction. Thus $\Delta \subseteq \Sigma_1$.
+
+Finally, we claim that $|\tilde{F} \cap V(\Gamma_1)| \le |F \cap V(\Gamma_1)|$. For suppose not. Since $|F \cap V(\Gamma_1)| < \theta$, we may choose $X \subseteq \tilde{F} \cap V(\Gamma_1)$ with $|F \cap V(\Gamma_1)| < |X| \le \theta$. By (ii), $X$ is free with respect to $\mathscr{T}_1$. But $X \subseteq V(\Gamma_1 \cap \Delta_1)$, and the separation of (1) has order $|F \cap V(\Gamma_1)| < |X|$, a contradiction. Thus $\tilde{F}$ satisfies the lemma. $\square$

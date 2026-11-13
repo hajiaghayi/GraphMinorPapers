@@ -1,0 +1,22 @@
+\origpage{66}{ROBERTSON AND SEYMOUR}
+\noindent $v = v(G)$ is defined to be $|V(G)| + 1$. The algorithm is not practically feasible, since it involves the manipulation of enormous constants.
+
+Although the algorithm is presented in this paper in full, the proof of its correctness is not, for that requires a lemma, (10.2), that is not proved in this paper. We postpone proving (10.2) to [24], because its proof is an application of the main results of this series, which will also appear in later papers. A draft version of the full proof of (10.2) has been made available to the referees, but due to its great length ($> 300$ pages) it is unreasonable to expect them to guarantee its correctness.
+
+As a consequence of our DP algorithm we have a polynomial algorithm for one of Garey and Johnson's [6] open problems, which they call Subgraph Homeomorphism (for Fixed Graph $H$), the following. A \textit{subdivision} of a graph $H$ is a graph which may be obtained from a graph isomorphic to $H$ by repeatedly replacing an edge by two edges in series and a new vertex of valency 2. Let $H$ be a fixed graph. The problem is:
+
+\textit{$H$-Subdivision Subgraph.} Instance: A graph $G$. Question: Is there a subgraph of $G$ which is a subdivision of $H$?
+
+Clearly one can use the algorithm for DP to obtain an algorithm for \textit{$H$-Subdivision Subgraph} with running time $O(v^{|V(H)| + 3})$.
+
+The following problem is more general than DP, but for fixed $k$ there is an $O(v^3)$ algorithm for its solution as well:
+
+\textit{Disjoint Connected Subgraphs.} Instance: A graph $G$ and non-null subsets $Z_1, \dots, Z_t \subseteq V(G)$ with $\Sigma |Z_i| \le k$. Question: Do there exist connected subgraphs $G_1, \dots, G,$ of $G$, mutually vertex-disjoint, with $Z_i \subseteq V(G_i)$ ($1 \le i \le t$)?
+
+(This does generalize DP; for given the $(s_i, t_i)$'s of DP, we set $Z_i = \{s_i, t_i\}$.)
+
+A graph $H$ is a minor of a graph $G$ if $H$ can be obtained from a subgraph of $G$ by contracting edges. A further result of this paper is that for every fixed graph $H$ there is an $O(v^3)$ algorithm to solve the following:
+
+\textit{$H$-Minor Containment.} Instance: A graph $G$. Question: Is some minor of $G$ isomorphic to $H$?
+
+The fact that there is a polynomial algorithm for this for all $H$ can be deduced from the solvability for all $H$ of \textit{$H$-Subdivision Subgraph}; because for any $H$ there is a finite list $H_1, \dots, H_k$ of graphs such that a general graph $G$ has a minor isomorphic to $H$ if and only if it contains a subdivision of one of $H_1, \dots, H_k$. To make the degree of the polynomial independent of $H$ needs a different method, however.

@@ -1,0 +1,23 @@
+\origpage{77}{GRAPH MINORS. IX}
+\textit{Condition (i).} First,
+\begin{align*}
+A_0 \cup A_1 \cup \cdots \cup A_k &= C^* \cup \bigcup (A : (A, B) \in \mathcal{D}_1) \cup \bigcup (A : (A, B) \in \mathcal{D}_2) \\
+&\supseteq \bigcup (A : (A, B) \in \mathcal{D}) = G.
+\end{align*}
+Second, for $(A, B) \in \mathcal{D}_1$ and $1 \le j \le k$, $E(A \cap A_j) = \emptyset$ since $(A, B)$, $(A_j, B_j)$ are distinct members of the consolidation $\mathcal{D}$, and so $E(A_0 \cap A_j) = \emptyset$. Third, for $1 \le i, j \le k$ with $i \ne j$, $E(A_i \cap A_j) = \emptyset$ since $(A_i, B_i)$, $(A_j, B_j)$ are distinct members of $\mathcal{D}$.
+
+\textit{Condition (ii).} First, for $(A, B) \in \mathcal{D}_1$ and $1 \le j \le k$, $A \subseteq B_j$ and $A_j \subseteq B$ and so
+\begin{equation*}
+V(A \cap A_j) = V(A \cap B) \cap V(A_j \cap B_j) \subseteq V(C_1) \cap V(C_2) \cap \bar{\Omega}_j = \bar{\Omega}_0 \cap \bar{\Omega}_j.
+\end{equation*}
+Moreover, $V(C^*) \subseteq V(B_j)$ and so $V(C^*) \cap V(A_j) \subseteq \bar{\Omega}_0 \cap V(A_j \cap B_j) = \bar{\Omega}_0 \cap \bar{\Omega}_j$. Hence for $1 \le j \le k$, $V(A_0 \cap A_j) \subseteq \bar{\Omega}_0 \cap \bar{\Omega}_j$. Second, for $1 \le i, j \le k$ with $i \ne j$, $V(A_i \cap A_j) \subseteq V(A_i \cap B_i) = \bar{\Omega}_i$ since $A_j \subseteq B_i$.
+
+\textit{Condition (iii).} Let $v \in \bar{\Omega}$. We shall show that $v \in \bar{\Omega}_i$ for some $i$ with $0 \le i \le k$. Since $\mathcal{D}$ is consolidation, there exists $(A, B) \in \mathcal{D}$ with $v \in V(A)$. Hence either $(A, B) \in \mathcal{D}_2$ or $v \in V(A_0)$, and so there exists $i$ with $0 \le i \le k$ with $v \in V(A_i)$. But $\bar{\Omega} \subseteq V(B_0)$ by (2), and $\bar{\Omega} \subseteq V(B_j)$ for $1 \le j \le k$ since each $(A_j, B_j) \in \mathcal{D}$ is a separation of $(G, \Omega)$. Hence $v \in V(B_i)$ and so $v \in V(A_i \cap B_i) = \bar{\Omega}_i$. It follows that $\bar{\Omega} \subseteq \bar{\Omega}_0 \cup \bar{\Omega}_1 \cup \cdots \cup \bar{\Omega}_k$ as required.
+
+This completes the proof of (5).
+
+Let us define $\alpha(v)$ to be the drawing of $v$ for each $v \in \bar{\Omega}_0 \cup \cdots \cup \bar{\Omega}_k$, and define $\alpha((A_i, \Omega_i)) = \beta(K_i)$ for $1 \le i \le k$ and $\alpha((A_0, \Omega_0)) = \Delta_0$. Then $\alpha$ is an arrangement of the segregation, and the theorem follows. $\square$
+
+\sectionhead{\textsc{References}}
+
+1. P. Erd\H{o}s and G. Szekeres, A combinatorial problem in geometry, \textit{Compositio Math.} \textbf{2} (1935), 463--470. 2. N. Robertson and P. D. Seymour, Graph minors. III. Planar tree-width, \textit{J. Combin. Theory Ser. B} \textbf{36} (1984), 49--64. 3. P. D. Seymour, Adjacency in binary matroids, \textit{European J. Combin.} \textbf{7} (1986), 171--176. 4. P. D. Seymour, Disjoint paths in graphs, \textit{Discrete Math.} \textbf{29} (1980), 293--309. 5. Y. Shiloach, A polynomial solution to the undirected two paths problem, \textit{J. Assoc. Comput. Mach.} \textbf{27} (1980), 445--456. 6. C. Thomassen, 2-linked graphs, \textit{European J. Combin.} \textbf{1} (1980), 371--378.

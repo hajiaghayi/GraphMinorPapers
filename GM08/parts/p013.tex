@@ -1,0 +1,33 @@
+\origpage{267}{GRAPH MINORS. VIII}
+\noindent $F_3$ enclosed by $F_1$ and $F_4$ enclosed by $F_2$. Then $\Delta(C_1) = \Gamma(F_3)$, by the minimality of $F_1$, and similarly $\Delta(C_2) = \Gamma(F_4)$. But $\Gamma(F_3) \cap \Gamma(F_4) = \emptyset$, and the result follows. $\square$
+
+Let $\Gamma$ be a drawing in a disc $\Sigma$, and let $k = |V(\Gamma) \cap bd\ \Sigma|$. By (6.7), we may choose bosses $C_1, \dots, C_t$ of $\Gamma$ such that
+
+\hspace*{12pt}(i) $\Delta(C_1), \dots, \Delta(C_t)$ are mutually disjoint, and
+
+\hspace*{12pt}(ii) for every boss $C$, $\Delta(C) \subseteq \Delta(C_i)$ for some $i$ ($1 \le i \le t$).
+
+For $1 \le i \le t$, let $F_i$ be a minimal $C_i$-ring. By repeated applications of (6.5), we find that we may choose $F_1, \dots, F_t$ so that they bound mutually disjoint open discs. Then we may arrange (by shrinking these discs slightly) that distinct $F_i$'s intersect only in $V(\Gamma)$. Thus, there is a set $\{F_1, \dots, F_t\}$, where $F_i$ is a $C_i$-ring ($1 \le i \le t$), such that $F_1, \dots, F_t$ bound mutually disjoint open discs, and such that $F_i \cap F_{i'} \subseteq V(\Gamma)$ for $1 \le i < i' \le t$. We call the set $\{F_1, \dots, F_t\}$ a \textit{foundation} for $\Gamma$.
+
+\sectionhead{7. Tree-Width}
+
+A hypertree is a triple $(V, T, \mathcal{F})$ where $V$ is a finite set, $T$ is a tree, and $\mathcal{F} = (X_t ; t \in V(T))$ is a family of subsets of $V$, such that
+
+\hspace*{12pt}(i) $\bigcup (X_t ; t \in V(T)) = V$
+
+\hspace*{12pt}(ii) for $t, t', t'' \in V(T)$, if $t'$ lies on the path of $T$ between $t$ and $t''$ then $X_t \cap X_{t''} \subseteq X_{t'}$.
+
+A graph $G$ is said to have \textit{tree-width} $w$ if $w \ge 0$ is minimum such that there is a hypertree $(V, T, \mathcal{F})$ with $V = V(G)$, and with
+
+\hspace*{12pt}(i) $|X_t| \le w + 1$ for each $t \in V(T)$, and
+
+\hspace*{12pt}(ii) for each edge $e$ of $G$ some $X_t$ contains both ends of $e$.
+
+We define the \textit{tree-width} of a drawing of a graft $(G, S)$ to be the tree-width of $G$. For more about tree-width, see [7, 8, 9]. The following is proved in [7].
+
+\stmt
+(7.1) \textit{Let $r, s \ge 0$ be integers. Then there is an integer $w$ such that every drawing in a disc with no $(r, s)$-nest has tree-width $\le w$.}
+
+\sectionhead{8. Centred \textsc{O-a}rcs}
+
+Again, let $\Gamma$ be a drawing in a disc $\Sigma$, and let $F$ be a $\Gamma$-normal $O$-arc. Let $|F \cap V(\Gamma)| = r$. We say that $F$ is \textit{centred} if $\Gamma$ has a $(r, s)$-nest $(C_1, \dots, C_s)$

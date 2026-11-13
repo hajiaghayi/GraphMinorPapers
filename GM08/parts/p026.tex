@@ -1,0 +1,25 @@
+\origpage{280}{ROBERTSON AND SEYMOUR}
+\noindent parts, which we call the \textit{sides} of $F$. If $F_1$, $F_2$ are hoops and $F_2 - F_1$ lies completely in one side of $F_1$, it follows that $F_1 - F_2$ lies completely in one side of $F_2$. In these circumstances we say that $F_1$, $F_2$ are \textit{laminar}. If $F_1$, $F_2$ are distinct laminar hoops, then $\Sigma$ is divided naturally into three parts---the side of $F_1$ not containing $F_2 - F_1$, the side of $F_2$ not containing $F_1 - F_2$, and the remainder, which we denote by $\Sigma(F_1, F_2)$.
+
+A tube in a cylinder $\Sigma$ is a triple $(\Gamma, F_1, F_2)$, where $\Gamma$ is a drawing in $\Sigma$ and $F_1$, $F_2$ are $\Gamma$-normal laminar hoops such that $U(\Gamma) \subseteq \Sigma(F_1, F_2)$. The width of a tube $(\Gamma, F_1, F_2)$ is the largest value of $r$ such that for every $\Gamma$-normal hoop $F \subseteq \Sigma(F_1, F_2)$, either $F \cap V(\Gamma) = F_1 \cap V(\Gamma)$, or $F \cap V(\Gamma) = F_2 \cap V(\Gamma)$, or $|F \cap V(\Gamma)| \ge r$. If there is no such number $r$, we say its width is infinite. The length of a tube $(\Gamma, F_1, F_2)$ is the largest value of $s$ such that $|I \cap V(\Gamma)| \ge s$ for every $\Gamma$-normal $[0, 1]$-arc $I$ with one end in $F_1$ and the other in $F_2$.
+
+If $(\Gamma, F_1, F_2)$ is a tube, and $(G, T)$ is a graft, we say that $(\Gamma, F_1, F_2)$ is a \textit{framing} of $(G, T)$ if there is a bijection $\alpha$ from $V(G)$ to $V(\Gamma)$ and a bijection $\beta$ from $E(G)$ to the set of edges of $\Gamma$, such that
+
+\hspace*{12pt}(i) for $v \in V(G)$ and $e \in E(G)$, $v$ is incident with $e$ if and only if $\alpha(v) \in \beta(e)$
+
+\hspace*{12pt}(ii) for $v \in V(G)$, $\alpha(v) \in F_1 \cup F_2$ if and only if $v \in T$.
+
+If $(G, T)$ has a framing, we say $(G, T)$ is \textit{tubular}. If $(G, T)$ is a tubular graft, its \textit{width} is the maximum width of all its framings and its \textit{length} is the minimum length of all its framings.
+
+\stmt
+(15.1) \textit{Every tubular graft of width $\ge r$ and index $\le k$ is an $r$-train of tubular grafts of width $\ge r + 1$ and index $\le k + 2r$.}
+
+\textit{Proof.} Let $(G, T)$ be a tubular graft of width $\ge r$ and index $\le k$. We wish to show it is an $r$-train of tubular grafts of width $\ge r + 1$ and index $\le k + 2r$. If its width is at least $r + 1$ we are done. We assume then that it has width $r$. Let $(\Gamma, F_1, F_2)$ be a framing of $(G, T)$ with width $r$, on a cylinder $\Sigma$. Choose hoops $H_1, \dots, H_n$ with $n$ maximum such that
+
+\hspace*{12pt}(i) $H_1, \dots, H_n \subseteq \Sigma(F_1, F_2)$ are $\Gamma$-normal, and mutually laminar
+
+\hspace*{12pt}(ii) $|H_i \cap V(\Gamma)| \le r$ ($1 \le i \le n$)
+
+\hspace*{12pt}(iii) the sets $F_1 \cap V(\Gamma)$, $F_2 \cap V(\Gamma)$ and $H_i \cap V(\Gamma)$ ($1 \le i \le n$) are all different.
+
+Define $H_0 = F_1$, $H_{n+1} = F_2$. We assume $H_1, \dots, H_n$ to be numbered in order along $\Sigma$, so that for $1 \le i \le n$, $H_i \subseteq \Sigma(H_{i-1}, H_{i+1})$. Let $\Gamma_i$ be the intersection of $\Gamma$ with $\Sigma(H_{i-1}, H_i)$ ($1 \le i \le n + 1$). From the maximality of $n$, $(\Gamma_i, H_{i-1}, H_i)$ is a tube with width $\ge r + 1$\fix{, provided $|F_1\cap V(\Gamma)|\ge r$ and $|F_2\cap V(\Gamma)|\ge r$}.\fixnote{fix:15.1-proof}{The width exempts every hoop $F$ with $F\cap V(\Gamma)=F_1\cap V(\Gamma)$ or $F\cap V(\Gamma)=F_2\cap V(\Gamma)$, wherever it lies. Such a hoop may lie between $H_{i-1}$ and $H_i$ with fewer than $r+1$ vertices, and the maximality of $n$ says nothing about it. The same hoop may separate $Y_1$ from $Y_n$ with fewer than $r$ vertices. For example, let $\Gamma$ consist of two isolated vertices $x,y$, with $T=\emptyset$, so that $r=1$. If $H_1$ passes through $x$ alone and $H_2$ through $y$ alone, a hoop with no vertex between them shows that $(\Gamma_2,H_1,H_2)$ has width $0$. We prove the case when an end has fewer than $r$ vertices after the printed proof, and with it (15.1) holds as printed.} Let $G_i$ be the subgraph of

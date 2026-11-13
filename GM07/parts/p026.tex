@@ -1,0 +1,24 @@
+\origpage{237}{GRAPH MINORS. VII}
+Choose a cuff $C$ so that $F \cap V(N(C)) \ne \emptyset$. Now, with $\beta$ as before, $v = 2(\beta - k(C) - 2)$ and so $F$ does not have $\ge 2$ vertices in common with each of $B_{k(C)+2}(C), \dots, B_{\beta-1}(C)$; hence $F$ does not meet $B_\beta(C)$. But $F$ surrounds $C$, and $B_1(C)$ is inside $F$, and so $F$ meets every path of $G$ between $B_1(C)$ and $B_\beta(C)$. Choose $i$ with $1 \le i \le k(C)$. There are $v$ mutually vertex-disjoint paths of $G$ between $B_1(C)$ and $B_\beta(C)$, which meet $N(C)$ only in $N_i(C)$; and so $F$ must meet $N_i(C)$, by (1). Since this holds for each value of $i$ ($1 \le i \le k(C)$), claim (b) is true.
+
+This completes the proof of the theorem.
+
+\sectionhead{6. Allowing Smaller Cuffs}
+
+In this section we remove the condition that $|V(G) \cap C| \ge 2$ for each cuff $C$, with the following version of our main result.
+
+\stmt
+(6.1) \textit{Let $\Sigma \cong \Sigma(a, b, c)$, where $c \ge 2$ and $(a, b, c) \ne (0, 0, 2)$. Let $k \ge 0$ be an integer. Let $G$ be a boundary-linked proper graph in $\Sigma$ with $|V(G) \cap bd(\Sigma)| \le 2k - 2c$ and with $\alpha(G) > 9kv(\Sigma, k)$. Let $H$ be a forest in $\Sigma$ with $V(G) \cap bd(\Sigma) = V(H) \cap bd(\Sigma)$. Then $H$ is $G$-feasible.}
+
+\textit{Proof.} Let $g$ be the number of cuffs $C$ of $\Sigma$ with $|V(G) \cap C| \le 1$. We may replace the hypothesis
+\begin{equation*}
+|V(G) \cap bd(\Sigma)| \le 2k - 2c
+\end{equation*}
+by the weaker hypothesis
+\begin{equation*}
+|V(G) \cap bd(\Sigma)| \le 2k - 2g
+\end{equation*}
+and the same conclusion will hold, as we now show. We proceed by induction on $g$. If $g = 0$ the result is true by (5.9). We assume then that $g > 0$. Let $C$ be a cuff with $|V(G) \cap C| \le 1$. Let us choose a $G$-normal $O$-arc $A'$ surrounding $C$ with $|V(G) \cap A'| \le 1$, such that as many vertices and edges of $G$ as possible are included in the union of $A'$ with its inside. Then $A' \subseteq \mathcal{A}_1(C)$, and so by (5.3) $A' \cap \mathcal{A}_1(C') = \emptyset$ for every cuff $C' \ne C$. Therefore there is a vertex of $G$ not in $A'$ or its inside. The maximality condition in our choice of $A'$ now implies that $|V(G) \cap A'| = 1$ and that if $r$ is the region of $G$ with $A' \subseteq \bar{r}$, there is a vertex of $G$ incident with $r$, not in $A'$ or its inside. It follows that we may choose a $G$-normal $O$-arc $A$ surrounding $C$, with $A' - A$ inside $A$, and with $|V(G) \cap A| = 2$. Now $A$ meets no cuff $C' \ne C$; for if it did, $A \cup C'$ would be solid, connected, $G$-normal, and not near-planar, and yet
+\begin{equation*}
+|V(G) \cap (A \cup C')| \le 2k - 2g + 2 \le 9kv(\Sigma, k) < \alpha(G),
+\end{equation*}

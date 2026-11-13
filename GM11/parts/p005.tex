@@ -1,0 +1,29 @@
+\origpage{76}{ROBERTSON AND SEYMOUR}
+\noindent that it is an equivalence relation. A curve is \textit{null-homotopic in} $Z$ if it is homotopic to a constant curve in $Z$.
+
+Similarly, let $S^1$ be the circle $\{(x, y) : x^2 + y^2 = 1\}$. For $\phi \colon S^1 \to \Sigma$, we define $|\phi| = \{\phi(x) : x \in S^1\}$. If $Z \subseteq \Sigma$ and $\phi_0, \phi_1 \colon S^1 \to \Sigma$ are continuous, we say $\phi_0$ is \textit{homotopic to} $\phi_1$ \textit{in} $Z$ if there is a continuous function $\psi \colon S^1 \times [0, 1] \to Z$ such that
+\begin{align*}
+\psi(x, 0) &= \phi_0(x) \quad (x \in S^1) \\
+\psi(x, 1) &= \phi_1(x) \quad (x \in S^1),
+\end{align*}
+and we define \textit{null-homotopic in} $Z$ in the natural way. A subset $Z \subseteq \Sigma$ is \textit{simply-connected} if (i) $Z$ is arc-wise connected, and (ii) every continuous function $\phi \colon S^1 \to Z$ is null-homotopic in $Z$.
+
+We shall frequently need the following lemma.
+
+\stmt
+(3.1) \textit{If $X, Y \subseteq \Sigma$ are closed, and $X$ is simply-connected and $X \cap Y$ is non-empty and arc-wise connected, \fix{and every point $y \in X \cap Y$ has an open neighbourhood $A$ such that $X \cap A$ can be deformed in $X$ into $X \cap Y$ with the points of $X \cap Y \cap A$ kept fixed,} then any continuous $\phi \colon S^1 \to X \cup Y$ is homotopic in $X \cup Y$ to a continuous $\phi' \colon S^1 \to Y$.}\fixnote{fix:3.1}{As printed, (3.1) is false for general closed sets. In the plane, let $K$ be the comb $[0,1] \times \{0\} \cup \{0\} \times [0,1] \cup \bigcup_n \{1/n\} \times [0,1]$, let $X = [0,1]^2$, and let $Y$ be $K$ together with, for each $m$, a semicircle above $y = 1$ with ends $(1/(2m), 1)$ and $(1/(2m+1), 1)$. A curve that runs along the top of the square, over each semicircle, and back through $X$ is not homotopic in $X \cup Y$ to a curve in $Y$, since such a curve would have to meet every semicircle and go down to $y = 0$ between any two of them, infinitely often. The proof below fails at the same point: when the intervals $T_i$ are infinitely many, the curves $\phi'_i$ chosen one at a time need not fit together into a continuous $\phi'$. The added hypothesis holds where the paper uses (3.1), in (6.4) and (7.8), where $X$ is a union of closed discs bounded by circuits of a drawing. With it, (3.1) holds, by a different proof.}
+
+\textit{Proof.} We may assume that $|\phi| \not\subseteq X$ and $|\phi| \not\subseteq Y$. Let
+\begin{equation*}
+T = \{x \in S^1 : \phi(x) \in X - Y\}.
+\end{equation*}
+Then $T$ is open and $T \ne S^1$, and so $T$ may be expressed as a union of disjoint open intervals, $T = \bigcup \{T_i : i \in I\}$, say. For $i \in I$, let $T_i$ have ends $a_i, b_i \in S^1$. Then $T_i \cup \{a_i, b_i\}$ is homeomorphic to $[0, 1]$. Let $\phi'_i \colon T_i \cup \{a_i, b_i\} \to X \cap Y$ be continuous with $\phi'(a_i) = \phi(a_i)$ and $\phi'(b_i) = \phi(b_i)$, and define $\phi' \colon S^1 \to Y$ by
+\begin{align*}
+\phi'(x) &= \phi'_i(x) && \text{if } x \in T_i \cup \{a_i, b_i\} \text{ for some } i \in I \\
+&= \phi(x) && \text{if there is no such } i.
+\end{align*}
+Then $\phi' \colon S^1 \to Y$ is continuous. Moreover, the restriction of $\phi$ to $T_i \cup \{a, b\}$ is homotopic in $X$ to $\phi'_i$, for each $i$, and so $\phi$ is homotopic in $X \cup Y$ to $\phi'$, as required. $\square$
+
+An $O$-arc $F$ in $\Sigma$ is \textit{null-homotopic in} $Z$ if some (or every) homeomorphism $\phi \colon S^1 \to F$ is null-homotopic in $Z$. A circuit $C$ of a drawing $\Gamma$ is \textit{null-homotopic in} $Z$ if $U(C)$ is null-homotopic in $Z$.
+
+A walk in a drawing $\Gamma$ is a finite sequence $v_0, e_1, v_1, e_2, \dots, e_t, v_t$ with $t \ge 0$, where $v_0, v_1, \dots, v_t$ are vertices of $\Gamma$, $e_1, e_2, \dots, e_t$ are edges, and for

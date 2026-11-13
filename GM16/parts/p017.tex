@@ -1,0 +1,20 @@
+\origpage{59}{N. Robertson, P.D. Seymour / Journal of Combinatorial Theory, Series B 89 (2003) 43--76}
+To show that 6.1 implies 5.1 we need the following lemmas. (For the meaning of ``$\lambda$-zone'', see [8, section 3], and for ``$\lambda$-compression'' see [9, section 1].)
+
+\textbf{6.2.} \textit{Let $\Sigma$ be a surface and let $\sigma \ge 0$ be an integer. Let $\mathcal{T}^*$ be a tangle in a graph $G$, and let $H, \mathcal{T}$ be a $\Sigma$-span of order $\theta$. Let $\lambda \ge 2$ be an integer with $\theta \ge 4\lambda + 3$, let $\Lambda \subseteq \Sigma$ be a $\lambda$-zone such that $H \cap (\Sigma \setminus \Lambda)$ is rigid, and let $\mathcal{T}'$ be the tangle in $H' = H \cap (\Sigma \setminus \Lambda)$ of order $\theta - 4\lambda - 2$ which is a $(4\lambda + 2)$-compression of $\mathcal{T}$. Let $v \in V(G) \setminus V(H)$, such that there is a horn at $v$ over $H, \mathcal{T}$ with cardinality $\sigma + 1$ and breadth $\ge \theta$. Then there is a horn at $v$ over $H', \mathcal{T}'$ with cardinality $\sigma$ and breadth $\ge \theta - 4\lambda - 2$.}
+
+\textit{Proof.} First, we remark that $\mathcal{T}'$ exists, by theorem 7.10 of [7]. Let $\{P_1, \dots, P_{\sigma+1}\}$ be a horn at $v$ over $H, \mathcal{T}$, of breadth $\ge \theta$. For $1 \le i \le \sigma + 1$ let $P_i$ have ends $v, u_i$. Now if $u_i, u_j \in \Lambda$ where $i \ne j$, then $d(u_i, u_j) \le 2\lambda$ since $\Lambda$ is a $\lambda$-zone, and yet $d(u_i, u_j) \ge \theta > 2\lambda$ by hypothesis, a contradiction. Thus, $\Lambda$ contains at most one of $u_1, \dots, u_{\sigma+1}$, and hence we may assume that $u_1, \dots, u_\sigma \notin \Lambda$. Since $\mathcal{T}'$ is the $(4\lambda + 2)$-compression of $\mathcal{T}$, it follows that for $1 \le i < j \le \sigma$,
+\begin{equation*}
+d'(u_i, u_j) \ge d(u_i, u_j) - 4\lambda - 2 \ge \theta - 4\lambda - 2.
+\end{equation*}
+Thus $\{P_1, \dots, P_\sigma\}$ is a horn at $v$ over $H', \mathcal{T}'$ of breadth $\ge \theta - 4\lambda - 2$. This proves 6.2. $\square$
+
+\textbf{6.3.} \textit{Let $\Sigma$ be a surface, and let $p, \tau, \chi \ge 0$ and $\psi \ge 1$ be integers. Then there exists $\delta \ge 0$ and $\theta \ge 1$ such that if $\mathcal{T}^*$ is a tangle in a graph $G$, and there is an animal with $\chi$ horns and $\delta$ hairs of strength $\ge (\theta, \tau + 1)$, then either}
+
+\hspace*{12pt}$\bullet$ \textit{there is a hairless animal with $\chi + 1$ horns of strength $\ge (\psi, \tau)$, or}
+
+\hspace*{12pt}$\bullet$ \textit{$\mathcal{T}^*$ controls a $K_p$-minor of $G$.}
+
+\textit{Proof.} We may assume that $p \ge 2$, for otherwise the result holds trivially. Let $\mu = \frac{1}{2}p(p - 1)$, and choose $\theta_1$ so that 5.2 holds (with $\theta$ replaced by $\theta_1$). We may assume, by increasing $\theta_1$, that $\theta_1 \ge \max(\psi, 3)$. Let $\theta = 5\theta_1 + 34$, $\tau' = \max(\tau, 2)$, and $\delta = 2\mu^2 \tau'^2$.
+
+We claim that $\delta, \theta$ satisfy the theorem. For let $\mathcal{T}^*$ be a tangle in a graph $G$, and let $(H, \mathcal{T}, X, Y)$ be an animal of strength $\ge (\theta, \tau + 1)$, with $|X| = \chi$ and $|Y| = \delta$. For each $y \in Y$ let $P_y$ be an $H$-path with ends $y, v(y)$, such that $X \cap V(P_y) = \emptyset$ and $d(y, v(y)) \ge \theta$ where $d$ is the metric of $\mathcal{T}$. For each $y \in Y$ let $Q_y = P_y \setminus \{v(y)\}$, and let $G_0 = \bigcup (Q_y : y \in Y)$. Let $G_1$ be the union of all components of $G_0$ which contain at least two vertices in $Y$, and let $Y_1 = Y \cap V(G_1)$. We may assume that $\mathcal{T}^*$ controls no

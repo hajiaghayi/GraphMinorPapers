@@ -1,0 +1,25 @@
+\origpage{231}{GRAPH MINORS. VII}
+\noindent $\mathscr{A}_r(C)$ to be the union of all solid connected $G$-normal sets $X \subseteq \Sigma$ which surround $C$ and for which $|V(G) \cap X| \le r$. If there is no such $X$, $\mathscr{A}_r(C)$ is defined to be $\emptyset$.
+
+\stmt
+(5.3) \textit{If $\Sigma \not\cong \Sigma(0, 0, 2)$ and $G$ is a proper graph in $\Sigma$, and $C$, $C'$ are distinct cuffs and $r$, $r' \ge 0$ are integers with $r + r' < \alpha(G)$ then $\mathscr{A}_r(C) \cap \mathscr{A}_{r'}(C') = \emptyset$.}
+
+\textit{Proof.} Suppose that $x \in \mathscr{A}_r(C) \cap \mathscr{A}_{r'}(C')$. Choose $X \subseteq \Sigma$ with $x \in X$ such that $X$ is solid, connected, and $G$-normal and such that $X$ surrounds $C$ and $|V(G) \cap X| \le r$; and choose $X'$ similarly for $C'$, $r'$. It is easy to see that, because $\Sigma \not\cong \Sigma(0, 0, 2)$, $X \cup X'$ is not near-planar; but $X \cup X'$ is solid (by (11.6)), connected, and $G$-normal, and
+\begin{equation*}
+|V(G) \cap (X \cup X')| \le r + r' < \alpha(G),
+\end{equation*}
+a contradiction. Thus there is no such $x$, as required.
+
+If $X$ is a topological space and $X' \subseteq \Sigma$ is homeomorphic to $X$, we say that $X'$ is an \textit{$X$-arc}. We define the ends of a $[0, 1]$-arc in the natural way. We need the following topological fact.
+
+\stmt
+(5.4) \textit{Let $F$, $F_0$ be $O$-arcs in $\Sigma$, where $F_0$ is null-homotopic. Let $r > 0$, and let $v_1, \dots, v_r \in F$ be distinct, and in order on $F$. Let the components of $F - \{v_1, \dots, v_r\}$ be $A_1, \dots, A_r$, where $\{v_{i-1}, v_i\} \subseteq \bar{A}_i$ ($1 \le i \le r$). (Throughout, subscripts should be read modulo $r$.) Let $P_1, \dots, P_r$ be $[0, 1]$-arcs, such that for $1 \le i \le r$, $v_i$ is one end of $P_i$ and the other end ($u_i$ say) is in $F_0$. For $1 \le i \le r$, let $B_i = \emptyset$ if $u_{i-1} = u_i$, and be a component of $F_0 - \{u_{i-1}, u_i\}$ if $u_{i-1} \ne u_i$. Suppose that $P_{i-1} \cup P_i \cup A_i \cup B_i$ is planar ($1 \le i \le r$). Then $F$ is null-homotopic.}
+
+We also need the following variation on (5.1).
+
+\stmt
+(5.5) \textit{Let $G$ be a proper graph in a connected surface $\Sigma$, and let $Z$ be the closure of the union of some of the regions of $G$, with $Z \ne \Sigma$. Then $Z$ is planar if and only if every $G$-normal $O$-arc included in $Z$ is null-homotopic.}
+
+We postpone the proof until Section 11.
+
+Let $G$ be a proper graph in $\Sigma$. If $x, y \in \Sigma$ are distinct, we define $d(x, y)$ to be $\min |U(G) \cap X|$, the minimum being taken over all $[0, 1]$-arcs $X$ with ends $x, y$. It is easy to see that $d(x, y)$ exists if $\Sigma$ is connected; and that if $x, y \notin U(G) - V(G)$ the minimum is attained by a $[0, 1]$-arc $X$ which is $G$-normal. If $x = y$, we .define $d(x, y) = 0$ if $x \notin U(G)$, and $d(x, y) = 1$ if $x \in U(G)$. If

@@ -1,0 +1,21 @@
+\origpage{23}{}
+\noindent and so we assume that $a \ne b$. Consequently there is a space $s \subseteq I$ with $v \in V(\mu(s))$. Let $J \subseteq F_1^*$ be the support with ends $b$ and $b'$. Since $I' \subseteq J$ it follows that $v \in V(\mu(J))$. If $b = b'$ then $v \in V(\mu(b))$ by the same argument as above applied to $J$ instead of $I$, and so we may assume that $b \ne b'$. Hence there is a space $s' \subseteq J$ with $v \in V(\mu(s'))$. Now $b$ lies in $F_1^*$ between $s$ and $s'$, and so $v \in V(\mu(b))$ by (V4). This proves our claim that $v \in V(\mu(b))$.
+
+Now since $|V(\mu(b))| = q$ and each of $P_1, \ldots, P_q$ has an end in $V(\mu(b))$, it follows that each vertex of $\mu(b)$ is an end of one of $P_1, \ldots, P_q$, and in particular, $v$ is an end of one of $P_1, \ldots, P_q$. Since $v \in V(P_i)$ and $P_1, \ldots, P_q$ are mutually vertex-disjoint, it follows that $v$ is an end of $P_i$. Similarly, $v \in V(\mu(a'))$ and $v$ is an end of $P'_{i'}$. This proves (i).
+
+For (ii), let $P_1, \ldots, P_q$ and $P'_1, \ldots, P'_q$ be numbered so that for $1 \le i \le q$, $P_i$ and $P'_i$ have a common end in $V(\mu(b))$. For $1 \le i, i' \le q$, if $i \ne i'$ it follows from (i) that $P_i$ is vertex-disjoint from $P'_{i'}$; and so $P_1 \cup P'_1, \ldots, P_q \cup P'_q$ are mutually vertex-disjoint paths satisfying (ii).
+
+For (iii), let $\mu(a) = \{a_1, \ldots, a_q\}, \mu(b) = \{b_1, \ldots, b_q\}, \mu(a') = \{a'_1, \ldots, a'_q\}, \mu(b') = \{b'_1, \ldots, b'_q\}$, numbered so that for $1 \le i \le q$, $P_i$ has ends $a_i$ and $b_i$, and $P'_i$ has ends $a'_i$ and $b'_i$, and for $1 \le i, i' \le q$, if $i \ne i'$ then $b_i \ne a'_{i'}$. Suppose that $1 \le i, i' \le q$ and $a_i = b'_{i'}$. By (i), $i = i'$ and $a_i = b_i = a'_i = b'_i$, and so $P_i = P'_{i'}$. In particular, for $1 \le i, i' \le q$, if $i \ne i'$ then $P_i$ and $P'_{i'}$ are vertex-disjoint. Thus
+\begin{align*}
+\{i : 1 \le i \le q, a_i = b'_i\} &\subseteq \{i : 1 \le i \le q, P_i = P'_i\} \\
+&\subseteq \{i : 1 \le i \le q, V(P_i \cap P'_i) \ne \emptyset\} = \{i : 1 \le i \le q, a'_i = b_i\}.
+\end{align*}
+But from the hypothesis of (iii), $|\mu(a) \cup \mu(b')| = |\mu(a') \cup \mu(b)|$, and so
+\begin{equation*}
+|\{i : 1 \le i \le q, a_i = b'_i\}| = |\{i : 1 \le i \le q, a'_i = b_i\}|.
+\end{equation*}
+We therefore have equality throughout, and in particular for $1 \le i \le q$, if $P_i$ meets $P'_i$ then $P_i = P'_i$. Then (iii) follows. $\square$
+
+\textbf{6.2} \textit{Let $\Gamma, F_1^*, \ldots, F_r^*, H_1, \ldots, H_r, \mu$ be a presentation of a graph $G$ in some surface $\Sigma$. Let $I \subseteq F_1^*$ be a support with ends $a, b$. Then there are $|V(\mu(a))|$ mutually vertex-disjoint paths of $\mu(I)$ between $V(\mu(a))$ and $V(\mu(b))$.}
+
+\textbf{Proof.} This follows by induction on the number of spaces included in $I$, applying (6.1)(ii) if $I$ has an internal point in $V(\Gamma)$, and applying (V3) otherwise. $\square$

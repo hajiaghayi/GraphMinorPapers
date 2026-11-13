@@ -1,0 +1,27 @@
+\origpage{189}{GRAPH MINORS, XVII}
+\stmt
+(10.3) \textit{For each cuff $\Theta$, there is no $(A, B) \in \mathcal{T}$ of order $\le z$ with $\gamma(N(\Gamma) \cap \Theta) \subseteq V(A)$.}
+
+\textit{Proof.} Suppose that there is such an $(A, B)$, and choose it with $A$ maximal and $B$ minimal. By [1, Theorem (2.8)] applied to a separation $(B_1, B_2)$ of $B$ with $B_1 \cap B_2 = A \cap B$, we deduce that $G/V(A)$ is connected. By (4.3), since $A$ has $\le z < \operatorname{ord}(\mathcal{T}) - 2p$ attachments, there exists $n_0 \in N(\Gamma)$ with $\gamma(n_0) \notin V(A)$. By (5.1) and (10.2), there exists $c_0 \in C(\Gamma)$ bordering $\Theta$ with $V(\alpha(c_0)) \nsubseteq V(A)$. Since $G/V(A)$ is connected there is a path $P$ of $(G/V(A))^*$ with one end $\gamma(n_0)$ and the other in $V(\alpha(c_0))$. But by (2.1), $(A_1, A_2)$ is a separation of $G$ where
+\begin{align*}
+A_1 &= \bigcup (\alpha(c) \colon c \in C(\Gamma) \text{ borders } \Theta) \\
+A_2 &= \bigcup (\alpha(c) \colon c \in C(\Gamma) \text{ does not border } \Theta)
+\end{align*}
+and $V(A_1 \cap A_2) \subseteq \gamma(N(\Gamma) \cap \Theta)$. Since $P$ has one end in $V(A_1)$ and the other in $V(A_2)$ (for $\gamma(n_0) \in V(A_2)$ by (8.7)) it follows that $V(P \cap A_1 \cap A_2) \ne \emptyset$. But $V(P) \subseteq V(G) - V(A)$, and
+\begin{equation*}
+V(A_1 \cap A_2) \subseteq \gamma(N(\Gamma) \cap \Theta) \subseteq V(A),
+\end{equation*}
+a contradiction. $\square$
+
+\sectionhead{11. \textsc{Surface} \textsc{Separations} \textsc{In} A \textsc{True} \textsc{Portrayal}}
+
+This section is devoted to analyzing separations $(A, B) \in \mathcal{T}$ with $\alpha(c_0) \subseteq A$ of order $\le |V(\alpha(c_0) \cap \alpha(-c_0))|$, for cells $c_0$ in a true portrayal. Throughout this section $\pi = (\Sigma, \Gamma, \alpha, \beta, \gamma)$ is a true, $(2p + 4)$-redundant, $\mathcal{T}$-central portrayal of a hypergraph $G$, with warp $\le p$, and $\operatorname{ord}(\mathcal{T}) > 6p + 8$. For $I \subseteq C(\Gamma)$ we define $\gamma(I) = \bigcup (\gamma(\tilde{c}) \colon c \in I)$. We begin with the following.
+
+\stmt
+(11.1) \textit{Let $I, J$ be a partition of $C(\Gamma)$ with $\gamma(I), \gamma(J) \ne N(\Gamma)$ and $|\gamma(I) \cap \gamma(J)| \le 3$. Then $|\gamma(I) \cap \gamma(J)| = 3$ and there is a disc $\Delta \subseteq \Sigma$ such that}
+
+\hspace*{12pt}(i) \textit{$\{c \in C(\Gamma) \colon c \subseteq \Delta\}$ is one of $I, J$,}
+
+\hspace*{12pt}(ii) \textit{$\alpha(\Delta)$ is small, and}
+
+\hspace*{12pt}(iii) \textit{either $\operatorname{bd}(\Delta)$ is a $\Gamma$-normal $O$-arc in $\Sigma$ and $N(\Gamma) \cap \operatorname{bd}(\Delta) = \gamma(I) \cap \gamma(J)$, or $F \subseteq \operatorname{bd}(\Delta) \subseteq F \cup \operatorname{bd}(\Sigma)$ and $N(\Gamma) \cap F = \gamma(I) \cap \gamma(J)$ for some $\Gamma$-normal $I$-arc $F$.}

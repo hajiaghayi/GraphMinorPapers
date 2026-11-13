@@ -1,0 +1,32 @@
+\origpage{562}{N. Robertson, P. Seymour / Journal of Combinatorial Theory, Series B 102 (2012) 530--563}
+\hspace*{12pt}(10) $d(D, \Sigma \setminus \Delta) \ge \theta - \theta' - 2$, \textit{and in particular,} $D \subseteq \Delta$.
+
+\textit{Subproof.} Let $x \in \Sigma \setminus \Delta$. By (8), $d(v^*, x) \le \theta' + 2$, and by hypothesis (xiv), $d(v^*, D) \ge \theta$, and so
+\begin{equation*}
+\theta \le d(v^*, D) \le d(v^*, x) + d(x, D) \le \theta' + 2 + d(x, D).
+\end{equation*}
+This proves (10).
+
+\hspace*{12pt}(11) $d(v, \Sigma \setminus \Delta) \ge \theta'$ \textit{for all} $v \in V(\Gamma \cap K)$, \textit{and} $d(D(A), \Sigma \setminus \Delta) \ge \theta'$ \textit{for all} $A \in \mathcal{A}'$ \textit{with} $A \cap K \ne N_W$.
+
+\textit{Subproof.} If $v \in V(\Gamma \cap K)$, then by (7), $d(v, \Sigma \setminus \Delta_0) \le 7$. Since $\Sigma \setminus \Delta_0 \subseteq D$, it follows that $d(v, D) \le 7$, and so by (9),
+\begin{equation*}
+\theta - \theta' - 2 \le d(D, \Sigma \setminus \Delta) \le d(D, v) + d(v, \Sigma \setminus \Delta) \le 7 + d(v, \Sigma \setminus \Delta)
+\end{equation*}
+and so $d(v, \Sigma \setminus \Delta) \ge \theta - \theta' - 9 \ge \theta'$ as required. Secondly, let $A \in \mathcal{A}'$ with $A \cap K \ne N_W$, and let $z \in A(\Gamma)$ with $z \cap D(A) \ne \emptyset$. By (7), $A \cap K_0 = N_W$, and so there exists $A' \in \mathcal{A} \setminus \mathcal{A}'$ with $A \cap A' \ne N_W$. Hence $D(A) \cap D(A') \ne \emptyset$, and so by (5) and (6), $d(z, v(A')) \le 7$. But $d(v(A'), \Sigma \setminus \Delta_0) \le 4$ since $A' \notin \mathcal{A}'$, and so $d(z, \Sigma \setminus \Delta_0) \le 11$. Since $\Sigma \setminus \Delta_0 \subseteq D$, it follows that $d(z, D) \le 11$. Hence by (10),
+\begin{equation*}
+\theta - \theta' - 2 \le d(D, \Sigma \setminus \Delta) \le d(z, D) + d(z, \Sigma \setminus \Delta) \le 11 + d(z, \Sigma \setminus \Delta),
+\end{equation*}
+and so $d(z, \Sigma \setminus \Delta) \ge \theta - \theta' - 13 \ge \theta'$. This proves (11).
+
+From (8)--(11), we see that (J5) holds with $\mathcal{A}, \theta$ replaced by $\mathcal{A}', \theta'$. Let $(H, \chi)$ belong to the $\delta$-folio of $(G, \omega)$, and let $\phi$ be a model of $(H, \chi)$ in $(G, \omega)$. Then (J6) is satisfied with $\mathcal{A}$ replaced by $\mathcal{A}'$, since $K \cup \bigcup(A : A \in \mathcal{A}') = G$.
+
+\hspace*{12pt}(12) \textit{For each} $A \in \mathcal{A}'$ \textit{there is no separation} $(C, D)$ \textit{of} $G \setminus W$ \textit{of order} $< |\bar{\pi}(A)|$ \textit{such that} $A \setminus W \subseteq C$ \textit{and} $(C \cap \Gamma, D \cap \Gamma) \in \mathcal{T}$.
+
+\textit{Subproof.} Suppose that $(C, D)$ is such a separation. By hypothesis (viii), there are $|\bar{\pi}(A)|$ mutually vertex-disjoint paths of $J \setminus W$ between $\bar{\pi}(A)$ and $\Pi$, and therefore there is a path $P$ of $J \setminus W$ between $\bar{\pi}(A)$ and $\Pi$ with $V(P) \subseteq V(C) \setminus V(C \cap D)$. Since $\Pi \cap V(C) \nsubseteq V(D)$ and $\Gamma$ is a subdivision of a 3-connected graph, and $(C \cap \Gamma, D \cap \Gamma)$ has order $\le |\bar{\pi}(A)| - 1 \le 2$, it follows that $C \cap \Gamma$ is a path with both ends in $V(C \cap D \cap \Gamma)$. In particular, $C \cap \Gamma$ is connected, and $|V(C \cap D)| = 2$, and $v(A) \in V(C)$, and so there is a path of $C \cap \Gamma$ between $v(A)$ and $\Pi$. Consequently $d(v(A), \Pi) \le 4$, and so $A \notin \mathcal{A}'$, a contradiction. This proves (12).
+
+Now we verify (J7), with $\mathcal{A}$ replaced by $\mathcal{A}'$. The first condition of (J7) follows from hypothesis (ix), and the second from (12). For the third, let $A \in \mathcal{A}'$. By (3), $\Gamma \cap A = \Gamma \cap D(A)$. If $|bd(D(A)) \cap V(\Gamma)| \le 2$ then by hypothesis (i) and (5), $\Gamma \cap D(A)$ is either a path with both ends in $bd(D(A))$, or $E(\Gamma \cap D(A)) = \emptyset$ and $V(\Gamma \cap D(A)) \subseteq \bar{\pi}(A)$, and (J7)(i) or (J7)(ii) is true, as required. We assume then that $|bd(D(A)) \cap V(\Gamma)| = 3$, $bd(D(A)) \cap V(\Gamma) = \{s_1, s_2, s_3\}$ say, and assume (J7)(iv) is false, and without loss of generality that every path of $\Gamma \cap A$ between $s_1$ and $s_2$ uses $s_3$. Since $\Gamma \cap A$ is a drawing in $D(A)$, and $s_1, s_2, s_3 \in bd(D(A))$, there is a region of $\Gamma \cap A$ in $D(A)$ incident with $s_3$ and including the open line segment in $bd(D(A))$ with ends $s_1, s_2$. Since $\Gamma$ is a subdivision of a 3-connected graph, it follows that (J7)(i), (J7)(ii) or (J7)(iii) is true, as required. Consequently (J7) holds with $\mathcal{A}$ replaced by $\mathcal{A}'$.
+
+\hspace*{12pt}(13) \textit{For every} $A \in \mathcal{A}'$ \textit{with} $D(A) \cap \Delta = \emptyset$ \textit{and every} $v \in V(\Gamma)$ \textit{with} $v \notin \Delta$, \textit{there exists} $A' \in \mathcal{A}'$ \textit{with} $d(v, D(A')) \le \eta$ \textit{such that} $(A', \pi(A') + \omega)$ \textit{has the same} $\delta$\textit{-folio as} $(A, \pi(A) + \omega)$.
+
+\textit{Subproof.} Since $D(A) \cap \Delta = \emptyset$ and $bd(\Delta) \subseteq U(\Gamma)$, it follows from (6) that $v(A) \notin \Delta \setminus bd(\Delta)$, and hence from (9), $d(v^*, v(A)) \le \theta' + 2$. Hence $v(A) \in \Sigma \setminus D$, because by hypothesis (xiv),

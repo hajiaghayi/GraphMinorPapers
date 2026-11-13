@@ -1,0 +1,30 @@
+\origpage{94}{N. Robertson, P. Seymour / Journal of Combinatorial Theory, Series B 89 (2003) 77--108}
+For $0 \le j \le k$, let $G_j$ be the rooted hypergraph with
+\begin{align*}
+V(G_j) &= V(M(G, \mathscr{L})) \cup \bigcup (V(A_i) \colon j < i \le k), \\
+E(G_j) &= E(M(G, \mathscr{L})) \cup \{e(A_i) \colon 1 \le i \le j\} \cup \bigcup (E(A_j) \colon j < i \le k), \\
+\pi(G_j) &= \pi(G),
+\end{align*}
+where for $e \in E(M(G, \mathscr{L}))$ its ends are as in $G^-$, for $1 \le i \le j$ the ends of $e(A_i)$ are the vertices in $\bar{\pi}(A_i)$, and for $e \in E(A_i)$ where $j < i \le k$ its ends are as in $A_i^-$. For
+\begin{equation*}
+e \in dom(\mu) \cap (E(M(G, \mathscr{L})) \cup E(A_{j+1}) \cup \dots \cup E(A_k))
+\end{equation*}
+let $\mu_j(e) = \mu(e)$, and for $1 \le i \le j$ let $\mu_j(e(A_i)) = \pi(A_i)$. For
+\begin{equation*}
+e \in E(M(G, \mathscr{L})) \cup E(A_{j+1}) \cup \dots \cup E(A_k)
+\end{equation*}
+let $\Delta_j(e) = \Delta(e)$, and for $1 \le i \le j$ let $\Delta_j(e(A_i)) = gr(P|A_i)$, with $V(\Delta_j(e(A_i))) = \bar{\pi}(A_i)$. Then $P_j = (G_j, \mu_j, \Delta_j)$ is a patchwork for $0 \le j \le k$, and $P_0 = P$, and $P_k = P'$. It therefore suffices to show that for $1 \le j \le k$, $K$ is feasible in $P_{j-1}$ if and only if $K$ is feasible in $P_j$, since $\pi(G_j) = \pi(G)$.
+
+Let $B$ be $G_j \setminus e(A_j)$, and let $A'_j$ be the rooted hypergraph with $E(A'_j) = \{e(A_j)\}$, $V(A'_j) = \bar{\pi}(A_j)$ (where the ends of $e(A_j)$ are the vertices in $\bar{\pi}(A_j)$), and $\pi(A'_j) = \pi(A_j)$. Since
+\begin{equation*}
+V(A'_j) = \bar{\pi}(A_j) \subseteq V(B),
+\end{equation*}
+it follows that $\bar{\pi}(A_j) = V(A_j \cap B)$ and $\pi(A'_j) = V(A'_j) \cap B$, and so $(A_j, B)$ is a separation of $G_{j-1}$, and $(A'_j, B)$ is a separation of $G_j$.
+
+\hspace*{12pt}(1) \textit{A grouping is feasible in $P_{j-1} | A_j$ if and only if it is feasible in $P_j | A'_j$.}
+
+\textbf{Subproof.} $P_{j-1} | A_j = P | A_j$, and a grouping with vertex set $\bar{\pi}(A_j)$ is feasible in $P_j | A'_j$ if and only if it belongs to $\Delta_j(\delm{E}\fix{e}(A_j))$;\fixnote{fix:5.4-claim1}{Here $\Delta_j$ is defined on the edge $e(A_j)$, not on the set $E(A_j)$.} that is, it is feasible in $P | A_j = P_{j-1} | A_j$. This proves (1).
+
+Suppose that $K$ is feasible in one of $P_{j-1}$, $P_j$ (say $Q_1$), and let $H_1$ be the corresponding realization of $Q_1$ such that for distinct $x, y \in V(K)$, $x, y$ are connected in $H_1$ if and only if they are adjacent in $K$. By (1) and 5.2 there is a realization $H_2$ of $Q_2$ (where $\{P_{j-1}, P_j\} = \{Q_1, Q_2\}$) such that for distinct $x, y \in V(B)$, $x, y$ are connected in $H_1$ if and only if they are connected in $H_2$. But $V(K) \subseteq V(B)$, and so for distinct $x, y \in V(K)$, $x, y$ are connected in $H_2$ if and only if they are adjacent in $K$. Thus $K$ is feasible in $Q_2$. This proves 5.4. $\square$
+
+Now let $P = (G, \mu, \Delta, \phi)$ be a partial $\Omega$-patchwork, and let $\mathscr{L}$ be a rooted location in $G$. We call $(P, \mathscr{L})$ a \textit{partial $\Omega$-place}. If $dom(\phi) = E(G)$ we call $(P, \mathscr{L})$ an \textit{$\Omega$-place}. For $e \in E(M(G, \mathscr{L})) \cap dom(\phi)$ let $\phi'(e) = \phi(e)$, and let $(G', \mu', \Delta')$ be the heart of $((G, \mu, \Delta), \mathscr{L})$; then $(G', \mu', \Delta', \phi')$ is a partial $\Omega$-patchwork which we call the \textit{heart} (again denoted by $P | \mathscr{L}$) of $(P, \mathscr{L})$.

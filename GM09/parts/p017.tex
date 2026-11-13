@@ -1,0 +1,32 @@
+\origpage{56}{ROBERTSON AND SEYMOUR}
+For if $e$ is a loop or multiple edge, then $(G \setminus e, \Omega)$ is a smaller counterexample.
+
+\hspace*{12pt}(2) \textit{No vertex $v \in \bar{\Omega}$ is isolated.}
+
+For otherwise $(G \setminus v, \Omega \mid (\bar{\Omega} - \{v\}))$ is a smaller counterexample.
+
+\hspace*{12pt}(3) \textit{If $v \in \bar{\Omega}$ has valency 1, then its neighbor is in $\bar{\Omega}$.}
+
+For otherwise $(G', \Omega)$ is a smaller counterexample, where $G'$ is the graph obtained from $G$ by contracting the edge incident with $v$ (and $\Omega$ is interpreted as a cyclic permutation in $V(G')$ in the natural way).
+
+\hspace*{12pt}(4) \textit{If $u, v \in \bar{\Omega}$ are distinct and $\Omega(u, v) = \emptyset$, then $u$ and $v$ are not adjacent in $G$.}
+
+For if an edge $e$ joins $u$ and $v$, then $(G \setminus e, \Omega)$ is a smaller counterexample. We claim that we may choose a transaction $\mathcal{P}$ in $(G, \Omega)$ such that
+
+\hspace*{12pt}(a) $|\mathcal{P}| = 3p + 8$
+
+\hspace*{12pt}(b) for each $P \in \mathcal{P}$, no internal vertex of $P$ is in $\bar{\Omega}$, and
+
+\hspace*{12pt}(c) subject to (a) and (b), $C(\mathcal{P})$ is maximal.
+
+For it is possible to choose a transaction $\mathcal{P}$ satisfying (a) since $(G, \Omega)$ has sophistication $\ge 3p + 8$. Let $(A, B)$ be a fence for $\mathcal{P}$, for each $P \in \mathcal{P}$ choose an $A \to B$ subpath of $P$, and let $\mathcal{P}'$ be the collection of these subpaths. Then $\mathcal{P}'$ satisfies (a) and (b); and so the choice of $\mathcal{P}$ satisfying (a), (b), and (c) is possible.
+
+We assume now that $P \in \mathcal{P}$ is peripheral, with ends $a, b$ where $\Omega(a, b) \cap V(\mathcal{P}) = \emptyset$, and that $P$ is separating. Let $(G_1, G_2)$ be a separation of $G$ with $V(P) = V(G_1 \cap G_2)$, $\Omega(a, b) \subseteq V(G_1)$ and $\Omega(b, a) \subseteq V(G_2)$, chosen so that $G_2$ is minimal. Under these conditions the following remarks (5)-(8) apply.
+
+\hspace*{12pt}(5) \textit{If $P'$ is an $\Omega$-path with $P' \subseteq G_1$, then $C(\mathcal{P}) \subseteq C((\mathcal{P} - \{P\}) \cup \{P'\})$.}
+
+We observe first that $\mathcal{P}' = (\mathcal{P} - \{P\}) \cup \{P'\}$ is a transaction; and certainly $U(\mathcal{P}) \subseteq U(\mathcal{P}')$. Now suppose that $v \in C(\mathcal{P})$, and let $Q$ be a path of $G$ between $\{v\}$ and $U(\mathcal{P})$ disjoint from every peripheral member of $\mathcal{P}$. Then in particular $Q \cap P$ is null, and so $Q \subseteq G_2 \setminus V(G_1)$. Hence $Q \cap P'$ is null, and so $Q$ is disjoint from every peripheral member of $\mathcal{P}'$, which implies that $v \in C(\mathcal{P}')$. Hence $C(\mathcal{P}) \subseteq C(\mathcal{P}')$.
+
+\hspace*{12pt}(6) \textit{If $P'$ is an $\Omega$-path with $P' \subseteq G_1$, then $P'$ has ends $a, b$.}
+
+Suppose that $P'$ has an end $c \ne a, b$. Choose a minimal $\Omega$-path $P'' \subseteq P'$ with $c$ one end. Then no internal vertex of $P''$ is in $\bar{\Omega}$. Let $\mathcal{P}' = (\mathcal{P} - \{P\}) \cup \{P''\}$. Then $\mathcal{P}'$ satisfies (a) and (b), and by (5), $C(\mathcal{P}) \subseteq C(\mathcal{P}')$; hence by (c), $C(\mathcal{P}) = C(\mathcal{P}')$. However, one end of $P$ is in $U(\mathcal{P}') \subseteq C(\mathcal{P}')$, and neither end of $P$ is in $C(\mathcal{P})$. This is a contradiction.

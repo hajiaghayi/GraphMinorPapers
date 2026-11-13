@@ -1,0 +1,124 @@
+\origpage{234}{ROBERTSON AND SEYMOUR}
+\noindent $|V(G_1^- \cap G_2^-)|$. A \textit{tree-decomposition} $(T, \tau)$ of a rooted hypergraph $G$ consists of a tree $T$ and a function $\tau$ which assigns to each $t \in V(T)$ a rooted hypergraph $\tau(t)$, such that
+
+\hspace*{12pt}(i) for each $t \in V(T)$, $\tau(t)^- \subseteq G^-$
+
+\hspace*{12pt}(ii) $\bigcup_{t \in V(T)} \tau(t)^- = G^-$
+
+\hspace*{12pt}(iii) for distinct $t_1, t_2 \in V(T)$, $E(\tau(t_1)^- \cap \tau(t_2)^-) = \emptyset$
+
+\hspace*{12pt}(iv) for $t_1, t_2, t_3 \in V(T)$, if $t_2$ lies on the path of $T$ between $t_1$ and $t_3$ then $\tau(t_1)^- \cap \tau(t_3)^- \subseteq \tau(t_2)^-$
+
+\hspace*{12pt}(v) $\pi(\tau(o(T))) = \pi(G)$
+
+\hspace*{12pt}(vi) for each edge $f \in E(T)$ with head $t_1$ and tail $t_2$, $\bar{\pi}(\tau(t_1)) = V(\tau(t_1)^- \cap \tau(t_2)^-)$.
+
+If $T$ is a tree and $f \in E(T)$ we denote by $T^f$, $T_f$ the two components of $T\setminus f$, where $T^f$ has root the head of $f$ and $T_f$ has root $o(T)$. If $v \in V(T)$, we denote by $T^v$ the maximal subtree of $T$ with root $v$; thus if $f \in E(T)$ has head $v$ then $T^v = T^f$. Let $(T, \tau)$ be a tree-decomposition of some rooted hypergraph. If $T'$ is a subtree of $T$ we denote by $\tau \times T'$ the rooted hypergraph $G'$ defined by
+\begin{equation*}
+G'^- = \bigcup_{t \in V(T')} \tau(t)^-
+\end{equation*}
+\begin{equation*}
+\pi(G') = \pi(\tau(o(T'))).
+\end{equation*}
+\stmt
+(3.1) \textit{Let $(T, \tau)$ be a tree-decomposition of some rooted hypergraph $G$. Let $f \in E(T)$ with head $t_1$ and tail $t_2$. Then $(\tau \times T^f, \tau \times T_f)$ is a separation of $G$.}
+
+This is almost identical with [9, Theorem (3.4)] or [8, Theorem (2.4)]\del{ and we omit the proof}. \fix{We give the proof. Let $G_1 = \tau \times T^f$ and $G_2 = \tau \times T_f$. By (i), $G_1^-$
+and $G_2^-$ are subhypergraphs of $G^-$, and $G_1^- \cup G_2^- = G^-$ by (ii), since every vertex
+of $T$ is in $T^f$ or in $T_f$.
+
+\hspace*{12pt}(1) $G_1^- \cap G_2^- = \tau(t_1)^- \cap \tau(t_2)^-$.
+
+Since $t_1 \in V(T^f)$ and $t_2 \in V(T_f)$, the right side is a subhypergraph of the left side.
+Conversely, let $v \in V(G_1^- \cap G_2^-)$. Then $v$ is a vertex of $\tau(s)^-$ and of
+$\tau(r)^-$ for some $s \in V(T^f)$ and $r \in V(T_f)$. Since $T^f$ and $T_f$ are the components of
+$T \setminus f$, the path of $T$ between $s$ and $r$ uses $f$, and so it passes through $t_1$ and
+$t_2$. By (iv), $v$ is a vertex of $\tau(t_1)^-$ and of $\tau(t_2)^-$. Now suppose that some edge
+$e$ is in $E(G_1^- \cap G_2^-)$. Then $e$ is an edge of $\tau(s)^-$ and of $\tau(r)^-$ for some
+$s \in V(T^f)$ and $r \in V(T_f)$, and $s \ne r$ since $T^f$ and $T_f$ are disjoint. This is
+contrary to (iii), and so $G_1^- \cap G_2^-$ has no edges. This proves (1).
+
+By (1) and (iii), $E(G_1^- \cap G_2^-) = E(\tau(t_1)^- \cap \tau(t_2)^-) = \emptyset$, since
+$t_1 \ne t_2$. So $(G_1^-, G_2^-)$ is a separation of $G^-$. Since $T_f$ has root $o(T)$, we have
+$\pi(G_2) = \pi(\tau(o(T))) = \pi(G)$ by (v). Since $T^f$ has root $t_1$, we have
+$\bar{\pi}(G_1) = \bar{\pi}(\tau(t_1)) = V(\tau(t_1)^- \cap \tau(t_2)^-)$ by (vi), and this is
+$V(G_1^- \cap G_2^-)$ by (1). Hence $(G_1, G_2)$ is a separation of
+$G$.\fixnote{fix:3.1-proof-added}{The paper says that (3.1) is almost identical with results of
+[9] and [8], and omits the proof. The argument above is the one used in the formalization.}}
+
+The order of the separation in (3.1) is called the \textit{order} of $f$ in $(T, \tau)$.
+
+\stmt
+(3.2) \textit{Let $(T, \tau)$ be a tree-decomposition of a rooted hypergraph $G$, and let $F \subseteq E(T)$. Let $S$ be the contraction of $T$ onto $F$, and for each $s \in V(S)$, let $\sigma(s)$ be $\tau \times T_s$ where $T_s$ is the component of $T\setminus F$ with root $s$. Then $(S, \sigma)$ is a tree-decomposition of $G$.}
+
+The proof is clear\del{, and we omit it}. \fix{We give the details. The vertices of $S$ are $o(T)$ and the heads in $T$ of the edges in $F$,
+and $o(S) = o(T)$, since $o(T)$ is the head of no edge. An edge of $T$ is in $F$ exactly when its head is in $V(S)$. Hence for
+$x \in V(T)$ and $s \in V(S)$, we have $x \in V(T_s)$ if and only if $x \in V(T^s)$ and no vertex
+of the directed path of $T$ from $s$ to $x$ except $s$ is in $V(S)$. In particular every vertex of
+$T$ is in $T_s$ for exactly one $s \in V(S)$, and $T_s$ is a subtree of $T^s$.
+
+\hspace*{12pt}(1) \textit{Let $u, s \in V(S)$ and $x \in V(T_s)$. Then $x \in V(T^u)$ if and only
+if $s \in V(S^u)$.}
+
+First, if $s \in V(S^u)$ then $s \in V(T^u)$. For let $f \in F$, with head $t$ and tail $t'$ in $T$,
+and let $s'$ be the tail of $f$ in $S$. Then $s'$ is the root of the component of $T \setminus F$
+containing $t'$, and so $t' \in V(T^{s'})$, and $t \in V(T^{s'})$. Applying this to the edges of
+the directed path of $S$ from $u$ to $s$ shows that $s \in V(T^u)$. Second, if $x \in V(T^u)$ then
+$s \in V(T^u)$. For $u$ and $s$ both lie on the directed path of $T$ from $o(T)$ to $x$. If
+$s \notin V(T^u)$, then $u \ne s$ and $u$ lies on the directed path of $T$ from $s$ to $x$, which
+is impossible by the description of $T_s$ above, since $u \in V(S)$ and $x \in V(T_s)$. Third, if $s \in V(T^u)$ then
+$s \in V(S^u)$. We prove this by induction on the length of the directed path of $S$ from $o(S)$
+to $s$. We may assume that $u \ne s$. Then $s \ne o(T)$, since $s \in V(T^u)$, and so $s$ is the head of an edge
+$f \in F$. Let $t'$ be the tail of $f$ in $T$, and $s'$ its tail in $S$. Since $u \ne s$ we have
+$t' \in V(T^u)$, and $t' \in V(T_{s'})$, so $s' \in V(T^u)$ by the second statement, and
+$s' \in V(S^u)$ by induction. Hence $s \in V(S^u)$. Now (1) follows. For if $x \in V(T^u)$, then
+$s \in V(T^u)$ by the second statement, and so $s \in V(S^u)$ by the third. Conversely, if
+$s \in V(S^u)$, then $s \in V(T^u)$ by the first statement, and $x \in V(T^s) \subseteq V(T^u)$.
+This proves (1).
+
+\hspace*{12pt}(2) \textit{Let $s_1, s_2, s_3 \in V(S)$, where $s_2$ lies on the path of $S$
+between $s_1$ and $s_3$, and let $x_1 \in V(T_{s_1})$ and $x_3 \in V(T_{s_3})$. Then some vertex of
+$T_{s_2}$ lies on the path of $T$ between $x_1$ and $x_3$.}
+
+Let $a$ be the vertex of the path of $T$ between $x_1$ and $x_3$ nearest to $o(T)$. Thus
+$x_1, x_3 \in V(T^a)$, and a vertex $t$ of $T$ lies on this path if and only if $t \in V(T^a)$ and
+one of $x_1, x_3$ is in $V(T^t)$. Since $s_2$ lies on the path of $S$ between $s_1$ and $s_3$, one
+of $s_1, s_3$ is in $V(S^{s_2})$, and so one of $x_1, x_3$ is in $V(T^{s_2})$, by (1). If
+$s_2 \in V(T^a)$, then $s_2$ lies on the path of $T$ between $x_1$ and $x_3$, and
+$s_2 \in V(T_{s_2})$, as required. Otherwise, since $s_2$ lies on the directed path of $T$ from
+$o(T)$ to $x_1$ or to $x_3$, and $a$ lies on both, we have $a \in V(T^{s_2})$. Let
+$u \in V(S)$ with $a \in V(T_u)$. Then $x_1, x_3 \in V(T^a) \subseteq V(T^u)$, and so
+$s_1, s_3 \in V(S^u)$ by (1). The subtree $S^u$ contains $s_1$ and $s_3$, and so it contains the
+path of $S$ between them, and in particular $s_2 \in V(S^u)$. Also $u \in V(S^{s_2})$, by (1) applied to $a$, since
+$a \in V(T^{s_2})$. Hence $u = s_2$, and so $a$ is a vertex of $T_{s_2}$ on the path of $T$ between
+$x_1$ and $x_3$. This proves (2).
+
+Now we check (i)--(vi) for $(S, \sigma)$. (i) holds by (i) for $(T, \tau)$. For (ii), each vertex and each edge of $G^-$ belongs to $\tau(x)^-$ for some
+$x \in V(T)$, by (ii) for $(T, \tau)$, and $x \in V(T_s)$ for some $s \in V(S)$, and then it belongs
+to $\sigma(s)^-$. For (iii), let $s_1, s_2 \in V(S)$ be distinct, and suppose that $e$ is an edge of
+$\sigma(s_1)^-$ and of $\sigma(s_2)^-$. Then $e$ is an edge of $\tau(x_1)^-$ and of $\tau(x_2)^-$
+for some $x_1 \in V(T_{s_1})$ and $x_2 \in V(T_{s_2})$, and $x_1 \ne x_2$ since $T_{s_1}$ and
+$T_{s_2}$ are disjoint. This is contrary to (iii) for $(T, \tau)$. For (iv), let $s_2$ lie on the
+path of $S$ between $s_1$ and $s_3$. If $s_2$ is $s_1$ or $s_3$ there is nothing to prove, and so we
+may assume that $s_1 \ne s_3$. Then $\sigma(s_1)^- \cap \sigma(s_3)^-$ has no edges, as we just
+showed. Let $v$ be one of its vertices. Then $v$ is a vertex of $\tau(x_1)^-$ and of $\tau(x_3)^-$
+for some $x_1 \in V(T_{s_1})$ and $x_3 \in V(T_{s_3})$. By (2), some $x_2 \in V(T_{s_2})$ lies on
+the path of $T$ between $x_1$ and $x_3$, and so $v$ is a vertex of $\tau(x_2)^-$ by (iv) for
+$(T, \tau)$. Thus $v$ is a vertex of $\sigma(s_2)^-$. For (v), the root of $T_{o(S)}$ is
+$o(S) = o(T)$, and so $\pi(\sigma(o(S))) = \pi(\tau(o(T))) = \pi(G)$ by (v) for $(T, \tau)$.
+For (vi), let $f \in F$ have head $t_1$ and tail $t_2$ in $T$. Then $t_1$ is the head of $f$ in $S$,
+and its tail in $S$ is the vertex $s \in V(S)$ with $t_2 \in V(T_s)$. Since $t_1$ is the root of
+$T_{t_1}$, we have $\bar{\pi}(\sigma(t_1)) = \bar{\pi}(\tau(t_1)) = V(\tau(t_1)^- \cap \tau(t_2)^-)$
+by (vi) for $(T, \tau)$. This set is contained in $V(\sigma(t_1)^- \cap \sigma(s)^-)$, since
+$t_1 \in V(T_{t_1})$ and $t_2 \in V(T_s)$. For the converse inclusion, $T_{t_1}$ is a subtree of
+$T^{t_1} = T^f$. Also $T_s$ is a subtree of $T_f$. For if some $x \in V(T_s)$ is in $V(T^{t_1})$,
+then $s \in V(S^{t_1})$ by (1), which is false since $s$ is the tail of the edge $f$ of $S$ with
+head $t_1$. Hence $\sigma(t_1)^- \subseteq (\tau \times T^f)^-$ and
+$\sigma(s)^- \subseteq (\tau \times T_f)^-$. So $V(\sigma(t_1)^- \cap \sigma(s)^-)$ is
+contained in $V((\tau \times T^f)^- \cap (\tau \times T_f)^-)$, which is
+$V(\tau(t_1)^- \cap \tau(t_2)^-)$ by (1) in the proof of (3.1). This proves
+(vi), and so $(S, \sigma)$ is a tree-decomposition of $G$.\fixnote{fix:3.2-proof-added}{The paper
+says that the proof is clear and omits it. The argument above is the one used in the
+formalization.}}
+
+A \textit{star} $S$ is a tree such that $o(S)$ is the tail of every edge of $S$, and we define $U(S) = V(S) - \{o(S)\}$. A \textit{star-decomposition} is a tree-decomposition $(S, \sigma)$ where $S$ is a star. If $(S, \sigma)$ is a star-decomposition and $s \in U(S)$ we call $\sigma(s)$ a \textit{tip} of $(S, \sigma)$. Let $(T, \tau)$ be a tree-decomposition of $G$, and let $s \in V(T)$. Let $S$ be the maximal star with root $s$ which is a subtree of $T$.

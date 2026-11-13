@@ -1,0 +1,44 @@
+\sectionhead{\textbf{About this copy}}
+
+This is a corrected copy of the paper cited above. The text is retyped from the printed paper.
+It keeps the paper's wording and the numbering of its results, equations and footnotes, and a
+marker such as \origpagemark{$N$} shows where page $N$ of the printed paper begins.
+
+The corrections come from a formalization of the Graph Minors series in the Lean proof
+assistant, \href{https://github.com/mahdi-jfri/GraphMinor}{github.com/mahdi-jfri/GraphMinor},
+in which the results of this paper are proved. Where the formalization found that a statement
+or a step of a proof is wrong as printed, this copy corrects it in place. Where the paper leaves a proof or a step to the reader, this copy adds it, also in blue. Text \del{struck
+through in red} is removed and text \fix{in blue} is inserted. Each change has a note, marked
+\textcolor{fixcolor}{\sffamily F1}, \textcolor{fixcolor}{\sffamily F2}, \dots, that gives the
+reason. The file
+\href{https://github.com/mahdi-jfri/GraphMinor/blob/main/corrections/GM07.md}{corrections/GM07.md}
+of the formalization describes each correction in full. Each note, and each item in the list below, begins with the kind of the change. A \kindname{misprint} is a wrong symbol, index or word. A \kindname{statement} is a result or a claim of the text that is false as printed. A \kindname{degenerate} is a statement that fails only in a trivial case, such as an empty graph or a parameter equal to~$0$. A \kindname{gap} is a step of a proof that does not follow as written. A \kindname{missing} is a proof that the paper omits, leaves to the reader or only sketches, and that this copy adds.
+
+The corrections and added proofs, in the order of the pages:
+\begin{enumerate}\setlength{\itemsep}{1pt}
+\item \kindtag{fix:2.1}\hyperref[fix:2.1]{Statement of (2.1), page 215}: condition (v), that $U(J)$ is connected,
+is added.
+\item \kindtag{fix:2.1-proof}\hyperref[fix:2.1-proof]{Proof of (2.1), page 216}: the proof of the converse is
+completed, using (v).
+\item \kindtag{fix:2.6-proof}\hyperref[fix:2.6-proof]{Proof of (2.6), page 218}: the inequality given by the
+minimality of the net is corrected.
+\item \kindtag{fix:3.2-claim1}\hyperref[fix:3.2-claim1]{Claim (1) in the proof of (3.2), page 219}: $\alpha$ must also
+fix $s$ and $t$.
+\item \kindtag{fix:3.4-surrounds}\hyperref[fix:3.4-surrounds]{Proof of (3.4), page 220}: the definition of ``surrounds''
+asks also that any two points of $Y$ in the same region of $G$ be joined by a path of $H$.
+\item \kindtag{fix:3.5-proof-added}\hyperref[fix:3.5-proof-added]{Proof of (3.5), page 221}: the proof is added.
+\item \kindtag{fix:4.3}\hyperref[fix:4.3]{Statement of (4.3), page 222}: two of the $v+1$ paths may be the same
+path when it has no internal vertex.
+\item \kindtag{fix:4.4-proof-added}\hyperref[fix:4.4-proof-added]{Proof of (4.4), page 223}: the proof is added.
+\item \kindtag{fix:4.6-p224}\hyperref[fix:4.6-p224]{Proof of (4.6), page 224}: (4.2) becomes (4.3).
+\item \kindtag{fix:4.6-p225-added}\hyperref[fix:4.6-p225-added]{Proof of (4.6), page 225}: the details of the step from $F'$ to the contradiction are added.
+\item \kindtag{fix:4.6-p229}\hyperref[fix:4.6-p229]{Proof of (4.6), page 229}: $\mu+1<i<r-\mu$ becomes
+$\mu+1\le i\le r-\mu$.
+\item \kindtag{fix:7-Delta}\hyperref[fix:7-Delta]{Section 7, page 238}: the false claim about $A_r(C)$ is removed,
+and $\Delta_r(C)$ is defined from the sets that generate $\mathcal{A}_r(C)$.
+\item \kindtag{fix:7.3-proof-added}\hyperref[fix:7.3-proof-added]{Proof of (7.3), page 239}: the details of the step from $G'$ to $G$ are added.
+\item \kindtag{fix:7.5-proof}\hyperref[fix:7.5-proof]{Proof of (7.5), page 241}: (6.1) is used in the stronger form
+given by its proof.
+\item \kindtag{fix:8-schism}\hyperref[fix:8-schism]{Section 8, page 242}: the claim that every schismatic set includes
+a schism is removed.
+\end{enumerate}

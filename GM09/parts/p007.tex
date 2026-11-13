@@ -1,0 +1,18 @@
+\origpage{46}{ROBERTSON AND SEYMOUR}
+Since $(G, \Omega)$ has no tripod, $t_1, t_2, t_3 \in V(P)$. Since $P$ is induced it follows that
+\begin{equation*}
+V(P_1 \cup P_2 \cup P_3 \cup Q_1 \cup Q_2 \cup Q_3) \cap V(H_1) \ne \emptyset,
+\end{equation*}
+and so there is a $V(P_1 \cup P_2 \cup P_3 \cup Q_1 \cup Q_2 \cup Q_3) \to W_1$ path $Q$ in $G_1$ which avoids $V(P)$. For $i = 1, 2$, or $3$ there is no end of $Q$ in $V(P_i \cup Q_i)$ which is not an end of $P_i$, for $\{P_1, P_2, P_3\}$ is not a tripod in $(G, \Omega)$. Thus $Q, P_1, P_2, P_3$ have a common end; but again it follows easily that there is a tripod in $(G, \Omega)$, a contradiction. Thus $(G_1, \Omega_1)$ has no tripod.
+
+We claim also that $(G_1, \Omega_1)$ has no cross. For suppose that $\{P_1, P_2\}$ is a cross of $(G_1, \Omega_1)$, where $P_i$ has ends $s_i, t_i$ ($i = 1, 2$); and let us choose $\{P_1, P_2\}$ so that $r$ is maximum, where $|\{s_1, t_1, s_2, t_2\} - V(P)| = r$. If $r \ge 2$ then $(G, \Omega)$ has a cross, as is easily seen, a contradiction. We suppose that $r = 1$, and without loss of generality that $s_1, s_2, t_1 \in V(P)$ and $t_2 \notin V(P)$. Now $V(P_1) \not\subseteq V(P)$ since $P$ is an induced subgraph of $G$, and so there is a $V(P_1) \to W_1$ path $P_3$ in $G_1$ avoiding $V(P)$. This does not avoid $P_2$, since $(G, \Omega)$ has no cross. But then $(G, \Omega)$ has a tripod, a contradiction. We deduce that $r = 0$, so that $s_1, s_2, t_1, t_2 \in V(P)$. But there is a path of $G_1$ between $V(P_1 \cup P_2)$ and $W_1$ avoiding $V(P)$; and this contradicts the maximality of $r$.
+
+Thus $(G_1, \Omega_1)$ has no cross or tripod. But it has fewer edges than $(G, \Omega)$, and so it is rural, by our inductive hypothesis. Similarly $(G_2, \Omega_2)$ is rural, and it follows that $(G, \Omega)$ is rural, as required. $\square$
+
+\sectionhead{3. \textsc{Attachments}}
+
+We now return to the general problem. Crooked transactions are quite easy to handle because of a certain ``exchange'' property, which we study in this section.
+
+Let $\mathscr{P}$ be a transaction in $(G, \Omega)$, and let $P$ be a $V(\bigcup \mathscr{P}) \to (\bar{\Omega} - V(\mathscr{P}))$ path in $G$. We call $P$ an \textit{attachment} to $\mathscr{P}$. The common vertex of $\bigcup \mathscr{P}$ and $P$ is called the \textit{foot} of the attachment, while the member $P_1$ of $\mathscr{P}$ of which the foot is a vertex is called the \textit{leg}. The union of $P$ with a subpath of $P_1$ from the foot to an end of $P_1$ is called a \textit{switch}. If $\mathscr{P}$ is crooked, the attachment $P$ is \textit{exchangeable} if there is a switch $S$ such that $(\mathscr{P} - \{P_1\}) \cup \{S\}$ is a crooked transaction. It turns out that attachments are normally exchangeable; one of the results of this section is basically a characterization of non-exchangeable attachments.
+
+Let $\mathscr{P}$ be a crooked transaction and let $P \in \mathscr{P}$. If $\mathscr{P} - \{P\}$ has two peripheral members we say that $P$ is an \textit{overpass} of $\mathscr{P}$. Figure 2 shows a typical overpass.

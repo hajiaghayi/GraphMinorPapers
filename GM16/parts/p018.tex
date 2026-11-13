@@ -1,0 +1,28 @@
+\origpage{60}{N. Robertson, P.D. Seymour / Journal of Combinatorial Theory, Series B 89 (2003) 43--76}
+\noindent $K_p$-minor of $G$. Since $d(y, y') \ge \theta \ge \theta_1$ for all distinct $y, y' \in Y_1$, it follows from 5.2 that:
+
+\hspace*{12pt}(1) \textit{There do not exist $\mu$ disjoint paths of $G_1$, each with distinct ends, both in $Y_1$, and with no internal vertex in $Y_1$.}
+
+We may assume that:
+
+\hspace*{12pt}(2) \textit{There do not exist $v \in V(G_1)$ and $\tau'$ paths of $G_1$ each from $v$ to $Y_1 \setminus \{v\}$, mutually disjoint except for $v$ and with no internal vertex in $Y_1$.}
+
+\textit{Subproof.} Otherwise, $v \notin V(H)$ since $v$ has degree $\ge \tau' \ge 2$ in $G_1$ and every vertex of $G_1$ in $V(H)$ has degree 1 in $G_1$. Since $d(y, y') \ge \theta \ge \psi$ for all distinct $y, y'$ it follows that there is a horn at $v$ over $H, \mathcal{T}$ with cardinality $\tau$ and breadth $\ge \psi$. But $v \notin X$ since $v \in V(G_1)$ and $X \cap V(G_1) = \emptyset$ (since $X \cap V(P_y) = \emptyset$ for each $y \in Y$) and so $(H, \mathcal{T}, X \cup \{\delm{x}\fix{v}\})$\fixnote{fix:6.3-animal}{Here $v$ is the vertex of the sentence.} is an animal of strength $\ge (\psi, \tau)$ with $\chi + 1$ horns. Thus we may assume (2).
+
+From (1), (2) and 5.3 applied to $G_1, Y_1$, we deduce that $|Y_1| \le (\mu - 1)\tau'$, and so
+\begin{equation*}
+|Y \setminus Y_1| \ge \delta - (\mu - 1)\tau' \ge (2\mu - 1)\mu\tau'.
+\end{equation*}
+We see that $Q_{y_1}$ is disjoint from $Q_{y_2}$ for all distinct $y_1, y_2 \in Y \setminus Y_1$.
+
+Choose $Y_2 \subseteq Y \setminus Y_1$ maximal such that the set $W = \{y, v(y) : y \in Y_2\}$ has cardinality $2|Y_2|$ and $d(u, v) \ge \theta_1$ for any two distinct $u, v \in W$. By 5.2, we may assume that $|Y_2| \le \mu - 1$. From the maximality of $Y_2$ we deduce that for any $y \in \fix{(Y \setminus Y_1) \setminus{}} Y_2$\fixnote{fix:6.3-Y2}{For $y \in Y_2$ the claim holds with $w = y$, and the maximality of $Y_2$ is about the other members of $Y \setminus Y_1$.} there exists $w \in W$ such that either $d(y, w) < \theta_1$ or $d(v(y), w) < \theta_1$, Consequently there exist $w \in W$ and a set $Y_3 \subseteq Y \setminus Y_1$ with
+\begin{equation*}
+|Y_3| \ge |Y \setminus Y_1|/(2|Y_2|) > \mu\tau'
+\end{equation*}
+such that for all $y \in Y_3$, either $d(y, w) < \theta_1$ or $d(v(y), w) < \theta_1$. Now $d(y, w) < \theta_1$ for at most one value of $y \in Y$ since $2\theta_1 < \theta$ and $d(y, y') \ge \theta$ for all distinct $y, y' \in Y$. Consequently there exists $Y_4 \subseteq Y_3$ with $|Y_4| \ge \mu\tau'$, such that $d(v(y), w) < \theta_1$ for all $y \in Y_4$.
+
+By theorem 9.2 of [8], there is a $(\theta_1 + 2)$-zone $\Lambda_1$ around $\{w\}$ such that $x \subseteq \Lambda_1$ for every $x \in A(H)$ ($A(H)$ is the set of atoms of $H$---see [8, section 2]) with $d(\{w\}, x) < \theta_1$, since $2 \le \theta_1 \le \theta - 3$. Consequently $v(y) \in \bar{\Lambda}_1$ for all $y \in Y_4$. By theorem 9.3 of [8] there is a $(\theta_1 + 8)$-zone $\Lambda$ around $\{w\}$ such that $H \cap (\Sigma \setminus \Lambda)$ is rigid and $x \subseteq \Lambda$ for every $x \in A(H)$ with $d(\delm{z}\fix{\{w\}}, x) < \theta_1 + 3$\fixnote{fix:6.3-zone}{No $z$ is defined in this proof. The zone $\Lambda$ is around $\{w\}$, and theorem 9.3 of [8] is applied to the atom $\{w\}$, as theorem 9.2 of [8] is in the sentence before. The next step, $\bar{\Lambda}_1 \subseteq \Lambda$, uses the condition in this form.}, since $2 \le \theta_1 + 3 \le \theta - 6$. Consequently, $\bar{\Lambda}_1 \subseteq \Lambda$, and so every two vertices in \del{$Y_4$} \fix{$\{v(y) : y \in Y_4\}$} are joined by a path $P$ of $H$ with $U(P) \subseteq \Lambda$. (For $U(P)$ see [8, section 2]). Let $H_2$ be a connected subgraph of $H$ with \del{$Y_4$} \fix{$\{v(y) : y \in Y_4\}$} $\subseteq V(H_2)$ and $U(H_2) \subseteq \Lambda$.\fixnote{fix:6.3-far-ends}{There are two misprints here. The vertices shown to lie in $\bar{\Lambda}_1 \subseteq \Lambda$ are the far ends $v(y)$ ($y \in Y_4$), while claim (3) below shows that each $y \in Y_4$ lies outside $\Lambda$. With $H_2$ joining the far ends, $G_2 = H_2 \cup \bigcup_{y \in Y_4} P_y$ is connected and meets $H'$ exactly in $Y_4$, as the next paragraph needs. So 6.3 holds as printed.}
+
+Let $H' = H \cap (\Sigma \setminus \Lambda)$, and let $\mathcal{T}'$ be the $(4(\theta_1 + 8) + 2)$-compression of $\mathcal{T}$ in $H'$ (this exists, by theorem 7.10 of [7]). Then $H', \mathcal{T}'$ is a $\Sigma$-span of order $\theta - (4\theta_1 + 34) = \delm{\theta - 1}\fix{\theta_1}$.\fixnote{fix:6.3-span}{Here $\theta = 5\theta_1 + 34$ by its choice on page 59, so $\theta - (4\theta_1 + 34) = \theta_1$. The rest of the proof uses that $H', \mathcal{T}'$ has order $\theta_1$.}
+
+\hspace*{12pt}(3) $Y_4 \subseteq V(H')$.

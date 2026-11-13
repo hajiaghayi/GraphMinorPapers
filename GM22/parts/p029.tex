@@ -1,0 +1,59 @@
+\origpage{558}{N. Robertson, P. Seymour / Journal of Combinatorial Theory, Series B 102 (2012) 530--563}
+\hspace*{12pt}(3) \textit{There are vertices $v_1, \dots, v_{\tau}$ of $\Gamma$ such that}
+
+\hspace*{12pt}(i) \textit{for $1 \le i \le \tau$, $d(v^*, v_i) \ge \theta' + \eta + 3$,}
+
+\hspace*{12pt}(ii) \textit{for $1 \le i \le \tau$, $d(v_i, \Delta') \ge \eta + 4$, and}
+
+\hspace*{12pt}(iii) \textit{for $1 \le i < j \le \tau$, $d(v_i, v_j) \ge \theta' + 2\eta + 6$.}
+
+\textit{Subproof.} For let $P$ be a path of $\Gamma$ from $v^*$ to $V(\Gamma) \cap \text{bd}(\Delta')$. For $1 \le i \le \tau$, let $v_i$ be the first vertex of $P$ such that
+\begin{equation*}
+d(v^*, v_i) \ge (\theta' + 2\eta + 7)i;
+\end{equation*}
+this exists, for the last vertex, $u$ say, of $P$ belongs to $\text{bd}(\Delta')$ and hence satisfies $d(v^*, u) \ge (\theta' + 2\eta + 7)(\tau + 1)$. We claim that $v_1, \dots, v_{\tau}$ satisfy (3). Certainly (i) holds.
+
+Let $1 \le i \le \tau$. Since $d(v^*, v^*) = 0$ it follows that $v_i \ne v^*$, and so there is a vertex $v$ say of $P$ immediately preceding $v_i$ in $P$. From the definition of $v_i$, $d(v^*, v) < (\theta' + 2\eta + 7)i$, and since $v$ is adjacent to $v_i$, $d(v, v_i) \le 2$; consequently,
+\begin{equation*}
+d(v^*, v_i) \le d(v^*, v) + d(v, v_{i-1}) \le (\theta' + 2\eta + 7)i + 1.
+\end{equation*}
+It follows that
+\begin{equation*}
+(\theta' + 2\eta + 7)(\tau + 1) \le d(v^*, \Delta') \le d(v^*, v_i) + d(v_i, \Delta') \le (\theta' + 2\eta + 7)i + 1 + d(v_i, \Delta'),
+\end{equation*}
+and since $i \le \tau$, we deduce that $d(v_i, \Delta') \ge \theta' + 2\eta + 6 \ge \eta + 4$. Hence (ii) holds.
+
+For (iii), let $1 \le i < j \le \tau$. Then
+\begin{equation*}
+(\theta' + 2\eta + 7)j \le d(v^*, v_j) \le d(v^*, v_i) + d(v_i, v_j) \le (\theta' + 2\eta + 7)i + 1 + d(v_i, v_j),
+\end{equation*}
+and since $j \ge i + 1$, we deduce that $d(v_i, v_j) \ge \theta' + 2\eta + 6$. Hence (iii) holds. This proves (3).
+
+Let $v_1, \dots, v_{\tau}$ be as in (3), and let $\{A \in \mathcal{B} : D(A) \cap \Delta' = \emptyset\} = \{A_1, \dots, A_t\}$. Then $A_1, \dots, A_t \in \mathcal{A}'$, and so $t \le \tau$. For $1 \le i \le t$, choose $A'_i \in \mathcal{A}$ with $d(v_i, D(A'_i)) \le \eta$ such that $(A'_i, \pi(A'_i))$ has the same $\delta$-folio as $(A_i, \pi(A_i))$ (this is possible from the hypothesis). Then for $1 \le i \le t$, there exists $z_i \in A(\Gamma)$ such that $d(v_i, z_i) \le \eta$ and $z_i \cap D(A'_i) \ne \emptyset$.
+
+\hspace*{12pt}(4) \textit{The following hold:}
+
+\hspace*{12pt}(i) \textit{For $1 \le i \le t$, $d(v^*, D(A'_i)) \ge \theta'$.}
+
+\hspace*{12pt}(ii) \textit{For $1 \le i \le t$, $D(A'_i) \cap \Delta = \emptyset$.}
+
+\hspace*{12pt}(iii) \textit{For $1 \le i < j \le t$, $d(D(A'_i), D(A'_j)) \ge \theta'$.}
+
+\textit{Subproof.} To see (i), let $z \in A(\Gamma)$ with $z \cap D(A'_i) \ne \emptyset$. Then $d(z, z_i) \le 3$ since $z$ and $z_i$ both intersect $D(A'_i)$, and so by (3)(i),
+\begin{equation*}
+\theta' + \eta + 3 \le d(v^*, v_i) \le d(v^*, z) + d(z, z_i) + d(v_i, z_i) \le d(v^*, z) + 3 + \eta.
+\end{equation*}
+Thus $d(v^*, z) \ge \theta'$, and so $d(v^*, D(A'_i)) \ge \theta'$. Hence (i) holds.
+
+To see (ii), suppose that $z \in A(\Gamma)$ and $z \cap D(A'_i) \cap \Delta \ne \emptyset$. Then $d(z, z_i) \le 3$, and so by (3)(iii),
+\begin{equation*}
+\eta + 4 \le d(v_i, \Delta') \le d(v_i, z) \le d(v_i, z_i) + d(z_i, z) \le \eta + 3
+\end{equation*}
+a contradiction. Thus (ii) holds.
+
+To see (iii), let $y, z \in A(\Gamma)$ with $y \cap D(A'_i) \ne \emptyset$ and $z \cap D(A'_j) \ne \emptyset$. Then by (3)(ii),
+\begin{align*}
+\theta' + 2\eta + 6 & \le d(v_i, v_j) \le d(v_i, z_i) + d(z_i, y) + d(y, z) + d(z, z_j) + d(v_j, z_j) \\
+& \le \eta + 3 + d(y, z) + 3 + \eta
+\end{align*}
+and so $d(y, z) \ge \theta'$. This proves (iii), and completes the proof of (4).

@@ -1,0 +1,29 @@
+\origpage{248}{ROBERTSON AND SEYMOUR}
+\noindent belong to $\mathscr{T}$ then it has order $\ge \theta = |Z|$ by the first tangle axiom. Thus in either case it has order $\ge |Z|$, that is,
+\begin{equation*}
+|(F_2 \cup F_3) \cap V(\Gamma)| \ge |(F_1 \cup F_2) \cap V(\Gamma)|.
+\end{equation*}
+Hence,
+\begin{equation*}
+|F_3 \cap V(\Gamma)| \ge |F_1 \cap V(\Gamma)| \ge \min(|F_1 \cap V(\Gamma)|, |F_2 \cap V(\Gamma)|),
+\end{equation*}
+as required. $\square$
+
+\sectionhead{4. Clique Minors}
+
+It is convenient to prove here three applications of (3.2) that we shall need in future papers. To do so we shall need the following.
+
+\stmt
+(4.1) \textit{Let $\mathscr{T}$ be a respectful tangle in a 2-cell drawing $\Gamma$ in a connected surface $\Sigma$, with metric $d$. Let $u, v \in V(\Gamma)$, and let $P$ be a path of $\Gamma$ between $u$ and $v$. If $(A, B) \in \mathscr{T}$ and $V(P) \subseteq V(A)$ then $(A, B)$ has order $\ge \frac{1}{2} d(u, v)$.}
+
+\textit{Proof.} By [4, Theorem (2.9)], we may assume that $P \subseteq A$ and, clearly, that $E(\Gamma) \ne \emptyset$. By (1.1), there are circuits $C_1, \dots, C_k$ of a radial drawing $K$ of $\Gamma$, such that $V(C_i) \cap V(\Gamma) \subseteq V(A \cap B)$ ($1 \le i \le k$) and such that every edge of $A$ is a subset of one of $\text{ins}(C_1), \dots, \text{ins}(C_k)$. Now since $U(P) \subseteq \text{ins}(C_1) \cup \dots \cup \text{ins}(C_k)$, we may renumber $C_1, \dots, C_k$ so that $u \in \text{ins}(C_1)$, $v \in \text{ins}(C_j)$ for some $j$, $\text{ins}(C_i) \cap \text{ins}(C_{i+1}) \ne \emptyset$ for all $i$ with $1 \le i < j$, and $\text{ins}(C_i) \cap \text{ins}(C_{i'}) = \emptyset$ for all $i, i'$ with $1 \le i, i' \le j$ and $i' > i + 1$. Then
+\begin{equation*}
+d(u, v) \le \frac{1}{2} (|E(C_1)| + \dots + |E(C_j)|) = \sum_{1 \le i \le j} |V(C_i) \cap V(\Gamma)|.
+\end{equation*}
+But no vertex of $\Gamma$ belongs to more than two of $V(C_1), \dots, V(C_j)$, and so
+\begin{equation*}
+\sum_{1 \le i \le j} |V(C_i) \cap V(\Gamma)| \le 2 |V(C_1 \cup \dots \cup C_j) \cap V(\Gamma)| \le 2 |V(A \cap B)|.
+\end{equation*}
+The result follows. $\square$
+
+Let $G'$ be a subgraph of a graph $G$, and let $\mathscr{T}'$ be a tangle in $G'$ of order $\theta$. Let $\mathscr{T}$ be the set of all separations $(A, B)$ of $G$ of order $< \theta$ such that $(A \cap G', B \cap G') \in \mathscr{T}'$. Evidently $\mathscr{T}$ is a tangle in $G$ of order $\theta$, and we call it the tangle \textit{induced by $\mathscr{T}'$}.

@@ -1,0 +1,23 @@
+\origpage{252}{ROBERTSON AND SEYMOUR}
+\noindent metric $\delta$. For each $z \in Z$, choose $\varepsilon(z) > 0$ such that $y \in \Delta_z$ for all $y \in \Sigma$ with $\delta(y, z) \le \varepsilon(z)$. For each $z \in Z$, choose $U_z \subseteq \Delta_z$ with $z \in U_z$, open in $\Sigma$ and connected, such that $\delta(y, z) < \frac{1}{3}\varepsilon(z)$ for all $y \in U_z$. Let $Y = \bigcup_{z \in Z} U_z$. We claim that $Y$ satisfies the theorem. It suffices to check that $Y$ is flat. Let $\phi \colon S^1 \to \Sigma$ be continuous with $|\phi| \subseteq Y$. By compactness, we may choose a finite set $K \subseteq S^1$ such that for each component $X$ of $S^1 - K$, there exists $z \in Z$ with $\phi(\bar{X}) \subseteq U_z$. Let $K = \{k_1, \dots, k_n\}$, numbered in order in $S^1$, and define $k_0 = k_n$. Let the components of $S^1 - K$ be $X_i$ $(1 \le i \le n)$ in order, where $\bar{X}_i - X_i = \{k_{i-1}, k_i\}$ $(1 \le i \le n)$. For $1 \le i \le n$, choose $z_i \in Z$ with $\phi(\bar{X}_i) \subseteq U_{z_i}$ and let $z_0 = z_n$. Since $\phi(k_i) \in \phi(\bar{X}_i) \subseteq U_{z_i}$ and $U_{z_i}$ is arc-connected, there is a continuous map $\phi_i \colon [0, 1] \to U_{z_i}$ with $\phi_i(0) = z_i$ and $\phi_i(1) = \phi(k_i)$. Let $\psi_i \colon [0, 1] \to \Sigma$ be the concatenation of $\phi_{i-1}$, the restriction of $\phi$ to $\bar{X}_i$, and the reverse of $\phi_i$ (reparameterizing in the usual way), where $\phi_0 = \phi_n$. We observe that $\phi$ is homotopic to the concatenation $\psi$ of $\psi_1, \psi_2, \dots, \psi_n$. On the other hand, we claim that $\psi$ is homotopic to a curve $\theta$ with $|\theta| \subseteq Z$. For let $1 \le i \le n$. Since $|\psi_i| \subseteq U_{z_{i-1}} \cup U_{z_i}$ and $|\psi_i|$ meets both $U_{z_{i-1}}$ and $U_{z_i}$, it follows that there exists $u \in U_{z_{i-1}} \cap U_{z_i}$. Let $z$ be whichever of $z_{i-1}, z_i$ has $\varepsilon(z)$ the larger. We claim that $U_{z_{i-1}} \cup U_{z_i} \subseteq \Delta_z$. For let $y \in U_{z_{i-1}} \cup U_{z_i}$. Then
+\begin{equation*}
+\min(\delta(y, z_{i-1}), \delta(y, z_i)) < \max(\frac{1}{3}\varepsilon(z_{i-1}), \frac{1}{3}\varepsilon(z_i)) \le \frac{1}{3}\varepsilon(z)
+\end{equation*}
+\begin{equation*}
+\delta(u, z_{i-1}) < \frac{1}{3}\varepsilon(z_{i-1}) \le \frac{1}{3}\varepsilon(z)
+\end{equation*}
+\begin{equation*}
+\delta(u, z_i) < \frac{1}{3}\varepsilon(z_i) \le \frac{1}{3}\varepsilon(z)
+\end{equation*}
+and so $\max(\delta(y, z_{i-1}), \delta(y, z_i)) < \varepsilon(z)$. Hence $y \in \Delta_z$, as claimed. It follows that
+\begin{equation*}
+|\psi_i| \subseteq U_{z_{i-1}} \cup U_{z_i} \subseteq \Delta_z.
+\end{equation*}
+Since $\Delta_z$ is arc-connected and $\psi_i(0), \psi_i(1) \in Z$, there exists $\theta_i \colon [0, 1] \to \Sigma$ with $|\theta_i| \subseteq Z \cap \Delta_z$ such that $\theta_i(0) = \psi_i(0)$ and $\theta_i(1) = \psi_i(1)$. Since $\Delta_z$ is flat, the concatenation of $\psi_i$ and the reverse of $\theta_i$ is null-homotopic, and so $\psi$ is homotopic to the concatenation $\theta$ of $\theta_1, \theta_2, \dots, \theta_n$. Since $|\theta| \subseteq Z$, $\theta$ is null-homotopic, and hence so is $\psi$ and therefore $\phi$, as required.
+
+We recall that $Z \subseteq \Sigma$ is \textit{solid} if $Z$ is l.a.c. and closed.
+
+\stmt
+(11.6) \textit{If $Z_1, Z_2 \subseteq \Sigma$ are solid, so is $Z_1 \cup Z_2$.}
+
+\textit{Proof.} Let $z \in Z_1 \cup Z_2$, and let $A \subseteq \Sigma$ be open with $z \in A$. Let $X$ be the arc-component of $(Z_1 \cup Z_2) \cap A$ which contains $z$, and let $Y = (Z_1 \cup Z_2) - X$. If $x \in X$, there are open sets $A_1, A_2 \ni x$ such that $A_1, A_2 \subseteq A$ and $Z_i \cap A_i$ is arc-connected, and $Z_i \cap A_i$ is null if $x \notin Z_i$ ($i = 1, 2$), since $Z_1, Z_2$ are closed. Hence $Y \cap Z_i \cap A_i = \emptyset$ ($i = 1, 2$), and so $Y \cap (A_1 \cap A_2) = \emptyset$. Put $A_x = A_1 \cap A_2$. Then $A_x$ is open, and so is

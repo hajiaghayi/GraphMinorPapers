@@ -1,0 +1,22 @@
+\origpage{373}{N. Robertson, P.D. Seymour / Journal of Combinatorial Theory, Series B 90 (2004) 325--385}
+\noindent $b_0 \in V(S_{v_2}) \setminus V(S_{v_1})$. Suppose that $u \in V(F \cap S_{v_1} \cap S_{v_2})$. Then by 13.3, $F$ includes the path of $S_{v_1}$ between $b_1$ and $u$, and the path of $S_{v_2}$ between $b_0$ and $u$, and so since there is an inner arc, it is not the case that $a_0 = a_1 = v$. Without loss of generality we assume that $a_0 \ne v$. By (8), $a_0 \in V(S_{v_1}) \setminus V(S_{v_2})$, and by 13.3 $F \cap S_{v_1}$ is the path of $S_{v_1}$ between $a_0$ and $b_1$, contrary to $u \in F \cap S_{v_1} \cap S_{v_2}$. This proves (10).
+
+From (8), (9) and (10) we may assume that $a_1 = v$ and $b_1 \in V(S_{v_1}) \setminus V(S_{v_2})$, and $b_0 \ne v$. If $a_0, b_0 \notin V(S_{v_2}) \setminus V(S_{v_1})$, then by (8) $a_0 = v$ and $b_0 \in V(S_{v_1}) \setminus V(S_{v_2})$, and by 13.3 $F$ consists of the union of $F_0, F_1$ and the path of $S_{v_1}$ between $b_0$ and $b_1$, contradicting that there is an inner arc. Thus we may assume without loss of generality that $b_0 \in V(S_{v_2}) \setminus V(S_{v_1})$.
+
+Let $P_1$ be the path from $v$ to $b_1$ consisting of $f_1$ and the path of $S_{v_1}$ from $v_1$ to $b_1$.
+
+\hspace*{12pt}(11) $C = P_1 \cup F_1$.
+
+\textbf{Subproof.} Let $\Delta'$ be the disc in $\Delta_0$ bounded by $P_1 \cup F_1$. Since $\Delta' \nsubseteq \Delta_0 \setminus \{h\}$ from the choice of $F_1$, it follows that $h \in \Delta'$, and so $ins(H) \cap (\Delta' \setminus bd(\Delta')) \ne \emptyset$. Since no point of $bd(\Delta')$ lies in $ins(H) \setminus U(H)$, we deduce that $ins(H) \subseteq \Delta'$. We claim that $\Delta_v \cap (\Delta' \setminus bd(\Delta')) \ne \emptyset$; for if $S_{v_1} \cap S_{v_2}$ is non-null then $U(S_{v_1} \cap S_{v_2})$ is a subset of $\Delta' \setminus bd(\Delta')$ meeting $\Delta_v$ (because it is connected and meets $U(H)$ and not $bd(\Delta')$ by (10)), and if $S_{v_1} \cap S_{v_2}$ is null then any point of $U(D_v \cap H) \setminus \{h_1, h_2\}$ belongs to $\Delta_v \cap (\Delta' \setminus bd(\Delta'))$ (for it belongs to $\Delta_v$ and to $ins(H)$ and not to $bd(\Delta')$). This proves our claim that $\Delta_v \cap (\Delta' \setminus bd(\Delta')) \ne \emptyset$. Since $bd(\Delta') \cap (\Delta_v \setminus bd(\Delta_v)) = \emptyset$, it follows that $\Delta_v \subseteq \Delta'$. We claim that $ins(F) \subseteq \Delta'$. For otherwise, there is a path $F'$ of $F$ with both ends in $V(P_1)$ and with no edge or internal vertex in $\Delta'$. Let the ends of $F'$ be $a', b'$, where $a'$ is closer than $b'$ to $a_1$ on the path $P_1$. Then $b' \in V(S_{v_1})$, and so by 13.3 $F$ includes $S_{v_1}[b', b_1]$, and so $a' \ne a_1$ (because otherwise $F$ has a proper subgraph which is a circuit). Hence $a' \in V(S_{v_1})$, and by 13.3 $F$ includes the path of $S_{v_1}$ from $a'$ to $b'$, again a contradiction. This proves that $ins(F) \subseteq \Delta'$, and hence $C = P_1 \cup F_1$. This proves (11).
+
+\hspace*{12pt}(12) $a_0 \in V(S_{v_1}) \setminus V(S_{v_2})$.
+
+\textbf{Subproof.} If $a_0 = v$ then $F_0 \subseteq C$, from (11) and the symmetry between $F_0$ and $F_1$. But then $F_0 \subseteq P_1 \cup F_1$ from (11), a contradiction. Thus $a_0 \ne v$, and the claim follows from (8). This proves (12).
+
+Let $F_2$ be a minimal path of $F$ from $v$ to $V(S_{v_2})$, edge-disjoint from $F_1$. Let the end of $F_2$ in $S_{v_2}$ be $b_2$. From (10), $b_2 \in V(S_{v_2}) \setminus V(S_{v_1})$. From 13.3,
+\begin{equation*}
+F = F_0 \cup F_1 \cup F_2 \cup S_{v_1}[a_0, b_1] \cup S_{v_2}[b_0, b_2].
+\end{equation*}
+By 13.3, $F_2$ is disjoint from $S_{v_1}$, and so $F_2$ is an arc. Since there is an inner arc, and $F_0, F_1, F_2$ are the only arcs, $F_2$ must be an inner arc. Let $P_2$ be the path from $v$ to $b_2$ consisting of $f_2$ and $S_{v_2}[v_1, b_2]$.
+
+\hspace*{12pt}(13) $|E(P_i)| \ge |E(F)| - |E(F_i)|$ \textit{for} ($i = 1, 2$).

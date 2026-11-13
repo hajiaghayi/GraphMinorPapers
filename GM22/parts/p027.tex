@@ -1,0 +1,44 @@
+\origpage{556}{N. Robertson, P. Seymour / Journal of Combinatorial Theory, Series B 102 (2012) 530--563}
+Since $|V(A \cap B) \setminus V(C)| \ge |V(A \cap B \cap \Gamma) \setminus V(C)|$ and
+\begin{equation*}
+|V(C \cap D) \setminus V(B)| \ge |V(C \cap D \cap \Gamma) \setminus V(B)|,
+\end{equation*}
+it follows that, in either case,
+\begin{equation*}
+|V(A \cap B) \setminus V(C)| > |V(C \cap D \cap \Gamma) \setminus V(B)|.
+\end{equation*}
+In particular, $A \not\subseteq C$, and so $A \ne A'_i$. A similar argument, using that the separation $(B \cap C, A \cup D)$ does not violate the choice of $(C, D)$, yields that
+\begin{equation*}
+|V(A \cap B) \setminus V(D)| > |V(C \cap D \cap \Gamma) \setminus V(B)|.
+\end{equation*}
+But
+\begin{equation*}
+|V(A \cap B) \setminus V(C)| + |V(A \cap B) \setminus V(D)| \le |V(A \cap B) \setminus W| = |\bar{\pi}(A)| \le 3,
+\end{equation*}
+and so $|V(C \cap D \cap \Gamma) \setminus V(B)| = 0$, that is, $C \cap D \cap \Gamma \subseteq B$. Since $|V(A \cap B) \setminus V(C)| > 0$ and $|V(A \cap B) \setminus V(D)| > 0$, there exist $u, v \in V(A \cap B)$ with $u \in V(C) \setminus V(D)$ and $v \in V(D) \setminus V(C)$. Since $W \subseteq V(C \cap D)$ and $V(A \cap B) = \bar{\pi}(A) \cup W$, $u$ and $v$ both belong to $\bar{\pi}(A)$. But $A$ is good by (4) since $d(D(A), \Sigma \setminus \Delta) < \theta$, and so there is a path of $\Gamma \cap A$ with ends $u, v$ and with no internal vertex in $\bar{\pi}(A)$. Consequently, it has no internal vertex in $V(B)$, but it has one in $V(C \cap D)$ since $(C, D)$ is a separation. Hence $C \cap D \cap \Gamma \not\subseteq B$, a contradiction.
+
+Our assumption that $(C, D)$ has order $\ge |\bar{\pi}(A'_i)| + |W|$ is therefore false. Consequently, $(C \setminus W, D \setminus W)$ is a separation of $G \setminus W$ of order $< |\bar{\pi}(A'_i)|$, and $A'_i \setminus W \subseteq C \setminus W$, and $((C \setminus W) \cap \Gamma, (D \setminus W) \cap \Gamma) \in \mathcal{T}$, contrary to (J7). This proves (9).
+
+\hspace*{12pt}(10) \textit{For $1 \le i \le t$ there is no $\Gamma$-normal $O$-arc $F \subseteq \Sigma$ with $|F \cap V(\Gamma)| < |\bar{\pi}(A'_i)|$ and with $D(A'_i) \subseteq ins(F)$.}
+
+\textit{Subproof.} Suppose that $F$ is such an $O$-arc. Let $K_2 = A'_i \cup (\Gamma \cap ins(F))$. By 7.1(iii), $K_1 \cap A'_i = N_W$. Suppose that $v \in V(K_1 \cap (\Gamma \cap ins(F)))$. Since $D(A'_i) \subseteq ins(F)$ it follows that $d(v, D(A'_i)) \le 3$ and hence $d(v, \Sigma \setminus \Delta) \le 3$, contrary to 7.1(i). We deduce that there is no such $v$, and so $K_1 \cap K_2 = N_W$.
+
+It follows that there is a separation $(C, D)$ of $G$ with $C \cap \Gamma = \Gamma \cap ins(F)$ and $D \cap \Gamma = \Gamma \cap \Sigma \setminus \Delta_1$, where $\Delta_1 = ins(F)$, such that $K_2 \subseteq C$ and $K_1 \subseteq D$. But this contradicts (9). Consequently (10) holds.
+
+From (8), (10) and 7.3, the result follows. $\square$
+
+\sectionhead{8. Homogeneity}
+
+The advantage of using ``sufficient'' instead of ``adequate'' is that the following is true.
+
+\textbf{8.1.} \textit{Let (J1)--(J6) hold. Then there exists $\mathcal{A}' \subseteq \mathcal{A}$, sufficient for some model of $(H, \chi)$ in $(G, \omega)$, such that $d(D(A), \Sigma \setminus \Delta) < \theta$ for at most $3q + 5\delta$ members $A$ of $\mathcal{A}'$.}
+
+\textit{Proof.} Let $Z$ be a basis for $\phi$ with $Z \subseteq V(K \cup \bigcup(A : A \in \mathcal{A}))$ and $|Z| \le q + 3\delta$; this exists, from 6.1 and (J6). Choose a model $\phi'$ of $(H, \chi)$ in $(G, \omega)$ such that $\phi'(e) = \phi(e)$ for all $e \in E(H)$, and
+\begin{equation*}
+\bigcup(\phi'(v) : v \in V(H)) \subseteq \bigcup(\phi(v) : v \in V(H)),
+\end{equation*}
+with $\bigcup(\phi'(v) : v \in V(H))$ minimal. Let $L = \bigcup(\phi'(v) : v \in V(H))$. It follows that $L$ is a forest, and $Z$ contains every vertex of $L$ with degree at most 1. For $v \in V(L)$, let $d(v)$ be its degree in $L$. By 2.3
+\begin{equation*}
+\sum_{y \in W} d(y) \le 2|W| + |Z| \le 3q + 3\delta.
+\end{equation*}
+Let $\mathcal{A}_1$ be the set of all $A \in \mathcal{A}$ such that some edge of $A \cap L$ has an end in $W$. Since the members of $\mathcal{A}$ are edge-disjoint, it follows that $|\mathcal{A}_1| \le 3q + 3\delta$. Since $\phi'(v) \cap (K \cup \bigcup(A : A \in \mathcal{A}))$ is non-null for

@@ -1,0 +1,44 @@
+\origpage{71}{GRAPH MINORS. XIII}
+\stmt
+(3.1) Lemma. \textit{Let $G$ be a graph with branch-width $\le \omega$, where $\omega \ge 2$, and let $Z \subseteq V(G)$. Then there is a separation $(A, B)$ of $G$ of order $\le \omega$ with}
+\begin{equation*}
+|Z - V(A)|, |Z - V(B)| \le \frac{2}{3} |Z| - \frac{1}{2} |Z \cap V(A \cap B)|.
+\end{equation*}
+\textit{Proof.} Let $\mathscr{T}$ be the set of all separations $(A, B)$ of $G$ of order $\le \omega$ with
+\begin{equation*}
+|Z - V(A)| + \frac{1}{2} |Z \cap V(A \cap B)| > \frac{2}{3} |Z|.
+\end{equation*}
+We observe that
+
+(1)(i) \textit{If $(A, B) \in \mathscr{T}$ then $V(A) \ne V(G)$,} (ii) \textit{if $(A_1, B_1), (A_2, B_2) \in \mathscr{T}$ then $B_1$ is not a subgraph of $A_2$} (iii) \textit{if $A_1, A_2, A_3$ are mutually edge-disjoint subgraphs of $G$ with union $G$, then not all of $(A_1, A_2 \cup A_3), (A_2, A_3 \cup A_1), (A_3, A_1 \cup A_2)$ belong to $\mathscr{T}$.}
+
+\textit{Subproof.} For (i), let $(A, B)$ be a separation of $G$ with $V(A) = V(G)$. Then
+\begin{equation*}
+|Z - V(A)| + \frac{1}{2} |Z \cap V(A \cap B)| \le \frac{1}{2} |Z|,
+\end{equation*}
+and so $(A, B) \notin \mathscr{T}$. This proves (i).
+
+For (ii), suppose that $(A_1, B_1), (A_2, B_2) \in \mathscr{T}$. Then
+\begin{equation*}
+|Z \cap V(B_1)| = |Z - V(A_1)| + |Z \cap V(A_1 \cap B_1)| > \frac{2}{3} |Z|,
+\end{equation*}
+but
+\begin{align*}
+|Z| - \frac{1}{2} |Z \cap V(A_2)| &= |Z - V(A_2)| + \frac{1}{2} |Z \cap V(A_2)| \\
+&\ge |Z - V(A_2)| + \frac{1}{2} |Z \cap V(A_2 \cap B_2)| > \frac{2}{3} |Z|,
+\end{align*}
+that is, $|Z \cap V(A_2)| < \frac{2}{3} |Z|$. Consequently (ii) holds.
+
+For (iii), suppose that all three of the separations belong to $\mathscr{T}$. For $i = 1, 2, 3$ let $Z_i = Z \cap V(A_i)$. Since $(A_1, A_2 \cup A_3) \in \mathscr{T}$ we deduce that
+\begin{equation*}
+|Z - Z_1| + \frac{1}{2} |Z_1 \cap (Z_2 \cup Z_3)| > \frac{2}{3} |Z|,
+\end{equation*}
+that is,
+\begin{equation*}
+\frac{1}{3} |Z| > |Z_1| - \frac{1}{2} |Z_1 \cap Z_2| - \frac{1}{2} |Z_1 \cap Z_3| + \frac{1}{2} |Z_1 \cap Z_2 \cap Z_3|.
+\end{equation*}
+By adding this and the two similar inequalities, we deduce that
+\begin{equation*}
+|Z| > \sum_{1 \le i \le 3} |Z_i| - \sum_{1 \le i < j \le 3} |Z_i \cap Z_j| + \frac{3}{2} |Z_1 \cap Z_2 \cap Z_3|,
+\end{equation*}
+contrary to the inclusion-exclusion formula, since $Z = Z_1 \cup Z_2 \cup Z_3$. This proves (iii) and so completes the proof of (1).

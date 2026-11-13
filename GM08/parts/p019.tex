@@ -1,0 +1,102 @@
+\origpage{273}{GRAPH MINORS. VIII}
+This is unfortunately not quite a consequence of [7, Theorem (3.8)]. However, it is a consequence of the strengthening of that theorem obtained by replacing the last sentence of its statement by the following. ``If $G$ has a tree-decomposition $(T, (Y_t : t \in V(T)))$ of width $\le w$, then $H$ has a tree-decomposition $(T, (X_t : t \in V(T)))$ of width $\le w$ such that $Y_t \cap V(H) \subseteq X_t$ for every $t \in V(T)$, and $\{v_1, \dots, v_r\} \subseteq X_{t_0}$ for some $t_0 \in V(T)$.'' The proof given in [7] serves as well to prove this strengthened form. (We omit the full statement of the result of [7], because to make that intelligible would require a disproportionate number of new definitions.) (11.1) follows from this by applying it to each $G_i$ in turn.
+
+\fix{We give the details of this step. Let $\Gamma^*$ be a truncation of $\Gamma$ induced by
+$\{F_1, \dots, F_t\}$, with sleeves $\Gamma_1, \dots, \Gamma_t$, and let $w$ be its tree-width. For
+$0 \le j \le t$ let $W_j$ be the set of vertices of $\Gamma^*$ inside none of $F_1, \dots, F_j$, and
+let $H_j$ be the subgraph of the graph of $\Gamma^*$ induced on $W_j$. We show by induction on $j$
+that there is a hypertree $(W_j, T, (X_x : x \in V(T)))$ with $|X_x| \le w + 1$ for all $x$, such
+that each edge of $H_j$ has both ends in some $X_x$, and for $1 \le i \le j$ the set
+$V(\Gamma) \cap F_i$ is included in some $X_x$. For $j = 0$ this holds since $\Gamma^*$ has
+tree-width $w$. Now let $j \ge 1$, and let $(W_{j-1}, T, (X'_x : x \in V(T)))$ be the hypertree for
+$H_{j-1}$.
+
+The vertices of the sleeve $\Gamma_j$ are in $W_{j-1}$, since a point inside $F_j$ or in $F_j$ is not
+inside any other $F_i$, because $F_i$ and $F_j$ bound disjoint open discs. Let the sleeve consist
+of $C_1, \dots, C_s$ and $P_1, \dots, P_r$, where $r = |V(\Gamma) \cap F_j|$. The paths $P_i$ meet
+all the circuits $C_l$ in the same cyclic order. For otherwise, for some $l < s$, two of the paths
+are consecutive on $C_l$ but not on $C_{l+1}$. Then the ends on $C_{l+1}$ of these two paths and of
+two other paths alternate on $C_{l+1}$, while inside $C_{l+1}$ the first two paths are joined by their
+parts before $C_{l+1}$ and a part of $C_l$ between them, and the other two are joined in the same way
+by the rest of $C_l$. These two connected sets are disjoint, and this is impossible, since two
+disjoint connected subsets of a closed disc cannot join two pairs of points of its boundary that
+alternate. Now for each path $P_i$ and each circuit $C_l$, contract the part of $P_i$ from
+its first vertex in $C_l$ up to just before $C_{l+1}$ (up to $F_j$ if $l = s$), together with the
+vertices of $C_l$ that follow $P_i \cap C_l$ up to the next path. Since the order is the same on all
+the circuits, this shows that $H_{j-1}$ has a minor obtained from $H_j$ and the $r \times s$
+cylinder by identifying the vertices of its central circle $C_s$, in the notation of [7, Theorem
+(3.8)], with the $r$ vertices of $\Gamma$ in $F_j$. The contracted sets are disjoint and connected, and each
+vertex of $H_j$ is in the contracted set of just one vertex of this graph. So taking for each $x$ the vertices of this graph whose
+contracted set meets $X'_x$ gives a hypertree of width $\le w$ for it, whose sets include the sets
+$X'_x \cap W_j$. The strengthened form of [7, Theorem (3.8)] above then gives a hypertree
+$(W_j, T, (X_x : x \in V(T)))$ for $H_j$ of width $\le w$, with $X'_x \cap W_j \subseteq X_x$ for
+all $x$, and with $V(\Gamma) \cap F_j$ included in some $X_x$. For $i < j$ the set
+$V(\Gamma) \cap F_i$ is included in $W_j$, and so it is still included in some $X_x$. This completes
+the induction.
+
+Every vertex of $\Gamma_i$ is inside $F_i$, or in $F_i$ and then in $\Gamma_0$, and so
+$W_t = V(\Gamma_0) = N'$. A cell $f$ of $(U', N')$ with closure $\Sigma_i$ has
+$\bar{f} - f = V(\Gamma) \cap F_i$, and a cell $f$ with closure $D(e)$ has as $\bar{f} - f$ the set
+of ends of $e$, which is an edge of $H_t$. In both cases $\bar{f} - f$ is included in some $X_x$, and
+so the tree-width of $(U', N')$ is at most $w$.\fixnote{fix:11.1-proof-added}{The paper says that
+(11.1) follows by applying the strengthened form of [7, Theorem (3.8)] to each $G_i$ in turn. The
+details above follow the proof in the formalization.}}
+
+\stmt
+(11.2) \textit{Let} $(G_1, \tau_1), (G_2, \tau_2) \in \mathscr{A}(k)$, \textit{both with index} $k$. \textit{Let} $P_i$ \textit{be a} $\mathbf{Q}_{k - 1}$\textit{-portrait derived from} $(G_i, \tau_i)$ $(i = 1, 2)$. \textit{If} $P_1$ \textit{is simulated in} $P_2$ \textit{then} $(G_1, \tau_1)$ \textit{is simulated in} $(G_2, \tau_2)$.
+
+\textit{Proof.} Let $\Gamma_1, \Gamma_2$ be respective drawings. By (8.4) the drawing $\Xi$ of a forest involved in the simulation relation for the portraits can be chosen to be a subdrawing of $\Gamma_2$, since each $O$-arc in the foundation used for $\Gamma_2$ is centred, by (8.2)\fix{, and (8.4) is applied to the part of $\Xi$ inside each such $O$-arc $F$. Here the hypothesis $U(\Xi) \cap F \subseteq V(\Gamma)$ of (8.4) may fail, since an edge of $\Xi$ need only be a subset of a cell, and the cell inside $F$ contains the points of $F$ that are not vertices. But the proof of (8.4), from (8.3) and [10, Theorem (3.6)], uses this hypothesis only for the vertices of $\Xi$; so (8.4) holds when we assume only that $V(\Xi) \cap F \subseteq V(\Gamma)$, and this holds here, since the vertex set of $\Xi$ is $N' = V(\Gamma_0)$}.\fixnote{fix:11.2-proof-8.4}{As printed, (8.4) does not apply. If $u, v$ are vertices of $\Gamma_2$ on a ring $F_i$ and $A$ is an arc of $F_i$ between them with no other vertex, then a forest $\Xi$ may have $A$ minus its ends as an edge, which lies in the cell inside $F_i$. The weaker hypothesis is enough for the proof of (8.4).} The rest of the verification of (11.2) is lengthy but straightforward\del{, and is left to the reader}\fix{, and we give it below}. (We point out that the ``missing'' parts of $\Gamma_1, \Gamma_2$, the insides of the foundation $O$-arcs, have not been forgotten; the simulation relation works correctly on them because of condition \delm{(vii)}\fix{(viii), with (iv),} in the definition\fixnote{fix:11.2-proof-viii}{Condition (vii) is about the roots on the boundary of the disc. The insides of the rings are handled by (viii), which compares the labels of the cells, together with (iv).} of $\mathbf{Q}$-portrait simulation.)
+
+\fix{We give the rest of the verification. Let $(\Xi, \sigma)$ be the simulation of $P_1$ in
+$P_2$. We call a cell of $P_i$ a \textit{ring cell} if its closure is the disc bounded by one of the
+foundation $O$-arcs used for $\Gamma_i$. The other cells of $P_i$ have closures $D(e)$, where $e$ is an
+edge of $\Gamma_i$ inside none of these $O$-arcs, and for such a cell $f$ the set $\bar{f} - f$ is the
+set of ends of $e$. Ring cells are labelled by members of $\mathscr{A}(k-1)$, the other cells by
+$*$, and $*$ is comparable only with itself in $\mathbf{Q}_{k-1}$. So by (viii), for each ring cell
+$f$ of $P_1$, $\sigma(f)$ is a ring cell of $P_2$ and $\phi(f)$ is simulated in $\phi(\sigma(f))$,
+and for each cell $D(e)$ of $P_1$ there is an edge $e'$ of $\Gamma_2$, which we call the
+\textit{partner} of $e$, with $\sigma(D(e)) = D(e')$. By (iii), distinct ring cells have distinct
+images, and distinct edges have distinct partners. By (v) and (vi), the ends of the partner of $e$
+are vertices of $\sigma(u)$ and $\sigma(v)$, where $u, v$ are the ends of $e$. Also by (v) and (vi),
+together with (S7) for the simulation of $\phi(f)$ in $\phi(\sigma(f))$, for each vertex $z$ of
+$\Gamma_2$ in the $O$-arc of $\sigma(f)$ there is a vertex $v$ of $\Gamma_1$ in the $O$-arc of $f$
+such that $z$ is a vertex both of $\sigma(v)$ and of the image of $v$ in this simulation. Also, for
+each vertex $v$ of $\Gamma_1$ in the $O$-arc of $f$, some vertex is in both.
+
+Now let $v$ be a node of $P_1$, and consider an edge of $\sigma(v)$. By (i) it is a subset of a cell of
+$P_2$, and by (iv) this cell is not of the form $\sigma(f)$. So either the cell is $D(e')$, where
+$e'$ is not a partner, and then the edge of $\Xi$ joins the ends of $e'$, or the cell is a ring cell
+that is not an image, and the edge joins two vertices in its $O$-arc. In the first case we replace
+the edge of $\Xi$ by $e'$. In the second case we replace the edges of $\Xi$ in this ring cell by the
+forest of $\Gamma_2$ given by (8.4), as explained above. Two vertices in the $O$-arc are joined in
+this forest only if they are joined in $\Xi$, and so each component of the forest meets at most one
+tree $\sigma(v)$.
+
+For each vertex $v$ of $\Gamma_1$, let its image consist of the vertices of $\sigma(v)$ if $v$ is a
+node, the vertices joined to them in the forests just chosen, and, for each ring cell $f$ of $P_1$
+whose closure contains $v$, the image of $v$ in the simulation of $\phi(f)$ in $\phi(\sigma(f))$. For
+each edge $e$ of $\Gamma_1$, let its image be its image in the simulation of $\phi(f)$ if $e$ is
+inside the $O$-arc of a ring cell $f$, and its partner otherwise. This is a simulation of the graph
+of $\Gamma_1$ in the graph of $\Gamma_2$. Each image of a vertex is connected, since the edges of
+$\sigma(v)$ were replaced by edges and forests of $\Gamma_2$ joining the same vertices, and since
+the image of $v$ in each ring simulation is connected and meets $\sigma(v)$. The images of distinct
+vertices are disjoint, since the trees $\sigma(v)$ are disjoint by (ii), each component of a forest
+meets at most one of them, the images in different ring simulations lie in different ring cells,
+and a vertex of $\Gamma_2$ in the $O$-arc of an image ring cell lies only in the image of the
+vertex $v$ above. Conditions (S1)--(S5) for edges inside the $O$-arcs come from the ring
+simulations. For the other edges they hold since the partners are distinct, are not inside any
+$O$-arc, are not used in the images of vertices, and have their ends in the right trees
+$\sigma(u)$, $\sigma(v)$. By (vii), and since the roots of $(G_i, \tau_i)$ are drawn at the points
+$\pi(1), \pi(2), \dots$ of $P_i$, the $n$th root of $(G_2, \tau_2)$ is in the image of the $n$th
+root of $(G_1, \tau_1)$ for each $n$. The terms of $\tau_1$ are distinct, and so are the terms of
+$\tau_2$, and so (S7) holds. Moving this simulation to $G_1$ and $G_2$ along the isomorphisms with
+the graphs of $\Gamma_1$ and $\Gamma_2$ gives a simulation of $(G_1, \tau_1)$ in
+$(G_2, \tau_2)$.\fixnote{fix:11.2-proof-added}{The paper leaves the rest of the verification to the
+reader. The argument above is the one used in the formalization.}}
+$\square$
+
+\sectionhead{12. Conclusion of the Disc Case}
+
+Now we complete the proof of (6.1) when $\Sigma$ is a disc, as follows. We must show that the class of all grafts with index $\le k$ which embed in a disc $\Sigma$ is well-rooted. We proceed by induction on $k$, and assume the result is true for all smaller values of $k$. By (4.2) and our inductive hypothesis, it suffices to prove that the class of all grafts with index exactly $k$ which embed in $\Sigma$ is well-rooted.
+
+Let $(G_1, T_1), (G_2, T_2), \dots$ be a countable sequence of grafts with index $k$ which embed in $\Sigma$. For $j \ge 1$, let $\Gamma_j$ be a drawing of $(G_j, T_j)$ in $\Sigma$. We may assume that for $j \ge 2$, $(G_1, T_1)$ is not simulated in $(G_j, T_j)$; and so by (9.4) there is a number $w$ such that for all $j \ge 2$, every truncation of $\Gamma_j$ has tree-width $\le w$. For $j \ge 2$ let $\tau_j$ be some ordering of $T_j$, and let $P_j$ be a $\mathbf{Q}_{k - 1}$-portrait derived from $(G_j, \tau_j)$ via $\Gamma_j$. By (11.1), $P_j$ has tree-width no greater than $w$, for $j = 2, 3, \dots.$ By our inductive hypothesis and (4.3), $\mathbf{Q}_{k - 1}$ is a well-quasi-order, and so by (10.1) there exist $j' > j \ge 2$ such that $P_j$ is simulated in $P_{j'}$. By (11.2), $(G_j, \tau_j)$ is simulated in $(G_{j'}, \tau_{j'})$, and so $(G_j, T_j)$ is simulated in $(G_{j'}, T_{j'})$, as required. $\square$

@@ -1,0 +1,30 @@
+\origpage{72}{ROBERTSON AND SEYMOUR}
+\noindent $v \in V(C_2)$. Since $v$ is adjacent in $C$ to every other member of $V(A \cap B)$, it follows that $V(A \cap B) \subseteq V(C_2)$, since $C_1 \cup C_2 = C$, as claimed. Thus we may define $G_1$, $G_2$ as in (11.8). We observe
+
+\hspace*{12pt}(1) \textit{For every choice of distinct $u, v \in V(G_1 \cap G_2)$ there is a path of $G_1$ between $u$ and $v$ with no internal vertex in $G_2$.}
+
+Suppose for some choice of $u, v$ there is no such path. Then there is a partition $X, Y$ of $(V(G_1) - V(G_2)) \cup \{u, v\}$ with $u \in X, v \in Y$ such that no vertex in $X$ is adjacent in $G_1$ to any vertex in $Y$. Now by choice of $(C_1, C_2)$ there is a path of $C_1$ between $u$ and $v$ with no internal vertex in $C_2$, and by (11.8)
+\begin{equation*}
+V(C_1) - V(C_2) \subseteq V(G_1) - V(G_2);
+\end{equation*}
+and so there exists $x \in X$ and $y \in Y$, adjacent in $C_1$. Choose $(A, B) \in \mathcal{D}$ with $x, y \in V(A \cap B)$. Now not both $x, y \in V(C_1 \cap C_2)$, since by our choice of $(C_1, C_2)$ no two vertices of $C_1 \cap C_2$ are adjacent in $C_1$. Thus $V(A \cap B) \not\subseteq V(C_2)$, and so $(A, B) \in \mathcal{D}_1$, and $A \subseteq G_1$. But there is a path $P$ of $A$ between $x$ and $y$ with no internal vertex in $B$. Since $V(P) \subseteq V(A) \subseteq V(G_1)$ and since, by (11.8),
+\begin{equation*}
+V(G_1 \cap G_2) = V(C_1 \cap C_2) \subseteq V(C) \subseteq V(B)
+\end{equation*}
+by the definition of ``core,'' it follows that no internal vertex of $P$ belongs to $V(G_2)$. Therefore $V(P) \subseteq X \cup Y$, and so there is a vertex of $P$ in $X$, and a vertex of $P$ in $Y$ which are adjacent in $P$ and hence in $G_1$. This is a contradiction, as required.
+
+\hspace*{12pt}(2) \textit{For every $(A_2, B_2) \in \mathcal{D}_2$, $A_2 \subseteq G_2$ and $G_1 \subseteq B_2$.}
+
+For the first inclusion holds by definition of $G_2$. The second holds since $V(C_1 \cap C_2) \subseteq V(B_2)$ and $A \subseteq B_2$ for every $(A, B) \subseteq \mathcal{D}_1$, since $\mathcal{D}$ is a consolidation.
+
+Let $\mathcal{D}' = \mathcal{D}_2 \cup \{(G_1, G_2)\}$. We deduce from (1) and (2) and (11.8) that
+
+\hspace*{12pt}(3) \textit{$\mathcal{D}'$ is a consolidation of $(G, \Omega)$.}
+
+Let its core be $C'$.
+
+\hspace*{12pt}(4) $V(C') \subseteq V(C)$.
+
+For let $v \in V(C')$. Then $v \in V(B)$ for every $(A, B) \in \mathcal{D}_2$, and $v \in V(G_2)$. If $v \in V(C_1 \cap C_2)$ then certainly $v \in V(C)$. If not, then there exists $(A, B) \in \mathcal{D}_2$ with $v \in V(A)$, by definition of $G_2$, and so $v \in V(A \cap B)$. But $V(A \cap B) \subseteq V(C)$, by (11.7), and so $v \in V(C)$, as required.
+
+\hspace*{12pt}(5) \textit{$C'$ has fewer vertices than $C$.}

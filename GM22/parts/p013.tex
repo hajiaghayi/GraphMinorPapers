@@ -1,0 +1,30 @@
+\origpage{542}{N. Robertson, P. Seymour / Journal of Combinatorial Theory, Series B 102 (2012) 530--563}
+\noindent and again $d(x, z) \ge 2h + 5$. This proves that $d(z, X) \ge 2h + 5$. Consequently $z$ is $h$-insulated in $\Sigma$ from $X$ by $\Gamma$ and hence by $\Gamma \cap \Sigma'$, and so $z \subseteq T$. This proves (7).
+
+From (5), $\Gamma' \cap \Sigma'$ is an $(S \cup T)$-variant of $\Gamma \cap \Sigma'$. By (2), (3), (5), (7) and 4.2 (applied to $\Gamma' \cap \Sigma'$), the result follows. $\square$
+
+We observe that the special case of 5.3 when $K$ is null is precisely Theorem 3.2 of [4], except that now $\theta$ does not depend on $\Sigma$.
+
+\sectionhead{6. Rooted digraphs}
+
+A digraph is a directed graph. When without explanation we use graph-theoretic terms for digraphs, such as ``connected'', ``path'', ``separation'', ``subgraph'', these should be taken to refer to the undirected graph underlying the digraph.
+
+A rooted digraph $(G, u_1, \ldots, u_q)$ consists of a digraph $G$ and a sequence $u_1, \ldots, u_q$ of vertices of $G$, not necessarily distinct. A rooted digraph $(G, u_1, \ldots, u_q)$ has detail $\le \delta$, where $\delta \ge 0$ is an integer, if $|E(G)| \le \delta$ and $|V(G) \setminus \{u_1, \ldots, u_q\}| \le \delta$. If $(G, u_1, \ldots, u_q)$ and $(H, v_1, \ldots, v_q)$ are rooted digraphs, both with $q$ roots, a model of the second in the first is a function $\phi$ with domain $V(H) \cup E(H)$, such that
+
+\hspace*{12pt}(i) for each $v \in V(H)$, $\phi(v)$ is a non-null connected subgraph of $G$; for all distinct $v, v' \in V(H)$, $\phi(v) \cap \phi(v')$ is null; and for $1 \le i \le q$, $u_i \in V(\phi(v_i))$;
+
+\hspace*{12pt}(ii) for each $e \in E(H)$, $\phi(e)$ is an edge of $G$; for all distinct $e, e' \in E(H)$, $\phi(e) \ne \phi(e')$; for all $e \in E(H)$ and $v \in V(H)$, $\phi(e) \notin E(\phi(v))$; and if $e \in E(H)$ has head $v \in V(H)$ and tail $v' \in V(H)$ then $\phi(e)$ has head in $V(\phi(v))$ and tail in $V(\phi(v'))$.
+
+For $\delta \ge 0$, the $\delta$-folio of $(G, u_1, \ldots, u_q)$ is the class of all rooted digraphs with detail $\le \delta$ of which there is a model in $(G, u_1, \ldots, u_q)$. In [5] we gave an algorithm to compute the $\delta$-folio of a rooted digraph $(G, u_1, \ldots, u_q)$; it had running time $O(|V(G)|^3)$ for fixed $q$ and $\delta$. However, the proof of its correctness used a result (Theorem 10.2 of [5]) which was not proved in [5], and proving it is the objective of this paper.
+
+Let $\phi$ be a model of $(H, v_1, \ldots, v_q)$ in $(G, u_1, \ldots, u_q)$. A basis for $\phi$ is a subset $Z \subseteq V(G)$ such that $u_1, \ldots, u_q \in Z$, both ends of $\phi(e)$ belong to $Z$ for every $e \in E(H)$, and $Z \cap V(\phi(v)) \ne \emptyset$ for every $v \in V(H)$. (The third condition is implied by the first two except for vertices $v$ of $H$ different from $v_1, \ldots, v_q$ and not incident with any edge of $H$.) We observe that, obviously,
+
+\textbf{6.1.} \textit{If $H$ has detail $\le \delta$, every basis for $\phi$ includes a basis of cardinality $\le q + 3\delta$.}
+
+\textbf{6.2.} \textit{Let $\phi$ be a model of $(H, v_1, \ldots, v_q)$ in $(G, u_1, \ldots, u_q)$, let $Z$ be a basis for $\phi$, let $L = \bigcup(\phi(v) : v \in V(H))$, and let $L' \subseteq G \setminus \phi(E(H))$ with the same effect on $Z$ as $L$. Define $\phi'(e) = \phi(e)$ ($e \in E(H)$), and for $v \in V(H)$ let $\phi'(v)$ be the component $T$ of $L'$ with $V(T) \cap Z = V(\phi(v)) \cap Z$. Then $\phi'$ is a model of $(H, v_1, \ldots, v_q)$ in $(G, u_1, \ldots, u_q)$.}
+
+\textbf{Proof.} For distinct $v_1, v_2 \in V(H)$, there is a vertex $z$ of $Z$ in $V(\phi(v_1))$ and hence not in $V(\phi(v_2))$ since $Z$ is a basis; consequently, $z \in V(\phi'(v_1)) \setminus V(\phi'(v_2))$, and so $\phi'(v_1) \ne \phi'(v_2)$. Since $\phi'(v_1)$ and $\phi'(v_2)$ are both components of $L'$ it follows that $\phi'(v_1) \cap \phi'(v_2)$ is null. For $1 \le i \le q$, $u_i \in Z \cap V(\phi(v_i))$, and hence $u_i \in V(\phi'(v_i))$. This proves condition (i) in the definition of ``model''.
+
+For condition (ii), the first three statements are clear. For the fourth, let $e \in E(H)$ have head $v$ and tail $v'$, and let $\phi(e)$ have head $u$ and tail $u'$. Then $u, u' \in Z$, and $u \in V(\phi(v))$, and $u' \in V(\phi(v'))$. Consequently, $u \in V(\phi'(v))$ and $u' \in V(\phi'(v'))$. This proves (ii), and so completes the proof of 6.1. $\square$
+
+If $G$ is a digraph and $Z \subseteq V(G)$, a $Z$-division of $G$ is a set $\{A_1, \ldots, A_k\}$ of subdigraphs of $G$ such that $A_1 \cup \dots \cup A_k = G$, and $E(A_i \cap A_j) = \emptyset$ and $V(A_i \cap A_j) \subseteq Z$ for $1 \le i < j \le k$. If $X$ is a finite set, an ordering of $X$ is a sequence $x_1, \ldots, x_n$ such that $x_1, \ldots, x_n$ are all distinct and $X = \{x_1, \ldots, x_n\}$. We shall need the following lemma.

@@ -1,0 +1,22 @@
+\origpage{43}{GRAPH MINORS. XIV}
+\sectionhead{9. Constant Radius Discs}
+
+In this section we prove the existence, given a tangle in a drawing as usual, of a circuit of almost constant radius around any centre, and with other useful properties as well. We begin with the following.
+
+\stmt
+(9.1) \textit{Let $H$ be a 2-cell drawing in $\Sigma$, with radial drawing $K$. Let $\mathscr{T}$ be a respectful tangle in $H$ of order $\theta$, let $\kappa$ be an integer with $1 \le \kappa \le \theta$, let $z \in A(K)$, and let $Z$ be the union of $ins(W)$, taken over all closed walks $W$ of $K$ of length $< 2\kappa$ with $z \subseteq ins(W)$. Then there is a closed disc $\Delta \subseteq \Sigma$ with $Z \subseteq \Delta - bd(\Delta)$.}
+
+\textit{Proof.} By [5, theorem (8.10)], $Z$ is simply-connected, and by (7.1), $Z \ne \Sigma$. Hence by [2, theorems (4.2) and (11.9)], $Z \subseteq \Lambda$ for some open disc $\Lambda \subseteq \Sigma$. Since $Z$ is closed, there is a closed disc $\Delta \subseteq \Lambda$ with $Z \subseteq \Delta - bd(\Delta)$, as required. $\square$
+
+\stmt
+(9.2) \textit{Let $H$ be a 2-cell drawing in $\Sigma$, and let $\mathscr{T}$ be a respectful tangle in $H$ of order $\theta$, with metric $d$. Let $z \in A(H)$ and let $\kappa$ be an integer with $2 \le \kappa \le \theta - 3$. Then there is a $(\kappa + 2)$-zone $\Lambda$ around $z$ such that $x \subseteq \Lambda$ for every $x \in A(H)$ with $d(z, x) < \kappa$.}
+
+\textit{Proof.} Let $K$ be a radial graph of $H$. By (9.1) there is a closed disc $\Delta \subseteq \Sigma$ such that $ins(W) \subseteq \Delta - bd(\Delta)$ for every closed walk $W$ of $K$ with length $< 2\theta$ and with $z \cap ins(W) \ne \emptyset$. Let $z'$ be the atom of $K$ corresponding to $z$. Since $\theta \ge 3$, there is a closed walk $W$ of $K$ of length $< 2\theta$ with $z' \subseteq ins(W)$, and so $z' \subseteq \Delta - bd(\Delta)$.
+
+\hspace*{12pt}(1) \textit{For every $x \in A(H)$, if $d(z, x) < \theta$ then $x \cap (\Delta - bd(\Delta)) \ne \emptyset$, and $x \subseteq \Delta - bd(\Delta)$ unless $x$ is a region of $H$ and $d(z, x) \ge \theta - 2$.}
+
+\textit{Subproof.} Let $x'$ be the atom of $K$ corresponding to $x$. Then $x' \subseteq \Delta - bd(\Delta)$, and so $x \cap (\Delta - bd(\Delta)) \ne \emptyset$. If $x \not\subseteq \Delta - bd(\Delta)$ then $x \not\subseteq x'$, and so $x$ is a region of $H$, and there is a region $r'$ of $K$ incident with $x'$ with $r' \not\subseteq \Delta - bd(\Delta)$. Let $e \in E(H)$ with $e \subseteq r'$. Then $d(x, e) \le 2$, and yet $d(z, e) = \theta$, since $r' \not\subseteq \Delta - bd(\Delta)$. Thus $d(z, x) \ge \theta - 2$, as required.
+
+Let $Z$ be the union of $z'$ and $ins(W)$, taken over all closed walks $W$ of $K$ of length $< 2\kappa$ with $z' \subseteq ins(W)$. Then $Z \ne \emptyset$, since $z' \subseteq Z$, and $Z \subseteq \Delta - bd(\Delta)$, since $\kappa \le \theta$.
+
+\hspace*{12pt}(2) \textit{$d(z, r) \le \kappa$ and $r \subseteq \Delta - bd(\Delta)$ for every region $r$ of $H$ with $\bar{r} \cap Z \ne \emptyset$.}

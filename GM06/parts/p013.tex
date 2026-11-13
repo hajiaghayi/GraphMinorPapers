@@ -1,0 +1,26 @@
+\origpage{127}{GRAPH MINORS. VI}
+\noindent and since $X_1$, $X_2 \ne \emptyset$, we may renumber so that
+\begin{equation*}
+V(H') \cap S_i = X_i \qquad (i = 1, 2).
+\end{equation*}
+Now $H'$ is bad, and so we may assume that $|X_1| \ge 2$. Let $K$ be the restriction of $G'$ to $X_1$. For all \del{distinct} \fix{consecutive} $a, b \in X_1$, $P(a, b, S_1(a, b))$ is a subgraph of $K$, and so $K$ is connected\fix{, since the vertices of $X_1$, listed in their order along $S_1$, are each consecutive to the next}.\fixnote{fix:4.2-proof-p127}{The paragraph on page 126 proves that $P(a, b, S_1(a, b))$ is a subgraph of $G'$ only for consecutive $a, b$, and this is enough for $K$ to be connected.} By (4.3) and the fact that $S_1$ is a $C_1$-base for $H'$ there is a segment $S \subseteq S_1$ with ends $s, t$ say which are adjacent in $K$. But then reduction 2 can be applied, a contradiction. This completes the proof of (4.2).
+
+In view of (4.2) we see that (4.1) and reductions 1 and 2 serve to polynomially reduce the general ROUTED FOREST CONTAINMENT problem on the cylinder to its special case described in the conclusion of (4.2). That special case is the subject of the next section.
+
+\sectionhead{5. Disjoint Paths along a Cylinder}
+
+It is convenient in this section to take a concrete representation of $\Sigma$ (using polar coordinates) as
+\begin{equation*}
+\Sigma = \{(r, \theta): 1 \le r \le 2, 0 \le \theta < 2\pi\}
+\end{equation*}
+and of its cuffs $C_1$, $C_2$ as
+\begin{equation*}
+C_i = \{(i, \theta): 0 \le \theta < 2\pi\} \qquad (i = 1, 2).
+\end{equation*}
+Let $f: [0, 1] \to \Sigma$ be continuous. Then it has a finite \textit{winding number} $\theta(f)$, defined intuitively as $1/2\pi$ times the the total angle turned through (measured counterclockwise) by the line $OX$, where $O$ is the origin, $X = f(x)$, and $x$ ranges from 0 to 1. (This intuitive definition is sufficient for our purposes.) If $P$ is a path drawn on $\Sigma$ with one end in $C_1$ and the other in $C_2$, let $f: [0, 1] \to \Sigma$ be a continuous injection with image $P$ and with $f(0) \in C_1$, $f(1) \in C_2$; then we define $\theta(P) = \theta(f)$. It is easy to see that this definition is independent of the choice of $f$. If $P_1$, $P_2$ are both paths drawn on $\Sigma$ from some $s \in C_1$ to some $t \in C_2$, then $\theta(P_1) - \theta(P_2)$ is an integer, and is zero if and only if $P_1$ is homotopic to $P_2$.
+
+Let $k > 0$ be some fixed integer, and let
+\begin{equation*}
+M_i = \left\{\left(i, \frac{2j}{k}\pi\right): 1 \le j \le k\right\} \qquad (i = 1, 2).
+\end{equation*}
+Let $\mathcal{L}$ be a set of $k$ paths drawn on $\Sigma$, pairwise disjoint, and each with an initial vertex in $M_1$ and a terminal vertex in $M_2$. We call such a set $\mathcal{L}$ a

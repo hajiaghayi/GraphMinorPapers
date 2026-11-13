@@ -1,0 +1,30 @@
+\origpage{117}{GRAPH MINORS. XV. GIANT STEPS}
+\hspace*{12pt}(1) $X_1 \cup \dots \cup X_n = C$.
+
+\hspace*{12pt}(2) For $1 \le i < j \le n$, $E(X_i \cap X_j) = \emptyset$ and $|V(X_i \cap X_j)| \le \rho$.
+
+\hspace*{12pt}(3) For $1 \le i \le j \le k \le n$, $X_i \cap X_k \subseteq X_j$.
+
+\hspace*{12pt}(4) For $1 \le i \le n$, $t_i \in V(X_i)$.
+
+For any subgraph $X$ of $G$, let $\hat{X}$ be the unique minimal subgraph so that $(X, \hat{X})$ is a separation of $G$, and let $N(X) = V(X \cap \hat{X})$. Thus, $N(X)$ is the set of all $v \in V(X)$ incident with an edge of $G$ not in $E(X)$. We define $X_0$ and $X_{n+1}$ to be the null graph.
+
+\hspace*{12pt}(5) \textit{For $1 \le i \le n$, $N(X_i) \subseteq V(X_i \cap X_{i-1}) \cup V(X_i \cap X_{i+1}) \cup \{t_i\}$, and consequently $|N(X_i)| \le 2\rho+1$.}
+
+\textit{Subproof.} The second claim follows from the first and (2). To prove the first claim, let $v \in N(X_i)$, incident with an edge $e$ of $G$ not in $E(X_i)$. If $v \in V(X_j)$ for some $j$ with $1 \le j < i$, then by (3) $v \in V(X_{i-1})$ and hence $v \in V(X_i \cap X_{i-1})$. If $v \in V(X_j)$ for some $j$ with $i < j \le n$ then similarly $v \in V(X_i \cap X_{i+1})$. If $v \notin V(X_j)$ for all $j \ne i$ with $1 \le j \le n$, then $e \notin E(X_j)$ for $1 \le j \le n$, and so $e \notin E(C)$; hence $v \in N(C) \subseteq \bar{\Omega}$ and so $v = t_j$ for some $j$. Hence $v \in V(X_j)$ by (4), and so $j = i$ and $v = t_i$ as required.
+
+Let us say that $X \subseteq G$ is \textit{small} if $(X, \hat{X}) \in \mathscr{T}$.
+
+\hspace*{12pt}(6) $X_1, \dots, X_n$ \textit{are small.}
+
+\textit{Subproof.} Let $1 \le i \le n$. By (5), $|N(X_i)| \le 2\rho+1$, and so one of $(X_i, \hat{X}_i), (\hat{X}_i, X_i) \in \mathscr{T}$, since $ord(\mathscr{T}) \ge 2\rho+2$. But from the hypothesis, $(\hat{X}_i, X_i) \notin \mathscr{T}$, and so $X_i$ is small as required.
+
+\hspace*{12pt}(7) \textit{If $Z \subseteq X \cup Y \subseteq G$ and $X, Y$ are small and $|N(Z)| < ord(\mathscr{T})$, then $Z$ is small.}
+
+\textit{Subproof.} Since $(X, \hat{X}), (Y, \hat{Y}) \in \mathscr{T}$ it follows that $(\hat{Z}, Z) \notin \mathscr{T}$ by the second tangle axiom, since
+\begin{equation*}
+G = Z \cup \hat{Z} \subseteq X \cup Y \cup \hat{Z}.
+\end{equation*}
+Since $(Z, \hat{Z})$ has order $< ord(\mathscr{T})$ it follows from the first axiom that $(Z, \hat{Z}) \in \mathscr{T}$ and hence $Z$ is small. This proves (7).
+
+We recall that $(A, B) \in \mathscr{T}$ and $B \subseteq C = X_1 \cup \dots \cup X_n$. Let $R = V(A \cap B)$. For $1 \le i \le n$, let

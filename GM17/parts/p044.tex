@@ -1,0 +1,27 @@
+\origpage{205}{GRAPH MINORS, XVII}
+Let $p \ge 0$ be an integer. If $\pi = (\Sigma, \Gamma, \alpha, \beta, \gamma)$ is a portrayal of a hypergraph $G$, we define $h_p(\pi) = (4a + 2b + c)^2 p + r$, where $\Sigma$ is homeomorphic to $\Sigma(a, b, c)$ and $r$ is the sum over all cuffs $\Theta$ of $\Sigma$ of the warp of $\pi$ at $\Theta$.
+
+\stmt
+(13.2) \textit{Let $p \ge 1$, and let $\pi$, $\pi'$ be portrayals of $G$, $G'$ respectively. If $\pi$ has warp $\le p$, and $\pi'$ is simpler than $\pi$, then $h_p(\pi') < h_p(\pi)$.}
+
+\textit{Proof.} Let $\pi = (\Sigma, \Gamma, \alpha, \beta, \gamma)$, and let $a$, $b$, $c$, $r$ be as in the definition of $h_p(\pi)$. Define $\Sigma'$, $\Gamma'$, $\alpha'$, $\beta'$, $\gamma'$, $\delm{\alpha'}\fix{a'}$, $b'$, $c'$, $r'$ similarly,\fixnote{fix:13.2-proof}{Here $a'$, $b'$, $c'$, $r'$ correspond to $a$, $b$, $c$, $r$.} for $G'$, $\pi'$. Now $\pi'$ is simpler than $\pi$, and so either
+
+\hspace*{12pt}(i) $\Sigma'$ is simpler than $\Sigma$, and $\pi'$ has warp $\le p$, or
+
+\hspace*{12pt}(ii) $\Sigma'$ is homeomorphic to $\Sigma$, and $r' < r$.
+
+In the first case, $4a' + 2b' + c' < 4a + 2b + c$, and since $r' \le c'p \le (4a + 2b + c - 1)p$, $p > 0$ and $4a + 2b + c > 0$, it follows that
+\begin{align*}
+h_p(\pi') &= (4a' + 2b' + c')^2 p + r' \\
+&\le (4a + 2b + c - 1)^2 p + (4a + 2b + c - 1)p \\
+&= (4a + 2b + c - 1)(4a + 2b + c)p \\
+&= h_p(\pi) - (4a + 2b + c)p - r < h_p(\pi),
+\end{align*}
+as required. In the second case, $4a' + 2b' + c' = 4a + 2b + c$, and so $h_p(\pi') = h_p(\pi) + r' - r < h_p(\pi)$, as required. $\square$
+
+For each connected surface $\Sigma$ and all integers $p \ge 1$ and $z \ge 0$, let $\sigma(\Sigma, p, z) \ge 0$ be an integer. We call the function $\sigma$ a \textit{standard} if $\sigma(\Sigma, p, z) = \sigma(\Sigma', p, z)$ whenever $\Sigma$, $\Sigma'$ are homeomorphic.
+
+\stmt
+(13.3) \textit{For any standard $\sigma$ and all $p \ge 1$ and $h$, $z_0 \ge 0$, there exist $\theta$, $z$ with $\theta > z \ge z_0$ and with the following property. Let $\mathcal{T}$ be a tangle of order $\ge \theta$ in a graph $G$, let $Z_0 \subseteq V(G)$ with $|Z_0| \le z_0$, and let $\pi_0$ be a $(\mathcal{T} \setminus Z_0)$-central portrayal of $G \setminus Z_0$ with warp $\le p$ and with $h_p(\pi_0) \le h$. Then there exist $Z \subseteq V(G)$ with $Z_0 \subseteq Z$ such that $|Z| \le z$, and a $(\mathcal{T} \setminus Z)$-central portrayal $\pi = (\Sigma, \Gamma, \alpha, \beta, \gamma)$ of $G \setminus Z$, such that $\pi$ is simpler than or resembles $\pi_0$, and $\pi$ is $\sigma(\Sigma, p, |Z|)$-redundant.}
+
+\textit{Proof.} For all $\Sigma$, $z$, define $\sigma'(\Sigma, p, z)$ to be the maximum of $\sigma(\Sigma', p, z')$ taken over all connected surfaces $\Sigma'$ simpler than or homeomorphic to $\Sigma$, and over all $z' \le z$. Then $\sigma'$ is also a standard, and if the result holds for $\sigma'$ then it holds for $\sigma$, since $\sigma(\Sigma, p, z) \le \sigma'(\Sigma, p, z)$. Consequently, by replacing $\sigma$ by $\sigma'$, we may assume that

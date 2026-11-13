@@ -1,0 +1,30 @@
+\origpage{351}{N. Robertson, P.D. Seymour / Journal of Combinatorial Theory, Series B 90 (2004) 325--385}
+\sectionhead{9. An application of patchworks}
+
+The reader familiar with [3,10] will see that we can regard a painting $\Gamma$ as a patchwork, by assigning to $e \in E(\Gamma)$ the free patch on $\tilde{e}$; and by doing so, we can apply Theorem 6.7 of [10]. Our object now is to state that theorem in the terminology of paintings.
+
+If $\Omega_1, \ldots, \Omega_k$ are well-quasi-orders with $E(\Omega_1), \ldots, E(\Omega_k)$ mutually disjoint, we define their union to be the well-quasi-order $\Omega$ with $E(\Omega) = E(\Omega_1) \cup \cdots \cup E(\Omega_k)$, in which $x \le y$ if and only if $x, y \in E(\Omega_i)$ for some $i$ and $x \le y$ in $\Omega_i$. A colour scheme $\chi$ is \textit{disjoint} if $\Omega_{\chi}(3)$, $\Omega_{\chi}(2)$ and all the $\Omega_{\chi}(S)$'s (over all sides $S$ of $\Phi_{\chi}$) have mutually disjoint element sets, and if $\chi$ is disjoint we denote the union of these well-quasi-orders by $\Omega_{\chi}$. If $\chi$ is disjoint and $(\Gamma, \phi)$ is a $\chi$-coloured painting, we may regard $\phi$ as a function from $E(\Gamma)$ into $E(\Omega_{\chi})$.
+
+\textbf{9.1.} \textit{Let $(\Gamma, \phi), (\Gamma', \phi')$ be $\chi$-coloured paintings, where $\chi$ is disjoint. Let $\sigma$ be an inflation of $\Gamma$ in $\Gamma'$, such that $\phi(e) \le \phi'(\sigma(e))$ (in $\Omega_{\chi}$) for every $e \in E(\Gamma)$. Then $\sigma$ is an inflation of $(\Gamma, \phi)$ in $(\Gamma', \phi')$.}
+
+\textbf{Proof.} If $e \in E(\Gamma)$, then since $\phi(e) \le \phi'(\sigma(e))$ in $\Omega_{\chi}$ and $\Omega_{\chi}$ is disjoint it follows that $\sigma(e)$ is internal if and only if $e$ is internal, and $\sigma(e)$ borders a side $S$ if and only if $e$ does. Thus $\sigma$ respects $\Phi_{\chi}$, as required. $\square$
+
+In Section 2 we defined an inflation of one painting in another. Let us broaden that definition a little. If $\Gamma, \Gamma'$ are paintings in $\Sigma$, and $H \subseteq \Gamma$ is a subhypergraph, an \textit{inflation} of $H$ in $\Gamma'$ is a function $\sigma$ with domain $V(H) \cup E(H)$ satisfying the three conditions of the definition of inflation in Section 2 with $\Gamma$ replaced by $H$.
+
+If $\mathscr{L}$ is a rooted location in $\Gamma$ we define $M(\Gamma, \mathscr{L})$ to be
+\begin{equation*}
+\Gamma \cap \bigcap (A^c : A \in \mathscr{L}).
+\end{equation*}
+Thus $\bar{\pi}(A) \subseteq V(M(\Gamma, \mathscr{L}))$ for each $A \in \mathscr{L}$. Let $(\Gamma, \phi), (\Gamma', \phi')$ be $\chi$-coloured paintings, where $\chi$ is disjoint, and let $\mathscr{L}, \mathscr{L}'$ be rooted locations in $\Gamma, \Gamma'$ respectively. A function $\tau \colon \mathscr{L} \to \mathscr{L}'$ is an \textit{outline} of $(\Gamma, \phi, \mathscr{L})$ in $(\Gamma', \phi', \mathscr{L}')$ if there is an inflation $\sigma$ of $M(\Gamma, \mathscr{L})$ in $\Gamma'$, such that
+
+\hspace*{12pt}$\bullet$ $\sigma(e) \in E(M(\Gamma', \mathscr{L}'))$ for each $e \in E(M(\Gamma, \mathscr{L}))$,
+
+\hspace*{12pt}$\bullet$ for each $A \in \mathscr{L}$, $|\bar{\pi}(\tau(A))| = |\bar{\pi}(A)|$, and if $A_1, A_2 \in \mathscr{L}$ are distinct then $\tau(A_1) \ne \tau(A_2)$,
+
+\hspace*{12pt}$\bullet$ for each $A \in \mathscr{L}$ and $1 \le i \le |\bar{\pi}(A)|$, if $v$ is the $i$th term of $\pi(A)$ then $\sigma(v)$ contains the $i$th term of $\pi(\tau(A))$,
+
+\hspace*{12pt}$\bullet$ for each $A \in \mathscr{L}$ and $v \in V(M(\Gamma, \mathscr{L}))$, $|V(\sigma(v)) \cap V(\tau(A))| \le 1$,
+
+\hspace*{12pt}$\bullet$ for each $e \in E(M(\Gamma, \mathscr{L}))$, $\phi(e) \le \phi'(\sigma(e))$ in $\Omega_{\chi}$.
+
+We stress that the $\sigma(v)$'s are subgraphs of $sk(\Gamma')$, but not necessarily of $sk(M(\Gamma', \mathscr{L}'))$.

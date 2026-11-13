@@ -1,0 +1,18 @@
+\origpage{214}{ROBERTSON AND SEYMOUR}
+\noindent denotes the surface obtained from a 2-sphere by adding $a$ handles and $b$ cross-caps, and then removing the interiors of $c$ pairwise disjoint closed discs. Thus $\Sigma(0, 0, 1)$ is a closed disc, $\Sigma(0, 0, 2)$ is a cylinder, $\Sigma(1, 0, 0)$ is a torus, $\Sigma(0, 1, 0)$ is a projective plane, and $\Sigma(0, 1, 1)$ is a M\"obius band. It is known that every connected surface is homeomorphic to $\Sigma(a, b, c)$ for some choice of $a, b, c$. We denote ``$\Sigma$ is homeomorphic to $\Sigma'$'' by $\Sigma \cong \Sigma'$. We denote the closure of any $X \subseteq \Sigma$ by $\overline{X}$.
+
+A subset $F \subseteq \Sigma$ homeomorphic to $S^1$ is called an \textit{O-arc}. An \textit{I-arc} is a subset $F \subseteq \Sigma$ homeomorphic to $[0, 1]$, such that there is a homeomorphism $f \colon [0, 1] \to F$ with $f(0), f(1) \in bd(\Sigma)$. In either case a homeomorphism from $S^1$ (respectively, $[0, 1]$) to $F$ is called an \textit{arc-map}. If $F$ is an \textit{I-arc} with arc-map $f$, we call $f(0)$ and $f(1)$ the \textit{ends} of $F$.
+
+An \textit{O-arc} $F$ is \textit{null-homotopic} in $\Sigma$ if there is a homotopy of some arc-map onto a constant map. Then by a result of [2], $F$ is null-homotopic if and only if there is a closed disc $\Delta \subseteq \Sigma$ with $bd(\Delta) = F$, or again if and only if $F \subseteq \Delta$ for some closed disc $\Delta \subseteq \Sigma$.
+
+In this paper we are concerned with graphs drawn on surfaces, and we formulate a non-standard definition of ``graph'' to avoid continually having to refer to drawings. A \textit{graph} $G$ then is a pair $(U(G), V(G))$, where $U(G)$ is a topological space and $V(G) \subseteq U(G)$ is finite, such that
+
+\hspace*{12pt}(i) $U(G) - V(G)$ has only a finite number of components (called \textit{edges}), and
+
+\hspace*{12pt}(ii) if $e$ is an edge then $(e, \bar{e})$ is homeomorphic either to $((0, 1), [0, 1])$ or to $(S^1 - \{x\}, S^1)$, where $x \in S^1$.
+
+$V(G)$ is called the \textit{vertex set} of $G$ and its members are called \textit{vertices}. If $\Sigma$ is a surface, a \textit{graph in $\Sigma$} means a graph $G = (U(G), V(G))$ where $U(G)$ is a subspace of $\Sigma$. If $G$ is a graph in $\Sigma$, a subset $X \subseteq \Sigma$ is \textit{$G$-normal} if $X \cap e = \emptyset$ for each edge $e$ of $G$. A graph $G$ in $\Sigma$ is \textit{proper} if $bd(\Sigma)$ is $G$-normal. A component of $\Sigma - U(G)$ is called a \textit{region} of $G$. The rest of our basic graph-theoretic terminology is more or less standard. We mention that \textit{paths} and \textit{circuits} have no ``repeated'' vertices.
+
+If $J$ is a graph in $\Sigma$ with $bd(\Sigma) \subseteq U(J)$, then for every edge $e$ of $J$, either $e \subseteq bd(\Sigma)$ or $e \cap bd(\Sigma) = \emptyset$. We denote by $J - bd(\Sigma)$ the subgraph $(V(J) \cup (U(J) - bd(\Sigma)), V(J))$ of such a graph $J$. Evidently $J - bd(\Sigma)$ is proper in $\Sigma$.
+
+An $I$-arc $F$ is a \textit{boundary $I$-arc} if $F \subseteq bd(\Sigma)$. Two $I$-arcs $F_1, F_2$ are \textit{internally disjoint} if every point in $F_1 \cap F_2$ is an end of both of them. Take two internally disjoint boundary $I$-arcs in $\Sigma$, with arc-maps $f, g$, respectively. If we make the identifications $f(x) = g(x) (0 \le x \le 1)$ we obtain a new surface. We call this operation \textit{pasting} $f = g$, and the inverse operation \textit{cutting}

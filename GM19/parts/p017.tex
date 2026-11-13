@@ -1,0 +1,28 @@
+\origpage{341}{N. Robertson, P.D. Seymour / Journal of Combinatorial Theory, Series B 90 (2004) 325--385}
+Theorem 9.2 of [2] asserts the following.
+
+\textbf{6.4.} \textit{For every surface $\Sigma$ with $bd(\Sigma) = \emptyset$, not a sphere, and every drawing $H$ in $\Sigma$, there is a number $k$ such that for every drawing $G$ in $\Sigma$ with $rep(G)\ge k$ there is an enlargement of $H$ in $G$.}
+
+We deduce
+
+\textbf{6.5.} \textit{For every surface $\Sigma$ with $bd(\Sigma) = \emptyset$, not a sphere, there is a number $k\ge 0$ such that if $G$ is a drawing in $\Sigma$ with $rep(G)\ge k$ and $G'$ is a drawing in $\Sigma$ such that there is an enlargement of $G$ in $G'$, then $rep(G')\ge 1$.}
+
+\textbf{Proof.} Let $H$ be a connected drawing in $\Sigma$ which is not isomorphic to any drawing in any simpler surface. (Such a drawing $H$ exists; for instance, it follows by considering the Euler characteristic of the surfaces that any triangulation of $\Sigma$ without parallel edges has the desired property.)
+
+Choose $k$ as in 6.4. Let $G, G'$ be as in the theorem. By 6.4, there is an enlargement of $H$ in $G$, and hence an enlargement of $H$ in $G'$. By 6.3, $H$ is isomorphic to a drawing $H'$ in $\Sigma$ with $rep(H')\le rep(G')$. If $rep(H') = 0$, then we can cut $\Sigma$ along a non-null-homotopic $O$-arc $F$ with $F\cap U(H') = \emptyset$, to obtain a drawing isomorphic to $H$ in a surface simpler than $\Sigma$, a contradiction. Hence $rep(H')\ge 1$, and so $rep(G')\ge 1$. $\square$
+
+A drawing $G$ in $\Sigma$ is a \textit{block} if $G$ is non-null and connected, and $G\setminus v$ is connected for every vertex $v\in V(G)$.
+
+\textbf{6.6.} \textit{For every surface $\Sigma$ with $bd(\Sigma) = \emptyset$ there is a number $k\ge 0$ with the following property. Let $G, G'$ be blocks in $\Sigma$ with $rep(G)>k$, and let $\sigma$ be an enlargement of $G$ in $G'$. Then there is an enlargement $\sigma'$ of $G$ in $G'$ such that}
+
+\hspace*{12pt}$\bullet$ \textit{$\sigma(e) = \sigma'(e)$ for every $e\in E(G)$, and $\sigma(v)\subseteq \sigma'(v)$ for every $v\in V(G)$,}
+
+\hspace*{12pt}$\bullet$ \textit{$\bigcup(V(\sigma'(v)) : v\in V(G)) = V(G')$, and each $\sigma'(v)$ is an induced subgraph of $G'$,}
+
+\hspace*{12pt}$\bullet$ \textit{for every region $r$ of $G'$, and every $v\in V(G)$, $\sigma'(v)\cap \bar{r}$ is null or connected.}
+
+\textbf{Proof.} If $\Sigma$ is a sphere, let $k = 0$. If not, choose $k$ to satisfy 6.5. Now let $G, G', \sigma$ be as in the theorem. Choose an enlargement $\sigma'$ of $G$ in $G'$ satisfying the first statement of the theorem, in such a way that
+\begin{equation*}
+\bigcup(\sigma'(v) : v\in V(G))
+\end{equation*}
+is maximal. Since $G'$ is connected and $G$ is non-null because they are blocks, it follows that the second statement of the theorem holds. It remains to verify the third. Let $r$ be a region of $G'$, let $v\in V(G)$, and let $a, b\in \bar{r}\cap V(\sigma'(v))$. We shall show that there is a path $P$ of $\sigma'(v)$ with ends $a, b$ and with $U(P)\subseteq \bar{r}$. For certainly there is a path $Q$ of $\sigma'(v)$ with ends $a, b$ since $\sigma'(v)$ is connected. Let $H = G\setminus v$. Now $rep(H)\ge k$, since $rep(G)>k$\fix{ and $rep(H) \ge rep(G) - 1$, as we show after this proof}; and because there is an enlargement of $H$ in $G'\setminus V(Q)$, it follows

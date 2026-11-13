@@ -1,0 +1,28 @@
+\origpage{82}{ROBERTSON AND SEYMOUR}
+These choices are possible by (3). Since every vertex of $X$ and every (different) vertex of $X \cup (Z - Y)$ are adjacent, $H_1, \dots, H_\kappa$ satisfy the theorem, a contradiction, as required. $\square$
+
+As a consequence of (5.3) we have the following, which we shall need in later papers.
+
+\stmt
+(5.4) \textit{Let $G$ be a graph and let $Z \subseteq V(G)$ with $|Z| = \xi$. Let $k \ge \lfloor \frac{3}{2}\xi \rfloor$ and let $G_1, \dots, G_k$ be connected subgraphs of $G$, mutually vertex-disjoint, such that for $1 \le i < j \le k$ there is an edge of $G$ between $G_i$ and $G_j$. Suppose that there is no separation $(A, B)$ of $G$ of order $< |Z|$ with $Z \subseteq V(A)$ and $A \cap G_i$ null for some $i$ ($1 \le i \le k$). Then for every partition $(Z_1, \dots, Z_n)$ of $Z$ into non-empty subsets, there are $n$ connected subgraphs $T_1, \dots, T_n$ of $G$, mutually disjoint and with $V(T_t) \cap Z = Z_t$ ($1 \le t \le n$).}
+
+\textit{Proof.} By (5.3) we may choose $\mu$ with $0 \le \mu \le \xi$ and $\kappa = k - \lfloor \frac{1}{2}(\xi - \mu) \rfloor$, and $H_1, \dots, H_\kappa$ as in (5.3). Let $Z = \{z_1, \dots, z_\xi\}$, where $z_i \in V(H_i)$ ($1 \le i \le \xi$). For $1 \le t \le n$, let $S_t$ be the subgraph of $G$ induced on the set
+\begin{equation*}
+\bigcup \{ V(H_i) : 1 \le i \le \xi, z_i \in Z_t \}.
+\end{equation*}
+Then $S_1, \dots, S_n$ are mutually vertex-disjoint subgraphs of $G$, and $S_t \cap Z = Z_t$ for each $t$, but they may not be connected. If $S_t$ is connected, define $T_t = S_t$. Let $N \subseteq \{1, \dots, n\}$ be
+\begin{equation*}
+N = \{ t : 1 \le t \le n, S_t \text{ is not connected} \}.
+\end{equation*}
+\hspace*{12pt}(1) \textit{If $t \in N$ then $|Z_t| \ge 2$ and $Z_t \subseteq \{z_1, \dots, z_\mu\}$.}
+
+For if $|Z_t| = 1$ then $S_t$ is connected since each $H_i$ is connected. If $z_i \in Z_t$ for some $i$ with $\mu + 1 \le i \le \xi$, then since there is an edge between $H_i$ and every other $H_j$ again it follows that $S_t$ is connected.
+
+From (1) it follows that $|N| \le \lfloor \frac{1}{2}\mu \rfloor$. Since $k \ge \lfloor \frac{3}{2}\xi \rfloor$ it follows that
+\begin{equation*}
+\kappa - \xi = k - \lfloor \frac{1}{2}(\xi - \mu) \rfloor - \xi \ge \lfloor \frac{3}{2}\xi \rfloor - \lfloor \frac{1}{2}(\xi - \mu) \rfloor - \xi \ge \lfloor \frac{1}{2}\mu \rfloor \ge |N|.
+\end{equation*}
+Let $f$ be an injection from $N$ into $\{1, \dots, \kappa\}$ such that $V(H_{f(t)}) \cap Z = \emptyset$ for all $t \in N$. (Such an injection $f$ exists since there are $\kappa - \xi \ge |N|$ values of $i \in \{1, \dots, \kappa\}$ with $V(H_i) \cap Z = \emptyset$). For each $t \in N$ let $T_t$ be the subgraph of $G$ induced on $V(S_t) \cup V(H_{f(t)})$. Then $T_t$ is connected, and $V(T_t) \cap Z = V(S_t) \cap Z = Z_t$ for each $t \in N$; and so $T_1, \dots, T_n$ satisfy the theorem. $\square$
+
+\stmt
+(5.4) implies a theorem of Larman and Mani [10]. The latter asserts that if $s_1, t_1, \dots, s_n, t_n$ are distinct vertices of a $2n$-connected graph $G$ which has a subgraph that is a subdivision of $K_{3n}$, then there are $n$ mutually disjoint paths joining $s_i$, $t_i$ ($1 \le i \le n$). It can be derived from (5.4) by setting

@@ -1,0 +1,25 @@
+\origpage{60}{ROBERTSON AND SEYMOUR}
+\stmt
+(4.1) \textit{Let $r \ge 0$, $s \ge 1$ be integers, and let $M$ be a drawing of the planar graph $G$. Suppose that there is a nested sequence $C_1, \dots, C_s$ of circuits of $M$ such that there are $r$ vertex-disjoint paths of $G$, each between $V(C_1)$ and $V(C_s)$. Then $M$ majors the $r \times s$ cylinder.}
+
+\textit{Proof.} Let $C_1, \dots, C_s$ be a nested sequence of circuits of $M$, and let $P_1, \dots, P_r$ be vertex-disjoint paths of $G$, each between $V(C_1)$ and $V(C_s)$. Choose $C_1, \dots, C_s, P_1, \dots, P_r$ with
+\begin{equation*}
+|E(C_1 \cup \cdots \cup C_s \cup P_1 \cup \cdots \cup P_r)| \text{ minimum.} \tag{1}
+\end{equation*}
+We shall show that for $1 \le i \le r$ and $1 \le j \le s$, $P_i \cap C_j$ is a path.
+
+Suppose that $C_1 \cap P_i$ is not a path for some $i$, say $i = 1$. Let $e$ be the first edge of $P_1$ not in $C_1$. Then there is a subpath of $P_1$ ($P_1'$ say) between $C_1$ and $C_s$ not using $e$; and then $e$ lies in none of $C_1, \dots, C_s, P_1', P_2, \dots, P_r$, contrary to (1). Thus $C_1 \cap P_i$ is a path, and similarly $C_s \cap P_i$ is a path, for each $i$ ($1 \le i \le r$).
+
+Suppose for a contradiction that there is some value of $j$ with $1 \le j \le s$ such that $P_i \cap C_j$ is not a path for some $i$ ($1 \le i \le r$). Choose such a value of $j$, as small as possible. Then by the foregoing, $2 \le j \le s - 1$.
+
+Suppose that for some $i$ ($1 \le i \le r$) there are two distinct vertices $v, v'$ say of $P_i \cap C_j$, such that all edges and all interior vertices of the subpath of $P_i$ between $v$ and $v'$ are outside $C_j$. Let this subpath be $P$, say. Now no interior vertex of $P$ is in $V(C_{j'})$ for any $j'$ with $1 \le j' \le s$; for all are outside $C_j$, and none are on $C_{j-1}$, by the minimality of $j$, as is easily seen. Let the subpaths of $C_j$ between $v$ and $v'$ be $Q_1, Q_2$. Then $P \cup Q_1, P \cup Q_2$ are circuits, vertex-disjoint from every $C_{j'}$ ($1 \le j' \le s, j' \ne j$). Now $C_{j+1}$ is inside one of them, say $P \cup Q_1$. But then
+\begin{equation*}
+C_1, \dots, C_{j-1}, P \cup Q_1, C_{j+1}, \dots, C_s
+\end{equation*}
+is a nested sequence of circuits, contrary to (1), for some edge of $Q_2$ is not in any of $P_1, \dots, P_r$. Thus there is no such value of $i$.
+
+It follows that
+\begin{equation*}
+\parbox{0.8\linewidth}{for every vertex $v$ of $C_j$, if $v$ is on $P_i$ where $1 \le i \le r$ then there is a subpath of $P_i$ between $v$ and $C_s$ which uses no edges outside $C_j$.} \tag{2}
+\end{equation*}
+By the choice of $j$ there exists some $i$ ($1 \le i \le r$) such that $P_i \cap C_j$ is not a path; and then there are distinct vertices $v, v'$ of $P_i \cap C_j$ such that all edges and all interior vertices of the subpath of $P_i$ between $v$ and $v'$ are inside $C_j$. Let this subpath be $P$, and let $Q_1, Q_2$ be the paths of $C_j$ between $v$ and $v'$. Now $P_i \cap C_s$ is a path, and so $P$ does not meet $C_s$. Clearly there is no path of $G$ between $V(Q_1)$ and $V(Q_2)$ which avoids $V(P)$ and which has no edges outside $C_j$. From these two facts it follows that for one of $Q_1, Q_2$, say $Q_k$,

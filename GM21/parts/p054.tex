@@ -1,0 +1,21 @@
+\origpage{52}{}
+\textit{Subproof.} Certainly
+\begin{equation*}
+\bigcup(W'(t) : t \in V(P)) = (G \setminus Z) \cap \bigcup(W(t) : t \in V(T \setminus N(T))) = G \setminus Z
+\end{equation*}
+and the graphs $W'(t)$ ($t \in V(P)$) are mutually edge-disjoint. Let $t, t', t'' \in V(P)$, with $t'$ between $t$ and $t''$. We must show that $W'(t) \cap W'(t'') \subseteq W'(t')$, and may therefore assume that $W'(t) \cap W'(t'')$ is non-null. If $t$ and $t''$ lie in different components of $T \setminus N(T)$, choose $s \in N(T)$ between them; then
+\begin{equation*}
+W(t) \cap W(t'') \subseteq W(s) \subseteq Z
+\end{equation*}
+and so $W'(t) \cap W'(t'')$ is null, a contradiction. Hence $t$ and $t''$ lie in the same component of $T \setminus N(T)$, and $t'$ therefore also lies in this component, between $t$ and $t''$. Thus $W(t) \cap W(t'') \subseteq W(t')$, and hence $W'(t) \cap W'(t'') \subseteq W'(t')$, as required. This proves (3).
+
+Now $(P, W')$ has width $\le w'$, and so $G \setminus Z$ has path-width $\le w'$. Since $|Z| \le 2^n(w' + 1)$, it follows that $G$ has path-width $\le w' + 2^n(w' + 1) = w$, as required. $\square$
+
+Actually, we could repeat the same kind of argument to get even more. Let us say that a graph $G$ is a $p$-chain if there exist $Y, Z \subseteq V(G)$ with $|Y| = |Z| \le p$, such that there is a unique set of $|\delm{X}\fix{Y}|$ mutually vertex-disjoint paths of $G$ between $Y$ and $Z$,\fixnote{fix:12-chain}{No set $X$ is defined, and the number of paths is $|Y| = |Z|$.} and every vertex of $G$ belongs to one of these paths. (Note that $Y \cap Z$ may be nonempty.) It follows from (12.1) that every $p$-chain has a particularly nice path-decomposition of width $\le p$, and so the following is a strengthening of (12.3).
+
+\textbf{12.4} \textit{For every integer $p \ge 0$ there exists $p' \ge 0$ such that every graph with a vital $p$-linkage is a $p'$-chain.}
+
+\textbf{Proof.} We only sketch the proof, since we shall not use the result. Let $w$ be as in (12.3), let $n$ satisfy (2.6) with $k$ replaced by $w + 1$, and let $p' = (w + 1)(2n + 1)$. Let $G$ have a vital $p$-linkage $L$. By (12.3), $G$ has path-width $\le w$. By a variation of (11.2) (proved in the same way as (11.2), but somewhat easier) there is a linked path-decomposition $(P, W)$ of $G$ with width $\le w$. Let $t \in V(P)$ have degree 2, and be incident with $e_1$ and $e_2$ say. We say that $t$ is \textit{bad} unless $|W(e_1)| = |W(e_2)|$ and $t$ satisfies (12.1)(iii)\fix{, and every vertex of $W(t)$ belongs to $W(e_1) \cup W(e_2)$}.\fixnote{fix:12.4-bad}{This condition is needed for the converse of (12.1), as corrected in Section 12, page 49, which the sketch uses below.} \fix{Every vertex of $P$ that does not have degree 2 is also bad.}\fixnote{fix:12.4-ends}{As printed, only vertices of degree 2 can be bad. So the ends of $P$ are never bad, and a component of $P \setminus B$ that holds an end of $P$ holds a graph $W(t)$ about which nothing is known. For example, let $w \ge 3$, let $G$ be two disjoint copies of $K_{w+1}$, and let $P$ have two vertices whose graphs are the two copies. Then $B = \emptyset$ and $C = P$, but $G$ is not a $(w + 1)$-chain. With the ends bad, each component of $P \setminus B$ lies between two bad vertices, and the bound on $|B|$ still holds by the argument of Claim (2) in the proof of (12.3).} Let us choose $(P, W)$ to minimize the number of bad vertices, and let $B$ be the set of bad vertices. An argument similar to step (2) in the proof of (12.3) implies that $|B| \le n$. Let $Z = \bigcup (W(t) : t \in B)$; then $|Z| \le (w + 1)n$. For each component $C$ of $P \setminus B$, the graph
+\begin{equation*}
+\bigcup(W(t) \cap (G \setminus Z) : t \in V(C))
+\end{equation*}

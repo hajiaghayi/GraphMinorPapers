@@ -1,0 +1,30 @@
+\origpage{98}{N. Robertson, P. Seymour / Journal of Combinatorial Theory, Series B 89 (2003) 77--108}
+\noindent way. (Here we use the fact that $G_1, \dots, G_k$ are distinct, from (4).) Let $e \in E(G')$, and assume first that $e \ne e_1, \dots, e_k$. Then $\mu'(e) \equiv \mu^*(e)$ since $P'$ is the heart of $(P^*, \mathscr{L}')$; $\mu^*(e) \equiv \mu(e)$ since $P^*$ is the heart of $(P, \mathscr{L}^*)$; and $\mu''(e) \equiv \mu(e)$ since $(G', \mu'', \Delta'', \phi'')$ is the heart of $(P, \mathscr{L})$. Consequently $\mu'(e) \equiv \mu''(e)$; and similarly $\phi'(e) = \phi''(e)$ and $\Delta'(e) = \Delta''(e)$ as required. Now we assume that $e = e_i$ for some $i$ with $1 \le i \le k$. Then
+\begin{equation*}
+\mu'(e_i) = \pi(G_i) = \pi(C_i) = \mu''(e_i);
+\end{equation*}
+and $e_i \notin dom(\phi') \cup dom(\phi'')$. Moreover, $\Delta'(e_i) = gr(P^*|G_i)$, and $\Delta''(e_i) = gr(P|C_i)$. But $P^*|G_i = P_i$ by (3), and $P_i$ is the heart of $(P|C_i, \mathscr{L}_i)$, and so $\Delta'(e_i) = \Delta''(e_i)$ from 5.4. This proves (6).
+
+Since $P^*$ is by (1) and (3) an enlargement of $P'$ by tree-width $\le w$, it follows from (6) that the heart of $(P, \mathscr{L}^*)$ is an enlargement of the heart of $(P, \mathscr{L})$ by tree-width $\le w$. This proves 5.5. $\square$
+
+\textbf{5.6.} \textit{Let $P_1, P_2$ be partial $\Omega$-patchworks, and let $(A_1, B_1)$, $(A_2, B_2)$ be separations of $\|P_1\|, \|P_2\|$ respectively. Let $\eta'$ be a realizable expansion of $P_1|A_1$ in $P_2|A_2$ (whence $|\bar{\pi}(A_1)| = |\bar{\pi}(A_2)| = k$, say) and let $\eta''$ be a realizable expansion of $P_1|B_1$ in $P_2|B_2$ such that for $1 \le i \le k$, $\eta''(v)$ contains the $i$th term of $\pi(A_2)$, where $v$ is the $i$th term of $\pi(A_1)$. Define $\eta$ by:}
+\begin{equation*}
+\eta(v) = \begin{cases}
+\eta'(v), & v \in V(A_1) \setminus V(B_1), \\
+\eta''(v), & v \in V(B_1) \setminus V(A_1), \\
+\eta'(v) \cup \eta''(v), & v \in V(A_1 \cap B_1),
+\end{cases}
+\end{equation*}
+\begin{equation*}
+\eta(e) = \begin{cases}
+\eta'(e), & e \in E(A_1), \\
+\eta''(e), & e \in E(B_1).
+\end{cases}
+\end{equation*}
+\textit{Then $\eta$ is a realizable expansion of $P_1$ in $P_2$.}
+
+\textbf{Proof.} Let $*$ be a new element and let $\Omega'$ be the well-quasi-order with $\Omega \subseteq \Omega'$ and $E(\Omega') = E(\Omega) \cup \{*\}$, in which $* < x$ for all $x \in E(\Omega)$. For $i = 1, 2$, let $P_i = (G_i, \mu_i, \Delta_i, \phi_i)$; and for all $e \in E(G_i)$, define $\phi_i'(e) = \phi_i(e)$ if $e \in dom(\phi_i)$, and otherwise $\phi_i'(e) = *$. Let $P_i' = (G_i, \mu_i, \Delta_i, \phi_i')$; then $P_i'$ is an $\Omega'$-patchwork. Since $\eta'$ is a realizable expansion of $P_1|A_1$ in $P_2|A_2$, it follows that it is also a realizable expansion of $P_1'|A_1$ in $P_2'|A_2$. (Here we use that $* \le x$ for all $x \in E(\Omega)$.) Similarly, $\eta''$ is a realizable expansion of $P_1'|B_1$ in $P_2'|B_2$.
+
+By Theorem 8.1 of [2] applied to these two $\Omega'$-patchworks, we deduce that $\eta$ is a realizable expansion of $P_1'$ in $P_2'$. For each $e \in dom(\phi_1)$, it follows that $\phi_2(\eta(e)) \ne *$, and therefore $\eta(e) \in dom(\phi_2)$; and consequently $\eta$ is a realizable expansion of $P_1$ in $P_2$. This proves 5.6. $\square$
+
+If $P = (G, \mu, \Delta, \phi)$ is an $\Omega$-patchwork, we write $V(P) = V(G), E(P) = E(G)$.

@@ -1,0 +1,29 @@
+\origpage{259}{GRAPH MINORS. XII}
+\sectionhead{7. \textsc{Deletion}}
+
+Our final objective is to investigate the effect on a respectful tangle in a drawing $\Gamma$, and on the associated metric, of deleting a part of $\Gamma$ of small radius. We begin with the following.
+
+\stmt
+(7.1) \textit{Let} $\mathscr{T}$ \textit{be a tangle of order} $\theta \ge 1$ \textit{in a graph} $G$, \textit{and let} $(A', B') \in \mathscr{T}$ \textit{have order} $1$. \textit{Let}
+\begin{equation*}
+\mathscr{T}' = \{(A \cap B', B \cap B') : (A, B) \in \mathscr{T}\};
+\end{equation*}
+\textit{then} $\mathscr{T}'$ \textit{is a tangle in} $B'$ \textit{of order} $\theta$.
+
+\textit{Proof.} Let $V(A' \cap B') = \{v\}$. Certainly every member of $\mathscr{T}'$ is a separation of $B'$ of order $< \theta$, and we shall verify the three axioms. For the first axiom, let $(A, B)$ be a separation of $B'$ of order $< \theta$; we must show that one of $(A, B)$, $(B, A) \in \mathscr{T}'$. Since $V(A \cup B) = V(B')$, we may assume that $v \in V(A)$ without loss of generality; and so $(A \cup A', B)$ is a separation of $G$ of order $< \theta$. Hence $\mathscr{T}$ contains one of $(A \cup A', B)$, $(B, A \cup A')$, and so $\mathscr{T}'$ contains one of
+\begin{equation*}
+((A \cup A') \cup B', B \cap B'), \quad (B \cap B', (A \cup A') \cap B'),
+\end{equation*}
+that is, one of $(A, B)$, $(B, A)$ as required. For the second axiom let $(A_i, B_i) \in \mathscr{T}$ ($1 \le i \le 3$), so that $(A_i \cap B', B_i \cap B') \in \mathscr{T}$ for each $i$, and suppose that
+\begin{equation*}
+(A_1 \cap B') \cup (A_2 \cap B') \cup (A_3 \cap B') = B'.
+\end{equation*}
+Thus $B' \subseteq A_1 \cup A_2 \cup A_3$. From the symmetry we may assume that $v \in V(A_1)$, and so $(A' \cup A_1, B' \cap B_1)$ has order at most that of $(A_1, B_1)$. But $(A', B') \in \mathscr{T}$ and $(A_1, B_1) \in \mathscr{T}$, and so $(B' \cap B_1, A' \cup A_1) \notin \mathscr{T}$ by the second axiom since $A' \cup A_1 \cup (B' \cap B_1) = G$. Hence, $(A' \cup A_1, B' \cap B_1) \in \mathscr{T}$. But $(A_2, B_2)$, $(A_3, B_3) \in \mathscr{T}$, and $(A' \cup A_1) \cup A_2 \cup A_3 = G$, contrary to the second axiom. This shows that $\mathscr{T}'$ satisfies the second axiom.
+
+For the third, let $(A, B) \in \mathscr{T}$ and suppose that $V(A \cap B') = V(B')$, that is, $V(B') \subseteq V(A)$. By [4, Theorem (2.9)], $(B, A) \in \mathscr{T}$, a contradiction. Thus the third axiom holds. $\square$
+
+\stmt
+(7.2) \textit{Let} $\mathscr{T}$ \textit{be a respectful tangle of order} $\theta \ge 2$ \textit{in a 2-cell drawing} $\Gamma$ \textit{in a connected surface} $\Sigma$, \textit{and let its metric be} $d$. \textit{Let} $F$ \textit{be a} $\Gamma$\textit{-normal} $O$\textit{-arc in} $\Sigma$ \textit{with} $|F \cap V(\Gamma)| = 1$; \textit{let} $F \cap V(\Gamma) = \{v\}$, \textit{let} $r$ \textit{be the region of} $\Gamma$ \textit{including} $F - \{v\}$, \textit{let} $\text{ins}(F) = \Delta$, \textit{and let} $\Gamma' = \Gamma | \overline{\Sigma - \Delta}$. \textit{Then} $\Gamma'$ \textit{is 2-cell, and} $d(a, \{v\}) \le 1$ \textit{for all} $a \in A(\Gamma) - A(\Gamma')$. \textit{Moreover, let}
+\begin{equation*}
+\mathscr{T}' = \{(A \cap \Gamma', B \cap \Gamma') : (A, B) \in \mathscr{T}\};
+\end{equation*}

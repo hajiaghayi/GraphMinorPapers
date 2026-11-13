@@ -1,0 +1,36 @@
+\origpage{540}{N. Robertson, P. Seymour / Journal of Combinatorial Theory, Series B 102 (2012) 530--563}
+We deduce
+
+\textbf{5.2.} \textit{Let $h \ge 1$ be an integer, let $\Gamma$ be a 2-cell drawing in a surface $\Sigma$ with $\text{bd}(\Sigma) = \emptyset$, and let $\mathcal{T}$ be a respectful tangle in $\Gamma$ of order $\ge 2h + 5$, with metric $d$. Let $x \in \Sigma$, and let $Y$ be the union of all atoms $y \in A(\Gamma)$ with $d(y, z) \ge 2h + 5$, where $z$ is the atom of $\Gamma$ with $x \in z$. Then $x$ is $h$-insulated from $Y$ by $\Gamma$.}
+
+\textbf{Proof.} Let $\kappa = 2h + 2$, and let $\Delta$ be as in 5.1.
+
+\hspace*{12pt}(1) \textit{If $r_1, \ldots, r_t$ is a sequence of regions of $\Gamma$ with $z \subseteq \bar{r}_1$, $\bar{r}_t \cap \text{bd}(\Delta) \ne \emptyset$, and $\bar{r}_i \cap \bar{r}_{i+1} \ne \emptyset$ for $1 \le i < t$, then $t \ge h$.}
+
+\textit{Subproof.} Let $z' \in A(\Gamma)$ with $\bar{r}_t \cap \text{bd}(\Delta) \cap z' \ne \emptyset$. Then
+\begin{equation*}
+d(z, z') \le d(z, r_1) + \sum_{1 \le i \le t-1} d(r_i, r_{i+1}) + d(r_t, z');
+\end{equation*}
+but $d(z, r_1) \le 2$, $d(r_i, r_{i+1}) \le 2$ for $1 \le i \le t - 1$, and $d(r_t, z') \le 2$, and so $d(z, z') \le 2t + 2$. But from 5.1(iii), $d(z, z') \ge 2h + 2$ since $z' \nsubseteq \Delta \setminus \text{bd}(\Delta)$. Hence $h \le t$. This proves (1).
+
+Let $C_1$ be the circuit of $\Gamma$ with $U(C_1) = \text{bd}(\Delta)$. From (1) and Theorem 5.5 of [6], there are circuits $C_2, \ldots, C_h$ of $\Gamma$, mutually vertex-disjoint and with $U(C_i) \subseteq \Delta \setminus \text{bd}(\Delta)$ ($2 \le i \le h$), such that $\Delta_2 \supseteq \Delta_3 \supseteq \cdots \supseteq \Delta_h$ and $z \subseteq \Delta_h \setminus \text{bd}(\Delta_h)$, where $\Delta_i$ is the closed disc in $\Delta$ bounded by $U(C_i)$ ($2 \le i \le h$). But if $y \in A(\Gamma)$ with $y \cap \Delta \ne \emptyset$, then $y \subseteq \Delta$; and so by 5.1(ii), $d(z, y) \le 2h + 4$. Consequently, $Y \cap \Delta = \emptyset$, and so $x$ is $h$-insulated from $Y$ by $\Gamma$, as required. $\square$
+
+The main result of this section is the following.
+
+\textbf{5.3.} \textit{For every integer $p \ge 0$ there exists $\theta > p$ with the following property. Let $\Gamma, K$ be subgraphs of a graph $\Gamma \cup K$, let $\Gamma$ be a 2-cell drawing in a surface $\Sigma$ with $\text{bd}(\Sigma) = \emptyset$, and let $\mathcal{T}$ be a respectful tangle in $\Gamma$ of order $\ge \theta$, with metric $d$. Let $Z \subseteq V(\Gamma \cup K)$ with $|Z| \le p$, and let $F_1, \ldots, F_t$ be $\Gamma$-normal $O$-arcs, such that}
+\begin{equation*}
+(F_1 \cup \cdots \cup F_t) \cap V(\Gamma) \subseteq Z \subseteq ((F_1 \cup \cdots \cup F_t) \cap V(\Gamma)) \cup V(K)
+\end{equation*}
+\textit{and $\text{ins}(F_1), \ldots, \text{ins}(F_t)$ are mutually disjoint. Suppose that} \textit{(i) for $1 \le i \le t$, there is no $\Gamma$-normal $O$-arc $F \subseteq \Sigma$ with $|F \cap V(\Gamma)| < |F_i \cap V(\Gamma)|$ and $\text{ins}(F_i) \subseteq \text{ins}(F)$,}
+
+\textit{(ii) for $1 \le i < j \le t$, $d(\text{ins}(F_i), \text{ins}(F_j)) \ge \theta$,} \textit{(iii) for $1 \le i \le k$, $d(\text{ins}(F_i), v) \ge \theta$ for every $v \in V(\Gamma \cap K)$.}
+
+\textit{Let $R$ be the union of all atoms $z$ of $\Gamma$ with $d(z, v) \ge \theta$ for all $v \in V(\Gamma \cap K)$, and let}
+\begin{equation*}
+\Sigma' = \Sigma \setminus \bigcup_{1 \le i \le t} (\text{ins}(F_i) \setminus F_i).
+\end{equation*}
+\textit{Let $\Gamma'$ be an $(R \cap \Sigma')$-variant of $\Gamma$ in $\Sigma$ with $\Gamma' \cap K = \Gamma \cap K$ and with $\Gamma \cap \text{ins}(F_i) = \Gamma' \cap \text{ins}(F_i)$ ($1 \le i \le t$), and let $L' \subseteq (\Gamma' \cap \Sigma') \cup K$. Then there exists $L \subseteq (\Gamma \cap \Sigma') \cup K$ with the same effect on $Z$ as $L'$, such that $L \cap K \subseteq L'$.}
+
+\textbf{Proof.} Let $h \ge 1$ be as in 4.2, and let $\theta = 2p + 4h + 15$. We claim that $\theta$ satisfies the theorem. For let $\Gamma, K$ etc. be as in the theorem. Let $r_i$ be a region of $\Gamma$ in $\Sigma$ with $r_i \cap F_i \ne \emptyset$, for $1 \le i \le t$. Since $|F_i \cap V(\Gamma)| \le |Z| \le p$, we have:
+
+\hspace*{12pt}(1) \textit{For $1 \le i \le t$, if $z \in A(\Gamma)$ and $z \cap \text{ins}(F_i) \ne \emptyset$ then $d(z, r_i) \le p$.}

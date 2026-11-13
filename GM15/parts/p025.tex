@@ -1,0 +1,33 @@
+\origpage{136}{ROBERTSON AND SEYMOUR}
+\noindent and so the inequality follows. Hence $Z_i \cap Z_j = \emptyset$, since $\theta > 2(\theta' + 12\mu + 14)$. Finally, suppose that $J_i \cap J_j \not\subseteq H$. Then there is an $H$-path with one end, $u$, in $Z_i$ and the other, $v$, in $Z_j$. Hence
+\begin{equation*}
+d(u, v) \ge \theta - 2(\theta' + 12\mu + 14) \ge \mu.
+\end{equation*}
+But $H, \mathcal{T}$ is $(0, \mu)$-flat by (5.1), a contradiction. Thus $J_i \cap J_j \subseteq H$. $\square$
+
+Let $G_0 = H \cup J_0$.
+
+\stmt
+(7.3) \textit{If there is a} $(3\mu + 3)$\textit{-zone} $\Lambda \subseteq \Sigma$ \textit{for} $H$ \textit{such that} $H \cap (\Sigma - \Lambda)$ \textit{is rigid and such that} $\Lambda$ \textit{is an eye of} $H \cap (\Sigma - \Lambda)$ \textit{in} $G_0$ \textit{with respect to the tangle of order} $\theta - 12\mu - 14$ \textit{obtained from} $\mathcal{T}$ \textit{by clearing} $\Lambda$, \textit{then (S1) holds.}
+
+\textit{Proof.} Choose $z \in A(H)$ such that $\Lambda$ is a $(3\mu + 3)$-zone around $z$. Let $\mathcal{T}_1$ be the tangle of order $\theta - 12\mu - 14$ obtained from $\mathcal{T}$ by clearing $\Lambda$; then $\Lambda$ is an eye of $H \cap (\Sigma - \Lambda)$ with respect to $\mathcal{T}_1$. Let $H' = H \cap (\Sigma - \Lambda)$. From the definition of clearing $\Lambda$, we have
+
+\hspace*{12pt}(1) \textit{For all} $\sigma_1, \sigma_2 \in \Sigma$, $d_1(\sigma_1, \sigma_2) \ge d(\sigma_1, \sigma_2) - 12\mu - 14$, \textit{and so} $\mathcal{T}_1$ \textit{is a} $(12\mu + 14)$\textit{-compression of} $\mathcal{T}$.
+
+\hspace*{12pt}(2) \textit{For} $1 \le i \le k$, $\bar{\Lambda} - Z_i$ \textit{contains a vertex of} $H$.
+
+\textit{Subproof.} Since $\Lambda$ is an eye of $H \cap (\Sigma - \Lambda)$ in $G_0$ it follows that some vertex of $V(H) \cap \bar{\Lambda}$ belongs to $V(J_0)$. But no such vertex belongs to $Z_i$. This proves (2).
+
+\hspace*{12pt}(3) \textit{For} $1 \le i \le k$, $d(z, r_i) > \theta' + 9\mu + 11$.
+
+\textit{Subproof.} From (2), there exists $v \in V(H)$ with $v \in \bar{\Lambda} - Z_i$. Then $d(z, v) \le 3\mu + 3$ since $\Lambda$ is a $(3\mu + 3)$-zone; but $d(r_i, v) > \theta' + 12\mu + 14$, since $v \notin Z_i$. Since $d(r_i, v) \le d(r_i, z) + d(z, v)$, it follows that $d(r_i, z) > \theta' + \mu + 11$. This proves (3).
+
+In particular, from (3) it follows that $r_i \notin \Lambda$, and so $r_i$ is a region of $H'$, for $1 \le i \le k$. Also, $\Lambda$ is a region of $H'$.
+
+\hspace*{12pt}(4) \textit{For} $1 \le i \le k$, $d_1(\Lambda, r_i) \ge \theta'$.
+
+\textit{Subproof.} Again from (2), let $v \in V(H)$ with $v \in \bar{\Lambda} - Z_i$. Choose $\sigma \in \Lambda$ with $d(v, \sigma) \le 1$. Then $d(r_i, \sigma) \ge \theta' + 12\mu + 14$, since $d(r_i, v) > \theta' + 12\mu + 14$; and so, by (1), $d_1(r_i, \sigma) \ge \theta'$. This proves (4).
+
+\hspace*{12pt}(5) \textit{For} $1 \le i \le k$, $r_i$ \textit{is an eye of the} $\Sigma$\textit{-span} $H', \mathcal{T}_1$.
+
+\textit{Subproof.} It suffices to show that if $a, b, c, d \in V(H) \cap \text{bd}(r_i)$ are distinct and $\{a, b, c, d\}$ is free with respect to $\mathcal{T}$ then $a, b, c, d \in V(H')$ and

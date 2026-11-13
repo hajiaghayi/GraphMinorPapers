@@ -1,0 +1,36 @@
+\origpage{70}{N. Robertson, P.D. Seymour / Journal of Combinatorial Theory, Series B 89 (2003) 43--76}
+\textit{Subproof.} Now
+\begin{align*}
+\theta - \chi &\le d'(y_1, y_2) \le d'(y_1, p(y_1)) + d'(p(y_1), p(y_2)) + d'(p(y_2), y_2) \\
+&\le 2\gamma + d'(p(y_1), p(y_2))
+\end{align*}
+since for $i = 1, 2, \Lambda_{y_i}$ is a $\gamma$-zone around $y_i$ and $p(y_i) \in \bar{\Lambda}_{y_i}$. But
+\begin{equation*}
+d'(p(y_1), p(y_2)) \le d''(p(y_1), p(y_2)) + (4\gamma + 2)\delta
+\end{equation*}
+since $\mathscr{T}''$ is a $(4\gamma + 2)\delta$-compression of $\mathscr{T}'$. Consequently,
+\begin{equation*}
+d''(p(y_1), p(y_2)) \ge \theta - \chi - 2\gamma - (4\gamma + 2)\delta \ge \theta_2.
+\end{equation*}
+This proves (5).
+
+\hspace*{12pt}(6) \textit{For each $y \in Y$ there is a $H''$-path in $G \setminus X$ with ends $p(y), q(y)$ say, such that $d''(p(y), q(y)) \ge \theta_2$.}
+
+\textit{Subproof.} Let $Q_y$ be an $H$-path in $G \setminus X$ with ends $y, r(y)$ say, such that $d'(y, r(y)) \ge \theta - \chi$. Let $R_y$ be a minimal path of $H$ between $r(y)$ and $V(H')$, with ends $r(y), q(y)$ say. Then for some $y' \in Y, \bar{\Lambda}_{y'}$ contains both $r(y)$ and $q(y)$, and so
+\begin{equation*}
+d'(y', r(y)), d'(y', q(y)) \le \gamma.
+\end{equation*}
+Hence $d'(q(y), r(y)) \le 2\gamma$. But $d'(y, p(y)) \le \gamma$ since $p(y) \in \bar{\Lambda}_y$, and so
+\begin{align*}
+\theta - \chi &\le d'(y, r(y)) \le d'(y, p(y)) + d'(p(y), q(y)) + d'(q(y), r(y)) \\
+&\le 3\gamma + d'(p(y), q(y)).
+\end{align*}
+Thus $d'(p(y), q(y)) \ge \theta - \chi - 3\gamma \ge \theta_2$, and so $P_y \cup Q_y \cup R_y$ is an $H''$-path satisfying (6). This proves (6).
+
+Let $Y'' = \{p(y) \colon y \in Y\}$. From (4)--(6) it follows that $(H'', \mathscr{T}'', X, Y'')$ is an animal in $G$ with respect to $\mathscr{T}^*$ with $\chi$ horns and $\delta$ hairs, of strength $\ge (\theta_2, \zeta + \tau)$. By 8.3 (with $\theta, H, \mathscr{T}, Y, Z$ replaced by $\theta_2, H'', \mathscr{T}'', Y'', Z \cup X$) we deduce that one of the outcomes of 8.3 holds.
+
+If the first outcome of 8.3 holds, then 7.1.3 is true. Suppose that the second outcome of 8.3 holds, that is, there is an $H''$-path $P$ in $G \setminus (X \cup Z)$ with ends $s_1, s_2$ and there are distinct $y_1, y_2 \in Y''$ with $d''(s_1, y_1), d''(s_2, y_2) < \psi$. Then $P$ is an $H$-path in $G \setminus X$, not meeting $Z$, and so $d''(s_1, s_2) < 2\psi$ by (3). Hence
+\begin{equation*}
+d''(y_1, y_2) \le d''(y_1, s_1) + d''(s_1, s_2) + d'(s_2, y_2) < 4\psi \le \theta_2
+\end{equation*}
+contrary to (5). Thus this case does not occur. We may therefore assume that the third outcome of 8.3 holds, that is, there is a $(\lambda, 2\psi)$-level $\Sigma$-span $H'', \mathscr{T}_0$ of order $\theta_2 - |X \cup Z|$ in $G \setminus (X \cup Z)$ with respect to $\mathscr{T}^* \setminus (X \cup Z)$. But then 7.1.3 holds, since $\theta_2 - |X \cup Z| \ge \theta_2 - \zeta \ge \theta'$. In all cases, therefore, 7.1 holds, as required. $\square$

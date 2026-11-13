@@ -1,0 +1,31 @@
+\origpage{107}{GRAPH MINORS. XIII}
+\textit{Output:} A vision.
+
+\textit{Running time:} $O(\varepsilon^2)$.
+
+\textit{Description:} First we compute an attachment sequence for each interior $A \in \mathcal{A}$. For each $A$ this takes time $O(\varepsilon(G))$, and so we can compute all the attachment sequences in time $O(\varepsilon^2)$, since $|\mathcal{A}| \le |E(G)|$.
+
+For each interior $A \in \mathcal{A}$ we choose $\tilde{A}$, and find a branch-decomposition of $\tilde{A}$ of width $\le \fix{\max(}\omega\fix{, 2)} + q$ (this exists,\fixnote{fix:10.1}{A graph with at most one edge has branch-width 0 by the convention of page 70, and adding vertices can raise its branch-width to 2. For example, with $\omega = 0$ and $q = 1$, adding to $A = K_2$ a vertex joined to both ends gives $K_3$, of branch-width $2 > \omega + q$. With $\max(\omega, 2)$ in place of $\omega$ the bound holds. The width is still a constant, which is all that (4.1) needs, so the algorithm and its running time are unchanged.} since $\tilde{A}$ is obtained from $A$ by adding $q$ extra vertices), by adapting the given branch-decomposition of $A$ in the natural way. This takes time $O(\varepsilon)$.
+
+Third, we compute the $\delta$-folio of $(\tilde{A}, \pi(A))$ for each interior $A \in \mathcal{A}$, by (4.1). This takes time $O(v\varepsilon)$, since $\fix{\max(}\omega\fix{, 2)} + q$ is a constant.
+
+Fourth, for each interior $A \in \mathcal{A}$ we compute some $v(A)$, for instance, by extending a spanning tree of $H$ to a spanning tree of its compass. This takes time $O(v\varepsilon)$ again, and completes the algorithm.
+
+Under Hypothesis C and given some vision, a subwall $H'$ of $H$ is said to be \textit{$h$-homogeneous} if for every internal $A \in \mathcal{A}$ with $v(A)$ inside $H'$ and for every subwall $H''$ of $H'$ of height $h$, there exists some internal $A' \in \mathcal{A}$ with $v(A')$ inside $H''$ such that $(A', \pi(A'))$ has the same $\delta$-folio as $(A, \pi(A))$. The following lemma is proved in [24]; it is an application of the main results of [21, 22].
+
+\stmt
+(10.2) \textit{For any $q$, $\delta \ge 0$ and $h \ge 2$, even, there exists $f(h) \ge h$, even, such that under Hypothesis C, if $H' \subseteq H$ is an $h$-homogeneous subwall of height $f(h)$ then both middle vertices of $H'$ are irrelevant to the $\delta$-folio of $G$ relative to $X$.}
+
+(The middle vertices of a wall are the two vertices corresponding to the two middle vertices of the elementary wall of which the wall is a subdivision.) We use (10.2) to show
+
+\stmt
+(10.3) \textit{For all $q$, $\delta \ge 0$ there exists $h \ge 0$, even, such that for all $\omega \ge 0$ there is an algorithm as in (10.4) with running time $O(\varepsilon^2)$.}
+
+\stmt
+(10.4) \textsc{Algorithm}.
+
+\textit{Input:} $G$, $X$, $H$, $\mathcal{A}$ satisfying Hypothesis C, where $H$ has height $h$, and for each interior $A \in \mathcal{A}$ a branch-decomposition of $A$ of width $\le \omega$.
+
+\textit{Output:} A vertex irrelevant to the $\delta$-folio of $G$ relative to $X$.
+
+\textit{Proof of} (10.3). Let $f$ be the function of (10.2) (for given $q$, $\delta$). Let $\mathcal{L}$ be the class of all rooted digraphs with $\le q+3$ roots and with detail $\le \delta$. Then $\mathcal{L}$ is the union of finitely many isomorphism classes $W_1, \dots, W_l$, say.

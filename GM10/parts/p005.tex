@@ -1,0 +1,24 @@
+\origpage{157}{GRAPH MINORS, X}
+Some further lemmas:
+
+\stmt
+(2.7) \textit{Let $\mathscr{T}$ be a set of separations of a hypergraph $G$, each of order $<\theta$, satisfying the first and second tangle axioms. Then $\mathscr{T}$ is a tangle if and only if $(K_e, G\setminus e)\in \mathscr{T}$ for every $e\in E(G)$ of size $<\theta$, where $K_e$ is the hypergraph formed by $e$ and its ends.}
+
+\textit{Proof.} If $\mathscr{T}$ is a tangle and $e\in E(G)$ then $(G\setminus e, K_e)\notin \mathscr{T}$ by the third tangle axiom, since $V(G\setminus e) = V(G)$, and so $(K_e, G\setminus e)\in \mathscr{T}$, as required. For the converse, let $\mathscr{T}$ not be a tangle, and choose $(A, B)\in \mathscr{T}$ with $V(A) = V(G)$ and with $B$ minimal. By the second tangle axiom, $A\ne G$ and so $E(B)\ne \emptyset$; choose $e\in E(B)$. From the minimality of $B$, $(A\cup K_e, B\setminus e)\notin \mathscr{T}$, and so $(B\setminus e, A\cup K_e)\in \mathscr{T}$. Hence $(K_e, G\setminus e)\notin \mathscr{T}$ by the second axiom, since $(A, B)\in \mathscr{T}$ and $A\cup (B\setminus e)\cup K_e = G$. But $e$ has size $<\theta$, since every end of $e$ is in $V(A\cap B)$. The result follows. $\square$
+
+Let $\mathscr{T}$ be a tangle in a hypergraph $G$. A separation $(A, B)\in \mathscr{T}$ is \textit{extreme} if $A' = A$ and $B' = B$ for every $(A', B')\in \mathscr{T}$ with $A\subseteq A'$ and $B'\subseteq B$.
+
+\stmt
+(2.8) \textit{Let $\mathscr{T}$ be a tangle of order $\theta$ in a hypergraph $G$, and let $(A, B)\in \mathscr{T}$ be extreme. Then $(A, B)$ has order $\theta - 1$. Moreover, if $(B_1, B_2)$ is a separation of $B$, then either $B_1\subseteq A\cap B$ and $B_2 = B$, or $B_2\subseteq A\cap B$ and $B_1 = B$, or $(B_1, B_2)$ has order strictly greater than}
+\begin{equation*}
+\min(|V(A\cap B_1)|, |V(A\cap B_2)|).
+\end{equation*}
+\textit{In particular, there is no separation $(B_1, B_2)$ of $B$ with $B_1, B_2$ non-null of order $0$, and there is no edge of $B$ with all its ends in $V(A)$.}
+
+\textit{Proof.} By the third axiom there exists $v\in V(B) - V(A)$. Let $K_v$ be the hypergraph with vertex set $\{v\}$ and with no edges. From the extremity of $(A, B)$, $(A\cup K_v, B)\notin \mathscr{T}$, and $(B, A\cup K_v)\notin \mathscr{T}$ by the second axiom, since $(A, B)\in \mathscr{T}$ and $A\cup B = G$. Thus $(A\cup K_v, B)$ has order $\ge \theta$, and so $(A, B)$ has order $\theta - 1$.
+
+Let $(B_1, B_2)$ be a separation of $B$. If $(A\cup B_1, B_2) = (A, B)$ then $B_1\subseteq A$ and $B_2 = B$, and so we may assume that $(A\cup B_1, B_2)\ne (A, B)$. From the extremity of $(A, B)$, $(A\cup B_1, B_2)\notin \mathscr{T}$, and similarly $(A\cup B_2, B_1)\notin \mathscr{T}$. Not both $(B_2, A\cup B_1)$, $(B_1, A\cup B_2)\in \mathscr{T}$, by the second axiom, since $A\cup B_1\cup B_2 = G$, and without loss of generality we assume that $(B_2, A\cup B_1)\notin \mathscr{T}$. Since $(A\cup B_1, B_2)\notin \mathscr{T}$ it follows that $(A\cup B_1, B_2)$ has order $\ge \theta$; that is,
+\begin{equation*}
+|V(B_1\cap B_2)| + |V(A\cap B) - V(A\cap B_1)| \ge \theta = |V(A\cap B)| + 1.
+\end{equation*}
+Hence $|V(B_1\cap B_2)| > |V(A\cap B_1)|$, as required.

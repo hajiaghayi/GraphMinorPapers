@@ -1,0 +1,30 @@
+\origpage{360}{N. Robertson, P.D. Seymour / Journal of Combinatorial Theory, Series B 90 (2004) 325--385}
+A feast $\mathscr{F}$ is \textit{disjoint} if $I(F) = ins(F) \cap (\bar{r} \setminus r)$ for each $F \in \mathscr{F}$, and $ins(F) \cap ins(F') = \{r^*\}$ for all distinct $F, F' \in \mathscr{F}$.
+
+\textbf{11.3.} \textit{Every feast of minimum order with order $\le (m + 1)n$ is disjoint.}
+
+\textbf{Proof.} By 7.1, taking $z = r$ and $\kappa = (m + 1)n + 2$, we deduce that there is a circuit $C$ of $sk(\Gamma)$, bounding an open disc $\Lambda \subseteq \tilde{\Sigma}$ with $r \subseteq \Lambda$, satisfying (1) and (2) below:
+
+\hspace*{12pt}(1) $x \subseteq \Lambda$ for every $x \in A(\Gamma)$ with $d(r, x) \le (m + 1)n$.
+
+\hspace*{12pt}(2) $ins(C^*) \subseteq \bar{\Lambda}$ for every circuit $C^*$ of $\Gamma^*$ with $U(C^*) \subseteq \bar{\Lambda}$ and $|E(C^*)| \le 2(m + 1)n$.
+
+In particular, for every bite $F$ with $\frac{1}{2}|E(F)| \le (m + 1)n$, since $r^* \in V(F)$ it follows that $d(r, x) \le (m + 1)n$ for every $x \in A(\Gamma)$ with $x \cap U(F) \ne \emptyset$, and hence $x \subseteq \Lambda$ for every such $x$, by (1); and so $F \subseteq \Lambda$, and hence $ins(F) \subseteq \Lambda$, by (2).
+
+Let $\mathscr{F}$ be a feast of minimum order, with order $\le (m + 1)n$, and let $G = \bigcup(F : F \in \mathscr{F})$. Hence $U(G) \subseteq \Lambda$, and since
+\begin{equation*}
+|E(G)| \le \Sigma(|E(F)| : F \in \mathscr{F}) \le 2(m + 1)n
+\end{equation*}
+it follows from (2) that $ins(F) \subseteq \Lambda$ for every circuit $F$ of $G$.
+
+Now $G$ is a connected subdrawing of the planar drawing $\Gamma^* \cap \bar{\Lambda}$, with $r^* \in V(G)$, and every vertex and edge of $G$ is in a circuit, and $G$ has no cutvertex except possibly $r^*$. It follows that there are circuits $C_1, \dots, C_p$ of $G$, bounding closed discs $\Delta_1, \dots, \Delta_p \subseteq \bar{\Lambda}$ respectively, such that $\Delta_i \cap \Delta_j = \{r^*\}$ ($1 \le i < j \le p$) and $U(G) \subseteq \Delta_1 \cup \cdots \cup \Delta_p$. Thus $\Delta_i = ins(C_i)$ ($1 \le i \le p$).
+
+Suppose that $r^* \notin V(C_i)$ for some $i$. Then $p = 1$ (since $\Delta_i \cap \Delta_j = \{r^*\}$ for $j \ne i$, which is impossible) and $i = 1$, and $r^*$ belongs to $ins(C_1) \setminus U(C_1)$; and hence $S \subseteq ins(C_1)$, and $(\Gamma, \phi, \lambda, \mathscr{T})$ is $(m + 1)n$-flawed in freedom, a contradiction. This proves that $r^* \in V(C_i)$ for $1 \le i \le p$.
+
+Let $\mathscr{F}' = \{C_1, \dots, C_p\}$. We shall show that $\mathscr{F}'$ is a feast. If $F \in \mathscr{F}$ there exists $C_i \in \mathscr{F}'$ with $ins(F) \subseteq ins(C_i)$ and hence $I(F) \subseteq I(C_i)$. It follows that every component of $S \setminus I(\mathscr{F}')$ is a subset of a component of $S \setminus I(\mathscr{F})$, and $I(\mathscr{F}')$ includes the short sides with a common end with $S$.
+
+Now for $1 \le i \le p$, there is a circuit $C'_i \in \mathscr{F}$ with $E(C'_i) \cap E(C_i) \ne \emptyset$; and hence $U(C'_i) \subseteq \Delta_i$. It follows that $C'_1, \dots, C'_p \in \mathscr{F}$ are all distinct, and so $p \le |\mathscr{F}| \le m + 1$.
+
+It follows that $\mathscr{F}'$ is a feast. Its order is $\frac{1}{2}\Sigma|E(C_i)|$, and since $C_1, \dots, C_p$ are mutually edge-disjoint, it follows that $\mathscr{F}'$ has order $\le \frac{1}{2}|E(G)|$. But $\mathscr{F}$ has order $\ge \frac{1}{2}|E(G)|$, and $\mathscr{F}$ has minimum order. Consequently we have equality throughout, and in particular $G = C_1 \cup \cdots \cup C_p$, and every edge of $G$ belongs to exactly one member of $\mathscr{F}$, and $F \subseteq G$ for every $F \in \mathscr{F}$. Hence, since $C_1, \dots, C_p$ are the only circuits of $G$, it follows that $F \in \{C_1, \dots, C_p\}$ for every $F \in \mathscr{F}$, and so $\mathscr{F}' = \mathscr{F}$.
+
+This proves that $ins(F) \cap ins(F') = \{r^*\}$ for all distinct $F, F' \in \mathscr{F}$. To complete the proof that $\mathscr{F}$ is disjoint, let $F \in \mathscr{F}$, and suppose that $I(F) \ne ins(F) \cap (\bar{r} \setminus r)$. Then there is an edge $e$ of $\Gamma^*$ with one end $r^*$, the other end in $V(F)$, and with $e \nsubseteq ins(F)$. There

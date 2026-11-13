@@ -1,0 +1,32 @@
+\origpage{267}{GRAPH MINORS. XII}
+We proceed by induction on $k$. If $k = 0$ the result is trivial, taking $\Gamma' = \Gamma$ and $\mathscr{T}' = \mathscr{T}$, and so we assume that $k \ge 1$. Let $Y$ be the set of vertices of $\Gamma$ incident with $r$. By (7.5) there is a 2-cell component $\Gamma''$ of $\Gamma \setminus Y$, and a respectful tangle $\mathscr{T}''$ of order $\theta - 2$ in $\Gamma''$, with metric $d''$, such that if $r''$ is the region of $\Gamma''$ including $r$, then
+\begin{align*}
+\text{(v)} \quad & U(\Gamma) \subseteq U(\Gamma'') \cup r'' \\
+\text{(vi)} \quad & d''(a, b) \ge d(a, b) - 4 \text{ for all } a, b \in A(\Gamma) \cap A(\Gamma'') \\
+\text{(vii)} \quad & d''(a, r'') \ge d(a, r) - 2 \text{ for all } a \in A(\Gamma) \cap A(\Gamma''), \text{ and} \\
+\text{(viii)} \quad & d(a, r) \le 3 \text{ for all } a \in A(\Gamma) - A(\Gamma'').
+\end{align*}
+Let $Z''$ be the set of all vertices $v$ of $\Gamma''$ such that there is a $\Gamma''$-normal line $F$ with $v \in F$, $F \cap r'' \ne \emptyset$ and $|F \cap V(\Gamma'')| \le k - 1$. Then $Z \subseteq Y \cup Z''$. From the inductive hypothesis (with $\mathscr{T}, \theta, k, \Gamma, r, Z$ replaced by $\mathscr{T}'', \theta - 2, k - 1, \Gamma'', r'', Z''$) there is a 2-cell subdrawing $\Gamma'$ of $\Gamma'' \setminus Z''$ and a respectful tangle $\mathscr{T}'$ of order $(\theta - 2) - 2(k - 1)$ in $\Gamma'$ with metric $d'$, such that if $r'$ is the region of $\Gamma'$ with $r'' \subseteq r'$, then
+\begin{align*}
+\text{(i$'$)} \quad & U(\Gamma'') \subseteq U(\Gamma') \cup r' \\
+\text{(ii$'$)} \quad & d'(a, b) \ge d''(a, b) - 4(k - 1) \text{ for all } a, b \in A(\Gamma'') \cap A(\Gamma') \\
+\text{(iii$'$)} \quad & d'(a, r') \ge d''(a, r'') - 2(k - 1) \text{ for all } a \in A(\Gamma'') \cap A(\Gamma'), \text{ and} \\
+\text{(iv$'$)} \quad & d''(a, r'') \le 2(k - 1) + 1 \text{ for all } a \in A(\Gamma'') \text{ with } a \subseteq r'.
+\end{align*}
+We claim that $\Gamma', \mathscr{T}', r'$ satisfy the theorem. For $\Gamma'$ is a subdrawing of $\Gamma \setminus Z$, since $Z \subseteq Y \cup Z''$ and $Y \cap V(\Gamma') = \emptyset$; and $r'$ is the region of $\Gamma'$ including $r''$ and hence $r$. Now from (v) and (i$'$),
+\begin{equation*}
+U(\Gamma) \subseteq U(\Gamma'') \cup r'' \subseteq U(\Gamma') \cup r',
+\end{equation*}
+and so (i) holds. For (ii), let $a, b \in A(\Gamma) \cap A(\Gamma')$; then $a, b \in A(\Gamma'')$, and from (ii$'$) and (vi),
+\begin{equation*}
+d'(a, b) \ge d''(a, b) - 4(k - 1) \ge d(a, b) - 4 - 4(k - 1) = d(a, b) - 4k
+\end{equation*}
+and so (ii) holds. For (iii), let $a \in A(\Gamma) \cap A(\Gamma')$; then $a \in A(\Gamma'')$, and so from (iii$'$) and (vii),
+\begin{equation*}
+d'(a, r') \ge d''(a, r'') - 2(k - 1) \ge d(a, r) - 2k,
+\end{equation*}
+and so (iii) holds. For (iv), let $a \in A(\Gamma)$ with $a \subseteq r'$. If $a \notin A(\Gamma'')$ then from (viii), $d(a, r) \le 3 \le 2k + 1$ and (iv) holds. If $a \in A(\Gamma'')$, then from (vii) and (iv$'$),
+\begin{equation*}
+d(a, r) - 2 \le d''(a, r'') \le 2k - 1
+\end{equation*}
+and so (iv) holds. $\square$

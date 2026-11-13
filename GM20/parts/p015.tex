@@ -1,0 +1,36 @@
+\origpage{339}{N. Robertson, P.D. Seymour / Journal of Combinatorial Theory, Series B 92 (2004) 325--357}
+\textbf{5.4.} \textit{Let $\mathcal{F}$ be a well-behaved set of patchworks, and let $\theta \ge 1$. Then there is a well-behaved set of patchworks $\mathcal{F}'$ with the following property. Let $P = (G, \mu, \Delta)$ be a patchwork, let $\lambda$ be a tie-breaker in $G$, let $\mathcal{T}$ be a tangle in $G$ of order $\ge \theta^2$, and let $W \subseteq Z(G)$ with $|W| \le \theta$. Suppose that:}
+
+\hspace*{12pt}$\bullet$ \textit{$P$ is removable,}
+
+\hspace*{12pt}$\bullet$ \textit{$\mathcal{L}$ is a $W$-suitable rooted location in $G$, such that $\mathcal{F}$ contains a heart of $(P, \mathcal{L})$,}
+
+\hspace*{12pt}$\bullet$ \textit{for each $(A^*, B^*) \in \mathcal{M}(\mathcal{T}, W, \theta)$,}
+
+\hspace*{12pt}$\bullet$ \textit{$V(A^* \cap B^*) \cap V(C) \subseteq \bar{\pi}(C)$ for each $C \in \mathcal{L}$, and}
+
+\hspace*{12pt}$\bullet$ \textit{there is no $(C, D) \in \mathcal{L}^-$ with $A^* \subseteq C$ and $D \subseteq B^*$.}
+
+\textit{Then there is a $W$-suitable rooted location $\mathcal{L}'$ in $G$ such that $\mathcal{F}'$ contains a heart of $(P, \mathcal{L}')$, and for each $C \in \mathcal{L}'$ and each $(A^*, B^*) \in \mathcal{M}(\mathcal{T}, W, \theta)$, either $C^- \subseteq A^*$ and $B^* \subseteq (G \setminus C)^-$, or $C^- \subseteq B^*$ and $A^* \subseteq (G \setminus C)^-$.}
+
+\textbf{Proof.} Let $\mathcal{F}'$ be the set of all removable patchworks $P'$ such that some $P \in \mathcal{F}$ is a condensation of $P'$. By 4.10, $\mathcal{F}'$ is well-behaved, and we claim the theorem is satisfied. For let $P = (G, \mu, \Delta)$, $\lambda$, $\mathcal{T}$, $W \subseteq Z(G)$, $\mathcal{L}$ be as in the theorem. Let
+\begin{equation*}
+\mathcal{M}(\mathcal{T}, W, \theta) = \{(A_i, B_i) : 1 \le i \le k\}.
+\end{equation*}
+Let $A_0 = G^- \cap B_1 \cap \cdots \cap B_k$, $B_0 = A_1 \cup \cdots \cup A_k$. Then $(A_0, B_0)$ is a separation of $G^-$. For each $C \in \mathcal{L}$ and $0 \le i \le k$ let $f_i(C)$ be a rooted hypergraph with $f_i(C)^- = C^- \cap A_i$ and $\bar{\pi}(f_i(C)) = \bar{\pi}(C) \cap V(A_i)$.
+
+\hspace*{12pt}(1) \textit{For each $C \in \mathcal{L}$,}
+
+\hspace*{12pt}$\bullet$ \textit{$C^- = f_0(C)^- \cup f_1(C)^- \cup \cdots \cup f_k(C)^-$,}
+
+\hspace*{12pt}$\bullet$ \textit{$\bar{\pi}(C) = \bar{\pi}(f_0(C)) \cup \bar{\pi}(f_1(C)) \cup \cdots \cup \bar{\pi}(f_k(C))$,}
+
+\hspace*{12pt}$\bullet$ \textit{for $1 \le i \le k$, $f_i(C)^- \subseteq A_i$ and $B_i \subseteq (G \setminus f_i(C))^-$, and}
+
+\hspace*{12pt}$\bullet$ \textit{for $0 \le i < j \le k$, $V(f_i(C)) \cap V(f_j(C)) \subseteq \bar{\pi}(f_i(C)) \cap \bar{\pi}(f_j(C))$.}
+
+\textit{Subproof:} The first two statements follow since $A_0 \cup A_1 \cup \cdots \cup A_k = G^-$. For the third, let $1 \le i \le k$. Then $(f_i(C))^- \subseteq A_i$ by definition, and so $E(B_i) \subseteq E(G \setminus f_i(C))$; it remains to prove the same inclusion for vertex sets. Let $v \in V(B_i)$, and suppose for a contradiction that $v \notin V(G \setminus f_i(C))$. Thus $v \in V(f_i(C)) \setminus \bar{\pi}(f_i(C))$. Consequently $v \in V(A_i \cap B_i) \subseteq \bar{\pi}(C)$, and yet $V(f_i(C)) \cap \bar{\pi}(C) = \bar{\pi}(f_i(C))$, a contradiction. This proves the third statement. For the fourth, let $0 \le i < j \le k$, and let $v \in V(f_i(C)) \cap V(f_j(C))$. Then $v \in V(C) \cap V(A_i) \cap V(A_j) \subseteq V(C) \cap V(A_j \cap B_j)$, and since $j \ge 1$ it follows from the hypothesis that $v \in \bar{\pi}(C)$. Consequently $v \in \bar{\pi}(f_i(C)) \cap \bar{\pi}(f_j(C))$. This proves (1).
+
+\hspace*{12pt}(2) \textit{Let $C \in \mathcal{L}$ and let $K$ be a grouping feasible in $P | C$. Then there are groupings $K_i$ feasible in $P | f_i(C)$ ($0 \le i \le k$) such that for distinct $x, y \in \bar{\pi}(C)$, $x$ and $y$ are adjacent in $K$ if and only if $x$ and $y$ are connected in $K_0 \cup K_1 \cup \cdots \cup K_k$.}
+
+\textit{Subproof:} Let $H$ be a realization of $P | C$ such that for distinct $x, y \in \bar{\pi}(C)$, $x$ and $y$ are adjacent in $K$ if and only if $x$ and $y$ are connected in $H$. Then $H = H_0 \cup H_1 \cup \cdots \cup H_k$ where $H_i$ is a realization of $P | f_i(C)$ ($0 \le i \le k$) by (1). Let $K_i$ be the grouping with $V(K_i) = \bar{\pi}(f_i(C))$

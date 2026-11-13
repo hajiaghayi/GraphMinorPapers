@@ -1,0 +1,30 @@
+\origpage{122}{ROBERTSON AND SEYMOUR}
+\textit{Subproof.} Now $H' \cap \Sigma_1 = H$, and since $H$ is rigid there is a dial $\Delta \subseteq \Sigma$ for $F, H$. By (3.1) it follows that $(H \cap \Delta, H \cap \overline{\Sigma - \Delta}) \in \mathscr{T}$. Since $X$ is free with respect to $\mathscr{T}$, we deduce that
+\begin{align*}
+|X \cap \Delta| &= |X \cap V(H \cap \Delta)| \le |V((H \cap \Delta) \cap (H \cap \overline{\Sigma - \Delta}))| \\
+&= |V(H) \cap F| = |F \cap V(H')|.
+\end{align*}
+This proves (3).
+
+\hspace*{12pt}(4) \textit{For every $O$-arc $F \subseteq \Sigma_2$ with $F \cap U(H')V(H')$ and $|F \cap V(H')| \le 2$ there is a dial $\Delta \subseteq \Sigma_2$ for $F, H'$.}
+
+This is easy to see, because since $\phi \ge 3$ and $|F \cap V(H')| \le 2$, there exists $i$ such that $F \cap U(P_i) = \emptyset$, and hence $F$ bounds a closed disc in $\Sigma_2$.
+
+\hspace*{12pt}(5) \textit{If $F \subseteq \Sigma_2$ is a line with ends $u, v \in \Sigma_1 \cap \Sigma_2 \cap V(H')$ and is otherwise disjoint from $U(H')$, and $P$ is a path of $H' \cap \Sigma_1 \cap \Sigma_2$ with ends $u, v$ and with $|V(P) \cap X| \le 2$, then the $O$-arc $U(P) \cup F$ bounds an open disc in $\Sigma_2$ disjoint from $U(H)$.}
+
+\textit{Subproof.} Since $|U(P) \cap X| \le 2$ and $F \cap U(H') \subseteq U(P)$, it follows that $U(P) \cup F$ meets at most two of $P_1, \dots, P_\phi$, and hence it bounds a disc in $\Sigma_2$. Again, the claim follows easily.
+
+From (3), (4), and (5) and the fact that $\Sigma_1 \cap \Sigma_2$ has only one component, it follows from (3.2) that $H'$ is rigid in $\Sigma'$. This proves (1) and completes the proof of the theorem. $\square$
+
+A second application of (3.2) is the following.
+
+\stmt
+(3.4) \textit{Let $\Sigma$ be a surface and let $k \ge 3$ be an integer. Let $\mathscr{T}^*$ be a tangle in a graph $G$, and let $H, \mathscr{T}$ be a $\Sigma$-span of order $\theta$. Let $\Lambda \subseteq \Sigma$ be a region of $H$ such that $H \cap bd(\Lambda)$ is a circuit, and let $v_1, \dots, v_{2k}$ be distinct vertices of this circuit, in order, such that $\{v_1, \dots, v_{2k}\}$ is free with respect to $\mathscr{T}$. Let $H' \subseteq G$ be a drawing in $\Sigma$ such that $H' \cap (\Sigma - \Lambda) = H$ and $H' = H \cup P_1 \cup \dots \cup P_{k-1}$, where $P_i$ is a path with ends $v_i, v_{2k-i}$ for $1 \le i \le k - 1$\fix{, the paths $P_1, \dots, P_{k-1}$ are mutually disjoint, and $U(P_i) \cap U(H) = \{v_i, v_{2k-i}\}$ for $1 \le i \le k-1$}.\fixnote{fix:3.4}{The proof uses both added conditions: ``$H' \cap \Sigma_2$ is the union of $H \cap bd(\Lambda)$ and the disjoint paths $P_1, \dots, P_{k-1}$''. Without them the bound on $d'(r_1, r_2)$ fails. If each $P_i$ runs along the circuit $H \cap bd(\Lambda)$, then $H' = H$ and $r_1 = r_2 = \Lambda$. If every $P_i$ has two edges through one vertex $x$ in $\Lambda$, then $r_1$ and $r_2$ are both incident with $x$, and $d'(r_1, r_2) \le 2$. The uses in (7.10) and (7.11) satisfy both conditions.} Let $\mathscr{T}'$ be a tangle in $H'$ induced by $\mathscr{T}$; then $H', \mathscr{T}'$ is a $\Sigma$-span of order $\theta$. Moreover, let $r_1, r_2 \subseteq \Lambda$ be the regions of $H'$ incident with $v_k, v_{2k}$ respectively; then $d'(r_1, r_2) \ge 2k - 6$, and $d'(v_k, v_{2k}) \ge 2k - 8$, where $d'$ is the metric of $\mathscr{T}'$.}
+
+\textit{Proof.} To show that $H', \mathscr{T}'$ is a $\Sigma$-span of order $\theta$, we must show
+
+\hspace*{12pt}(1) \textit{The following statements (i)--(iii) hold:}
+
+\hspace*{12pt}(i) \textit{$H'$ is a rigid drawing in $\Sigma$}
+
+\hspace*{12pt}(ii) \textit{$\mathscr{T}'$ is a respectful tangle of order $\theta$, and}

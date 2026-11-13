@@ -1,0 +1,21 @@
+\origpage{30}{ROBERTSON AND SEYMOUR}
+Now let $H$ be a subgraph of $G$, and let $H$ be a 2-cell drawing in $\Sigma$. Let $\alpha$ be an arrangement in $\Sigma$ of a segregation $\mathscr{S}$ of $G$. We say that $\alpha$ is \textit{compatible with $H$} if
+
+\hspace*{12pt}(i) $\alpha(v) = v$ for all $v \in V(H) \cap V(\mathscr{S})$, and
+
+\hspace*{12pt}(ii) for each $(A, \Omega) \in \mathscr{S}$, $U(H) \cap bd(\alpha(A, \Omega)) = V(H) \cap \overline{\Omega}$, and $H \cap \alpha(A, \Omega) = H \cap A$.
+
+If $H$ is a subgraph of $G$ and $\mathscr{S}$ is a segregation of $G$, and $\mathscr{T}$ is a tangle in $H$, we say that $\mathscr{S}$ is \textit{$\mathscr{T}$-local} if $(A \cap H, B \cap H) \in \mathscr{T}$ for all $(A, \Omega) \in \mathscr{S}$, where $B$ is the unique subgraph of $G$ such that $(A, B)$ is a separation of $G$ and $V(A \cap B) = \overline{\Omega}$.
+
+Finally we can state our main theorem.
+
+\stmt
+(4.1) \textit{Let $H$ be a 2-cell rigid drawing in a surface $\Sigma$, and let $\mathscr{T}$ be a respectful tangle in $H$ of order $\theta \ge 209$ with metric $d$. Let $H$ be a subgraph of $G$, and suppose that}
+
+\hspace*{12pt}(i) \textit{$d(u, v) \le 3$ for every $H$-path in $G$ with ends $u, v$, and}
+
+\hspace*{12pt}(ii) \textit{if $\mathscr{T}'$ is the tangle of order $\theta - 158$ obtained by clearing some 39-zone $\Lambda$ such that $H \cap (\Sigma - \Lambda)$ is a rigid drawing in $\Sigma$, then $\Lambda$ is not an eye of $H \cap (\Sigma - \Lambda)$ in $G$ with respect to $\mathscr{T}'$.}
+
+\textit{Then there is a $\mathscr{T}$-local 3-segregation of $G$ and an arrangement of it in $\Sigma$ compatible with $H$.}
+
+The idea of the proof is not very difficult. A bridge of $H$ in $G$ is a subgraph of $G$, consisting of either an edge of $G$ not in $E(H)$ but with both ends in $V(H)$, or a component of $G \setminus V(H)$ and all edges between it and $V(H)$ (and their ends). We choose a bridge $J$ of $H$ in $G$, and choose $u \in V(J) \cap V(H)$. By hypothesis, $d(u, v) \le 3$ for all other $v \in V(J) \cap V(H)$. By induction on the size of $G$, the result is true for the graph $G'$ obtained from $G$ by deleting the edges of $J$ and the vertices of $J$ not in $V(H)$. Choose a 3-segregation of $G'$ and an arrangement of it satisfying the theorem. Now all the attachments of $J$ are close to $u$, and so we can find a small open disc $\Lambda$ around $u$ containing all the attachments of $J$. If we can rearrange the 3-segregation within $\Lambda$ to accommodate $J$ as well, then the induction step is complete. (There is a problem about keeping it compatible with $H$, but that is easy because $H$ is rigid.) If we cannot rearrange it in this way, then this part of $G'$ together with $J$ contains a ``cross``, two crossing paths with their ends on the boundary of the disc, by a theorem of an earlier paper, and we would like to use this cross to contradict (ii). For this reason, we need to insist that the four end-vertices of the cross form a free set with respect to the tangle obtained by clearing $\Lambda$. To do so, we shall arrange that $bd(\Lambda) = U(C)$ for some circuit $C$ in the middle of a large sequence of

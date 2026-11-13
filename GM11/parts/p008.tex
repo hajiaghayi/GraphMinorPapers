@@ -1,0 +1,18 @@
+\origpage{79}{GRAPH MINORS. XI}
+\noindent circuit is the number of edges in it.) We speak of these as the \textit{first and second slope axioms}. (The factor of 2 in the definition of ``order'' here is for later convenience. It may be helpful to note that in our applications, $\Gamma$ will be bipartite and $\theta$ will be integer.)
+
+We see that if $\Gamma$ has a slope of order $\theta$ then every circuit of $\Gamma$ of length $< 2\theta$ is null-homotopic, and conversely, if $\Sigma$ is connected and not a sphere and every circuit of $\Gamma$ of length $< 2\theta$ is null-homotopic, then $\Gamma$ has a unique slope of order $\theta$. (This is because any null-homotopic $O$-arc in a surface bounds a disc---see (7.1), later.) The case when $\Sigma$ is a sphere is more complicated, however. Certainly every drawing in a sphere has a slope of order $\theta$, for any $\theta$; because we may simply choose a region $r$, and define $\text{ins}(C)$ to be the closed disc bounded by $U(C)$ not including $r$. Drawings in a sphere may also have slopes in which there is no such region $r$, and these turn out to be much more interesting to us.
+
+If $\Gamma$ is a $\theta$-representative $2$-cell painting or drawing in a connected non-sphere $\Sigma$, then there is clearly a slope of order $\theta$ in every radial drawing of $\Gamma$, and we shall use the properties of this slope to prove (4.1). To do so, we must first prove some general results about slopes; and it turns out that they hold even if $\Sigma$ is a sphere.
+
+Throughout this and the next section, $\Gamma$ is a drawing in a connected surface $\Sigma$ with a slope $\text{ins}$ of order $\theta$. We begin with the following, the proof of which is clear.
+
+\stmt
+(4.2) \textit{Let $\Gamma'$ be a subdrawing of $\Gamma$. Then the restriction of $\text{ins}$ to the set circuits of $\Gamma'$ of length $< 2\theta$ is a slope of order $\theta$ in $\Gamma'$.}
+
+A subdrawing $\Gamma'$ of $\Gamma$ is said to \textit{capture} a subset $X \subseteq \Sigma$ if there is a circuit $C$ of $\Gamma'$ of length $< 2\theta$ with $X \subseteq \text{ins}(C)$. A subdrawing $\Gamma'$ of $\Gamma$ is \textit{confined} if every circuit of $\Gamma'$ has length $< 2\theta$. If $\Gamma'$ is confined, we define $\text{ins}(\Gamma')$ to be the union of $U(\Gamma')$ and $\text{ins}(C)$ for all circuits $C$ of $\Gamma'$. We say $\Gamma$ is \textit{non-separable} if it is connected and there is no separation $(A, B)$ of order $1$ with $E(A), E(B) \ne \emptyset$.
+
+\stmt
+(4.3) \textit{Let $\Gamma'$ be a confined subdrawing of $\Gamma$, and let $C$ be a circuit of $\Gamma'$ with $\text{ins}(C)$ maximal. Then} (i) $U(P) \subseteq \text{ins}(C)$ \textit{for every path $P$ of $\Gamma'$ with both ends in $V(C)$,} (ii) \textit{for every edge $e$ of $C$, $\Gamma'$ does not capture the region of $\Gamma$ incident with $e$ not included in $\text{ins}(C)$, and} (iii) \textit{if $\Gamma'$ is non-separable then $\text{ins}(\Gamma') = \text{ins}(C)$.}
+
+\textit{Proof.} Suppose that there is a path $P$ of $\Gamma'$ with $U(P) \not\subseteq \text{ins}(C)$ and with both ends of $P$ in $V(C)$. Let us choose such a path $P$ of minimum length; then no internal vertex of $P$ is in $C$. Let the ends of $P$ be $a, b$, and

@@ -1,0 +1,35 @@
+\origpage{256}{ROBERTSON AND SEYMOUR}
+\textit{Proof of} (5.3). Let $F$ be a $\Gamma$-normal $O$-arc in $\Sigma$ with $|F \cap V(\Gamma)| < \theta$. We must show that $F$ bounds a closed disc $\Delta \subseteq \Sigma$ with
+\begin{equation*}
+(\Gamma \cap \Delta, \Gamma \cap \overline{\Sigma - \Delta}) \in \mathscr{T}.
+\end{equation*}
+We assume first that $|F \cap \Sigma_2| \le 1$. Then $F \subseteq \hat{\Sigma}_1$, and so bounds a disc $\Delta \subseteq \hat{\Sigma}_1$, with
+\begin{equation*}
+(\Gamma_1 \cap \Delta, \Gamma_1 \cap \overline{\hat{\Sigma}_1 - \Delta}) \in \mathscr{T}_1.
+\end{equation*}
+We claim that $\Delta \subseteq \Sigma$. For suppose that $\Delta \cap D_1 \ne \emptyset$, say. Then $D_1 \subseteq \Delta$, which is impossible since $V(\Gamma) \cap C_1$ includes a free subset of cardinality $\theta$. Thus $\Delta \subseteq \Sigma$, and
+\begin{equation*}
+(\Gamma \cap \Delta, \Gamma \cap \overline{\Sigma - \Delta}) \in \mathscr{T}
+\end{equation*}
+from the definition of $\mathscr{T}$.
+
+Thus we may assume that $|F \cap \Sigma_2| \ge 2$. Let $f \colon S^1 \to F$ be a homeomorphism. Let the components of $F - \Sigma_2$ be $X_i$ ($i \in I$); then each $X_i$ is homeomorphic to the open interval $(0, 1)$. Let $\bar{X}_i = X_i \cup \{s_i, t_i\}$, where $s_i, t_i \in C_1 \cup \dots \cup C_t$. By (5.4), there is a homeomorphism $f_i \colon \bar{X}_i \to C_1 \cup \dots \cup C_t$ such that $f_i(s_i) = s_i$, $f_i(t_i) = t_i$, and
+\begin{equation*}
+|\{x \in \bar{X}_i : f_i(x) \in V(\Gamma)\}| \le |\bar{X}_i \cap V(\Gamma)|,
+\end{equation*}
+and such that there is a closed disc $\Delta_i \subseteq \Sigma_1$, bounded by $\bar{X}_i \cup \{f_i(x) : x \in \bar{X}_i\}$, such that
+\begin{equation*}
+(\Gamma_1 \cap \Delta_i, \Gamma_1 \cap \overline{\Sigma_1 - \Delta_i}) \in \mathscr{T}_1.
+\end{equation*}
+For $x \in S^1$, define
+\begin{equation*}
+g(x) = \begin{cases} f(x) & \text{if } f(x) \in \Sigma_2 \\ f_i(f(x)) & \text{if } f(x) \in X_i \quad (i \in I). \end{cases}
+\end{equation*}
+Then $g \colon S^1 \to \Sigma_2$ is continuous, and $|g|$ is $\Gamma$-normal, and $g$ has length $\le |F \cap V(\Gamma)| < \theta$. By (iii), $g$ is null-homotopic in $\Sigma_2$, and so $F$ is null-homotopic in $\Sigma_2 \cup \bigcup (\Delta_i : i \in I)$. By [1, Theorem (1.7)],\fixnote{fix:5.3-proof}{A gap in the proof: the set $I$ may be infinite. If $F$ touches $C_1 \cup \dots \cup C_t$ from inside $\Sigma_1$ at a sequence of intervals that converge to a point $p$, without entering $\Sigma_2$, then $\Sigma_2 \cup \bigcup (\Delta_i : i \in I)$ need not be a 2-manifold at $p$, and [1, Theorem (1.7)] does not apply. The proof can be completed by first pushing such touching parts of $F$ off $\Sigma_2$, inside a collar of $C_1 \cup \dots \cup C_t$, so that only finitely many pieces remain. Then (5.3) holds as printed.} there is a closed disc
+\begin{equation*}
+\Delta \subseteq \Sigma_2 \cup \bigcup (\Delta_i : i \in I)
+\end{equation*}
+bounded by $F$. Since each $bd(\Delta_i)$ is $\Gamma$-normal,
+\begin{equation*}
+\Gamma_1 \cap \Delta = \bigcup_{i \in I} (\Gamma_1 \cap \Delta_i) \cup (\Gamma_1 \cap F \cap \Sigma_1 \cap \Sigma_2).
+\end{equation*}

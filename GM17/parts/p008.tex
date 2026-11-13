@@ -1,0 +1,31 @@
+\origpage{169}{GRAPH MINORS, XVII}
+\hspace*{12pt}(i) for every separation $(A, B)$ of $G$ of order $< \theta$, $\mathscr{T}$ contains one of $(A, B)$, $(B, A)$;
+
+\hspace*{12pt}(ii) if $(A_i, B_i) \in \mathscr{T} (i = 1, 2, 3)$ then $A_1 \cup A_2 \cup A_3 \ne G$;
+
+\hspace*{12pt}(iii) if $(A, B) \in \mathscr{T}$, then $V(A) \ne V(G)$.
+
+For elementary properties of tangles, see [1]. We define $ord(\mathscr{T}) = \theta$. We say that $A \subseteq G$ is \textit{small} (\textit{relative to $\mathscr{T}$}) if $(A, B) \in \mathscr{T}$ for some $B \subseteq G$. If $A$ is a subhypergraph of $G$, an \textit{attachment} of $A$ in $G$ is a vertex of $A$ incident with an edge of $G$ not in $E(A)$. It is easy to see (compare [1, Theorems (2.2) and (2.9)]) that
+
+\stmt
+(4.1) (i) \textit{If $A \subseteq G$ is small then $(A, B) \in \mathscr{T}$ for every $B \subseteq G$ such that $(A, B)$ is a separation of $G$ of order $< ord(\mathscr{T})$.}
+
+\hspace*{12pt}(ii) \textit{If $A_1, A_2 \subseteq G$ are small and $A \subseteq A_1 \cup A_2$ has $< ord(\mathscr{T})$ attachments in $G$ then $A$ is small.}
+
+If $G$ is a hypergraph and $Z \subseteq V(G)$, we denote by $G/Z$ the hypergraph with vertex set $V(G) - Z$ and edge set $E(G)$, in which $e \in E(G)$ is incident in $G/Z$ with $v \in V(G) - Z$ if and only if $e$ is incident in $G$ with $v$.
+
+If $Z \subseteq V(G)$ and $\mathscr{T}$ is a tangle in $G$ of order $\theta > |Z|$, we denote by $\mathscr{T}/Z$ the set of all separations $(A', B')$ of $G/Z$ of order $< \theta - |Z|$ such that there exists $(A, B) \in \mathscr{T}$ with $Z \subseteq V(A \cap B)$, $A/Z = A'$ and $B/Z = B'$. It is shown in [1, Theorem (6.2)] that
+
+\stmt
+(4.2) \textit{If $\mathscr{T}$ is a tangle in a hypergraph $G$, and $Z \subseteq V(G)$ with $|Z| < ord(\mathscr{T})$, then $\mathscr{T}/Z$ is a tangle in $G/Z$ of order $ord(\mathscr{T}) - |Z|$.}
+
+If $\mathscr{T}$ is a tangle in a hypergraph $G$, and $\pi = (\Sigma, \Gamma, \alpha, \beta, \gamma)$ is a portrayal of $G$, $\pi$ is said to be \textit{$\mathscr{T}$-central} if $\alpha(c)$ is small relative to $\mathscr{T}$ for every $c \in C(\Gamma)$. We shall need the following lemma.
+
+\stmt
+(4.3) \textit{Let $\pi = (\Sigma, \Gamma, \alpha, \beta, \gamma)$ be a $\mathscr{T}$-central portrayal of a hypergraph $G$, with warp $\le p$, and let $\mathscr{T}$ have order $\theta$. There is no small subhypergraph $A \subseteq G$ with $< \theta - 2p$ attachments, such that $\gamma(n) \in V(A)$ for all $n \in dom(\gamma)$.}
+
+\textit{Proof.} Suppose there exists such $A \subseteq G$, and choose $A$ maximal.
+
+\hspace*{12pt}(1) \textit{For each internal cell $c$, $\alpha(c) \subseteq A$.}
+
+\textit{Subproof.} Since every attachment of $A \cup \alpha(c)$ is an attachment of $A$, it follows from (4.1) that $A \cup \alpha(c)$ is small, and so $\alpha(c) \subseteq A$ from the maximality of $A$.

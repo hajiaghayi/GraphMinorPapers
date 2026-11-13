@@ -1,0 +1,37 @@
+\sectionhead{\textbf{About this copy}}
+
+This is a corrected copy of the paper cited above. The text is retyped from the printed paper.
+It keeps the paper's wording and the numbering of its results, equations and footnotes, and a
+marker such as \origpagemark{$N$} shows where page $N$ of the printed paper begins.
+
+The corrections come from a formalization of the Graph Minors series in the Lean proof
+assistant, \href{https://github.com/mahdi-jfri/GraphMinor}{github.com/mahdi-jfri/GraphMinor},
+in which the results of this paper are proved. Where the formalization found that a statement
+or a step of a proof is wrong as printed, this copy corrects it in place. Where the paper leaves a proof or a step to the reader, this
+copy adds it, also in blue. Text \del{struck
+through in red} is removed and text \fix{in blue} is inserted. Each change has a note, marked
+\textcolor{fixcolor}{\sffamily F1}, \textcolor{fixcolor}{\sffamily F2}, \dots, that gives the
+reason. The file
+\href{https://github.com/mahdi-jfri/GraphMinor/blob/main/corrections/GM20.md}{corrections/GM20.md}
+of the formalization describes each correction in full. Each note, and each item in the list below, begins with the kind of the change. A \kindname{misprint} is a wrong symbol, index or word. A \kindname{statement} is a result or a claim of the text that is false as printed. A \kindname{degenerate} is a statement that fails only in a trivial case, such as an empty graph or a parameter equal to~$0$. A \kindname{gap} is a step of a proof that does not follow as written. A \kindname{missing} is a proof that the paper omits, leaves to the reader or only sketches, and that this copy adds.
+
+The corrections and added proofs, in the order of the pages:
+\begin{enumerate}\setlength{\itemsep}{1pt}
+\item \kindtag{fix:4.3-Fr}\hyperref[fix:4.3-Fr]{Proof of 4.3, page 331}: $C^r$ becomes $\mathcal{F}^r$, and $C_1$
+becomes $\mathcal{F}_1$.
+\item \kindtag{fix:4.3-lambda}\hyperref[fix:4.3-lambda]{Proof of 4.3, page 331}: $\lambda = \Omega_2 \to \Omega_3$
+becomes $\lambda \colon \Omega_2 \to \Omega_3$.
+\item \kindtag{fix:4.3-gamma}\hyperref[fix:4.3-gamma]{Proof of 4.3, page 331}: $\lambda(Q_2) = Q_1$ becomes
+$\gamma(Q_2) = Q_1$.
+\item \kindtag{fix:4.9-proof}\hyperref[fix:4.9-proof]{Proof of 4.9, page 334}: the members of $\mathcal{F}_2$ are split
+by the place of $v$ among the roots of $G_2$.
+\item \kindtag{fix:4.10-omega-proof-added}\hyperref[fix:4.10-omega-proof-added]{Proof of 4.10, page 334}: the proof that $\Omega_1$ is
+a well-quasi-order is added.
+\item \kindtag{fix:4.10-proof}\hyperref[fix:4.10-proof]{Proof of 4.10, page 334}: the appeal to Theorem 5.7 of [4] is
+replaced by a direct check.
+\item \kindtag{fix:4.12-proof}\hyperref[fix:4.12-proof]{Proof of 4.12, page 336}: the root march is made longer for the
+steps through 4.11 and 4.6, and 4.5 then restores it.
+\item \kindtag{fix:4.13}\hyperref[fix:4.13]{Statement of 4.13, page 336}: the condition that $\pi(G_2) = \pi(G_1)$ is
+added.
+\item \kindtag{fix:10.5-proof}\hyperref[fix:10.5-proof]{Proof of 10.5, page 356}: the reference [2] becomes [1].
+\end{enumerate}

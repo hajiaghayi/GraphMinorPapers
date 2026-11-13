@@ -1,0 +1,28 @@
+\origpage{121}{GRAPH MINORS. XV. GIANT STEPS}
+\noindent \textit{$P_1, \dots, P_\phi$ are mutually disjoint. Then there is a $\Sigma'$-span of order $\phi$, where $\Sigma'$ is the surface obtained by adding a crosscap to $\Sigma$.}
+
+\textit{Proof.} Let $\Sigma_1 = \Sigma - \Lambda$. We may assume that $\Sigma' = \Sigma_1 \cup \Sigma_2$, where $\Sigma_2$ is homeomorphic to a M\"obius band and $\Sigma_1 \cap \Sigma_2 = bd(\Sigma_1) = bd(\Sigma_2)$. We may assume also that $\eta$ is the identity, and $P_1, \dots, P_\phi$ are drawings in $\Sigma_2$, so that $(H \cap bd(\Lambda)) \cup P_1 \cup \dots \cup P_\phi$ is a drawing in $\Sigma_2$. Let $H' = H \cup P_1 \cup \dots \cup P_\phi$; then $H'$ is a drawing in $\Sigma'$. Let $\mathscr{T}''$ be the tangle in $H'$ of order $\theta$ induced by $\mathscr{T}$, and let $\mathscr{T}'$ be the $\phi$-truncation of $\mathscr{T}''$. We claim that $H', \mathscr{T}'$ is a $\Sigma'$-span of order $\phi$. To show this, we must show
+
+\hspace*{12pt}(1) \textit{The following statements (i)--(iii) hold:}
+
+\hspace*{12pt}(i) \textit{$H'$ is a rigid drawing in $\Sigma'$}
+
+\hspace*{12pt}(ii) \textit{$\mathscr{T}'$ is a respectful tangle in $H'$ of order $\phi$}
+
+\hspace*{12pt}(iii) \textit{$\phi \le ord(\mathscr{T}^*)$, and $(A \cap H', B \cap H') \in \mathscr{T}'$ for every $(A, B) \in \mathscr{T}^*$ of order $< \phi$.}
+
+Let $\mathscr{T}_1$ be the $\phi$-truncation of $\mathscr{T}$. Then $\mathscr{T}'$ is the tangle in $H'$ induced by $\mathscr{T}_1$. We claim
+
+\hspace*{12pt}(2) \textit{Every $X \subseteq \{a_1, \dots, a_\phi, b_1, \dots, b_\phi\}$ with $|X| \le \phi$ is free with respect to $\mathscr{T}_1$.}
+
+\textit{Subproof.} If $X$ is not free, then since $|X| \le \phi$ and $\mathscr{T}_1$ has order $\phi$, there exists $(A, B) \in \mathscr{T}_1$ of order $< |X|$ with $X \subseteq V(A)$. Then $(A, B) \in \mathscr{T}$, and so $X$ is not free with respect to $\mathscr{T}$, contrary to [2, Theorem (12.2)]. This proves (2).
+
+From (2) and [4, Theorem (5.2)] we deduce that $\mathscr{T}'$ is respectful, so (1)(ii) holds. Next we show that (1)(iii) holds. For $ord(\mathscr{T}) \le ord(\mathscr{T}^*)$ since $H, \eta, \mathscr{T}$ is a $\Sigma$-span, and $2\phi \le ord(\mathscr{T})$ since $\{a_1, \dots, a_\phi, b_1, \dots, b_\phi\}$ is free with respect to $\mathscr{T}$. Thus $\phi \le 2\phi \le ord(\mathscr{T}^*)$. If $(A, B) \in \mathscr{T}^*$ has order $< \phi$, then $(A \cap H', B \cap H')$ is a separation of $H'$ of order $< \phi$, and
+\begin{equation*}
+((A \cap H') \cap H, (B \cap H') \cap H) = (A \cap H, B \cap H) \in \mathscr{T}
+\end{equation*}
+because $H, \eta, \mathscr{T}$ is a $\Sigma$-span. Hence $(A \cap H', B \cap H') \in \mathscr{T}''$ by definition of $\mathscr{T}''$, and hence $(A \cap H', B \cap H') \in \mathscr{T}'$ as required. Thus (1)(iii) holds.
+
+To prove (1) it remains to show that $H'$ is rigid, and to show this we shall use (3.2). Let $X = \{a_1, \dots, a_\phi, b_1, \dots, b_\phi\}$.
+
+\hspace*{12pt}(3) \textit{For every $O$-arc $F \subseteq \Sigma$ with $F \cap U(H') \subseteq V(H')$ and $|F \cap V(H')| \le 2$, there is a dial $\Delta \subseteq \Sigma$ for $F, H' \cap \Sigma_1$ with $|X \cap \Delta| \le |F \cap V(H')|$.}

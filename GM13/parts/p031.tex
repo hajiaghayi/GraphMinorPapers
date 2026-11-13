@@ -1,0 +1,43 @@
+\origpage{95}{GRAPH MINORS. XIII}
+\hspace*{12pt}(4) \textit{If $v' \in V(C')$ is 4-linked in $C$ then it is 4-linked in $C'$.}
+
+\textit{Subproof.} Suppose that $(A', B')$ is a separation of order $\le 3$ of $C'$ with $v' \in V(A') - V(B')$ and $\tilde{\Omega} \subseteq V(B')$. Since $V(A \cap B)$ is the vertex set of a complete subgraph of $C'$, either $V(A \cap B) \subseteq V(A')$ or $V(A \cap B) \subseteq V(B')$. In the first case $((A \cup A') \cap C, B' \cap C)$ and in the second case $(A' \cap C, (A \cup B') \cap C)$ is a separation of $C$ of order $\le 3$ showing that $v'$ is not 4-linked in $C$, as required.
+
+From (4), the result follows. $\square$
+
+From (8.2) we obtain
+
+\stmt
+(8.3) \textsc{Algorithm}.
+
+\textit{Input:} A society $(G, \Omega)$.
+
+\textit{Output:} A 4-linked core of $(G, \Omega)$.
+
+\textit{Running time:} $O(\nu\varepsilon)$.
+
+\textit{Description:} Initially, set $C = G$; then $C$ is a core, but it need not be 4-linked. For each vertex $v$ of $G$ in turn, if $v \in V(C)$ test if $v$ is 4-linked in $C$; and if $v$ is not 4-linked in $C$, choose $(A, B)$ as in (8.2), define $C'$ as in (8.2), and replace $C$ by $C'$. When this terminates, $C$ is a 4-linked core, by the last assertion of (8.2). (For each $v \in V(G)$ this takes time $O(\varepsilon)$; and so the total running time is $O(\nu\varepsilon)$.) $\square$
+
+Next, we need the following.
+
+\stmt
+(8.4) \textit{If $C$ is a core of $(G, \Omega)$ then $(G, \Omega)$ has a cross if and only if $(C, \Omega)$ has a cross.}
+
+The proof is easy and we omit it (compare [18, Theorem (11.10)]).
+
+\fix{\textit{Proof.} Let $Z = V(C)$. Thus $\bar{\Omega} \subseteq Z$. Suppose first that $P \cup Q$ is a cross in $(G, \Omega)$, where $P, Q$ have ends $p_1, p_2$ and $q_1, q_2$. Let the vertices of $P$ in $Z$ be $z_1, \dots, z_n$, in order along $P$. Then $z_1 = p_1$ and $z_n = p_2$, since $p_1, p_2 \in \bar{\Omega} \subseteq Z$. For $1 \le i < n$ the subpath of $P$ between $z_i$ and $z_{i+1}$ has no internal vertex in $Z$, and so $z_i, z_{i+1}$ are adjacent in $C$. Hence $C$ has a path $P'$ with ends $p_1, p_2$ and $V(P') \subseteq V(P)$, and similarly a path $Q'$ with ends $q_1, q_2$ and $V(Q') \subseteq V(Q)$. Then $P' \cup Q'$ is a cross in $(C, \Omega)$.
+
+Conversely, let $P' \cup Q'$ be a cross in $(C, \Omega)$, where $P', Q'$ have ends $p_1, p_2$ and $q_1, q_2$. For each edge $e$ of $C$, with ends $x, y$ say, choose a path $J_e$ of $G$ between $x$ and $y$ with no internal vertex in $Z$, which exists since $C$ is a core. Let $U_1$ be the union of $V(P')$ and of the sets $V(J_e)$ ($e \in E(P')$), and define $U_2$ similarly from $Q'$. We claim that $U_1 \cap U_2 = \emptyset$. First, $V(P') \cap V(Q') = \emptyset$. Next, if $e \in E(Q')$ then $V(J_e) \cap Z$ is the set of ends of $e$, which lie in $V(Q')$, and so $J_e$ is disjoint from $V(P')$. Similarly $J_e$ is disjoint from $V(Q')$ for $e \in E(P')$. Finally, let $e_1 \in E(P')$ with ends $x_1, y_1$ and $e_2 \in E(Q')$ with ends $x_2, y_2$, and suppose that $v \in V(J_{e_1}) \cap V(J_{e_2})$. Then $v \notin Z$, since $J_{e_1}$ and $J_{e_2}$ meet $Z$ only in their ends, and $\{x_1, y_1\} \cap \{x_2, y_2\} = \emptyset$. But then subpaths of $J_{e_1}$ and $J_{e_2}$ are paths of $G$ from $v$ to the four distinct vertices $x_1, y_1, x_2, y_2$ of $Z$, each with no other vertex in $Z$, contrary to the fact that $Z$ is trisecting. This proves that $U_1 \cap U_2 = \emptyset$. Now replacing each edge $e$ of $P'$ by $J_e$ gives a walk of $G$ between $p_1$ and $p_2$ with all its vertices in $U_1$, and so $G$ has a path $P$ between $p_1$ and $p_2$ with $V(P) \subseteq U_1$. Similarly $G$ has a path $Q$ between $q_1$ and $q_2$ with $V(Q) \subseteq U_2$. Then $P \cup Q$ is a cross in $(G, \Omega)$. $\square$}\fixnote{fix:8.4-proof-added}{The paper omits the proof of (8.4). The argument above is the one used in the formalization.}
+
+We say that $(G, \Omega)$ is \textit{rural} if it can be drawn in a disc with the vertices of $\tilde{\Omega}$ drawn in the boundary of the disc, in order according to $\Omega$. The following is related to results of [9, 18, 26, 27, 29].
+
+\stmt
+(8.5) \textit{Let $C$ be a 4-linked core of $(G, \Omega)$. Then $(G, \Omega)$ has no cross if and only if $(C, \Omega)$ is rural.}
+
+\textit{Proof.} By (8.4), $(G, \Omega)$ has no cross if and only if $(C, \Omega)$ has no cross. But by [18, Theorems (2.3) and (2.4)], $(C, \Omega)$ has no cross if and only if $(C, \Omega)$ is rural, since $C$ is 4-linked. $\square$
+
+Let $(G, \Omega)$ be a society. For a subgraph $A$ of $G$ we define $\partial A$ to be the set of all $v \in V(A)$ such that either $v \in \tilde{\Omega}$ or $v$ is incident with an edge of $G$ not in $A$. A division of $(G, \Omega)$ is a set $\mathcal{A}$ of subgraphs of $G$ such that
+
+\hspace*{12pt}(i) $\bigcup(A : A \in \mathcal{A}) = G$
+
+\hspace*{12pt}(ii) for all distinct $A, A' \in \mathcal{A}$, $E(A \cap A') = \emptyset$ and $V(A \cap A') = \partial A \cap \partial A'$

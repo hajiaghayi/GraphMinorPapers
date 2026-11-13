@@ -1,0 +1,26 @@
+\origpage{135}{GRAPH MINORS. XV. GIANT STEPS}
+\stmt
+(1.2). To do so, we may assume that $\theta_{k+1}$ is even and $\theta_{k+1} > 6\mu + 14$, by increasing $\theta_{k+1}$ if necessary. Let $\pi = (\phi - 1)(\delm{4}\fix{7} + \mu + \theta_{k+1}/2)$\fixnote{fix:7-pi}{The value changes together with $\tau_2$ on page 138, so that $\pi = (\phi - 1)(2\tau_1 + \tau_2 - 7)$ still holds (see the note there).}, let $\beta = 2\pi + 8$, and let $\theta_k = 100\beta$, $\lambda_k = 20\beta$, $\rho_k = 3\pi + 9$. We claim that $\theta_k, \lambda_k, \rho_k$ satisfy (1.2). (For convenience, let us write $\theta, \theta', \lambda, \lambda', \rho$ for $\theta_k, \theta_{k+1}, \lambda_k, \lambda_{k+1}, \rho_k$ respectively.) To show this, let (again, throughout this section) $\mathcal{T}^*$ be a tangle in a graph $G$ such that there is a $(\lambda, \mu)$-flat $\Sigma$-span of order $\ge \theta$, with $k$ eyes mutually at distance $\ge \theta$. We must prove that one of the following statements (S1), (S2), (S3) holds.
+
+\hspace*{12pt}(S1) \textit{There is a $(\lambda', \mu)$-flat $\Sigma$-span of order $\theta'$ with $k + 1$ eyes, mutually at distance $\theta'$.}
+
+\hspace*{12pt}(S2) \textit{There is a $\Sigma'$-span of order $\phi$, where $\Sigma'$ is a surface obtained by adding a crosscap to $\Sigma$.}
+
+\hspace*{12pt}(S3) \textit{There is a $\mathcal{T}^*$-central segregation of $G$ of type $(\rho, k)$ with an arrangement in $\Sigma$.}
+
+The proof proceeds in a series of lemmas. We begin with the following.
+
+\stmt
+(7.1) \textit{There is a $(\lambda, \mu)$-flat $\Sigma$-span of order $\theta$, with $k$ eyes mutually at distance $\theta$.}
+
+\textit{Proof.} Let $H, \mathcal{T}$ be a $(\lambda, \mu)$-flat $\Sigma$-span of order $\ge \theta$ with $k$ eyes $r_1, \ldots, r_k$ satisfying $d(r_i, r_j) \ge \theta$ ($1 \le i < j \le k$). Let $\mathcal{T}'$ be the $\theta$-truncation of $\mathcal{T}$. Then $H, \mathcal{T}'$ is a $\Sigma$-span, and it is $(\lambda, \mu)$-flat by (5.1), since $\theta \ge 4\lambda + \mu + 2$. Moreover, $r_1, \ldots, r_k$ are eyes of $H, \mathcal{T}'$ since $\operatorname{ord}(\mathcal{T}') = \theta \ge 4$; and for $1 \le i < j \le k$, $d'(r_i, r_j) = \min(\theta, d(r_i, r_j)) = \theta$. The result follows. $\square$
+
+Throughout this section, let $H, \mathcal{T}$ be a $(\lambda, \mu)$-flat $\Sigma$-span of order $\theta$, with metric $d$, and let $r_1, \ldots, r_k$ be eyes of $H, \mathcal{T}$ with $d(r_i, r_j) = \theta$ for $1 \le i < j \le k$. For $1 \le i \le k$, let $Z_i$ be the union of all atoms $a$ of $H$ with $d(r_i, a) \le \theta' + 12\mu + 14$, and let $J_i$ be the union of all bridges $B$ of $H$ in $G$ with $V(B) \cap Z_i \ne \emptyset$. Let $J_0$ be the union of all bridges $B$ of $H$ in $G$ such that $V(B) \cap (Z_1 \cup \cdots \cup Z_4) = \emptyset$.
+
+\stmt
+(7.2) \textit{For $1 \le i < j \le k$, if $\sigma_1 \in Z_i$ and $\sigma_2 \in Z_j$ then $d(\sigma_1, \sigma_2) \ge \theta - 2(\theta' + 12\mu + 14)$, and so $Z_i \cap Z_j = \emptyset$ and $J_i \cap J_j \subseteq H$.}
+
+\textit{Proof.} We have
+\begin{equation*}
+\theta = d(r_i, r_j) \le d(r_i, \sigma_1) + d(\sigma_1, \sigma_2) + d(r_j, \sigma_2) \le d(\sigma_1, \sigma_2) + 2(\theta' + 12\mu + 14)
+\end{equation*}

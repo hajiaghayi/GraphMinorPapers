@@ -1,0 +1,30 @@
+\origpage{93}{N. Robertson, P. Seymour / Journal of Combinatorial Theory, Series B 89 (2003) 77--108}
+Then $(A, G \setminus A)$ is a separation of $G$, since $(A^-, (G \setminus A)^-)$ is a separation of $G^-$, $\bar{\pi}(A) = V(A) \cap V(G \setminus A)$, and $\pi(G \setminus A) = \pi(G)$. A \textit{rooted location} $\mathscr{L}$ in a rooted hypergraph $G$ is a set $\mathscr{L}$ of complemented rooted hypergraphs $A$ with $A \subseteq G$ such that $A_1 \subseteq G \setminus A_2$ for all distinct $A_1, A_2 \in \mathscr{L}$. If $\mathscr{L}$ is a rooted location in $G$ then $\{(A^-, (G \setminus A)^-) \colon A \in \mathscr{L}\}$ is a location in $G^-$ which we denote by $\mathscr{L}^-$. (It is possible that $(A^-, (G \setminus A)^-) = (A'^-, (G \setminus A')^-)$ for distinct $A, A' \in \mathscr{L}$, but only if $E(A) = E(A') = \emptyset$ and $V(A) = V(A') = \bar{\pi}(A) = \bar{\pi}(A')$.) We define $M(G, \mathscr{L}) = M(G^-, \mathscr{L}^-)$.
+
+Let $P = (G, \mu, \Delta)$ be a patchwork and let $\mathscr{L}$ be a rooted location in $G$. For each $A \in \mathscr{L}$ let $e(A)$ be a new element, and let $G'$ be the rooted hypergraph with
+\begin{align*}
+V(G') &= V(M(G, \mathscr{L})), \\
+E(G') &= E(M(G, \mathscr{L})) \cup \{e(A) \colon A \in \mathscr{L}\}, \\
+\pi(G') &= \pi(G),
+\end{align*}
+where for $e \in E(M(G, \mathscr{L}))$ its ends are as in $G^-$, and for $A \in \mathscr{L}$ the ends of $e(A)$ are the vertices in $\bar{\pi}(A)$. We define the \textit{heart} $P | \mathscr{L}$ of $(P, \mathscr{L})$ to be the patchwork $(G', \mu', \Delta')$ such that $\mu'(e(A)) = \pi(A)$ and $\Delta'(e(A)) = gr(P | A)$ for all $A \in \mathscr{L}$ and $\mu'(e) \equiv \mu(e)$ and $\Delta'(e) = \Delta(e)$ for all $e \in E(M(G, \mathscr{L}))$. (It is unique up to the choice of the new elements $e(A)$.)
+
+\textbf{5.4.} \textit{Let $P = (G, \mu, \Delta)$ be a patchwork, let $\mathscr{L}$ be a rooted location in $G$, and let $P' = (G', \mu', \Delta')$ be the heart of $(P, \mathscr{L})$. Then}
+\begin{equation*}
+V(G) \setminus \bar{\pi}(G) = (V(G') \setminus \bar{\pi}(G')) \cup \bigcup_{A \in \mathscr{L}} (V(A) \setminus \bar{\pi}(A)),
+\end{equation*}
+\textit{and $gr(P) = gr(P')$.}
+
+\textbf{Proof.} For the first assertion, let $v \in V(G) \setminus \bar{\pi}(G)$. By the definition of $M(G, \mathscr{L})$, either $v \in V(M(G, \mathscr{L}))$ or there exists $A \in \mathscr{L}$ with $v \notin V(G \setminus A)$. In the first case, $v \in V(G')$, and since $\pi(G) = \pi(G')$ it follows that $v \in V(G') \setminus \bar{\pi}(G')$. In the second case $v \in V(A)$, and therefore $v \notin \bar{\pi}(A)$ since $\bar{\pi}(A) \subseteq V(G \setminus A)$. So in either case
+\begin{equation*}
+v \in (V(G') \setminus \bar{\pi}(G')) \cup \bigcup_{A \in \mathscr{L}} (V(A) \setminus \bar{\pi}(A)),
+\end{equation*}
+and therefore $V(G) \setminus \bar{\pi}(G)$ is a subset of this set.
+
+To prove the reverse inclusion, we observe that $\bar{\pi}(G) \cap V(G') \subseteq \bar{\pi}(G')$ and for each $A \in \mathscr{L}$, $\bar{\pi}(G) \cap V(A) \subseteq \bar{\pi}(A)$ since $A$ is complemented. It follows that no vertex of
+\begin{equation*}
+(V(G') \setminus \bar{\pi}(G')) \cup \bigcup_{A \in \mathscr{L}} (V(A) \setminus \bar{\pi}(A))
+\end{equation*}
+belongs to $\bar{\pi}(G)$, so this set is a subset of $V(G) \setminus \bar{\pi}(G)$. This proves the first assertion of the theorem.
+
+For the second assertion, let $\mathscr{L} = \{A_1, \dots, A_k\}$, and for $1 \le i \le k$ let $e(A_i) \in E(G')$ be the new element of $P'$ corresponding to $A_i$. Since $\pi(G') = \pi(G)$, we must show that a grouping $K$ with $V(K) = \bar{\pi}(G)$ is feasible in $P$ if and only if $K$ is feasible in $P'$. Thus, let $K$ be a grouping with $V(K) = \bar{\pi}(G)$.

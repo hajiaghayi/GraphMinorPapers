@@ -1,0 +1,40 @@
+\origpage{362}{N. Robertson, P.D. Seymour / Journal of Combinatorial Theory, Series B 90 (2004) 325--385}
+\sectionhead{12. Internal label flaws}
+
+In this and the next two sections we consider the final kind of flaw. Let $\chi, \mathscr{S}, \mathscr{D}$ be as in Section 10, let $\omega_0 \in E(\Omega_\chi(2)) \cup E(\Omega_\chi(3))$, and let $m \ge 1, n \ge 4$. We say that $(\Gamma, \phi, \lambda, \mathscr{T}) \in \mathscr{D}$ is $(m, n, \omega_0)$-flawed internally if
+
+\hspace*{12pt}$\bullet$ $rep(\mathscr{T}) \delm{\ge}\fix{>} 5^{2m+2}n$, and $dist(\Gamma) \delm{\ge}\fix{>} \frac{1}{2} 5^{2m+2}n + 1$,\fixnote{fix:12-flawed-internally}{As printed, $rep(\mathscr{T}) = 5^{2m+2}n$ or $dist(\Gamma) = \frac{1}{2}5^{2m+2}n + 1$ is allowed. Then ``not $5^{2m+2}n$-flawed in distance'' holds for a trivial reason and gives no lower bound on the distance between poles, which the proof of 12.3 needs, as in the note to the definition of ``flawed on $S$'' on page 357. Claim (1) in the proof of 4.1 gives the strict bounds.}
+
+\hspace*{12pt}$\bullet$ $(\Gamma, \phi, \lambda, \mathscr{T})$ is not $5^{2m+2}n$-flawed in distance,
+
+\hspace*{12pt}$\bullet$ there do not exist edges $e_1, \ldots, e_m$ of $\Gamma$ such that $\phi(e_i) \ge \omega_0$ $(1 \le i \le m)$, $d(e_i, e_j) > n$ $(1 \le i < j \le m)$, and $d(e_i, r^*) > n$ $(1 \le i \le m)$ for every pole $r^*$, where $d$ is the metric of $\mathscr{T}$.
+
+Throughout this section and the next, $(\Gamma, \phi, \lambda, \mathscr{T}) \in \mathscr{D}$ is $(m, n, \omega_0)$-flawed internally. Let $W \subseteq \hat{\Sigma}$ be a closed disc with $bd(W) \subseteq U(\Gamma^*)$, let $H$ be a subdrawing of $\Gamma^*$ with $U(H) \subseteq W \setminus bd(W)$, and let $\rho \ge 1$ be an integer with $rep(\mathscr{T}) \ge 2\rho + 3$. We say that $W$ is a \textit{wheel}, and $H$ is a \textit{$W$-hub of radius $\rho$}, if:
+
+\hspace*{12pt}$\bullet$ $W$ includes $ins(F)$ for every circuit $F$ of $\Gamma^*$ with $|E(F)| \le 4\rho + 4$ and $U(F) \subseteq W$,
+
+\hspace*{12pt}$\bullet$ $W$ contains every vertex of $\Gamma^*$ adjacent in $\Gamma^*$ to two members of $V(\Gamma) \cap bd(W)$, and $W$ includes every edge of $\Gamma^*$ with both ends in $bd(W)$,
+
+\hspace*{12pt}$\bullet$ either $|V(H)| = 1$ or $H$ is a $\mathscr{T}$-enclave with $|E(H)| \le 4\rho + 4$; if $|V(H)| = 1$, then there is no $\mathscr{T}$-enclave $H'$ with $|E(H')| \le 4\rho + 4$ and $V(H) \subseteq ins(H') \setminus U(H')$; and if $H$ is a $\mathscr{T}$-enclave, then there is no $\mathscr{T}$-enclave $H' \ne H$ with $|E(H')| \le 4\rho + 4$ and $U(H) \subseteq ins(H')$,
+
+\hspace*{12pt}$\bullet$ $W$ contains every vertex of $\Gamma$ joined to $V(H)$ by a path in $\Gamma^*$ of $\le \rho$ edges, and
+
+\hspace*{12pt}$\bullet$ for every $v \in V(\Gamma) \cap bd(W)$ there is a path of $\Gamma^*$ from $v$ to $V(H)$ with $\le \rho$ edges, and no such path with $\le \rho - 2$ edges.
+
+The \textit{radius} of a wheel $W$ is the minimum radius of all $W$-hubs.
+
+\textbf{12.1.} \textit{Let $\rho \ge \delm{2}\fix{3}$, even, let $rep(\mathscr{T}) \ge 5\rho + \delm{12}\fix{14}$, \fix{suppose that no edge $e$ of $\Gamma$ with $|\tilde{e}| = 3$ has an end in $bd(\Sigma_\chi)$,} and let $H$ be a subdrawing of $\Gamma^*$, satisfying the third condition in the definition of a wheel above. Then there is a wheel $W$ such that $H$ is a $W$-hub of radius $\rho$.}\fixnote{fix:12.1}{As printed, 12.1 is false for $\rho = 2$. Let $\Sigma_\chi$ be a torus, so that there are no cuffs, and let $\Gamma$ be a large triangular lattice in it, with its tangle $\mathscr{T}$ and no label $\phi(e)\ge\omega_0$. In one triangular face with corners $a, b, c$, add an edge $e$ with $\tilde{e}=\{a,b,c\}$. Let $r$ be the new region on $a$ and $b$, and let $H$ have the single vertex $r^*$. Then $H$ satisfies the third condition in the definition of a wheel, since a $\mathscr{T}$-enclave with at most 12 edges has at most 6 vertices of $\Gamma$ on it and at most 7 inside it, too few to carry the tangle that an enclave needs. Suppose that $H$ is a $W$-hub of radius 2 for a wheel $W$. Each vertex of $\Gamma$ in $bd(W)$ is joined to $r^*$ by a path of $\Gamma^*$ with at most 2 edges, and $\Gamma^*$ is bipartite, so this vertex is $a$ or $b$. So $bd(W)$ is $a\,x^*\,b\,y^*$ for two regions $x,y$ whose closures contain $a$ and $b$. The only such regions are $r$ and the face on the other side of the edge $ab$, so $bd(W)$ passes through $r^*$, contrary to $U(H)\subseteq W\setminus bd(W)$. The proof fails at the choice of the circuit $F$ on page 363, which does not exist here. That step can also fail near a cuff for larger $\rho$, since the fifth condition of ``fit'' says nothing about edges with three ends that meet $bd(\Sigma_\chi)$. This copy does not correct the proof line by line. The statement with the hypotheses in blue holds by a different argument, which also gives a stronger form, in which the wheel must also contain a given closed set of zones. At the only use of 12.1, in the proof of 12.4, $\rho = 2t \ge 8$, and the stronger form applies there, so nothing later is lost.}
+
+\textbf{Proof.} Let $z^* \in V(H)$, and let $z$ be the atom of $\Gamma$ with $z^* \subseteq z$. By 7.1 (taking $\kappa = 3\rho + 4$) there is a circuit $C$ of $\Gamma^*$, bounding an open disc $\Lambda \subseteq \hat{\Sigma}$, such that
+
+\hspace*{12pt}$\bullet$ $x \subseteq \Lambda$ for every atom $x$ of $\Gamma$ with $d(z, x) \le 3\rho + 2$, and
+
+\hspace*{12pt}$\bullet$ $ins(F) \subseteq \bar{\Lambda}$ for every circuit $F$ of $\Gamma^*$ with $U(F) \subseteq \bar{\Lambda}$ and $|E(F)| \le 4\rho + 4$.
+
+\hspace*{12pt}(1) \textit{$U(P) \subseteq \Lambda$ for every path $P$ of $\Gamma^*$ with one end in $V(H)$ and with $|E(P)| \le \rho$.}
+
+\textbf{Subproof.} Let $h$ be an end of $P$ in $V(H)$, and let $a \in A(\Gamma)$ with $h \subseteq a$. Then $d(a, z) \le \frac{1}{2}|E(H)|$, and so for every $x \in A(\Gamma)$ with $x \cap U(P) \ne \emptyset$,
+\begin{equation*}
+d(z, x) \le d(x, a) + d(a, z) \le |E(P)| + \frac{1}{2}|E(H)| \le 3\rho + 2
+\end{equation*}
+and so $x \subseteq \Lambda$ by the first property of $C$ above. Hence $U(P) \subseteq \Lambda$. This proves (1).

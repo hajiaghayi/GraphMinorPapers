@@ -1,0 +1,44 @@
+\origpage{560}{N. Robertson, P. Seymour / Journal of Combinatorial Theory, Series B 102 (2012) 530--563}
+For (J4) we need several lemmas. The first is the following. Let $\Delta_0 \subseteq \Sigma$ be a closed disc such that $U(\Gamma) \subseteq \Delta_0$ and $\text{bd}(\Delta_0) \cap U(\Gamma) = \Pi$, obtained by deleting a suitable open disc from the region of $\Gamma$ bounded by $U(C_0)$.
+
+\hspace*{12pt}(1) \textit{For each $v \in Z$ there exists $\alpha(v) \in \Delta_0$, and for each $A \in \mathcal{A}$ there exists a closed disc $D(A) \subseteq \Delta_0$, such that}
+
+\hspace*{12pt}$\bullet$ \textit{$\alpha(v) = v$ for all $v \in \Pi$;}
+
+\hspace*{12pt}$\bullet$ \textit{for each $A \in \mathcal{A}$ and $v \in \bar{\pi}(A)$, $\alpha(v) \in \text{bd}(D(A))$; and for each $v \in Z$ and $A \in \mathcal{A}$, if $\alpha(v) \in D(A)$ then $v \in \bar{\pi}(A)$;}
+
+\hspace*{12pt}$\bullet$ \textit{for all distinct $A, A' \in \mathcal{A}$, $D(A) \cap D(A') = \{\alpha(v) : v \in \bar{\pi}(A) \cap \bar{\pi}(A')\}$;}
+
+\hspace*{12pt}$\bullet$ \textit{for all $A \in \mathcal{A}$, $D(A) \cap \text{bd}(\Delta_0) = \{\alpha(v) : v \in \bar{\pi}(A) \cap \Pi\}$;}
+
+\hspace*{12pt}$\bullet$ \textit{for all distinct $v, v' \in Z$, $\alpha(v) \ne \alpha(v')$.}
+
+\textit{Subproof.} The graph $G'$ of hypothesis (x) can be drawn in some closed disc with the vertices from $\Pi$ in the boundary and in the right order; and hence it can be drawn in $\Delta_0$ with each vertex in $\Pi$ represented by itself, and with no other vertex in $\text{bd}(\Delta_0)$. Each vertex $A \in \mathcal{A}$ of $G'$ has degree $\le 3$ in $G'$, and we may replace it by a suitable closed disc $D(A)$ in its neighbourhood to satisfy (1).
+
+\hspace*{12pt}(2) \textit{We may choose the function $\alpha$ and the discs $D(A)$ ($A \in \mathcal{A}$) to satisfy (1) and in addition such that}
+
+\hspace*{12pt}$\bullet$ \textit{$\alpha(v) = v$ for each $v \in Z \cap V(\Gamma)$, and}
+
+\hspace*{12pt}$\bullet$ \textit{for each $A \in \mathcal{A}$, $\text{bd}(D(A))$ is $\Gamma$-normal, and $\Gamma \cap D(A) = \Gamma \cap A$, and $\text{bd}(D(A)) \cap V(\Gamma) = \bar{\pi}(A)$.}
+
+\textit{Subproof.} By hypothesis (i), $G$ is a subdivision of a simple 3-connected graph, and hence for every closed disc $\Delta \subseteq \Delta_0$ with $\text{bd}(\Delta)$ $\Gamma$-normal and $|\text{bd}(\Delta) \cap V(\Gamma)| \le 2$, either $E(\Gamma \cap \Delta) = \emptyset$ and $V(\Gamma \cap \Delta) \subseteq \text{bd}(\Delta)$ or $\Gamma \cap \Delta$ is a path with both ends in $\text{bd}(\Delta)$. Hence (2) follows from Theorem 6.5 of [6].
+
+To simplify notation we assume (for instance, by replacing $G$ by an isomorphic digraph) that $\alpha(v) = v$ for each $v \in Z$. Then (1) and (2) can be summarized as follows:
+
+\hspace*{12pt}(3) \textit{$Z \subseteq \Delta_0$ and $Z \cap \text{bd}(\Delta_0) = \Pi$; and for each $A \in \mathcal{A}$ there exists a closed disc $D(A) \subseteq \Delta_0$, such that}
+
+\hspace*{12pt}$\bullet$ \textit{for each $A \in \mathcal{A}$, $\text{bd}(D(A))$ is $\Gamma$-normal and $\text{bd}(D(A)) \cap \text{bd}(\Delta_0) \subseteq \Pi$,}
+
+\hspace*{12pt}$\bullet$ \textit{for each $A \in \mathcal{A}$, $\Gamma \cap D(A) = \Gamma \cap A$, and $\text{bd}(D(A)) \cap V(\Gamma) = \bar{\pi}(A)$,}
+
+\hspace*{12pt}$\bullet$ \textit{for all distinct $A, A' \in \mathcal{A}$, $D(A) \cap D(A') = \bar{\pi}(A) \cap \bar{\pi}(A')$.}
+
+To complete the verification of (J4), we need
+
+\hspace*{12pt}(4) \textit{For each $A \in \mathcal{A}$, if $|\bar{\pi}(A)| = 3$ and $\pi(A)$ is $s_1, s_2, s_3$ say, then $s_1, s_2, s_3$ determine the clockwise orientation of $D(A)$.}
+
+\textit{Subproof.} From hypothesis (viii), there are mutually vertex-disjoint paths $P_1, P_2, P_3$ of $J \setminus W$ with ends $s_i, t_i$ ($1 \le i \le 3$), such that $t_1, t_2, t_3 \in \Pi$ and $t_1, t_2, t_3$ occur in clockwise order in the boundary of $\Delta_0$. Let $L = P_1 \cup P_2 \cup P_3$, and for each $A' \in \mathcal{A}$ with $E(P \cap A') \ne \emptyset$, choose a line $F(A') \subseteq D(A')$ with ends the two vertices in $\bar{\pi}(A')$ with degree 1 in $P \cap A'$, and with no other point in $\text{bd}(D(A'))$. Let $M$ be the union of $F(A')$ over all such $A' \in \mathcal{A}$. Then $M$ is the union of three mutually disjoint lines in $\Delta_0$ with ends $s_i, t_i$ ($1 \le i \le 3$), and $M \cap D(A) = \{s_1, s_2, s_3\}$. Since $t_1, t_2, t_3$ occur in clockwise order in $\text{bd}(\Delta_0)$, it follows that $s_1, s_2, s_3$ occur in clockwise order in $\text{bd}(D(A))$. This proves (4).
+
+\hspace*{12pt}(5) \textit{For each $A \in \mathcal{A}$, $D(A) = ins(\text{bd}(D(A)))$.}
+
+\textit{Subproof.} Let $F = \text{bd}(D(A))$. Since $|F \cap V(\Gamma)| \le 3 < \theta$, it follows that $ins(F)$ exists. But $\Pi \not\subseteq ins(F)$ by hypothesis (iv), and if $D$ is the closed disc in $\Sigma$ bounded by $F$ with $D \ne D(A)$, then $\Pi \subseteq \text{bd}(\Delta_0) \subseteq D$. Consequently, $D \ne ins(F)$, and so $D(A) = ins(F)$. This proves (5).

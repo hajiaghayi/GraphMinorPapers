@@ -1,0 +1,27 @@
+\origpage{97}{GRAPH MINORS. XIII}
+We deduce
+
+\hspace*{12pt}(2) \textit{For each $A \in \mathcal{A}'$, $V(A) \cap V(C) = \partial A$.}
+
+\textit{Subproof.} Now $V(A) \cap V(C) \subseteq \partial A$, by (1). For the converse, let $v \in \partial A$. Then $v \in V(A)$, and we claim that $v \in V(C)$. Since $\tilde{\Omega} \subseteq V(C)$ we may assume that $v \notin \tilde{\Omega}$, and so there is an edge $e$ of $G$ incident with $v$, with $e \notin E(A)$. By definition of $\mathcal{A}'$, $v \in V(C)$ as required.
+
+From (1) and (2) it follows that $\mathcal{A}'$ satisfies conditions (i), (ii), (iii), (iv) in the definition of a division.
+
+\hspace*{12pt}(3) \textit{Let $X \subseteq V(G)$, let $\mathcal{B} = \{A \in \mathcal{A}' : \partial A = X\}$, and let $B = \bigcup(A : A \in \mathcal{B})$. Then $\partial B = X$, if $\mathcal{B} \ne \emptyset$.}
+
+\textit{Subproof.} Certainly $\partial B \subseteq X$. For the converse, since $\mathcal{B} \ne \emptyset$, there exists $A \in \mathcal{B}$, and by (1) there are $|X|$ mutually vertex-disjoint paths of $G$ between $X$ and $\tilde{\Omega}$. Each of these paths has no vertex in any $A' \in \mathcal{B}$ except its end in $X$, because $\partial A' = X$. It follows that each of these paths has no vertex in $B$ except its end in $X$, and so $\partial B = X$, as required.
+
+Since $\mathcal{A}'$ satisfies (i)-(iv) in the definition of a division, it follows from (3) that $\mathcal{A}$ satisfies (i)-(v) and hence is a division. To see that $\mathcal{A}$ is rural, we observe first that $(C, \Omega)$ is rural, by (8.5). For each $A \in \mathcal{A}$, the vertices of $V(A) \cap V(C)$ form a complete subgraph of $C$, and since $C$ is 4-linked, this is either empty, a single vertex, an edge of $C$, or a triangle of $C$ bounding a region of the drawing of $C$. Since no two members of $\mathcal{A}$ correspond to the same complete subgraph of $C$ (and in particular, no two correspond to the same triangular region) it follows that $\mathcal{A}$ is rural, as required.
+
+Thus the algorithm gives the desired output. Moreover, its running time is $O(\nu\varepsilon)$, since (8.1) and (8.3) both take time $O(\nu\varepsilon)$ and computing $\mathcal{A}'$ and $\mathcal{A}$ both take time $O(\varepsilon)$. $\square$
+
+\sectionhead{9. Finding a Flat Section of a Wall}
+
+We begin by defining a \textit{subwall} of a wall. First, let $J$ be an elementary wall of height $h$. Draw $J$ in the plane as in Fig. 1, and let us name the vertices of $J$ by $x, y$-coordinates, taking the origin in the bottom left of the figure. Thus, $J$ has vertex set
+\begin{equation*}
+\{(x, y) : 0 \le x \le 2h+1, 0 \le y \le h\} - \{(0, 0), (2h+1, h)\}
+\end{equation*}
+and corners $(1, 0), (2h+1, 0), (0, h), (2h, h)$. Let $h'$ be even with $2 \le h' \le h$, choose $i, j$, even, with $0 \le i \le 2h - 2h'$ and $0 \le j \le h - h'$, and let $J'$ be the subgraph of $J$ induced on the vertex set
+\begin{equation*}
+\{(x, y) : i \le x \le i + 2h' + 1, j \le y \le j + h'\} - \{(i, j), (i + 2h' + 1, j + h')\}
+\end{equation*}

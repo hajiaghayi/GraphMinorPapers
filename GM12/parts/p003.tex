@@ -1,0 +1,34 @@
+\origpage{242}{ROBERTSON AND SEYMOUR}
+\hspace*{12pt}(i) $U(K) \cap U(\Gamma) = V(\Gamma) \subseteq V(K)$
+
+\hspace*{12pt}(ii) every region of $\Gamma$ includes a unique vertex of $K$
+
+\hspace*{12pt}(iii) $K$ is bipartite, and $(V(\Gamma), V(K) - V(\Gamma))$ is a bipartition of it
+
+\hspace*{12pt}(iv) for every $v \in V(\Gamma)$, the edges of $K \cup \Gamma$ incident with $v$ belong alternately to $\Gamma$ and to $K$ (in their cyclic order around $v$).
+
+Thus, loosely, $K$ is obtained by adding a new vertex in each region of $\Gamma$ and making it adjacent to every vertex of $\Gamma$ incident with the region. If $E(\Gamma) \ne \emptyset$ and $K$ is a radial drawing of $\Gamma$, it is not difficult to show that $K$ is 2-cell, and every region of $K$ includes a unique edge of $\Gamma$.
+
+Let $\Gamma$ be a 2-cell drawing in a connected surface $\Sigma$, with a respectful tangle of order $\theta$, and let $K$ be a radial drawing of $\Gamma$. For every circuit $C$ of $K$ of length $<2\theta$, we define $ins(C) = ins(U(C))$. We shall often need the following result, a consequence of [5, Theorem (6.3)].
+
+\stmt
+(1.1) \textit{In these circumstances, let $E(\Gamma) \ne \emptyset$, and let $(A, B)$ be a separation of $\Gamma$ of order $<\theta$. Then $(A, B) \in \mathscr{T}$ if and only if for every edge $e$ of $A$ there is a circuit $C$ of $K$ with $V(C) \cap V(\Gamma) \subseteq V(A \cap B)$ and with $e \subseteq ins(C)$.}
+
+If $W$ is a closed walk of $K$, we define $K | W$ to be the subdrawing of $K$ formed by the vertices and edges in $W$; and we write $U(W) = U(K | W)$, $V(W) = V(K | W)$, etc. If $W$ has length $<2\theta$ we define $ins(W)$ to be the union of $U(W)$ and $ins(C)$, taken over all circuits $C$ of $K | W$. We recall that $A(K)$ is the set of atoms of $K$. If $a, b \in A(K)$, we define $d(a, b)$ by:
+
+\hspace*{12pt}(i) if $a = b$ then $d(a, b) = 0$
+
+\hspace*{12pt}(ii) if $a \ne b$ and $a, b \subseteq ins(W)$ for some closed walk $W$ of $K$ of length $<2\theta$, then $d(a, b)$ is half the minimum length of such a walk
+
+\hspace*{12pt}(iii) if (i) and (ii) do not apply then $d(a, b) = \theta$.
+
+Now for each atom $c$ of $\Gamma$ there corresponds an atom $a$ of $K$; namely, $a = c$ if $c \subseteq V(\Gamma)$; $a$ is the region of $K$ including $c$ if $c$ is an edge of $\Gamma$; and $a = \{v\}$, where $v$ is the vertex of $K$ in $c$, if $c$ is a region of $\Gamma$. Let us write $a = a(c)$; then for $c_1, c_2 \in A(\Gamma)$ we define $d(c_1, c_2) = d(a(c_1), a(c_2))$. We shall frequently use the result of [5, Theorem (9.1)], that $d$ defines a metric on $A(K)$ and hence on $A(\Gamma)$; and the easy observation that for a closed walk $W$ in $K$ of length $<2\theta$, and for $c \in A(\Gamma)$, $a(c) \subseteq ins(W)$ if and only if $c \cap ins(W) \ne \emptyset$.
+
+\fix{We prove this observation. Each circuit $C$ of $K | W$ has length $< 2\theta$, and so $ins(C)$ is defined, and it is a closed disc with boundary $U(C)$. We use two facts. First, an edge of $\Gamma$ misses $U(K)$, by (i). Second, let $L$ be a subdrawing of $K$ with a point in a region $c$ of $\Gamma$, and let $v$ be the vertex of $K$ in $c$. Then $v \in V(L)$. For the point is $v$ or lies in an edge of $L$, and this edge lies in $c$, since it misses $U(\Gamma)$ by (i). By (iii) it has an end not in $V(\Gamma)$, and this end is not in $U(\Gamma)$, by (i), and so it is in $c$, and it is $v$ by (ii).
+
+Now if $a(c) \subseteq ins(W)$, then $c \cap ins(W) \ne \emptyset$, since $a(c)$ and $c$ are non-empty and one of them includes the other. Conversely, let $x \in c \cap ins(W)$. If $c \subseteq V(\Gamma)$, then $a(c) = c = \{x\}$, and so $a(c) \subseteq ins(W)$. If $c$ is an edge of $\Gamma$, then $x \notin U(W)$ by the first fact, and so $x \in ins(C)$ for some circuit $C$ of $K | W$. The region $a(c)$ of $K$ is connected, it misses $U(C)$, which is the boundary of $ins(C)$, and it meets $ins(C)$ at $x$. So $a(c) \subseteq ins(C) \subseteq ins(W)$. Finally, let $c$ be a region of $\Gamma$, and let $v$ be the vertex of $K$ in $c$. If $x \in U(W)$, then $v \in V(W)$ by the second fact, applied to $K | W$, and so $a(c) = \{v\} \subseteq ins(W)$. Otherwise $x \in ins(C)$ for some circuit $C$ of $K | W$. If $v \in V(C)$, then $a(c) \subseteq ins(W)$. If not, then $c$ misses $U(C)$ by the second fact, applied to $K | C$. Since $c$ is connected and meets $ins(C)$ at $x$, it follows that $c \subseteq ins(C)$, and so $a(c) \subseteq ins(W)$.}\fixnote{fix:1-observation-proof-added}{The paper calls this an easy observation and gives no proof. The argument above is the one used in the formalization.}
+
+We shall also frequently need the following, from [5, Theorem (8.12)].
+
+\stmt
+(1.2) \textit{Let $\mathscr{T}$ be a respectful tangle of order $\theta \ge 2$ in a 2-cell drawing $\Gamma$ \fix{\textit{with $|E(\Gamma)| \ge 2$}} in a connected surface $\Sigma$, and let its metric be $d$. Let $c \in A(\Gamma)$; then there is an edge $e$ of $\Gamma$ with $d(c, e) = \theta$.}\fixnote{fix:1.2}{As printed, (1.2) fails for the drawing in the sphere with two vertices and one edge $e_0$ joining them, and a respectful tangle of order 2 in it. For $c = e_0$ the only edge is $e_0$, and $d(e_0, e_0) = 0 \neq 2$. If $|E(\Gamma)| \ge 2$, then (1.2) holds.}

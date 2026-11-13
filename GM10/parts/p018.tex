@@ -1,0 +1,24 @@
+\origpage{170}{ROBERTSON AND SEYMOUR}
+Moreover the proof of (2.5) shows that $\theta(G) \ge 1$ unless $V(G) = \emptyset$. Thus if $\gamma(G) \ne 0$ and hence $V(G) \ne \emptyset$, then
+\begin{align*}
+\theta(G) &= \max(\beta(G), \gamma(G)) \le \omega(G) + 1 \le \max(\frac{3}{2}\beta(G), \gamma(G), 1) \\
+&= \frac{3}{2}\max(\beta(G), \gamma(G)) = \frac{3}{2}\theta(G),
+\end{align*}
+as required. If $\gamma(G) = 0$ and $V(G) \ne \emptyset$, then $\omega(G) = 0$ and $\theta(G) = 1$, and the result holds. Finally, if $V(G) = \emptyset$, then $\theta(G) = 0$ and $\omega(G) = -1$, and again the result holds. $\square$
+
+\sectionhead{6. New Tangles from Old}
+
+The object of this section is to provide some operations on tangles. The simplest is the following. Let $\mathscr{T}$ be a tangle of order $\theta$ in a hypergraph $G$, let $1 \le \theta' \le \theta$, and let $\mathscr{T}'$ be the set of all members of $\mathscr{T}$ with order $< \theta'$. Then it is easy to see that $\mathscr{T}'$ is a tangle in $G$ of order $\theta'$; we call $\mathscr{T}'$ the \textit{truncation} of $\mathscr{T}$ to order $\theta'$. We observe also that if $\mathscr{T}, \mathscr{T}'$ are tangles in $G$ then $\mathscr{T}' \subseteq \mathscr{T}$ if and only if $\mathscr{T}'$ is a truncation of $\mathscr{T}$.
+
+For graphs $G$, a second construction extends a tangle in a minor of $G$ to a tangle in $G$, as follows.
+
+\stmt
+(6.1) \textit{Let $H$ be a minor of a graph $G$, and let $\mathscr{T}'$ be a tangle in $H$ of order $\theta \ge 2$. Let $\mathscr{T}$ be the set of all separations $(A, B)$ of $G$ of order $< \theta$ such that there exists $(A', B') \in \mathscr{T}'$ with $E(A') = E(A) \cap E(H)$. Then $\mathscr{T}$ is a tangle in $G$ of order $\theta$.}
+
+\textit{Proof.} We must verify the three axioms. First, let $(A, B)$ be a separation of $G$ of order $< \theta$. Then we may choose a separation $(A', B')$ of $H$ such that $E(A') = E(A) \cap E(H)$, and every vertex of $V(A' \cap B')$ is incident with an edge of $E(A')$ and with an edge of $E(B')$. Then $(A', B')$ has order at most the order of $(A, B)$ and so $< \theta$; thus, $\mathscr{T}'$ contains one of $(A', B')$, $(B', A')$, and so $\mathscr{T}$ contains one of $(A, B)$, $(B, A)$.
+
+For the second axiom, suppose that $(A_i, B_i) \in \mathscr{T}$ $(1 \le i \le 3)$ with $A_1 \cup A_2 \cup A_3 = G$, and let $(A'_i, B'_i) \in \mathscr{T}'$ $(1 \le i \le 3)$ be the corresponding separations of $H$. Then $E(A'_1 \cup A'_2 \cup A'_3) = E(H)$, contrary to (2.3). Finally, it is clear from (2.7) that the third axiom holds. $\square$
+
+We call $\mathscr{T}$ in (6.1) the tangle in $G$ \textit{induced by} $\mathscr{T}'$.
+
+A third construction reverses this process. Let $G$ be a hypergraph and $W$ a set. We denote by $G/W$ the hypergraph $G'$ with vertex set $V(G) - W$ and edge set $E(G)$, in which $v \in V(G')$ and $e \in E(G')$ are incident if and only if they are incident in $G$. (This may produce edges with no ends.)

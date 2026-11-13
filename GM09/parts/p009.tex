@@ -1,0 +1,73 @@
+\origpage{48}{ROBERTSON AND SEYMOUR}
+\noindent crooked. Hence $a_1^- \ne u$. If $T$ is peripheral in $\mathscr{T}$ then $u^- = b_1$, and if some $P_2 \in \mathscr{P} - \{P_1\}$ is peripheral in $\mathscr{T}$ then $P_2$ has ends $a_1^+, a_1^-$ because $P_2$ is not peripheral in $\mathscr{P}$, and $a_1 = a'$ because $(A, B)$ is a fence for $\mathscr{P}$.
+
+\hspace*{12pt}(2) \textit{Either $a \ne u$ or $b = b_1$.}
+
+For let us assume that $a = u$. Then $\mathscr{S}$ is a transaction with fence $(A - \{a\}, B \cup \{a\})$. It is not crooked, and so $b = b_1$, since $a_1^- \ne u$ by (1).
+
+\hspace*{12pt}(3) \textit{Either $a' \ne a_1$ or there exists $P_3 \in \mathscr{P} - \{P_1\}$ with ends $b_1^+, b_1^-$.}
+
+For let us assume that $a' = a_1$. Then $\mathscr{S}$ is a transaction with fence $(A - \{a'\}, B \cup \{a'\})$. It is not crooked, and by (1), $a_1^- \ne u$, so there exists $P_3 \in \mathscr{P} - \{P_1\}$ which is peripheral in $\mathscr{S}$ and not peripheral in $\mathscr{P}$. (3) follows.
+
+Now to complete the proof, suppose that $u^- = b_1$. Then $a = u$, and so by (2), $b = b_1$. But this implies that $|B \cap W| = 1$ and so $|\mathscr{P}| = 1$, a contradiction. We deduce that $u^- \ne b_1$, and so by (1), $a_1 = a'$ and there exists $P_2 \in \mathscr{P} - \{P_1\}$ with ends $a_1^+, a_1^-$. By (3), there exists $P_3 \in \mathscr{P} - \{P_1\}$ with ends $b_1^+, b_1^-$. It follows that $P_1$ is an overpass of $\mathscr{P}$, as required. This completes the proof. $\square$
+
+We need a version of the exchange property which applies to overpass attachments, as follows.
+
+\stmt
+(3.3) \textit{Let $\mathscr{P}$ be a crooked transaction in $(G, \Omega)$. If $P$ and $P'$ are both non-exchangeable attachments to $\mathscr{P}$ and $P, P'$ are disjoint, then there is a crooked transaction $\mathscr{P}'$ with $|\mathscr{P}'| = |\mathscr{P}| + 1$ and}
+\begin{equation*}
+\bigcup \mathscr{P}' \subseteq \bigcup \mathscr{P} \cup (P \cup P').
+\end{equation*}
+\textit{Moreover, the two attachments have a common leg, which is an overpass of $\mathscr{P}$, and no edge of this leg between the two feet is in $\bigcup \mathscr{P}'$.}
+
+\textit{Proof.} By (3.1) and (3.2) the two attachments have a common leg, $P_1$, say, and it is an overpass of $\mathscr{P}$. Let $S$ be a switch of the first attachment and $T$ a switch of the second, chosen so that no edge of $P_1$ between the two feet lies in $S$ or $T$. Then $S$ and $T$ are disjoint, and it is easy to see that
+\begin{equation*}
+\mathscr{P}' = (\mathscr{P} - \{P_1\}) \cup \{S, T\}
+\end{equation*}
+satisfies the theorem. $\square$
+
+We shall also need the following observation.
+
+\stmt
+(3.4) \textit{Let $p \ge 2$ be an integer, with $p \ne 3$. If $\mathscr{P}$ is a crooked transaction of cardinality $\ge p$ then some subset of $\mathscr{P}$ is a crooked transaction of cardinality $p$.}
+
+The proof is easy.
+
+\fix{We give the details. Let $(A, B)$ be a fence for $\mathscr{P}$, and let $W = V(\mathscr{P})$.
+Since $\mathscr{P}$ is non-null, $W$ meets both $A$ and $B$. So, going once around $\Omega$, we find
+$a' \in A \cap W$ and $b \in B \cap W$ with $\Omega(a', b) \cap W = \emptyset$, and in the same way
+$b' \in B \cap W$ and $a \in A \cap W$ with $\Omega(b', a) \cap W = \emptyset$.
+
+\hspace*{12pt}(1) \textit{Let $x \in A \cap W$ and $y \in B \cap W$. If $x \ne a'$ then
+$a' \in \Omega(x, y)$, and if $x = a'$ and $y \ne b$ then $b \in \Omega(x, y)$. Similarly, if
+$y \ne b'$ then $b' \in \Omega(y, x)$, and if $y = b'$ and $x \ne a$ then $a \in \Omega(y, x)$.}
+
+For the first statement, let $x \ne a'$. Then $x \in \Omega(b, a')$, since $x \in W$ and $x \ne b$. If
+$y = b$ this says that $a' \in \Omega(x, y)$. If $y \ne b$ then also $y \in \Omega(b, a')$, and if
+$(b, x, y, a')$ were clockwise then $\{x, a'\} \subseteq A$ would cross $\{b, y\} \subseteq B$,
+contrary to the definition of a fence. So $(b, y, x, a')$ is clockwise, and again
+$a' \in \Omega(x, y)$. For the second statement, $y \in \Omega(b, a')$ since $y \in W$ and $y \ne b$,
+and so $b \in \Omega(a', y)$. The last two statements follow in the same way. This proves (1).
+
+Suppose first that $p = 2$. Let $P_1, P_2 \in \mathscr{P}$ have ends $a'$ and $b$ respectively. If
+$P_1 = P_2$ then $\Omega(a', b) \cap W = \emptyset$ shows that $P_1$ is peripheral in $\mathscr{P}$,
+which is impossible. So $P_1 \ne P_2$, and we may write their ends as $a', b_1$ and $a_2, b$, where
+$b_1 \ne b$ and $a_2 \ne a'$, since $P_1$ and $P_2$ are disjoint. By (1),
+$a' \in \Omega(a_2, b_1)$ and $b \in \Omega(a', b_1)$, and so $(a_2, a', b, b_1)$ is clockwise and
+$\{a', b_1\}$ crosses $\{a_2, b\}$. Hence each of $\Omega(a', b_1)$, $\Omega(b_1, a')$ contains an end
+of $P_2$, and each of $\Omega(a_2, b)$, $\Omega(b, a_2)$ contains an end of $P_1$. Thus
+$\{P_1, P_2\}$ is a crooked transaction, with fence $(A, B)$.
+
+Now suppose that $p \ge 4$. It is enough to show that if $|\mathscr{P}| \ge 5$ then
+$\mathscr{P} - \{P\}$ is crooked for some $P \in \mathscr{P}$, for then we may remove members one at
+a time until $p$ of them remain. At most four members of $\mathscr{P}$ have one of $a', b, b', a$ as an
+end, and so some $P \in \mathscr{P}$ has none of them as an end. Let $\mathscr{P}' = \mathscr{P} -
+\{P\}$, a transaction with fence $(A, B)$. Then $V(\mathscr{P}')$ contains $a', b, b', a$. Let
+$R \in \mathscr{P}'$ have ends $x \in A$ and $y \in B$. Suppose that
+$\Omega(x, y) \cap V(\mathscr{P}') = \emptyset$. If $x \ne a'$ then $a' \in \Omega(x, y)$ by (1),
+a contradiction. If $x = a'$ then $y \ne b$, for otherwise $\Omega(x, y) \cap W = \emptyset$ and
+$R$ would be peripheral in $\mathscr{P}$, and so $b \in \Omega(x, y)$ by (1), again a contradiction.
+In the same way, using $b'$ and $a$, the set $\Omega(y, x) \cap V(\mathscr{P}')$ is not empty. So $R$
+is not peripheral in $\mathscr{P}'$, and $\mathscr{P}'$ is crooked.\fixnote{fix:3.4-proof-added}{The
+paper says that the proof is easy and gives no proof. The argument above is the one used in the
+formalization.}}

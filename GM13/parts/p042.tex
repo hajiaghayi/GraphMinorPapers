@@ -1,0 +1,22 @@
+\origpage{106}{ROBERTSON AND SEYMOUR}
+\noindent take time $O(v\varepsilon)$. Step (6) takes time $\Sigma(Cv(A')\varepsilon(A') : A' \in \mathcal{A})$ for some constant $C$. But for $A' \in \mathcal{A}$, $\varepsilon(A') \le 4(\varepsilon(A') - |\partial A'| - 1)$, since some vertex or edge of $A'$ belongs to no other member of $\mathcal{A}$, and hence, summing over $A' \in \mathcal{A}$,
+\begin{align*}
+\Sigma v(A')\varepsilon(A') &\le \Sigma 4v(A')(\varepsilon(A') - |\partial A'| - 1) \\
+&\le 4v(G_i)\Sigma(\varepsilon(A') - |\partial A'| - 1) \le 4v(G_i)\varepsilon(G_i).
+\end{align*}
+Consequently, step (6) takes time $O(v(G_i)\varepsilon(G_i))$. Thus the $i$th iteration takes time $O(v(G_i)\varepsilon(G_i))$. Since $\varepsilon(G_i) \le (\frac{1}{2})^{i-1}\varepsilon(G)$ and $v(G_i) \le v(G)$, the whole recursion takes time $O(v\varepsilon)$. Hence the algorithm takes time $O(v\varepsilon)$, as claimed. $\square$
+
+\sectionhead{10. Homogeneously Labelled Walls}
+
+Our last task is to show how to make use of the third possible outcome of (9.8) when solving Folio. The following condition is a common hypothesis of several results to follow and so we give it a name.
+
+Hypothesis C. \textit{$G$ is a digraph, $X \subseteq V(G)$ with $|X| = q$, $H$ is a wall in $G \setminus X$, and $\mathcal{A}$ is a rural division of the society of $H$ in $G \setminus X$.}
+
+Under Hypothesis C, let $(K, \Omega)$ be the society of $H$ in $G \setminus X$. Let $A \in \mathcal{A}$ be interior, and let $|\partial A| = k$; then $k \le 3$. Choose a numbering $\{s_1, \dots, s_k\}$ of $\partial A$, where if $k = 3$ we number ``clockwise;'' that is, we number $s_1, s_2, s_3$ so that there are three paths $P_1, P_2, P_3$ of $K$ from $\partial A$ to $\bar{\Omega}$, mutually vertex-disjoint, where $P_i$ has ends $s_i, t_i$ ($i = 1, 2, 3$), and $t_1, t_2, t_3$ occur in this order under $\Omega$. Let $X = \{x_1, \dots, x_r\}$; the sequence $(s_1, \dots, s_k, x_1, \dots, x_r)$ is called an \textit{attachment sequence} of $A$, and we denote it by $\pi(A)$. For each $A \in \mathcal{A}$, choose a subgraph $\tilde{A}$ of $G$ with $X \subseteq V(\tilde{A})$ and with $\tilde{A} \setminus X = A$, such that every edge of $G$ with both ends in $X \cup V(K)$ is in $E(\tilde{A})$ for exactly one $A \in \mathcal{A}$. Let $T_A$ be the $\delta$-folio of $(\tilde{A}, \pi(A))$.
+
+Now for each interior $A \in \mathcal{A}$, let $v(A) \in V(H)$ such that there is a path of $K$ from $\partial A$ to $v(A)$ with no vertex in $V(H)$ except $v(A)$. (Such a path always exists since $K$ is connected and $A$ is non-null.) This information (that is, for each interior $A \in \mathcal{A}$, a choice of $\tilde{A}$, an attachment sequence $\pi(A)$ of $A$, the $\delta$-folio of $(\tilde{A}, \pi(A))$, and a vertex $v(A)$) is called a \textit{vision}. For fixed $\omega$ and $q$, we need the following.
+
+\stmt
+(10.1) \textsc{Algorithm}.
+
+\textit{Input:} $G$, $X$, $H$, $\mathcal{A}$ satisfying Hypothesis C, and an integer $\delta \ge 0$, and for each interior $A \in \mathcal{A}$ a branch-decomposition of $A$ of width $\le \omega$.

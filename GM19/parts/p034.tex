@@ -1,0 +1,32 @@
+\origpage{358}{N. Robertson, P.D. Seymour / Journal of Combinatorial Theory, Series B 90 (2004) 325--385}
+\hspace*{12pt}$\bullet$ there do not exist distinct edges $e_1, \dots, e_m \in E(\Gamma)$ bordering $S$ in order, such that $\phi(e_i) \ge \omega_i$ ($1 \le i \le m$), and $l(e_i, e_j) > n$ ($1 \le i < j \le m$) and $l(e_i, s) > n$ ($1 \le i \le m$) for every short side $s$ bordering the same cuff as $S$.
+
+The main result of this section is
+
+\textbf{11.1.} \textit{Let $\chi$ satisfy $S_4$, let $S$ be a long side of $\Phi_\chi$, let $\omega_1, \dots, \omega_m \in E(\Omega_\chi(S))$ with $m \ge 1$, and let $n \ge 4$. Then there is a well-behaved set $\mathscr{C}_4(S, (\omega_1, \dots, \omega_m), n)$ of $\chi$-places with the following property. Let $(\Gamma, \phi, \lambda, \mathscr{T}) \in \mathscr{D}$ be $(n, (\omega_1, \dots, \omega_m))$-flawed on $S$. Then there is a rooted location $\mathscr{L}$ which $(m + 1)n$-isolates $\mathscr{T}$, and for which $(\Gamma, \phi, \mathscr{L}) \in \mathscr{C}_4(S, (\omega_1, \dots, \omega_m), n)$.}
+
+The proof of 11.1 will require some lemmas, however, which follow. Throughout the section, $\chi, S, \omega_1, \dots, \omega_m$ and $n$ are as in 11.1.
+
+Let $(\Gamma, \phi, \lambda, \mathscr{T}) \in \mathscr{D}$, and let $r^*$ be the pole with $S \subseteq \bar{r}$. If $F$ is a bite at $r^*$, we define $I(F)$ to be the $I$-arc in $ins(F) \cap (\bar{r} \setminus r)$ joining the two neighbours in $F$ of $r^*$. If $\mathscr{F}$ is a set of bites at $r^*$, we define $I(\mathscr{F}) = \bigcup(I(F) : F \in \mathscr{F})$. The order of a set $\mathscr{F}$ of bites at $r^*$ is $\Sigma(\frac{1}{2}|E(F)| : F \in \mathscr{F})$. A set $\mathscr{F}$ of bites at $r^*$ is a \textit{feast} if
+
+\hspace*{12pt}$\bullet$ $|\mathscr{F}| \le m + 1$,
+
+\hspace*{12pt}$\bullet$ $I(\mathscr{F})$ includes the short sides of $\Phi_\chi$ with an end in common with $S$, and
+
+\hspace*{12pt}$\bullet$ for each component $X$ of $S \setminus I(\mathscr{F})$ there exists $h$ with $1 \le h \le m$ such that $\phi(e) \not\ge \omega_h$ for all $e \in E(\Gamma)$ with $e \subseteq X$.
+
+\textbf{11.2.} \textit{If $(\Gamma, \phi, \lambda, \mathscr{T}) \in \mathscr{D}$ is $(n, (\omega_1, \dots, \omega_m))$-flawed on $S$, then there is a feast of order $\le (m + 1)n$.}
+
+\textbf{Proof.} Let the edges of $\Gamma$ bordering $S$ be $e_1, \dots, e_k$ in order, and define $e_0$ and $e_{k+1}$ to be the short sides of $\Phi_\chi$ with an end in common with $S$, numbered such that for $0 \le i \le k$, $e_i$ and $e_{i+1}$ have a common end. (It is possible that $e_0 = e_{k+1}$.) For $0 \le i < j \le k + 1$, we write $i \ll j$ if there is no bite $F$ at $r^*$ with $\frac{1}{2}|E(F)| \le n$ and $e_i, e_{i+1}, \dots, e_j \subseteq ins(F)$. Since $(\Gamma, \phi, \lambda, \mathscr{T})$ is not $(m + 1)n$-flawed in freedom, it follows that $1 \ll k$. (To see this, observe that since $(\Gamma, \phi, \lambda, \mathscr{T})$ is $(n, (\omega_1, \dots, \omega_m))$-flawed on $S$, we have $rep(\mathscr{T}) \ge 2(m + 1)n + 8$, and $dist(\Gamma) \delm{\ge}\fix{>} \frac{1}{2}(m + 1)n + 1$. In particular, \fix{since $(\Gamma, \phi, \lambda, \mathscr{T})$ is not $(m+1)n$-flawed in distance and $n \le (m+1)n$,}\fixnote{fix:11.2-proof}{Here $rep(\mathscr{T}) \ge 2(m+1)n + 8 > (m+1)n$. With the strict bound on $dist(\Gamma)$, ``not $(m+1)n$-flawed in distance'' gives $d(r_1^*, r_2^*) > (m+1)n$ for all distinct poles $r_1^*, r_2^*$, as in the note to the definition of ``flawed on $S$'' on page 357.} $rep(\mathscr{T}) > n$ and $d(r^*_1, r^*_2) > n$ for every two poles $r^*_1, r^*_2$.) Let us choose $p$ maximum with $0 \le p \le m$ such that there is a sequence of integers
+\begin{equation*}
+0 = b_0 < a_1 < b_1 < a_2 < \cdots < b_p < k + 1
+\end{equation*}
+satisfying
+
+\hspace*{12pt}$\bullet$ $b_0 \ll b_1 \ll \cdots \ll b_p \ll k + 1$,
+
+\hspace*{12pt}$\bullet$ $b_{i-1} \not\ll a_i$ for $1 \le i \le p$,
+
+\hspace*{12pt}$\bullet$ $\phi(e_{b_i}) \ge \omega_i$ for $1 \le i \le p$,
+
+\hspace*{12pt}$\bullet$ for $1 \le i \le p$ there is no $j$ with $a_i < j < b_i$ such that $\phi(e_j) \ge \omega_i$.

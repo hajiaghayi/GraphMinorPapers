@@ -1,0 +1,125 @@
+%% Shared preamble of the corrected copies of Graph Minors I-XXII (GMnn/GMnn.tex).
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[normalem]{ulem}
+\usepackage{cancel}
+%% Links (to the notes and to web pages) in one dark green, distinct from the blue of inserted
+%% text and the red of removed text.
+\definecolor{linkcolor}{rgb}{0.0,0.36,0.18}
+\usepackage[colorlinks,linkcolor=linkcolor,urlcolor=linkcolor,citecolor=linkcolor,
+  hyperfootnotes=false]{hyperref}
+
+%% ---- Pages of the printed paper ----
+%% The copies use a plain style of their own; only the text follows the print. The source of
+%% each paper is kept in one file per printed page, parts/pNNN.tex, which begins with
+%% \origpage{N}{head}. It prints a small marker [p. N] at the place where printed page N
+%% begins, with no page break, so that readers can find the places cited by page. The second
+%% argument (the journal's running head) is ignored. An empty N prints nothing.
+%% If the page continues the paragraph of the page before (the part file then begins with
+%% \noindent or with a display \begin{...}), the marker goes into that paragraph. Otherwise
+%% the paragraph is ended and the marker is put at the start of the next paragraph.
+\makeatletter
+\newcommand{\origpagemark}[1]{{\footnotesize\textcolor{gray}{[p.\,#1]}}}
+\newif\if@origpending
+\newcommand{\origpage}[2]{\def\@origpagenum{#1}%
+  \ifx\@origpagenum\@empty\let\@orignext\relax
+  \else\ifhmode\let\@orignext\@origpage@peek\else\let\@orignext\@origpage@defer\fi\fi
+  \@orignext}
+\def\@origpage@peek{\@ifnextchar\noindent{\@origpage@here}%
+  {\@ifnextchar\begin{\@origpage@here}{\par\@origpage@defer}}}
+\def\@origpage@here{\unskip\ \origpagemark{\@origpagenum}\ \ignorespaces}
+\def\@origpage@defer{\global\@origpendingtrue\global\let\@origpendnum\@origpagenum
+  \global\everypar{\@origpage@flush}}
+\def\@origpage@flush{\if@origpending\global\@origpendingfalse\global\everypar{}%
+  \origpagemark{\@origpendnum}\ \fi}
+\makeatother
+
+%% ---- Corrections ----
+\definecolor{fixcolor}{rgb}{0.0,0.25,0.75}
+\definecolor{delcolor}{rgb}{0.8,0.0,0.0}
+%% inserted text (works in text and in math)
+\newcommand{\fix}[1]{{\color{fixcolor}#1}}
+%% removed text, struck through (text mode; inline math inside is allowed)
+\newcommand{\del}[1]{\textcolor{delcolor}{\sout{#1}}}
+%% removed math, struck through (math mode)
+\newcommand{\delm}[1]{\textcolor{delcolor}{\cancel{#1}}}
+%% Notes on the corrections. Each note is marked F1, F2, ... with a counter of its own, so the
+%% paper's footnotes keep their numbers. The note prints the reason at the foot of the page.
+%% \fixnote{key}{reason}: a mark and its note. The key is a label placed at the mark, so that
+%%   the list of corrections on the first page can link to it with \hyperref[key]{...}.
+%% Inside a display or a box, where a footnote cannot be set: \fixmark{key} at the place, and
+%%   \fixnotetext{reason} after the display.
+\makeatletter
+\newcounter{fixfn}
+\newcommand{\fix@anchor}[1]{%
+  \ifmmode\hbox{\hyper@anchorstart{#1}\hyper@anchorend}%
+  \else\Hy@raisedlink{\hyper@anchorstart{#1}\hyper@anchorend}\fi
+  \protected@write\@auxout{}{\string\newlabel{#1}{{F\arabic{fixfn}}{\thepage}{}{#1}{}}}}
+%% Each change has one of five kinds, set in GMnn/kinds.tex by \fixkind{key}{kind}, where kind is
+%% misprint, statement, degenerate, gap or missing. The mark F1, F2, ... is set in the colour of
+%% the kind, the note begins with the name of the kind, and \kindtag{key} prints the name for the
+%% list on the first page.
+\definecolor{kind@misprint}{rgb}{0.42,0.42,0.42}
+\definecolor{kind@statement}{rgb}{0.60,0.00,0.60}
+\definecolor{kind@degenerate}{rgb}{0.85,0.42,0.00}
+\definecolor{kind@gap}{rgb}{0.00,0.50,0.50}
+\definecolor{kind@missing}{rgb}{0.10,0.50,0.10}
+\def\kind@name@misprint{Misprint}
+\def\kind@name@statement{Statement mistake}
+\def\kind@name@degenerate{Degenerate case}
+\def\kind@name@gap{Proof gap}
+\def\kind@name@missing{Missing proof}
+\def\kind@lname@misprint{misprint}
+\def\kind@lname@statement{statement mistake}
+\def\kind@lname@degenerate{degenerate case}
+\def\kind@lname@gap{proof gap}
+\def\kind@lname@missing{missing proof}
+\newcommand{\fixkind}[2]{\expandafter\gdef\csname fixkind@#1\endcsname{#2}}
+%% \fix@kindof{key}: the kind of key, or fix when none is set (with a line in the log).
+\newcommand{\fix@kindof}[1]{%
+  \ifcsname fixkind@#1\endcsname\csname fixkind@#1\endcsname\else fix\fi}
+\newcommand{\fix@checkkind}[1]{%
+  \ifcsname fixkind@#1\endcsname\else\typeout{FIXKIND MISSING: #1}\fi}
+\definecolor{kind@fix}{rgb}{0.0,0.25,0.75}
+\def\kind@name@fix{}
+\def\kind@lname@fix{}
+%% \kindname{kind}: the name of a kind in its colour, in lower case, for running text.
+\newcommand{\kindname}[1]{\textcolor{kind@#1}{\textbf{\csname kind@lname@#1\endcsname}}}
+%% \kindtag{key}: the name of the kind of key, in its colour, for the list on the first page.
+\newcommand{\kindtag}[1]{\fix@checkkind{#1}%
+  \edef\fix@k{\fix@kindof{#1}}%
+  \ifx\fix@k\fix@fixword\else
+  \textcolor{kind@\fix@k}{\textbf{\sffamily\csname kind@name@\fix@k\endcsname.}}\ \fi}
+\newcommand{\fixmark}[1]{\stepcounter{fixfn}\fix@anchor{#1}\fix@checkkind{#1}%
+  \xdef\fix@lastkind{\fix@kindof{#1}}%
+  \textsuperscript{\textcolor{kind@\fix@lastkind}{\sffamily F\arabic{fixfn}}}}
+\newcommand{\fixnotetext}[1]{%
+  \begingroup\renewcommand{\thefootnote}{\textcolor{kind@\fix@lastkind}{\sffamily F\arabic{fixfn}}}%
+  \footnotetext[\value{fixfn}]{\ifx\fix@lastkind\fix@fixword\else
+    \textcolor{kind@\fix@lastkind}{\textbf{\sffamily\csname kind@name@\fix@lastkind\endcsname.}}\ \fi
+    \textcolor{fixcolor}{#1}}%
+  \endgroup}
+\def\fix@fixword{fix}
+\def\fix@lastkind{fix}
+\newcommand{\fixnote}[2]{\fixmark{#1}\fixnotetext{#2}}
+\makeatother
+
+%% ---- Other macros shared by the copies ----
+%% \slantedineq: slanted inequalities, for a paper that prints them (called in style.tex).
+\newcommand{\slantedineq}{\let\le\leqslant \let\leq\leqslant \let\ge\geqslant \let\geq\geqslant}
+%% A footnote of the paper, with its printed mark (a star unless given): \origfootnote[1]{text}.
+\newcommand{\origfootnote}[2][$*$]{\begingroup\renewcommand{\thefootnote}{#1}\footnotetext{#2}\endgroup}
+%% A figure of the paper: \origfig{file}{width}{caption, or empty}.
+\newcommand{\origfig}[3]{\par\vspace{8pt plus 4pt}{\centering\includegraphics[width=#2]{#1}\par
+  \if\relax\detokenize{#3}\relax\else\vspace{8pt}{\small #3}\par\fi}\vspace{8pt plus 4pt}}
+%% A numbered statement of the paper, such as (2.1), is written as printed: "\stmt (2.1). text".
+%% \stmt only adds a little vertical space before it.
+\newcommand{\stmt}{\par\vspace{5pt plus 2pt minus 2pt}}
+%% space before and after a section heading
+\newcommand{\sectionhead}[1]{\par\vspace{14pt plus 3pt minus 3pt}{\centering #1\par}\vspace{9pt plus 2pt minus 2pt}}
+%% symbols used by the copies that LaTeX lacks
+\providecommand{\nle}{\not\le}
+\providecommand{\nge}{\not\ge}

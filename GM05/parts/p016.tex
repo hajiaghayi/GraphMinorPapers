@@ -1,0 +1,33 @@
+\origpage{107}{GRAPH MINORS. V}
+\noindent then the result is true, since $\theta_5\le \theta_7$ and $2/3\le 1 - \theta_8^{-1}$. We assume then there is no such separation, so that by (6.4) there are $\theta_5$ disjoint connected subgraphs $A_1,..., A_{\theta_5}$ of $G$ each with at least
+\begin{equation*}
+4(3^{\theta_5} - 1)^{-1}|V(G)|/3 = \theta_5\theta_8^{-1}|V(G)|
+\end{equation*}
+vertices. Now by (5.3), $G$ has no $(\theta_5, \theta_6)$-mesh, and so there do not exist $\theta_6$ disjoint connected subgraphs each meeting all of $A_1,..., A_{\theta_5}$. By (3.2), there exists $X\subseteq V(G)$ with $|X|<\alpha(\theta_5, \theta_6)=\theta_7$ such that every connected subgraph of $G$ which meets all of $A_1,..., A_{\theta_5}$ also meets $X$. Thus, for each $v\in V(A_1)$, $X$ separates $\{v\}$ from one of $A_2,..., A_{\theta_5}$, say $A_{i(v)}$.
+
+Choose $V'\subseteq V(A_1)$ with $|V'|\ge \theta_5^{-1}|V(A_1)|$ such that $i(v)$ is the same for all $v\in V'$. Let $i(v)=2$ say, for all $v\in V'$. Then
+\begin{equation*}
+|V'|\ge \theta_5^{-1}|V(A_1)|\ge \theta_8^{-1}|V(G)|.
+\end{equation*}
+Choose a separation $(V_1, V_2)$ of $G$ with $V_1\cap V_2=X$, $V'\subseteq V_1$ and $V(A_2)\subseteq V_2$. Then $|V_1\cap V_2|\le \theta_7$, and
+\begin{align*}
+|V_1 - V_2| &\le |V(G)| - |V(A_2)| \le (1 - \theta_8^{-1})|V(G)| \\
+|V_2 - V_1| &\le |V(G)| - |V'| \le (1 - \theta_8^{-1})|V(G)|.
+\end{align*}
+This completes the proof.
+
+\stmt
+(7.2) \textit{If $G\in \mathcal{F}_\theta$ and $X\subseteq V(G)$ then $G$ has a separation $(V_1, V_2)$ such that $|V_1\cap V_2|\le \theta_7$ and $|(V_1 - V_2)\cap X|, |(V_2 - V_1)\cap X|\le (1 - \theta_8^{-1})|X|$.}
+
+\textit{Proof.} Let $N$ be an integer so large that there is no integer greater than $(1 - \theta_8^{-1})|X|$ and not greater than
+\begin{equation*}
+(1 - \theta_8^{-1})|X| + N^{-1}((1 - \theta_8^{-1})|V(G)| + \theta_7).
+\end{equation*}
+For each $v\in X$, let $N_v$ be a set of $N$ new vertices, and let $G'$ be the graph with vertex set
+\begin{equation*}
+V(G)\cup \bigcup_{v\in X} N_v
+\end{equation*}
+such that $G'\setminus \bigcup_{v\in X} N_v = G$, and for each $v\in X$, every $u\in N_v$ is adjacent in $G'$ to $v$ and to no other vertex. Evidently $G'\in \mathcal{F}_\theta$, and so by (7.1) there is a separation $(V_1', V_2')$ of $G'$ with $|V_1'\cap V_2'|\le \theta_7$ and
+\begin{equation*}
+|V_1' - V_2'|, |V_2' - V_1'| \le (1 - \theta_8^{-1})|V(G')|.
+\end{equation*}

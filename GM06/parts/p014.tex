@@ -1,0 +1,26 @@
+\origpage{128}{ROBERTSON AND SEYMOUR}
+\noindent \textit{linkage}. If $\mathcal{L}$ is a linkage then clearly $\theta(P)$ is constant for $P \in \mathcal{L}$, and we denote this common value by $\theta(\mathcal{L})$.
+
+Throughout this section, $G$ is a graph, properly drawn in $\Sigma$ with
+\begin{equation*}
+V(G) \cap bd(\Sigma) = M_1 \cup M_2.
+\end{equation*}
+A linkage in $G$ is a linkage $\mathcal{L}$ every member of which is a subgraph of $G$. If $\theta$ is a real number, we say that $\theta$ is feasible in $G$ if there is a linkage $\mathcal{L}$ in $G$ with $\theta(\mathcal{L}) = \theta$. The problem we are concerned with in this section is, given a number $\theta$ and a graph $G$, is $\theta$ feasible in $G$? Evidently the results of Section 4 serve to reduce the general ROUTED FOREST CONTAINMENT problem on the cylinder to this problem.
+
+The best approach to the problem of deciding if any given $\theta$ is feasible in $G$ appears to be to consider the whole range of feasible values of $\theta$. We shall see that they form an interval (meaning that if $\theta_1 \le \theta_2 \le \theta_3$ and $\theta_1$, $\theta_3$ are feasible then so is $\theta_2$ provided that $k\theta_2$ is integral); and we are able to find the endpoints of the interval efficiently. But any given $\theta$ with $k\theta$ integral is feasible if and only if it lies between the endpoints, and so our original problem is solved. As a bonus the algorithm is easily adapted to construct a linkage $\mathcal{L}$ in $G$ with $\theta(\mathcal{L}) = \theta$ when one exists.
+
+Thus we turn to the following problem: given a linkage $\mathcal{L}$ in $G$, to determine if $\theta(\mathcal{L}) + 1/k$ is feasible in $G$. Let $\mathcal{L} = \{P_1, \dots, P_k\}$, where for $1 \le i \le k$ the initial vertex of $P_i$ is
+\begin{equation*}
+s_i = \left(1, \frac{2i}{k}\pi\right).
+\end{equation*}
+For $1 \le i \le k$, let $\Sigma_i$ be the component of
+\begin{equation*}
+\Sigma - (P_1 \cup \cdots \cup P_k)
+\end{equation*}
+which contains the point
+\begin{equation*}
+\left(1, \frac{2i+1}{k}\pi\right)
+\end{equation*}
+and let $R_i$ be the region of $G$ containing the same point. A separation of $G$ is a pair $(G_1, G_2)$ of subgraphs of $G$ with $V(G_1) \cup V(G_2) = V(G)$, $E(G_1) \cup E(G_2) = E(G)$, and $E(G_1) \cap E(G_2) = \emptyset$. Throughout the following, subscripts should be read modulo $k$, so that $P_0$, for example, means $P_k$. We use the following four reductions.
+
+\textit{Reduction 1. Delete any edge which for some $i$ is incident with $s_i$ and contained in $\Sigma_{i-1}$.} \fix{When $k=1$, the edge must moreover leave $s_1$ on the side of the strip that precedes $s_1$: in the universal cover of the annulus, some connected lift of the edge lies in the lift of the strip that precedes the chosen lift of $s_1$ and is incident with that lift of $s_1$.}\fixnote{fix:5-reduction1}{For one path the complement of $P_1$ is a single strip, so the printed condition forgets on which side of $P_1$ the edge leaves $s_1$. Take two arcs $P$ and $B$ with the same ends, where $B$ turns once around the annulus, and the linkage $\{P\}$. The printed Reduction 1 may delete $B$. Afterwards a radial helix misses the drawing and has potential $0$, while before the deletion $B$ is a linkage of winding $1$, so by (5.2) every helix has potential at least $1$. So (5.5) fails for the printed reduction, and so does (5.6), since winding $1$ is feasible before the deletion and not after. The added condition keeps the side. For $k\ge 2$ it agrees with the printed one.}

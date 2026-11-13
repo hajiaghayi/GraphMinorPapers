@@ -1,0 +1,24 @@
+\origpage{97}{N. Robertson, P. Seymour / Journal of Combinatorial Theory, Series B 89 (2003) 77--108}
+\noindent is a rooted location. Since $\bar{\pi}(C_j) = \bar{\pi}(G_j)$ we deduce that $V(G_i) \cap V(G_j) \subseteq \bar{\pi}(G_j)$ as required. Secondly, let $e \in E(G_i) \cap E(G_j)$. If $e \in E(G)$ then $e \in E(C_i) \cap E(C_j) = \emptyset$, which is impossible. Thus $e = e(A)$ for some $A \in \mathscr{L}^*$. Since $e \in E(G_i)$ it follows that $A \in \mathscr{L}_i$, and similarly $A \in \mathscr{L}_j$; but $\mathscr{L}_i \cap \mathscr{L}_j = \emptyset$, a contradiction. Thus $E(G_i) \cap E(G_j) = \emptyset$, as required. This proves that $G_i \subseteq G^* \setminus G_j$. Suppose that $G_i = G_j$. Then $E(G_i) = \emptyset$, and so $\mathscr{L}_i = \emptyset$ and $G_i = C_i$; and similarly $G_j = C_j$. Consequently $C_i = C_j$, a contradiction. Thus $G_i \ne G_j$, and (4) follows.
+
+Let $\mathscr{L}' = \{G_1, \dots, G_k\}$.
+
+\hspace*{12pt}(5) $M(G, \mathscr{L}) = M(G^*, \mathscr{L}')$.
+
+\textbf{Subproof.} If $k = 0$ then $\mathscr{L} = \emptyset$ and $\mathscr{L}' = \emptyset$; and $\mathscr{L}^* = \emptyset$, since $\mathscr{L}^{*-}$ is an enlargement of $\mathscr{L}^-$. Hence $G^* = G$, and $M(G, \mathscr{L}) = G^- = G^{*-} = M(G^*, \mathscr{L}')$ as claimed. We may assume then that $k \ne 0$. Hence $M(G, \mathscr{L}) = D_1 \cap \dots \cap D_k$ and $M(G^*, \mathscr{L}') = \cap ((G^* \setminus G_i)^- : 1 \le i \le k)$. If $A \in \mathscr{L}^*$, then $e(A) \notin E(M(G^*, \mathscr{L}'))$, because $e(A) \in E(G_i)$ and hence $e(A) \notin E(G^* \setminus G_i)$ for some $i$ ($1 \le i \le k$), namely, the value of $i$ such that $A \in \mathscr{L}_i$. Since $M(G^*, \mathscr{L}')$ is a subhypergraph of $G^{*-}$ and $e(A) \notin E(M(G^*, \mathscr{L}'))$ for each $A \in \mathscr{L}^*$, it follows that $M(G^*, \mathscr{L}')$ is a subhypergraph of $G^-$. But also $M(G, \mathscr{L})$ is a subhypergraph of $G^-$, and therefore to show that $M(G, \mathscr{L}) = M(G^*, \mathscr{L}')$ it suffices to show that $M(G, \mathscr{L})$ and $M(G^*, \mathscr{L}')$ have the same vertex- and edge-sets. Let $v \in V(G)$. Then from 5.4 applied to $(P|C_i, \mathscr{L}_i)$, we have:
+\begin{align*}
+v \in V(M(G, \mathscr{L})) &\Leftrightarrow v \notin V(C_i) \setminus \bar{\pi}(C_i) \quad \text{for } 1 \le i \le k \\
+&\Leftrightarrow v \notin V(G_i) \setminus \bar{\pi}(G_i) \quad \text{and} \quad v \notin V(A) \setminus \bar{\pi}(A) \text{ for } 1 \le i \le k \\
+&\phantom{\Leftrightarrow} \quad \text{and for all } A \in \mathscr{L}_i \\
+&\Leftrightarrow v \notin V(A) \setminus \bar{\pi} \quad \text{for all } A \in \mathscr{L}^* \quad \text{and} \quad v \notin V(G_i) \setminus \bar{\pi}(G_i) \\
+&\phantom{\Leftrightarrow} \quad \text{for } 1 \le i \le k \\
+&\Leftrightarrow v \in V(G^*) \quad \text{and} \quad v \notin V(G_i) \setminus \bar{\pi}(G_i) \text{ for } 1 \le i \le k \\
+&\Leftrightarrow v \in V(M(G^*, \mathscr{L}')).
+\end{align*}
+Thus $V(M(G, \mathscr{L})) = V(M(G^*, \mathscr{L}'))$, and a similar (somewhat easier) proof shows that $E(M(G, \mathscr{L})) = E(M(G^*, \mathscr{L}'))$. This proves (5).
+
+Let $P' = (G', \mu', \Delta', \phi')$ be the heart of the partial $\Omega$-place $(P^*, \mathscr{L}')$.
+
+\hspace*{12pt}(6) $P'$ is the heart of $(P, \mathscr{L})$.
+
+\textbf{Subproof.} Since $\pi(G_h) = \pi(C_h)$ for $1 \le h \le k$, it follows from (5) that $(P, \mathscr{L})$ has heart $(G', \mu'', \Delta'', \phi'')$ for some $\mu'', \Delta'', \phi''$. We claim that $\mu' = \mu''$, $\phi' = \phi''$, and $\Delta' = \Delta''$. Let the edges of $G'$ which are not edges of $G$ be $e_1, \dots, e_k$, numbered in the natural

@@ -1,0 +1,22 @@
+\origpage{356}{N. Robertson, P.D. Seymour / Journal of Combinatorial Theory, Series B 92 (2004) 325--357}
+\noindent $K_X\}$ where $X$ is the set of ends of $e$, and $\phi(e) = 0$. Then $P_i$ is a free $\Omega$-patchwork. The hypotheses of 10.4 are satisfied by the sequence $P_i$ $(i = 2, 3, \dots)$ because no $sk(G_i')$ has a minor isomorphic to $K_p$. Thus there exist $j > i \ge 2$ such that $P_i$ is simulated in $P_j$. By the discussion in Section 7 of \del{[2]}\fix{[1]}\fixnote{fix:10.5-proof}{The reference is wrong: [2] is Graph Minors X, whose Section 7 does not discuss patchworks. The discussion that relates simulations of free graph patchworks to minors is in Section 7 of Graph Minors IV, which is [1].}, it follows that $G_i$ is isomorphic to a minor of $G_j$, as required. $\square$
+
+\sectionhead{11. A refinement}
+
+The reader will see that we threw away a great deal in the proof of 10.4 and 10.5. If we repeat essentially the same argument a little more conservatively, we can obtain a stronger result which will be of use in the proof of Nash--Williams' ``immersions'' conjecture. That is our next objective.
+
+\textbf{11.1.} \textit{For every} $p \ge 0$, \textit{there exist} $\theta > 0$ \textit{and a well-behaved set of patchworks} $\mathcal{F}$ \textit{with the following property. Let} $P = (G, \mu, \Delta)$ \textit{be a rootless free patchwork, and let} $\mathcal{T}$ \textit{be a tangle in} $G$ \textit{of order} $\ge \theta$, \textit{controlling no} $K_p$\textit{-minor of} $sk(G^-)$. \textit{Then there is a fine rooted location} $\mathcal{L}$ \textit{in} $G$ \textit{such that}
+
+\hspace*{12pt}$\bullet$ $(P, \mathcal{L})$ \textit{has a heart in} $\mathcal{F}$, \textit{and}
+
+\hspace*{12pt}$\bullet$ $\mathcal{L}$ $\theta$\textit{-isolates} $\mathcal{T}$ \textit{for every edge-based tie-breaker of} $G$.
+
+\textit{Proof.} Take $\theta_1$ and $\mathcal{S}$ such that 10.3 holds (with $H = K_p$ and $\theta$ replaced by $\theta_1$). Let $\mathcal{F}_1$ be the set of all patchworks which are $(\Sigma, \rho)$-hulled for some $(\Sigma, \rho) \in \mathcal{S}$. Since $\mathcal{S}$ is finite, $\mathcal{F}$ is well-behaved by 9.1. Let $\mathcal{F}_2$ be related to $\mathcal{F}_1$ as $\mathcal{F}'$ is related to $\mathcal{F}$ in 7.2 (with $\theta$ replaced by $\theta_1$). Let $\mathcal{F}$ be related to $\mathcal{F}_2$ as $\mathcal{F}'$ is related to $\mathcal{F}$ in 5.6, with $\theta$ replaced by $\theta_1 + 1$. Let $\theta = (\theta_1 + 1)^2$.
+
+We claim that $\theta, \mathcal{F}$ satisfy the theorem. For let $P = (G, \mu, \Delta)$ be a rootless free patchwork, and let $\mathcal{T}$ be a tangle in $G$ of order $\ge \theta$, controlling no $K_p$-minor of $sk(G^-)$. From 10.3 applied to the set $\mathcal{T}_1$ of all $(A, B) \in \mathcal{T}$ of order $< \theta_1$, and 10.2, we deduce that there exists $W \subseteq V(G)$ with $|W| < \theta_1$ and a fine rooted location $\mathcal{L}_1$ in $G/W$ such that $(P/W, \mathcal{L}_1)$ has a heart in $\mathcal{F}_1$ and $\mathcal{L}_1$ is linked to $\mathcal{T}_1/W$.
+
+By 7.2 it follows that there is a fine rooted location $\mathcal{L}_2$ in $G$ such that $W \subseteq \bar{\pi}(A)$ for all $A \in \mathcal{L}_2$, $\mathcal{L}_2/W$ is linked to $\mathcal{T}_1/W$ and $(P, \mathcal{L}_2)$ has a heart in $\mathcal{F}_2$. In particular, $\mathcal{L}_2$ has order $< \theta_1$, and $\mathcal{L}_2/W$ is linked to $\mathcal{T}/W$.
+
+Choose $f \in E(G)$ and let $\lambda$ be a tie-breaker defined by $f$. It follows that $\mathcal{L}_2$ $\theta_1$-isolates (and hence $(\theta_1 + 1)$-isolates) $\mathcal{T}$ modulo $W \cup \{f\}$, by 6.2. By 5.6, there is a fine rooted location $\mathcal{L}_3$ in $G$ such that $\mathcal{L}_3$ $(\theta_1 + 1)^2$-isolates $\mathcal{T}$ and $(P, \mathcal{L}_3)$ has a heart in $\mathcal{F}$, as required. $\square$
+
+\textbf{11.2.} \textit{Let} $\Omega$ \textit{be a well-quasi-order, let} $\mathcal{F}$ \textit{be a well-behaved set of partial} $\Omega$\textit{-patchworks, and let} $\theta \ge 1$ \textit{and} $p \ge 0$. \textit{Let} $P_i = (G_i, \mu_i, \Delta_i, \phi_i)$ $(i = 1, 2, \dots)$ \textit{be a countable sequence of free rootless} $\Omega$\textit{-patchworks. For each} $i \ge 1$, \textit{let} $\lambda_i$ \textit{be an edge-based tie-breaker in} $G_i$.

@@ -1,0 +1,25 @@
+\origpage{168}{ROBERTSON AND SEYMOUR}
+\sectionhead{5. \textsc{Branch-width} \textsc{And} \textsc{Tree-width}}
+
+A tree-decomposition of a hypergraph $G$ is a pair $(T, \tau)$, where $T$ is a tree and for $t \in V(T)$, $\tau(t)$ is a subhypergraph of $G$ with the following properties:
+
+\hspace*{12pt}(i) $\bigcup (\tau(t) : t \in V(T)) = G$
+
+\hspace*{12pt}(ii) for distinct $t, t' \in V(T)$, $E(\tau(t) \cap \tau(t')) = \emptyset$
+
+\hspace*{12pt}(iii) for $t, t', t'' \in V(T)$, if $t'$ is on the path of $T$ between $t$ and $t''$ then $\tau(t) \cap \tau(t'') \subseteq \tau(t')$.
+
+The width of such a tree-decomposition is the maximum of $(|V(\tau(t))| - 1)$, taken over all $t \in V(T)$, and the tree-width $\omega(G)$ of $G$ is the minimum width of all tree-decomposition of $G$. (Thus, $\omega(G) \ge 0$ unless $V(G) = \emptyset$, when $\omega(G) = -1$.)
+
+Let us compare tree-width and branch-width.
+
+\stmt
+(5.1) \textit{For any hypergraph $G$, $\max(\beta(G), \gamma(G)) \le \omega(G) + 1 \le \max(\lfloor(3/2) \beta(G)\rfloor, \gamma(G), 1)$.}
+
+\textit{Proof.} If $\gamma(G) = 0$ then $\beta(G) = 0$ and $\omega(G) \le 0$, and the result holds. We assume then that $\gamma(G) > 0$, and so $V(G) \ne \emptyset$ and $E(G) \ne \emptyset$. If $|E(G)| = 1$ then $\beta(G) = 0$ and $\omega(G) = \gamma(G) - 1$, and again the result holds. Thus we may assume that $|E(G)| \ge 2$. Since the removal of isolated vertices does not change any of $\beta$, $\gamma$, $\omega$, we may assume that there are no isolated vertices in $G$. We show the second inequality first.
+
+Let $(T, \tau)$ be a branch-decomposition of $G$ of width $\beta(G)$. For each $t \in V(T)$ we define a subhypergraph $\sigma(t)$ of $G$ as follows: (i) if $t$ is a leaf of $T$, let $\sigma(t)$ be the hypergraph consisting of $\tau(t)$ and its ends (ii) if $t$ is not a leaf of $T$, let $U_t$ consist of those vertices $v$ of $G$ for which there are edges $f, g$ of $G$, both incident with $v$, such that $t$ lies on the path of $T$ between $\tau^{-1}(f)$ and $\tau^{-1}(g)$. Let $V(\sigma(t)) = U_t$, $E(\sigma(t)) = \emptyset$.
+
+It is easy to verify that $(T, \sigma)$ is a tree-decomposition of $G$. Let us bound its width. If $t$ is a leaf of $T$, $|V(\sigma(t))| \le \gamma(G)$. If $t$ is not a leaf of $T$, let $e_1, e_2, e_3$ be the three edges of $T$ incident with $t$. For any $v \in U_t$, $v$ contributes to the order of at least two of $e_1, e_2, e_3$, and so $2 |U_t| \le 3\beta(G)$. Thus, this tree-decomposition has width $\le \max(\gamma(G), (3/2) \beta(G)) - 1$, and so $\omega(G) + 1 \le \max(\gamma(G), (3/2) \beta(G))$, as required.
+
+Now we show the first inequality. Clearly $\gamma(G) \le \omega(G) + 1$. Let $(T, \tau)$ be a tree-decomposition of $G$ of width $\omega(G)$.

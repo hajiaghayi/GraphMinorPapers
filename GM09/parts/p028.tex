@@ -1,0 +1,106 @@
+\origpage{67}{GRAPH MINORS. IX}
+\noindent from $V(C_j)$ to $Y$ which avoids $Z$. Since $|Z \cap V(C_j)| \le 1$, there is a path $P_3$ of $C_j$ from a vertex of $P_1$ to a vertex of $P_2$ which avoids $Z$. Then $P_1 \cup P_2 \cup P_3 \subseteq G'$ is connected and has a vertex in $X$ and a vertex in $Y$. Thus there is an $X \to Y$ path $P \subseteq P_1 \cup P_2 \cup P_3$; and $P$ avoids $Z$ since $P_1, P_2, P_3$ each avoid $Z$. This completes the proof. $\square$
+
+\sectionhead{11. Coping with Connectivity Failure}
+
+The object of this section is to prove a version of our main theorem (6.1) which does not require the hypothesis that $(G, \Omega)$ be 3-connected and internally 4-connected. To achieve this we shall need several lemmas.
+
+Let $(\Sigma, \Gamma, \Delta, \Delta_0)$ be a presentation of a rural neighborhood $(G, \Omega, \Omega_0)$, where $G$ is simple. For any path $P$ of $G$ with distinct ends in $\bar{\Omega}_0$ and with no internal vertex in $\bar{\Omega}_0$ there is a unique closed disc $\Delta(P) \subseteq \Delta$ bounded by the image of $P$ under $\Gamma$ and a portion of $bd(\Delta_0)$ such that $\Delta_0 \nsubseteq \Delta(P)$. A \textit{prominence} is a path $P$ of $G$ with the following properties:
+
+\hspace*{12pt}(i) the ends of $P$ are distinct and are both in $\bar{\Omega}_0$
+
+\hspace*{12pt}(ii) no internal vertex of $P$ is in $\bar{\Omega}_0$
+
+\hspace*{12pt}(iii) $P$ has at most two edges
+
+\hspace*{12pt}(iv) subject to (i), (ii), and (iii), $\Delta(P)$ is maximal.
+
+If $P$ is a prominence, $\Delta(P)$ is a \textit{lawn}.
+
+\stmt
+(11.1) \textit{If $L, L'$ are distinct lawns then every element of $L \cap L'$ is the image under $\Gamma$ of a common end of the two corresponding prominences.}
+
+The proof is clear, although tedious to write out\del{, and we omit it}\fix{, and we give it now}.
+
+\fix{The definition of the discs $\Delta(P)$ presupposes that the drawing meets $bd(\Delta_0)$ only in
+the vertices of $\bar{\Omega}_0$, and we assume this. Then each path $P$ satisfying (i), (ii) and (iii)
+is drawn as an arc with both ends in $bd(\Delta_0)$ and no other point in $\Delta_0$, and we call it
+an \textit{ear}. The set $\Delta_0 \cup \Delta(P)$ is a closed disc, whose boundary consists of the
+drawing of $P$ and the portion of $bd(\Delta_0)$ not in $\Delta(P)$, and the interior of $\Delta(P)$
+misses $\Delta_0$. We use three facts about ears, and we prove them first. We use several times
+that a connected set that misses the boundary of a closed disc lies in its interior or outside it.
+
+\hspace*{12pt}(a) \textit{If the drawing of an ear $P'$, except its ends, lies in $\Delta(P)$ for an
+ear $P$, then $\Delta(P') \subseteq \Delta(P)$.}
+
+For the boundary of the closed disc $\Delta_0 \cup \Delta(P')$ lies in $\Delta_0 \cup \Delta(P)$, and
+so, in the plane, $\Delta_0 \cup \Delta(P') \subseteq \Delta_0 \cup \Delta(P)$. Since the interior
+of $\Delta(P')$ misses $\Delta_0$, it lies in $\Delta(P)$, and so does its closure $\Delta(P')$.
+
+\hspace*{12pt}(b) \textit{If the drawings of two ears $P, P'$ meet only in common ends, then one of
+$\Delta(P), \Delta(P')$ includes the other, or they meet only in images of common ends of $P$ and
+$P'$.}
+
+Suppose that neither disc includes the other. The drawing of $P'$ without its ends is connected and
+misses the boundary of $\Delta_0 \cup \Delta(P)$. If it lay in the interior, it would lie in
+$\Delta(P)$, since it misses $\Delta_0$, and then $\Delta(P') \subseteq \Delta(P)$ by (a). So it lies outside
+$\Delta_0 \cup \Delta(P)$. Exchanging $P$ and $P'$, the drawing of $P$ without its ends lies outside
+$\Delta_0 \cup \Delta(P')$. The interior of $\Delta(P)$ is connected and misses the boundary of
+$\Delta_0 \cup \Delta(P')$. It does not lie in $\Delta(P')$, since otherwise $\Delta(P)$, and so the
+drawing of $P$, would lie in $\Delta(P')$. Hence the interior of $\Delta(P)$ misses $\Delta(P')$, and
+exchanging $P$ and $P'$, the interior of $\Delta(P')$ misses $\Delta(P)$. Now let $z \in \Delta(P) \cap
+\Delta(P')$. By what we have shown, $z$ is not in the drawing of $P$ or of $P'$ except as an end, and
+so $z \in bd(\Delta_0)$. Suppose that $z$ is not the image of an end of $P'$. Then $z$ is in the
+interior of the closed disc $\Delta_0 \cup \Delta(P')$, and so the points near $z$ outside $\Delta_0$
+lie in $\Delta(P')$. But $z$ is a limit of points of the interior of $\Delta(P)$, which are outside
+$\Delta_0$ and not in $\Delta(P')$, a contradiction. So $z$ is the image of an end of $P'$, and in the
+same way of an end of $P$.
+
+\hspace*{12pt}(c) \textit{Let three arcs join a point $m \notin \Delta_0$ to distinct points
+$x, y, z$ of $bd(\Delta_0)$, meeting each other only in $m$, and meeting $\Delta_0$ only in $x$, $y$,
+$z$ respectively. Then either the arc to $z$ lies in the disc cut off by the arcs to $x$ and $y$, or
+this disc is properly included in the disc cut off by the arcs to $x$ and $z$, or in the disc cut off
+by the arcs to $y$ and $z$.}
+
+Here the disc cut off by two of the arcs is the closed disc bounded by their union and a portion of
+$bd(\Delta_0)$ that does not include $\Delta_0$, as for ears. Let $D$ be the disc cut off by the arcs
+to $x$ and $y$, and let $B$ be the portion of $bd(\Delta_0)$ between $x$ and $y$ not in $D$. If
+$z \notin B$, then the arc to $z$ without its ends is connected and misses the boundary of the
+closed disc $\Delta_0 \cup D$, and near $z$ it is in $D$, so it lies in $D$. Now let $z \in B$. Then
+the arc to $z$ without its ends lies outside $\Delta_0 \cup D$, by the same fact, since near $z$
+it is outside $\Delta_0 \cup D$, and it splits the closure of the
+complement of $\Delta_0 \cup D$, in the plane with a point at infinity added, into two closed discs.
+One of them, $D_1$, is bounded by the arcs to $x$ and $z$ and the portion of $B$ between $x$ and $z$,
+and the other by the arcs to $y$ and $z$ and the rest of $B$. Suppose that $D_1$ does not contain the
+point at infinity. Then $D \cup D_1$ is a closed disc in the plane bounded by the arcs to $y$ and
+$z$ and a portion of $bd(\Delta_0)$, and it does not include $\Delta_0$. So it is the disc cut off by
+the arcs to $y$ and $z$, and it properly includes $D$, since $D_1$ has points outside $D$. In the
+other case, the same argument with $x$ and $y$ exchanged shows that $D$ is properly included in the disc cut off by the arcs to $x$ and
+$z$.
+
+Now let $P, P'$ be prominences with distinct lawns $L = \Delta(P)$ and $L' = \Delta(P')$. First we
+show that $P$ and $P'$ have no common middle vertex. Suppose that $m$ is the middle vertex of both,
+and let $x, y$ be the ends of $P$. We claim that every edge $g$ of $G$ joining $m$ to a vertex
+$z \in \bar{\Omega}_0$ is drawn in $L$. If $z \in \{x, y\}$ then $g$ is an edge of $P$, since $G$ is
+simple. Otherwise the two paths formed by $g$ and the edge of $P$ at $x$, and by $g$ and the edge of
+$P$ at $y$, satisfy (i), (ii) and (iii). By (c), either $g$ is drawn in $L$, or $L$ is properly
+included in $\Delta(Q)$ for one of these two paths $Q$, which is impossible by (iv) for $P$. This
+proves the claim. Both edges of $P'$ join $m$ to vertices in $\bar{\Omega}_0$, and so by the claim
+$P'$ is drawn in $L$. By (a), $L' \subseteq L$, and by (iv) for $P'$, $L' = L$, a contradiction.
+
+So $P$ and $P'$ have no common middle vertex, and $P \ne P'$ since $L \ne L'$. Hence their drawings
+meet only in common ends. For a common vertex that is not an end of one of them would be its middle
+vertex, and so it would not be in $\bar{\Omega}_0$, and it would be the middle vertex of the other
+too. And a common edge has an end that is the middle vertex of one of them, unless both $P$ and $P'$
+consist of this edge alone. Now by (b), one of $L, L'$ includes the other, or they meet only in
+images of common ends of $P$ and $P'$. In the first case, if say $L \subseteq L'$, then $L = L'$ by
+(iv) for $P$, a contradiction. So every element of $L \cap L'$ is the image of a common end of $P$
+and $P'$.\fixnote{fix:11.1-proof-added}{The paper omits the proof of (11.1). The argument above
+is the one used in the formalization.}}
+
+It follows that the union of $\Delta_0$ with all lawns is a closed disc; we call its boundary the \textit{wall}. Let $e \in E(G)$; we call it an \textit{internal}, \textit{external}, or \textit{wall edge} if the arc which represents $e$ in the drawing $\Gamma$ is a subset of the interior of the disc bounded by the wall, the complement in $\Delta$ of this disc, or the wall itself, respectively. Every edge of $G$ is of one of these three types.
+
+\stmt
+(11.2) \textit{If $e$ is an external edge of $G$ with both ends drawn in the wall, then its ends are both middle vertices of prominences.}
+
+\textit{Proof.} Let $P$ be the path formed by $e$. If $\Delta(P)$ were defined, it would be a subset of a lawn, which is false since $e$ is external. Thus not both ends of $P$ are in $\bar{\Omega}_0$, and we may choose a prominence $P_1$ such that its middle vertex $v_1$ is an end of $e$. Let $v_2$ be the other end of $e$. Since $G$ is simple and $e$ is not a wall edge, $v_2$ is not an end of $P_1$. Let $e_1$ be an edge of $P_1$, and

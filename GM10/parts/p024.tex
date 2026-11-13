@@ -1,0 +1,30 @@
+\origpage{176}{ROBERTSON AND SEYMOUR}
+Now $V(A'_1 \cup C') = V(C') \cup (V(A'_1) - V(C'))$, and so
+\begin{align*}
+|V((A'_1 &\cup C') \cap (B'_1 \cap D))| \\
+&= |V(B'_1 \cap C' \cap D)| + |(V(A'_1) - V(C')) \cap V(B'_1 \cap D)|.
+\end{align*}
+Moreover, since $V(A'_1 \cap B'_1) - V(C') = (V(A'_1) - V(C')) \cap V(B'_1 \cap D)$, it follows that
+\begin{equation*}
+|V(A'_1 \cap B'_1)| = |V(B'_1 \cap C' \cap A'_1)| + |(V(A'_1) - V(C')) \cap V(B'_1 \cap D)|.
+\end{equation*}
+We deduce that $(A'_1 \cup C', B'_1 \cap D)$ has order at most that of $(A'_1, B'_1)$ and hence $<\theta$. It follows that $((A'_1 \cap D) \cup C, B'_1 \cap D)$ is a separation of $G$ of order $<\theta$, and so $\mathscr{T}$ contains one of $(B'_1 \cap D, (A'_1 \cap D) \cup C)$, $((A'_1 \cap D) \cup C, B'_1 \cap D)$. The first is impossible by (2.3), since $(C, D), (A_1, B_1) \in \mathscr{T}$ and
+\begin{equation*}
+E((B'_1 \cap D) \cup C \cup A_1) = E(G).
+\end{equation*}
+The second is impossible by (2.3), since $(A_2, B_2), (A_3, B_3) \in \mathscr{T}$ and
+\begin{equation*}
+E((A'_1 \cap D) \cup C \cup A_2 \cup A_3) = E(G).
+\end{equation*}
+This contradiction completes the verification of (4.5) (ii). Thus, from (4.5), we deduce that $\mathscr{T}'$ satisfies the second axiom.
+
+To verify the third axiom, we verify the hypothesis of (2.7). Let $e \in E(G')$ with size $<\theta$, and let $K_e$ be as in (2.7). If $e \in E(D)$, then since $(K_e, G \setminus e) \in \mathscr{T}$ by (2.7) applied to $G$, $\mathscr{T}$, it follows from the definition of $\mathscr{T}'$ that $(K_e, G' \setminus e) \in \mathscr{T}'$. If $e \in E(C')$, then since $(C, D) \in \mathscr{T}$ and $E(C \cap D) = E(K_e \cap D)$, it again follows that $(K_e, G' \setminus e) \in \mathscr{T}'$ from the definition of $\mathscr{T}'$. Thus, from (2.7), we deduce that $\mathscr{T}'$ satisfies the third axiom, as required. $\square$
+
+As an application, we observe
+
+\stmt
+(8.4) \textit{Let} $\mathscr{T}$ \textit{be a tangle of order} $\theta \ge 2$ \textit{in a hypergraph} $G$, \textit{and let} $e \in E(G)$ \textit{with at most one end. Let} $\mathscr{T}'$ \textit{be the set of all separations} $(A', B')$ \textit{of} $G \setminus e$ \textit{of order} $<\theta$ \textit{such that there exists} $(A, B) \in \mathscr{T}$ \textit{with} $E(A \cap (G \setminus e)) = E(A')$. \textit{Then} $\mathscr{T}'$ \textit{is a tangle in} $G \setminus e$ \textit{of order} $\theta$.
+
+\textit{Proof.} Let $C$ be the subhypergraph of $G$ formed by $e$ and its ends and let $C' = C \setminus e$ and $D = G \setminus e$. Then $(C, D) \in \mathscr{T}$ and $(C', D)$ is titanic, as is easily seen, and the result follows from (8.3). $\square$
+
+Thus, if we delete all edges of $G$ with $\le 1$ end, we do not change its tangle number. (This holds even for tangle number $\le 1$, as is easily seen.) (8.4) has the following consequence.

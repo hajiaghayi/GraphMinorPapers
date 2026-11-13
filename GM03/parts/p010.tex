@@ -1,0 +1,24 @@
+\origpage{58}{ROBERTSON AND SEYMOUR}
+Then $L \cup (V(C_j) - \{v\})$ is a subset of $V(S) - Y$, and induces a subgraph of $S$ which contains a path of $S$ between $X$ and $C_s$ avoiding $Y$, as required.
+
+\stmt
+(3.7) \textit{Let $(T, \mathcal{X})$ be a tree-decomposition of $S$, where $\mathcal{X} = (X_t : t \in V(T))$. Then there exist $t_0 \in V(T)$ and $r$ vertex-disjoint paths of $S$, each between $X_{t_0}$ and $C_s$.}
+
+\textit{Proof.} Let the vertex sets of the radial lines of $S$ be $L_1, \dots, L_r$. If some $t \in V(T)$ has $X_t \cap L_i \ne \emptyset$ for all $i$ $(1 \le i \le r)$, the theorem is obviously true. We assume then that for each $t \in V(T)$ there exists $i$ with $1 \le i \le r$ such that $X_t \cap L_i = \emptyset$. From (3.5) there exist $t, t' \in V(T)$, adjacent in $T$, such that $X_t \cap X_{t'}$ separates $L_i$ and $L_{i'}$ for some $i, i'$ with $1 \le i, i' \le r$, and $X_t \cap X_{t'}$ intersects neither of $L_i, L_{i'}$. Clearly $i \ne i'$, and for $1 \le j \le k$ the two paths in $C_j$ from $L_i$ to $L_{i'}$ both meet $X_t \cap X_{t'}$, and so $|X_t \cap V(C_j)| \ge 2$ $(1 \le j \le s)$. The result follows from (3.6).
+
+\stmt
+(3.8) \textit{With $S, C_1, \dots, C_s$ as before, let $V(C_s) = \{u_1, \dots, u_r\}$. Let $H$ be another graph, vertex-disjoint from $S$, and let $v_1, \dots, v_r$ be distinct vertices of $H$. Construct $G$ by making the identifications $u_1 = v_1, \dots, u_r = v_r$. If $G$ has tree-width $\le w$, then $H$ has a tree-decomposition $(T, \mathcal{X})$ where $\mathcal{X} = (X_t : t \in V(T))$ say, of width $\le w$, such that $\{v_1, \dots, v_r\} \subseteq X_{t_0}$ for some $t_0 \in V(T)$.}
+
+\textit{Proof.} Let $(T, \mathcal{X}_1)$ be a tree-decomposition of $G$ of width $\le w$, where $\mathcal{X}_1 = (Y_t : t \in V(T))$ say. Define
+\begin{equation*}
+\mathcal{X}_2 = (Y_t \cap V(S) : t \in V(T)).
+\end{equation*}
+Clearly $(T, \mathcal{X}_2)$ is a tree-decomposition of $S$, and so by (3.7) there exists $t_0 \in V(T)$ and vertex-disjoint paths $P_1, \dots, P_r$ of $S$, each between $Y_{t_0} \cap V(S)$ and $\{u_1, \dots, u_r\}$. Order these so that for $1 \le i \le r$, $u_i$ is the terminal vertex of $P_i$. For $t \in V(T)$, define
+\begin{equation*}
+X_t = (Y_t \cap V(H)) \cup \{v_i : 1 \le i \le r, Y_t \cap V(P_i) \ne \emptyset\}.
+\end{equation*}
+Put $\mathcal{X} = (X_t : t \in V(T))$. We claim that $(T, \mathcal{X})$ is a tree-decomposition of $H$. For suppose that $t, t', t'' \in V(T)$, and $t'$ lies on the path of $T$ between $t$ and $t''$, and suppose that $v \in X_t, X_{t''}$. We must show that $v \in X_{t'}$. Now if $v \ne v_1, \dots, v_r$, then $v \in Y_t \cap Y_{t''} \subseteq Y_{t'}$, and so $v \in X_{t'}$. If $v = v_i$ say, then $Y_t \cap V(P_i) \ne \emptyset$ and $Y_{t''} \cap V(P_i) \ne \emptyset$. But $Y_{t'}$ separates $Y_t$ and $Y_{t''}$ in $G$ by (3.3), and so $Y_{t'} \cap V(P_i) \ne \emptyset$ and again $v \in X_{t'}$. Thus $(T, \mathcal{X})$ is a tree-decomposition of $H$. Clearly it has width $\le w$, and
+\begin{equation*}
+\{v_1, \dots, v_r\} \subseteq X_{t_0},
+\end{equation*}
+as required.

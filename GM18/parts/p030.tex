@@ -1,0 +1,28 @@
+\origpage{106}{N. Robertson, P. Seymour / Journal of Combinatorial Theory, Series B 89 (2003) 77--108}
+\noindent $s$ and its outneighbours. Define $\sigma(s) = \tau_i(s)$, and for each $t \in N(s)$ define $\sigma(t) = \tau_i \times T_i^t$. Let $\mathscr{S}$ be the set of all such pairs $(S, \sigma)$ (for all $i > 0$ and all $s \in V(T_i)$). We see that $\mathscr{S}$ is a set of ``star-decompositions'', in the sense of Section 3 of [2]. We claim that $\mathscr{S}$ is ``good'', in the sense of that paper. We have to check that:
+
+\hspace*{12pt}$\bullet$ $\sigma \times S \in \mathscr{R}$ for each $(S, \sigma) \in \mathscr{S}$; this is clear.
+
+\hspace*{12pt}$\bullet$ There exists $k \ge 0$ such that $|\bar{\pi}(t)| \le k$ for every $(S, \sigma) \in \mathscr{S}$ and every $t \in V(S)$. To see this, observe that since $\delm{\mathscr{C}}\fix{\mathscr{C}^*}$ is well-behaved \fix{(by 6.1, as in (2))}, there exists $k \ge 0$ such that $|\bar{\pi}(G)| \le k$ for every $(G, \mu, \Delta, \phi) \in \delm{\mathscr{C}}\fix{\mathscr{C}^*}$; and since all pieces of each $P_i$ under $(T_i^-, \tau_i)$ belong to $\mathscr{C}$\fix{, so that each $\tau_i(t)$ is a member of $\mathscr{C}$ or a rooting of one, and hence is in $\mathscr{C}^*$}, it follows\fixnote{fix:6.6-proof}{Every member of $\mathscr{C}$ is rootless, so the bound over $\mathscr{C}$ holds with $k = 0$ and says nothing about $\tau_i(t)$ for $t$ other than the root of $T_i$. Such a $\tau_i(t)$ is a rooting of a member of $\mathscr{C}$, with as many roots as the order of the edge of $T_i$ that enters $t$, which may be positive. So the bound must be taken over $\mathscr{C}^*$, the union of $\mathscr{C}$ and the rootings of its members (page 104), which is well-behaved by 6.1. With this change the proof works, and 6.6 holds as printed.} that $|\bar{\pi}(t)| \le k$ for all $i > 0$ and all $t \in V(T_i)$, and so the claim follows.
+
+\hspace*{12pt}$\bullet$ The third condition to be verified is just (2) above, in different language.
+
+Hence we may apply Theorem 3.3 of [2]. We deduce that there exist $j > i \ge 1$ such that $P_i$ is simulated in $P_j$. Hence $\mathscr{C}'$ is well-quasi-ordered by simulation, as required. $\square$
+
+Now we can prove our main result, the following.
+
+\textbf{6.7.} \textit{Let $\Omega$ be a well-quasi-order, let $\mathscr{C}$ be a well-behaved class of rootless partial $\Omega$-patchworks, and let $\theta \ge 1$ be an integer. Let $\mathscr{D}$ be a class of rootless, robust $\Omega$-patchworks and suppose that for each $P \in \mathscr{D}$ there is a tie-breaker $\lambda$ in $\|P\|^-$ such that for every tangle $\mathscr{T}$ in $G^-$ of order $\ge \theta$, there is an $\Omega$-place $(P, \mathscr{L})$ with heart in $\mathscr{C}$ such that $\mathscr{L}^-$ $\theta$-isolates $\mathscr{T}$. Then $\mathscr{D}$ is well-quasi-ordered by simulation.}
+
+\textbf{Proof.} Let $\mathscr{C}'$ be the class of all robust partial $\Omega$-patchworks of tree-width $\le 3\theta + 1$. By 6.2, $\mathscr{C}'$ is well-behaved. Let $\mathscr{C}^*$ be the class of all enlargements of members of $\mathscr{C}$ by $\mathscr{C}'$. By 6.3 it follows that
+
+\hspace*{12pt}(1) \textit{$\mathscr{C}^*$ is well-behaved.}
+
+Now let $P = (G, \mu, \Delta, \phi) \in \mathscr{D}$ be such that $G^-$ has a tangle of order $\ge \frac{4}{3}\theta$. Let $\lambda$ be a tie-breaker in $G^-$, as in the theorem. By 4.4 we deduce that
+
+\hspace*{12pt}(2) \textit{There is a tree-decomposition $(T, \tau)$ of $G^-$ such that}
+
+\textit{(a) $(T, \tau)$ is proper and rotund,} \textit{(b) for each $e \in E(T)$, the separations made by $e$ under $(T, \tau)$ are robust, and} \textit{(c) for each $t \in V(T)$, if $\mathscr{L}_t$ is the location of $t$ in $(T, \tau)$, then there is an $\Omega$-place $(P, \mathscr{L})$ with heart in $\mathscr{C}$, such that $\mathscr{L}_t$ is an enlargement of $\mathscr{L}^-$ by tree-width $\le 3\theta + 1$.}
+
+\hspace*{12pt}(3) \textit{Let $(T, \tau)$ be as in (2) and let $t \in V(T)$. Then every piece of $P$ at $t$ under $(T, \tau)$ is in $\mathscr{C}^*$.}
+
+\textbf{Subproof.} Let $\mathscr{L}_t, \mathscr{L}$ be as in (2)(c), and let $Q$ be a piece of $P$ at $t$. Then $Q = P|\mathscr{L}^*$ for some rooted location $\mathscr{L}^*$ in $G$ with $\mathscr{L}^{*-} = \mathscr{L}_t$. By (2)(c), $\mathscr{L}^{*-}$ is an enlargement of $\mathscr{L}^-$ by tree-width $\le 3\theta + 1$. By 5.5, $Q = P|\mathscr{L}^*$ is an enlargement of $P|\mathscr{L}$ by tree-width $\le 3\theta + 1$; and since $P|\mathscr{L} \in \mathscr{C}$ by hypothesis, it follows that $Q$ is an enlargement

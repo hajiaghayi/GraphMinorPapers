@@ -1,0 +1,20 @@
+\origpage{6}{}
+\hspace*{12pt}(5) $L \subseteq (L \cap A_i) \cup M^* \cup L_j$.
+
+\textit{Subproof.} (4) implies that there is a linkage in $M^* \cup L_j$ with the same pattern as $L_i$. From (2.3), it follows that there is a linkage in $(L \cap A_i) \cup M^* \cup L_j$ with the same pattern as $L$. Since $L$ is vital, we deduce that $L \subseteq (L \cap A_i) \cup M^* \cup L_j$. This proves (5).
+
+\hspace*{12pt}(6) $T = \{1, \dots, k\}$.
+
+\textit{Subproof.} Suppose that $1 \le t \le k$ and $t \notin T$. Then $v_i^t \ne v_j^t$, and $v_i^t$ has degree $0$ or $2$ in $L_i$. Suppose first that $v_i^t$ has degree $0$ in $L_i$. Then $v_j^t$ has degree $0$ in $L_j$ by (2), it has degree $0$ in $M^*$ since $t \notin T$, and is not a vertex of $L \cap A_i$. Consequently, $v_j^t$ has degree $0$ in $(L \cap A_i) \cup M^* \cup L_j$. Since $V(L) \delm{\setminus}\fix{=} V(G)$\fixnote{fix:2.5-claim6}{The reason used is that $L$ is vital, so $V(L) = V(G)$.}, it follows from (5) that $v_j^t$ has degree $0$ in $L$, and so $v_j^t \in Z$, contrary to (2) since $v_i^t \ne v_j^t$. It follows that $v_i^t$ does not have degree $0$ in $L_i$. Now $v_i^t$ has degree $\le 1$ in $M^*$ and is not a vertex of $L_j$, since $v_i^t \ne v_j^t$. Consequently, $v_i^t$ has degree $\le 1$ in $M^* \cup L_j$. But from (5), $L_i \subseteq M^* \cup L_j$, and hence $v_i^t$ has degree $\le 1$ in $L_i$, and hence $t \in T$, a contradiction. This proves (6).
+
+From (6) it follows that $M^* = M$.
+
+\hspace*{12pt}(7) \textit{$M$ is a subgraph of $L$.}
+
+\textit{Subproof.} Let $1 \le t \le k$; we claim that $P^t$ is a subgraph of $L$. If $v_i^t = v_j^t$ this is clear, and so we may assume that $v_i^t \ne v_j^t$. By (2), $v_i^t, v_j^t \notin Z$. Moreover, since $V(A_i) \cap Z = V(A_j) \cap Z$ and the internal vertices of $P^t$ belong to $V(A_j) \setminus V(A_i)$, it follows that no vertex of $P_t$ is a terminal of $L$, and so they all have degree $2$ in $L$. From (6), $v_j^t$ has degree $1$ in $L_j$, but it has degree $2$ in $L$, and so $L$ contains the edge of $P^t$ incident with $v_j^t$. From (5) it follows that $L$ contains both edges of $P^t$ incident with any internal vertex of $P^t$. Consequently $E(P^t) \subseteq E(L)$. This proves (7).
+
+From (5) and (7), $L \cap \delm{B_j \cap A_i}\fix{B_i \cap A_j} \subseteq M^* = M \subseteq L \cap \delm{B_j \cap A_i}\fix{B_i \cap A_j}$. Consequently, $L \cap \delm{B_j \cap A_i}\fix{B_i \cap A_j} = M$, and so $L \cap \delm{B_{i+1} \cap A_i}\fix{B_i \cap A_{i+1}} = M_i$, as required.\fixnote{fix:2.5-end}{The indices are swapped. Here $i < j$, so $B_j \cap A_i \subseteq B_i \cap A_i$, which has no edges, while $M$ is a linkage in $B_i \cap A_j$. The statement of (2.5) asks for $L \cap B_i \cap A_{i+1} = M_i$.} $\square$
+
+Here is a slight strengthening of (2.5).
+
+\textbf{2.6} \textit{For all integers $p, k \ge 0$ there exists $n \ge 0$ with the following property. Let $L$ be a vital $p$-linkage in a graph $G$, and for $1 \le i \le n$ let $(A_i, B_i)$ be a separation of $G$ of order $\le k$, such that}

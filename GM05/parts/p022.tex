@@ -1,0 +1,96 @@
+\origpage{113}{GRAPH MINORS. V}
+\stmt
+(8.11) \textit{If $r$ is a connected open subset of a surface $\Sigma$\fix{, $r$ is not a whole component of $\Sigma$ homeomorphic to a sphere}, and every subset of $r$ homeomorphic to a circle bounds a closed disc in $\Sigma$, then there is an open disc $\Delta \subseteq \Sigma$ with $r \subseteq \Delta$.}\fixnote{fix:8.11}{As printed, (8.11) is false when $r$ is a whole component of $\Sigma$ that is a sphere. Then $r$ is connected and open, and every circle in it bounds a closed disc, but $r$ is not contained in an open disc. The corrected statement excludes exactly this case.}
+
+\fix{The paper assumes (8.11), as it says before (8.9). We prove the corrected
+statement. The set $r$ lies in one component $\Sigma_0$ of $\Sigma$, since it is connected. A
+closed disc whose boundary lies in $\Sigma_0$ lies in $\Sigma_0$, since it is connected, and so the
+hypothesis holds with $\Sigma_0$ in place of $\Sigma$. Thus we may assume that $\Sigma$ is
+connected. If $\Sigma$ is a sphere, then $r \ne \Sigma$, and for any point $p \in \Sigma - r$ the
+set $\Sigma - \{p\}$ is an open disc including $r$. So we may assume that $\Sigma$ is not a sphere.
+Let us call $Z \subseteq \Sigma$ \textit{flat} if every closed curve in $Z$ is null-homotopic in
+$\Sigma$. Then $r$ is flat. For otherwise, by (11.2) of [12] (Graph Minors VII, J. Combin. Theory
+Ser. B 45 (1988), 212--254), some subset of $r$ homeomorphic to a circle is not null-homotopic in
+$\Sigma$, but it bounds a closed disc in $\Sigma$ by hypothesis, and so it is null-homotopic. By Zorn's lemma, $r$ is included
+in a maximal set $Y$ that is open, path-connected and flat. (The union of a chain of such sets
+containing $r$ is again such a set, since a closed curve in it is compact and so lies in one
+member of the chain.) Now let $C \subseteq Y$ be homeomorphic to a circle. Since $C$ is
+null-homotopic in $\Sigma$, it bounds a closed disc $D \subseteq \Sigma$, by a theorem of Epstein
+(D. B. A. Epstein, Curves on 2-manifolds and isotopies, Acta Math. 115 (1966), 83--107, Theorem
+1.7). The set $Y \cup D$ equals $Y \cup (D - C)$, and so it is open. It is path-connected, since $Y$ and $D$
+are path-connected and both include $C$. It is flat by (11.3) of [12], applied with $\Delta = D$, since
+$Y$ is flat and $Y \cap bd(D) = C$ is arc-connected. By the maximality of $Y$, we have $D \subseteq Y$. Thus every subset of $Y$ homeomorphic to a
+circle bounds a closed disc included in $Y$, and by (4.2) of [12], $Y$ is an open disc, since
+$\Sigma$ is not a sphere. This proves (8.11).\fixnote{fix:8.11-proof-added}{The paper assumes
+(8.11). The argument above is the one used in the formalization, which uses (4.2), (11.2) and (11.3)
+of Graph Minors VII and the theorem of Epstein.}}
+
+Now let $H$ be a graph. By (8.9), there is an orientable surface $\Sigma$ in which $H$ can be drawn, with $g(\Sigma)$ minimal.
+
+\stmt
+(8.12) \textit{For any drawing of $H$ in $\Sigma$ \fix{that meets every component of $\Sigma$ homeomorphic to a sphere} and any region $r$ of this drawing, there is an open disc $\Delta \subseteq \Sigma$ with $r \subseteq \Delta$.}\fixnote{fix:8.12}{As printed, (8.12) can fail, because a surface with minimal $g(\Sigma)$ may have a spherical component that the drawing does not use. For example, a drawing of $K_5$ in the disjoint union of a torus and a sphere has the whole sphere as a region, and no open disc contains it. With the added hypothesis the proof goes through, using (8.10) and (8.11) as corrected. Where (8.12) is applied later, $\Sigma$ should be chosen minimal and without components that the drawing does not use.}
+
+\textit{Proof.} If there is no such $\Delta$, then by (8.11) there is a subset $C \subseteq r$ homeomorphic to a circle, which bounds no closed disc of $\Sigma$. But then by (8.10), there is an orientable surface $\Sigma'$ with $g(\Sigma') < g(\Sigma)$ in which $H$ can be drawn, a contradiction.
+
+\stmt
+(8.13) \textit{With $H, \Sigma$ as in (8.12), any two drawings of $H$ in $\Sigma$ meet.}
+
+\textit{Proof.} Since $H$ is non-planar, it has a non-planar component $H^*$. If there are two disjoint drawings of $H$ in $\Sigma$, there is a drawing of $H^*$ and a drawing of $H$ which are disjoint. But this is impossible, by (8.12), since $H^*$ is non-planar.
+
+\stmt
+(8.14) \textit{$H$ does not have the Erd\"os--P\'osa property.}
+
+\textit{Proof.} Let $\Sigma$ be as in (8.12), and let $k' \ge 0$ be any integer. Take $2k' + 1$ drawings of $H$ in $\Sigma$, chosen so that no point of $\Sigma$ is in more than two of them, and only finitely many points of $\Sigma$ are in more than one of them. If we view the crossings as representations of new 4-valent vertices, the union of these drawings is a drawing of a graph $G$. Now $G$ has $2k' + 1$ subgraphs $H_1, \dots, H_{2k'+1}$, each a subdivision of a copy of $H$, such that no vertex of $G$ is in more than two of them. It follows that if $X \subseteq V(G)$ and $|X| \le k'$ then $G \setminus X$ has an $H$-expansion; and yet $G$ does not have two disjoint $H$-expansions, by (8.13), because $G$ may be drawn in $\Sigma$. Thus $H$ does not have the Erd\"os--P\'osa property. \fix{We give the details, in three steps.
+
+First, no graph drawn in $\Sigma$ has two disjoint $H$-expansions. For if $G'$ is drawn in $\Sigma$
+and has disjoint $H$-expansions $A_1, A_2$, then contracting edges of $A_1 \cup A_2$ shows that
+the graph consisting of two disjoint copies of $H$ is isomorphic to a minor of $G'$. A minor of a
+graph drawn in $\Sigma$ can also be drawn in $\Sigma$, and restricting such a drawing to the two
+copies gives two disjoint drawings of $H$ in $\Sigma$, contrary to (8.13).
+
+Second, we choose the drawings. Let $m = 2k' + 1$. Subdividing every edge of $H$ once gives a graph
+$J$ without loops, and $H$ is isomorphic to a minor of $J$ (contract one of the two halves of each
+edge). A drawing of $H$ in $\Sigma$ gives a drawing of $J$. Choose mutually disjoint closed discs
+$R_w$ $(w \in V(J))$, with $w$ in the interior of $R_w$, such that an edge of $J$ meets $R_w$ only
+if it is incident with $w$, and then in a simple curve from $w$ to the boundary of $R_w$. For each
+edge $e$ of $J$, with ends $u$ and $v$, choose $m$ mutually disjoint simple curves
+$M_1(e), \dots, M_m(e)$ running beside $e$, each with one end on the boundary of $R_u$, the other end
+on the boundary of $R_v$, and no other point in any of the discs, such that curves for distinct
+edges are disjoint. We call the ends of these curves \textit{ports}, and so the ports on the
+boundary of each $R_w$ are distinct. Now fix $w \in V(J)$, and view $R_w$ as a round disc. For
+$i = 1, \dots, m$ in turn, choose a point $x_i$ of the boundary of $R_w$, different from the ports
+and from $x_1, \dots, x_{i-1}$, and join $x_i$ by straight chords to the ports of the curves
+$M_i(e)$ for the edges $e$ incident with $w$. The point $x_i$ and these chords form the $i$th
+\textit{star} at $w$. A line meets the boundary circle in at most two points, and so a new chord
+lies on no line of an earlier chord. Only finitely many choices of $x_i$ send a new chord through a
+point where two earlier chords meet, and we choose $x_i$ to avoid them. Then two stars at $w$ meet
+in only finitely many points, and no point is in three stars at $w$.
+
+For $1 \le i \le m$, the $i$th stars at all the vertices of $J$, together with the curves $M_i(e)$
+$(e \in E(J))$, form the $i$th drawing. No point of $\Sigma$ is in more than two of these drawings,
+and only finitely many are in more than one, since the curves $M_i(e)$ are disjoint from each other
+and from the stars except at their ports. Let $G$ be the graph drawn by their union, as above, with
+the points $x_i$, the ports, and the points in two drawings as vertices. For $1 \le i \le m$, each
+$i$th star is drawn by a connected subgraph of $G$, and each $M_i(e)$ is drawn by an edge of $G$
+joining the $i$th stars at the ends of $e$. Contracting the edges of the $i$th stars gives $J$, and
+so the union of the $i$th stars and the edges $M_i(e)$ is a $J$-expansion in $G$. Contracting also one
+of the two halves of each edge of $H$ shows that it is an $H$-expansion $H'_i$ in $G$, all of whose
+vertices lie in $i$th stars. Hence no vertex of $G$ is in more than two of
+$H'_1, \dots, H'_m$, because it lies in some disc $R_w$, and no point of $R_w$ is in three stars
+at $w$.
+
+Third, let $X \subseteq V(G)$ with $|X| \le k'$. Each vertex in $X$ is in at most two of
+$H'_1, \dots, H'_m$, and so $X$ meets at most $2k' < m$ of them. Thus some $H'_i$ is an
+$H$-expansion in $G \setminus X$. By the first step, $G$ has no two disjoint $H$-expansions. So for
+$k = 2$, neither (i) nor (ii) in the definition of the Erd\"os--P\'osa property holds for $G$, and
+this is true for every $k'$.\fixnote{fix:8.14-proof-added}{The paper does not say how to choose the
+$2k' + 1$ drawings, and gives the last two steps briefly. The construction and the argument above
+are the ones used in the formalization.}}
+
+To sum up, (8.8) and (8.14) together yield (8.2), as required.
+
+Another natural generalization of the Erd\"os--P\'osa theorem would be to regard a circuit as a subdivision of a loop, rather than as a graph contractible to a loop. One could replace (i) and (ii) in the definition of the Erd\"os--P\'osa property by
+
+\hspace*{12pt}(i) $G$ has $k$ disjoint subgraphs, each a subdivision of a graph isomorphic to $H$
+
+\hspace*{12pt}(ii) there exists $X \subseteq V(G)$ with $|X| \le k'$ such that $X$ meets every subgraph of $G$ which is isomorphic to a subdivision of $H$.

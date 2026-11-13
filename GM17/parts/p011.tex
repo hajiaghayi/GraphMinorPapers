@@ -1,0 +1,34 @@
+\origpage{172}{ROBERTSON AND SEYMOUR}
+\stmt
+(5.3) \textit{Let $\pi = (\Sigma, \Gamma, \alpha, \beta, \gamma)$ be a 0-redundant $\mathscr{T}$-central portrayal of a hypergraph $G$. Let $F$ be a $\Gamma$-normal I-arc with ends $n_1, n_2$ such that $\beta(n_1) = \beta(n_2) = F \cap \operatorname{dom}(\gamma) = \emptyset$. Then there is a disc $\Delta \subseteq \Sigma$ with $F \subseteq \operatorname{bd}(\Delta) \subseteq F \cup \operatorname{bd}(\Sigma)$ such that $\alpha(\Delta)$ is small.}
+
+\textit{Proof.} By (5.2) we may assume that $F \cap N(\Gamma) = \{n_1, n_2\}$ and $\tilde{c} \cap \{n_1, n_2\} = \emptyset$ for every internal cell $c$ of $\Gamma$. Let $\Delta$ be a ``neighbourhood'' of $F$; that is, $\Delta \subseteq \Sigma$ is a disc, $F \subseteq \Delta$, and
+\begin{equation*}
+F \cap \operatorname{bd}(\Delta) = \Delta \cap \operatorname{bd}(\Sigma) = \Delta \cap U(\Gamma) = \{n_1, n_2\}.
+\end{equation*}
+Let $\Sigma_0$ be the surface obtained from $\Sigma$ by cutting along $F$. Let $\Delta', \Delta''$ be the two discs into which $\Delta$ is divided by this cutting, and let $n'_i \in \Delta', n''_i \in \Delta''$ correspond to $n_i (i = 1, 2)$. Let $c' = \Delta' - \{n'_1, n'_2\}$, $c'' = \Delta'' - \{n''_1, n''_2\}$. Let
+\begin{align*}
+U_0 &= (U(\Gamma) - \{n_1, n_2\}) \cup \Delta' \cup \Delta'' \\
+N_0 &= (N(\Gamma) - \{n_1, n_2\}) \cup \{n'_1, n'_2, n''_1, n''_2\}
+\end{align*}
+and let $\Gamma_0 = (U_0, N_0)$. Then $\Gamma_0$ is a painting in $\Sigma_0$, and $c', c''$ are cells of it.
+
+Suppose first that $\Sigma_0$ is connected, whence it is simpler than $\Sigma$. We define a portrayal $\pi_0 = (\Sigma_0, \Gamma_0, \alpha_0, \beta_0, \gamma)$ of $G$ as follows:
+\begin{align*}
+&\alpha_0(c'), \alpha_0(c'') &&\text{are both null} \\
+&\alpha_0(c) = \alpha(c) &&(c \in C(\Gamma_0) - \{c', c''\}) \\
+&\beta_0(n'_1) = \beta_0(n'_2) = \beta_0(n''_1) = \beta_0(n''_2) = \emptyset \\
+&\beta_0(n) = \beta(n) &&(n \in N_0 \cap \operatorname{bd}(\Sigma_0) - \{n'_1, n'_2, n''_1, n''_2\}).
+\end{align*}
+It is easy to verify that $\pi_0$ is a portrayal of $G$; it is $\mathscr{T}$-central; and yet it is simpler than $\pi$, a contradiction to the 0-redundancy of $\pi$.
+
+Thus $\Sigma_0$ is not connected. It therefore has exactly two components $\Sigma', \Sigma''$, with $\Delta' \subseteq \Sigma', \Delta'' \subseteq \Sigma''$. From the symmetry we may assume that $(\alpha(\Sigma''), \alpha(\Sigma')) \in \mathscr{T}$, for by (2.1) this is a separation of $G$ of order 0.
+
+Let $\Gamma' = (U_0 \cap \Sigma', N_0 \cap \Sigma')$; then $\Gamma'$ is a painting in $\Sigma'$, and $c'$ is a cell of it. We define a portrayal
+\begin{align*}
+&\alpha'(c') = \alpha(\Sigma'') \\
+&\alpha'(c) = \alpha(c) &&(c \in C(\Gamma') - \{c'\}) \\
+&\beta'(n'_1) = \beta'(n'_2) = \emptyset \\
+&\beta'(n) = \beta(n) &&(n \in N(\Gamma') \cap \operatorname{bd}(\Sigma') - \{n'_1, n'_2\}) \\
+&\gamma' = \gamma | N(\Gamma').
+\end{align*}

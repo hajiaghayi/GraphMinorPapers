@@ -1,0 +1,27 @@
+\origpage{284}{ROBERTSON AND SEYMOUR}
+\noindent $\Gamma_i = \Gamma \cap \Sigma(F, F_i)$ $(i = 1, 2)$. Then $(\Gamma_i, F, F_i)$ is a framing of some member of $\mathscr{B}(k - 1)$ since $k_3 < k_1, k_2$ $(i = 1, 2)$; and so
+\begin{equation*}
+(G, T) \in W(\mathscr{B}(k - 1) \oplus \mathscr{B}(k - 1)).
+\end{equation*}
+In each case then the theorem is satisfied. This completes the proof. $\square$
+
+\textit{Proof of} (16.1). If $\mathscr{B}(k - 1)$ is well-rooted then the right hand side of (16.2) is well-rooted, by (4.2), (13.1), (13.3), and (15.4), and hence so is $\mathscr{B}(k, r, s)$. $\square$
+
+\sectionhead{17. Conclusion of the Cylinder Case}
+
+Now we prove that $\mathscr{B}(k)$ (as defined in Section 16) is well-rooted. Let $\Sigma$ be a cylinder with cuffs $C_1, C_2$, and let $\mathscr{B}(k_1, k_2)$ be the set of all grafts with drawings $\Gamma$ in $\Sigma$ such that $|\Gamma \cap C_i| = k_i$ $(i = 1, 2)$. Clearly every tubular graft embeds in $\Sigma$, and in fact we have the following, as is easily seen.
+
+\stmt
+(17.1) \textit{For any integer} $k \ge 0$, $\mathscr{B}(k) = \bigcup (\mathscr{B}(k_1, k_2))$, \textit{the union being taken over all integers} $k_1, k_2 \ge 0$ \textit{with} $k_1 + k_2 \le k$.
+
+We shall need the following lemma, which is a consequence of [11, Theorem (9.3)].
+
+\stmt
+(17.2) \textit{Let} $(H, U) \in \mathscr{B}(k_1, k_2)$. \textit{Then there are integers} $r, s \ge 0$ \textit{such that for every} $(G, T) \in \mathscr{B}(k_1, k_2)$, \textit{either} $(H, U)$ \textit{is simulated in} $(G, T)$ \textit{or} $(G, T) \in \mathscr{B}(k_1 + k_2, r, s)$.
+
+From this we deduce the following.
+
+\stmt
+(17.3) \textit{For any integer} $k \ge 0$, $\mathscr{B}(k)$ \textit{is well-rooted.}
+
+\textit{Proof.} We proceed by induction on $k$, and assume that $\mathscr{B}(k - 1)$ is well-rooted. (We recall that $\mathscr{B}(-1)$ is interpreted as $\emptyset$, which is certainly well-rooted.) By (17.1) and (4.2), it suffices to prove that $\mathscr{B}(k_1, k_2)$ is well-rooted for all choices of $k_1, k_2$ with $k_1 + k_2 \le k$. Let us then choose integers $k_1, k_2 \ge 0$ with $k_1 + k_2 \le k$. Let $(G_1, T_1), (G_2, T_2), \dots$ be a countable sequence of members of $\mathscr{B}(k_1, k_2)$. We wish to show that there exist $j > i \ge 1$ such that $(G_i, T_i)$ is simulated in $(G_j, T_j)$. If $(G_1, T_1)$ is simulated in $(G_i, T_i)$ for some $i > 1$ we are done, and so we assume that this is false. By (17.2) there are integers $r, s \ge 0$ such that $(G_i, T_i) \in \mathscr{B}(k_1 + k_2, r, s)$ for all $i \ge 2$. But $\mathscr{B}(k_1 + k_2, r, s) \subseteq \mathscr{B}(k, r, s)$, and $\mathscr{B}(k, r, s)$ is well-rooted by (16.1) and our inductive hypothesis that $\mathscr{B}(k - 1)$ is well-rooted. Hence there exist $j > i \ge 2$ such that $(G_i, T_i)$ is simulated in $(G_j, T_j)$, as required. $\square$

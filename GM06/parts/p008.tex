@@ -1,0 +1,39 @@
+\origpage{122}{ROBERTSON AND SEYMOUR}
+This follows easily from (2.4). Let us now prove our characterization.
+
+\stmt
+(3.6) \textit{Let $G$ be properly drawn on a disc $\Sigma$, and let $\Delta$ be a division with}
+\begin{equation*}
+\bigcup \Delta = V(G) \cap bd(\Sigma).
+\end{equation*}
+\textit{Then $\Delta$ is feasible in $G$ if and only if} (i) \textit{$\Delta$ is cross-free, and} (ii) \textit{every $(x, y)$-chain has non-negative redundancy, for all $x, y \in W$ (defined as before).}
+
+\textit{Proof.} The necessity of (i) and (ii) is easy. \fix{To see this, let $H$ be a realization of $\Delta$ in $G$. We use the fact that two compact
+connected subsets of the disc $\Sigma$ must meet if they contain pairs of points of $bd(\Sigma)$ that
+cross. If $a, c \in \delta$ and $b, d \in \delta'$ for distinct $\delta, \delta' \in \Delta$, and
+$\{a, c\}$ crosses $\{b, d\}$, then by this fact the drawings of a path of $H(\delta)$ between $a$ and
+$c$ and a path of $H(\delta')$ between $b$ and $d$ meet. That is impossible, since $H(\delta)$ and
+$H(\delta')$ are disjoint subgraphs of $G$. So (i) holds. For (ii), let $A_1, \dots, A_k$ be an
+$(x, y)$-chain. For each term $A_i$ that is a region, choose a curve in $\Sigma$ whose interior lies
+in $A_i$, from $x$ if $i = 1$ and from $A_{i-1}$ if $i > 1$, to $y$ if $i = k$ and to $A_{i+1}$ if
+$i < k$. This is possible since the two ends lie in the closure of $A_i$, and any two points in the
+closure of a region are joined by such a curve. Let $F$ be the union of these curves and of the terms
+that are vertices. Then $F$ is compact and connected, it contains $x$ and $y$, and it meets the
+drawing of $G$ only in the terms that are vertices. Now let $\delta \in \Delta$ be one of the members
+counted in $\Delta(x, y)$. If $x \in \delta$, then $x$ is a vertex of $G$ and so lies in no region,
+and hence $A_1 = x$ by condition (ii) in the definition of a chain. Similarly, if $y \in \delta$ then
+$A_k = y$. If there exist $u, v \in \delta$ such that $\{u, v\}$ crosses $\{x, y\}$, then the drawing
+of a path of $H(\delta)$ between $u$ and $v$ meets $F$, by the fact above, and the common point is a
+term of the chain. In each case some term of the chain that is a vertex belongs to $H(\delta)$. Since
+the subgraphs $H(\delta)$ $(\delta \in \Delta)$ are pairwise disjoint, distinct members of $\Delta$
+give distinct terms. Hence $\Delta(x, y)$ is at most the length of the chain, and so (ii)
+holds.\fixnote{fix:3.6-necessity-added}{The paper says that the necessity of (i) and (ii) is easy and
+gives no proof. The argument above is the one used in the formalization.}}
+
+ We prove their sufficiency by induction on the number of vertices of $G$ plus the number of regions of $G$. If $G$ is null the result is true. If $G, \Delta$ satisfy (3.6)(i) and (ii), and (3.3)(i), (ii) or (iv) applies, the smaller structures produced by this application also satisfy (3.6)(i) and (ii). Hence, by our inductive hypothesis, these smaller divisions are feasible in the corresponding graphs, and hence $\Delta$ is feasible in $G$. (To see this in the case of (3.3)(i), we observe that any $(x, y)$-chain of the graph obtained from $G$ by deleting $v$ which does not directly give a chain of $G$ may be converted to a chain of $G$ by adding $v$ in the natural way. The resulting chain has length one more than the original, and has redundancy the same as the original.) If (3.3)(iii) applies, there is an $(x, y)$-chain consisting of a single region and no vertices where $\Delta(x, y) > 0$, contrary to (3.6)(ii), which is impossible. If none of (3.3)(i), ..., (iv) applies, and $G$ is non-null then $G$ is connected and we may pass to $G^*, \Delta^*$. Now $\Delta^*$ is cross-free by (2.1), and every $(x, y)$-chain in $G^*$ has non-negative $\Delta^*$-reduncancy, by (3.5); thus $G^*, \Delta^*$ satisfy (3.6)(i) and (ii). Moreover (3.3)(i) applies to $G^*, \Delta^*$ by (2.3), and so $\Delta^*$ is feasible in $G^*$. Hence by (3.2), $\Delta$ is feasible in $G$. This completes the proof.
+
+\sectionhead{4. The Cylinder}
+
+Our object in this section and the next two is to extend our results about the Disjoint Connecting Subgraphs problem from the disc to the cylinder, where again we assume that $\bigcup \Delta$ is a subset of $bd(\Sigma)$.
+
+A fundamental difference between the disc and cylinder problems is that in the case of the cylinder there is more than one homotopically inequivalent route between pairs of points of $bd(\Sigma)$, even if we restrict ourselves to non-self-intersecting routes, which we can. If $s, t$ lie on the same cuff of the cylinder, there are in fact two homotopy classes of non-self-intersecting routes between $s$ and $t$, while if $s$ and $t$ lie on opposite cuffs, there are infinitely many such routes, winding different numbers of times around

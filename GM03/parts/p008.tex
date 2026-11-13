@@ -1,0 +1,127 @@
+\origpage{56}{ROBERTSON AND SEYMOUR}
+\noindent decomposition of $N(d, \lambda)$ of width $\le 3d + 1$, where $\mathcal{X} = (X_t : t \in V(T))$. This completes the proof.
+
+\fix{We give the details. If $d = 0$, then $N(0, \lambda) = Y_\lambda$ is a tree, and the sets $\{t, t'\}$
+$(t \in V(Y_\lambda))$, where $t'$ is the neighbour of $t$ closer to the center (and $t' = t$ for the
+center), form a tree-decomposition of width $\le 1$ over the
+tree $Y_\lambda$. Now let $d > 0$. Then $|X_t| \le 3d + 2$, and so the width is at most $3d + 1$. For
+each edge of $C$ with ends $u, v$, where $v$ follows $u$, let $R(u, v)$ be the region of $M$ inside $C$
+incident with this edge. It is bounded by the edge and the path of $Y_\lambda$ between $u$ and $v$, and
+the vertices of $T$ on $R(u, v)$ are the internal vertices of this path, of which there is at least
+one. Since the sets $P_v$ are disjoint, a vertex $x$ of the cylinder with $x \in P_v$ is in $X_t$ if and
+only if $t$ is on $R(u, v)$. So the set of all $t$ with $x \in X_t$ is non-empty, and consists of
+the internal vertices of the path of $Y_\lambda$ between $u$ and $v$. For each of them except the one
+nearest to the center, the neighbour $t'$ closer to the center is also on this path. So this set is
+the vertex set of a subtree of $T$. A vertex $s$ of $T$ is in $X_t$ if and only if $t = s$ or $t' = s$, and so the set of these
+$t$ is the vertex set of a subtree of $T$. This proves (W1) and (W3). For (W2), an edge of $T$ joins
+some $t \ne t'$ to $t'$, and both are in $X_t$. An edge of $Y_\lambda$ joining an end-vertex $v$ to $t$
+has $t$ on $R(u, v)$, and so $P_v \cup \{t\} \subseteq X_t$. An edge on a radial line has both ends in
+some $P_v$. Finally, an edge of a circle joins $P_u$ and $P_v$ for some edge of $C$ with ends $u, v$,
+where $v$ follows $u$. Let $w$ be the vertex of $C$ that $u$ follows, and let $s$ be the neighbour of
+$u$ in $Y_\lambda$. Then $s$ is on $R(w, u)$ and on $R(u, v)$, and so
+$P_u \cup P_v \subseteq X_s$.\fixnote{fix:2.5-proof-added}{The paper leaves this verification to the
+reader. The argument above is the one used in the formalization.}}
+
+Finally, we need
+
+\stmt
+(2.6) \textit{If $G'$ is isomorphic to a minor of $G$ then the tree-width of $G'$ is not greater than the tree-width of $G$.}
+
+The proof is clear. \fix{To see this, let $(T, \mathcal{X})$ be a tree-decomposition of $G$ of width
+$w$, and let $G'$ be a minor of $G$. Then there are disjoint non-empty sets $Y(v) \subseteq V(G)$
+$(v \in V(G'))$, each inducing a connected subgraph of $G$, and for each edge $e$ of $G'$ an edge $f(e)$
+of $G$, such that if $e$ has ends $u, v$, then $f(e)$ has one end in $Y(u)$ and the other in $Y(v)$.
+(Take for $Y(v)$ the set of vertices of $G$ that are contracted into $v$, and for $f(e)$ the edge of $G$
+that becomes $e$.) For $t \in V(T)$ let $X'_t$ be the set of all $v \in V(G')$ with
+$Y(v) \cap X_t \ne \emptyset$. Choosing for each $v \in X'_t$ a vertex in $Y(v) \cap X_t$ gives
+distinct vertices for distinct $v$, since the sets $Y(v)$ are disjoint, and so $|X'_t| \le |X_t|$.
+We claim that $(T, (X'_t : t \in V(T)))$ is a tree-decomposition of $G'$, which therefore has width
+$\le w$. For (W1), each $Y(v)$ is non-empty, and every vertex of $G$ is in some $X_t$. For (W2), let
+$e$ be an edge of $G'$ with ends $u, v$. Then $f(e)$ has ends $a \in Y(u)$ and $b \in Y(v)$, and
+$a, b \in X_t$ for some $t$, by (W2) for $G$. Then $u, v \in X'_t$. For (W3), let $t'$ be on the path
+of $T$ between $t_1$ and $t_2$, and let $v \in X'_{t_1} \cap X'_{t_2}$. Suppose that
+$Y(v) \cap X_{t'} = \emptyset$. Choose $y_1 \in Y(v) \cap X_{t_1}$ and $y_2 \in Y(v) \cap X_{t_2}$.
+Then $t_1, t_2 \ne t'$. We use (3.1) and (3.2) below, which are proved there from (W1)--(W3) alone.
+Since $Y(v)$ induces a connected subgraph of $G$ with no vertex in $X_{t'}$, applying (3.2) along a
+path of $G|Y(v)$ from $y_1$ to $y_2$ shows that $T_{t'}(y_1) = T_{t'}(y_2)$. By (3.1) this branch
+of $T$ at $t'$ contains $t_1$ and $t_2$. But $t_1$ and $t_2$ are in different branches of $T$ at
+$t'$, since $t'$ is on the path of $T$ between them. This is a contradiction, and so
+$Y(v) \cap X_{t'} \ne \emptyset$, that is, $v \in X'_{t'}$.\fixnote{fix:2.6-proof-added}{The paper says that the proof
+is clear. The argument above is the one used in the formalization.}} From (2.4), (2.5), and (2.6) we
+deduce
+
+\stmt
+(2.7) \textit{If $G$ is planar and has radius $\le d$ then its tree-width is at most $3d + 1$.}
+
+This completes the proof of the main result of this section. We shall also need the following lemma, which is easy\del{ and is left to the reader}.
+
+\stmt
+(2.8) \textit{Let $G$ be a planar graph with radius $\ge d$, and let $M$ be a drawing of $G$. Then there is a nested sequence $C_1, C_2, \dots, C_d$ of circuits of $M$.}
+
+\fix{\textit{Proof.} We may assume that $d \ge 1$. Since $G$ has radius $\ge d$, we have
+$\rho(M) \ge d$, and so there is a region $R^*$ of $M$ with $d(R^*) \ge d$. Choose a point $p$ in the
+infinite region of $M$ and a point $a$ in $R^*$. For $0 \le t \le d - 1$, let $U_t$ be the union of the
+closures of all regions $R$ of $M$ with $d(R) \le t$. Then $U_t$ is connected, since each such region
+is joined to the infinite region by a sequence of regions as in the definition of $d(R)$, and
+consecutive regions of the sequence have a common vertex. Moreover $a \notin U_t$, since $R^*$ is
+open and meets no other region. Let $B_t$ be the subgraph of $G$ consisting of the vertices and edges
+that are incident both with a region $R$ with $d(R) \le t$ and with a region $R'$ with $d(R') > t$.
+If a vertex is incident with a region $R$, then every region incident with it has distance at most
+$d(R) + 1$.
+
+\hspace*{12pt}(1) \textit{For $0 \le t < t' \le d-1$, $B_t$ is contained in $U_t$, and no point of
+$B_{t'}$ is in $U_t$.}
+
+The first statement holds by the definition of $B_t$. For the second, a vertex of $B_{t'}$ in $U_t$
+would be incident with a region of distance $\le t$ and with a region of distance $> t' \ge t+1$,
+which is impossible. If some other point of an edge $f$ of $B_{t'}$ is in $U_t$, then $f$ is
+incident with a region of distance $\le t$, and so are its ends. But its ends are also incident with
+a region of distance $> t'$, since $f$ is, and this is impossible as before. This proves (1).
+
+\hspace*{12pt}(2) \textit{For $0 \le t \le d-1$ there is a circuit $C_{t+1}$ of $B_t$ with $R^*$ inside
+and the infinite region of $M$ outside.}
+
+Suppose not. Then for every circuit of $B_t$, one of the two closed discs in the sphere bounded by it
+contains neither $p$ nor $a$. It follows that $p$ and $a$ are in the same region of the drawing of
+$B_t$, since two points in different regions of a drawing are separated by some circuit of it. So
+there is a curve from $p$ to $a$ that meets no point of $B_t$. It starts in $U_t$ and ends outside
+$U_t$, and so it passes through a point of the boundary of $U_t$. This point is in the closure of a
+region of distance $\le t$ and in the closure of a region of distance $> t$, and so it is a vertex or
+a point of an edge of $B_t$, which is impossible. So some circuit of $B_t$ is such that each
+of its two closed discs contains $p$ or $a$. Since $p, a$ are not on the circuit, one disc contains
+$p$ and not $a$, and the other contains $a$ and not $p$. This proves (2).
+
+Now let $0 \le t < t' \le d - 1$. By (1), $C_{t+1}$ is contained in $U_t$, and $C_{t'+1}$ is disjoint
+from $U_t$. So $C_{t+1}$ and $C_{t'+1}$ have no common vertex. Moreover $U_t$ is connected, contains
+the infinite region and is disjoint from $C_{t'+1}$, and so it is outside $C_{t'+1}$. In particular
+$C_{t+1}$ is outside $C_{t'+1}$. So the part of the sphere inside $C_{t'+1}$ is connected, contains
+$R^*$, and is disjoint from $C_{t+1}$, and therefore it is inside $C_{t+1}$. Hence $C_{t'+1}$, which is
+in its closure and has no common vertex with $C_{t+1}$, is inside $C_{t+1}$. Thus $C_1, \dots, C_d$ is
+a nested sequence of circuits of $M$.\fixnote{fix:2.8-proof-added}{The paper says that (2.8) is easy and leaves it to the reader. The
+argument above is the one used in the formalization, where $U_t$ is built from the layers of regions
+at distance at most $t$.}}
+
+\sectionhead{3. Sleeve Unions}
+
+We shall require some results about tree-decompositions which are proved in [2], but which we prove again here for the reader's convenience.
+
+Let $(T, \mathcal{X})$ be a tree-decomposition of $G$, where $\mathcal{X} = (X_t : t \in V(T))$. For each $t \in V(T)$, the connected components of $T \setminus t$ are called the \textit{branches} of $T$ at $t$.
+
+\stmt
+(3.1) \textit{For $t \in V(T)$ and $v \in V(G)$, either $v \in X_t$, or there is a branch of $T$ at $t$ which contains all $t' \in V(T)$ with $v \in X_{t'}$.}
+
+This follows immediately from (W1), (W3). If $v \notin X_t$, let $T_t(v)$ denote this branch. (It is unique.)
+
+\stmt
+(3.2) \textit{If $v, v' \notin X_t$ and $v, v'$ are adjacent in $G$ then $T_t(v) = T_t(v')$.}
+
+\textit{Proof.} By (W2), there exists $t' \in V(T)$ such that $v, v' \in X_{t'}$. Then $t' \ne t$, and so $t'$ is in some branch $B$ of $T$ at $t$. But then $B = T_t(v)$, because $v \in X_{t'}$, and similarly $B = T_t(v')$.
+
+\stmt
+(3.3) \textit{If $v, v' \notin X_t$ and $v, v'$ are not separated in $G$ by $X_t$, then $T_t(v) = T_t(v')$.}
+
+\textit{Proof.} Let $v_1, v_2, \dots, v_k$ be a sequence of vertices of $G$ not in $X_t$, each adjacent to the next, with $v_1 = v$ and $v_k = v'$. Then by (3.2),
+\begin{equation*}
+T_t(v_1) = T_t(v_2) = \cdots = T_t(v_k)
+\end{equation*}
+and so $T_t(v) = T_t(v')$.

@@ -1,0 +1,21 @@
+\origpage{77}{GRAPH MINORS. XI}
+\noindent $1 \le i \le t$ the ends of $e_i$ are $v_{i-1}, v_i$. Its length is $t$. Its initial vertex and terminal vertex are $v_0, v_t$, respectively (these are its \textit{ends}), and the walk is said to be \textit{from} $v_0$ \textit{to} $v_t$. Its \textit{internal vertices} are $v_1, v_2, \dots, v_{t-1}$. We see that if (say) $v_2 = v_0$ and $t > 2$ then $v_0$ is both the initial vertex and an internal vertex. The walk is \textit{simple} if $v_0, v_1, \dots, v_t$ are all distinct. It is \textit{closed} if $v_0 = v_t$, and then we call $v_0$ its \textit{end}. It is \textit{simple-closed} if $v_0 = v_t$, and $v_1, v_2, \dots, v_t$ are all distinct and $e_1, e_2, \dots, e_t$ are all distinct. Walks of length zero are thus simple-closed. (Simple-closed walks of positive length are \textit{not} simple, which motivates the hyphen in ``simple-closed``.) If $W$ is the walk $v_0, e_1, v_1, \dots, e_t, v_t$ then $\Gamma \mid W$ denotes the subdrawing of $\Gamma$ with vertex set $\{v_0, v_1, \dots, v_t\}$ and edge set $\{e_1, e_2, \dots, e_t\}$. We use $U(W)$ to denote $U(\Gamma \mid W)$ for brevity. $W^{-1}$ denotes the \textit{reverse} of $W$, that is, the walk $v_t, e_t, v_{t-1}, \dots, e_1, v_0$. If
+\begin{align*}
+W &= v_0, e_1, v_1, \dots, e_t, v_t, \\
+W' &= v'_0, e'_1, v'_1, \dots, e'_{t'}, v'_{t'}
+\end{align*}
+are walks and $v_t = v'_0$, the walk
+\begin{equation*}
+v_0, e_1, v_1, \dots, e_t, v_t, e'_1, v'_1, \dots, e'_{t'}, v'_{t'}
+\end{equation*}
+is called the \textit{concatenation} of $W$ and $W'$, and is denoted by $W + W'$. If $W + W'$ is closed then $W' + W$ is also a closed walk, and we say it is obtained from $W + W'$ by \textit{reinitializing}.
+
+We also wish to speak of homotopy for walks. Let $W = v_0, e_1, v_1, \dots, e_t, v_t$ be a walk in $\Gamma$. A curve $\phi$ is said to \textit{trace} $W$ if there are numbers $0 = x_0 \le x_1 \le \dots \le x_t = 1$ such that
+
+\hspace*{12pt}(i) for $0 \le i \le t$, $\phi(x_i) = v_i$, and
+
+\hspace*{12pt}(ii) for $1 \le i \le t$ and $x_{i-1} \le x \le x_i$, $\phi(x) \in \bar{e}_i$.
+
+Clearly for any walk $W$ there is a curve which traces $W$. However, curves which trace $W$ are not necessarily homotopic to one another, because if some $e_i$ is a loop, our definition of ``trace'' does not specify the number of times that (or the sense in which, or even whether) the curve runs along $e_i$. However, if every loop $e$ of $W$ is null-homotopic in $Z$ (that is, the $O$-arc $\bar{e}$ is null-homotopic in $Z$), it is easy to see that all curves that trace $W$ are homotopic in $Z$ to one another. This leads to the following definition of homotopy for walks: if $W, W'$ are walks in $\Gamma$ and $Z \subseteq \Sigma$, we say $W$ is \textit{homotopic in $Z$ to $W'$} if
+
+\hspace*{12pt}(i) every loop of $W$ and every loop of $W'$ is null-homotopic in $Z$, and

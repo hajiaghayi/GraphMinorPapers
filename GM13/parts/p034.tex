@@ -1,0 +1,17 @@
+\origpage{98}{ROBERTSON AND SEYMOUR}
+\noindent with corners $(i+1, j)$, $(i+2h'+1, j)$, $(i, j+h')$, $(i+2h, j+h')$. Then $J'$ is an elementary wall of height $h'$. Now let $H$ be a subdivision of $J$, and let $H'$ be the corresponding subdivision of $J'$; we say that the wall $H'$ is a \textit{subwall} of $H$. It follows that if $H'$ is a subwall of $H$, then $H'$ consists of its perimeter $C$ together with the portion of $H$ inside $C$. (Thus the wall $H'$ of (7.3) is in general not a subwall of $H$.) If $H'$ is a subwall of $H$, we shorten ``inside the perimeter of $H'$'' to ``inside $H'$'', etc. If $H$ is a wall, and $H_1, H_2$ are non-null subgraphs of $H$, we define $d(H_1, H_2)$ to be the minimum of $d(v_1, v_2)$ over all $v_1 \in V(H_1)$ and $v_2 \in V(H_2)$, where $d$ is the distance function of $H$.
+
+Let $H$ be a wall in a graph $G$, and let $p_1, p_2, p_3, p_4$ be the corners of $H$, in cyclic order. A \textit{cross over} $H$ in $G$ is a subgraph $P \cup Q$, where $P, Q$ are mutually vertex-disjoint paths of $G$ with ends $p_1, p_3$ and $p_2, p_4$, respectively.
+
+\stmt
+(9.1) \textit{For any integer $p \ge 0$ there exist $k, r \ge 0$ such that the following holds. Let $H$ be a wall in $G$, and let $H_1, \dots, H_k$ be subwalls of $H$ with $d(H_i, H_j) \ge r$ $(1 \le i < j \le k)$, where $d$ is the distance function of $H$. For $1 \le i \le k$, let $P_i \cup Q_i$ be a cross over $H_i$, such that}
+
+\hspace*{12pt}(i) \textit{$(P_i \cup Q_i) \cap H \subseteq H_i$, for $1 \le i \le k$}
+
+\hspace*{12pt}(ii) \textit{$(P_i \cup Q_i) \cap (P_j \cup Q_j)$ is null for $1 \le i < j \le k$.}
+
+\textit{Then $G$ has a $K_p$-minor. Moreover, a model of $K_p$ in $G$ can be found in time $\le C\varepsilon(G)$, where $C$ depends only on $p$ and the height of $H$.}
+
+\textit{Proof.} Let $\Sigma$ be a sphere, and for $p$ as given, let $\theta, t$ be as in [19, Theorem (4.5)]. We may assume that $t \ge 2$. Let $k = t + 1$ and let $r = 4\theta + 4$. Now let $H, G, H_1, \dots, H_k$ and $P_i, Q_i$ $(1 \le i \le k)$ be as in the theorem, and let $H$ be drawn in $\Sigma$. All but one of the regions of $H$ are ``bricks;'' let $s$ be a point of $\Sigma$, from the region that is not a brick. For $1 \le i \le k$, let $d_i$ be the minimum of $d(s, x)$ taken over all $x \in V(H_i)$. We may assume that $d_1, \dots, d_t \ge d_k$. Since for $1 \le i \le t$ we have $r \le d(H_i, H_k) \le d_i + d_k$, it follows that $d_1, \dots, d_t \ge \frac{1}{2}r$.
+
+Let $H$ have $n$ horizontal paths, and for each of them (say the $j$th), let $P_j$ be a subpath of length $\frac{1}{2}r - 2 = 2\theta$ with one end in the perimeter of $H$. Since $d_i \ge \frac{1}{2}r = 2\theta + 2$ for each $i$, it follows that $P_j$ is disjoint from $H_i$, for all $i$ ($1 \le i \le t$) and $j$ ($1 \le j \le n$). Let $\Gamma$ be obtained from $H$ by deleting all of $H_i$ except its perimeter, for $1 \le i \le t$. Then for $1 \le j \le j' \le n$ there are $\theta$ paths of $\Gamma$ between $V(P_j)$ and $V(P_{j'})$, mutually vertex-disjoint. Let $\mathscr{T}$ be the set of all separations $(A, B)$ of $\Gamma$ of order $< \theta$ such that none of $P_1, \dots, P_n$ is a subgraph of $A$. The result follows easily from [19, Theorem (4.5)] applied to $\Sigma, \Gamma, \mathscr{T}$. $\square$

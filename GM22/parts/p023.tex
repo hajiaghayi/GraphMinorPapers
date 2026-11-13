@@ -1,0 +1,54 @@
+\origpage{552}{N. Robertson, P. Seymour / Journal of Combinatorial Theory, Series B 102 (2012) 530--563}
+Let $\mathcal{A}' = \{A \in \mathcal{A} \colon d(v^*, D(A)) \ge \theta'\}$.
+
+\hspace*{12pt}(13) \textit{$\mathcal{A}'$ is adequate for $\phi'$.}
+
+\textit{Subproof.} Let us verify the four conditions in the definition of ``adequate''. For (i), let $v \in V(H)$ and $A \in \mathcal{A} \setminus \mathcal{A}'$; we must show that $A \cap \phi'(v) \subseteq \Gamma \cup N_W$. Now trivially $A \cap \Gamma \subseteq \Gamma \cup N_W$. Since $A \notin \mathcal{A}'$ it follows from 7.1(iii) that $A \cap K_1$ is null. For $1 \le i \le t$, $A \ne A'_i$ since $A \notin \mathcal{A}'$, and so $A \cap A'_i \subseteq \Gamma \cup N_W$ by (J2) and (3). Consequently,
+\begin{equation*}
+A \cap \phi'(v) \subseteq A \cap (\Gamma \cup K_1 \cup A'_1 \cup \cdots \cup A'_t) \subseteq \Gamma \cup N_W.
+\end{equation*}
+This proves (i).
+
+For (ii), let $v \in V(H)$. Now
+\begin{equation*}
+A'_1 \cup \cdots \cup A'_{t+1} \subseteq K \cup \bigcup(A \colon A \in \mathcal{A}'),
+\end{equation*}
+since $A'_1, \ldots, A'_t \in \mathcal{A}'$ and $A'_{t+1} \subseteq K_1 \subseteq K \cup \bigcup(A \colon A \in \mathcal{A}')$. But by (12), $\phi'(v) \cap (A'_1 \cup \cdots \cup A'_{t+1})$ is non-null, and (ii) follows.
+
+For (iii), let $e \in E(H)$. By (12),
+\begin{equation*}
+\phi'(e) \in E(A'_1 \cup \cdots \cup A'_{t+1}) \subseteq E\Bigl(K \cup \bigcup(A \colon A \in \mathcal{A}')\Bigr).
+\end{equation*}
+This proves (iii).
+
+For (iv), let $A \in \mathcal{A}$ with $A \cap K \ne N_W$. By (J5), $d(v^*, D(A)) \ge \theta$, and so $A \in \mathcal{A}'$. This proves (iv), and hence proves (13).
+
+From (13), hypotheses (iii) and 7.2, the result follows. $\square$
+
+Now we need to relax the definition of ``adequate'' a little. If (J1)--(J6) hold and $\mathcal{A}' \subseteq \mathcal{A}$, and $\phi'$ is a model of $(H, \chi)$ in $(G, \omega)$, we say that $\mathcal{A}'$ is \textit{sufficient} for $\phi'$ if
+
+\hspace*{12pt}$\bullet$ for each $v \in V(H)$ and each $A \in \mathcal{A}$, if some edge of $A \cap \phi'(v)$ is incident with a vertex in $W$ then $A \in \mathcal{A}'$,
+
+\hspace*{12pt}$\bullet$ for each $v \in V(H)$, $\phi'(v) \cap (K \cup \bigcup(A \colon A \in \mathcal{A}'))$ is non-null,
+
+\hspace*{12pt}$\bullet$ for each $e \in E(H)$, $\phi'(e) \subseteq E(K \cup \bigcup(A \colon A \in \mathcal{A}'))$, and
+
+\hspace*{12pt}$\bullet$ for each $A \in \mathcal{A}$, if $A \cap K \ne N_W$ then $A \in \mathcal{A}'$.
+
+Thus, if $\mathcal{A}'$ is adequate for $\phi'$ then it is sufficient for $\phi'$.
+
+Also, let us introduce another condition, the following.
+
+\hspace*{12pt}(J7) For each $A \in \mathcal{A}$, if $u, v \in \bar{\pi}(A)$ there is a path of $A$ with ends $u, v$ and with no internal vertex in $\bar{\pi}(A) \cup W$; for each $A \in \mathcal{A}$, there is no separation $(C, D)$ of $G \setminus W$ with order $< |\bar{\pi}(A)|$ such that $A \setminus W \subseteq C$ and $(C \cap \Gamma, D \cap \Gamma) \in \mathcal{T}$; and for each $A \in \mathcal{A}$, either
+
+\hspace*{12pt}$\bullet$ $V(\Gamma \cap A) \subseteq \bar{\pi}(A)$ and $E(\Gamma \cap A) = \emptyset$, or
+
+\hspace*{12pt}$\bullet$ $\Gamma \cap A$ is a path with both ends in $\bar{\pi}(A)$, or
+
+\hspace*{12pt}$\bullet$ $|\bar{\pi}(A)| = 3$, $\bar{\pi}(A) \subseteq V(\Gamma)$, some $v \in \bar{\pi}(A)$ has degree 0 in $\Gamma \cap A$, and $(\Gamma \cap A) \setminus \{v\}$ is a path with both ends in $\bar{\pi}(A)$, or
+
+\hspace*{12pt}$\bullet$ $|\bar{\pi}(A)| = 3$, $\bar{\pi}(A) \subseteq V(\Gamma)$, and for all $u, v \in \bar{\pi}(A)$ there is a path of $\Gamma \cap A$ with ends $u, v$ and with no internal vertex in $\bar{\pi}(A)$.
+
+Then 7.3 can be modified as follows.
+
+\textbf{7.4.} \textit{For all integers $q, \delta, \tau \ge 0$ there exists $\theta \ge 4$ with the following property. Let (J1)--(J7) hold, and let $\mathcal{B} \subseteq \mathcal{A}$ be sufficient for $\phi$. Let $A_1, \ldots, A_t \in \mathcal{B}$ where $t \le \tau$, and let $d(D(A), \Sigma \setminus \Delta) \ge \theta$ for every $A \in \mathcal{B} \setminus \{A_1, \ldots, A_t\}$. Let $A'_1, \ldots, A'_t \in \mathcal{A}$, and suppose that}

@@ -1,0 +1,33 @@
+\origpage{189}{GRAPH MINORS, X}
+\textit{Proof.} We must check [8] that
+
+\hspace*{12pt}(i) $r$ is integral-valued
+
+\hspace*{12pt}(ii) for $X \subseteq V(G)$, $0 \le r(X) \le |X|$
+
+\hspace*{12pt}(iii) for $X \subseteq Y \subseteq V(G)$, $r(X) \le r(Y)$
+
+\hspace*{12pt}(iv) for $X, Y \subseteq V(G)$, $r(X \cup Y) + r(X \cap Y) \le r(X) + r(Y)$.
+
+\hspace*{12pt}(i) and (iii) are clear. For (ii), certainly $r(X) \ge 0$. Since $r(X) \le \theta$, we may assume that $|X| < \theta$. Let $K$ be the hypergraph with $V(K) = X$, $E(K) = \emptyset$. Since $(G, K) \notin \mathscr{T}$ and has order $< \theta$, it follows that $(K, G) \in \mathscr{T}$, and so
+\begin{equation*}
+r(X) \le |V(K \cap G)| \le |X|.
+\end{equation*}
+This verifies (ii). For (iv), let $X, Y \subseteq V(G)$. Since $r(X \cap Y) \le r(Y)$ and $r(X \cup Y) \le \theta$, we may assume that $r(X) < \theta$ and similarly $r(Y) < \theta$. Choose $(A, B) \in \mathscr{T}$ of order $r(X)$ with $X \subseteq V(A)$ and $(C, D) \in \mathscr{T}$ of order $r(Y)$ with $Y \subseteq V(C)$. We claim that $r(X \cap Y)$ is at most the order of $(A \cap C, B \cup D)$; for this is true if $(A \cap C, B \cup D)$ has order $\ge \theta$, and otherwise $(A \cap C, B \cup D) \in \mathscr{T}$, and the claim follows since $X \cap Y \subseteq V(A \cap C)$. Similarly, $r(X \cup Y)$ is at most the order of $(A \cup C, B \cap D)$, by (2.2). Since the sum of the orders of $(A, B)$ and $(C, D)$ equals the sum of the order of $(A \cap C, B \cup D)$ and $(A \cup C, B \cap D)$, the result follows. $\square$
+
+Thus, given $\mathscr{T}$, $G$ as before, let us say that $X \subseteq V(G)$ is \textit{free} if $|X| \le \theta$ and there is no $(A, B) \in \mathscr{T}$ of order $< |X|$ with $X \subseteq V(A)$. From (12.1) we deduce
+
+\stmt
+(12.2) \textit{The free sets are the independent sets of a matroid on $V(G)$ with rank function $r$ as in (12.1).}
+
+We shall need (12.2) in a later paper. Incidentally, we do not know which matroids can arise this way, but they are not just the gammoids [8].
+
+Secondly, for the matroid theorist it is a little unnatural to define the order of a separation $(A, B)$ of a graph to be $|V(A \cap B)|$, as we have done. From the viewpoint of matroid theory, a more significant number is the \textit{Tutte-order}, defined to be
+\begin{equation*}
+|V(A \cap B)| + 1 + \kappa(G) - \kappa(A) - \kappa(B),
+\end{equation*}
+where $\kappa(F)$ denotes the number of components of $F$, for a subgraph $F$ of $G$; for the Tutte-order of a separation $(A, B)$ equals
+\begin{equation*}
+r(E(A)) + r(E(B)) - r(E(G)) + 1,
+\end{equation*}
+where $r$ is the rank function of the polygon matroid of $G$. One can define both ``Tutte-tangles'' and ``Tutte-branch-width'' using Tutte-order instead

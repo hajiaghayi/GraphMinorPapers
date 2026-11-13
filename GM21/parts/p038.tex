@@ -1,0 +1,18 @@
+\origpage{36}{}
+Now let $\Gamma, F_1^*, \dots, F_r^*, \mu$ be a pseudo-presentation of $G$, and let $\mathcal{T}$ be a tangle in $G$. We say the pseudo-presentation \textit{surrounds} $\mathcal{T}$ if $\mu(s)$ is small for every space $s \in F_1^* \cup \dots \cup F_r^*$.
+
+\textbf{8.3} \textit{With notation as in (8.2), suppose that $\Gamma, F_1^*, \dots, F_r^*, \mu$ is a pseudo-presentation of depth $\le q$, and surrounds a tangle $\mathcal{T}$ in $G$ of order $\theta \ge 2q + 3$. Then $\Gamma, F_1^*, \dots, F_r^*, \mu'$ surrounds a tangle in $G'$ of order $\theta - 1$.}
+
+\textbf{Proof.} Let $\mathcal{T}'$ be the tangle of order $\theta - 1$ in $G'$ induced by $\mathcal{T} \setminus \{v\}$. (This exists, from (3.2) and (3.4).) Let $s \subseteq F_1^* \cup \dots \cup F_r^*$ be a space, and choose $B \subseteq G$ minimal such that $(\mu(s), B)$ is a separation of $G$. By (7.1), $(\mu(s), B) \in \mathcal{T}$ since $\mu(s)$ is small. Let $w \in V(\mu(s) \cap B)$; we claim that $w \in V(\mu(a) \cup \mu(b))$, where $s$ has ends $a$ and $b$. For if $w = a$ or $b$ this is true, and we assume not. By (P2), $w \notin V(\Gamma)$. Since $u \in V(B)$ it follows from the minimality of $B$ that some edge $e$ of $G$ not in $\mu(s)$ is incident with $w$, and $e \notin E(\Gamma)$ since $w \notin V(\Gamma)$. Choose a space $s'$ with $e \in E(\mu(s'))$. Then $s' \ne s$, and so $s, a, s', b$ are in order in the cuff containing them (this exists, by (P1)). By (P3),
+\begin{equation*}
+w \in V(\mu(s) \cap \mu(s')) \subseteq V(\mu(a) \cup \mu(b))
+\end{equation*}
+as claimed. We have proved then that $V(\mu(s) \cap B) \subseteq V(\mu(a) \cup \mu(b))$. Hence $(\mu(s), B)$ has order $\le 2q \le \theta - 2$.
+
+Let $A_1$ be the subgraph of $G$ with vertex set $V(\mu(s)) \cup \{v\}$ and edge set $E(\mu(s))$; and let $B_1$ have vertex set $V(B) \cup \{v\}$ and edge set $E(B)$. By theorem (2.9)(iii) of [6], $(A_1, B_1) \in \mathcal{T}$, since $(\mu(s), B)$ has order $\le \theta - 2$. Hence $(A_1 \setminus v, B_1 \setminus v) \in \mathcal{T} \setminus v$. Let $A_2 = \mu'(s)$, and let $B_2 \subseteq G'$ be minimal such that $(A_2, B_2)$ is a separation of $G'$. Then $(A_2, B_2)$ has order $\le 2q$. But $A_2 \cap (G \setminus v) = A_1 \setminus v$, and so $(A_2 \cap (G \setminus v), B_2 \cap (G \setminus v)) \in \mathcal{T} \setminus v$ by theorem (2.9)(iii) of [6], since $(A_1 \setminus v, B_1 \setminus v) \in \mathcal{T} \setminus v$ and $\mathcal{T} \setminus v$ has order $\ge 2$. From the definition of $\mathcal{T}'$ it follows that $(A_2, B_2) \in \mathcal{T}'$, and so $\mu'(s)$ is small with respect to $\mathcal{T}'$, as required. $\square$
+
+The main result of this section is the following.
+
+\textbf{8.4} \textit{For every surface $\Sigma$ and all integers $p, r \ge 0$ and $q \ge 1$, there exists $\theta \ge 1$ such that, if a graph $G$ has a pseudo-presentation in $\Sigma$ of depth $\le q$ and defect $\le r$ which surrounds a tangle of order $\ge \theta$, then $G$ has no vital $p$-linkage.}
+
+\textbf{Proof.} Choose $\theta' \ge 2q + 2$ so that (7.3) holds, with $\Sigma, p, q, r$ replaced by $\Sigma, p + 2qr, q, r$. Let $\theta = \theta' + qr$. We claim that $\theta$ satisfies (8.4). For suppose that $G$ has a pseudo-presentation in $\Sigma$ of

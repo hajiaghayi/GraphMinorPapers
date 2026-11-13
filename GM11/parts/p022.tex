@@ -1,0 +1,27 @@
+\origpage{93}{GRAPH MINORS. XI}
+\noindent \textit{from $\mathscr{T}$ and from $\mathscr{T}^*$ are equal. In particular, $\Gamma$ has a tangle of order $\theta$ if and only if $\Gamma^*$ does.}\fixnote{fix:6.6}{The argument before (6.6) uses (6.5) in both $\Gamma$ and $\Gamma^*$, so it needs the hypothesis of (6.5) in both. In the example of the note to (6.5), $\Gamma^*$ has two vertices joined by one edge, and the pretangle of order 2 derived from the even slope is a tangle in $\Gamma^*$ but not in $\Gamma$, so the bijection fails. With the added hypothesis, (6.6) holds.}
+
+We can also formulate (6.6) in terms of ``dual'' pairs of paintings, in the natural way. Incidentally, (6.6) contrasts with a result of [2], that dual graphs even in the sphere need not have the same tree-width. (A better example than that given in [2] is the cube and the octahedron; although they are dual in the sphere, one has tree-width 3 and the other 4.)
+
+\sectionhead{7. Some Topological Lemmas}
+
+Our object in the remainder of the paper is to study ``planar neighbourhoods'' of points, given a slope in a drawing on a surface. First, we shall need some lemmas about simply-connected sets.
+
+\stmt
+(7.1) \textit{If $M$ is a triangulable connected 2-manifold, then any null-homotopic $O$-arc in $M$ bounds a disc in $M$.}
+
+This is [1, Theorem (1.7)].
+
+\stmt
+(7.2) \textit{If $\Sigma$ is a connected surface, $Z \subseteq \Sigma$, and $F \subseteq Z$ is an $O$-arc null-homotopic in $Z$, then $F$ bounds a disc $\Delta \subseteq Z$.}
+
+\textit{Proof.} Suppose that $F$ bounds no such disc. From each of the (at most two) discs in $\Sigma$ bounded by $F$, select a point of $\Sigma - Z$; and let $X$ be the set of selected points. Then $|X| \le 2$ and so $\Sigma - X$ is a triangulable connected 2-manifold, and $F$ bounds no disc in $\Sigma - X$. By (7.1), $F$ is not null-homotopic in $\Sigma - X$, and hence not null-homotopic in $Z$, since $Z \subseteq \Sigma - X$, a contradiction. $\square$
+
+A subset $Z \subseteq \Sigma$ is \textit{nice} if there is a drawing $\Gamma$ in $\Sigma$ such that $Z$ is the union of certain vertices, edges, and regions of $\Gamma$.
+
+\stmt
+(7.3) \textit{If $Z \subseteq \Sigma$ is nice and $\phi \colon S^1 \to Z$ is continuous and not null-homotopic in $Z$, then there is an $O$-arc $F \subseteq |\phi|$ which is not null-homotopic in $Z$.}
+
+\textit{Proof.} For $Z = \Sigma$ this is [3, Theorem (11.2)]. The proof given there easily extends to nice sets $Z$; indeed, all that is needed is an open cover $\Delta_i$ ($i \in I$) of $\Sigma$ such that for $i, i' \in I$, every continuous $\psi \colon S^1 \to \Sigma$ with $|\psi| \subseteq (\Delta_i \cup \Delta_{i'}) \cap Z$ is null-homotopic in $Z$, and this clearly exists for nice sets $Z$. $\square$
+
+Incidentally, we are not sure if (7.3) holds without the ``nice'' requirement. From (7.2) and (7.3) we deduce

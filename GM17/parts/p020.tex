@@ -1,0 +1,26 @@
+\origpage{181}{GRAPH MINORS, XVII}
+Thus $\pi'$ is a portrayal of $G$. Now $\alpha(\Delta)$ is small, and so $\pi'$ is $\mathcal{T}$-central. Moreover, the warp in $\pi'$ of each cell of $C(\Gamma') - \{c'\}$ is the same as in $\pi$. To complete the proof we must show that $c'$ has warp in $\pi'$ at most the warp ($q$ say) of $\pi$ at $\Theta$, where $\Theta$ is the cuff of $\Sigma$ containing $n_1, n_2$. (For then it will follow that $\pi'$ resembles or is simpler than $\pi$; and it cannot be simpler, since $\pi$ is $0$-redundant.) By (5.1), $q \ge 1$.
+
+Let $F' = bd(\Delta) \cap \Theta$; then $F'$ is a $[0, 1]$-arc with ends $n_1, n_2$. Let $F'' \subseteq \Theta$ be the other $[0, 1]$-arc with ends $n_1, n_2$. From (6.7) we deduce that for every $n \in N(\Gamma) \cap F'$, $\beta(n_1+) \cap \beta(n_2+) \subseteq \beta(n+)$. From (7.3), $c'$ has warp $\le q$ in $\pi'$. This completes the proof. $\square$
+
+\sectionhead{8. \textsc{The} \textsc{Painting} \textsc{Of} A \textsc{True} \textsc{Portrayal}}
+
+Now we begin to use the results of the last two sections to show that, if $G$ has a $\mathcal{T}$-central portrayal with reasonable redundancy, then it has a resembling $\mathcal{T}$-central portrayal with even more desirable properties.
+
+Let $\pi = (\Sigma, \Gamma, \alpha, \beta, \gamma)$ be a portrayal of $G$. Its truth is the sequence $(\tau_1, \dots, \tau_6)$, where
+\begin{align*}
+\tau_i &= |\{c \in C(\Gamma): c \text{ is internal and } |\tilde{c}| = 4 - i\}| \qquad (i = 1, \dots, 4) \\
+\tau_5 &= |N(\Gamma) - bd(\Sigma)| \\
+\tau_6 &= |N(\Gamma) \cap bd(\Sigma)|.
+\end{align*}
+We order truths lexicographically; thus, if $\pi'$ is another portrayal with truth $(\tau'_1, \dots, \tau'_6)$, we say that $\pi$ is truer than $\pi'$ if for some $k$ ($1 \le k \le 6$), $\tau_i = \tau'_i$ for $1 \le i < k$ and $\tau_k < \tau'_k$.
+
+Let $\mathcal{T}$ be a tangle in a hypergraph $G$. A $0$-redundant $\mathcal{T}$-central portrayal $\pi$ is \textit{true} (relative to $\mathcal{T}$) if there is no truer $\mathcal{T}$-central portrayal resembling $\pi$. (Certainly there is none simpler than $\pi$, since $\pi$ is $0$-redundant.) In this section we shall study properties of paintings in true portrayals. Throughout this section, $\pi = (\Sigma, \Gamma, \alpha, \beta, \gamma)$ is a true, $(2p+3)$-redundant, $\mathcal{T}$-central portrayal of a hypergraph $G$ with warp $\le p$, and $ord(\mathcal{T}) > 4p+5$.
+
+\stmt
+(8.1) \textit{Every region of $\Gamma$ is an open disc.}
+
+\textit{Proof.} Otherwise, there is an $O$-arc $F \subseteq \Sigma$ with $F \cap U(\Gamma) = \emptyset$ such that there is no disc $\Delta \subseteq \Sigma$ with $bd(\Delta) = F$ and $\Delta \cap U(\Gamma) = \emptyset$. But then (7.1), applied to the disc provided by (6.4), yields a truer $\mathcal{T}$-central portrayal resembling $\pi$, a contradiction. $\square$
+
+\stmt
+(8.2) \textit{The boundary of every region is an $O$-arc, and in particular, $|\tilde{c}| \ge 2$ for every cell $c$.}

@@ -1,0 +1,35 @@
+\origpage{106}{ROBERTSON AND SEYMOUR}
+\noindent $|P_1\cup\cdots\cup P_t|\le 2b_1$. Put $P=P_1\cup\cdots\cup P_t$. Then $|V_{i'}-P|,..., |V_k-P|>b_1$, and $B_{i'}\setminus P,..., B_k\setminus P$ are all connected; and so the set
+\begin{equation*}
+\{G|P, B_2,..., B_{i'-1}, B_{i'}\setminus P,..., B_k\setminus P\}
+\end{equation*}
+contradicts the lexicographic lastness of $d(\mathcal{B})$.
+
+Since the assumption $|V(C)|\ge |V(G)|/3$ leads to a contradiction in both cases 1 and 2, every component of $G\setminus X$ has fewer than $|V(G)|/3$ vertices. Moreover $|X|<k$ since $i'>1$. This completes the proof.
+
+The following extends (6.3) to disconnected graphs.
+
+\stmt
+(6.4) \textit{Let $G$ be a graph and let $k>0$ be an integer. Then at least one of the following holds:}
+
+\hspace*{12pt}(i) \textit{there are $k$ disjoint connected subgraphs of $G$, each with at least $4(3^k-1)^{-1}|V(G)|/3$ vertices;}
+
+\hspace*{12pt}(ii) \textit{there is a separation $(V_1, V_2)$ of $G$ such that $|V_1\cap V_2|<k$ and $|V_1 - V_2|, |V_2 - V_1|\le 2|V(G)|/3$.}
+
+\textit{Proof.} Let $G$ have components $G_1,..., G_t$, where $|V(G_1)|\ge |V(G_2)|\ge \cdots \ge |V(G_t)|$. If $|V(G_1)|\le 2|V(G)|/3$ then (ii) is true; indeed, we may choose $V_1, V_2$ in (ii) with $V_1\cap V_2=\emptyset$, as is easily seen. We assume then that $|V(G_1)|>2|V(G)|/3$, and apply (6.3) to $G_1$. If (6.3) (i) holds for $G_1$, then (i) holds for $G$. We assume then that (6.3) (ii) holds for $G_1$, and $X\subseteq V(G_1)$ is such that $|X|<k$ and every component of $G_1\setminus X$ has fewer than $|V(G_1)|/3$ vertices. Now
+\begin{equation*}
+|V(G_2)|,..., |V(G_t)|\le |V(G)|-|V(G_1)| < |V(G)|/3,
+\end{equation*}
+and so every component of $G\setminus X$ has fewer than $|V(G)|/3$ vertices. It follows easily that (ii) holds, as required.
+
+\sectionhead{7. Meshes and Tree-Width}
+
+In this section we complete the proof of (2.1).
+
+\stmt
+(7.1) \textit{If $G\in \mathcal{F}_\theta$ then $G$ has a separation $(V_1, V_2)$ such that $|V_1\cap V_2|\le \theta_7$ and $|V_1 - V_2|, |V_2 - V_1|\le (1 - \theta_8^{-1})|V(G)|$, where $\theta_7, \theta_8$ are as defined in Section 2.}
+
+\textit{Proof.} If there is a separation $(V_1, V_2)$ of $G$ with $|V_1\cap V_2|<\theta_5$, and
+\begin{equation*}
+|V_1 - V_2|, |V_2 - V_1|\le 2|V(G)|/3
+\end{equation*}

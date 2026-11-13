@@ -1,0 +1,35 @@
+\origpage{251}{GRAPH MINORS. VII}
+\noindent above, $|\psi_X| \subseteq F(\phi(z), \phi(z'))$. In particular, $\psi_X(x) \in F(\phi(z), \phi(z'))$, and by (1)
+\begin{equation*}
+\|\phi(z) - \psi_X(x)\| \le \|\phi(z) - \phi(z')\| \le \frac{1}{2}\varepsilon.
+\end{equation*}
+Moreover, $\|\phi(x) - \phi(z)\| \le \frac{1}{2}\varepsilon$ since $\|x - z\| \le \operatorname{diam}(X) \le \delta$. Hence
+\begin{equation*}
+\|\phi(x) - \psi_X(x)\| \le \|\phi(x) - \phi(z)\| + \|\phi(z) - \psi_X(x)\| \le \varepsilon
+\end{equation*}
+as required.
+
+We define $\psi \colon S^1 \to Y \cup bd(\Delta)$ by $\psi(z) = \phi(z)$ if $z \notin Z$ and $\psi(z) = \psi_X(z)$ if $z \in X \in \Xi$. We shall show that $\psi$ satisfies the theorem. Now $\Xi$ is at most countable; let $\Xi = \{X_1, X_2, \dots\}$. Define $\psi_i \colon S^1 \to Y \cup bd(\Sigma)$ for $i = 1, 2, \dots$, by
+\begin{align*}
+\psi_i(z) &= \phi(z) && (z \in S^1 - X_1 \cup \cdots \cup X_i) \\
+&= \psi_{X_j}(z) && (z \in X_j \text{ for some } j \text{ with } 1 \le j \le i).
+\end{align*}
+Clearly $\psi_1, \psi_2, \dots$, are all continuous. Since for all $\delta > 0$ there are only finitely many members $X \in \Xi$ for which $\operatorname{diam}(X) > \delta$, it follows from (3) that the sequence $\psi_1, \psi_2, \dots$, converges uniformly to $\psi$, and hence that $\psi$ is continuous.
+
+It remains to show that $\phi$ is homotopic to $\psi$. The required homotopy is given by
+\begin{equation*}
+\theta(x, t) = t\psi(x) + (1 - t)\phi(x) \qquad (x \in S^1, 0 \le t \le 1)
+\end{equation*}
+as is easily seen. This completes the proof.
+
+The arc-components of $Z \subseteq \Sigma$ are the maximal arc-connected subsets of $Z$; they partition $Z$. We say $Z \subseteq \Sigma$ is \textit{locally arc-connected} (l.a.c.) if for every $z \in Z$ and every open set $A \subseteq \Sigma$ with $z \in A$ there exists $A' \subseteq A$ with $z \in A'$, open in $\Sigma$, such that $Z \cap A'$ is arc-connected.
+
+\stmt
+(11.4) \textit{If $Z$ is connected and l.a.c. then $Z$ is arc-connected.}
+
+\textit{Proof.} Let $A$ be an arc-component of $Z$, and let $B = Z - A$. If $z \in \bar{A} \cap \bar{B} \cap Z$, there is an open set $C \subseteq \Sigma$ with $z \in C$ such that $C \cap Z$ is arc-connected; but $A \cap C$, $B \cap C \ne \emptyset$, a contradiction. Thus $\bar{A} \cap \bar{B} \cap Z = \emptyset$, and so $B = \emptyset$ since $Z$ is connected. The result follows.
+
+\stmt
+(11.5) \textit{If $Z \subseteq \Sigma$ is flat and l.a.c., there is an open, flat, l.a.c. set $Y \subseteq \Sigma$ with $Z \subseteq Y$, which may be chosen arc-connected if $Z$ is arc-connected.}
+
+\textit{Proof.} For each $z \in Z$, choose an open $\Delta_z \subseteq \Sigma$ with $z \in \Delta_z$ such that $\Delta_z$ is flat and $Z \cap \Delta_z$ is arc-connected. Since $\Sigma$ is metrizable, we may choose a

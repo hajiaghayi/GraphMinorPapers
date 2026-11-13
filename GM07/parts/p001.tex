@@ -1,0 +1,25 @@
+\origpage{212}{ROBERTSON AND SEYMOUR}
+{\centering
+{\Large Graph Minors. VII. Disjoint Paths on a Surface\par}\medskip
+
+Neil Robertson \textit{Department of Mathematics, Ohio State University, 231 West 18th Avenue, Columbus, Ohio 43210}\par
+AND\par
+P. D. Seymour$^*$ \textit{Bell Communications Research, 435 South Street, Morristown, New Jersey 07960}\par
+\textit{Communicated by U. S. R. Murty}\par
+Received August 10, 1984\par
+}
+\begin{quote}
+Let $s_1, t_1, s_2, t_2, \dots, s_k, t_k$ be vertices of a graph $G$ drawn in a surface $\Sigma$. When are there $k$ vertex-disjoint paths of $G$ linking $s_i$ and $t_i$ ($1 \le i \le k$)? We study sufficient conditions---for instance, it suffices that $G$ is connected and ``uses up'' the surface adequately, and all the $s_i$'s and $t_j$'s are mutually ``far apart.'' Our results are applied to yield a polynomially bounded algorithm to solve the problem for fixed $\Sigma$ and $k$.
+
+\end{quote}
+
+\sectionhead{1. Introduction}
+
+Let $G$ be a graph drawn on a connected surface $\Sigma$, and let $s_1, t_1, s_2, t_2, \dots, s_k, t_k$ be vertices of $G$. When are there $k$ vertex-disjoint paths joining $s_i$ and $t_i$ ($1 \le i \le k$), respectively? It is plausible that if the vertices $s_1, t_1, \dots, s_k, t_k$ are in some sense far apart and if $G$ ``represents'' the surface $\Sigma$ adequately, the paths will exist. More precisely, if
+
+\hspace*{12pt}(i) $G$ is connected,
+
+\hspace*{12pt}(ii) every curve drawn in $\Sigma$ between two distinct members of $\{s_1, t_1, \dots, s_k, t_k\}$ has large ``length'', that is, has a large number of points in common with the drawing of $G$,
+
+\hspace*{12pt}(iii) every closed curve drawn in $\Sigma$ which is not null-homotopic also has large ``length,'' and%
+\origfootnote{Research partially supported by NSF Grant MCS8103440.}

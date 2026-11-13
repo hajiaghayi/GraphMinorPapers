@@ -1,0 +1,40 @@
+\origpage{93}{GRAPH MINORS. XIII}
+From (7.5) and (7.6) we deduce
+
+\stmt
+(7.7) \textit{For any $p \ge 2$ there are integers $l \ge 3$, $m \ge 0$ with the following property. Let $G$ be a graph and let $H$ be a wall in $G$, so that there are $\binom{p}{2}$ $(l, m)$-stars over $H$, with distinct centers; then $G$ has a $K_p$-minor. Moreover, there is an algorithm, with running time $\le C\varepsilon(G)$, where $C$ depends only on $p$, which, given $\binom{p}{2}$ $(l, m)$-stars with distinct centers over a wall $H$ in a graph $G$, finds a model of $K_p$ in $G$.}
+
+The first assertion is clear from (7.5) and (7.6). The second follows since the proofs of (7.5) and of (7.6) may easily be converted to algorithms.
+
+\fix{We give the details for the steps that need a method. We assume that a wall is given with its identification with a subdivision of an elementary wall, so that the position of each of its vertices in the drawing of Fig. 1 is known: a vertex of the elementary wall, or a point of the line that represents one of its edges. A wall that is a subgraph of it gets its positions from these. The numbers $k = \binom{p}{2}$ and $l$ depend only on $p$, and so do the numbers of stars, legs and ends handled below.
+
+For (7.6), each application of (7.3) with $r = 0$ chooses $H_i$ among a bounded number of explicit subwalls of $H_{i-1}$, according to the position of $v_i$ in $H_{i-1}$ (see the proof of (7.3)), and this takes time $O(\varepsilon)$. Then we extend every leg of every star as in (1). Let $P_j$ be a leg with ends $v, u_j$, and let $q$ be the first vertex of the bottom row of $H_i$. In the elementary wall of $H_{i-1}$ there is a path from the position of $u_j$ to that of $q$ that runs along the row of $u_j$ to a vertical edge, along this edge to the next row, and so on until it reaches the row of $q$, and then along this row to $q$ (if $u_j$ is inside an edge of the elementary wall, the path first runs along this edge). We follow the corresponding path of $H_{i-1}$ from $u_j$ and stop at its first vertex in $V(H_i)$. This gives a minimal path $Q_j$ of $H_{i-1}$ between $u_j$ and $V(H_i)$, in time $O(\varepsilon)$. If $v \in V(Q_j)$, the new leg is the subpath of $Q_j$ between $v$ and $w_j$, as in (1), and otherwise it is $P_j \cup Q_j$. In this way a new leg may consist of $v$ alone, when $v = w_j$ (this is why the proof of (7.6) uses (1) only once). We allow such legs before the last step. The argument of (1) applies to them unchanged and gives the bound $m + 4(k - i)$ on the distances between the ends of the legs, since it uses only these ends. After step $k$ no center is in $V(H_k)$, and so every leg has at least two vertices, and we have $k$ external $(l, m)$-stars over $H_k$.
+
+For (7.5) we follow the induction on $k$. Given $S_1, \dots, S_k$, we obtain $S'_i$ by deleting from $S_i$ the leg that contains $v_k$, or any one leg if there is none. There is at most one such leg, since $v_k$ is not the center of $S_i$ and the legs of $S_i$ meet only in its center. We apply the algorithm to $S'_1, \dots, S'_{k-1}$ and obtain $Q_1, \dots, Q_{k-1}$. Next we label each vertex of $Q_j$ with $j$ ($1 \le j \le k - 1$), number the vertices of each $Q_j$ in order, and traverse each leg $P_i$ of $S_k$ from its end in $V(H)$, recording for each $j$ the first vertex of $P_i$ with label $j$. This takes time $O(\varepsilon)$, since the legs of $S_k$ meet only in $v_k$, and it decides whether some $j$ has $\ge 2k$ values of $i$ with $P_i \cap Q_j$ non-null. If so, it gives the vertices $u_{i_1}, \dots, u_{i_{2k}}$ in order on $Q_j$, and the paths $R_1, \dots, R_k$ are formed in time $O(\varepsilon)$. Otherwise we need the distances $d(u_i, x)$ for the $2(k - 1)$ ends $x$ of $Q_1, \dots, Q_{k-1}$, and we compute them from the positions of $u_i$ and $x$. By the formula for $d$ in the proof of (7.3), for distinct vertices $s, t$ of $H$, $d(s, t)$ is $2$ plus the minimum of $D_H(R, R')$ over the regions $R$ at $s$ and $R'$ at $t$. Moreover $D_H$ of a brick and the infinite region is the depth of the brick, and $D_H$ of two bricks is the smaller of their lattice distance and the sum of their depths. Let $H$ have height $h$. We may take the drawing of the elementary wall to have as its vertices the points $(x, y)$ with integers $0 \le x \le 2h + 1$ and $0 \le y \le h$, other than $(0, 0)$ and $(2h + 1, h)$, with the rows horizontal, and with $(x, y)$ joined to $(x, y + 1)$ when $x + y$ is odd. We name each brick $(X, y)$, where the brick lies between the rows $y$ and $y + 1$ ($0 \le y < h$) and $X$ is the abscissa of its middle. Then the lattice distance of the bricks $(X, y)$ and $(X', y')$ is
+\begin{equation*}
+\max\bigl(|y - y'|, \tfrac{1}{2}(|X - X'| + |y - y'|)\bigr),
+\end{equation*}
+and the depth of the brick $(X, y)$ is
+\begin{equation*}
+\min\bigl(y + 1, \; h - y, \; \lfloor (X + 1)/2 \rfloor, \; \lfloor (2h + 2 - X)/2 \rfloor\bigr).
+\end{equation*}
+The regions at a vertex are read off from its position, and so each distance $d(u_i, x)$ is computed in constant time. Thus each of the $\binom{p}{2}$ steps of the induction takes time $O(\varepsilon)$. Together with the algorithm of (7.4), this gives a model of $K_p$ in time $\le C\varepsilon(G)$.}\fixnote{fix:7.7-proof-added}{The paper says only that the proofs of (7.5) and (7.6) may easily be converted to algorithms. The paragraphs above give the method and the running time of each step that is not read off directly from these proofs. The method is the one used in the formalization.}
+
+\sectionhead{8. \textsc{The} 2-\textsc{Paths} \textsc{Problem}}
+
+Let $G$ be a graph and let $\Omega$ be a cyclic permutation of a subset (denoted by $\bar{\Omega}$) of $V(G)$. We call $(G, \Omega)$ a \textit{society}. Actually, for our application in this paper we could assume that $|\bar{\Omega}| = 4$ throughout, but we have chosen to give the results in general. A \textit{cross} in a society $(G, \Omega)$ is a subgraph $P \cup Q$ of $G$, where $P, Q$ are vertex-disjoint paths of $G$ with ends $p_1, p_2$ and $q_1, q_2$, respectively, and $p_1, q_1, p_2, q_2 \in \bar{\Omega}$ and occur in this order or its reverse under $\Omega$. We need the following.
+
+\stmt
+(8.1) \textsc{Algorithm}.
+
+\textit{Input:} A society $(G, \Omega)$.
+
+\textit{Output:} A cross in $(G, \Omega)$ if one exists.
+
+\textit{Running time:} $O(v\varepsilon)$.
+
+\textit{Description:} We assume that $|\bar{\Omega}| \ge 4$, for otherwise no cross exists. Let $H$ be the cubic graph formed by two vertex-disjoint circuits $C_1, C_2$, both of length $|\bar{\Omega}|$, and for $1 \le i \le |\bar{\Omega}|$ an edge joining the $i$ th vertices of $C_1$ and $C_2$. Identify $V(C_2)$ with $\bar{\Omega}$, in order, and let $s_1, s_2, t_1, t_2$ be distinct vertices of $C_1$, in order. We apply an algorithm of Shiloach [27]\fixnote{fix:8.1-shiloach}{Shiloach's paper [27] gives the algorithm in outline. On page 454 it says ``We have not written the solution as an explicit, long, and tedious algorithm''. A complete algorithm for finding a cross, with a proof, is in the note \textit{Extracting a crossing in time $O(nm)$}, in the folder \href{https://github.com/mahdi-jfri/GraphMinor/tree/main/docs/crossing}{docs/crossing} of the formalization.} to find two paths of $G \cup H$, vertex-disjoint, joining $s_1, t_1$ and $s_2, t_2$, respectively, if they exist. If we find two such paths it is easy to derive a cross in $(G, \Omega)$; and if there are not two such paths it is easy to see that $(G, \Omega)$ has no cross. (Since Shiloach's algorithm has running time $O(v\varepsilon)$, so does (8.1).) $\square$
+
+Let $(G, \Omega)$ be a society. A subset $Z \subseteq V(G)$ is \textit{trisecting} if $\bar{\Omega} \subseteq Z$, and for every $v \in V(G) - Z$ there are $\le 3$ vertices $z \in Z$ such that there is a path of $G$ between $v$ and $z$ with no other vertex in $Z$. Thus, $V(G)$ is always trisecting.
+
+A \textit{core} $C$ in $(G, \Omega)$ is a simple graph with vertex set a trisecting subset $Z \subseteq V(G)$, in which distinct $u, v \in Z$ are adjacent if and only if there is a

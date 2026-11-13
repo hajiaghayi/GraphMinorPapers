@@ -1,0 +1,30 @@
+\origpage{65}{N. Robertson, P.D. Seymour / Journal of Combinatorial Theory, Series B 89 (2003) 43--76}
+\noindent and so $(A^* \cap H, B^* \cap H) \in \mathcal{T}$, since $H, \mathcal{T}$ is a $\Sigma$-span with respect to $\mathcal{T}^*$. Now $(A^* \cap H, B^* \cap H) = (A \cap H, B \cap H)$ since $Z \cap V(H) = \emptyset$, and so $(A \cap H, B \cap H) \in \mathcal{T}$; and consequently $(A \cap H, B \cap H) \in \mathcal{T}'$, since it has order $\le |V(A \cap B)| < ord(\mathcal{T}')$. This proves 8.2. $\square$
+
+Our second lemma is the following.
+
+\textbf{8.3.} \textit{Let $\Sigma$ be a surface, and let $\tau, \chi, \delta, \lambda, \zeta \ge 0$ and $\psi \ge 3$. Then there exists $\theta > \zeta$ such that if $\mathcal{T}^*$ is a tangle in a graph $G$, and $(H, \mathcal{T}, X, Y)$ is an animal with $\chi$ horns and $\delta$ hairs, of strength $\ge (\theta, \zeta + \tau)$, and $Z \subseteq V(G) \setminus V(H)$ with $X \subseteq Z$ and $|Z| \le \zeta$, then either:}
+
+\hspace*{12pt}$\bullet$ \textit{there is an animal with $\chi$ horns and $\delta + 1$ hairs of strength $\ge (\psi, \tau)$, or}
+
+\hspace*{12pt}$\bullet$ \textit{there is an $H$-path in $G \setminus Z$ with ends $s_1, s_2$ and there are distinct $y_1, y_2 \in Y$ with $d(s_1, y_1), d(s_2, y_2) < \psi$, where $d$ is the metric of $\mathcal{T}$, or}
+
+\hspace*{12pt}$\bullet$ \textit{$H, \mathcal{T}_0$ is a $(\lambda, 2\psi)$-level $\Sigma$-span of order $\theta - |Z|$ in $G \setminus Z$ with respect to $\mathcal{T}^* \setminus Z$, where $\mathcal{T}_0$ is the truncation of $\mathcal{T}$ to order $\theta - |Z|$.}
+
+\textbf{Proof.} Let $\theta = 4\psi + 10\lambda + 3\zeta + 11$. We claim that $\theta$ satisfies 8.3. For let $\mathcal{T}^*, G, H, \mathcal{T}, X, Y, Z$ be as in the hypothesis of 8.3, and let $d$ be the metric of $\mathcal{T}$. We may assume that
+
+\hspace*{12pt}(1) $ord(\mathcal{T}) = \theta$.
+
+\textit{Subproof.} Let $\mathcal{T}'$ be the truncation of $\mathcal{T}$ to order $\theta$. Then $(H, \mathcal{T}', X, Y)$ is another animal satisfying the same hypotheses, and since $\theta \ge \psi$, it is easy to see that if the theorem is true for $(H, \mathcal{T}', X, Y)$ then it is true for $(H, \mathcal{T}, X, Y)$. Thus it suffices to prove the theorem for $(H, \mathcal{T}', X, Y)$ and (1) follows.
+
+Also, we may assume that
+
+\hspace*{12pt}(2) \textit{If there is an $H$-path in $G \setminus Z$ with ends $s_1, s_2$ then $d(s_1, s_2) < 2\psi$.}
+
+\textit{Subproof.} Suppose that $d(s_1, s_2) \ge 2\psi$. If $d(s_1, y) \ge \psi$ for all $y \in Y$, then $(H, \mathcal{T}, X, Y \cup \{s_1\})$ is an animal with $\chi$ horns and $\delta + 1$ hairs of strength $\ge (\psi, \tau)$, since $X \subseteq Z$, and so the first outcome of 8.3 holds. We may assume then that $d(s_1, y_1) < \psi$ for some $y_1 \in Y$, and similarly $d(s_2, y_2) < \psi$ for some $y_2 \in Y$. But $y_1 \ne y_2$ since
+\begin{equation*}
+2\psi \le d(s_1, s_2) \le d(s_1, y_1) + d(y_1, y_2) + d(y_2, s_2) < 2\psi + d(y_1, y_2)
+\end{equation*}
+and so the second outcome of 8.3 holds. Thus we may assume (2).
+
+Let $\mathcal{T}_0$ be the truncation of $\mathcal{T}$ to order $\theta - |Z|$. By 8.2, $H, \mathcal{T}_0$ is a $\Sigma$-span in $G \setminus Z$ with respect to $\mathcal{T}^* \setminus Z$, and we may assume that it is not $(\lambda, 2\psi)$-level, for otherwise the third outcome of 8.3 holds. But by (2), there is no $H$-path in $G \setminus Z$ with ends $s_1, s_2$ such that $d_0(s_1, s_2) \ge 2\psi$, for $d_0(s_1, s_2) \le d(s_1, s_2)$ (where $d_0$ is the metric of $\mathcal{T}_0$). Yet

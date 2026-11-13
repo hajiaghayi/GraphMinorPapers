@@ -1,0 +1,19 @@
+\origpage{232}{ROBERTSON AND SEYMOUR}
+\noindent $F \subseteq E(T)$, we define the \textit{contraction of $T$ onto $F$} to be the tree $S$ with $E(S) = F$ and $V(S)$ the set of roots of the components of $T\setminus F$, in which $v \in V(S)$ is the head (or tail, respectively) of $f \in F$ if the head (or tail, respectively) of $f$ in $T$ belongs to the component of $T\setminus F$ with root $v$.
+
+The main result of this section is the following generalization of (2.1) ((2.1) is the special case when $n = 0$). Let $T$ be a tree, $n \ge 0$ be an integer, and $\phi: E(T) \to \{0, \dots, n\}$ be a function. For $v, w \in V(T)$ we say that $v$ \textit{precedes} $w$ (with respect to $\phi$) if $v \ne o(T)$, there is a directed path $P$ of $T$ from $v$ to $w$, and $\phi(e) = \phi(f)$ where $e, f$ are the edges of $T$ with heads $v$, $w$, respectively, and $\phi(g) \ge \phi(f)$ for every edge $g$ of $P$.
+
+\stmt
+(2.2) \textit{Let $T_1, T_2, \dots$ be a countable sequence of disjoint trees, let $n \ge 0$ be an integer, and for each $i \ge 1$ let $\phi_i: E(T_i) \to \{0, 1, \dots, n\}$ be some function. Let $M$ be an infinite graph with $V(M) = V(T_1 \cup T_2 \cup \dots)$ such that for $i' > i \ge 1$, if $u \in V(T_i)$ is $M$-adjacent to $w \in V(T_{i'})$, and $v \in V(T_{i'})$ precedes $w$ (with respect to $\phi_{i'}$) then $u$ is $M$-adjacent to $v$. Let $\{o(T_1), o(T_2), \dots\}$ be $M$-stable. Then there is an infinite $M$-stable set $X \subseteq V(M)$ such that $|X \cap V(T_i)| \le 1$ for each $i \ge 1$ and such that the set of heads of all edges of $T_1 \cup T_2 \cup \dots$ with tails in $X$ is $M$-rich.}
+
+\textit{Proof.} We proceed by induction on $n$. If $n = 0$ the result follows from (2.1), and so we may assume that $n > 0$ and the result holds for $n - 1$. For each $i \ge 1$, let $F_i = \{e \in E(T_i): \phi_i(e) = 0\}$ and let $S_i$ be the contraction of $T_i$ onto $F_i$. Let $N$ be the restriction of $M$ to $V(S_1) \cup V(S_2) \cup \dots$.
+
+\hspace*{12pt}(1) \textit{For all $i' > i \ge 1$, if $u \in V(S_i)$ is $N$-adjacent to $w \in V(S_{i'})$ and $v \ne o(S_{i'})$ lies on the path of $S_{i'}$ from $o(S_{i'})$ to $w$ then $u$ is $N$-adjacent to $v$.}
+
+For let $e, f$ be the edges of $T_{i'}$ with heads $v, w$ respectively. Since $v, w \in V(S_{i'})$ it follows that $e, f \in F_{i'}$, and so $\phi_{i'}(e) = \phi_{i'}(f) = 0$. Since $\phi_{i'}(g) \ge 0$ for every $g \in E(T_{i'})$ it follows that $v$ precedes $w$ (with respect to $\phi_{i'}$), and so $u$ is $M$-adjacent (and hence $N$-adjacent) to $v$, as required.
+
+Let $T = T_1 \cup T_2 \cup \dots$. From (1) we may apply (2.1) to $S_1, S_2, \dots$ and $N$, and we deduce (defining \textit{increasing} as in (2.1)) that
+
+\hspace*{12pt}(2) \textit{There is a countable increasing sequence $z_1, z_2, \dots$ of vertices of $M$ such that $\{z_1, z_2, \dots\}$ is $M$-stable, and each $z_j$ is the root of some component $R_j$ of some $T_i \setminus F_i$, and the set $A$ of all heads (in $T$) of all edges in $F_1 \cup F_2 \cup \dots$ with tails (in $T$) in $R_1 \cup R_2 \cup \dots$ is $M$-rich.}
+
+For each $j \ge 1$ let $\phi'_j: E(R_j) \to \{0, 1, \dots, n - 1\}$ be defined by $\phi'_j(e) = \phi_i(e) - 1$ ($e \in E(R_j)$), where $z_j \in V(T_i)$. From our inductive hypothesis applied to $R_1, R_2, \dots$ and to the restriction of $M$ to $V(R_1 \cup R_2 \cup \dots)$, we deduce that

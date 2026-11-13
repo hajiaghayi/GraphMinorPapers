@@ -1,0 +1,28 @@
+\origpage{160}{ROBERTSON AND SEYMOUR}
+\hspace*{12pt}(i) for each $e\in E(T)$ with ends $u, v$, say, $\alpha(u, e) = E - \alpha(v, e)$
+
+\hspace*{12pt}(ii) for each incidence $(v, e)$ in $T$ such that $v$ is a leaf, either $\alpha(v, e) = E$ or $\alpha(v, e)\cup X = E$ for some $X\in \mathscr{A}$
+
+\hspace*{12pt}(iii) if $v\in V(T)$ has valency $3$, incident with $e_1, e_2, e_3$, say, then $\alpha(v, e_1)\cup \alpha(v, e_2)\cup \alpha(v, e_3) = E$.
+
+\stmt
+(3.1) \textit{If there is a bias extending $\mathscr{A}$ then there is no tree-labelling over $\mathscr{A}$.}
+
+\textit{Proof.} Suppose that $\mathscr{B}$ is a bias extending $\mathscr{A}$, and $(T, \alpha)$ is a tree-labelling over $\mathscr{A}$. An incidence $(v, e)$ of $T$ is \textit{passive} if $\alpha(v, e)\notin \mathscr{B}$. For each edge $e$ with ends $u, v$, $\mathscr{B}$ contains exactly one of $\alpha(u, e)$, $\alpha(v, e)$ since they are efficient complementary sets. Thus there are precisely $|E(T)|$ passive incidences. Since $T$ has $|E(T)| + 1$ vertices there is a vertex $v$ of $T$ in no passive incidence; that is, $\alpha(v, e)\in \mathscr{B}$ for all edges $e$ incident with $v$. If $v$ has valency $1$ then by the definition of a tree-labelling, either $\alpha(v, e) = E$ or $\alpha(v, e)\cup X = E$ for some $X\in \mathscr{A}$, in either case contrary to the definition of a bias. Thus $v$ has valency $3$. Let $e_1, e_2, e_3$ be the edges of $T$ incident with $v$; then
+\begin{equation*}
+\alpha(v, e_1)\cup \alpha(v, e_2)\cup \alpha(v, e_3) = E
+\end{equation*}
+by the definition of a tree-labelling, and yet each $\alpha(v, e_i)\in \mathscr{B}$, contrary to the definition of a bias, as required. $\square$
+
+The main result of this section is a converse of (3.1), in a strong form, that if there is no bias extending $\mathscr{A}$, then there is an exact tree-labelling over $\mathscr{A}$. ``Exact'' is defined as follows. Let $(T, \alpha)$ be a tree-labelling over $\mathscr{A}$. A \textit{fork} in $T$ is an unordered pair $\{e_1, e_2\}$ of distinct edges of $T$ with a common end (the \textit{nub} of the fork). A fork $\{e_1, e_2\}$ with nub $t$ is \textit{exact} (for $\alpha$) if $\alpha(t, e_1)\cap \alpha(t, e_2) = \emptyset$. We say that $(T, \alpha)$ is \textit{exact} if every fork of $T$ is exact. We require the following lemma.
+
+\stmt
+(3.2) \textit{If there is a tree-labelling over $\mathscr{A}$ then there is an exact tree-labelling over $\mathscr{A}$, using the same tree.}
+
+\textit{Proof.} Choose a tree $T$ such that there is a tree-labelling $(T, \alpha)$ over $\mathscr{A}$. Choose $t_0\in V(T)$. For each $t\in V(T)$ we denote by $d(t)$ the number of edges in the path of $T$ between $t_0$ and $t$. Choose $\alpha$ satisfying (1), (2), and (3), below.
+
+\hspace*{12pt}(1) \textit{$(T, \alpha)$ is a tree-labelling over $\mathscr{A}$.}
+
+\hspace*{12pt}(2) \textit{Subject to (1), $\sum \kappa(\alpha(v, e))$ (summed over all incidences $(v, e)$ of $T$) is minimum.}
+
+\hspace*{12pt}(3) \textit{Subject to (1) and (2), $\sum 3^{-d(t)}$ (summed over all non-exact forks, where $t$ is the nub of the fork) is minimum.}

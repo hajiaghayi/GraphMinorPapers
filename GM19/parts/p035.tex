@@ -1,0 +1,25 @@
+\origpage{359}{N. Robertson, P.D. Seymour / Journal of Combinatorial Theory, Series B 90 (2004) 325--385}
+\noindent (This is possible, for there is such a sequence with $p = 0$.)
+
+\hspace*{12pt}(1) $p \le m - 1$.
+
+\textbf{Subproof.} If $p = m$, then by the fourth condition in the definition of ``$(n, (\omega_1, \dots, \omega_m))$-flawed on $S$'' there exist $1 \le i \le m$ and a bite $F$ at $r^*$ with $\frac{1}{2}|E(F)| \le n$ such that $e, e_{b_i} \subseteq ins(F)$, where either $e = e_{b_j}$ for some $j \ne i$ or $e$ is a short side. But then $ins(F)$ includes one of
+\begin{align*}
+e_{b_{i-1}} \cup e_{b_{i-1}+1} \cup \cdots \cup e_{b_i} \\
+e_{b_i} \cup e_{b_i+1} \cup \cdots \cup e_{b_{i+1}}
+\end{align*}
+(where $b_{p+1}$ means $k + 1$), contrary to the first statement above. Thus (1) holds.
+
+\hspace*{12pt}(2) \textit{There is no $j$ with $b_p < j < k + 1$ such that $b_p \ll j \ll k + 1$ and $\phi(e_j) \ge \omega_{p+1}$.}
+
+\textbf{Subproof.} Suppose that some such $j$ exists. Choose $i$ with $b_p < i < j$, maximal such that $b_p \not\ll i$. (This is possible because $b_p \not\ll b_p + 1$, since $n \ge 3$, and so $j \ne b_p + 1$.) Set $a_{p+1} = i$. Choose $j'$ with $i < j' \le j$, minimal such that $\phi(e_{j'}) \ge \omega_{p+1}$. (This is possible because $\phi(e_j) \ge \omega_{p+1}$.) Set $b_{p+1} = j'$. Then $j' > i$, and so $b_p \ll b_{p+1}$ by the maximality of $i$; and $j' \le j$, and so $b_{p+1} \ll k + 1$ since $j \ll k + 1$. Moreover $b_p \not\ll a_{p+1}$ from the choice of $i$; and $\phi(e_{b_{p+1}}) \ge \omega_{p+1}$ from the choice of $j'$; and there is no $j''$ with $a_{p+1} < j'' < b_{p+1}$ such that $\phi(e_{j''}) \ge \omega_{p+1}$, from the choice of $j'$. But then the sequence
+\begin{equation*}
+0 = b_0 < a_1 < b_1 < \cdots < b_p < a_{p+1} < b_{p+1} < k + 1
+\end{equation*}
+disproves the maximality of $p$, a contradiction. Thus (2) holds.
+
+\hspace*{12pt}(3) \textit{There exist $a_{p+1}, b_{p+1}$ with $b_p < a_{p+1} < b_{p+1} < k + 1$, such that $b_p \not\ll a_{p+1}$ and $b_{p+1} \not\ll k + 1$, and such that there is no $j$ with $a_{p+1} < j < b_{p+1}$ and with $\phi(e_j) \ge \omega_{p+1}$.}
+
+\textbf{Subproof.} Choose $i$ with $b_p < i < k + 1$ maximum such that $b_p \not\ll i$. (This is possible since $b_p + 1 < k + 1$ and $b_p \not\ll b_p + 1$, since $n \ge 3$.) Suppose first that $i < k$. Since $k \not\ll k + 1$, we may choose $i'$ with $i < i' < k + 1$ minimum such that $i' \not\ll k + 1$. Set $a_{p+1} = i, b_{p+1} = i'$. From (2), it follows that there is no $j$ with $i < j < i'$ such that $\phi(e_j) \ge \omega_p + 1$, and so we may satisfy (3) by setting $a_{p+1} = i$ and $b_{p+1} = i'$. Now assume that $i = k$. Since $b_p \ll k + 1$ and $n \ge 4$, it follows that $k - 1 > b_p$; and so we may set $a_{p+1} = k - 1$ and $b_{p+1} = k$ to satisfy (3). This proves (3).
+
+For $0 \le i \le p$ let $F_i$ be a bite at $r^*$ with $\frac{1}{2}|E(F_i)| \le n$ such that $e_{b_i}, e_{b_i+1}, \dots, e_{a_{i+1}} \subseteq ins(F_i)$, and let $F_{p+1}$ be a bite with $\frac{1}{2}|E(F_{p+1})| \le n$ such that $e_{b_{p+1}}, \dots, e_{k+1} \subseteq ins(F_{p+1})$. Let $\mathscr{F} = \{F_0, F_1, \dots, F_{p+1}\}$. Then $|\mathscr{F}| = p + 2 \le m + 1$, and $I(\mathscr{F})$ includes $e_0, e_{k+1}$. If $X$ is a component of $S \setminus I(\mathscr{F})$, then there exists $h$ with $1 \le h \le p + 1$ such that $a_h < i < b_h$ for every $e_i \subseteq X$, and hence $\phi(e_i) \not\ge \omega_h$ for every $e_i \subseteq X$. Hence $\mathscr{F}$ is a feast. Its order is at most $(m + 1)n$ since each $F_i$ has $\frac{1}{2}|E(F_i)| \le n$. $\square$

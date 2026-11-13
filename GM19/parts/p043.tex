@@ -1,0 +1,26 @@
+\origpage{367}{N. Robertson, P.D. Seymour / Journal of Combinatorial Theory, Series B 90 (2004) 325--385}
+Since $u$ is the first vertex of $S_{v_2}$ in $S_{v_1}$ we deduce that $V(P_1 \cap S_{v_2}) = \{u\}$, and hence $S_{v_1} \cap S_{v_2} = Q_1$. The result follows. $\square$
+
+\textbf{13.3.} \textit{Let $S_v$ be a spoke with inner end $h$, and let $F$ be a $\mathscr{T}$-enclave. If $U(S_v) \cap ins(F) \ne \emptyset$ then $S_v \cap ins(F)$ is a path, and if $U(S_v) \cap ins(F) \nsubseteq U(F)$ then one of $v, h \in ins(F) \setminus U(F)$.}
+
+\textbf{Proof.} Let $\mathscr{T}'$ be a tangle in $\Gamma$ with $\mathscr{T} \nsubseteq \mathscr{T}' \nsubseteq \mathscr{T}$ such that $(\Gamma \cap ins(F), \Gamma \cap out(F))$ is the $(\mathscr{T}, \mathscr{T}')$-distinction. Suppose that $U(S_v) \cap ins(F) \ne \emptyset$, and $S_v \cap ins(F)$ is not a path. Then there are distinct vertices $a, b$ of $S_v$, both in $V(F)$, such that no internal vertex or edge of the subpath of $S_v$ between $a, b$ belong to $ins(F)$. Let this subpath be $P$, and let $F_1, F_2$ be the two subpaths of $F$ between $a$ and $b$. Since $P \ne F_1, F_2$ it follows (since $S_v$ is a spoke) that $|E(P)| \le |E(F_i)|$, and if equality holds then $\lambda(P) < \lambda(F_i)$ ($i = 1, 2$). But this contradicts 8.5.
+
+Thus $S_v \cap ins(F)$ is a path. Suppose that $v, h \notin ins(F) \setminus U(F)$ and $U(S_v) \cap ins(F) \nsubseteq U(F)$. Then there are distinct vertices $a, b$ of $S_v$, both in $U(F)$, such that every internal vertex and edge of the subpath $P$ of $S_v$ joining $a, b$ lies in $ins(F) \setminus U(F)$. Let $F_1, F_2$ be the two subpaths of $F$ between $a$ and $b$. As before, $|E(P)| \le |E(F_i)|$ and if equality holds then $\lambda(P) < \lambda(F_i)$ ($i = 1, 2$). Again, this contradicts 8.5. Thus one of $v, h \in ins(F) \setminus U(F)$, as required. $\square$
+
+A $W$-hub $H$ is said to be \textit{optimal} if
+
+\hspace*{12pt}$\bullet$ $H$ has the same radius as $W$, that is, $H$ has radius minimum over all $W$-hubs, and
+
+\hspace*{12pt}$\bullet$ either $|V(H)| = 1$, or there is no 1-vertex $W$-hub with the same radius as $W$.
+
+For every wheel $W$ there is an optimal $W$-hub. For the remainder of this section we assume that $H$ is optimal.
+
+\textbf{13.4.} \textit{Let $r^* \in R^* \cap bd(W)$ with neighbours $v_1, v_2$ in $\Gamma^* \cap bd(W)$. Let $S_{v_1}$ meet $S_{v_2}$, and let $S_{v_1} \cap S_{v_2}$ have ends $u, h$ where $h \in V(H)$. Let $\Delta \subseteq W$ be the disc bounded by}
+\begin{equation*}
+(U(S_{v_1} \cup S_{v_2}) \setminus U(S_{v_1} \cap S_{v_2})) \cup \{u\} \cup \bar{f}_1 \cup \bar{f}_2,
+\end{equation*}
+\textit{where $f_i$ is the edge of $\Gamma^* \cap bd(W)$ with ends $r^*, v_i$ ($i = 1, 2$). Then $\Delta \cap U(H) = \emptyset$ unless $u = h$, in which case $\Delta \cap U(H) = \{h\}$; and $\Delta \cap U(S_v) \subseteq bd(\Delta)$ for every $v \in V(\Gamma) \cap bd(W)$.}
+
+\textbf{Proof.} Suppose that either $u \ne h$ and $\Delta \cap U(H) \ne \emptyset$, or $u = h$ and $\Delta \cap U(H) \ne \{h\}$. In either case it follows that $U(H) \subseteq \Delta$ and $V(H) \ne \{u\}$. For if $u \ne h$ then $bd(\Delta) \cap U(H) = \emptyset$ and so $U(H) \subseteq \Delta$ and clearly $V(H) \ne \{u\}$; while if $u = h$ then $|V(H)| \ne 1$, and $H$ is a circuit with $U(H) \cap bd(\Delta) = \{h\}$, and so again $U(H) \subseteq \Delta$ and $V(H) \ne \{u\}$. Now $u$ is a vertex of every spoke; for every spoke meets $bd(\Delta)$ since it meets $U(H)$, and hence contains $u$ by 13.2.
+
+Suppose that there is a $\mathscr{T}$-enclave $F$ with $|E(F)| \le 4\rho + 4$ and with $u \in ins(F) \setminus U(F)$. Since $H$ is a $W$-hub, it follows that $U(H) \nsubseteq ins(F)$, because

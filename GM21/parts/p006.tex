@@ -1,0 +1,18 @@
+\origpage{4}{}
+\noindent $Z_i$ contains every terminal of $L_i$. Let $\pi_i$ be the pattern of $L_i$, and let $\phi_i \colon Z_i \to Z_1$ be defined by $\phi_i(v_i^t) = v_1^t$ ($1 \le t \le k$), and $\phi_i(z) = z$ for all $z \in Z_i \setminus V(A_i \cap B_i)$. Now $\phi_i$ is an injection, and maps $\pi_i$ to a partition of a subset of $Z_1$ in which each block has cardinality $1$ or $2$. Since $|Z_1| \le p + k$, there are at most $(p+k+1)^{2(p+k)}$ such partitions. Since $n > (2p+1)(p+k+1)^{2(p+k)}$, it follows that there exist distinct $i, j$ with $1 \le i, j \le n$, such that $V(A_i) \cap Z = V(A_j) \cap Z$, $V(B_i) \cap Z = V(B_j) \cap Z$, and $\phi_i(\pi_i) = \phi_j(\pi_j)$.
+
+\hspace*{12pt}(2) \textit{For $1 \le t \le k$, the degree of $v_i^t$ in $L_i$ equals the degree of $v_j^t$ in $L_j$; and if one of $v_i^t, v_j^t$ is in $Z$ then $v_i^t = v_j^t$.}
+
+\textit{Subproof.} For the first claim, we observe that $v_i^t$ has degree $0$, $1$ or $2$ in $L_i$, depending where $\{v_i^t\}$ is a block of $\pi_i$, a proper subset of a block of $\pi_i$, or not a subset of any block of $\pi_i$ respectively. Since $\phi_i(v_i^t) = \phi_j(v_j^t)$ and $\phi_i(\pi_i) = \phi_j(\pi_j)$, the first claim follows. For the second, suppose that $v_i^t \in Z$. Since $V(A_i) \cap Z = V(A_j) \cap Z$ it follows that $v_i^t \in V(A_j)$ and similarly $v_i^t \in V(B_j)$. Thus $v_i^t = v_j^{t'}$ for some $t'$. Now $M_1 \cup \dots \cup M_{n-1}$ is a linkage with $k$ components, and one of them meets $V(A_i \cap B_i)$ in $\{v_i^t\}$ and meets $V(A_j \cap B_j)$ only in $\{v_j^t\}$. Since $v_i^t = v_j^{t'} \in V(A_j \cap B_j)$ it follows that $t' = t$. This proves (2).
+
+We may assume that $i < j$. Let $M = M_i \cup M_{i+1} \cup \dots \cup M_{j-1}$, and let the components of $M$ be $P^1, \dots, P^k$, where $P^t$ has ends $v_i^t$ and $v_j^t$ ($1 \le t \le k$). Let
+\begin{equation*}
+T = \{t : 1 \le t \le k\text{, and either } v_i^t = v_j^t \text{ or } v_i^t \text{ has degree } 1 \text{ in } L_i\}.
+\end{equation*}
+Let $M^*$ be the subgraph of $G$ formed by the vertices in $V(A_i \cap B_i)$, the vertices in $V(A_j \cap B_j)$, and all the paths $P_t$ ($t \in T$).
+
+\hspace*{12pt}(3) \textit{$M^* \cup L_j$ is a linkage in $B_i$.}
+
+\textit{Subproof.} It is clearly a forest, and so it suffices to show that it has maximum degree at most $2$. Let $v \in V(M^* \cup L_j)$. Since $M^*$ and $L_j$ both have maximum degree $\le 2$, we may assume that $v \in V(M^* \cap L_j)$, and $v$ has degree $\ge 1$ in both $M^*$ and $L_j$. Hence $v \in V(A_j \cap B_j)$, and so $v$ has degree $1$ in $M^*$ and $1$ in $L_j$, from the definition of $M^*$. This proves (3).
+
+\hspace*{12pt}(4) \textit{If $P$ is a component of $L_i$ with ends $a$ and $b$, then there is a component of $M^* \cup L_j$ with}

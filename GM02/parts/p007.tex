@@ -1,0 +1,159 @@
+\origpage{315}{ALGORITHMIC ASPECTS OF TREE-WIDTH}
+Let $(H, H')$ be a separation of $G$, and let $\mathscr{A}_0 = \{(s_i, t_i) : 1 \le i \le k\}$ be a termination of $G$. Put $V(H) \cap V(H') = X$, $V(H) - V(H') = Y$, $V(H') - V(H) = Y'$. A \textit{crossing scheme} with respect to $(H, H')$ is a quadruple $(\mathscr{A}, \mathscr{A}', Z, Z')$, where $\mathscr{A}, \mathscr{A}'$ are terminations of $G$ and $Z, Z' \subseteq X$, such that
+
+\hspace*{12pt}(i) $S(\mathscr{A}) - X = S(\mathscr{A}_0) \cap Y$ and $S(\mathscr{A}') - X = S(\mathscr{A}_0) \cap Y'$,
+
+\hspace*{12pt}(ii) every vertex of $X$ is in an even number of $S(\mathscr{A}_0), S(\mathscr{A}), S(\mathscr{A}')$,
+
+\hspace*{12pt}(iii) $Z \cap Z' = \emptyset$, and $Z \cup Z' = X - (S(\mathscr{A}_0) \cup S(\mathscr{A}) \cup S(\mathscr{A}'))$,
+
+\hspace*{12pt}(iv) if $F$ is the graph with vertex set $S(\mathscr{A}) \cup S(\mathscr{A}')$ and edge set $\mathscr{A} \cup \mathscr{A}'$, then $F$ has precisely $k$ components $F_1, \dots, F_k$ say, and for $1 \le i \le k$, $F_i$ is a path joining $s_i$ and $t_i$.
+
+\stmt
+(2.8) \textit{The number of different crossing schemes for $\mathscr{A}_0$ with respect to $(H, H')$ is at most}
+\begin{equation*}
+\max(2, (|X| + k)^{|X|}).
+\end{equation*}
+The proof is routine\del{, and is left to the reader}. (This is only a crude bound, which we have used for simplicity.) All that we shall need from (2.8) is that the number of crossing schemes is bounded by a function depending only on $|X|$ and $k$, and not on the size of $G$.
+
+\fix{We give the details. As in (iv), where they are the edges of $F$, we regard the members of a
+termination as unordered pairs. Let $n = |X|$, and let $(\mathscr{A}, \mathscr{A}', Z, Z')$ be a
+crossing scheme. By (i), $S(\mathscr{A}) \subseteq X \cup Y$ and $S(\mathscr{A}') \subseteq X \cup Y'$.
+So every vertex in $S(\mathscr{A}) \cap S(\mathscr{A}')$ is in $X$, and it is not in
+$S(\mathscr{A}_0)$, by (ii). Every vertex $v$ of $F$ is in $S(\mathscr{A}_0)$ or in
+$S(\mathscr{A}) \cap S(\mathscr{A}')$. For if $v$ is in just one of $S(\mathscr{A}), S(\mathscr{A}')$,
+then $v \in S(\mathscr{A}_0)$, by (i) if $v \notin X$ and by (ii) if $v \in X$. Also every vertex of
+$S(\mathscr{A}_0)$ is in exactly one of $S(\mathscr{A}), S(\mathscr{A}')$, by (i) and (ii). Let
+$1 \le i \le k$. By (iv), the only vertices of $S(\mathscr{A}_0)$ in $F_i$ are $s_i$ and $t_i$, since
+the other vertices of $S(\mathscr{A}_0)$ are in other components of $F$. So every internal vertex of
+$F_i$ is in $S(\mathscr{A}) \cap S(\mathscr{A}')$, and therefore in $X - S(\mathscr{A}_0)$. Let $L_i$
+be the sequence of internal vertices of $F_i$, in order from $s_i$ to $t_i$. These are distinct
+vertices of $X - S(\mathscr{A}_0)$, and no vertex is in two of $L_1, \dots, L_k$. Let $M$ be the set
+of vertices of $X$ that are in $Z$, or in $S(\mathscr{A}_0) \cap S(\mathscr{A})$. No vertex of $M$
+is in any $L_i$, since the vertices of the sequences $L_i$ are in $S(\mathscr{A})$ and not in
+$S(\mathscr{A}_0)$, while $Z$ is disjoint from $S(\mathscr{A})$ by (iii).
+
+We claim that $L_1, \dots, L_k$ and $M$ determine the crossing scheme. First, $F_i$ is the path
+$s_i, L_i, t_i$ for $1 \le i \le k$, and every edge of $F$ is in some $F_i$. So $F$ is determined.
+Second, the vertices in the sequences $L_i$ are exactly the vertices of
+$S(\mathscr{A}) \cap S(\mathscr{A}')$. For each vertex of $S(\mathscr{A}) \cap S(\mathscr{A}')$ is a
+vertex of $F$ not in $S(\mathscr{A}_0)$, and so it is an internal vertex of some $F_i$. Third,
+$S(\mathscr{A})$ consists of these vertices together with the vertices of $S(\mathscr{A}_0)$ in
+$S(\mathscr{A})$, since every vertex of $F$ is in $S(\mathscr{A}_0)$ or in
+$S(\mathscr{A}) \cap S(\mathscr{A}')$. A vertex of $S(\mathscr{A}_0)$ not in $X$ is in
+$S(\mathscr{A})$ exactly when it is in $Y$, by (i), and one in $X$ is in $S(\mathscr{A})$ exactly when
+it is in $M$. So $S(\mathscr{A})$ is determined. Fourth, $S(\mathscr{A}')$ consists of the vertices in
+the sequences $L_i$ together with the vertices of $S(\mathscr{A}_0)$ not in $S(\mathscr{A})$, since
+each vertex of $S(\mathscr{A}_0)$ is in exactly one of $S(\mathscr{A}), S(\mathscr{A}')$. Fifth,
+$Z = M - S(\mathscr{A}_0)$, and then $Z'$ is determined by (iii). Finally, $\mathscr{A}$ is
+determined by $F$ and $S(\mathscr{A})$. For let $\mathscr{B}$ be another set of disjoint pairs
+that are edges of $F$, with union $S(\mathscr{A})$. Each vertex of $S(\mathscr{A})$ is in one member
+of $\mathscr{A}$ and one member of $\mathscr{B}$, and so every vertex has valency 0 or 2 in the graph
+with edge set $(\mathscr{A} - \mathscr{B}) \cup (\mathscr{B} - \mathscr{A})$. If this graph had an
+edge it would have a circuit, which is impossible since it is a subgraph of the forest $F$. So
+$\mathscr{B} = \mathscr{A}$. In the same way $\mathscr{A}'$ is determined by $F$ and
+$S(\mathscr{A}')$. This proves the claim.
+
+Call an \textit{arrangement} on a set $W$ any $k$ sequences $L_1, \dots, L_k$ of distinct vertices of
+$W$, no vertex in two of them, together with a set $M$ of vertices of $W$ in none of them. Let
+$w = |W|$. We show by induction on $w$ that there are at most $\prod_{1 \le j \le w} (k+j+1)$
+arrangements on $W$. For $w = 0$ there is one. Let $w > 0$ and $x \in W$. Removing $x$ from an
+arrangement on $W$ gives an arrangement on $W - \{x\}$, and the arrangement on $W$ is determined by
+this and one of the following: $x \in M$; $x$ is in no sequence and not in $M$; $x$ is first in
+$L_i$, for some $i$; $x$ comes just after $y$ in some sequence, for some $y \in W - \{x\}$. These are
+$2 + k + w - 1 = k + w + 1$ possibilities, as required. Let $P_w = \prod_{1 \le j \le w} (k+j+1)$.
+Then $P_w \le (k+w)^w$ for $w \ge 3$, by induction on $w$. For $w = 3$ this holds since
+$(k+2)(k+4) \le (k+3)^2$. If it holds for some $w \ge 3$, then since $(k+w+2)(k+w) \le (k+w+1)^2$,
+\begin{align*}
+P_{w+1} = (k+w+2) P_w &\le (k+w+2)(k+w) \cdot (k+w)^{w-1}\\
+&\le (k+w+1)^2 (k+w+1)^{w-1} = (k+w+1)^{w+1}.
+\end{align*}
+By the claim, the number of crossing schemes is at most the number of arrangements on $X$, which is
+at most $P_n \le (n+k)^n$ if $n \ge 3$. This proves (2.8) when $n \ge 3$.
+
+Now let $n \le 2$, and suppose first that some $a \in X$ is in $S(\mathscr{A}_0)$. Then $a$ is in
+no sequence $L_i$, and so the arrangement given by a crossing scheme is determined by the arrangement
+on $X - \{a\}$ obtained by removing $a$, and by whether $a \in M$. There are at most $P_{n-1}$
+arrangements on $X - \{a\}$, which is $1$ if $n = 1$ and $k+2$ if $n = 2$. So there are at most $2$
+crossing schemes if $n = 1$, and at most $2(k+2) \le (k+2)^2$ if $n = 2$.
+
+Next suppose that no vertex of $X$ is in $S(\mathscr{A}_0)$. If $n = 0$, there is only one
+arrangement on $X$, and so at most one crossing scheme. Let $n \ge 1$. For $1 \le i \le k$, every
+member of $\mathscr{A}$ that meets $F_i$ is an edge of $F_i$, and so $|S(\mathscr{A}) \cap V(F_i)|$ is
+even. This set consists of the vertices of $L_i$ and those of $s_i, t_i$ that are in
+$S(\mathscr{A})$. Since $s_i, t_i \notin X$, by (i) these are the ones in $Y$. So
+$|L_i| + |\{s_i, t_i\} \cap Y|$ is even, and the parity of $|L_i|$ is the same for all crossing
+schemes. Suppose that $|L_i|$ is odd for some $i$. Then $|L_i| = 1$, since $n \le 2$, and there are
+at most $n$ choices for its vertex $x$. At most one other vertex $y$ of $X$ remains, and for
+$j \ne i$, $L_j$ is the sequence $y$ if $|L_j|$ is odd, and is empty otherwise. So the sequences are
+determined by $x$, and $M \subseteq \{y\}$ gives at most two choices for $M$. This gives at most
+$2n$ crossing schemes, and $2n \le 2$ if $n = 1$, while $2n = 4 \le (k+2)^2$ if $n = 2$. Suppose
+finally that every $|L_i|$ is even. If $n = 1$, all $L_i$ are empty and there are two choices for $M$.
+If $n = 2$, either all $L_i$ are empty and there are four choices for $M$, or one $L_i$ consists of
+both vertices of $X$ and $M = \emptyset$, which gives $2k$ choices. So there are at most
+$4 + 2k \le (k+2)^2$ crossing schemes. This proves (2.8).\fixnote{fix:2.8-proof-added}{The paper
+leaves the proof to the reader. The argument above is the one used in the formalization. For
+$|X| \le 2$ the product bound alone is too weak, and the parity of the paths is needed.}}
+
+Now let $(\mathscr{A}, \mathscr{A}', Z, Z')$ be a crossing scheme for $\mathscr{A}_0$ with respect to $(H, H')$. \fix{Let $\bar Z = Z \cup ((S(\mathscr{A}_0) \cap X) - S(\mathscr{A}))$ and $\bar Z' = Z' \cup ((S(\mathscr{A}_0) \cap X) - S(\mathscr{A}'))$.} Then $\mathscr{A}$ is a termination for $H \setminus \delm{Z}\fix{\bar Z}$ and $\mathscr{A}'$ is a termination for $H' \setminus \delm{Z'}\fix{\bar Z'}$. We call $(H \setminus \delm{Z}\fix{\bar Z}, \mathscr{A})$, $(H' \setminus \delm{Z'}\fix{\bar Z'}, \mathscr{A}')$ the terminated graphs \textit{induced} by the crossing scheme.\fixnote{fix:2-induced}{With the printed definition, (2.9) is false, because a path of an induced graph may pass through a vertex of $X$ that is a terminal of $\mathscr{A}_0$ given to the other side. Take the star $G$ with center $0$ and leaves $1,2,3$, with $\mathscr{A}_0=\{(2,3),(0,1)\}$, and let $H$, $H'$ have all four vertices, with edges $02,03$ in $H$ and $01$ in $H'$. Then $X=V(G)$, and $\mathscr{A}=\{(2,3)\}$, $\mathscr{A}'=\{(0,1)\}$, $Z=Z'=\emptyset$ is a crossing scheme. Both induced graphs are feasible, by the path $2,0,3$ in $H$ and the edge $01$ in $H'$. But $(G,\mathscr{A}_0)$ is not feasible, since every path from $2$ to $3$ uses the terminal $0$. The corrected definition also deletes from each side the terminals of $\mathscr{A}_0$ in $X$ that the side's own termination does not use. Such a vertex is not in $S(\mathscr{A})$ on the side of $H$, and not in $S(\mathscr{A}')$ on the side of $H'$, so $\mathscr{A}$ and $\mathscr{A}'$ are still terminations of the smaller graphs, and the bound of (2.10) is unchanged. With this definition (2.9) holds.}
+
+\stmt
+(2.9) \textit{Let $(G, \mathscr{A}_0)$ be a terminated graph and let $(H, H')$ be a separation of $G$. Then $(G, \mathscr{A}_0)$ is feasible if and only if there is a crossing scheme for $\mathscr{A}_0$ with respect to $(H, H')$ such that both induced terminated graphs are feasible.}
+
+This is clear once the various definitions have been digested\del{, and it is left to the reader}. The purpose of $Z$ and $Z'$ is to allow for the possibility that the desired paths may need to use the ``separating'' vertices without passing from one side of the separation to the other.
+
+\fix{We give the details, with $\bar Z, \bar Z'$ as above. Suppose first that $(G, \mathscr{A}_0)$ is
+feasible, and let $P_1, \dots, P_k$ be as in the definition of feasibility. Since
+$E(H) \cap E(H') = \emptyset$, each edge of $P_i$ is in exactly one of $H, H'$. Divide $P_i$ into
+maximal subpaths whose edges are all in $H$ or all in $H'$, and call them the \textit{pieces} of
+$P_i$, of the first or second kind. Each piece has at least one edge, since $s_i \ne t_i$. Two
+consecutive pieces of $P_i$ are of different kinds, and they share one vertex, which is in $X$, since
+it is incident with an edge of $H$ and an edge of $H'$. Let $\mathscr{A}$ be the set of pairs of ends
+of the pieces of the first kind, and $\mathscr{A}'$ the same for the second kind. Two pieces of the
+same kind are disjoint, and so $\mathscr{A}$ and $\mathscr{A}'$ are terminations. An internal vertex
+of a piece is not an end of any piece, and not in $S(\mathscr{A}_0)$. Let $Z'$ be the set of vertices
+of $X$ that are internal vertices of pieces of the first kind, and let $Z$ be the set of vertices of
+$X - (S(\mathscr{A}_0) \cup S(\mathscr{A}) \cup S(\mathscr{A}'))$ not in $Z'$. We check (i)--(iv).
+For (i), an end of a piece of the first kind is a vertex of $H$, and it is either in $X$ or an end of
+some $P_i$. Conversely, if $s_i \in Y$, then the edge of $P_i$ at $s_i$ is not in $H'$, since
+$s_i \notin V(H')$, and so $s_i \in S(\mathscr{A})$. The same holds for $t_i$, and similarly for $Y'$.
+For (ii), let $x \in X$. If $x$ is on no $P_i$, or is an internal vertex of a piece, it is in none of
+the three supports. If $x$ is $s_i$ or $t_i$, it is an end of exactly one piece. Otherwise $x$ is the
+common end of two consecutive pieces, of different kinds. In each case $x$ is in two or none of
+$S(\mathscr{A}_0), S(\mathscr{A}), S(\mathscr{A}')$. Condition (iii) holds by the definition of $Z$
+and $Z'$. For (iv), the ends of the pieces of $P_i$, in order along $P_i$, form a path $F_i$ of $F$
+from $s_i$ to $t_i$, and the paths $F_1, \dots, F_k$ are disjoint and contain all vertices and edges of
+$F$. Finally, each piece of the first kind is a path of $H$ that does not meet $\bar Z$. For its ends
+are in $S(\mathscr{A})$, and its internal vertices are not in $S(\mathscr{A}_0)$, and are in $Y$ or in
+$Z'$. Since these pieces are disjoint, $(H \setminus \bar Z, \mathscr{A})$ is feasible, and similarly
+$(H' \setminus \bar Z', \mathscr{A}')$ is feasible.
+
+Conversely, let $(\mathscr{A}, \mathscr{A}', Z, Z')$ be a crossing scheme such that both induced
+terminated graphs are feasible. Then for each pair $p \in \mathscr{A}$ there is a path $Q_p$ of
+$H \setminus \bar Z$ joining the two vertices of $p$, and for each $p \in \mathscr{A}'$ a path $Q_p$ of
+$H' \setminus \bar Z'$, such that paths for different pairs of the same termination are disjoint.
+(As in the proof of (2.8), no pair is in both $\mathscr{A}$ and $\mathscr{A}'$.) We claim that if
+$p \in \mathscr{A}$ and $q \in \mathscr{A}'$, then $Q_p$ and $Q_q$ meet only in common vertices of $p$
+and $q$. For let $v$ be a vertex of both. Then $v \in X$, and $v \notin \bar Z \cup \bar Z'$. If
+$v \in S(\mathscr{A}_0)$, then $v \in S(\mathscr{A}) \cap S(\mathscr{A}')$ by the definition of
+$\bar Z, \bar Z'$, contrary to (ii). So $v \notin S(\mathscr{A}_0)$. Since $v \notin Z \cup Z'$, it
+follows from (iii) that $v$ is in $S(\mathscr{A})$ or $S(\mathscr{A}')$, and then from (ii) that it is
+in both. Hence $v$ is a vertex of some $p' \in \mathscr{A}$, and so $v \in Q_{p'}$, and $p' = p$
+since the paths $Q_r$ $(r \in \mathscr{A})$ are disjoint. Similarly $v$ is a vertex of $q$, as
+claimed. Now for $1 \le i \le k$, let $P_i$ be the union of the paths $Q_p$ for the edges $p$ of
+$F_i$. Two consecutive edges of $F_i$ are in different terminations, since the pairs of a termination
+are disjoint, and so their paths meet only in their common vertex. Two edges of $F$ that are not
+consecutive edges of the same $F_i$ have no common vertex, and so their paths are disjoint. Hence
+$P_i$ is a path of $G$ joining $s_i$ and $t_i$, and $P_1, \dots, P_k$ are pairwise disjoint. Thus
+$(G, \mathscr{A}_0)$ is feasible.\fixnote{fix:2.9-proof-added}{The paper leaves the proof to the
+reader. The argument above, for the corrected definition of the induced terminated graphs, is the one
+used in the formalization.}}
+
+We also have
+
+\stmt
+(2.10) \textit{The index of any terminated graph induced by a crossing scheme for $\mathscr{A}_0$ with respect to $(H, H')$ is at most}
+\begin{align*}
+&\tfrac{1}{2} |V(H) \cap V(H')| + \tfrac{1}{2} \max(|(V(H) - V(H')) \cap S(\mathscr{A}_0)|, \\
+&\qquad |(V(H') - V(H)) \cap S(\mathscr{A}_0)|).
+\end{align*}

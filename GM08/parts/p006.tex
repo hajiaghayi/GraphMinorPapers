@@ -1,0 +1,39 @@
+\origpage{260}{ROBERTSON AND SEYMOUR}
+\stmt
+(3.2) \textit{If $\mathbf{Q}_1$ and $\mathbf{Q}_2$ are well-quasi-orders, so is $\mathbf{Q}_1 \times \mathbf{Q}_2$.}
+
+If $\mathbf{Q} = (Q, \le)$ is a quasi-order, $\mathbf{Q}^{<\omega} = (Q^{<\omega}, \le)$ is defined as follows. $Q^{<\omega}$ is the class of all finite sequences of members of $Q$. If $(p_1, \dots, p_r)$, $(q_1, \dots, q_s) \in Q^{<\omega}$, we say that $(p_1, \dots, p_r) \le (q_1, \dots, q_s)$ if there exist integers
+\begin{equation*}
+1 \le i_1 < i_2 < \dots < i_r \le s
+\end{equation*}
+such that $p_j \le q_{i_j}$ ($1 \le j \le r$). The following is due to Higman [4].
+
+\stmt
+(3.3) \textit{If $\mathbf{Q}$ is a well-quasi-order then so is $\mathbf{Q}^{<\omega}$.}
+
+\sectionhead{4. Grafts}
+
+In the course of the paper we shall define a ``simulation'' of $X$ in $Y$, for several different kinds of objects $X$ and $Y$. ''$X$ is simulated in $Y$'' will always mean ``there is a simulation of $X$ in $Y$.''
+
+Let $G, H$ be graphs. It is easy to see that $H$ is isomorphic to a minor of $G$ if and only if there is a function $\sigma$ such that for each edge $e$ of $H$, $\sigma(e)$ is an edge of $G$, and for every vertex $v$ of $H$, $\sigma(v)$ is a non-null connected subgraph of $G$, with the following properties:
+
+\hspace*{12pt}(S1) $\sigma(e) \ne \sigma(e')$ for distinct $e, e' \in E(H)$
+
+\hspace*{12pt}(S2) $\sigma(v)$ and $\sigma(v')$ are vertex-disjoint for distinct $v, v' \in V(H)$
+
+\hspace*{12pt}(S3) $\sigma(e)$ is not an edge of $\sigma(v)$, for $e \in E(H)$ and $v \in V(H)$
+
+\hspace*{12pt}(S4) if $e$ is a loop of $H$ incident with $v \in V(H)$ then $\sigma(e)$ is incident only with vertices of $\sigma(v)$
+
+\hspace*{12pt}(S5) if $e \in E(H)$ has distinct ends $v_1, v_2 \in V(H)$ then $\sigma(e)$ has one end in $\sigma(v_1)$ and the other in $\sigma(v_2)$.
+
+We call such a function $\sigma$ a simulation of $H$ in $G$.
+
+A graft is a pair $(G, T)$ where $G$ is a graph and $T \subseteq V(G)$. We call $|T|$ the index of the graft. If $(G, T)$, $(H, U)$ are grafts, a simulation of $(H, U)$ in $(G, T)$ is a simulation $\sigma$ of $H$ in $G$ with the following additional property:
+
+\hspace*{12pt}(S6) $|T| = |U|$, and for each $u \in U$, some vertex of $\sigma(u)$ is in $T$. (This vertex is necessarily unique.)
+
+Let $\mathscr{A}$ be a class of grafts. The relation ``is simulated in'' is a quasi-order of $\mathscr{A}$. If it is a well-quasi-order we say that $\mathscr{A}$ is well-rooted. If there is a maximum index of the members of $\mathscr{A}$, we call this the index of $\mathscr{A}$. (Conventionally, the empty set has index zero.)
+
+\stmt
+(4.1) \textit{If $\mathscr{A}$ is well-rooted then it has an index.}

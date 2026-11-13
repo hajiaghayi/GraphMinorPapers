@@ -1,0 +1,23 @@
+\origpage{69}{GRAPH MINORS. IX}
+\noindent (This cannot necessarily be chosen with $Z = \emptyset$ because of the possibility that there are wall edges with one end in $A^*$ and the other in $B^*$; but there are at most two such edges, and it follows easily that we may choose $Z$ with $|Z| \le 2$, as claimed.)
+
+We claim that for every path $P$ of $G_0 \cup G^*$ with one end in $A \cup A^*$ and the other in $B \cup B^*$ and no vertex in $Z$, there is a subpath $P'$ of $P$ with $P' \subseteq G_0$, with one end in $A$ and the other in $B$. For there is certainly a subpath $P'$ of $P$ with one end in $A \cup A^*$, the other in $B \cup B^*$ and with no internal vertex in $A \cup A^* \cup B \cup B^*$. But then no internal vertex of $P'$ is in $\bar{\Omega}_0$, and so either $P' \subseteq G^*$ or $P' \subseteq G_0$. If $P' \subseteq G^*$, then $P'$ is drawn completely in some lawn $L$, since no internal vertex of $P'$ is in $A \cup B$; but then the ends of $P'$ are either both in $A \cup A^* \cup Z$ or both in $B \cup B^* \cup Z$, a contradiction. Thus $P' \subseteq G_0$, and so the ends of $P'$ are in $A$ and $B$, respectively, since $(A \cup A^*) \cap V(G_0) \subseteq A$ and $(B \cup B^*) \cap V(G_0) \subseteq B$. This proves our claim.
+
+Now let $\mathcal{P}$ be a transaction in $(G_0 \cup G^*, \Omega^*)$ with fence $(A^*, B^*)$. Then there exists $\mathcal{P}_0 \subseteq \mathcal{P}$ with $|\mathcal{P}_0| \ge |\mathcal{P}| - 2$ such that no member of $\mathcal{P}_0$ has a vertex in $Z$, since $|Z| \le 2$. But for each $P \in \mathcal{P}_0$ there is a subpath $P'$ of $P$ in $G_0$ from $A$ to $B$, as we saw above. Let $\mathcal{P}'$ be the set of all these $P'$; then $\mathcal{P}'$ is a transaction in $(G_0, \Omega_0)$ with fence $(A, B)$, and $|\mathcal{P}'| \ge |\mathcal{P}| - 2$. The result follows. $\square$
+
+\stmt
+(11.5) \textit{Let $G$ be simple, and let $(G, \Omega)$ have sophistication $\le p$. Then there is a society $(G_1, \Omega_1)$ and a rural neighborhood $(G_2, \Omega, \Omega_1)$ such that}
+
+\hspace*{12pt}(i) $G_1, G_2 \subseteq G$, $G_1 \cup G_2 = G$ \textit{and} $V(G_1 \cap G_2) = \bar{\Omega}_1$,
+
+\hspace*{12pt}(ii) $(G_1, \Omega_1)$ \textit{has no transaction of cardinality} $> p + 2$
+
+\hspace*{12pt}(iii) \textit{for every triangle $T$ of $G$, either $T \subseteq G_1$ or $T \subseteq G_2$.}
+
+\textit{Proof.} Choose a society $(H_1, \Omega_0)$ and a rural neighborhood $(H_2, \Omega, \Omega_0)$ such that $(G, \Omega)$ is the composition of $(H_1, \Omega_0)$ with $(H_2, \Omega, \Omega_0)$ and $(H_1, \Omega_0)$ has no transaction of cardinality $> p$. Let $(G^*, \Omega^*, \Omega_0)$ be the park of $(H_2, \Omega, \Omega_0)$ under some presentation $(\Sigma, \Gamma, \Delta, \Delta_0)$. Let $(G_1, \Omega_1)$ be the composition of $(H_1, \Omega_0)$ with $(G^*, \Omega^*, \Omega_0)$; thus $\Omega_1 = \Omega^*$. Let $G_2$ be the subgraph of $H_2$ consisting of those vertices drawn in $\Sigma$ either in the wall or in the complement in $\Delta$ of the disc bounded by the wall, and the wall edges and external edges of $H_2$. We claim that these satisfy the theorem. For $(G_2, \Omega, \Omega_1)$ is a rural neighborhood, and
+\begin{equation*}
+G_1 \cup G_2 = H_1 \cup G^* \cup G_2 = H_1 \cup H_2 = G;
+\end{equation*}
+\begin{equation*}
+V(G_1 \cap G_2) = V((H_1 \cup G^*) \cap G_2) = V(G^* \cap G_2) = \bar{\Omega}_1.
+\end{equation*}

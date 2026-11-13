@@ -1,0 +1,28 @@
+\origpage{119}{GRAPH MINORS. XV. GIANT STEPS}
+\hspace*{12pt}(10) \textit{$k > 1$, and $(Q_k \cap B) \cup X_{k-1}$ is small, and $|Q_{k-1} \cap R| \ge ord(\mathscr{T}) - 2\rho - 1$.}
+
+Suppose that $k \le j+3$. Then
+\begin{equation*}
+B \subseteq ((P_j \cap B) \cup X_{j+1}) \cup ((Q_k \cap B) \cup X_{k-1})
+\end{equation*}
+contrary to (7). Thus $k \ge j+4$, and hence $P_{j+1} \cap Q_{k-1} \subseteq X_{j+1} \cap X_{j+2}$ and so $|V(P_{j+1} \cap Q_{k-1})| \le \rho$. But by (9) and (10),
+\begin{align*}
+2(ord(\mathscr{T}) - 2\rho - 1) &\le |P_{j+1} \cap R| + |Q_{k-1} \cap R| \\
+&= |(P_{j+1} \cup Q_{k-1}) \cap R| + |(P_{j+1} \cap Q_{k-1}) \cap R| \\
+&\le |R| + \rho < ord(\mathscr{T}) + \rho
+\end{align*}
+since $R = V(A \delm{\cup}\fix{\cap} B)$\fixnote{fix:2.1-proof-R}{Here $R$ is defined as $V(A \cap B)$.} and $(A, B) \in \mathscr{T}$. Consequently, $ord(\mathscr{T}) < 5\rho+2$, a contradiction. Hence there is no such $(A, B)$, as required. $\square$
+
+\sectionhead{3. \textsc{Rigidity}}
+
+In this section we prove a lemma that will permit us to modify a rigid drawing and infer that the result remains rigid. First, we observe the following.
+
+\stmt
+(3.1) \textit{Let $H$ be a rigid drawing in a surface $\Sigma$, and let $\mathscr{T}$ be a tangle in $H$ of order $\ge 3$. Let $\Delta \subseteq \Sigma$ be a closed disc with $bd(\Delta) \cap U(H) \subseteq V(H)$ and $|bd(\Delta) \cap V(H)| \le 2$. Then $(H \cap \Delta, H \cap \overline{\Sigma - \Delta}) \in \mathscr{T}$ if and only if $\Delta$ is a dial for $bd(\Delta)$.}
+
+\textit{Proof.} Since $H$ is rigid, there is a dial $\Delta'$ for $bd(\Delta)$. Let $A = H \cap \Delta'$, $B = H \cap \overline{\Sigma - \Delta'}$. Then $A$ has no circuit, and so $(B, A) \notin \mathscr{T}$ by [2, Theorem (2.10)]. Since $(A, B)$ has order $\le 2$, and $ord(\mathscr{T}) \ge 3$, it follows that $(A, B) \in \mathscr{T}$. Now either $\Delta = \Delta'$ or $\Delta = \overline{\Sigma - \Delta'}$, and in either case the result follows. $\square$
+
+The main result of this section is the following cumbersome lemma, which we shall have several occasions to use.
+
+\stmt
+(3.2) \textit{Let $\Sigma$ be a surface with $bd(\Sigma) = \emptyset$, and let $\Sigma_1, \Sigma_2 \subseteq \Sigma$ be surfaces with $\Sigma_1 \cup \Sigma_2 = \Sigma$ and $\Sigma_1 \cap \Sigma_2 = bd(\Sigma_1) = bd(\Sigma_2)$. Let $H$ be a drawing in $\Sigma$ with $\Sigma_1 \cap \Sigma_2 \subseteq U(H)$, and let $X \subseteq V(H) \cap \Sigma_1 \cap \Sigma_2$. Let $\hat{\Sigma}_1$ be a surface with $\Sigma_1 \subseteq \hat{\Sigma}_1$ and $bd(\hat{\Sigma}_1) = \emptyset$, such that each O-arc in $bd(\Sigma_1)$ bounds an open disc in $\hat{\Sigma}_1$ disjoint from $\Sigma_1$ (thus, $\hat{\Sigma}_1$ is obtained from $\Sigma_1$ by ``pasting'' a disc onto each O-arc in $bd(\Sigma_1)$). Suppose that}

@@ -1,0 +1,22 @@
+\origpage{46}{}
+\hspace*{12pt}(4) \textit{If $e_1, e_2 \in E(T)$ are distinct, and $T_0, T_1, T_2$ are the three components of $T \setminus e_1, e_2$ as in (11.3), then $W(T_0) \not\subseteq W(T_1) \cap W(T_2)$.}
+
+\hspace*{12pt}(5) \textit{Every path of $T$ has $< n$ edges.}
+
+\textit{Subproof.} Otherwise there is one with exactly $n$ edges, say $e_1, \dots, e_n$ in order. For $1 \le i \le n$, let $e_i$ have ends $t_{i-1}, t_i$, and let the two components of $T \setminus e_i$ be $S_i, T_i$, where $t_{i-1} \in V(S_i)$ and $t_i \in V(T_i)$. Let $A_i = W(S_i)$ and $B_i = W(T_i)$. Since $(T, W)$ is linked, it follows that there are linkages $M_{ii'}$ as in (2.7), with $k$ replaced by $w + 1$. (Each $(A_i, B_i)$ has order $\le w + 1$ since each $|V(W(t_i))| \le w + 1$.) By (2.7), there exist $i, i'$ with $1 \le i < i' \le n$, such that $|V(A_i \cap B_i)| = |V(A_{i'} \cap B_{i'})| = k$ say, and $|V(A_j \cap B_j)| > k$ for $i < j < i'$, and
+\begin{equation*}
+L_1 \cap B_i \cap A_{i'} = L_2 \cap B_i \cap A_{i'} = M
+\end{equation*}
+say, where $M$ is a linkage with $k$ components, each with one end in $V(A_i \cap B_i)$ and the other in $V(A_{i'} \cap B_{i'})$. From (3), $E(L_1 \cap L_2) = \emptyset$, and so $E(M) = \emptyset$, and consequently $V(M) = V(A_i \cap B_i) = V(A_{i'} \cap B_{i'})$. Hence $M \subseteq W(S_i) \cap W(T_{i'})$. But every vertex and edge of $W(T_i \cap S_{i'})$ belongs to one of $L_1, L_2$ since $L_1 \cup L_2 = G$, and hence belongs to $M$. Consequently,
+\begin{equation*}
+W(T_i \cap S_{i'}) = M \subseteq W(S_i) \cap W(T_{i'}).
+\end{equation*}
+But this contradicts (4). Hence there is no such path, and (5) holds.
+
+From (5) and since $T$ has maximum degree $\le 3$, it follows that $|V(T)| \le 2^n$. But from (3), $G$ has no parallel edges, for if $e_1, e_2$ are parallel and $e_1 \in E(L_1)$ then $L_1$ is not vital. Consequently, each $W_t$ has $\le \frac{1}{2}w(w + 1)$ edges, since $|V(W_t)| \le w + 1$. Since $G = W(T)$, it follows that
+\begin{equation*}
+|E(G)| \le 2^n \cdot \frac{1}{2}w(w + 1) = r(p),
+\end{equation*}
+and hence the rank of $G$ is also at most $r(p)$, as required. $\square$
+
+There is some question of whether this proof is really constructive. Certainly it is, if our proof of (1.1) is constructive; but that proof uses several complicated results from earlier papers in this series, and it is necessary to check back through all these proofs and verify that they are indeed constructive in the sense we require. But they are.

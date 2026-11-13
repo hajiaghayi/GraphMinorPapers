@@ -1,0 +1,19 @@
+\origpage{109}{GRAPH MINORS. V}
+Now $G_1 \in \mathcal{F}_\theta$, and has fewer vertices than $G$, and
+\begin{equation*}
+|X_1| \le (1 - \theta_8^{-1})|X| + \theta_7 \le \theta_7 \theta_8 + 1.
+\end{equation*}
+Thus by induction $G_1$ has a tree-decomposition $(T_1, (X_t : t \in V(T_1)))$ of width $\le \theta_9$, such that $X_1 \subseteq X_{t_1}$ for some $t_1 \in V(T_1)$. Define $G_2, X_2, T_2, t_2$ and a tree-decomposition $(T_2, ((X_t : t \in V(T_2))))$ similarly for $G | V_2$. We assume without loss of generality that $T_1, T_2$ are disjoint. Take a new vertex $t_0 \notin V(T_1) \cup V(T_2)$, and let $T$ be the tree with vertex set $\{t_0\} \cup V(T_1) \cup V(T_2)$, in which $t_0$ is adjacent to $t_1$ and $t_2$, and $T \setminus t_0$ has two components $T_1, T_2$. Define $X_{t_0} = X \cup (V_1 \cap V_2)$. Then $|X_{t_0}| \le \theta_9$, and it is easy to see that $(T, (X_t : t \in V(T)))$ is the required tree-decomposition of $G$. This completes the inductive argument, and the theorem follows.
+
+\sectionhead{8. A Generalization of the Erd\"os-P\'osa Theorem}
+
+The following result is due to Erd\"os and P\'osa [4].
+
+\stmt
+(8.1) \textit{For any integer $k \ge 0$ there is an integer $k' \ge 0$ such that for every graph $G$, at least one of the following is true:} (i) \textit{$G$ has $k$ disjoint circuits;} (ii) \textit{there exists $X \subseteq V(G)$ with $|X| \le k'$ such that $G \setminus X$ has no circuits.}
+
+It is natural to ask if a similar result holds for other structures instead of circuits. A circuit of $G$ may be regarded as a subgraph of $G$ contractible to a loop. Motivated by this, we say that a subgraph $G'$ of a graph $G$ is an \textit{$H$-expansion in $G$} (where $H$ is a graph) if some edges of $G'$ may be contracted to produce a graph isomorphic to $H$. For example, if $H$ is the graph consisting of a single loop, the $H$-expansions in a graph $G$ are precisely those connected subgraphs of $G$ which have circuits. Thus, the maximum number of disjoint $H$-expansions equals the maximum number of disjoint circuits; and $X \subseteq V(G)$ meets every $H$-expansion if and only if it meets every circuit.
+
+Let us say that a graph $H$ has the \textit{Erd\"os-P\'osa property} if for every integer $k \ge 0$ there is an integer $k' \ge 0$ such that for every graph $G$, at least one of the following holds: (i) there are $k$ pairwise vertex-disjoint $H$-expansions in $G$ (ii) there exists $X \subseteq V(G)$ with $|X| \le k'$ such that $X$ meets every $H$-expansion in $G$.
+
+Then (8.1) asserts that the graph consisting of a single loop has the Erd\"os-P\'osa property. We have the following curious characterization.

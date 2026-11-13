@@ -1,0 +1,39 @@
+\origpage{96}{ROBERTSON AND SEYMOUR}
+\hspace*{12pt}(iii) for each $A \in \mathcal{A}$, $|\partial A| \le 3$ and there are $|\partial A|$ mutually vertex-disjoint paths of $G$ between $\partial A$ and $\tilde{\Omega}$
+
+\hspace*{12pt}(iv) for each $A \in \mathcal{A}$ and all $u, v \in \partial A$, there is a path of $A$ between $u$ and $v$ with no internal vertex in $\partial A$
+
+\hspace*{12pt}(v) if $A, A' \in \mathcal{A}$ are distinct then $\partial A \ne \partial A'$
+
+\hspace*{12pt}(vi) for each $A \in \mathcal{A}$, some vertex or edge of $A$ belongs to no other member of $\mathcal{A}$.
+
+If $\mathcal{A}$ is a division, we write $\partial\mathcal{A} = \bigcup(\partial A : A \in \mathcal{A})$. Thus, $\tilde{\Omega} \subseteq \partial\mathcal{A}$. We say a division $\mathcal{A}$ of $(G, \Omega)$ is \textit{rural} if $(G', \Omega)$ is rural, where $G'$ is the bipartite graph with vertex set $\mathcal{A} \cup \partial\mathcal{A}$ in which $A \in \mathcal{A}$ is adjacent to $v \in \partial\mathcal{A}$ if $v \in \partial A$.
+
+\stmt
+(8.6) \textsc{Algorithm}.
+
+\textit{Input:} A society $(G, \Omega)$.
+
+\textit{Output:} Either a cross in $(G, \Omega)$, or a rural division of $(G, \Omega)$.
+
+\textit{Running time:} $O(\nu\varepsilon)$.
+
+\textit{Description:} First we use (8.1) to find a cross if there is one. If not, we use (8.3) to find a 4-linked core $C$. Let $\mathcal{A}'$ be the set of all subgraphs $A$ of $G$ such that either
+
+\hspace*{12pt}(i) $A$ consists of an edge of $G$ with both ends in $V(C)$, and its ends, or
+
+\hspace*{12pt}(ii) $A$ consists of a component of $G \setminus V(C)$, together with all edges of $G$ between this component and $V(C)$, and their ends, or
+
+\hspace*{12pt}(iii) $A$ consists of a vertex $v \in \tilde{\Omega}$ incident with no edges of $G$.
+
+We compute $\mathcal{A}'$. Finally, say $A_1, A_2 \in \mathcal{A}'$ are \textit{equivalent} if $\partial A_1 = \partial A_2$, let $\mathcal{A}_1, \dots, \mathcal{A}_k$ be the equivalence classes into which $\mathcal{A}'$ is partitioned by this relation, and let
+\begin{equation*}
+\mathcal{A} = \left\{ \bigcup(A : A \in \mathcal{A}_i) : 1 \le i \le k \right\}.
+\end{equation*}
+Output $\mathcal{A}$, and stop.
+
+We must prove that $\mathcal{A}$ is a rural division of $(G, \Omega)$. First, we observe:
+
+\hspace*{12pt}(1) \textit{For each $A \in \mathcal{A}'$, $|V(A) \cap V(C)| \le 3$ and there are $|V(A) \cap V(C)|$ mutually vertex-disjoint paths of $G$ between $V(A) \cap V(C)$ and $\tilde{\Omega}$.}
+
+\textit{Subproof.} Now $|V(A) \cap V(C)| \le 3$ since $V(C)$ is trisecting. Since $C$ is 4-linked, there are $|V(A) \cap V(C)|$ mutually vertex-disjoint paths of $C$ between $V(A) \cap V(C)$ and $\tilde{\Omega}$; and these can be converted easily to paths in $G$.

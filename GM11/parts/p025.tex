@@ -1,0 +1,28 @@
+\origpage{96}{ROBERTSON AND SEYMOUR}
+\sectionhead{8. \textsc{Restraints}}
+
+Throughout the remainder of the paper, $\Gamma$ is a drawing in a connected surface $\Sigma$, with a slope $\mathrm{ins}$ of order $\theta \ge 1$, where $2\theta$ is an integer. We say that $X \subseteq \Sigma$ is $\Gamma$-nice if $X$ is a union of vertices, edges and regions of $\Gamma$.
+
+Let $X \subseteq \Sigma$ with $X \ne \emptyset, \Sigma$, where $X$ is closed, simply-connected and $\Gamma$-nice. By (7.5) there is a closed disc $\Delta \subseteq \Sigma$ with $X \subseteq \Delta$; and hence there is an open disc $\Delta' \subseteq \Sigma$ with $\Delta \subseteq \Delta'$. By (7.6), $\Delta' - X$ has a unique arc-wise connected component; and hence there is a closed walk of $\Gamma$ tracing out $bd(X)$ in the natural sense. (Indeed, there are several such walks, obtained from one another by reinitializing and reversal.) Such a walk we call a perimeter walk of $X$. We denote the length of this walk by $l(X)$. Every edge of $\Gamma \cap bd(X)$ occurs in this walk, but some may occur twice, and so $l(X)$ may be greater than $|E(\Gamma \cap bd(X))|$. Indeed, its length equals the length of the perimeter of $\Sigma - X$ (as a region of $\Gamma \cap bd(X)$) defined before (6.5).
+
+\stmt
+(8.1) \textit{Let $X \subseteq \Sigma$ be closed, simply-connected, and $\Gamma$-nice with $X \ne \emptyset, \Sigma$. Let $v_0, e_1, v_1, \dots, e_t, v_t = v_0$ be a perimeter walk of $X$. For $0 \le i_1 \le i_2 \le i_3 \le i_4 \le t$, if $A, B \subseteq X$ are arc-wise connected and $v_{i_1}, v_{i_3} \in A$ and $v_{i_2}, v_{i_4} \in B$, then $A \cap B \ne \emptyset$.}
+
+\textit{Proof.} We may assume that $A = \{v_{i_1}\}$ if $v_{i_1} = v_{i_3}$, and $A$ is a line with ends $v_{i_1}, v_{i_3}$ otherwise; and similarly for $B$. Let $\Delta \subseteq \Sigma$ be an open disc with $X \subseteq \Delta$. Choose $u \in \Delta - X$, and for $1 \le j \le 4$ let $F_j$ be a line in $\Delta$ such that
+
+\hspace*{12pt}(i) $F_j$ has ends $u, v_{i_j}$ and $F_j \cap X = \{v_{i_j}\}$ ($1 \le j \le 4$)
+
+\hspace*{12pt}(ii) for $1 \le j < j' \le 4$, $F_j \cap F_{j'} = \{u\} \cup (\{v_{i_j}\} \cap \{v_{i_{j'}}\})$, and so $F_1 \cup F_3 \cup A$ and $F_2 \cup F_4 \cup B$ are O-arcs
+
+\hspace*{12pt}(iii) $F_1 \cup F_3 \cup A$ and $F_2 \cup F_4 \cup B$ cross at $u$.
+
+Since O-arcs in a disc cannot cross only once, it follows that $A \cap B \ne \emptyset$, as required. $\square$
+
+If $W$ is a closed walk and $\Gamma | W$ is confined, we define $\mathrm{ins}(W) = \mathrm{ins}(\Gamma | W)$. For convenient reference let us state:
+
+\stmt
+(8.2) \textit{Let $W_1, W_2, W_3$ be closed walks of $\Gamma$, each of length $< 2\theta$. Then there is a region $r$ of $\Gamma$ with $r \notin \mathrm{ins}(W_1) \cup \mathrm{ins}(W_2) \cup \mathrm{ins}(W_3)$.}
+
+\textit{Proof.} For $i = 1, 2, 3$, let $Z_i$ be the set of regions of $\Gamma$ included in $\mathrm{ins}(W_i)$. Then $\Gamma | W_i$ is confined and $N(Z_i) \subseteq \Gamma | W_i$, and so $Z_i$ is small (with respect to the weighting $(V(\Gamma), 2\theta)$). The claim follows from (5.5). $\square$
+
+We say that $X \subseteq \Sigma$ is a \textit{restraint} (of $\Gamma$, with respect to $\mathrm{ins}$) if $X \ne \emptyset$ is closed, simply-connected and $\Gamma$-nice, $l(X) < 2\theta$, and $\Sigma - X \notin \mathrm{ins}(\Gamma \cap bd(X))$.

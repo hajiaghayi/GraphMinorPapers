@@ -1,0 +1,31 @@
+\origpage{96}{N. Robertson, P. Seymour / Journal of Combinatorial Theory, Series B 89 (2003) 77--108}
+\noindent correspond to the same member of $\mathscr{L}_i^-$). Since $H$ has tree-width $\le w$, there is a tree-decomposition $(T, \tau)$ of $G_i^-$ such that $\bar{\pi}(C_i) \subseteq V(\tau(t))$ for some $t \in V(T)$; that is, $P_i$ has tree-width $\le w$. This proves (1).
+
+\hspace*{12pt}(2) \textit{For $1 \le i \le k$, $G_i$ is a complemented rooted subhypergraph of $G^*$.}
+
+\textbf{Subproof.} $G_i^-$ is obtained from $C_i^- \cap \bigcap ((C_i \setminus A)^- \colon A \in \mathscr{L}_i)$ by adding a new edge with set of ends $\bar{\pi}(A)$ for each $A \in \mathscr{L}_i$, and $G^{*-}$ is obtained from $M(G, \mathscr{L}^*) = G^- \cap \bigcap ((G \setminus A)^- \colon A \in \mathscr{L}^*)$ by adding a new edge with set of ends $\bar{\pi}(A)$ for each $A \in \mathscr{L}^*$. Since $C_i \setminus A \subseteq G \setminus A$ for each $A \in \mathscr{L}_i$ and $C_i \subseteq G \setminus A$ for all $A \in \mathscr{L}^* - \mathscr{L}_i$, it follows that $C_i^- \cap \bigcap ((C_i \setminus A)^- \colon A \in \mathscr{L}_i)$ is a subhypergraph of $G^- \cap \bigcap ((G \setminus A)^- \colon A \in \mathscr{L}^*)$, and so $G_i^-$ is a subhypergraph of $G^{*-}$. Hence $G_i$ is a rooted subhypergraph of $G^*$. To see that it is complemented, let $v \in V(G_i)$ be such that either $v \in \bar{\pi}(G^*)$ or some $e \in E(G^*) \setminus E(G_i)$ is incident with $v$; we claim that $v \in V(D_i)$. If $v \in \bar{\pi}(G^*)$, then $v \in \bar{\pi}(G)$ since $\pi(G^*) = \pi(G)$, and so $v \in V(G \setminus C_i) = V(D_i)$, as claimed. We assume then that some $e \in E(G^*) \setminus E(G_i)$ is incident with $v$. If $e \in E(G)$, then $e \in E(D_i)$ and so $v \in V(D_i)$ as claimed. If $e \notin E(G)$, then $e = e(A)$ for some $A \in \mathscr{L}^*$. Since $e \notin E(G_i)$ it follows that $A \notin \mathscr{L}_i$, and so $A \in \mathscr{L}_j$ for some $j \ne i$. In particular, $A^- \subseteq C_j^- \subseteq D_i$, and so $v \in V(D_i)$, as claimed. Thus in each case $v \in V(D_i)$, and so
+\begin{equation*}
+v \in V(G_i) \cap V(D_i) \subseteq V(C_i^- \cap D_i) = \bar{\pi}(C_i) = \bar{\pi}(G_i).
+\end{equation*}
+Hence $G_i$ is complemented in $G^*$. This proves (2).
+
+\hspace*{12pt}(3) \textit{$P_i = P^* | G_i$ for $1 \le i \le k$.}
+
+\textbf{Subproof.} By (2), $P^* | G_i$ is well-defined, and has the same underlying rooted hypergraph as $P_i$, namely $G_i$. Let $e \in E(G_i)$; we must show that $\mu_i(e) \equiv \mu^*(e)$, $\phi_i(e) \equiv \phi^*(e)$, and $\Delta_i(e) = \Delta^*(e)$. Now
+\begin{equation*}
+E(G_i) = E(M(C_i, \mathscr{L}_i)) \cup \{e(\delm{a}\fix{A}) \colon A \in \mathscr{L}_i\}.\fixmark{fix:5.5-claim3}
+\end{equation*}
+\fixnotetext{A misprint: the new edges are $e(A)$ for $A \in \mathscr{L}_i$.}%
+We recall that $P_i$ is the heart of $(P | C_i, \mathscr{L}_i)$ and $P^*$ is the heart of $(P, \mathscr{L}^*)$. If $e \in E(M(C_i, \mathscr{L}_i))$, then $\mu_i(e) \equiv \mu^*(e)$ (because $\mu_i(e) \equiv \mu(e)$ and $\mu^*(e) \equiv \mu(e)$), and the other two relations follow similarly. We assume then that $e = e(A)$ for some $A \in \mathscr{L}_i$. Since $A$ belongs to both $\mathscr{L}_i$ and $\mathscr{L}^*$, it follows from the definition of ``heart'' that
+
+\hspace*{12pt}$\bullet$ $\mu_i(e) = \mu^*(e)$ (for they are both equal to $\pi(A)$),
+
+\hspace*{12pt}$\bullet$ $e$ does not belong to $dom(\phi) \cup dom(\phi^*)$, and
+
+\hspace*{12pt}$\bullet$ $\Delta_i(e) = \Delta^*(e)$ (for they are both equal to $gr(P|A)$).
+
+This proves (3).
+
+\hspace*{12pt}(4) \textit{$G_1, \dots, G_k$ are all distinct, and $\{G_1, \dots, G_k\}$ is a rooted location in $G^*$.}
+
+\textbf{Subproof.} Let $1 \le i, j \le k$ with $i \ne j$; we claim that $G_i \subseteq G^* \setminus G_j$; in other words, that $V(G_i) \cap V(G_j) \subseteq \bar{\pi}(G_j)$ and $E(G_i) \cap E(G_j) = \emptyset$. First, let $v \in V(G_i) \cap V(G_j)$. Since $V(G_i) \subseteq V(C_i)$ and $V(G_j) \subseteq V(C_j)$, it follows that $v \in V(C_i) \cap V(C_j) \subseteq \bar{\pi}(C_j)$ since $\mathscr{L}$

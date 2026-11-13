@@ -1,0 +1,24 @@
+\origpage{41}{}
+Let $A_0 = \bigcup(\alpha(c) : c \in \mathcal{A}_1 \cup \mathcal{A}_2)$. From (2), $(A_0, G')$ is a separation of $G$. Since every vertex of $V(A_0 \cap G')$ belongs to $V(\alpha(c) \cap B(c))$ for some $c \in \mathcal{A}_1 \cup \mathcal{A}_2$, it follows that $(A_0, G')$ has order
+\begin{equation*}
+\le 3|\mathcal{A}_1| + 2q|\mathcal{A}_2| \le 3p + 2q(3p + c(\Sigma)) = n.
+\end{equation*}
+We deduce from (3.5) that
+
+\hspace*{12pt}(3) \textit{There is a tangle} $\mathcal{T}'$ \textit{in} $G'$ \textit{of order} $\ge \theta - n = \theta'$, \textit{such that} $(A \cap G', B \cap G') \in \mathcal{T}'$ \textit{for every} $(A, B) \in \mathcal{T}$ \textit{of order} $< \theta'$.
+
+\hspace*{12pt}(4) \textit{The pseudo-presentation} $\Gamma', F_1^*, \dots, F_r^*, \mu$ \textit{of} $G'$ \textit{surrounds} $\mathcal{T}'$.
+
+\textit{Subproof.} Let $s$ be a space of $\Gamma'$ in $\Sigma$ with $s \subseteq F_1^* \cup \dots \cup F_r^*$, and let $c \in C(\Gamma)$ with $c \cap bd(\Sigma) = s$. Then $c$ is a border cell, and $c \not\in \mathcal{A}_2$ by definition of $F_1^* \cup \dots \cup F_r^*$. Now $(\alpha(c), B(c)) \in \mathcal{T}$ by (7.1) since it has order $\le 2q < ord(\mathcal{T})$ and $\alpha(c)$ is small with respect to $\mathcal{T}$. By (3), $(\alpha(c) \cap G', B(c) \cap G') \in \mathcal{T}'$ since $(\alpha(c), B(c))$ has order $\le 2q < \theta'$. Hence $\alpha(c) \cap G'$ is small with respect to $\mathcal{T}'$. But $\alpha(c) \subseteq G'$ since $c \in C(\Gamma) \setminus (\mathcal{A}_1 \cup \mathcal{A}_2)$, and $\alpha(c) = \mu(s)$. Consequently $\mu(s)$ is small with respect to $\mathcal{T}'$. This proves (4).
+
+\hspace*{12pt}(5) \textit{There is no vital} $(p + n)$\textit{-linkage in} $G'$.
+
+\textit{Subproof.} This follows from (1), (4) and (8.4), because of the choice of $\theta'$.
+
+Since $(A_0, G')$ is a separation of $G$ of order $\le n$, it follows from (5)\fix{, (2.2)} and \del{(2.4)}\fix{(2.3)} that there is no vital $p$-linkage in $G$\fixnote{fix:9.2-proof}{The references meant are (2.2) and (2.3), since (2.4) is about splitting a vertex. If $L$ were a vital $p$-linkage in $G$, then by (2.2) and (2.3), $L \cap G'$ would be a vital $(p + n)$-linkage in $G'$, contrary to (5). Claim (5) in the proof of (5.2) makes the same step ``from (2.2) and (2.3)''.}, as required. $\square$
+
+\sectionhead{10. The main proof}
+
+Finally we are able to apply the theorems of [10]. Theorems (8.2), (8.4), (9.8) and particularly (13.4) of [10] imply the following. (A $K_n$-minor of $G$ is a minor isomorphic to $K_n$.)
+
+\textbf{10.1} \textit{For every integer} $n \ge 0$ \textit{there exist} $\rho, \xi \ge 0, q \ge 1$ \textit{and} $\theta > \xi$ \textit{such that, if a graph} $G$ \textit{has no} $K_n$\textit{-minor, and} $\mathcal{T}$ \textit{is a tangle in} $G$ \textit{of order} $\ge \theta$, \textit{then there exists a surface} $\Sigma$ \textit{such that} $c(\Sigma) \le \rho$ \textit{and} $K_n$ \textit{cannot be drawn in} $\Sigma$, \textit{and there exists} $Z \subseteq V(G)$ \textit{with} $|Z| \le \xi$ \textit{such that there is a portrait of} $G \setminus Z$ \textit{in} $\Sigma$ \textit{with depth} $\le q$, \textit{surrounding} $\mathcal{T} \setminus Z$.

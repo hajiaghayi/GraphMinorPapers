@@ -1,0 +1,28 @@
+\origpage{224}{ROBERTSON AND SEYMOUR}
+\noindent $x \in \Sigma - (bd(\Sigma) \cup U(J))$ then $y$ is unique. It is easy to verify that $\beta \colon \Sigma \to \Sigma$ is a homeomorphism, and $\beta(x) = x$ ($x \in bd(\Sigma)$), and $\beta(\phi(H'))$ is homotopic to $H$, as required.
+
+Let $\Sigma \cong \Sigma(a, b, c)$ where $2a + 2b + c > 1$, and let $k \ge 0$ be an integer. Let $w$ be the maximum of
+\begin{equation*}
+w(\Sigma', 2k, 3(2a + b + c - 1))
+\end{equation*}
+(as in (3.6)), taken over all surfaces $\Sigma' \cong \Sigma(a, b, c')$, where $c' \le 2(2a + b + c - 1)$. Let
+\begin{align*}
+\mu &= 2(2a + b + c)(k + w) + 2k \\
+v &= 6(2a + b + c - 1)(w + 2\mu + 1) + 2k.
+\end{align*}
+We define $v(\Sigma, k) = v$. One form of our main result is the following, and the remainder of this section is devoted to its proof. If $C$ is a cuff of a surface $\Sigma$, we denote by $\Sigma + \hat{C}$ the surface obtained by pasting a closed disc onto $C$.
+
+\stmt
+(4.6) \textit{Let $\Sigma$ be a connected surface with at least two cuffs and let $k \ge 0$ be an integer. Let $G$ be a proper graph in $\Sigma$, with $|V(G) \cap bd(\Sigma)| \le 2k$, such that}
+
+\textit{(i) for every $G$-normal $I$-arc $B$ with $|V(G) \cap B| \le v(\Sigma, k)$ the ends of $B$ are in the same cuff of $\Sigma$,}
+
+\textit{(ii) for every $G$-normal $O$-arc $B$ with $|V(G) \cap B| \le v(\Sigma, k)$ either $B$ is null-homotopic, or for some cuff $C$, $B$ is null-homotopic in $\Sigma + \hat{C}$ and $V(G) \cap C \subseteq B$, and}
+
+\textit{(iii) for every cuff $C$, $|V(G) \cap C| \ge 2$.}
+
+\textit{Let $H$ be a forest in $\Sigma$ with $V(G) \cap bd(\Sigma) = V(H) \cap bd(\Sigma)$. Then $H$ is $G$-feasible.}
+
+\textit{Proof.} Let $(\Delta, \Pi)$ be a minimal net for $\Sigma$ with respect to $G$; let $J$ be the associated seam graph, and let $\phi \colon \Delta \to \Sigma$ be the associated surjection. Choose $a, b, c$ such that $\Sigma \cong \Sigma(a, b, c)$ and let $w, \mu, v$ be as in the definition of $v(\Sigma, k)$.
+
+Let $z \in V(H) \cap bd(\Sigma)$. Then $z \in C$ for some cuff $C$. We claim that there are $v - 2k$ paths of $G$, each between $z$ and $bd(\Sigma) - C$, pairwise vertex-disjoint except for their ends. For suppose not, and let $G'$ be the graph obtained from $G$ by deleting every vertex of $G$ in $C$ except $z$. By \del{(4.2)}\fix{(4.3)} applied to $G'$,\fixnote{fix:4.6-p224}{Here (4.2) characterizes open discs and spheres, and (4.3) is the lemma that gives the paths or the $O$-arc $F'$.} there is a $G'$-normal $O$-arc $F'$ with $F' \cap bd(\Sigma) = \emptyset$ and $|V(G') \cap F'| \le v - 2k - 1$, such that $F'$ is not null-homotopic. Choose $F'$ with $|V(G') \cap F'|$ minimum. Then it is easy to see that $F' \cap r$ is connected,

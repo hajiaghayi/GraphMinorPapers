@@ -1,0 +1,26 @@
+\origpage{58}{N. Robertson, P.D. Seymour / Journal of Combinatorial Theory, Series B 89 (2003) 43--76}
+\noindent $R_1, \dots, R_{m+1}$ of $G'$, each with distinct ends both in $\{u_1, \dots, u_n\} \cup W$, and we may assume that they have no internal vertex in this set. Each of these paths $R_i$ is therefore an $H$-path since $V(G' \cap H) = \{u_1, \dots, u_n\} \cup W$. But $d(u, v) \ge \theta_1$ for all distinct $u, v \in \{u_1, \dots, u_n\} \cup W$. Moreover, $|V(G') \cap X| \le m + 1$, and so
+\begin{equation*}
+|(V(R_1) \cup \dots \cup V(R_{m+1})) \cap X| \le m + 1.
+\end{equation*}
+This completes the inductive argument, and hence proves (1).
+
+Consequently, (1) holds with $m = \mu$. Let $Q_1, \dots, Q_\mu$ be the corresponding paths, and let $Q_i$ have ends $s_i, t_i (1 \le i \le \mu)$. Since 5.2 is satisfied (replacing $\theta$ by $\theta_1$) and $d(u, v) \ge \theta_1$ for all distinct $u, v \in \{s_1, t_1, \dots, s_\mu, t_\mu\}$, it follows from 5.2 that $\mathscr{T}^*$ controls a $K_p$-minor. This proves 5.5. $\square$
+
+\textbf{Proof of 4.1} (assuming 5.1). Let $\Sigma$ be a surface and let $p \ge 0, \phi \ge 1$. Let $\mu = \frac{1}{2}p(p - 1)$, and choose $\theta_\mu$ so that 5.5 holds (with $\theta$ replaced by $\theta_\mu$). Let $\sigma_\mu = 8\mu$ and $\kappa_\mu = \rho_\mu = \zeta_\mu = 0$. We define $\sigma_i, \theta_i, \kappa_i, \rho_i, \zeta_i$ for $0 \le i \le \mu$ inductively as follows. Suppose that $0 \le i < \mu$ and $\sigma_{i+1}, \theta_{i+1}$ have already been defined. Choose $\sigma_i, \theta_i, \kappa_i, \rho_i, \zeta_i$ so that 5.1 is satisfied (with $\tau, \chi, \psi, \sigma, \kappa, \rho, \zeta, \theta$ replaced by $\sigma_{i+1}, i, \theta_{i+1}, \sigma_i, \kappa_i, \rho_i, \zeta_i, \theta_i$). This completes the inductive definition.
+
+Let $\kappa = \max(\kappa_0, \dots, \kappa_\mu), \rho = \max(\rho_0, \dots, \rho_\mu), \zeta = \max(\zeta_0, \dots, \zeta_\mu)$, and let $\theta = \theta_0$. We claim that $\kappa, \rho, \zeta, \theta$ satisfy 4.1. For let $\mathscr{T}^*$ be a tangle in $G$ with a $\Sigma$-span of order $\ge \theta = \theta_0$, and hence with a hairless animal with $0$ horns, of strength $\ge (\theta_0, \sigma_0)$. Choose $i$ with $0 \le i \le \mu$ maximum so that there is a hairless animal with $i$ horns, of strength $\ge (\theta_i, \sigma_i)$. If $i = \mu$, then since $\theta_\mu$ satisfies 5.5, it follows that the third outcome of 4.1 holds. We assume then that $i < \mu$. From the maximality of $i$, there is no hairless animal with $i + 1$ horns, of strength $\ge (\theta_{i+1}, \sigma_{i+1})$. By 5.1, we deduce that one of outcomes 1, 3, 4 of 5.1 holds, and so 4.1 holds, as required. $\square$
+
+\sectionhead{6. Induction on hairs}
+
+Next, we show that 5.1 is implied by the following.
+
+\textbf{6.1.} \textit{Let $\Sigma$ be a surface, and let $p, \tau, \chi, \delta \ge 0$ and $\phi, \psi \ge 1$. Then there exist $\sigma, \kappa, \rho, \zeta \ge 0$ and $\theta \ge 1$ such that if $\mathscr{T}^*$ is a tangle in a graph $G$, and there is an animal with $\chi$ horns and $\delta$ hairs, of strength $\ge (\theta, \sigma)$, then either}
+
+\hspace*{12pt}1. \textit{there is a $\Sigma'$-span of order $\ge \phi$, for some surface $\Sigma'$ obtained from $\Sigma$ by adding a handle or a crosscap, or}
+
+\hspace*{12pt}2. \textit{there is an animal with $\chi$ horns and $\delta + 1$ hairs, of strength $\ge (\psi, \tau)$, or}
+
+\hspace*{12pt}3. \textit{there exists $Z \subseteq V(G)$ with $|Z| \le \zeta$, and a $\mathscr{T}^* \setminus Z$-central segregation of $G \setminus Z$ of type $(\rho, \kappa)$ with a proper arrangement in $\Sigma$, or}
+
+\hspace*{12pt}4. \textit{$\mathscr{T}^*$ controls a $K_p$-minor of $G$.}

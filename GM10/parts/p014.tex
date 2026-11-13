@@ -1,0 +1,19 @@
+\origpage{166}{ROBERTSON AND SEYMOUR}
+For if $|E| \le 1$, then $\beta(G) = 0 \le k$ and there is an exact tree-labelling over $\mathscr{A}$, and so we may assume that $|E| \ge 2$. If $(T, \tau)$ is a branch-decomposition of $G$ of width $\le k$, define $\alpha(v, e)$ for each incidence $(v, e)$ to be the set of all edges $\tau(t)$ of $G$ with $t$ and $v$ in different components of $T \setminus e$. Then $(T, \alpha)$ is an exact tree-labelling over $\mathscr{A}$. For the converse, suppose that there is an exact tree-labelling over $\mathscr{A}$. Since $|E| > 1$, it follows that $E \notin \mathscr{A}$ and $E \ne \emptyset$, and so by (3.6) we may choose an exact tree-labelling $(T, \alpha)$ over $\mathscr{A}$ such that for each leaf $v$ and incident edge $e$, $\alpha(v, e) \ne E$. For such $v$, $e$, there exists $\{f\} \in \mathscr{A}$ such that $\alpha(v, e) = E - \{f\}$; we define $f = \tau(v)$. By (3.3), $(T, \tau)$ is a branch-decomposition of $G$ of width $\le k$.
+
+From (3.5), (1), and (2) we deduce that
+
+\hspace*{12pt}(3) \textit{For all $k \ge \gamma(G)$, $G$ has a tangle of order $k + 1$ if and only if $k < \beta(G)$.}
+
+Now we deduce the theorem. By (2.4), $\theta(G) \ge \gamma(G)$. By setting $k = \theta(G)$ we deduce from (3) that $\beta(G) \le \theta(G)$, and so $\max(\beta(G), \gamma(G)) \le \theta(G)$. By setting $k = \theta(G) - 1$ we deduce from (3) that $\theta(G) \le \max(\beta(G), \gamma(G))$. The result follows. $\square$
+
+We apply (4.3) (actually, the easy part of (4.3)) for the following.
+
+\stmt
+(4.4) \textit{For $n \ge 0$, $K_n$ has tangle number $\lceil(2/3) n\rceil$, and for $n \ge 3$, it has branch-width $\lceil(2/3) n\rceil$.}
+
+\textit{Proof.} The result holds for $n \le 3$, and we assume that $n \ge 4$. Put $\theta = \lceil(2/3) n\rceil$. It is easy to see that $K_n$ has a branch-decomposition of width $\le \theta$. Thus the result follows from (4.3) if we can find a tangle of order $\theta$. Let $\mathscr{T}$ be the set of all separations $(A, B)$ of $G = K_n$ with $|V(A)| < \theta$. If $(A, B)$ is any separation of $G$ then one of $V(A)$, $V(B)$ equals $V(G)$, and so its order equals the smaller of $|V(A)|$, $|V(B)|$. Hence if $(A, B)$ has order $< \theta$ then $\mathscr{T}$ contains one of $(A, B)$, $(B, A)$, and the first axiom is satisfied. For the second axiom, suppose that $(A_i, B_i) \in \mathscr{T}$ ($1 \le i \le 3$) and $A_1 \cup A_2 \cup A_3 = G$. Since
+\begin{equation*}
+|V(A_1)| + |V(A_2)| + |V(A_3)| \le 3\theta - 3 < 2n
+\end{equation*}
+some vertex $v$ of $G$ is in at most one of $V(A_1)$, $V(A_2)$, $V(A_3)$; $v \notin V(A_1) \cup V(A_2)$, say. Since $|V(A_3)| < \theta < n$ some vertex $u$ of $G$ is not in $V(A_3)$. But then the edge joining $u$ and $v$ is in none of $E(A_1)$, $E(A_2)$, $E(A_3)$, a contradiction. Thus the second axiom is satisfied. For the third, let $e \in E(G)$, and let $K$ be the graph formed by $e$ and its ends; then $(K, G \setminus e) \in \mathscr{T}$ by definition of $\mathscr{T}$, since $\theta \ge 3$, and so $\mathscr{T}$ is a tangle by (2.7). This completes the proof. $\square$

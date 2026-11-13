@@ -1,0 +1,22 @@
+\origpage{74}{N. Robertson, P.D. Seymour / Journal of Combinatorial Theory, Series B 89 (2003) 43--76}
+\hspace*{12pt}(11) \textit{There is a path $P_1$ of $H$ between $V(H) \cap bd(M_\kappa)$ and $X_1$, with only one vertex in $V(H')$ and such that $Z_0 \cap V(P_1) = \emptyset$.}
+
+\textit{Subproof.} We recall that $(\Lambda_1, C_1, X_1)$ is a battlefield of size $\beta$, and hence $\bar{M}_\kappa$ is included in the open disc in $\Lambda_1$ bounded by $U(C_1)$. Moreover, the regional distance between $U(C_1)$ and $bd(\Lambda_1)$ (see [8, section 5]) is at least $1 + \frac{1}{2}\beta$, and so from (10) and theorem 10.5 of [5], there are $\kappa$ disjoint paths of $H$ between $V(H) \cap bd(M_\kappa)$ and $X_1$, each with only one vertex in $V(H')$. Since $|Z_0| < \kappa$, one of these paths is disjoint from $Z_0$. This proves (11).
+
+\hspace*{12pt}(12) \textit{For $3 \le i < j \le \beta - 3$ if $j - i \ge 3$ then $\bar{M}_i \subseteq M_j$.}
+
+\textit{Subproof.} Now $d(y_1, x) \le i + 2$ for every $x \in A(H)$ with $x \subseteq \bar{M}_i$, and since $i + 2 < j$ it follows that $x \subseteq M_j$. This proves (12).
+
+Let $i$ be such that $3 \le i \le \beta - \psi - 5$. Then $M_i$ and $M_{i+\psi+2}$ are both defined, and $\bar{M}_i \subseteq M_{i+\psi+2}$ by (12). Consequently $\Sigma_i = \bar{M}_{i+\psi+2} \setminus M_i$ is homeomorphic to a closed cylinder. Let $J_i$ be the subdrawing of $H$ formed by the vertices and edges of $H$ in $\Sigma_i$. Now the cylinders $\Sigma_{\kappa+r(\psi+5)}$ ($r = 0, \ldots, \kappa - 1$) all exist since $\kappa + (\kappa - 1)(\psi + 5) \le \beta - \psi - 5$, and by (12) they are mutually disjoint. Consequently the graphs $J_{\kappa+r(\psi+5)}$ ($r = 0, \ldots, \kappa - 1$) are mutually disjoint, and since $|Z_0| < \kappa$, there exists $i$ with $\kappa \le i \le \beta - \psi - 5$ such that $Z_0 \cap V(J_i) = \emptyset$.
+
+\hspace*{12pt}(13) \textit{$\bar{M}_\kappa \subseteq M_{i+\psi+2}$, and $M_{i+\psi+2} \subseteq \Lambda_1$.}
+
+\textit{Subproof.} Now $i \ge \kappa$ and $\psi \ge 1$, so the first inclusion follows from (12). For the second, let $x \in A(H)$ \del{which} \fix{with}\fixnote{fix:8.1-p74}{In the same way, $s_2 \notin s_1$ below becomes $s_2 \ne s_1$.} $x \subseteq \bar{M}_{i+\psi+2}$. Then $d(y_1, x) \le i + \psi + 4$ by definition of $M_{i+\psi+2}$; and so $x \subseteq \Lambda_1$ since $\Lambda_1, C_1, X_1$ is a battlefield of size $\beta$ around $y_1$ and $i + \psi + 4 < \beta$. This proves (13).
+
+We recall that $P_0$ was defined before (6).
+
+\hspace*{12pt}(14) \textit{$P_0 \cap J_i$ is null.}
+
+\textit{Subproof.} Now $H$ is connected, and both $O$-arcs in $bd(\Sigma_i)$ correspond to circuits of $J_i$, and so $J_i$ is connected. Let $P_1$ be as in (11); then $P_1$ has one end in $bd(M_\kappa)$ and the other in $bd(\Lambda_1)$, and so from (13), $P_1$ meets $H \cap bd(M_{i+\psi+2}) \subseteq J_i$. Suppose that $P_0$ also meets $J_i$. Now $U(J_i) \subseteq \Lambda_1$ by (13), and so there is a path of $P_1 \cup J_i$ from $X_1$ to $V(P_0)$ with only one vertex in $H'$. But $V(P_1 \cup J_i) \cap Z_0 = \emptyset$, contrary to (9). This proves (14).
+
+Let $v$ be the first vertex of $P_0$ (as $P_0$ is traversed from $s_1$) such that $v \in V(H), v \ne s_1$ and $v \notin \Lambda_1 \setminus M_i$. (Such a vertex exists, because $s_2 \in V(H), s_2 \delm{\notin}\fix{\ne} s_1$ and $s_2 \notin \Lambda_1 \setminus M_i$.) Let $u$

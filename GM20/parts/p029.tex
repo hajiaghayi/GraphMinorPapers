@@ -1,0 +1,26 @@
+\origpage{353}{N. Robertson, P.D. Seymour / Journal of Combinatorial Theory, Series B 92 (2004) 325--357}
+\hspace*{12pt}(11) \textit{For each} $v \in V(G)$ \textit{every two members of} $\eta(v)$ \textit{are connected in} $H$.
+
+\textit{Subproof:} If $v \in N(\Gamma)$ then this follows from (8). If $v \notin N(\Gamma)$ it follows from (10).
+
+\hspace*{12pt}(12) \textit{If} $v_1', v_2'$ \textit{are adjacent in} $H$ \textit{then there exists} $v \in V(G)$ \textit{with} $v_1', v_2' \in \eta(v)$.
+
+\textit{Subproof:} Let $e \in E(H)$ have ends $v_1', v_2'$. From (8) we may assume that $v_1' \in \beta'(n_1')$, $v_2' \in \beta'(n_2')$ where $n_1', n_2'$ are the nodes of some border cell $c' \in C(\Gamma')$ with $e \in E(M'_{c'})$ and $c' \notin \eta(C(\Gamma))$. Let $v_1'$ be the $i$th term of $\pi'(n_1')$; then since $c' \ne c'_\Theta$ by (1) it follows from the property of $\pi'$ that $v_2'$ is the $i$th term of $\pi'(n_2')$. Since $c' \notin \eta(C(\Gamma))$ there exists $n \in N(\Gamma)$ with $n_1', n_2' \in V(\zeta(n))$; let $v$ be the $i$th term of $\pi(n)$. Then $v_1', v_2' \in \eta(v)$. This proves (12).
+
+From (11) and (12) it follows that $H$ realizes $\eta$. This completes the proof of 9.1. $\square$
+
+\sectionhead{10. Excluding a minor}
+
+If $G$ is a hypergraph, its 1-skeleton $sk(G)$ is the subgraph of $K_{V(G)}$ with vertex set $V(G)$ in which distinct $v_1, v_2 \in V(G)$ are adjacent if there is an edge of $G$ incident with both $v_1$ and $v_2$.
+
+\textbf{10.1.} \textit{Let} $P = (G, \mu, \Delta)$ \textit{be a free patchwork, and let} $C$ \textit{be a subgraph of} $sk(G)$. \textit{Then there is a realization} $H$ \textit{of} $P$ \textit{such that for all} $x, y \in V(C)$, $x$ \textit{and} $y$ \textit{are connected in} $C$ \textit{if and only if they are connected in} $H$.
+
+\textit{Proof.} For each $e \in E(G)$, choose $\delta_e \in \Delta(e)$ such that for distinct $x, y \in V(\delta_e)$, $x$ and $y$ are adjacent in $\delta_e$ if and only if they belong to $V(C)$ and are connected in $C$ (This is possible since $P$ is free.) Let
+\begin{equation*}
+H = N_{V(G)} \cup \bigcup(\delta_e : e \in E(G)).
+\end{equation*}
+Clearly if $x, y \in V(C)$ are connected in $H$ then they are connected in $C$. On the other hand, $C$ is a subgraph of $H$; for if $x, y \in V(C)$ are adjacent in $C$, choose $e \in E(G)$ such that $x, y$ are ends of $e$; then $x, y$ are adjacent in $H$. The result follows. $\square$
+
+Let $(\Sigma, \rho)$ be a graded surface, let $P = (G, \mu, \Delta)$ be a free rootless patchwork, and let $\mathcal{L}$ be a rooted location in $G$. We say that $(P, \mathcal{L})$ is $(\Sigma, \rho)$-\textit{shelled} if $\mathcal{L}$ is fine and there is a heart $P'$ of $(P, \mathcal{L})$ where $P' = (G', \mu', \Delta')$ and $E(G') = \{e(A) : A \in \mathcal{L}\}$, and there is a $(\Sigma, \rho)$-hull $(\Gamma, \beta)$ for $G'^-$ such that
+
+\hspace*{12pt}$\bullet$ if $c \in C(\Gamma)$ is internal and $c = e(A)$ where $A \in \mathcal{L}$, then the $i$th node of $c$ is the $i$th term of $\pi(A)$, for $1 \le i \le |\tilde{c}|$, and for every grouping $K$ with $V(K) = \tilde{c}$ there is a subgraph $C$ of $sk(A^-)$ such that for distinct $x, y \in \tilde{c}$, $x$ and $y$ are connected in $C$ if and only if they are adjacent in $K$

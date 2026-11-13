@@ -1,0 +1,26 @@
+\origpage{165}{GRAPH MINORS, X}
+\stmt
+(4.2) \textit{A graph $G$ has branch-width}
+
+\hspace*{12pt}(i) \textit{$0$ if and only if every component of $G$ has $\le 1$ edge}
+
+\hspace*{12pt}(ii) \textit{$\le 1$ if and only if every component of $G$ has $\le 1$ vertex of valency $\ge 2$}
+
+\hspace*{12pt}(iii) \textit{$\le 2$ if and only if $G$ has no $K_4$ minor.}
+
+\textit{Proof.} Statement (i) is clear. The ``if'' part of (ii) is easy and ``only if'' follows from (4.1) and the fact that a 2-edge circuit and a 3-edge path both have branch-width 2\fix{, when $G$ has no loops. In general, let a component of $G$ have two vertices of valency $\ge 2$. The first edge $e$ of a path between them joins two vertices of valency $\ge 2$. So in every branch-decomposition $(T, \tau)$ of $G$, the edge of $T$ incident with the leaf $\tau^{-1}(e)$ has order 2, and $G$ has branch-width $\ge 2$}.\fixnote{fix:4.2-proof}{The printed argument misses graphs with loops. Two vertices joined by one edge, with a loop at each, have two vertices of valency $\ge 2$, but no 2-edge circuit or 3-edge path as a minor, since these need two edges that are not loops. The inserted argument proves ``only if'' directly and covers loops. The statement of (4.2) holds as printed.} The ``only if'' part of (iii) follows similarly, while the ``if'' part may be proved by induction on the size of $G$, using Dirac's theorem [1] that any non-null simple graph with no $K_4$ minor has a vertex of valency $\le 2$. $\square$
+
+The main result of this section is the following. We denote by $\gamma(G)$ the maximum size of an edge of $G$ (setting $\gamma(G) = 0$ if $E(G) = \emptyset$). We recall that $\theta(G)$ is the tangle number of $G$.
+
+\stmt
+(4.3) \textit{For any hypergraph $G$, $\max(\beta(G), \gamma(G)) = \theta(G)$ unless $\gamma(G) = 0$ and $V(G) \ne \emptyset$.}
+
+\textit{Proof.} Suppose first that $\gamma(G) = 0$ and that $\mathscr{T}$ is a tangle in $G$ of order $\ge 2$. Choose $(A, B) \in \mathscr{T}$, extreme. By (2.8), $E(B) = \emptyset$, and so $E(A) = E(G)$, contrary to (2.3). Thus, if $\gamma(G) = 0$ then $\theta(G) \le 1$. Moreover, if $\gamma(G) = 0$ then $\beta(G) = 0$, and $\theta(G) = 1$ if and only if $V(G) \ne \emptyset$, by (2.5). Thus if $\gamma(G) = 0$ the result holds, and we henceforth assume that $\gamma(G) > 0$.
+
+Let $E = E(G)$, and for $X \subseteq E$, define $\kappa_0(X)$ to be the number of vertices of $G$ incident both with an edge in $X$ and with an edge in $E - X$. Choose $k \ge \gamma(G)$, and let $\kappa(X) = \kappa_0(X) - k$. It is easily seen that $\kappa$ is a connectivity function, and for every $e \in E(G)$, $\{e\}$ is efficient. Let $\mathscr{A} = \{\{e\} : e \in E(G)\}$.
+
+\hspace*{12pt}(1) \textit{There is a bias extending $\mathscr{A}$ if and only if $G$ has a tangle of order $k + 1$.}
+
+For if $\mathscr{T}$ is a tangle in $G$ of order $k + 1$, let $\mathscr{B} = \{E(A) : (A, B) \in \mathscr{T}\}$. Then $B$ is a bias, by (2.3), since $k \ge \gamma(G) \ge 1$, and it extends $\mathscr{A}$ by the third axiom. For the converse, let $\mathscr{B}$ be a bias extending $\mathscr{A}$, and let $\mathscr{T}$ be the set of all separations $(A, B)$ of $G$ of order $\le k$ with $E(A) \in \mathscr{B}$. We claim that $\mathscr{T}$ is a tangle of order $k + 1$. For if $(A, B)$ is a separation of $G$ of order $\le k$, then $E(A)$ and $E(B)$ are both efficient, and so one of $E(A)$, $E(B)$ is in $\mathscr{B}$, $E(A)$, say; but then $(A, B) \in \mathscr{T}$. Thus the first axiom holds, and clearly so does the second. Since $k \ge \gamma(G)$ and $\mathscr{B}$ extends $\mathscr{A}$, $(K_e, G \setminus e) \in \mathscr{T}$ for every $e \in E$, where $K_e$ is the hypergraph consisting of $e$ and its ends. By (2.7), $\mathscr{T}$ is a tangle of order $k + 1$, as required.
+
+\hspace*{12pt}(2) \textit{There is an exact tree-labelling over $\mathscr{A}$ if and only if $\beta(G) \le k$.}

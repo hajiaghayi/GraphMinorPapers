@@ -1,0 +1,32 @@
+\origpage{171}{GRAPH MINORS, XVII}
+We define ``simpler'' as follows. Let $\pi = (\Sigma, \Gamma, \alpha, \beta, \gamma)$ be a portrayal of a hypergraph $G$, and let $\pi' = (\Sigma', \Gamma', \alpha', \beta', \gamma')$ be a portrayal of a hypergraph $G'$. We say that $\pi$ is \textit{simpler} than $\pi'$ if either
+
+\hspace*{12pt}(i) $\Sigma$ is simpler than $\Sigma'$ and the warp of $\pi$ is at most that of $\pi'$, or
+
+\hspace*{12pt}(ii) there is a homeomorphism $\psi \colon \Sigma \to \Sigma'$ such that for every cuff $\Theta$ of $\Sigma$, the warp of $\pi$ at $\Theta$ is at most the warp of $\pi'$ at $\psi(\Theta)$, with strict inequality for some cuff $\Theta$.
+
+We say that $\pi$ \textit{resembles} $\pi'$ if there is a homeomorphism $\psi \colon \Sigma \to \Sigma'$ such that for every cuff $\Theta$ of $\Sigma$, the warp of $\pi$ at $\Theta$ equals the warp of $\pi'$ at $\psi(\Theta)$.
+
+Now let $\mathscr{T}$ be a tangle in a hypergraph $G$. A $\mathscr{T}$-central portrayal $\pi$ of $G$ is \textit{0-redundant} (relative to $\mathscr{T}$) if there is no $\mathscr{T}$-central portrayal of $G$ simpler than $\pi$. In this section we shall develop some consequences of 0-redundancy.
+
+\stmt
+(5.1) \textit{If $\pi = (\Sigma, \Gamma, \alpha, \beta, \gamma)$ is a 0-redundant $\mathscr{T}$-central portrayal of a hypergraph $G$, then for each cuff $\Theta$ of $\Sigma$, $\pi$ has warp $\ge 1$ at $\Theta$.}
+
+\textit{Proof.} If $\pi$ has warp 0 at $\Theta$, then $\beta(n) = \emptyset$ for each $n \in \Theta \cap N(\Gamma)$. Let $\Sigma'$ be the surface obtained by pasting a disc on $\Theta$, and let $\beta'$ be the restriction of $\beta$ to $\operatorname{bd}(\Sigma')$. Then $\pi' = (\Sigma', \Gamma, \alpha, \beta', \gamma)$ is a $\mathscr{T}$-central portrayal of $G$, simpler than $\pi$, a contradiction. $\square$
+
+From (5.1), every 0-redundant $\mathscr{T}$-central portrayal has warp $\ge 1$.
+
+Let $\Gamma$ be a painting in a surface $\Sigma$, let $c \in C(\Gamma)$ be internal, and let $n \in \tilde{c}$. Choose a disc $\Delta \subseteq \bar{c}$ with $n \notin \Delta$ and $\tilde{c} - \{n\} \subseteq \Delta$, and define
+\begin{equation*}
+\Gamma' = ((U(\Gamma) - c) \cup \Delta, N(\Gamma)).
+\end{equation*}
+Then $\Gamma'$ is a painting in $\Sigma$, with $C(\Gamma') = (C(\Gamma) - \{c\}) \cup \{\Delta - (\tilde{c} - \{n\})\}$. We say that $\Gamma'$ is obtained from $\Gamma$ by \textit{shrinking $c$ from $n$}, and its cell $\Delta - (\tilde{c} - \{n\})$ is the \textit{shrunken $c$}.
+
+If $f \colon A \to B$ is a function and $C$ is a set, we denote the restriction of $f$ to $A \cap C$ by $f|C$.
+
+\stmt
+(5.2) \textit{Let $\pi = (\Sigma, \Gamma, \alpha, \beta, \gamma)$ be a hypergraph $G$. Let $c \in C(\Gamma)$ be internal, and let $n \in \tilde{c} - \operatorname{dom}(\gamma)$. Let $\Gamma'$ be obtained by shrinking $c$ from $n$; and let $\alpha'$ be defined by $\alpha'(c') = \alpha(c)$, where $c'$ is the shrunken $c$, and otherwise $\alpha' = \alpha$. Then $\pi' = (\Sigma, \Gamma', \alpha', \beta, \gamma)$ is a portrayal of $G$.}
+
+The proof is clear.
+
+Given a portrayal $(\Sigma, \Gamma, \alpha, \beta, \gamma)$, if $\Sigma' \subseteq \Sigma$ we denote $\bigcup(\alpha(c) \colon c \in C(\Gamma), c \subseteq \Sigma')$ by $\alpha(\Sigma')$.

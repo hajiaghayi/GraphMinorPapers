@@ -1,0 +1,37 @@
+\origpage{74}{ROBERTSON AND SEYMOUR}
+With these lemmas in hand, we turn to the main theorem of this section. A segregation of a society $(G, \Omega)$ is a set $\{(A_0, \Omega_0), \dots, (A_k, \Omega_k)\}$ of societies such that
+
+\hspace*{12pt}(i) $A_0 \cup \dots \cup A_k = G$ and $E(A_i \cap A_j) = \emptyset$ for $0 \le i, j \le k$ with $i \neq j$
+
+\hspace*{12pt}(ii) $V(A_i \cap A_j) \subseteq \bar{\Omega}_i$ for $0 \le i, j \le k$ with $i \neq j$
+
+\hspace*{12pt}(iii) $\bar{\Omega} \subseteq \bar{\Omega}_0 \cup \dots \cup \bar{\Omega}_k$.
+
+An arrangement of a segregation $\{(A_0, \Omega_0), \dots, (A_k, \Omega_k)\}$ of $(G, \Omega)$ in a closed disc $\Delta$ is a function $\alpha$ with domain
+\begin{equation*}
+\{(A_0, \Omega_0), \dots, (A_k, \Omega_k)\} \cup \bar{\Omega}_0 \cup \dots \cup \bar{\Omega}_k
+\end{equation*}
+and with the following properties:
+
+\hspace*{12pt}(i) for $0 \le i \le k$, $\alpha((A_i, \Omega_i))$ is a closed disc $\Delta_i \subseteq \Delta$ and $\alpha(v) \in bd(\Delta_i)$ for each $v \in \bar{\Omega}_i$, and $\alpha(v) \in bd(\Delta)$ for each $v \in \bar{\Omega}$
+
+\hspace*{12pt}(ii) for $0 \le i < j \le k$, if $x \in \Delta_i \cap \Delta_j$, then $x = \alpha(v)$ for some $v \in \bar{\Omega}_i \cap \bar{\Omega}_j$, and for $0 \le i \le k$, if $x \in \Delta_i \cap bd(\Delta)$ then $x = \alpha(v)$ for some $v \in \bar{\Omega}_i \cap \bar{\Omega}$
+
+\hspace*{12pt}(iii) $\alpha(u) \neq \alpha(v)$ for distinct $u, v \in \bar{\Omega}_0 \cup \dots \cup \bar{\Omega}_k$
+
+\hspace*{12pt}(iv) for $0 \le i \le k$, $\Omega_i$ is the cyclic permutation of $\bar{\Omega}_i$ derived (under $\alpha^{-1}$) from the clockwise orientation of $bd(\Delta_i)$, and $\Omega$ is the permutation derived from the clockwise orientation of $bd(\Delta)$.
+
+A segregation is \textit{feasible} if there is an arrangement of it in some disc. The main result of this section is the following:
+
+\stmt
+(11.11) \textit{Let $p \ge 2$, with $p \neq 3$. Let $(G, \Omega)$ be a society with no crooked transaction of cardinality $p$. Then there is a feasible segregation $\{(A_0, \Omega_0), \dots, (A_k, \Omega_k)\}$ of $(G, \Omega)$ such that $|\bar{\Omega}_1|, \dots, |\bar{\Omega}_k| \le 3$ and $(A_0, \Omega_0)$ has no transaction of cardinality $> 3p + 9$.}
+
+\textit{Proof.} By (11.6) there is a consolidation of $(G, \Omega)$. Let us choose a consolidation $\mathcal{D}$ such that its core has as few vertices as possible, and subject to that $|\mathcal{D}|$ is minimum. It follows that
+
+\hspace*{12pt}(1) \textit{If $(A, B), (A', B') \in \mathcal{D}$ are distinct then $V(A \cap B) \not\subseteq V(A')$.}
+
+For suppose that $V(A \cap B) \subseteq V(A')$. Let
+\begin{equation*}
+\mathcal{D}' = (\mathcal{D} - \{(A, B), (A', B')\}) \cup \{(A \cup A', B \cap B')\}.
+\end{equation*}
+We claim that $\mathcal{D}'$ is a consolidation of $(G, \Omega)$. For $(A \cup A') \cap (B \cap B') = A' \cap B'$ since $A' \subseteq B$ and $A \cap B \subseteq A'$, and so conditions (i), (iii), (iv) in the definition of a consolidation are easily verified. For condition (ii), let $(A'', B'') \in \mathcal{D} - \{(A, B), (A', B')\}$; we must show that $A'' \subseteq B \cap B'$ and

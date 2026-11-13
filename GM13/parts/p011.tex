@@ -1,0 +1,21 @@
+\origpage{75}{GRAPH MINORS. XIII}
+To find its running time, we observe that at each iteration but the last the quantity $|E(G_i)| - |E(T_i)|$ is reduced by 1; it starts at $O(|V(G)|)$ and finishes at 1, and so there are $O(v)$ iterations. Each one takes a time $O(v)$. The time is spent principally in step 4; there, each partition $(Z_1, Z_2, Z_3)$ can be checked in time $O(|E(G_i)|)$ and, hence, $O(v)$, since $|E(G_i)| \le O(v)$ and the number of partitions to be checked is bounded.
+
+Thus constructing $H_3$ and its branch-decomposition takes time $O(v^2)$. Converting it to a branch-decomposition of $G$ takes time $O(\varepsilon)$, and so the whole algorithm takes time $O(v^2 + \varepsilon)$. $\square$
+
+Actually, Hans Bodlaender [3] (and see also [12]) has recently found an algorithm that could be used in place of (3.3), with running time $O(v)$ for simple graphs $G$, using tree-width instead of branch-width. Its use could speed up the applications of (3.3); for instance, (7.2) could be made to run in time $O(\varepsilon)$. This would not affect the total running time of our Folio algorithm, and so we omit further details.
+
+\sectionhead{4. Folio Determination with Bounded Branch-Width}
+
+If $G$ is a digraph, $Z \subseteq V(G)$, and $\delta \ge 0$, a modelling of the $\delta$-folio of $G$ relative to $Z$ means some choice of model, for each member of the $\delta$-folio of $G$ relative to $Z$ (up to isomorphism). A method of Arnborg and Proskurowski [2] can be used to solve Folio for graphs of bounded branch-width, as follows. Let $\delta, \xi \ge 0$, $\omega \ge 1$ be integers.
+
+\stmt
+(4.1) \textsc{Algorithm}.
+
+\textit{Input:} A digraph $G$, and a subset $Z \subseteq V(G)$ with $|Z| \le \xi$, and a branch-decomposition $(T, \tau)$ of $G$ of width $\le \omega$.
+
+\textit{Output:} The $\delta$-folio of $G$ relative to $Z$, and a modelling of it.
+
+\textit{Running time:} $O(\varepsilon)$.
+
+\textit{Description:} Since the effect of isolated vertices of $G$ on the folio is clear, we may arrange (by deleting them) that $G$ has no isolated vertices. Let $z$ be a leaf of $T$, and number the edges of $T$ as $f_1, \dots, f_m$, where $m = |E(T)|$, so that the numbers on every path leaving $z$ are decreasing. (Our branch-decomposition in applications usually comes already equipped with such a numbering; but if not, one can be found in time $O(\varepsilon)$.) For $1 \le i \le m$, let $S_i, T_i$ be the components of $T \setminus f_i$, with $z \in V(S_i)$. Let $A_i$ be the subgraph of $G$ formed by the edges $e$ with $\tau(e) \in V(S_i)$, and their ends; and define $B_i$ similarly. Since $G$ has no isolated vertices, $(A_i, B_i)$ is a separation of $G$ of order $\le \omega$. Let $Z_i = (V(A_i) \cup Z) \cap V(B_i)$. We shall compute the $\delta$-folio of $B_i$ relative to $Z_i$ for each $i$, by a recursion as follows. At the start of the $i$ th iteration, the $\delta$-folio of $B_j$ relative to $Z_j$, has been determined for $1 \le j < i$.

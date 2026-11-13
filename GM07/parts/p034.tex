@@ -1,0 +1,29 @@
+\origpage{245}{GRAPH MINORS. VII}
+For suppose that $F \subseteq \Sigma'$ is a $G$-normal $O$-arc surrounding some cuff $C_i$, where $i = 1, 2$, or $3$, and that
+\begin{equation*}
+|V(G) \cap F| < |V(G) \cap C_i|.
+\end{equation*}
+Now $V(G) \cap C_3 = \emptyset$, and so $i \ne 3$, and without loss of generality we may asssume $i = 1$. We have
+\begin{equation*}
+k(F_1, C_1) \ge |V(G) \cap C_1|
+\end{equation*}
+by hypothesis, and so $F \not\subseteq \Sigma(F_1, C_1)$. But $F \not\subseteq \Sigma(F_1, C_2)$ since $F$ surrounds $C_1$, and $\Delta \subseteq \Sigma(F_1, F_2)$; thus $F \cap F_1 \ne \emptyset$. Moreover, $F \cap (F_2 \cup I_1) \ne \emptyset$, since $F$ surrounds $C_1$; and so there is a $G$-normal $[0, 1]$-arc $F' \subseteq F$ with
+\begin{equation*}
+F' \cap F_1 \ne \emptyset \ne F' \cap (F_2 \cup I_1).
+\end{equation*}
+Now
+\begin{align*}
+|V(G) \cap F'| &\le |V(G) \cap F| < |V(G) \cap C_1| \le |V(G) \cap \mathrm{bd}(\Sigma)| \\
+&= |V(H) \cap \mathrm{bd}(\Sigma)| \le t \le r.
+\end{align*}
+But if $F' \cap F_2 \ne \emptyset$ then $|V(G) \cap F'| \ge r$ by hypothesis; and if $F' \cap I_1 \ne \emptyset$ then $|V(G) \cap F'| \ge r$ by our earlier observation. In either case we obtain a contradiction. It follows that such $F$ does not exist, and so claim 1 is true.
+
+\textit{Claim 2. As a drawing in $\Sigma'$, $G$ satisfies $\alpha(G) \ge r$.}
+
+For let $X \subseteq \Sigma'$ be $G$-normal and schismatic. Since $\Sigma' \cong \Sigma(0, 0, 3)$, $X$ is not an $O$-arc. It follows that there are two $O$-arcs $A_1, A_2 \subseteq X$ surrounding distinct cuffs of $\Sigma'$. We assume without loss of generality that $A_1$ surrounds $C_1$. Now $A_2$ surrounds either $C_2$ or $C_3$, and in either case
+\begin{equation*}
+A_2 \cap (\Sigma(F_1, C_2) \cup I_2) \ne \emptyset.
+\end{equation*}
+But $A_1 \not\subseteq \Sigma(F_1, C_2)$ since $A_1$ surrounds $C_1$, and so $X \cap (F_1 \cup I_2) \ne \emptyset$. We must show that $|V(G) \cap X| \ge r$. If $X \cap F_2 \ne \emptyset$ then $X$ includes an $I$-arc which intersects both $F_2$ and $F_1 \cup I_2$, and so $|V(G) \cap X| \ge r$ as claimed. If $X \cap F_2 = \emptyset$ then $X \subseteq \Sigma(F_2, C_2)$. But $A_1$ surrounds $C_1$ and so $A_1 \cap I_1 \ne \emptyset$. If $A_1 \cap F_1 \ne \emptyset$ then $A_1$ includes an $I$-arc which intersects both $F_1$ and $I_2$, and so $|V(G) \cap X| \ge r$ by our earlier observation. Finally, if $A_1 \cap F_1 = \emptyset$ then $A_1 \subseteq \Sigma(F_1, F_2)$ and so $|V(G) \cap A_1| \ge r$ by hypothesis (iii). Thus in every case $|V(G) \cap X| \ge r$. This proves Claim 2.
+
+Because of Claims 1 and 2, we can apply (9.1) with $\Sigma, a, b, c, c_0, k$ replaced by $\Sigma', 0, 0, 3, t+4, 2t+4$, respectively; and we deduce that $(H, H^+, H^-)$ is a boundary-rooted minor of $(G, G^+, G^-)$ in $\Sigma'$, and therefore also in $\Sigma$, as required.

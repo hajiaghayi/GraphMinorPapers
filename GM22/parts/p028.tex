@@ -1,0 +1,40 @@
+\origpage{557}{N. Robertson, P. Seymour / Journal of Combinatorial Theory, Series B 102 (2012) 530--563}
+\noindent each $v \in V(H)$, and $\phi'(v) \cap K$ is non-null if $v$ is a root of $(H, \omega)$, there exists $\mathcal{A}_2 \subseteq \mathcal{A}$ with $|\mathcal{A}_2| \le \delta$ such that $\phi(v) \cap (K \cup \bigcup(A : A \in \mathcal{A}_2))$ is non-null for each $v \in V(H)$. Let
+\begin{equation*}
+\mathcal{A}_3 = \{A \in \mathcal{A} : E(A) \cap \phi'(E(H)) \ne \emptyset\};
+\end{equation*}
+then $|\mathcal{A}_3| \le |E(H)| \le \delta$. Finally, let
+\begin{equation*}
+\mathcal{A}_4 = \{A \in \mathcal{A} : d(D(A), \Sigma \setminus \Delta) \ge \theta\}.
+\end{equation*}
+Let $\mathcal{A}' = \mathcal{A}_1 \cup \mathcal{A}_2 \cup \mathcal{A}_3 \cup \mathcal{A}_4$. Then $\mathcal{A}'$ is sufficient for $\phi'$, and satisfies the theorem. $\square$
+
+\textbf{8.2.} \textit{For all integers $q, \delta, \eta \ge 0$ there exists $\theta \ge 4$ with the following property. Let (J1)--(J7) hold, and suppose that for every $A \in \mathcal{A}$ with $D(A) \cap \Delta = \emptyset$ and every $v \in V(\Gamma)$ with $v \notin \Delta$, there exists $A' \in \mathcal{A}$ with $d(v, D(A')) \le \eta$ such that $(A', \pi(A') + \omega)$ has the same $\delta$-folio as $(A, \pi(A) + \omega)$. Suppose also that $d(v^*, \Delta) \ge \theta$. Then there is a model of $(H, \chi)$ in $(G \setminus \{v^*\}, \omega)$.}
+
+\textit{Proof.} Let $\tau = 3q + 5\delta$. Choose $\theta' \ge 4$ so that 7.4 holds with $\theta$ replaced by $\theta'$, and let $\theta = 2(\tau + 1)(\theta' + 2\eta + 7) + 3$. We claim that $\theta$ satisfies 8.2. For let the hypotheses of 8.2 hold. By 8.1 we may assume (by replacing $\phi$ by the model of 8.1) that $\mathcal{B} \subseteq \mathcal{A}$ is sufficient for $\phi$, and $d(D(A), \Sigma \setminus \Delta) < \theta$ for at most $\tau$ members $A$ of $\mathcal{B}$. Let
+\begin{equation*}
+\mathcal{A}' = \{A \in \mathcal{B} : d(D(A), \Sigma \setminus \Delta) < \theta\}.
+\end{equation*}
+Then $|\mathcal{A}'| \le \tau$.
+
+\hspace*{12pt}(1) \textit{For $3 \le n \le \theta - 3$, there is a closed disc $\Delta_n \subseteq \Sigma$ such that $v^* \notin \Delta_n$, $\Delta \subseteq \Delta_n$, $bd(\Delta_n) \subseteq U(\Gamma)$, $d(v^*, \Delta_n) \ge n$, and $d(v^*, x) \le n + 2$ for every $x \in A(\Gamma)$ with $x \not\subseteq \Delta_n \setminus bd(\Delta_n)$.}
+
+\textit{Subproof.} By 5.1 with $z, \kappa$ replaced by $v^*, n$, there is a closed disc $\Delta' \subseteq \Sigma$ satisfying 5.1(i)--(iii) (with $\Delta$ replaced by $\Delta'$). Since $d(v^*, \Delta) \ge \theta \ge n + 3$ it follows that $\Delta \cap \Delta' = \emptyset$. Let $\Delta_n = \Sigma \setminus \Delta'$; then it satisfies (1).
+
+\hspace*{12pt}(2) \textit{There is a closed disc $\Delta' \subseteq \Sigma$ such that $v^* \notin \Delta'$, $\Delta \subseteq \Delta'$, $bd(\Delta') \subseteq U(\Gamma)$, $d(v^*, \Delta') \ge (\theta' + 2\eta + 7)(\tau + 1)$, and for each $A \in \mathcal{B}$, either $D(A) \cap \Delta' = \emptyset$ or $d(D(A), \Sigma \setminus \Delta') \ge \theta'$.}
+
+\textit{Subproof.} For $i = 0, 1, \dots, \tau + 1$, define $n(i) = (\tau + i + 1)(\theta' + 2\eta + 7)$, and let
+\begin{equation*}
+\mathcal{A}_i = \{A \in \mathcal{B} : D(A) \cap \Delta_{n(i)} = \emptyset\}.
+\end{equation*}
+Since $\Delta \subseteq \Delta_{n(\tau+1)}$, it follows that $\mathcal{A}_{\tau+1} \subseteq \mathcal{A}'$ and so $|\mathcal{A}_{\tau+1}| < \tau + 1$. Choose $i$ with $0 \le i \le \tau + 1$ minimum such that $|\mathcal{A}_i| < i$. It follows that $i \ge 1$, and $|\mathcal{A}_{i-1}| \ge i - 1$. But $\mathcal{A}_{i-1} \subseteq \mathcal{A}_i$ since $\Delta_{n(i)} \subseteq \Delta_{n(i - 1)}$ by (1). Consequently $\mathcal{A}_i = \mathcal{A}_{i-1}$. Let $\Delta' = \Delta_{n(i - 1)}$; we claim it satisfies (2). Certainly $v^* \notin \Delta'$, $\Delta \subseteq \Delta'$, and $bd(\Delta') \subseteq U(\Gamma)$ from (1). Also from (1), since $i \ge 1$,
+\begin{equation*}
+d(v^*, \Delta') \ge n(i - 1) = (\tau + i)(\theta' + 2\eta + 7) \ge (\tau + 1)(\theta' + 2\eta + 7).
+\end{equation*}
+Let $A \in \mathcal{B}$. If $A \notin \mathcal{A}_i$, then $D(A) \cap \Delta_{n(i)} \ne \emptyset$, and since $|bd(D(A)) \cap V(\Gamma)| \le 3$ and $d(v^*, \Delta_{n(i)}) \ge n(i)$, it follows that $d(v^*, D(A)) \ge n(i) - 3$. But then for each $z \in A(\Gamma)$ with $z \subseteq \Sigma \setminus \Delta'$,
+\begin{equation*}
+d(D(A), z) \ge d(v^*, D(A)) - d(z, v^*) \ge n(i) - 3 - (n(i - 1) + 2) \ge \theta'.
+\end{equation*}
+Thus if $A \in \mathcal{B}$ and $A \notin \mathcal{A}_i$ then $d(D(A), \Sigma \setminus \Delta') \ge \theta'$. On the other hand, if $A \in \mathcal{B}$ and $A \in \mathcal{A}_i$, then $A \in \mathcal{A}_{i-1}$ and so $D(A) \cap \Delta' = \emptyset$. This proves (2).
+
+Let $\Delta'$ be as in (2).

@@ -1,0 +1,30 @@
+\origpage{269}{GRAPH MINORS. VIII}
+\noindent $n = |I \cap F \cap V(\Gamma)|$. We may hence assume that $|I \cap V(\Gamma)| < \frac{1}{2}r + \frac{1}{2}n$, for otherwise the theorem is true. We assume $r > 0$, for otherwise the result is trivial.
+
+If $I$ meets $C_1$ then it has at least two points in common with $C_2, \dots, C_{\lceil r/2 \rceil}$ and so
+\begin{equation*}
+|I \cap V(\Gamma)| \ge 2(\lceil \frac{1}{2}r \rceil - 1) + 1 + n.
+\end{equation*}
+Thus
+\begin{equation*}
+2\lceil \frac{1}{2}r \rceil - 1 + n < \frac{1}{2}r + \frac{1}{2}n
+\end{equation*}
+a contradiction. Hence $I$ does not meet $C_1$.
+
+But $I$ meets every path of $\Gamma$ from $F_1$ to $F_2$ which is enclosed by $F$; and so for some $i$ ($i = 1$ or $2$) $I$ meets every path from $F_i$ to $C_1$ which is enclosed by $F$. There are at least $r_i$ such paths, mutually disjoint, and so $|I \cap V(\Gamma)| \ge r_i$, as required. $\square$
+
+\stmt
+(8.4) \textit{Let $F$ be a $\Gamma$-normal centred $O$-arc and let $\Xi$ be a drawing of a forest in $\Sigma$, such that $U(\Xi) \cap F \subseteq V(\Gamma)$, and $U(\Xi)$ is enclosed by $F$. Then $\Gamma$ has a subdrawing $\Xi'$, which is a drawing of a forest, with $U(\Xi')$ enclosed by $F$, such that for all $u, v \in V(\Gamma) \cap F$, there is a component of $\Xi$ containing both $u$ and $v$ if and only if there is a component of $\Xi'$ containing them both.}
+
+This follows from (8.3) and [10, Theorem (3.6)].
+
+\sectionhead{9. Boundary-Linked Nests}
+
+Let $\Gamma$ be a drawing in a disc $\Sigma$, with $|V(\Gamma) \cap bd\ \Sigma| = k$. Let $r, s \ge 0$ be integers. An $(r, s)$-nest $(C_1, \dots, C_s)$ is \textit{boundary-linked} if there are $k$ mutually disjoint paths of $\Gamma$ between $C_1$ and $bd\ \Sigma$.
+
+Let $\{F_1, \dots, F_t\}$ be a foundation for $\Gamma$. Then by (8.2), each $F_i$ is centred; let $\Gamma_i$ be a sleeve for $F_i$ ($1 \le i \le t$). Let $\Gamma_0$ be the subdrawing of $\Gamma$ consisting of those vertices and edges inside none of $F_1, \dots, F_t$. Let $\Gamma^*$ be $\Gamma_0 \cup \Gamma_1 \cup \dots \cup \Gamma_t$. We call $\Gamma^*$ a \textit{truncation} of $\Gamma$ (induced by $\{F_1, \dots, F_t\}$).
+
+\stmt
+(9.1) \textit{Let $\Gamma^*$ be a truncation of $\Gamma$, and let $r, s$ be integers with $r, s \ge k$. Every $(r, s)$-nest of $\Gamma^*$ is boundary-linked in $\Gamma$.}
+
+\textit{Proof.} Let $\{F_1, \dots, F_t\}$ be a foundation inducing the truncation $\Gamma^*$, and let $\Gamma_1, \dots, \Gamma_t, \Gamma_0$ be as above. Let $(C_1, \dots, C_s)$ be an $(r, s)$-nest of $\Gamma^*$. Suppose it is not boundary-linked in $\Gamma$. Then $\rho(C_1) < k$. But $r \ge k$, and $s \ge k$, and so $C_1$ is a boss. Hence $F_i$ encloses $C_1$ for some $i$ ($1 \le i \le t$), say $i = 1$. There are $r$ mutually disjoint paths of $\Gamma$ between $C_1$ and $C_s$, and so one

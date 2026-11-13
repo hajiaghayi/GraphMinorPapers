@@ -1,0 +1,19 @@
+\origpage{94}{ROBERTSON AND SEYMOUR}
+\noindent path in $G$ between $u$ and $v$ with no internal vertex in $Z$. (Note that $E(C) \not\subseteq E(G)$ in general.) If $C$ is a core, we say $v \in V(C)$ is 4-linked in $C$ if there is no separation $(A, B)$ of $C$ of order $\le 3$ with $v \in V(A) - V(B)$ and $\tilde{\Omega} \subseteq V(B)$. A core $C$ is 4-linked if every $v \in V(C)$ is 4-linked in $C$.
+
+\stmt
+(8.2) \textit{Let $C$ be a core of $(G, \Omega)$, and let $v \in V(C)$ not be 4-linked. Let $(A, B)$ be a separation of $C$ with $v \in V(A) - V(B)$ and $\tilde{\Omega} \subseteq V(B)$, of minimum order, and let $C'$ be the simple graph obtained from $B$ by adding edges joining all pairs of vertices in $V(A \cap B)$ if they are not already adjacent. Then $C'$ is a core of $(G, \Omega)$, and each $v' \in V(C')$ which is 4-linked in $C$ is also 4-linked in $C'$.}
+
+\textit{Proof.} (1) \textit{$V(B)$ is trisecting.}
+
+\textit{Subproof.} Let $u \in V(G) - V(B)$ and suppose that $z_1, \dots, z_4 \in V(B)$ are distinct, and for $1 \le i \le 4$ $P_i$ is a path of $G$ between $u$ and $z_i$ with no vertex in $V(B)$ except $z_i$. Since $|V(A \cap B)| \le 3$, we may assume that $z_4 \notin V(A)$. Since $V(C)$ is trisecting, some vertex of $P_1 \cup \dots \cup P_4$ belongs to $V(A) - V(B)$. Hence there is a path of $P_1 \cup \dots \cup P_4$ between $z_4$ and $V(A) - V(B)$ with no internal vertex in $V(C)$. But then the ends of this path are adjacent in $C$, contradicting that $(A, B)$ is a separation of $C$. This proves (1).
+
+\hspace*{12pt}(2) \textit{If $a, b \in V(A \cap B)$ are distinct, there is a path of $G$ with ends $a, b$ and with no internal vertex in $V(B)$.}
+
+\textit{Subproof.} By the minimality of $|V(A \cap B)|$ and Menger's theorem, there are $|V(A \cap B)|$ paths of $A$ between $v$ and $V(A \cap B)$, mutually disjoint except for $v$, and the union of two of these yields a path $P$ of $A$ with ends $a$ and $b$ and with no internal vertex in $V(B)$. For each $e \in E(P)$, let $P_e$ be a path of $G$ with the same ends as $e$ with no internal vertex in $V(C)$. Then $\bigcup (P_e : e \in E(P))$ is connected, and meets $V(B)$ in precisely $\{a, b\}$, and so it includes a path of $G$ between $a$ and $b$ with no internal vertex in $V(B)$, as required.
+
+\hspace*{12pt}(3) \textit{For distinct $a, b \in V(B)$, there is a path of $G$ with ends $a, b$ and with no internal vertex in $V(B)$ if and only if $a, b$ are adjacent in $C'$.}
+
+\textit{Subproof.} Since every two vertices in $V(A \cap B)$ are adjacent in $C'$, we may assume by (2) that $b \notin V(A \cap B)$. If $a, b$ are adjacent in $C'$, they are adjacent in $C$ and are therefore joined by a path of $G$ as required. Conversely, suppose that $P$ is a path of $G$ with ends $a, b$ and with no internal vertex in $V(B)$. Since $b$ is not adjacent in $C$ to any vertex in $V(A) - V(B)$, it follows that $V(P) \cap V(A) \subseteq \{a\}$, and so $a, b$ are adjacent in $C$ and hence in $C'$, as required.
+
+From (1) and (3) we see that $C'$ is a core.

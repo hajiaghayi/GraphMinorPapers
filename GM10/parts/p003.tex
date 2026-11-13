@@ -1,0 +1,27 @@
+\origpage{155}{GRAPH MINORS, X}
+\noindent minimax equation connecting the tangle number of a hypergraph and its ``branch-width,'' which is an invariant very similar to tree-width and essentially within a constant factor of tree-width.
+
+\hspace*{12pt}(2) Despite our rather abstract definition of a tangle, there are in any hypergraph $G$ at most $|V(G)|$ maximal tangles, and any other tangle is a subset (a ``truncation'') of one of these. Furthermore, there is a ``tree-decomposition'' of $G$, the vertices of which correspond to these maximal tangles.
+
+\hspace*{12pt}(3) For $\theta \ge 2$, any minor isomorphic to a $(\theta \times \theta)$-grid of a graph $G$ gives rise to a tangle in $G$ of order $\theta$, and conversely, for any $\theta \ge 2$ there exists $N(\theta) \ge \theta$ such that for every tangle of order $\ge N(\theta)$ in a graph $G$, its truncation to order $\theta$ is the tangle arising from some $(\theta \times \theta)$-grid minor of $G$.
+
+\hspace*{12pt}(4) Finally, the main result of the paper. It is too technical to state without a number of definitions, but roughly it enables us to gain knowledge of the global structure of a hypergraph from a knowledge of its structure relative to each tangle. This will be applied in [6].
+
+\sectionhead{2. Some Tangle Lemmas}
+
+In this section we develop some easy results about tangles for later use.
+
+\stmt
+(2.1) \textit{If $\mathscr{T}$ is a tangle and $(A, B) \in \mathscr{T}$ then $(B, A) \notin \mathscr{T}$.}
+
+\textit{Proof.} Since $A \cup B = G$, $(B, A) \notin \mathscr{T}$ by the second axiom. $\square$
+
+\stmt
+(2.2) \textit{If $\mathscr{T}$ is a tangle of order $\theta$ and $(A, B), (A', B') \in \mathscr{T}$ and $(A \cup A', B \cap B')$ has order $< \theta$ then $(A \cup A', B \cap B') \in \mathscr{T}$.}
+
+\textit{Proof.} Now $(B \cap B', A \cup A') \notin \mathscr{T}$ by the second axiom, because $(A, B), (A', B') \in \mathscr{T}$ and $A \cup A' \cup (B \cap B') = G$. Thus $(A \cup A', B \cap B') \in \mathscr{T}$ by the first axiom. $\square$
+
+\stmt
+(2.3) \textit{If $\mathscr{T}$ has order $\ge 2$ and $(A_1, B_1), (A_2, B_2), (A_3, B_3) \in \mathscr{T}$ then $E(A_1 \cup A_2 \cup A_3) \ne E(G)$.}
+
+\textit{Proof.} Suppose that there exist $(A_1, B_1), (A_2, B_2), (A_3, B_3) \in \mathscr{T}$ with $E(A_1 \cup A_2 \cup A_3) = E(G)$, and choose them with $|V(A_1)|$ maximum. By the second axiom, $A_1 \cup A_2 \cup A_3 \ne G$, and so there is a vertex $v$ of $G$ in none of $V(A_1)$, $V(A_2)$, $V(A_3)$ and hence incident with no edge of $G$. Let $K$ be the hypergraph with $V(K) = \{v\}$, $E(K) = \emptyset$. Then $(K, G)$ has order 1 and by the second axiom, $(G, K) \notin \mathscr{T}$; thus $(K, G) \in \mathscr{T}$ by the first axiom, since $\mathscr{T}$

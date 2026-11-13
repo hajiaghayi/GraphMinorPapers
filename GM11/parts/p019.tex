@@ -1,0 +1,29 @@
+\origpage{90}{ROBERTSON AND SEYMOUR}
+\noindent satisfies (ii). This argument also shows that $\mathscr{T} \subseteq \mathscr{T}'$, and hence $\mathscr{T} = \mathscr{T}'$, as required. $\square$
+
+Here is a convenient way to recognize whether $(A, B) \in \mathscr{T}$ or $(B, A) \in \mathscr{T}$ when $\Sigma$ is not a sphere. (This proof uses two topological results, which it is convenient to postpone to the next section.)
+
+\stmt
+(6.4) \textit{Let $\Gamma$ be a 2-cell painting or drawing in a connected surface $\Sigma$ which is not a sphere, and let $\mathscr{T}$ be a respectful pretangle in $\Gamma$, of order $\theta \ge 1$. Let $(A, B)$ be a separation of $\Gamma$ of order $< \theta$. Then the following are equivalent:}
+
+\hspace*{12pt}(i) $(A, B) \in \mathscr{T}$
+
+\hspace*{12pt}(ii) $U(A)$ \textit{includes no non-null-homotopic} $O$\textit{-arc}
+
+\hspace*{12pt}(iii) $U(B) - U(A)$ \textit{includes a non-null-homotopic} $O$\textit{-arc.}
+
+\textit{In particular, $\mathscr{T}$ is a tangle.}
+
+\textit{Proof.} Since $\Gamma$ is 2-cell and $\Sigma$ is not a sphere, it follows that $E(\Gamma) \ne \emptyset$. Let $\Gamma'$ be a radial drawing of $\Gamma$, and $ins$ the derived slope.
+
+\hspace*{12pt}(1) \textit{If $(A, B) \in \mathscr{T}$ then $U(A)$ includes no non-null-homotopic $O$-arc.}
+
+\textit{Subproof.} Let $C_1, \dots, C_k$ be as in (6.3). We may assume that $ins(C_i) \not\subseteq ins(C_j)$ for $i \ne j$, by choosing $k$ minimum, and hence $U(C_1) \cup \cdots \cup U(C_k)$ is obtained from $ins(C_1) \cup \cdots \cup ins(C_k)$ by deleting finitely many disjoint open discs. If $U(A)$ includes a non-null-homotopic $O$-arc then so does $ins(C_1) \cup \cdots \cup ins(C_k)$, and it follows (by (3.1)) that there is a non-null-homotopic continuous function $\phi \colon S^1 \to \Sigma$ with $|\phi| \subseteq U(C_1) \cup \cdots \cup U(C_k)$. By (7.3) below there is a non-null-homotopic $O$-arc included in $U(C_1) \cup \cdots \cup U(C_k)$, that is, there is a non-null-homotopic circuit $C$ of $C_1 \cup \cdots \cup C_k$. But $V(C_1 \cup \cdots \cup C_k) \cap V(\Gamma) \subseteq V(A \cap B)$, and so $|V(C) \cap V(\Gamma)| < \theta$, and hence $C$ has length $< 2\theta$, a contradiction. This proves (1).
+
+\hspace*{12pt}(2) \textit{If $U(A)$ includes no null-null-homotopic $O$-arc, then $U(B) - U(A)$ includes a non-homotopic $O$-arc.}
+
+\textit{Subproof.} Clearly $\Gamma$ is $\theta$-representative. If $\Gamma$ is a painting, for each edge $e \in E(\Gamma)$, choose a closed disc $p(e) \subseteq \bar{e}$ with $p(e) \cap V(\Gamma) = \bar{e} \cap (V(\Gamma) - V(A \cap B))$; then
+\begin{equation*}
+\left(\bigcup (p(e) \colon e \in E(\Gamma)), V(\Gamma) - V(A \cap B)\right) = \Gamma^*
+\end{equation*}
+is a painting in $\Sigma$, and it is easy to see that $\Gamma^*$ is $(\theta - |V(A \cap B)|)$-repre-

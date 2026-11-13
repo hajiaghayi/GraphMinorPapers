@@ -1,0 +1,24 @@
+\origpage{351}{N. Robertson, P.D. Seymour / Journal of Combinatorial Theory, Series B 92 (2004) 325--357}
+\noindent component of $M'_{c'}$, and the claim is trivial. We assume then that $n_1 \ne n_2$. Hence $c' = \zeta(c)$ for some $c \in C(\Gamma)$ (because otherwise $n'_1$, $n'_2$ would be adjacent in and hence both belong to some $\zeta(n)$ for $n \in N(\Gamma)$, contrary to $n_1 \ne n_2$). Since $\psi(c) \le \psi'(c')$ and the $i$th term of $\pi'(n'_1)$ is the $j$th term of $\pi'(n'_2)$ it follows that the $i$th term of $\pi(n_1)$ is the $j$th term of $\pi(n_2)$, that is, $v$ is the $j$th term of $n_2$. This proves (3).
+
+\hspace*{12pt}(4) \textit{For distinct $v_1, v_2 \in V(G)$, $\eta(v_1) \cap \eta(v_2) = \emptyset$.}
+
+\textit{Subproof:} Let $v' \in \eta(v_1) \cap \eta(v_2)$. If $v' \in N(\Gamma')$ then $v_1, v_2 \in N(\Gamma)$ and hence $V(\zeta(v_1)) \cap V(\zeta(v_2)) \ne \emptyset$ and so $v_1 = v_2$. If $v' \notin N(\Gamma')$ then $v_1, v_2 \notin N(\Gamma)$ and there exist $n_1 \in N(\Gamma) \cap bd(\Sigma)$ and $n'_1 \in V(\zeta(n_1)) \cap bd(\Sigma)$ and $i > 0$ such that $v_1$ is the $i$th term of $\pi(n_1)$ and $v'$ is the $i$th term of $\pi'(n'_1)$. Since $v' \in \eta(v_2)$ it follows from (3) that $v_2$ is the $i$th term of $\pi(n_1)$ and hence $v_1 = v_2$. This proves (4).
+
+\hspace*{12pt}(5) \textit{For each $c \in C(\Gamma)$, $\mu(c)$ and $\mu'(\eta(c))$ have the same length $k$ say, and for $1 \le i \le k$, $\eta(v)$ contains the $i$th term of $\mu'(\eta(c))$ where $v$ is the $i$th term of $\mu(c)$.}
+
+\textit{Subproof:} Let $c' = \eta(c)$. Since $\psi(c) \le \psi'(c')$ and $|\tilde{c}| = |\tilde{c}'|$ it follows that $\mu(c)$ and $\mu'(c')$ have the same length $k$ say. Let $1 \le i \le k$, let $v$ be the $i$th term of $\mu(c)$, and let $v'$ be the $i$th term of $\mu'(c')$. We must show that $v' \in \eta(v)$. If $c$ is internal then so is $c'$, and $v$ is the $i$th node of $c$ and hence $\eta(v) = V(\zeta(v))$ contains the $i$th node of $c'$, that is, $v'$ as required. (We are using here the third condition in the definition of $(\Sigma, \rho)$-hulled.) We assume then that $c$ and hence $c'$ are border cells. If $v \in N(\Gamma)$ then $v \in \tilde{c}$; let $v$ be the $j$th node of $c$. Then since $\psi(c) \le \psi'(c')$, $v'$ is the $j$th node of $c'$, and hence belongs to $\eta(v) = V(\zeta(v))$ since $\zeta$ is a linear inflation. We assume then that $v \notin N(\Gamma)$. Choose $n \in \tilde{c}$ with $v \in \beta(n)$, and let $v$ be the $j$th term of $\pi(n)$. Let $n'$ be the corresponding node of $c'$ (that is, the first node of $c'$ if and only if $n$ is the first node of $c$). Since $\psi(c) \le \psi'(c')$, $v'$ is the $j$th term of $\pi'(n')$ and so $v' \in \eta(v)$. This proves (5).
+
+\hspace*{12pt}(6) \textit{For each $c \in C(\Gamma)$, $\phi(c) \le \phi'(\eta(c))$ and the bijection from $\bar{\mu}(c)$ to $\bar{\mu}'(\eta(c))$ mapping $\mu(c)$ to $\mu'(\eta(c))$ also maps $\Delta(c)$ to $\Delta'(\eta(c))$.}
+
+\textit{Subproof:} If $c$ is internal then $\phi(c) = \psi(c) \le \psi'(\eta(c)) = \phi'(\eta(c))$ and $\Delta(c)$, $\Delta'(\eta(c))$ are both free. If $c$ is a border cell the claim follows since $\psi(c) \le \psi'(\eta(c))$. This proves (6).
+
+From (2)--(6) we deduce
+
+\hspace*{12pt}(7) \textit{$\eta$ is an expansion of $P$ in $P'$.}
+
+For each $c' \in C(\Gamma') \setminus \zeta(C(\Gamma))$ we choose $\delta_{c'} \in \Delta(c')$ as follows. If $c'$ is a border cell and $M'_{c'} \in \Delta(c')$, let $\delta_{c'} = M'_{c'}$. If $c'$ is a border cell and $M'_{c'} \notin \Delta(c')$, let $\delta_{c'} = M'_{c'} \setminus e$, where $e$ is the edge of $M'_{c'}$ joining the two nodes of $c'$. If $c'$ is internal let $\delta_{c'}$ be the grouping $K$ with $V(K) = \tilde{c}'$ in which distinct $n_1, n_2 \in \tilde{c}'$ are adjacent in $K$ if and only if there exists $n \in N(\Gamma)$ with $n_1, n_2 \in V(\zeta(n))$. Then $\delta_{c'} \in \Delta(c')$ since $\Delta(c')$ is free. Let
+\begin{equation*}
+H = N_{V(G')} \cup \bigcup (\delta_{c'} : c' \in C(\Gamma') \setminus \zeta(C(\Gamma))).
+\end{equation*}
+Then $H$ is a realization of $P' \setminus \eta(E(G))$. We shall show that it realizes $\eta$.

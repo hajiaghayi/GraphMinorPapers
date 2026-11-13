@@ -1,0 +1,34 @@
+\origpage{277}{GRAPH MINORS. VIII}
+\noindent $\{\tau^i_j(k+1), \dots, \tau^i_j(2k)\} = Y^i_j$. Thus $(G^i_j, \tau^i_j) \in \mathcal{B}$, where $\mathcal{B}$ is the class of all rooted graphs of index $2k$ with underlying graft in $\mathcal{A}$. By (4.3), $\mathcal{B}$ is well-rooted, and so by (3.3) there exist $i > h \ge 1$ and $j(1), \dots, j(r_h)$ such that
+\begin{equation*}
+1 \le j(1) < j(2) < \dots < j(r_h) \le r_i,
+\end{equation*}
+and such that for $1 \le n \le r_h$, $(G^h_n, \tau^h_n)$ is simulated in $(G^i_{j(n)}, \tau^i_{j(n)})$. For $1 \le n \le r_h$, let $\sigma_n$ be the corresponding simulation. Let $Q$ be the subgraph of $G^i$ formed by the union of the $\sigma_n(v)$ for $1 \le n \le r_h$ and $v \in V(G^h_n)$. Let
+\begin{equation*}
+Y = \bigcup \left(Y^i_{j(n)-1} \cup Y^i_{j(n)} : 1 \le n \le r_h\right).
+\end{equation*}
+Then $Y \subseteq V(Q)$. Let $R$ be the intersection of $P^i_1 \cup \dots \cup P^i_k$ with
+\begin{equation*}
+\bigcup (G^i_j : j \in \{1, \dots, r_i\} - \{j(1), \dots, j(r_h)\}).
+\end{equation*}
+Let $G$ be the union of $Q$ and $R$. For a component $K$ of $G$, we say $K$ \textit{realizes} $v \in V(G^h)$ if $V(K) \cap V(\sigma_n(v)) \ne \emptyset$ for some $n$ with $1 \le n \le r_h$.
+
+\hspace*{12pt}(1) \textit{Every component of $G$ realizes some vertex of $V(G^h)$.}
+
+For if $K$ is a component of $G$ and $V(K) \cap V(Q) = \emptyset$, then $K$ is a component of $R$, and so $K$ is a subpath of $P^i_p$ for some $p$ with $1 \le p \le k$. Now $P^i_p$ meets $V(Q)$ and so $K \ne P^i_p$, and some end $v$ of $K$ is an internal vertex of $P^i_p$. But then $v \in V(Q)$ from the definitions of $Q$ and $R$, and hence $V(K) \cap V(Q) \ne \emptyset$, a contradiction. Thus there is no such component $K$, as required.
+
+\hspace*{12pt}(2) \textit{If $V(\sigma_m(u)) \cap V(\sigma_n(v)) \ne \emptyset$ then $u = v$.}
+
+If $m = n$ the result is clear, and we assume $m < n$ without loss of generality. Choose $x \in V(\sigma_m(u)) \cap V(\sigma_n(v))$. Then
+\begin{equation*}
+x \in V(G^i_{j(m)}) \cap V(G^i_{j(n)}) \subseteq V(G^i_{j(m)+1})
+\end{equation*}
+and so $x = \tau^i_{j(m)}(p+k)$ for some $p$ with $1 \le p \le k$, where $x \in V(P_p)$. Similarly $x = \tau^i_{j(n)}(p)$. Since $\sigma_m$ is a simulation of $(G^h_m, \tau^h_m)$ in $(G^i_{j(m)}, \tau^i_{j(m)})$, it follows that $u = \tau^h_m(p+k)$, and similarly that $v = \tau^h_n(p)$. But for $m < l < n$,
+\begin{equation*}
+\tau^i_{j(l)}(p) = \tau^i_{j(l)}(p+k) = x
+\end{equation*}
+and so $\tau^h_l(p) = \tau^h_l(p+k)$, since $\sigma_l$ is a simulation. But
+\begin{equation*}
+\tau^h_l(p+k) = \tau^h_{l+1}(p) \qquad (m \le l \le n-1)
+\end{equation*}
+and we deduce that $u = v$, as required.

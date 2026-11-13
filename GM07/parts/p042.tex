@@ -1,0 +1,24 @@
+\origpage{253}{GRAPH MINORS. VII}
+\noindent $A' = \bigcup_{x \in X} A_x$. But $A' \cap (Z_1 \cup Z_2) = X$, and so is arc-connected, and $A' \subseteq A$. The result follows.
+
+\stmt
+(11.7) \textit{If $Z \subseteq \Sigma$ is solid and flat, and $\Sigma$ is connected, there exists $Y \subseteq \Sigma$ with $Z \subseteq Y$ such that $Y$ is solid, flat, and arc-connected.}
+
+\textit{Proof.} If $Z$ has infinitely many arc-components, there exists $z \in \Sigma$ such that every neighborhood of $z$ meets infinitely many arc-components of $Z$. Since $Z$ is closed, $z \in Z$; but then $z$ has a neighborhood $A$ such that $A \cap Z$ is arc-connected, a contradiction. Hence $Z$ has only finitely many arc-components. If it has more than one, we may choose a $[0, 1]$-arc $T \subseteq \Sigma$ with its ends in different arc-components of $Z$ and with $|T \cap Z| = 2$. Then $T \cup Z$ is solid and flat by (11.6), and has fewer arc-components than $Z$. The result follows by repeating this process.
+
+We say $Z \subseteq \Sigma$ is \textit{simply connected} if $Z$ is arc-connected and every $O$-arc $F \subseteq Z$ bounds a closed disc $\Delta \subseteq Z$. By (11.2), a simply connected set is flat.
+
+\stmt
+(11.8) \textit{If $Z \subseteq \Sigma$ is open, flat, and arc-connected, there is an open, simply connected set $Y \subseteq \Sigma$ with $Z \subseteq Y$.}
+
+\textit{Proof.} If $n$ is an ordinal, and $Z_i \subseteq \Sigma$ is open, flat, and arc-connected for $i < n$, and $Z_i \subseteq Z_{i'}$ for $i < i' < n$, then $\bigcup_{i < n} Z_i$ is also open, and arc-connected, and flat, by the compactness of $O$-arcs. Thus, by Zorn's lemma, there exists $Y \subseteq \Sigma$ with $Z \subseteq Y$, open, flat, and arc-connected and maximal with these properties. If $F \subseteq Y$ is an $O$-arc, there is a closed disc $\Delta \subseteq \Sigma$ bounded by $F$, since $Y$ is flat. Then $Y \cup \Delta$ is open, arc-connected, and flat, by (11.3); and so $\Delta \subseteq Y$ from the maximality of $Y$. Thus $Y$ is simply connected, as required. $\square$
+
+\stmt
+(11.9) \textit{If $\Sigma$ is connected and $Z \subseteq \Sigma$ is flat and l.a.c., and either $Z$ is closed or $Z$ is arc-connected, then there is an open simply connected subset $Y \subseteq \Sigma$ with $Z \subseteq Y$.}
+
+\textit{Proof.} By (11.7) we may assume that $Z$ is arc-connected. By (11.5) we may assume that $Z$ is open. But then the result follows from (11.8).
+
+\stmt
+(11.10) \textit{If $\Sigma$ is connected and $Z \subseteq \Sigma$ is solid and flat, then either $Z = \Sigma$ or $Z$ is planar.}
+
+\textit{Proof.} By (11.9) there is an open, simply connected set $Y \subseteq \Sigma$ with $Z \subseteq Y$. If $\operatorname{bd}(\Sigma) = \emptyset$ and $Y = \Sigma$, then $\Sigma$ is a sphere, and the result follows. If $\operatorname{bd}(\Sigma) = \emptyset$ and $Y \ne \Sigma$, then $Y$ is an open disc by (4.2), and the result follows since any closed subset of an open disc is included in a closed disc. If $\operatorname{bd}(\Sigma) \ne \emptyset$, similar slightly more complicated arguments yield the result, and we omit the details.

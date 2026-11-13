@@ -1,0 +1,25 @@
+\origpage{55}{GRAPH MINORS. IX}
+\noindent cardinality $p$ and with $\Omega_0(a_2, b_2) \cap V(\mathcal{P}) = \emptyset$, for $\mathcal{P}$ would be a crooked transaction in $(G, \Omega)$, since $r \in \Omega_0(a_2, b_2)$. Thus by (5.2), (2) follows.
+
+\hspace*{12pt}(3) \textit{$\bar{\Omega} \cap V(K \setminus V(Q_1))$ catches $K \setminus V(Q_1)$.}
+
+For let $H$ be a component of $K \setminus V(Q_1)$. We must show that
+\begin{equation*}
+V(H) \cap \bar{\Omega} \cap V(K \setminus V(Q_1)) \ne \emptyset. \tag{$*$}
+\end{equation*}
+Now since $H \subseteq K$ there is a path of $K$ from $V(H)$ to $\bar{\Omega} - V(G_2) = \bar{\Omega} \cap V(K)$. If this path avoids $V(Q_1)$, then $(*)$ holds, and so we may assume that some vertex of $H$ is adjacent in $G$ to a vertex of $Q_1$. Now $\bar{\Omega} - \{a_1, b_1\}$ catches $G \setminus V(Q_1)$, and so there is a path of $G$ from $V(H)$ to $\bar{\Omega} - \{a_1, b_1\}$ avoiding $V(Q_1)$. If this path avoids $V(G_2)$ then $(*)$ holds, and so we may assume that some vertex of $H$ is adjacent in $G$ to a vertex of $Q_{p+5}$. Now $Q_2$ is separating in $(G, \Omega)$, and $H$ is connected, and there are vertices of $Q_1$ and of $Q_{p+5}$ with neighbors in $H$; and so $V(H \cap Q_2) \ne \emptyset$. But then $Q_2 \subseteq H$ and $a_2, b_2 \in V(H)$, whence $(*)$ holds.
+
+The proof is completed as follows. From (2), (3), and (5.3) applied to $(K, \Omega \mid V(K))$ we deduce that $(K, \Omega \mid V(K))$ has a cross or tripod, and hence so does $(G \setminus V(G_2), \Omega \mid (\bar{\Omega} - V(G_2)))$. Using (5.4) in the tripod case, we deduce that $(G_1, \Omega \mid V(G_1))$ has a cross, as required. $\square$
+
+\sectionhead{6. \textsc{The} \textsc{Main} \textsc{Theorem}}
+
+In this section we apply (5.5) to deduce our main result. Let $\mathcal{P}$ be a transaction in $(G, \Omega)$, with $|\mathcal{P}| \ge 2$. If $P \in \mathcal{P}$ is peripheral and has ends $s, t$, we define $U(P) = \Omega(t, s)$, where $\Omega(s, t) \cap V(\mathcal{P}) = \emptyset$. (This defines $U(P)$ uniquely.) If $\mathcal{P}$ is crooked, we define $U(\mathcal{P}) = \bar{\Omega}$, and otherwise we define $U(\mathcal{P})$ to be the intersection of the sets $U(P)$, taken over all peripheral $P \in \mathcal{P}$. We define $C(\mathcal{P})$ to be the set of all vertices $v$ of $G$ such that there is a path in $G$ between $\{v\}$ and $U(\mathcal{P})$ which avoids every peripheral member of $\mathcal{P}$.
+
+Our main theorem is the following.
+
+\stmt
+(6.1) \textit{Let $p \ge 2$ be an integer with $p \ne 3$, and let $(G, \Omega)$ be a 3-connected, internally 4-connected society, in which there is no crooked transaction of cardinality $p$. Then the sophistication of $(G, \Omega)$ is at most $3p + 7$.}
+
+\textit{Proof.} We suppose for a contradiction that the theorem is false. Choose a counterexample $(G, \Omega)$ such that $|V(G)| + |E(G)|$ is as small as possible, and subject to this, $|\bar{\Omega}|$ is as large as possible. We remark that:
+
+\hspace*{12pt}(1) \textit{$G$ is simple.}

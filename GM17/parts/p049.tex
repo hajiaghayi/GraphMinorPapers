@@ -1,0 +1,20 @@
+\origpage{210}{ROBERTSON AND SEYMOUR}
+By (1) and (13.4), there exist $Z \subseteq V(G)$ with $|Z| < z$ and a $(\mathscr{T}^* \setminus Z)$-central portrayal $\pi_1 = (\Sigma_1, \Gamma_1, \alpha_1, \beta_1, \gamma_1)$ of $G^* \setminus Z$ with warp $\le p$, such that $\Sigma_1$ has $\le q$ cuffs, $H$ cannot be drawn in $\Sigma_1$ and $\pi_1$ is $(2p + 7)$-redundant.
+
+Now $G^* \setminus Z = (G/Z)^*$, and $\mathscr{T}^* \setminus Z$ is therefore a tangle in $(G/Z)^*$. Let $\mathscr{T}'$ be the embodiment of $\mathscr{T}^* \setminus Z$ in $G/Z$. By (12.6), there is a $2p + 7$-redundant $\mathscr{T}'$-central portrayal $\pi_2 = (\Sigma_1, \Gamma_2, \alpha_2, \beta_2, \gamma_2)$ of $G/Z$.
+
+\hspace*{12pt}(2) $\pi_2$ is $\mathscr{T}/Z$-central.
+
+\textit{Subproof.} Let $c \in C(\Gamma)$. Since $\pi_2$ is $\mathscr{T}'$-central it follows that $(\delm{a_2}\fix{\alpha_2}(c),\allowbreak \alpha_2(-c)) \in \mathscr{T}'$\fixnote{fix:14.2-claim2}{In the same way, $B_4 = B_4/Z$ below becomes $B_4 = B_3/Z$.} by (4.1)(i), since $(\alpha_2(c), \alpha_2(-c))$ has order $\le \max(2p, 3) < \theta^* - z \le \operatorname{ord}(\mathscr{T}')$. Hence $\alpha_2(c)^*$ is small relative to $\mathscr{T}' \setminus Z$, since $\mathscr{T}'$ is the embodiment of $\mathscr{T}^* \setminus Z$. Consequently there exists $B_1 \subseteq \alpha_2(-c)^*$ with $V(B_1) = V(\alpha_2(-c))$ such that $(\alpha_2(c)^*, B_1) \in \mathscr{T}^* \setminus Z$; and so there exists $(A_2, B_2) \in \mathscr{T}^*$ with $Z \subseteq V(A_2 \cap B_2)$ such that $A_2 \setminus Z = \alpha_2(c)^*$ and $B_2 \setminus Z = B_1$. By definition of $\mathscr{T}^*$, there exists $(A_3, B_3) \in \mathscr{T}$ with $V(A_3) = V(A_2)$ and $V(B_3) = V(B_2)$. Let $A_4 = A_3/Z$, $B_4 = B_{\delm{4}\fix{3}}/Z$; then $(A_4, B_4) \in \mathscr{T}/Z$. But
+\begin{equation*}
+V(A_4) = V(A_3) - Z = V(A_2) - Z = V(\alpha_2(c))
+\end{equation*}
+and so $\alpha_2(c)$ is small relative to $\mathscr{T}/Z$, by [1, Theorem (2.9)]. This proves (2).
+
+Since $\pi_2$ is a $(2p + 7)$-redundant, $(\mathscr{T}/Z)$-central portrayal of $G/Z$, there is a true, $(2p + 7)$-redundant, $(\mathscr{T}/Z)$-central portrayal $\pi$ of $G/Z$ which resembles $\pi_2$. The result follows. $\square$
+
+\sectionhead{\textsc{References}}
+
+1. N. Robertson and P. D. Seymour, Graph minors. X. Obstructions to tree-decomposition, \textit{J. Combin. Theory Ser. B} \textbf{52} (1991), 153--190.
+
+2. N. Robertson and P. D. Seymour, Graph minors. XVI. Excluding a non-planar graph, submitted for publication.

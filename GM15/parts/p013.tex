@@ -1,0 +1,24 @@
+\origpage{124}{ROBERTSON AND SEYMOUR}
+\noindent $H'$, $\mathcal{T}'$ is a $\Sigma'$-span of order $\phi$. To show this, it follows by an argument similar to that in the proof of (3.3), using [4, Theorem (5.1)] in place of [4, Theorem (5.2)], that $\mathcal{T}'$ is respectful and that it suffices to prove that $H'$ is rigid. To show that $H'$ is rigid we verify (3.2)(i)-(iv). Now (3.2)(i) holds by hypothesis. For (3.2)(ii), let $X = \{a_1, \dots, a_\phi, b_1, \dots, b_\phi\}$.
+
+\hspace*{12pt}(1) \textit{For every O-arc $F \subseteq \Sigma$ with $F \cap U(H') \subseteq V(H')$ and $|F \cap V(H')| \le 2$, there is a dial $\Delta \subseteq \Sigma$ for $F, H' \cap \Sigma_1$ with $|X \cap \Delta| \le |F \cap V(H')|$.}
+
+\textit{Subproof.} As in the proof of (3) in (3.3), there is a dial $\Delta \subseteq \Sigma$ for $F$, $H$, and $(H \cap \Delta, H \cap \overline{\Sigma - \Delta}) \in \mathcal{T}$. Since $|F \cap V(H')| \le 2$ and no region of $H$ is incident with a vertex of $C_1$ and a vertex of $C_2$, we may therefore assume that $F \cap U(C_2) = \emptyset$. Since $\{b_1, \dots, b_\phi\}$ is free with respect to $\mathcal{T}$ and $\phi \ge 3$, it follows that $\{b_1, \dots, b_\phi\} \not\subseteq \Delta$, and so $\bar{\Lambda}_2 \cap \Delta = \emptyset$. Moreover, since $\{a_1, \dots, a_\phi\}$ is free with respect to $\mathcal{T}$, we deduce that
+\begin{equation*}
+|\{a_1, \dots, a_\phi\} \cap \Delta| \le |F \cap V(H')|.
+\end{equation*}
+Consequently $|X \cap \Delta| \le |F \cap V(H')|$. This proves (1).
+
+\stmt
+(3.2)(ii) follows, and (3.2)(iii) is easy to see. (3.2)(iv) is proved as in step (5) of (3.3). From (3.2) we therefore deduce that $H'$ is rigid in $\Sigma'$, as required. $\square$
+
+\sectionhead{4. \textsc{Rearrangement}}
+
+In this section, we develop an assortment of lemmas about compressions and rearrangement. If $\mathcal{T}$ is a respectful tangle of order $\theta$ in a 2-cell drawing $H$ in $\Sigma$, and $K$ is a radial \del{graph} \fix{drawing} of \del{$G$}\fix{$H$},\fixnote{fix:4-ins}{No $G$ appears here. The tangle and the separations are in $H$, and $C$ must be a circuit of a radial drawing of $H$, as in (4.1), which next says ``Let $H_1, H_2$ have radial drawings $K_1, K_2$''.} we define $ins(C)$, for each circuit $C$ of $K$ with $<2\theta$ edges, to be the closed disc $\Delta \subseteq \Sigma$ bounded by $U(C)$ such that
+\begin{equation*}
+(H \cap \Delta, H \cap \overline{\Sigma - \Delta}) \in \mathcal{T}.
+\end{equation*}
+(This exists since $\mathcal{T}$ is respectful.) For any closed walk $W$ of $K$ of length $<2\theta$, we define $ins(W)$ to be the union of $U(K')$ and $ins(C)$ taken over all circuits $C$ of $K'$, where $K' \subseteq K$ is the subdrawing formed by the vertices and edges in $W$. We call $ins$ the slope corresponding to $\mathcal{T}$. For tangles $\mathcal{T}'$, $\mathcal{T}''$, $\mathcal{T}_0$ etc. we shall consistently denote the corresponding slopes by $ins'$, $ins''$, $ins_0$ etc. without further definition, and we use a similar convention for metrics ($d'$, $d''$, $d_0$ etc.).
+
+\stmt
+(4.1) \textit{Let $\mathcal{T}$ be a respectful tangle of order $\theta$ in a 2-cell drawing $H$ in a surface $\Sigma$. Let $H_1, H_2$ be 2-cell drawings in $\Sigma$, and for $i = 1, 2$ let $\mathcal{T}_i$ be a $\lambda_i$-compression of $\mathcal{T}$ in $H_i$. Let $H_1, H_2$ have radial drawings $K_1, K_2$. Then}

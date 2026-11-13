@@ -1,0 +1,19 @@
+\origpage{286}{ROBERTSON AND SEYMOUR}
+\noindent \textit{every graft} $(G, T)$ \textit{and every drawing} $\Gamma$ \textit{of} $(G, T)$ \textit{in} $\Sigma$, \textit{one of the following holds:} (i) $(H, U)$ \textit{is simulated in} $(G, T)$ (ii) \textit{for some cuff} $C$ \textit{of} $\Sigma$, $|V(\Gamma) \cap C| \ne |V(\Delta) \cap C|$ (iii) \textit{for some} $\Gamma$\textit{-normal schism} $F$, $|V(\Gamma) \cap F| \le N$ (iv) \textit{for some cuff} $C$ \textit{of} $\Sigma$ \textit{there is a} $\Gamma$\textit{-normal} $O$\textit{-arc} $F$ \textit{surrounding} $C$ \textit{with} $F \cap \text{bd} \Sigma \subseteq C$ \textit{and with} $|V(\Gamma) \cap F| < |V(\Gamma) \cap C|$.
+
+Let $\Sigma$ be a connected surface. Then $\Sigma \cong \Sigma(a, b, c)$ for some choice of $a, b, c$, and we define $g(\Sigma) = 4a + 2b + c$. (This definition does not depend on the choice of $a, b, c$ because $c$ is fixed, being the number of components of $\text{bd} \Sigma$, and $4a + 2b$ is also fixed, being equal to $2(2 - e - c)$ where $e$ is the Euler characteristic of $\Sigma$.) For a general surface $\Sigma$, we define $g(\Sigma)$ to be the maximum of $g(\Sigma')$ taken over all components $\Sigma'$ of $\Sigma$.
+
+\stmt
+(18.2) \textit{Let} $\Sigma$ \textit{be a connected surface, not a sphere, disc or cylinder, and let} $X$ \textit{be a schism in} $\Sigma$. \textit{Let} $\Sigma'$ \textit{be obtained from} $\Sigma$ \textit{by cutting along} $X$. \textit{Then} $g(\Sigma') < g(\Sigma)$.
+
+\textit{Proof.} Let $\Sigma_1$ be a component of $\Sigma'$ and $\Sigma_2$ be the union of the other components. Let $\Sigma, \Sigma', \Sigma_1, \Sigma_2$ have Euler characteristics $e, e', e_1, e_2$ and have $c, c', c_1, c_2$ cuffs, respectively. Let $a, b, c, k_2, a_2, b_2, c_2$ be such that $\Sigma \cong \Sigma(a, b, c)$, and $\Sigma_2$ has $k_2$ components, and $\Sigma_2$ may be obtained from the union of $k_2$ disjoint spheres by adding $a_2$ handles and $b_2$ cross-caps and removing the interiors of $c_2$ disjoint closed discs (where of course $k_2 = a_2 = b_2 = c_2 = 0$ if $\Sigma'$ is connected). The schism $X$ is of one of the types listed in the definition of ``schism,'' which gives us several cases to consider. In each case we can find $e' - e$ by considering a triangulation of $\Sigma$ in which $X$ is a union of $0$- and $1$-simplices, and it can be verified that
+\begin{equation*}
+2(e' - e) + \delm{e'}\fix{c'} - c + 4a_2 + 2b_2 + c_2 > 4k_2.\fixmark{fix:18.2-proof}
+\end{equation*}
+\fixnotetext{A misprint: the second $e'$ should be $c'$, the number of cuffs after the cut, and the next substitution uses $c'-c$. For a nonseparating circle on the torus, which cuts it into a cylinder, the printed form would read $0>0$ and the corrected one $2>0$.}%
+But $e' = e_1 + 2k_2 - 2a_2 - b_2 - c_2$ and $c' = c_1 + c_2$, and it follows by substitution that $2e_1 + c_1 > 2e + c$. Now $g(\Sigma_1) = 4 - 2e_1 - c_1$, and $g(\Sigma) = 4 - 2e - c$, and so $g(\Sigma_1) < g(\Sigma)$. Since this holds for every component $\Sigma_1$ of $\Sigma'$ we deduce that $g(\Sigma') < g(\Sigma)$, as required. $\square$
+
+We come now to the proof of (6.1). If $\Sigma$ is a surface and $k \ge 0$ is an integer, we define $\mathscr{C}(\Sigma, k)$ to be the class of all grafts of index $\le k$ which embed in $\Sigma$. If $h, k \ge 0$ are integers, we define $\mathscr{C}(h, k)$ to be the union of $\mathscr{C}(\Sigma, k)$, taken over all surfaces $\Sigma$ with $g(\Sigma) \le h$. Then (6.1) is a consequence of the following.
+
+\stmt
+(18.3) \textit{For any integers} $h, k \ge 0$, $\mathscr{C}(h, k)$ \textit{is well-rooted.}

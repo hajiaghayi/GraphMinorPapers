@@ -1,0 +1,30 @@
+\origpage{86}{ROBERTSON AND SEYMOUR}
+\noindent a planar graph with three regions, each bounded by a circuit; and so $C_1 \cap C_2$, $C_1 \cap C_3$, $C_2 \cap C_3$ are all paths joining the same pair of vertices. This contradicts the second slope axiom. Hence our choice of $Z_1$, $Z_2$, $Z_3$ was impossible, and the result follows. $\square$
+
+The following is a slight extension of (5.4).
+
+\stmt
+(5.5) \textit{If $Z_1, Z_2, Z_3 \subseteq R(\Gamma)$ are small, then $Z_1 \cup Z_2 \cup Z_3 \ne R(\Gamma)$.}
+
+\textit{Proof.} We suppose, for a contradiction, that the result is false. Let us choose $Z_1$, $Z_2$, $Z_3 \subseteq R(\Gamma)$, small, with union $R(\Gamma)$, and with $|Z_1| + |Z_2| + |Z_3|$ minimum. Let $Z_1' = Z_1 - Z_2$, $Z_2' = Z_2 - Z_1$. We claim that
+\begin{equation*}
+V(N(Z_1')) \cup V(N(Z_2')) \subseteq V(N(Z_1)) \cup V(N(Z_2)).
+\end{equation*}
+For suppose that some vertex $v$ is contained in, say, $V(N(Z_1'))$. Let $r_1, r_2$ be regions incident with $v$, such that $r_1 \in Z_1'$, $r_2 \notin Z_1'$. If $r_2 \notin Z_1$, then $v \in V(N(Z_1))$, and so we may assume that $r_2 \in Z_1$. Since $r_2 \notin Z_1'$, it follows that $r_2 \in Z_2$. But $r_1 \notin Z_2$, and so $v \in V(N(Z_2))$. This proves our claim.
+
+Next we claim
+\begin{equation*}
+V(N(Z_1')) \cap V(N(Z_2')) \subseteq V(N(Z_1)) \cap V(N(Z_2)).
+\end{equation*}
+For suppose that $v \in V(N(Z_1')) \cap V(N(Z_2'))$. Then certainly there are regions $r_1 \in Z_1'$, $r_2 \in Z_2'$ incident with $v$. By definition of $Z_1'$, $Z_2'$, we see that $r_1 \notin Z_2$, $r_2 \notin Z_1$; and so $v \in V(N(Z_1)) \cap V(N(Z_2))$. This proves our claim.
+
+From these two facts, we deduce that
+\begin{align*}
+|\Omega &\cap V(N(Z_1'))| + |\Omega \cap V(N(Z_2'))| \\
+&= |\Omega \cap (V(N(Z_1')) \cup V(N(Z_2')))| + |\Omega \cap (V(N(Z_1')) \cap V(N(Z_2')))| \\
+&\le |\Omega \cap (V(N(Z_1)) \cup V(N(Z_2)))| + |\Omega \cap (V(N(Z_1)) \cap V(N(Z_2)))| \\
+&= |\Omega \cap V(N(Z_1))| + |\Omega \cap V(N(Z_2))| \le 2\omega - 2.
+\end{align*}
+Without loss of generality, then, we may assume that $|\Omega \cap V(N(Z_1'))| \le \omega - 1$, and so $Z_1'$ is small, by (5.3). But $Z_1' \cup Z_2 \cup Z_3 = R(\Gamma)$, and hence by our choice of $Z_1$, $Z_2$, $Z_3$, we deduce that $Z_1' = Z_1$, that is, $Z_1 \cap Z_2 = \emptyset$. Similarly $Z_1 \cap Z_3 = Z_2 \cap Z_3 = \emptyset$ and so $(Z_1, Z_2, Z_3)$ is a partition of $R(\Gamma)$, which is impossible, by (5.4). This completes the proof of (5.5). $\square$
+
+Incidentally, our device of ``weightings'' in this section seems artificial, and in view of (5.5) and its application in the next section, one might hope that something more general and more natural was true. Let us say $Z \subseteq R(\Gamma)$ is \textit{little} if $N(Z)$ is confined, and $N(Z)$ captures each member of $Z$. One

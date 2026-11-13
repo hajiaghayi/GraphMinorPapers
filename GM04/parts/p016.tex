@@ -1,0 +1,91 @@
+\origpage{242}{ROBERTSON AND SEYMOUR}
+\hspace*{12pt}(iii) \textit{there is a realization of $P$ such that $k$ of its components are paths from $X_1$ to $X_2$ with no vertex except their first in $X_1$, and no vertex except their last in $X_2$, and the remainder of the components of this realization are isolated vertices.}
+
+\textit{Proof.} Let $K$ be the simple graph with $V(K) = V(G)$ in which distinct $a, b \in V(G)$ are adjacent if and only if some edge of $G$ is incident with both $a$ and $b$. By Menger's theorem, (i) is equivalent to statement (i)', that there are $k$ paths of $K$ from $X_1$ to $X_2$, mutually vertex-disjoint. We must prove the equivalence of (i)', (ii), and (iii).
+
+Obviously (iii) implies (ii), and (ii) implies (i)'; it remains to show that (i)' implies (iii). Suppose then that $P_1, \dots, P_k$ are mutually vertex-disjoint paths of $K$ from $X_1$ to $X_2$, and let us choose them with $\sum |E(P_i)|$ minimum. Then for $1 \le i \le k$, no vertex of $P_i$ except its first is in $X_1$, and no vertex except its last is in $X_2$. Moreover, for each $e \in E(G)$, at most two vertices of $P_i$ are incident with $e$ in $G$, since any two such vertices are adjacent in $K$; and if there are two such vertices then they are consecutive in $P_i$.
+
+For $1 \le i \le k$ and each $f \in E(P_i)$, let the ends of $f$ be $f^+, f^-$ where $f^-$ is before $f^+$ in $P_i$. Choose $e(f) \in E(G)$ such that $f^+, f^-$ are both incident with $e(f)$ in $G$. For each $e \in E(G)$, let $A_e = \{f^- : e = e(f)\}$ and $B_e = \{f^+ : e = e(f)\}$. Then $A_e \cap B_e = \emptyset$ and $|A_e| = |B_e|$. Since $\Delta(e)$ is robust there is a pairing $\delta_e \in \Delta(e)$ which pairs $A_e, B_e$. The graph
+\begin{equation*}
+N_{V(G)} \cup \bigcup (\delta_e: e \in E(G))
+\end{equation*}
+is a realization of $P$ satisfying (iii), as is easily seen (for example by rerouting the paths patch by patch). \fix{We give the details. First, the properties of $P_1, \dots, P_k$ stated above follow from the
+minimality of $\sum |E(P_i)|$. If some vertex of $P_i$ other than its first were in $X_1$, or some
+vertex other than its last were in $X_2$, then a proper subpath of $P_i$ would be a path of $K$
+from $X_1$ to $X_2$ disjoint from the other paths. If two vertices of $P_i$ that are not
+consecutive in $P_i$ were adjacent in $K$, then using the edge of $K$ between them in place of the
+part of $P_i$ between them would give a shorter path of $K$ with the same ends, and with vertex set
+a subset of $V(P_i)$. In both cases the sum would decrease.
+
+We call the edges of $P_1, \dots, P_k$ \textit{steps}. Since $P_1, \dots, P_k$ are mutually
+vertex-disjoint paths, distinct steps $f$ have distinct vertices $f^-$, and distinct vertices
+$f^+$. Hence $|A_e| = |\{f : e(f) = e\}| = |B_e|$ for each $e \in E(G)$. Suppose that some vertex
+$x$ is in $A_e \cap B_e$, say $x = f_1^- = f_2^+$ where $e(f_1) = e(f_2) = e$. Then $f_1$ and $f_2$
+are edges of the same path $P_i$, the one containing $x$, and $f_1$ is the edge of $P_i$ after
+$f_2$. So $f_2^-$ and $f_1^+$ are not consecutive in $P_i$, and they are both incident with $e$, and
+hence adjacent in $K$. This is impossible, and so $A_e \cap B_e = \emptyset$. Let $H$ be the
+realization displayed above.
+
+Let $f$ be a step, and let $e = e(f)$. Since $\delta_e$ pairs $A_e, B_e$ and $f^- \in A_e$, the
+vertex $f^-$ is adjacent in $\delta_e$ to exactly one vertex, which is in $B_e$. So this vertex is
+$g^+$ for a unique step $g$, and $e(g) = e$. We put $\pi(f) = g$. If $\pi(f_1) = \pi(f_2) = g$, then
+$e(f_1) = e(f_2) = e(g)$, and $f_1^-$ and $f_2^-$ are both adjacent to $g^+$ in the pairing
+$\delta_{e(g)}$, so $f_1^- = f_2^-$ and $f_1 = f_2$. Thus $\pi$ is injective. Moreover, since every
+edge of each $\delta_e$ joins a vertex of $A_e$ to a vertex of $B_e$, two vertices $x, y$ are
+adjacent in $H$ if and only if $\{x, y\} = \{f^-, \pi(f)^+\}$ for some step $f$.
+
+Now we reroute the paths. For $1 \le i \le k$, let $W_i$ be the walk of $H$ that starts at the
+first vertex of $P_i$ and proceeds as follows. When it is at a vertex of the form $f^-$, where $f$
+is a step (and $f$ is unique), it moves to $\pi(f)^+$, and we say that this move \textit{uses} $f$.
+When it is at a vertex that is not of this form, it stops. Every vertex of $W_i$ is a vertex of some
+$P_j$.
+
+\hspace*{12pt}(1) \textit{If the $m_1$th vertex of $W_{i_1}$ equals the $m_2$th vertex of
+$W_{i_2}$, then $i_1 = i_2$ and $m_1 = m_2$.}
+
+We use induction on $m_1$. The first vertex of a path $P_j$ is not $f^+$ for any step $f$,
+since $f^+$ is not the first vertex of the path containing $f$, and the paths are disjoint. Hence if one of $m_1, m_2$ is $0$, then so is the other, and then the first
+vertices of $P_{i_1}$ and $P_{i_2}$ are equal, and so $i_1 = i_2$. If $m_1, m_2 > 0$, then the
+common vertex is $\pi(f_1)^+ = \pi(f_2)^+$, where $f_1^-$ and $f_2^-$ are the preceding vertices of
+$W_{i_1}$ and $W_{i_2}$. Then $\pi(f_1) = \pi(f_2)$, since distinct steps have distinct
+vertices $f^+$, and so $f_1 = f_2$ since $\pi$ is injective. Hence the preceding vertices are equal. By induction $i_1 = i_2$ and $m_1 - 1 = m_2 - 1$. This proves (1).
+
+By (1), distinct moves of $W_1, \dots, W_k$ use distinct steps, since a move from $f^-$ uses $f$.
+Hence the total number of moves is at most $\sum |E(P_i)|$. So each $W_i$ stops, and by (1),
+$W_1, \dots, W_k$ are mutually vertex-disjoint paths of $H$.
+
+\hspace*{12pt}(2) \textit{The last vertex of each $W_i$ is in $X_2$.}
+
+The last vertex $z$ of $W_i$ is a vertex of some $P_j$, and it is not $f^-$ for any step $f$. Every
+vertex of $P_j$ except its last is $f^-$ for the edge $f$ of $P_j$ that leaves it. So $z$ is the
+last vertex of $P_j$, and $z \in X_2$. This proves (2).
+
+Any two vertices adjacent in $H$ are both incident with some edge of $G$, and so they are adjacent
+in $K$. So $W_1, \dots, W_k$ are mutually vertex-disjoint paths of $K$ from $X_1$ to $X_2$, by (2),
+and by the minimality of $\sum |E(P_i)|$ they have at least this many edges in total. Since the
+moves use distinct steps, it follows that every step is used by exactly one move. Hence every edge
+of $H$ is an edge of some $W_i$, since the edge between $f^-$ and $\pi(f)^+$ is the move that uses
+$f$.
+
+\hspace*{12pt}(3) \textit{No vertex of $W_i$ except its first is in $X_1$, and no vertex except its
+last is in $X_2$.}
+
+Let $v$ be a vertex of $W_i$, and let $v \in V(P_j)$. If $v \in X_1$, then $v$ is the first vertex
+of $P_j$, which is the first vertex of $W_j$, and so $v$ is the first vertex of $W_i$, by (1). If
+$v \in X_2$, then $v$ is the last vertex of $P_j$, and so $v$ is not $f^-$ for any step $f$. Thus
+$W_i$ stops at $v$, and $v$ is its last vertex. This proves (3).
+
+Finally, every edge of $H$ is an edge of some $W_j$, and the paths $W_j$ are disjoint. So an edge
+of $H$ with an end in $W_i$ is an edge of $W_i$. Hence $W_1, \dots, W_k$ are components of $H$,
+and every vertex of $G$ in none of them is an isolated vertex of $H$. By (2) and (3), $H$ satisfies
+(iii).\fixnote{fix:6.1-proof-added}{The paper says that the realization satisfies (iii), ``as is
+easily seen (for example by rerouting the paths patch by patch)''. The rerouting above is the
+argument used in the formalization.}}
+
+ This completes the proof. $\square$
+
+\sectionhead{7. \textsc{Patchwork} \textsc{Containment}}
+
+We wish now to introduce our containment relation on patchworks. Before we do so we attempt to motivate it by giving in the same spirit a definition of when a graph is isomorphic to a minor of another; our patchwork relation is not much different. If a graph $G$ is isomorphic to a minor of a graph $G'$, then each edge $e$ of $G$ is represented by an edge $\eta(e)$ of $G'$, and each vertex $v$ of $G$ is ``formed'' by identifying under contraction a nonempty subset $\eta(v)$ of the vertex set of $G'$. Moreover, there is a connected subgraph of $G'$ with vertex set $\eta(v)$ all edges of which are to be contracted in producing this minor. Thus, in summary:
+
+\hspace*{12pt}(i) $\eta$ is a function with domain $V(G) \cup E(G)$; for each $v \in V(G)$, $\eta(v)$ is a non-empty subset of $V(G')$ and for each $e \in E(G)$, $\eta(e) \in E(G')$

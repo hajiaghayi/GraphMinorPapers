@@ -1,0 +1,22 @@
+\origpage{94}{ROBERTSON AND SEYMOUR}
+\stmt
+(1.8) [10]. \textit{If $H$ is any fixed planar graph, there is a polynomial time algorithm to test if an arbitrary graph has a minor isomorphic to $H$.}
+
+(In a later paper we shall show that this is true even for non-planar $H$.) In Section 8 we give a new application of (1.5), generalizing the Erd\"os-P\'osa theorem on the maximum number of disjoint circuits in a graph.
+
+Let us clarify some terminology. It will sometimes be convenient to identify a subset of the vertex set of a graph with the corresponding subgraph with no edges, but this should cause no confusion. Two subgraphs of a graph are \textit{disjoint} if they have no common vertices, and otherwise they \textit{meet}. Subgraphs $G_1, \ldots, G_n$ of a graph are disjoint if every two of them are disjoint. A \textit{path} has at least one vertex, and has no ``repeated'' vertices. Every path has an \textit{initial vertex} and a \textit{terminal vertex}. If $A, B$ are subgraphs of a graph, a \textit{path from $A$ to $B$} has its initial vertex in $V(A)$ and its terminal vertex in $V(B)$. If $A, B, C$ are subgraphs of a graph, $C$ \textit{separates $A$ and $B$} if every path from $A$ to $B$ meets $C$. A \textit{separation} of a graph $G$ is a pair $(V_1, V_2)$, where $V_1, V_2 \subseteq V(G)$, $V_1 \cup V_2 = V(G)$, and no vertex of $V_1 - V_2$ is adjacent to any vertex of $V_2 - V_1$. If $X \subseteq V(G)$, $G \setminus X$ denotes the result of deleting $X$ from $G$, and $G | X$ denotes $G \setminus (V(G) - X)$. We often abbreviate $G \setminus \{v\}$ by $G \setminus v$. A graph $G$ is a \textit{subdivision} of a graph $H$ if $H$ can be obtained from $G$ by (repeatedly) contracting a non-loop edge incident with a vertex of valency 2.
+
+\sectionhead{2. \textsc{The} \textsc{Main} \textsc{Result}}
+
+Let us restate (1.5) to show the dependence of $w$ upon $H$. For any planar graph $H$ there is an even value of $\theta \ge 6$ such that $H$ is isomorphic to a minor of the $\theta$-grid. (This is easy to see, but for a proof see [1, 12].) Denote by $\theta(H)$ the smallest such value of $\theta$.
+
+Now let $\theta \ge 6$ be some even number. For $k \ge 2$, $n \ge 0$, define $\alpha(k, n)$ inductively by
+\begin{align*}
+\alpha(2, n) &= n + 1 \\
+\alpha(k, n) &= 2^{n\theta^4} + \alpha(k - 1, 2^{n\theta^4} + n + 1), \quad \text{for } k \ge 3.
+\end{align*}
+Define $\theta_1 = 2\alpha(\theta^2/2, \theta^2/2)$. Define $\phi_{\theta_1} = \theta^2/2$, and for $0 \le k < \theta_1$ define $\phi_k$ inductively by
+\begin{equation*}
+\phi_k = \phi_{k+1} 2^{\phi_{k+1} \theta^2}.
+\end{equation*}
+Define

@@ -1,0 +1,33 @@
+\origpage{75}{GRAPH MINORS. IX}
+\noindent $A \cup A' \subseteq B''$. But $A'' \subseteq B$, $A'' \subseteq B'$, $A \subseteq B''$ and $A' \subseteq B''$ since $\mathcal{D}$ is a consolidation, and so both inclusions follow. Thus $\mathcal{D}'$ is a consolidation of $(G, \Omega)$. Since $V(A \cap B) \subseteq V(A' \cap B')$ (because $A \subseteq B'$ and $A \cap B \subseteq A'$) we deduce that the cores of $\mathcal{D}$ and $\mathcal{D}'$ have the same vertex sets. Yet $|\mathcal{D}'| < |\mathcal{D}|$ contrary to our choice of $\mathcal{D}$. This proves (1).
+
+Let $C$ be the core of $\mathcal{D}$. By (11.10), $(C, \Omega)$ has no crooked transaction of cardinality $p$, and by (11.9) $(C, \Omega)$ is 4-connected. By (6.1) $(C, \Omega)$ has sophistication at most $3p + 7$. By (11.5) there is a society $(C_1, \Omega_0)$ and a rural neighborhood $(C_2, \Omega, \Omega_0)$ such that
+
+\hspace*{12pt}(i) $C_1, C_2 \subseteq C$, $C_1 \cup C_2 = C$ and $V(C_1 \cap C_2) = \bar{\Omega}_0$
+
+\hspace*{12pt}(ii) $(C_1, \Omega_0)$ has no transaction of cardinality $> 3p + 9$
+
+\hspace*{12pt}(iii) for every triangle $T$ of $C$, either $T \subseteq C_1$ or $T \subseteq C_2$.
+
+Choose $\mathcal{D}_1, \mathcal{D}_2 \subseteq \mathcal{D}$ with $\mathcal{D}_1 \cup \mathcal{D}_2 = \mathcal{D}$ and $\mathcal{D}_1 \cap \mathcal{D}_2 = \emptyset$, so that for $i = 1, 2$ and all $(A, B) \in \mathcal{D}_i$, $V(A \cap B) \subseteq V(C_i)$ and every two distinct members of $V(A \cap B)$ are adjacent in $C_i$. Let $C^*$ be the graph with $V(C^*) = V(C_1 \cap C_2)$ and $E(C^*) = \emptyset$. Let
+\begin{equation*}
+A_0 = C^* \cup \bigcup (A: (A, B) \in \mathcal{D}_1)
+\end{equation*}
+\begin{equation*}
+B_0 = C^* \cup \bigcup (A: (A, B) \in \mathcal{D}_2).
+\end{equation*}
+From (11.8) we see that
+
+\hspace*{12pt}(2) \textit{$(A_0, B_0)$ is a separation of $(G, \Omega)$, and $V(A_0 \cap B_0) = \bar{\Omega}_0$, and $V(B_0 \cap C) = V(C_2)$.}
+
+For each $v \in V(C^*)$ let $X_v$ be the subgraph of $A_0$ with only one vertex $v$ and no edges. Let
+\begin{equation*}
+\mathcal{D}'_1 = \{(A, A_0 \cap B): (A, B) \in \mathcal{D}_1\} \cup \{(X_v, A_0): v \in V(C^*)\}.
+\end{equation*}
+\hspace*{12pt}(3) \textit{$\mathcal{D}'_1$ is a consolidation of $(A_0, \Omega_0)$.}
+
+For if $(A, B) \in \mathcal{D}_1$, then $A \subseteq A_0$ by definition of $A_0$, and
+\begin{equation*}
+\bar{\Omega}_0 = V(C^*) \subseteq V(A_0) \cap V(C) \subseteq V(A_0 \cap B);
+\end{equation*}
+and so $\mathcal{D}'_1$ is a set of separations of $(A_0, \Omega_0)$. We verify conditions (i), ..., (iv) in the definition of a ``consolidation.'' Condition (iii) holds from the definition of $A_0$. Conditions (i) and (iv) hold since $A \cap B = A \cap (A_0 \cap B)$ for $(A, B) \in \mathcal{D}_1$ (because $A \subseteq A_0$). For condition (ii), let $(A', B'), (A'_1, B'_1) \in \mathcal{D}'_1$ be distinct. We shall show that $A' \subseteq B'_1$. If $(A'_1, B'_1) = (X_v, A_0)$ for some $v \in V(C^*)$ then $A' \subseteq B'_1$ since $A' \subseteq A_0$; and so

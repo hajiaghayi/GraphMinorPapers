@@ -1,0 +1,40 @@
+\origpage{549}{N. Robertson, P. Seymour / Journal of Combinatorial Theory, Series B 102 (2012) 530--563}
+For $1 \le i \le t$, let $M_i$ be a drawing in $D(A_i)$ with vertex set $\bar{\pi}(A_i) \cup \bar{\pi}_i$ and with $|\pi_i|$ edges $e_j$ ($1 \le j \le |\pi_i|$), where $e_j$ has ends the $j$th term of $\pi(A_i)$ and the $j$th term of $\pi_i$, and $e_j \cap D_i = \emptyset$. This exists, because $|\bar{\pi}_i| \le 3$ by (J2), and if $|\bar{\pi}_i| = 3$ then the circular orders of $\pi_i$ around $D_i$ and $\pi(A_i)$ around $D(A_i)$ agree (by (J4), and since $\beta$ preserves the orientation of $\Sigma$, because it fixes $\Delta$ pointwise). Let
+\begin{equation*}
+\Gamma_0 = \Gamma \cap \left(\Sigma \setminus \bigcup(D(A_i) \setminus bd(D(A_i)) : 1 \le i \le t)\right);
+\end{equation*}
+then $\Gamma_0$ is a drawing in $\Sigma$. Let $\Gamma_1 = \Gamma_0 \cup M_1 \cup \dots \cup M_t$; this is a drawing in $\Sigma$. Let $\Gamma_2$ be the image of $\Gamma_1$ under $\beta$, and let $\Gamma_3$ be the union of $\Gamma_2$ and $\Gamma \cap ins(F_i)$ for $1 \le i \le t$. Let $R$ be the union of all $z \in A(\Gamma)$ with $d(z, v) \ge \theta'$ for all $v \in V(\Gamma \cap K_1)$. Let
+\begin{equation*}
+\Sigma' = \Sigma \setminus \bigcup(ins(F_i) \setminus F_i : 1 \le i \le t).
+\end{equation*}
+Thus, $\Gamma_2 = \Gamma_3 \cap \Sigma'$.
+
+\hspace*{12pt}(6) \textit{$\Gamma_3$ is a $(\Sigma \setminus \Delta)$-variant of $\Gamma$, and hence an $(R \cap \Sigma')$-variant of $\Gamma$, and $\Gamma \cap ins(F_i) = \Gamma_3 \cap ins(F_i)$ for $1 \le i \le t$.}
+
+\textit{Subproof.} Now $\Gamma_3, \Gamma_2, \Gamma_1, \Gamma_0, \Gamma$ each differ from the next only in $\Sigma \setminus \Delta$, by hypotheses (ii) and (iii), and since $\beta$ fixes $\Delta$ pointwise. Thus $\Gamma_3$ is a $(\Sigma \setminus \Delta)$-variant of $\Gamma$. Since $\Sigma \setminus \Delta \subseteq R$ by (2), it follows that $\Gamma_3$ is an $R$-variant of $\Gamma$. For $1 \le i \le t$, $\Gamma \cap ins(F_i) = \Gamma_3 \cap ins(F_i)$, and the result follows. This proves (6).
+
+\hspace*{12pt}(7) \textit{We may assume that $\Gamma_3 \cap K_1 = \Gamma \cap K_1$.}
+
+\textit{Subproof.} For we may assume that no edge of $G$ is in $\Sigma$ except for the edges of $\Gamma$. Now $\Gamma \cap K_1$ is a subgraph of $\Gamma_3$ by (6) and (2), and so it suffices to show that
+\begin{align*}
+V(\Gamma_3) \cap V(K_1) &\subseteq V(\Gamma), \\
+E(\Gamma_3) \cap E(K_1) &\subseteq E(\Gamma).
+\end{align*}
+The second inclusion is true since $E(\Gamma_3) \cap E(G) \subseteq E(\Gamma)$. For the first inclusion, let $v \in V(\Gamma_3) \cap V(K_1)$. By (2), $v \in \Delta$, and since $\Gamma_3$ is a $(\Sigma \setminus \Delta)$-variant of $\Gamma$, it follows that $v \in V(\Gamma)$ as required. This proves (7).
+
+Let $L_0 = L \cap \Gamma_0$, let $L_1 = L_0 \cup M_1 \cup \dots \cup M_t$, and let $L_2$ be the image of $L_1$ under $\beta$. Then $L_2 \cap K_1 = L \cap K_1$, by (2) and the argument used to prove (6); and $L_2 \cup (L \cap K_1)$ is a subgraph of $\Gamma_2 \cup K_1$. Choose $Y_1 \subseteq V(K_1)$, minimal such that $Y_1 \cap V(\phi(v)) \ne \emptyset$ for every $v \in V(H)$ with
+\begin{equation*}
+V(\phi(v)) \cap (W \cup V(A_1 \cup \dots \cup A_t)) = \emptyset.
+\end{equation*}
+This is possible by (J6), and $|Y_1| \le \delta$ since there are $\le \delta$ such vertices $v \in V(H)$. Let $Y_2$ be the set of all vertices of $G$ incident with an edge $f \in \phi(E(H))$ where $f \in E(\Gamma_0 \cup K_1)$; then $|Y_2| \le 2|E(H)| \le 2\delta$. Let $Z_0 = Y_1 \cup Y_2 \cup W$; then $|Z_0| \le q + 3\delta$, and $Z_0 \subseteq V(K_1)$. Let
+\begin{equation*}
+Z' = Z_0 \cup \bar{\pi}(A_1') \cup \dots \cup \bar{\pi}(A_t').
+\end{equation*}
+Then $Z' \le q + 3\delta + 3\tau = p$, and $Z' \subseteq V(\Gamma \cup K_1)$.
+
+\hspace*{12pt}(8) \textit{There is a subgraph $L_0'$ of $(\Gamma \cap \Sigma') \cup K_1$ with the same effect on $Z'$ as $L_2 \cup (L \cap K_1)$ and with $E(L_0') \cap \phi(E(H)) \subseteq E(A_1 \cup \dots \cup A_t)$.}
+
+\textit{Subproof.} Let us apply 5.3, with
+\begin{equation*}
+p, \theta, \Gamma, K, \Sigma, \mathcal{T}, d, Z, F_1, \dots, F_t, R, \Sigma', \Gamma', L'
+\end{equation*}

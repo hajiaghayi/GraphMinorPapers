@@ -1,0 +1,29 @@
+\origpage{73}{GRAPH MINORS. XIII}
+Thus it remains to show how to construct $H_3$. We initialize by setting $G_1 = H_2$, we let $T_1$ be a tree with two vertices $t, t'$, and we define $\tau_1 \colon E(G_1) \to V(T_1)$ by setting $\tau_1(e) = t$ for some edge $e$ of $G_1$, and $\tau_1(f) = t'$ for all other edges $f$ of $G_1$. We perform a recursion. At the beginning of the $i$ th iteration we have
+
+\hspace*{12pt}(i) a subgraph $G_i$ of $H_2$ such that either $G_i = H_2$ or $G_i$ has branch-width $\ge \omega$
+
+\hspace*{12pt}(ii) a tree $T_i$ each vertex of which has valency 1 or 3
+
+\hspace*{12pt}(iii) a surjection $\tau_i$ from $E(G_i)$ to the set of leaves of $T_i$, such that each edge of $T_i$ has order $\le 3\omega$.
+
+(The order of $f \in E(T_i)$ is defined to be the number of vertices of $G_i$ incident with an edge $e_1$ and an edge $e_2$ such that $\tau_i(e_1)$ and $\tau_i(e_2)$ are in different components of $T_i \setminus f$.)
+
+The iteration proceeds as follows:
+
+\hspace*{12pt}(1) If $\tau_i$ is a bijection, we set $H_3 = G_i$ and stop. $(T_i, \tau_i)$ is a branch-decomposition of $H_3$ of width $\le 3\omega$, and either $H_3 = H_2$ or $H_3$ has branch-width $\ge \omega$, as required.
+
+\hspace*{12pt}(2) If $\tau_i$ is not a bijection we choose a leaf $v$ of $T_i$ such that $v = \tau_i(e)$ for at least two edges $e$ of $G_i$. Let $S, S'$ be the components of $T_i \setminus f$, where $f \in E(T_i)$ is incident with $v$, and $V(S) = \{v\}$. Let $R$ be the subgraph of $G_i$ formed by all edges $e$ with $\tau_i(e) \in V(S)$ and their ends, and define $R'$ similarly. Then $E(R \cap R') = \emptyset$, $E(R \cup R') = E(G_i)$, and $|V(R \cap R')| \le 3\omega$. Let $Z = V(R \cap R')$. Let $T'$ be a tree obtained by adding two new vertices $v_1, v_2$ to $T_i$, both adjacent to $v$.
+
+\hspace*{12pt}(3) If $Z = \emptyset$ we choose an edge $g$ of $R$, and if $0 < |Z| < 3\omega$ we choose $g \in E(R)$ with an end in $Z$. (This is possible since $E(R) \ne \emptyset$ and every vertex in $Z$ is incident with an edge of $R$.) We set $T_{i+1} = T'$, $G_{i+1} = G_i$, and define $\tau_{i+1}$ by
+\begin{align*}
+\tau_{i+1}(e) &= \tau_i(e) && (e \in E(G_i), \tau_i(e) \ne v) \\
+\tau_{i+1}(e) &= v_1 && (e \in E(G_i) - \{g\}, \tau_i(e) = v) \\
+\tau_{i+1}(g) &= v_2.
+\end{align*}
+We return to (1) for the next iteration. It is easy to see that $G_{i+1}$, $T_{i+1}$, $\tau_{i+1}$ satisfy (i), (ii), and (iii). \fix{To see this, (i) holds since $G_{i+1} = G_i$, and (ii) holds since $v$ has valency $3$ in $T'$ and $v_1, v_2$ are leaves. For (iii), $\tau_{i+1}$ is a surjection, since $\tau_{i+1}(g) = v_2$, and $\tau_{i+1}(e) = v_1$ for some $e \ne g$ because at least two edges $e$ of $G_i$ have $\tau_i(e) = v$. Each edge of $T'$ other than $vv_1$ and $vv_2$ divides $E(G_i)$ in the same way as in $T_i$ (for $f$, the side containing $v$ still contains just the edges of $R$), and so it has the same order. The edge $vv_2$ has order at most $2 \le 3\omega$, since only the ends of $g$ can be counted. The edges $e$ with $\tau_{i+1}(e) = v_1$ are the edges of $R$ other than $g$, and so each vertex counted in the order of $vv_1$ is incident with an edge of $R$ and with $g$ or an edge of $R'$, that is, it is in $Z$ or it is an end of $g$. If $Z = \emptyset$, the order of $vv_1$ is therefore at most $2$. If $0 < |Z| < 3\omega$, then $g$ has an end in $Z$, so at most one end of $g$ is outside $Z$, and the order of $vv_1$ is at most $|Z| + 1 \le 3\omega$.}\fixnote{fix:3.3-step3-proof-added}{The paper says only that this is easy to see. The verification above is the one used in the formalization.}
+
+\hspace*{12pt}(4) If $|Z| = 3\omega$ we test if there is a separation $(A, B)$ of $R$ of order $\le \omega$ with
+\begin{equation*}
+|Z - V(A)|, |Z - V(B)| \le \frac{2}{3}|Z| - \frac{1}{2}|Z \cap V(A \cap B)|.
+\end{equation*}

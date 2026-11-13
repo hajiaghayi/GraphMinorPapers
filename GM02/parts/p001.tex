@@ -1,0 +1,32 @@
+\origpage{309}{}
+{\centering
+\medskip
+{\Large Graph Minors. II. Algorithmic Aspects of Tree-Width\par}
+{\textsc{Neil Robertson and P. D. Seymour}$^*$\par}
+{\itshape Ohio State University, Department of Mathematics, 231 West 18th Avenue,\\
+Columbus, Ohio 43210\par}
+{Received January 15, 1983\par}
+}
+
+\begin{quote}
+We introduce an invariant of graphs called the \textit{tree-width}, and use it to obtain a
+polynomially bounded algorithm to test if a graph has a subgraph contractible to $H$,
+where $H$ is any fixed planar graph. We also nonconstructively prove the existence of
+a polynomial algorithm to test if a graph has tree-width $\le w$, for fixed $w$. Neither of
+these is a practical algorithm, as the exponents of the polynomials are large. Both
+algorithms are derived from a polynomial algorithm for the DISJOINT CONNECTING PATHS problem (with the number of paths fixed), for graphs of bounded
+tree-width.
+\end{quote}
+
+\sectionhead{1. \textsc{Introduction}}
+
+All graphs in this paper are finite, and may have loops or multiple edges. $V(G)$ and $E(G)$ denote the sets of vertices and edges of the graph $G$, respectively. Let $G$ be a graph. A \textit{tree-decomposition} of $G$ is a family $(X_i : i \in I)$ of subsets of $V(G)$, together with a tree $T$ with $V(T) = I$, with the following properties.
+
+\hspace*{12pt}(W1) $\bigcup(X_i : i \in I) = V(G)$.
+
+\hspace*{12pt}(W2) \textit{Every edge of} $G$ \textit{has both its ends in some} $X_i$ ($i \in I$).
+
+\hspace*{12pt}(W3) \textit{For} $i, j, k \in I$, \textit{if} $j$ \textit{lies on the path of} $T$ \textit{from} $i$ \textit{to} $k$ \textit{then} $X_i \cap X_k \subseteq X_j$.
+
+The \textit{width} of the tree-decomposition is $\max(|X_i| - 1 : i \in I)$. The \textit{tree-width} of $G$ is the minimum $w \ge 0$ such that $G$ has a tree-decomposition of width $\le w$. (Equivalently, the tree-width of $G$ is the minimum $w \ge 0$ such%
+\origfootnote{Research partially supported by NSF Grant MCS 8103440. Present address: Bell Communications Research, Inc., Morris Research and Engineering Center, 435 South Street, Morristown, New Jersey 07960.}

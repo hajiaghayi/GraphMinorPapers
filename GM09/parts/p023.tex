@@ -1,0 +1,29 @@
+\origpage{62}{ROBERTSON AND SEYMOUR}
+Hence $(X_i: 1 \le i \le n)$ is a linear decomposition of $(G, \Omega)$. We now examine its depth. Suppose that $1 \le i < j \le n$. Now $X_i \cap X_j \subseteq Y_i \cap Z_{j-1} \subseteq Y_i \cap Z_i$ and so
+\begin{equation*}
+|V(X_i \cap X_j)| \le |V(Y_i \cap Z_i)| = k_i \le k.
+\end{equation*}
+Hence the decomposition has depth $\le k$. This completes the proof. $\square$
+
+\sectionhead{9. Removing a Rural Neighborhood}
+
+The result of this section is the following.
+
+\stmt
+(9.1) \textit{If the composition of a society $(G, \Omega)$ with some rural neighborhood has a crooked transaction of cardinality $\ge p$, then so does $(G, \Omega)$.}
+
+\textit{Proof.} Let us choose a rural neighborhood $(G_1, \Omega_1, \Omega)$ so that the following hold.
+
+\hspace*{12pt}(1) \textit{The composition of $(G, \Omega)$ with $(G_1, \Omega_1, \Omega)$ has a crooked transaction $\mathscr{P}$ of cardinality $\ge p$.}
+
+\hspace*{12pt}(2) \textit{Subject to (1), $(G_1, \Omega_1, \Omega)$ and $\mathscr{P}$ are chosen with $|V(G_1)| + |E(G_1)| + |E(\bigcup \mathscr{P})| - \frac{1}{2}|\bar{\Omega}_1|$ minimum.}
+
+We observe
+
+\hspace*{12pt}(3) \textit{Every edge of $G_1$ is an edge of $\bigcup \mathscr{P}$, and every vertex of $G_1$ not in $V(G)$ is a vertex of $\bigcup \mathscr{P}$.}
+
+For we could delete any other edge or vertex, contradicting (2).
+
+\hspace*{12pt}(4) \textit{For any $P \in \mathscr{P}$, at most one internal vertex of $P$ is in $\bar{\Omega}_1$, and the subpaths of $P$ from such a vertex to the ends of $P$ both have an edge in $E(G)$.}
+
+For let $c \in \bar{\Omega}_1$ be an internal vertex of $P$. Let $Q$ be the path with $V(Q) = \{c\}$; then $Q$ is an attachment to $\mathscr{P}$ with leg $P$. If it is exchangeable, there is a crooked transaction $\mathscr{P}'$ of cardinality $\ge p$ such that $\bigcup \mathscr{P}'$ has fewer edges than $\bigcup \mathscr{P}$, contrary to (2). Thus, by (3.2), $P$ is an overpass; and since $Q$ is not exchangeable, neither of the subpaths of $P$ from $c$ to the ends of $P$ cross every other member of $\mathscr{P}$, and so both cross at least one. Hence neither of these paths is separating, and so neither is a subgraph of $G_1$, and so both have an edge in $E(G)$. Finally, if more than one internal vertex of $P$ is in $\bar{\Omega}_1$, then by (3.3) there is a crooked transaction $\mathscr{P}'$ with $|\mathscr{P}'| \ge p+1$ such that $\bigcup \mathscr{P}'$ has fewer edges than $\bigcup \mathscr{P}$, contrary to (2). This proves (4).

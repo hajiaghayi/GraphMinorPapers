@@ -1,0 +1,31 @@
+\origpage{202}{ROBERTSON AND SEYMOUR}
+\stmt
+(13.1) \textit{For any graph $H$ there are numbers $p$, $q$, $z$ and $\theta > z$, such that for every \del{hypergraph} \fix{graph} $G$ and every tangle $\mathcal{T}$ in $G$ of order $\ge \theta$, either}
+
+\hspace*{12pt}(i) \textit{$\mathcal{T}$ controls an $H$-minor of $G^*$, or}
+
+\hspace*{12pt}(ii) \textit{there exists $Z \subseteq V(G)$ with $|Z| \le z$ and a $\mathcal{T} \setminus Z$-central portrayal $\pi = (\Sigma, \Gamma, \alpha, \beta, \gamma)$ of $G \setminus Z$ with warp $\le p$, such that $\Sigma$ has $\le q$ cuffs and $H$ cannot be drawn in $\Sigma$.}
+
+\textit{Proof.} From Theorem (3.1) of [2]\fix{, applied to the graph obtained from $H$ by subdividing every edge twice (which is simple)},\fixnote{fix:13.1}{Two gaps. First, (13.1) speaks of $G \setminus Z$ and $\mathcal{T} \setminus Z$, which page 201 defines only for graphs, and its proof and its use in (13.4) are for graphs. The form for hypergraphs is (14.2). Second, (i) asks for an $H$-minor of the simple graph $G^*$, while [2, (3.1)] gives an $H$-minor of $G$, and these differ if $H$ has loops or parallel edges. For example, if $H$ is one vertex with a loop and $G = H$, then $G^*$ has no edges. The graph $H'$ obtained from $H$ by subdividing every edge twice is simple, so an $H'$-minor of $G$ gives an $H'$-minor of $G^*$, and so an $H$-minor of $G^*$. Moreover, $H'$ can be drawn in the same surfaces as $H$.} there are integers $p_0$, $q$, $z$, $\theta_0$ such that for every graph $G$ and every tangle $\mathcal{T}$ in $G$ of order $\ge \theta_0$, either $\mathcal{T}$ controls an $H$-minor of $G$, or there exists $Z \subseteq V(G)$ with $|Z| \le z$, and a non-null connected surface $\Sigma_0$ with $bd(\Sigma_0) = \emptyset$ in which $H$ cannot be drawn, and a painting $\Gamma_0$ in $\Sigma_0$, and an injection $\gamma \colon N(\Gamma_0) \to V(G) - Z$, and a function $\delta$ assigning to each $c \in C(\Gamma_0)$ a subgraph $\delta(c)$ of $G$, with the following properties:
+
+\hspace*{12pt}(a) $G \setminus Z$ is the union of all the subgraphs $\delta(c)$, and $E(\delta(c) \cap \delta(c')) = \emptyset$ for all distinct $c, c' \in C(\Gamma_0)$;
+
+\hspace*{12pt}(b) for each cell $c$ and node $n$, $n \in \tilde{c}$ if and only if $\gamma(n) \in V(\delta(c))$;
+
+\hspace*{12pt}(c) for distinct cells $c$, $c'$, $V(\delta(c) \cap \delta(c')) = \{\gamma(n) \colon n \in \tilde{c} \cap \tilde{c}'\}$;
+
+\hspace*{12pt}(d) there are at most $q$ cells $c$ with $|\tilde{c}| \ge 4$ (so-called \textit{major cells}), and $\bar{c} \cap \bar{c}' = \emptyset$ for all distinct major cells $c$, $c'$;
+
+\hspace*{12pt}(e) for each major cell $c$ there is a function $\kappa$ which assigns to every node $n \in \tilde{c}$ a subgraph $\kappa(n)$ of $\delta(c)$, such that
+
+\hspace*{12pt}(i) $\delta(c)$ is the union of all the $\kappa(n)$'s for $n \in \tilde{c}$, and $\gamma(n) \in V(\kappa(n))$ for each $n$, and $E(\kappa(n) \cap \kappa(n')) = \emptyset$ for all distinct $n, n' \in \tilde{c}$
+
+\hspace*{12pt}(ii) for distinct nodes $n_1$, $n_2$, $n_3$, $n_4 \in \tilde{c}$ in order, $V(\kappa(n_1) \cap \kappa(n_3)) \subseteq V(\kappa(n_2) \cup \kappa(n_4))$ (actually, what is proved in [2, Theorem (3.1)] is somewhat stronger, but this corollary is all we need here)
+
+\hspace*{12pt}(iii) for distinct nodes $n, n' \in \tilde{c}$, $|V(\kappa(n) \cap \kappa(n'))| \le p_0$.
+
+\hspace*{12pt}(f) for each cell $c \in C(\Gamma)$, there is no $(A, B) \in \mathcal{T} \setminus Z$ with $B \subseteq \delta(c)$.
+
+Let $p = p_0 + 1$ and $\theta = \max(\theta_0, 2p_0 + z + 4)$; we shall show that $p$, $q$, $z$, $\theta$ satisfy the theorem. For let $G$, $\mathcal{T}$ in the theorem fail to satisfy condition (13.1)(i); then from our choice of $p_0$, $q$, $z$, $\theta_0$, there exists $Z$, $\Sigma_0$, $\gamma$, $\delta$, $\kappa$ as in (a), ..., (f) above.
+
+Let $\Sigma$ be the surface obtained from $\Sigma_0$ by deleting the interior of every major cell. (By (d), this is indeed a surface.) Then $H$ cannot be drawn in $\Sigma$. We shall show that there is a $\mathcal{T} \setminus Z$-central portrayal $\pi = (\Sigma, \Gamma, \alpha, \beta, \gamma)$ of $G \setminus Z$ in $\Sigma$ with warp $\le p$. For each cuff $\Theta$ and each component $s$ of

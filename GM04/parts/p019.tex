@@ -1,0 +1,39 @@
+\origpage{245}{GRAPH MINORS IV}
+\textit{Then $\eta''$ is an expansion of $P$ in $P''$, and if $\eta$ and $\eta'$ are realizable then so is $\eta''$. In particular, the simulation relation provides a quasi-order of the class of all $\Omega$-patchworks.}
+
+\textit{Proof.} To verify that $\eta''$ is an expansion of $P$ in $P''$ we check conditions (i), ..., (ix). Conditions (i), (iii), (iv), and (ix) are clear.
+
+\hspace*{12pt}(1) \textit{For distinct $v_1, v_2 \in V(G)$, $\eta''(v_1) \cap \eta''(v_2) = \emptyset$:}
+
+For
+\begin{align*}
+\eta''(v_1) \cap \eta''(v_2) &= \bigcup (\eta'(v_1') \colon v_1' \in \eta(v_1)) \cap \bigcup (\eta'(v_2') \colon v_2' \in \eta(v_2)) \\
+&= \bigcup (\eta'(v_1') \cap \eta'(v_2') \colon v_1' \in \eta(v_1) \text{ and } v_2' \in \eta(v_2)) \\
+&= \emptyset
+\end{align*}
+since $v_1' \neq v_2'$ for $v_1' \in \eta(v_1)$ and $v_2' \in \eta(v_2)$, and hence $\eta'(v_1') \cap \eta'(v_2') = \emptyset$.
+
+\hspace*{12pt}(2) \textit{For each $e \in E(G) - \operatorname{dom}(\mu)$, if $v$ is an end of $e$ in $G$ then $\eta''(v)$ contains an end of $\eta''(e)$ in $G''$.}
+
+For $\eta(v)$ contains an end $v'$ of $\eta(e)$, and $\eta(e) \in E(G') - \operatorname{dom}(\mu')$, and so $\eta'(v') \subseteq \eta''(v)$ contains an end of $\eta'(\eta(e)) = \eta''(e)$.
+
+\hspace*{12pt}(3) \textit{For each $e \in \operatorname{dom}(\mu)$, $\mu(e)$ and $\mu''(\eta''(e))$ have the same length, $k$, say, and for $1 \le i \le k$, $\eta''(v)$ contains the $i$th term of $\mu''(\eta''(e))$ where $v$ is the $i$th term of $\mu(e)$.}
+
+For $\mu(e)$ and $\mu'(\eta(e))$ have the same length, $k$, say, and $\eta(e) \in \operatorname{dom}(\mu')$, and so $\mu''(\eta'(\eta(e)))$ also has length $k$. For $1 \le i \le k$, let $v, v', v''$ be the $i$th terms of $\mu(e)$, $\mu'(\eta(e))$, and $\mu''(\eta''(e))$; then $v' \in \eta(v)$ and $v'' \in \eta'(v')$, and so $v'' \in \eta''(v)$.
+
+\hspace*{12pt}(4) \textit{$\pi(G)$ and $\pi(G'')$ have the same length, $k$, say, and for $1 \le i \le k$ $\eta''(v)$ contains the $i$th term of $\pi(G'')$ where $v$ is the $i$th term of $\pi(G)$.}
+
+The proof is similar to (3).
+
+\hspace*{12pt}(5) \textit{For each $e \in \operatorname{dom}(\mu)$, $\mu(e) \to \mu''(\eta''(e))$ maps $\Delta(e)$ to $\Delta''(\eta''(e))$.}
+
+For $\mu(e) \to \mu''(\eta''(e))$ is the composition of $\mu(e) \to \mu'(\eta(e))$ and $\mu'(\eta(e)) \to \mu''(\eta''(e))$.
+
+From (1), ..., (5) we deduce that $\eta''$ is an expansion of $P$ in $P''$. Now suppose that $\eta$, $\eta'$ are realized by $H$, $H'$, respectively. For each $e \in E(G') - \eta(E(G))$ choose $\delta_e \in \Delta'(e)$ such that
+\begin{equation*}
+H = N_{V(G')} \cup \bigcup (\delta_e \colon e \in E(G') - \eta(E(G)))
+\end{equation*}
+and for each $e \in E(G'') - \eta'(E(G'))$ choose $\delta_e' \in \Delta''(e)$ such that
+\begin{equation*}
+H' = N_{V(G'')} \cup \bigcup (\delta_e' \colon e \in E(G'') - \eta'(E(G'))).
+\end{equation*}

@@ -1,0 +1,36 @@
+\origpage{132}{ROBERTSON AND SEYMOUR}
+But $L_{G'}(f) = L_G(f)$, and
+\begin{align*}
+\phi_{G'}(f') - \phi_G(f) &= \theta(f') - \theta(f) + k^{-1}(L_{G'}(f') - L_G(f)) \\
+&= \theta(f'') + k^{-1}(L_{G'}(f'') - l)
+\end{align*}
+and so it suffices to show that $L_{G'}(f'') \ge l - k\theta(f'')$. Now
+\begin{align*}
+L_G(f'') &= |\{x \in [0, z_1) : f'(x) \in V(G')\}| \\
+&\quad + |\{x \in [z_1, z_2) : f'(x) \in V(G')\}| \\
+&\quad + |\{x \in [0, \frac{1}{2}] : f(x) \in V(G')\}|.
+\end{align*}
+But $f'(z_1)$ is incident with $R'$, and in particular is contained in $\bar{\Sigma}_{i-1}$; thus,
+\begin{equation*}
+|\{x \in [0, z_1) : f'(x) \in V(G')\}| \ge -k\theta(f'').
+\end{equation*}
+Second,
+\begin{equation*}
+|\{x \in [z_1, z_2) : f'(x) \in V(G')\}| \ge 1
+\end{equation*}
+since $f'(z_1) \in V(G')$. And third,
+\begin{align*}
+|\{x \in [0, \frac{1}{2}] : f(x) \in V(G')\}| &= 1 && \text{if } f'(z_2) \notin V(G') - \{s_i\} \\
+&= 2 && \text{if } f'(z_2) \in V(G') - \{s_i\}
+\end{align*}
+and so in either case is at least $l - 1$. Adding, the result follows. Now we can prove the characterization.
+
+\textit{Proof of} (5.3). We proceed by induction on $|V(G)| + |E(G)|$. If reduction 1, 2 or 3 applies to $(G, \mathscr{L})$ then the result follows from our inductive hypothesis and (5.4), (5.5). If reduction 4 applies and results in $(G', \mathscr{L}')$ say, then as we observed before one of reductions 1, 2 or 3 applies to $(G', \mathscr{L}')$ and hence the theorem is true for $(G', \mathscr{L}')$; and again by (5.4), (5.5) it is true for $(G, \mathscr{L})$. If none of reductions 1,..., 4 applies, then by (5.1) some $s_i$ has valency 1 and its neighbor $t$ say is in $C_2$, since $\theta(\mathscr{L}) + 1/k$ is not feasible. Let $e$ be the edge incident with $s_i$; then $P_i$ consists solely of the edge $e$. Let $g \colon [0, 1] \to \Sigma$ be continuous, with
+\begin{align*}
+g(0) &= \left( 1, \frac{2i+1}{k} \pi \right), \qquad g(1) = t, \\
+g(x) &\in R_i \qquad (0 \le x < 1).
+\end{align*}
+Now
+\begin{equation*}
+t = \left( 2, \left( \frac{2i}{k} + 2\theta(\mathscr{L}) \right) \pi \right).
+\end{equation*}

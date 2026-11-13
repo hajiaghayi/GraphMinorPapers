@@ -1,0 +1,29 @@
+\origpage{335}{N. Robertson, P.D. Seymour / Journal of Combinatorial Theory, Series B 92 (2004) 325--357}
+Let $Q'_i = (G'_i, \mu'_i, \Delta'_i, \phi'_i)\ (i = 1, 2)$, such that $\gamma(Q'_2) = Q'_1$, and let $\eta$ be a realizable expansion of $Q_1$ in $Q'_1$. We shall show that there is a realizable expansion of $Q_2$ in $Q'_2$. Define $\eta_2$ by
+\begin{align*}
+\eta_2(v) &= \eta(v) \cap V(G'_2)\ (v \in V(G_2)), \\
+\eta_2(e) &= \eta(e)\ (e \in E(G_2)).
+\end{align*}
+\hspace*{12pt}(1) \textit{For each $e \in E(G_2)$, $\eta_2(e) \in E(G'_2)$ and $\phi_2(e) \le \phi'_2(\eta_2(e))$.}
+
+\textit{Subproof:} Certainly $\phi_1(e) \le \phi'_1(\eta(e))$ and so $\phi'_1(\eta(e)) \ne *$, since $\phi_1(e) \ne *$; hence $\eta(e) \in E(G'_2)$ and the claim follows.
+
+\hspace*{12pt}(2) \textit{For each $v \in V(G_2)$, $\eta_2(v) \ne \emptyset$.}
+
+\textit{Subproof:} If $v \in \bar{\pi}(G_1)$ and $v$ is the $i\text{th}$ term of $\pi(G_1)$ say, then $\eta(v)$ contains the $i\text{th}$ term of $\pi(G'_1)$, which belongs to $V(G'_2)$ since $\pi(G'_1) = \pi(G'_2)$. Thus we may assume that $v \notin \bar{\pi}(G_1)$. Since $G_1$ is active, there is an edge $e \in E(G_1)$ incident with $v$, and then $e \in E(G_2)$ since $v \notin \bar{\pi}(G_2)$ and $G_2$ is complemented in $G_1$. Then $\eta(e)$ is incident with a vertex of $\eta(v)$; but every end of $\eta(e)$ is in $V(G'_2)$ by (1), and so $\eta_2(v) \ne \emptyset$. This proves (2).
+
+From (1) and (2) it is easy to verify that $\eta_2$ is an expansion of $Q_2$ in $Q'_2$. Now let $H_1$ be a realization of $Q'_1 \setminus \eta(E(G_1))$ realizing $\eta$. Let $G'_3 = G'_1 \setminus G'_2$. Then $H_1 = H_2 \cup H_3$ where $H_i$ is a realization of $(Q'_1 \setminus \eta(E(G_1)))|(G'_i \setminus (E(G'_i) \cap \eta(E(G_1))))\ (i = 2, 3)$. Now for $e \in E(G_1)$
+\begin{equation*}
+e \notin E(G_2) \Leftrightarrow \phi_1(e) = * \Leftrightarrow \phi'_1(\eta(e)) = * \Leftrightarrow \eta(e) \notin E(G'_2)
+\end{equation*}
+and so $\eta(E(G_1)) \cap E(G'_2) = \eta(E(G_2))$. Hence
+\begin{equation*}
+(Q'_1 \setminus \eta(E(G_1)))|(G'_2 \setminus (E(G'_2) \cap \eta(E(G_1)))) = Q'_2 \setminus \eta(E(G_2))
+\end{equation*}
+and so $H_2$ is a realization of $Q'_2 \setminus \eta(E(G_2))$. We claim that $H_2$ realizes $\eta_2$. For let $v \in V(G_2)$. We must show that $\eta_2(v)$ is the vertex set of a component of $H_2$. Let $C_1$ be a component of $H_1$ with $V(C_1) = \eta(v)$. Then $V(C_1)$ contains at most one vertex of $\bar{\pi}(G'_2)$, since $\pi(G'_2) = \pi(G'_1)$ and $\eta$ is an expansion of $Q_1$ in $Q'_1$. Choose $C_2 \subseteq H_2$, $C_3 \subseteq H_3$ such that $C_1 = C_2 \cup C_3$, with $V(C_i) = V(C_1) \cap V(H_i)\ (i = 2, 3)$. Since $C_3$ contains at most one vertex of $\bar{\pi}(G'_2)$ and $G'_3$ is a complement of $G'_2$, it follows that $|V(C_2 \cap C_3)| \le 1$ and hence $C_2$ is connected, and is therefore a component of $H_2$, since
+\begin{equation*}
+V(C_2) = V(C_1) \cap V(H_2) = \eta_2(v) \ne \emptyset.
+\end{equation*}
+This proves that $H_2$ realizes $\eta_2$, and completes the proof of the theorem. $\square$
+
+\textbf{4.12.} \textit{Let $\mathcal{F}_1$ be a well-behaved set of active patchworks, let $k \ge 0$, and let $\mathcal{F}_2$ be a set of patchworks such that for each $P_2 = (G_2, \mu_2, \Delta_2) \in \mathcal{F}_2$ there exists $f \in dom(\mu_2)$ with}

@@ -1,0 +1,24 @@
+\origpage{88}{N. Robertson, P. Seymour / Journal of Combinatorial Theory, Series B 89 (2003) 77--108}
+\noindent since $(B, A)$ is the $(\mathscr{T}_j, \mathscr{T}_i)$-distinction and $\mathscr{L}_j$ $\theta$-isolates $\mathscr{T}_j$. Since $\mathscr{L}_j \subseteq \mathscr{T}$ it follows that $(C, D) \in \mathscr{T}$, and hence $(B, A) \in \mathscr{T}$ since $(B, A)$ has order $<\theta$ and $D \subseteq A$. Let $t_{j'}$ be the second vertex of the path of $T$ from $t_i$ to $t_j$, and let $(A', B')$ be the $(\mathscr{T}_i, \mathscr{T}_{j'})$-distinction; then, since one of the edges of this path makes the separation $(A, B)$ under $(T, \tau)$ (by 2.6.2), it follows that $A \subseteq A'$ and $B' \subseteq B$. Hence $(B', A') \in \mathscr{T}$, since $(B, A) \in \mathscr{T}$. Choose $g$ with $1 \le g \le k$ such that $(A', B') \in \mathscr{L}_g^*$. Then $A' \subseteq C_g$ since $\mathscr{L}_g^* \cup \{(D_g, C_g)\}$ is a location, and so $(C_g, D_g) \notin \mathscr{T}$ by (T2), since $(B', A') \in \mathscr{T}$ and $B' \cup C_g = G$. But $(C_g, D_g)$ has order $<\theta$, and so $(D_g, C_g) \in \mathscr{T}$ by (T1). Now $(D_h, C_h) \in \mathscr{T}$ by our assumption, and so $D_g \cup D_h \ne G$ by (T2), and hence $g = h$ since $\mathscr{L}_i$ is a location. But $(A', B') \notin \mathscr{T}$ and
+\begin{equation*}
+(A', B') \in \mathscr{L}_g^* = \mathscr{L}_h^* \subseteq \mathscr{T},
+\end{equation*}
+a contradiction. Thus there is no such $\mathscr{T}$. This proves (3).
+
+Let $\mathscr{L}' = \{(A, B \cap C_h) \colon (A, B) \in \mathscr{L}_h^*\}$. Then $\mathscr{L}'$ is a location in $C_h$, of order $<\theta$.
+
+\hspace*{12pt}(4) \textit{There is no tangle in $C_h$ of order $\theta$ including $\mathscr{L}'$.}
+
+\textbf{Subproof.} Suppose that $\mathscr{T}'$ is such a tangle. Let $\mathscr{T}$ be the set of all separations $(A, B)$ of $G$ of order $<\theta$ such that $(A \cap C_h, B \cap C_h) \in \mathscr{T}'$. By 2.1, $\mathscr{T}$ is a tangle in $G$, of order $\theta$. Since $(D_h, C_h)$ has order $<\theta$ and $(D_h \cap C_h, C_h \cap C_h) \in \mathscr{T}'$ by (T1) and (T3), it follows that $(D_h, C_h) \in \mathscr{T}$. Similarly, if $(A, B) \in \mathscr{L}_h^*$, then $(A, B)$ has order $<\theta$, and $(A \cap C_h, B \cap C_h) = (A, B \cap C_h) \in \mathscr{L}' \subseteq \mathscr{T}'$, and so $(A, B) \in \mathscr{T}$. Hence, $\mathscr{L}_h^* \cup \{(D_h, C_h)\} \subseteq \mathscr{T}$, contrary to (3). This proves (4).
+
+Now every member of $\mathscr{L}'$ is titanic by (2) and 3.1, and so from (4) and 3.4, $\mathscr{L}'$ has tree-width $\le \frac{3}{2}\theta$. Let $\mathscr{L} = \mathscr{L}_h^* \cup \{(D_h, C_h)\}$. The heart of $\mathscr{L}$ may be obtained from the heart of $\mathscr{L}'$ (taking the latter to be $C_h$ if $\mathscr{L}' = \emptyset$) by adding one new edge whose set of ends is $V(C_h \cap D_h)$, and since $|V(C_h \cap D_h)| \le \frac{3}{4}\theta$, we deduce that $\mathscr{L}$ has tree-width $\le \frac{3}{2}\theta + \frac{3}{4}\theta = \frac{9}{4}\theta$. This proves 4.3. $\square$
+
+Now we deduce the main result of this section, by combining 2.7, 4.2 and 4.3.
+
+4.4. \textit{Let $\lambda$ be a tie-breaker in a hypergraph $G$, and let $\theta \ge 1$ be an integer. For each tangle $\mathscr{T}$ in $G$ of order $\ge \theta$ let $\mathscr{L}(\mathscr{T}) \subseteq \mathscr{T}$ be a location which $\theta$-isolates $\mathscr{T}$, and let $G$ have a tangle of order $\ge \frac{4}{3}\theta$. Then there is a tree-decomposition $(T, \tau)$ of $G$ with the following properties:}
+
+\hspace*{12pt}$\bullet$ \textit{$(T, \tau)$ is proper and rotund,}
+
+\hspace*{12pt}$\bullet$ \textit{for each $e \in E(T)$, the separations made by $e$ under $(T, \tau)$ are robust,}
+
+\hspace*{12pt}$\bullet$ \textit{for each $t \in V(T)$, let $\mathscr{L}$ be the location of $t$ in $(T, \tau)$; then there is a tangle $\mathscr{T}$ in $G$ of order $\ge \frac{4}{3}\theta$ with $\mathscr{L} \subseteq \mathscr{T}$, such that $\mathscr{L}$ is an enlargement of $\mathscr{L}(\mathscr{T})$ by tree-width $\le 3\theta + 1$.}

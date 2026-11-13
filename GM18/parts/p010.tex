@@ -1,0 +1,22 @@
+\origpage{86}{N. Robertson, P. Seymour / Journal of Combinatorial Theory, Series B 89 (2003) 77--108}
+\textbf{Subproof.} Let $e$ have ends $t_i, t_j$. By 2.6.2, one of $(A, B), (B, A)$ is the $(\mathscr{T}_i, \mathscr{T}_j)$-distinction, and the other is the $(\mathscr{T}_j, \mathscr{T}_i)$-distinction. Consequently, one of $(A, B), (B, A)$ does not belong to $\mathscr{T}_i$ and the other does not belong to $\mathscr{T}_j$. But by 2.6.1, one of $(A', B'), (B', A')$ belongs to both $\mathscr{T}_i$ and $\mathscr{T}_j$. This proves (1).
+
+For $1 \le h \le n$ let $T_h$ be the restriction of $T$ to $\{t_i \colon 1 \le i \le n,\; \mathscr{L}_h \subseteq \mathscr{T}_i\}$. For the moment, let us fix $h$ with $1 \le h \le n$. Let $S_h$ be the component of $T_h$ containing $t_h$.
+
+\hspace*{12pt}(2) \textit{Let $t_i \in V(S_h)$ be adjacent in $T$ to $t_j \in V(T) \setminus V(S_h)$, and let $(A, B)$ be the $(\mathscr{T}_h, \mathscr{T}_j)$-distinction; then $(A, B) \in \mathscr{T}_k$ for every $t_k \in V(T_h)$, and $(A, B)$ is the $(\mathscr{T}_i, \mathscr{T}_j)$-distinction.}
+
+\textbf{Subproof.} Since $t_j \notin V(S_h)$ it follows that $t_j \notin V(T_h)$ and so $\mathscr{L}_h \nsubseteq \mathscr{T}_j$. Choose $(C, D) \in \mathscr{L}_h$ with $(C, D) \notin \mathscr{T}_j$. Then $(C, D)$ has order $<\theta$ since $(C, D) \in \mathscr{L}_h$, and so $(D, C) \in \mathscr{T}_j$ by (T1). Since $\mathscr{L}_h$ $\theta$-isolates $\mathscr{T}_h$ it follows that $A \subseteq C$ and $D \subseteq B$. For each $t_k \in V(T_h)$, $(C, D) \in \mathscr{L}_h \subseteq \mathscr{T}_k$, and so $(B, A) \notin \mathscr{T}_k$ by (T2) since $B \cup C = G$; and hence $(A, B) \in \mathscr{T}_k$ by (T1) since $\mathscr{T}_k$ has order $\theta$. In particular, $(A, B) \in \mathscr{T}_i$, and therefore has $\lambda$-order at least that of the $(\mathscr{T}_i, \mathscr{T}_j)$-distinction $(A', B')$. On the other hand, $(A', B')$ distinguishes $\mathscr{T}_h$ from $\mathscr{T}_j$ (by 2.6.1, since $t_i$ lies on the path of $T$ between $t_h$ and $t_j$) and therefore has $\lambda$-order at least that of $(A, B)$. Hence equality occurs, and $(A, B) = (A', B')$ by the first tie-breaker axiom. This proves (2).
+
+\hspace*{12pt}(3) \textit{$T_h$ is a tree.}
+
+\textbf{Subproof.} Let $t_k \notin V(S_h)$, and let $P$ be the path of $T$ from $t_h$ to $t_k$. Let $t_i$ be the last vertex of $P$ in $V(S_h)$ and $t_j$ the next vertex of $P$, and define $(A, B)$ as in (2). Then $(A, B) \notin \mathscr{T}_k$ by 2.6.1 and 2.6.2, since $(A, B)$ is the $(\mathscr{T}_i, \mathscr{T}_j)$-distinction; and so $t_k \notin V(T_h)$ by (2). Hence $S_h = T_h$ and $T_h$ is a tree. This proves (3).
+
+For each $e \in E(T)$ with ends $t_i, t_j$ say, let $\mu(e)$ be the $\lambda$-order of the $(\mathscr{T}_i, \mathscr{T}_j)$-distinction. By (1), $\mu(e) \ne \mu(e')$ for all distinct $e, e' \in E(T)$.
+
+\hspace*{12pt}(4) \textit{If $e \in E(T)$ has one end in $V(T_h)$ and the other in $V(T) \setminus V(T_h)$, and $f$ is an edge of the path of $T$ with first vertex $t$ and last edge $e$, then $\mu(e) < \mu(f)$ unless $e = f$.}
+
+\textbf{Subproof.} Let $e$ have ends $t_i \in V(T_h)$ and $t_j \in V(T) \setminus V(T_h)$, and let $(A, B)$ be the $(\mathscr{T}_i, \mathscr{T}_j)$-distinction. By (2) and (3), $(A, B)$ is the $(\mathscr{T}_h, \mathscr{T}_j)$-distinction, and so its $\lambda$-order is at most the $\lambda$-order of the separation made by $f$, with strict inequality unless $e = f$ by (1). This proves (4).
+
+In view of (3), (4) and 4.1, this proves 4.2. $\square$
+
+Let $\mathscr{L}, \mathscr{L}^*$ be locations in a hypergraph $G$, and let $\mathscr{L} = \{(C_1, D_1), \dots, (C_k, D_k)\}$. We say that $\mathscr{L}^*$ is an \textit{enlargement} of $\mathscr{L}$ if there exist $\mathscr{L}_1, \dots, \mathscr{L}_k \subseteq \mathscr{L}^*$, mutually disjoint (possibly empty) and with union $\mathscr{L}^*$, such that for $1 \le h \le k$, every

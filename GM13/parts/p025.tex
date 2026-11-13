@@ -1,0 +1,22 @@
+\origpage{89}{GRAPH MINORS. XIII}
+\noindent the set of corners, but for convenience we speak of a wall as a graph and leave the corners implicit. The \textit{perimeter} of a wall is defined as before.
+
+Now since every vertex of an elementary wall $H$ of height $h$ has valency $\le 3$, if a graph has a minor isomorphic to $H$ then it has a wall of height $h$ as a subgraph (and algorithmically, it is easy to see how to construct the wall in time $O(\varepsilon)$, given a model of $H$). \fix{To see both statements, let $\phi$ be a model of $H$ in the graph. Let $u \in V(H)$, and let $t_1, \dots, t_k$ be the ends in $V(\phi(u))$ of the edges $\phi(e)$, one for each edge $e$ of $H$ incident with $u$. Thus $k \le 3$, and $t_1, \dots, t_k$ need not be distinct. Take a breadth-first search tree of $\phi(u)$ from $t_1$, and let $Q_2, Q_3$ be the paths of this tree from $t_2, t_3$ to $t_1$ (if $k = 2$, let $t_3 = t_1$, so that $Q_3$ is the one-vertex path $t_1$). Let $b_u$ be the first vertex of $Q_3$ that belongs to $Q_2$. Since both paths run to the root of the tree, $Q_3$ follows $Q_2$ from $b_u$ on, and so $\phi(u)$ contains three paths from $b_u$ to $t_1, t_2, t_3$, mutually disjoint except for $b_u$. For each edge $e = uw$ of $H$, the path from $b_u$ to the end of $\phi(e)$ in $\phi(u)$, the edge $\phi(e)$, and the path from the end of $\phi(e)$ in $\phi(w)$ to $b_w$ form a path $P_e$ between $b_u$ and $b_w$. Since the graphs $\phi(u)$ are mutually disjoint, the paths $P_e$ ($e \in E(H)$) are mutually disjoint except for their ends, and so their union is a subdivision of $H$, that is, a wall of height $h$ whose corners are the vertices $b_u$ for the corners $u$ of $H$. Each search takes time linear in $|V(\phi(u))| + |E(\phi(u))|$, and the graphs $\phi(u)$ are disjoint, so the wall is found in time $O(\varepsilon)$.}\fixnote{fix:7-wall-proof-added}{The paper says only that this is easy to see. The construction above, by breadth-first search in each branch set, is the one used in the formalization.}
+
+\stmt
+(7.1) \textit{For $h \ge 2$, even, if every graph with branch-width $\ge \omega/3$ has a minor isomorphic to the elementary wall of height $h$, then there is an algorithm as in (7.2), with running time $O(v^2 + \varepsilon)$.}
+
+\stmt
+(7.2) \textsc{Algorithm}.
+
+\textit{Input:} A graph $G$.
+
+\textit{Output:} Either a branch-decomposition of $G$ of width $\le \omega$, or a wall of height $h$ which is a subgraph of $G$.
+
+\textit{Description:} Given input $G$, we apply (4.4) to $G$ to determine if there is a model of the elementary wall of height $H$ in $G$ and to find one if one exists. If we find one, we construct from it a wall of height $h$ and stop. If there is none, then $G$ has branch-width $< \omega/3$. We apply (3.3) to $G$ and obtain a subgraph $G'$ of $G$ and a branch-decomposition of $G'$ of width $\le \omega$, such that either $G' = G$ or $G'$ has branch-width $\ge \omega/3$. Thus $G' = G$, and we have a branch-decomposition of $G$ of width $\le \omega$. We stop.
+
+This algorithm involves one application of (4.4) and one of (3.3); thus, it has running time $O(v^2 + \varepsilon)$. $\square$
+
+If $H$ is a wall, drawn in the plane as in Fig. 1, its \textit{distance function} $d$ is defined as follows. For $s, t$ in the plane, $d(s, t) = 0$ if $s = t$, and otherwise
+
+\origfig{figures/fig2}{294bp}{\textsc{Fig}. 2. A hole in a wall.}

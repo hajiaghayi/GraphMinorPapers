@@ -1,0 +1,20 @@
+\origpage{234}{ROBERTSON AND SEYMOUR}
+\noindent $2k + (2kv - 1) < \alpha(G)$. Hence $\mathscr{A}_{2kv - 1}(C) \cap \mathrm{bd}(\Sigma) \subseteq C$. But $\mathscr{A}_{2kv - 1}(C)$ is planar in $\Sigma + \hat{C}$, by (5.7), and so there exists a closed disc $\Delta(C) \subseteq \Sigma + \hat{C}$, with $\mathscr{A}_{2kv - 1}(C) \subseteq \Delta(C)$ and $\Delta(C) \cap \mathrm{bd}(\Sigma) = C$. Let $A(C)$ be a $G$-normal $O$-arc surrounding $C$ with $|V(G) \cap A(C)| \le vk(C)$, chosen in addition so that as many vertices of $G$ as possible are inside $A(C)$. Let $Z$ be the set of all points of $\Sigma$ inside $A(C)$. Then $A(C) \subseteq \mathscr{A}_{2kv - 1}(C)$, since $A(C)$ surrounds $C$, and so $A(C) \subseteq \Delta(C)$. In particular, $Z \subseteq \Delta(C)$.
+
+Let $\beta = \frac{1}{2}v + k(C) + 2$, and let $j$ be an integer with $1 \le j \le \beta$. Let $W$ be $(\Sigma - U(G)) \cup V(G)$, so that $W$ is the union of $V(G)$ with all the regions of $G$. Let $y \in Y_j(A(C)) \cap W$. Then either $y \in A(C)$, or there is a $G$-normal $[0, 1]$-arc $F$ with one end $y$ and the other in $A(C)$, with $|V(G) \cap F| \le j$. In either case, there is a solid, connected, $G$-normal set $X \subseteq \Sigma$ with $y \in X$ and $A(C) \subseteq X$, with
+\begin{equation*}
+|V(G) \cap X| \le j + |V(G) \cap A(C)| \le \frac{1}{2}v + k(C) + 2 + vk(C) \le 2kv - 1 < \alpha(G)
+\end{equation*}
+since $k(C) \le 2k - 2$. Hence $X$ surrounds $C$, and so $X \subseteq \mathscr{A}_{2kv - 1}(C) \subseteq \Delta(C)$. We deduce that
+\begin{equation*}
+Y_j(A(C)) \cap W \subseteq \Delta(C).
+\end{equation*}
+But $Y_j(A(C))$ is included in the closure of $Y_j(A(C)) \cap W$, and $\Delta(C)$ is closed, and so $Y_j(A(C)) \subseteq \Delta(C)$. We define $Z_j$ to be the closure of $Y_j(A(C)) \cup Z$. Then $Z_j \subseteq \Delta(C)$, since $\Delta(C)$ is closed, and it is easy to see that $Z_j$ is the closure of the union of some of the regions of $G$, and $Z_j \cap \mathrm{bd}(\Sigma) = C$. Moreover, $Z_j$ has no ``cut-vertices,'' and hence there is a circuit $C_j$ of $G$ with $U(C_j) \subseteq Z_j$, such that $Z_j - U(C_j)$ is inside the $O$-arc $U(C_j)$. We observe that $C_1, C_2, \dots, C_\beta$ are mutually vertex-disjoint.
+
+Now there is no $G$-normal $[0, 1]$-arc $F$ in $\Sigma$ with one end in $U(C_1)$ and the other in $U(C_\beta)$ with $|V(G) \cap F| < \beta$, because such $F$ must meet all of $C_1, C_2, \dots, C_\beta$. Moreover, there is no $G$-normal $O$-arc $F$ surrounding $C$ with $U(C_1) - F$ inside $F$ and $F - U(C_\beta)$ inside $U(C_\beta)$ and with
+\begin{equation*}
+|V(G) \cap F| < vk(C),
+\end{equation*}
+because of our choice of $A(C)$. Thus, we may apply (5.8) to the portion of $\Sigma$ between $C_1$ and $C_\beta$ to deduce that there are mutually vertex-disjoint paths $P_1, \dots, P_{vk(C)}$ of $G$, each with one end in $V(C_1)$, the other in $V(C_\beta)$, and no other vertex in $V(C_1) \cup V(C_\beta)$; and mutually vertex-disjoint circuits $B_1(C), \dots, B_\beta(C)$ of $G$, with $B_1(C) = C_1$, $B_\beta(C) = C_\beta$, such that for $1 \le i < j \le \beta$, $B_i(C)$ is inside $B_j(C)$; and the intersection of each $P_i$ with each $B_j(C)$ is a path.
+
+We define $N(C) = B_{k(C) + 1}(C)$. Now each of $P_1, \dots, P_{vk(C)}$ meets $N(C)$

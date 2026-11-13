@@ -1,0 +1,34 @@
+\origpage{115}{GRAPH MINORS. XV. GIANT STEPS}
+A $\Sigma$-span $H, \eta, \mathscr{T}$ is $\mu$-stepped if there is an $\eta(H)$-path in $G$ with ends $\eta(u), \eta(v)$ such that $d(u, v) \ge \mu$, where $d$ is the metric of $\mathscr{T}$. A $\Sigma$-span $H, \eta, \mathscr{T}$ is $(\lambda, \mu)$-flat, where $\lambda, \mu \ge 0$ are integers, if $ord(\mathscr{T}) \ge 4\lambda + \mu + 2$ and there is no $\mu$-stepped $\Sigma$-span $H', \eta', \mathscr{T}'$ which can be obtained from $H, \eta, \mathscr{T}$ by rearranging within $\lambda$ of any $z \in A(H)$.
+
+Let $H, \eta, \mathscr{T}$ be a $\Sigma$-span. A region $r$ of $H$ is an \textit{eye} (of $H, \eta, \mathscr{T}$ in $G$) if
+
+\hspace*{12pt}(i) there is a circuit $C$ of $H$ with $U(C) = bd(r)$
+
+\hspace*{12pt}(ii) there are distinct vertices $a, b, c, d$ of $C$ such that $a, b, c, d$ occur in $V(C)$ in that order, and $\{a, b, c, d\}$ is free with respect to $\mathscr{T}$
+
+\hspace*{12pt}(iii) there are two disjoint $\eta(H)$-paths $P, Q$ in $G$ with ends $\eta(a), \eta(c)$ and $\eta(b), \eta(d)$ respectively.
+
+Now let $r_1, ..., r_\kappa$ be eyes, with corresponding $\eta(H)$-paths $P_i, Q_i$ ($1 \le i \le \kappa$). We say that $r_1, ..., r_\kappa$ are \textit{independent eyes} if the paths $P_i, Q_i$ can be chosen so that
+
+\hspace*{12pt}(i) for $1 \le i < j \le \kappa$, $d(r_i, r_j) = ord(\mathscr{T})$, where $d$ is the metric of $\mathscr{T}$
+
+\hspace*{12pt}(ii) for $1 \le i < j \le \kappa$, $P_i \cup Q_i$ is disjoint from $P_j \cup Q_j$.
+
+Finally we can state our main result.
+
+\stmt
+(1.1) \textit{For any surface $\Sigma$ with $bd(\Sigma) = \emptyset$, and any integers $\kappa, \phi, \mu \ge 0$, there are integers $\theta, \lambda, \rho \ge 0$ such that the following holds. Let $\mathscr{T}^*$ be a tangle in a graph $G$, such that some $\Sigma$-span of order $\ge \theta$ is $(\lambda, \mu)$-flat. Then either}
+
+\hspace*{12pt}(i) \textit{there is a $\Sigma$-span of order $\ge \phi$ with $> \kappa$ independent eyes, or}
+
+\hspace*{12pt}(ii) \textit{there is a $\Sigma'$-span of order $\ge \phi$, where $\Sigma'$ is a surface obtained by adding a crosscap to $\Sigma$, or}
+
+\hspace*{12pt}(iii) \textit{there is a $\mathscr{T}^*$-central segregation of $G$ of type $(\rho, \kappa)$ with an arrangement in $\Sigma$.}
+
+Result (1.1) is a consequence of the following.
+
+\stmt
+(1.2) \textit{For any surface $\Sigma$ with $bd(\Sigma) = \emptyset$, and any integers $k \ge 0$, $\phi \ge 8$, $\mu \ge 12$ and even, $\lambda_{k+1} \ge 4$, and $\theta_{k+1} \ge 4\lambda_{k+1} + \mu + 2$, there are integers $\rho_k, \lambda_k \ge 0$ and $\theta_k \ge 4\lambda_k + \mu + 2$ such that the following holds. Let $\mathscr{T}^*$ be a tangle in a graph $G$, and suppose that there is a $(\lambda_k, \mu)$-flat $\Sigma$-span of order $\ge \theta_k$ with $k$ eyes mutually at distance $\ge \theta_k$. Then either}
+
+\hspace*{12pt}(i) \textit{there is a $(\lambda_{k+1}, \mu)$-flat $\Sigma$-span of order $\theta_{k+1}$ with $k+1$ eyes, mutually at distance $\theta_{k+1}$, or}

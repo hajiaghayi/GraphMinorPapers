@@ -1,0 +1,27 @@
+\origpage{142}{ROBERTSON AND SEYMOUR}
+\noindent that $v \in \bar{\Omega}$, and so $v \in \bar{\Omega} \cap \bar{\Omega}'$. Moreover, since $v \in \bar{\Omega}'$ it follows that $\alpha(v) = \alpha_0(v)$, and so $\alpha(v) = x$. This proves (7).
+
+\hspace*{12pt}(8) \textit{For distinct $v, v' \in V(\mathscr{S})$, $\alpha(v) \neq \alpha(v')$.}
+
+\textit{Subproof.} Choose $(A, \Omega), (A', \Omega') \in \mathscr{S}$ with $v \in \bar{\Omega}$ and $v' \in \bar{\Omega}'$. If $(A, \Omega), (A', \Omega') \in \mathscr{S}_0$, then $\alpha(v) = \alpha_0(v) \neq \alpha_0(v') = \alpha(v')$ as required. We may therefore assume that $(A, \Omega) \in \mathscr{S}_i$ where $1 \le i \le k$. Consequently, $\alpha_i(v) = \alpha(v)$, by (5). If $v' \in V(\mathscr{S}_i)$ then $\alpha_i(v') \neq \alpha_i(v)$, and $\alpha_i(v') = \alpha(v')$ by (5), and so $\alpha(v) \neq \alpha(v')$ as required. We assume then that $v' \notin V(\mathscr{S}_i)$. If $v' \in V(\mathscr{S}_j)$ for some $j \neq i$ with $1 \le j \le \delm{i}\fix{k}$,\fixnote{fix:7.7-claim8}{The next sentence has $1 \le j \le k$.} then by (5), $\alpha(v') = \alpha_j(v') \in \Delta_j$, and so $\alpha(v') \neq \alpha(v)$ because $\alpha(v) \in \Delta_i$. Hence we may assume that $v' \notin V(\mathscr{S}_j)$ for $1 \le j \le k$. Thus $(A', \Omega') \in \mathscr{S}_0$. Since $\bar{\Omega}_i^* \subseteq V(\mathscr{S}_i)$ it follows that $v' \notin \bar{\Omega}_i^*$, and so $\alpha_0(v') \notin bd(\Delta_i)$. But $\alpha_0(v') \in \alpha_0(A', \Omega')$ and $\alpha_0(A', \Omega') \cap \Delta_i \subseteq bd(\Delta_i)$, and so $\alpha_0(v') \notin \Delta_i$. Consequently $\alpha(v') \neq \alpha(v)$, as required. This proves (8).
+
+\hspace*{12pt}(9) \textit{For all $(A, \Omega) \in \mathscr{S}$, $\Omega$ is mapped by $\alpha$ to a natural order of $\alpha(\bar{\Omega})$ from $bd(\alpha(A, \Omega))$.}
+
+\textit{Subproof.} This is trivial unless $|\bar{\Omega}| \ge 4$; and if $|\bar{\Omega}| \ge 4$ then $(A, \Omega) \in \mathscr{S}_i$ for some $i$ with $1 \le i \le k$, and $\alpha(A, \Omega) = \alpha_i(A, \Omega)$, and the result follows by (5) since $\alpha_i$ is an arrangement of $\mathscr{S}_i$. This proves (9).
+
+From (6), (7), (8), (9), it follows that $\alpha$ is an arrangement of $\mathscr{S}$ in $\Sigma$. From (2), (3) and (4) we deduce that (S3) holds, as required. $\square$
+
+In view of (7.7), we may assume henceforth that $(G_i^*, \Omega_i^*)$ has a crooked transaction of cardinality $\pi$ for some $i$, say $i = 1$. We recall that $\Omega_1$ is a natural order of $V(H) \cap bd(\Lambda_1)$ from $bd(\Lambda_1)$.
+
+\stmt
+(7.8) \textit{There is a transaction $\mathscr{P}$ in $(G_0 \cup J_1, \Omega_1)$ such that $V(\mathscr{P})$ is free with respect to the $(12\beta + 14)$-compression of $\mathscr{T}$ in $H \cap (\Sigma - \Lambda_1)$, each $P \in \mathscr{P}$ meets $H \cap (\Sigma - \Lambda_1)$ precisely in the ends of $P$, and one of the following holds:}
+
+\hspace*{12pt}(i) \textit{$|\mathscr{P}| = \phi$ and $\mathscr{P}$ is a crosscap transaction}
+
+\hspace*{12pt}(ii) \textit{$|\mathscr{P}| = \tau_1$ and $\mathscr{P}$ is a leap transaction}
+
+\hspace*{12pt}(iii) \textit{$|\mathscr{P}| = \tau_2$ and $\mathscr{P}$ is a doublecross transaction.}
+
+\textit{Proof.} We are assuming that $(G_1^*, \Omega_1^*)$ has a crooked transaction of cardinality $\pi$. By (7.5)(v), there is a crooked transaction $\mathscr{P}'$ of cardinality $\pi$ in $(G_0 \cup J_1, \Omega_1)$ such that $V(\mathscr{P}')$ is free with respect to the $(12\beta + 14)$-compression of $\mathscr{T}$ in $H \cap (\Sigma - \Lambda_1)$, and each $P \in \mathscr{P}'$ meets $H \cap (\Sigma - \Lambda_1)$ precisely in the ends of $P$. By (6.2), there exists $\mathscr{P} \subseteq \mathscr{P}'$ satisfying (i), (ii) or (iii) above, and hence satisfying the theorem, since any subset of a free set is free by [2, Theorem (12.2)]. $\square$
+
+Henceforth $\mathscr{P}$ is a transaction satisfying (7.8).

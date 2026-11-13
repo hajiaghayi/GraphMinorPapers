@@ -1,0 +1,18 @@
+\origpage{10}{}
+\textbf{3.6} \textit{If $G'$ can be obtained from $G$ by splitting a vertex, and $\mathcal{T}$ is a tangle in $G$ of order $\ge 2$, there is a tangle in $G'$ of order $ord(\mathcal{T}) - 1$.}
+
+\textbf{Proof.} Let $G'$ be obtained by splitting $v \in V(G)$. By (3.2), $G \setminus v$ has a tangle of order $ord(\mathcal{T}) - 1$, and hence by (3.4), so does $G'$, since $G \setminus v$ is a subgraph of $G'$. $\square$
+
+Let us mention also the obvious
+
+\textbf{3.7} \textit{If $\mathcal{T}$ is a tangle in $G$, and $\theta$ is an integer with $1 \le \theta \le ord(\mathcal{T})$, then the set of all members of $\mathcal{T}$ of order $< \theta$ is a tangle in $G$ of order $\theta$.}
+
+We call this tangle the $\theta$-\textit{truncation} of $\mathcal{T}$.
+
+\sectionhead{4 Surfaces}
+
+A \textit{surface} is a connected compact 2-manifold, possibly with boundary. The boundary of a surface $\Sigma$ is denoted by $bd(\Sigma)$. The components of $bd(\Sigma)$ are called the \textit{cuffs} of $\Sigma$; each cuff is homeomorphic to a circle. An \textit{O-arc} in $\Sigma$ is a subset homeomorphic to a circle, and a \textit{line} is a subset homeomorphic to the closed interval $[0, 1]$. The \textit{ends} of a line are defined in the natural way. If $X \subseteq \Sigma$, its topological closure is denoted by $\bar{X}$. The surface obtained from $\Sigma$ by pasting a closed disc onto every cuff is denoted by $\hat{\Sigma}$.
+
+If $\Sigma_1$ and $\Sigma_2$ are surfaces with null boundary, we say that $\Sigma_1$ is \textit{simpler} than $\Sigma_2$ if $\Sigma_2$ can be obtained from $\Sigma_1$ by adding handles or crosscaps (at least one). For a general surface $\Sigma$ we denote the number of cuffs of $\Sigma$ by $c(\Sigma)$. In this paper we shall prove several different statements about surfaces $\Sigma$ by a double induction; we assume that the statement is true for all surfaces $\Sigma'$ with $\hat{\Sigma}'$ simpler than $\hat{\Sigma}$, and we assume it is true for all $\Sigma'$ with $\hat{\Sigma}'$ homeomorphic to $\hat{\Sigma}$ and with $c(\Sigma') < c(\Sigma)$.
+
+To accomplish this, we shall need to consider cutting surfaces along certain lines and O-arcs. A line in $\Sigma$ is \textit{proper} if its ends are in $bd(\Sigma)$ and it has no internal point in $bd(\Sigma)$. The operations we need are: cutting along a proper line, and cutting a surface with null boundary along an O-arc. In both cases we shall only use the operation when it results in another (connected) surface. What we mean by these operations is clear, but the notation is a little tricky. To simplify matters as far as possible, we postulate that cutting along a line or O-arc $F$ in $\Sigma$ as described above results in another surface $\Sigma'$ with $\Sigma \cap \Sigma' = \Sigma \setminus F$, such that for every point of $F$ there correspond two points of $\Sigma' \setminus \Sigma$, both in $bd(\Sigma')$, in the natural way. We observe:

@@ -1,0 +1,30 @@
+\origpage{203}{GRAPH MINORS, XVII}
+\noindent $\Theta - N(\Gamma_0)$, choose a disc $\Delta(s) \subseteq \Sigma$ with $\bar{s} \subseteq \Delta(s)$, $\Delta(s) \cap bd(\Sigma) = \bar{s}$, $\Delta(s) \cap U(\Gamma_0) = \bar{s}$, and with $\Delta(s) \cap \Delta(s') = \bar{s} \cap \bar{s}'$ for distinct $s$, $s'$. Define
+\begin{equation*}
+\Gamma = \left( (U(\Gamma_0) \cap \Sigma) \cup \bigcup (\Delta(s)), N(\Gamma_0) \right)
+\end{equation*}
+the union being taken over all components $s$ of $bd(\Sigma) - N(\Gamma_0)$. Then $\Gamma$ is a painting in $\Sigma$.
+
+To define $\alpha$ and $\beta$ we proceed as follows. For each internal cell $c$ of $\Gamma$ we define $\alpha(c) = \delta(c)$. It remains to define $\alpha(c)$ for border cells $c$ and $\beta(n)$ for border nodes $n$. Let $\Theta$ be a cuff of $\Sigma$. Enumerate the nodes and cells bordering $\Theta$, in order, as $n_1$, $c_1$, $n_2$, $c_2$, ..., $n_k$, $c_k$, $(n_1)$. (Then $k \ge 4$.) Let $\kappa$ be as in (e) above, for the corresponding major cell of $\Gamma_0$.
+
+For $1 \le i \le k$, we define $\beta(n_i) = V(\kappa(n_{i-1}) \cap \kappa(n_i)) - \{\gamma(n_i)\}$, where $n_0$ means $n_k$. For $1 \le i \le k$ we define $\alpha(c_i) = \kappa(n_i) + \gamma(n_{i+1})$, where $n_{k+1}$ means $n_1$. (In general, if $H$ is a subhypergraph of a hypergraph $G$, and $v \in V(G)$, by $H + v$ we mean the hypergraph $(V(H) \cup \{v\}, E(H))$.)
+
+This completes our definition of $\pi$. Now we verify that $\pi$ is a portrayal of $G \setminus Z$, by verifying (P1)--(P7).
+
+\hspace*{12pt}(P1) From (a) and (e)(i), $G \setminus Z$ is the union of all the $\alpha(c)$'s; and by (a) and (e)(i) again, $E(\alpha(c) \cap \alpha(c')) = \emptyset$ for distinct cells $c$, $c'$.
+
+\hspace*{12pt}(P2) Let $c \in C(\Gamma)$ and $n \in \tilde{c}$. If $c \in C(\Gamma_0)$ then $\gamma(n) \in V(\delta(c)) = V(\alpha(c))$ by (b) above. If $c \notin C(\Gamma_0)$, then $c$ borders some cuff, and $n$ is an end of $c$. Let $c = c_i$ and $n \in \{n_{\delm{1}\fix{i}}, n_{i+1}\}$, with numbering as before. Then $\gamma(n_i) \in V(\kappa(n_i)) \subseteq V(\alpha(\delm{(}c))$\fixnote{fix:13.1-P2}{There are two misprints here. The ends of $c_i$ are $n_i$ and $n_{i+1}$, and the bracket before $c$ is extra.} by (e)(i) and the definition of $\alpha(c_i)$; and $\gamma(n_{i+1}) \in V(\alpha(c_i))$ by definition of $\alpha(c_i)$.
+
+\hspace*{12pt}(P3) Both these statements are clear from the definitions of $\alpha$ and $\beta$.
+
+\hspace*{12pt}(P4) If $n_1$, $n_2$ are nodes bordering different cuffs, arising from major cells $c_1$, $c_2$ of $\Gamma_0$, then $\beta(n_i) \subseteq V(\delta(c_i))$ ($i = 1, 2$), and by (c) above,
+\begin{equation*}
+V(\delta(c_{\delm{i}\fix{1}}) \cap \delta(c_2)) \subseteq \{\gamma(n) \colon n \in \tilde{c}_1 \cap \tilde{c}_2\},\fixmark{fix:13.1-P4}
+\end{equation*}
+\fixnotetext{A misprint: the two cells are $c_1$ and $c_2$, as the right side shows.}%
+which is null by (d). If $n_1$ is a node bordering a cuff arising from a major cell $c_1$ of $\Gamma_0$ and $n_2$ is a node not bordering this cuff, then $\gamma(n_2) \notin V(\delta(c_1))$ by (b), and since $\beta(n_1) \subseteq V(\delta(c_1))$ it follows that $\gamma(n_2) \notin \beta(n_1)$.
+
+\hspace*{12pt}(P5) Let $c_1$ be an internal cell of $\Gamma$ and let $v \in V(\alpha(c_1) \cap \alpha(-c_1))$. Let $c_2 \in C(\Gamma) - \{c_1\}$ with $v \in V(\alpha(c_2))$. Now $c_1 \in C(\Gamma_0)$, and so if $c_2$ is an internal cell of $\Gamma$ then
+\begin{equation*}
+v \in V(\delta(c_1) \cap \delta(c_2)) = \{\gamma(n) \colon n \in \tilde{c}_1 \cap \tilde{c}_2\} \subseteq \{\gamma(n) \colon n \in \tilde{c}_1\}
+\end{equation*}

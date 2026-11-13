@@ -1,0 +1,24 @@
+\origpage{104}{ROBERTSON AND SEYMOUR}
+\noindent of $H$ corresponding to their order in the perimeter of $H$. Let $\mathcal{A}$ be a rural division of the society of $H$ in $G$. We say that $A \in \mathcal{A}$ is \textit{interior} if $A \cap C$ is null, where $C$ is the perimeter of $H$.
+
+\stmt
+(9.8) \textit{For all $p \ge 0$ and $h \ge 2$, even, there exists $\omega \ge 0$ such that there is an algorithm as in (9.9), with running time $O(v\varepsilon)$ for fixed $p, h$.}
+
+\stmt
+(9.9) \textsc{Algorithm}. \textit{Input:} A graph $G$. \textit{Output:} Either (i) a branch-decomposition of $G$ of width $\le \omega$, or (ii) a model of $K_p$ in $G$, or (iii) a subset $X \subseteq V$ with $|X| < \binom{p}{2}$ and a flat wall $H$ in $G \setminus X$ of height $h$, and a rural division $\mathcal{A}$ of the society of $H$ in $G \setminus X$, and a branch-decomposition of width $\le \omega$ of each interior member of $\mathcal{A}$.
+
+\textit{Proof} of (9.8). We may assume that $p \ge 2$. Let $s = \binom{p}{2} + 5$. Choose $h' \ge 2$, even, as in (9.6). Choose $\omega$, by (4.2), so that every graph with branch-width $\ge \omega/3$ contains a wall of height $h'$. Now we describe the algorithm. We are given $G$ as input.
+
+\hspace*{12pt}(1) We apply (7.2) to $G$. (This is possible by (7.1).) If we obtain a branch-decomposition of $G$ of width $\le \omega$ we stop. Otherwise we obtain a wall $H$ in $G$ of height $h'$.
+
+\hspace*{12pt}(2) Now we perform a recursion. We set $G_1 = G$, $Z_1 = \emptyset$, $H_1 = H$. At the beginning of the $i$ th iteration we have
+
+\hspace*{12pt}(i) a subgraph $G_i$ of $G$ with $|\varepsilon(G_i)| \le (\frac{1}{2})^{i-1} |\varepsilon(G)|$
+
+\hspace*{12pt}(ii) a subset $Z_i \subseteq V(G_i)$ with $|Z_i| \le s - 3$ such that no vertex of $G_i \setminus Z_i$ is incident with an edge of $G$ not in $G_i$,
+
+\hspace*{12pt}(iii) a wall $H_i$ in $G_i$ of height $h'$.
+
+The iteration proceeds as follows. (3) We apply (9.7) to $G_i, H_i$. If we obtain a model of $K_p$ in $G_i$ and hence in $G$ we stop. Otherwise, we obtain a subset $X \subseteq V(G_i)$ with $|X| < \binom{p}{2}$ and $s$ subwalls $H^1, \dots, H^s$ of $H_i$ of height $h$, mutually vertex-disjoint, and each flat and dividing in $(G_i \setminus X) \cup H_i$, and each disjoint from $X$. Let $K^j$ be the compass of $H^j$ in $(G_i \setminus X) \cup H_i$ ($1 \le j \le s$).
+
+\hspace*{12pt}(4) Since the $H^j$'s are all dividing in $(G_i \setminus X) \cup H_i$, it follows that $K^1, \dots, K^s$ are mutually vertex-disjoint and that each contains no vertex in $X$, by (9.5). Since $|Z_i| \le s - 3$, we may choose three of the $H^j$'s, say $H^1$, $H^2$, and $H^3$, such that $V(K^j) \cap Z_i = \emptyset$ ($1 \le j \le 3$).

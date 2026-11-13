@@ -1,0 +1,40 @@
+\origpage{364}{N. Robertson, P.D. Seymour / Journal of Combinatorial Theory, Series B 90 (2004) 325--385}
+\textbf{12.3.} \textit{There exists $X_2 \subseteq V(\Gamma^*)$ with $|X_2| \le m + c(\Sigma_\chi)$ and $P^* \subseteq X_2$ and an integer $t$ with $n \le t \le 5^{2m}n$, such that}
+
+\hspace*{12pt}$\bullet$ $d(x_1, x_2) > 24t$ for all distinct $x_1, x_2 \in X_2$,
+
+\hspace*{12pt}$\bullet$ for every $e \in Z$ there exists $x \in X_2$ with $d(e, x) \le t$.
+
+\textbf{Proof.} Let $k = m + c(\Sigma_\chi)$, and choose $X_1$ as in 12.2. Choose $X_2 \subseteq X_1$ with $P^* \subseteq X_2$, minimal such that for every $e \in Z$ there exists $x \in X_2$ with
+\begin{equation*}
+d(e, x) \le 5^{2k-2|X_2|}n.
+\end{equation*}
+Let $t = 5^{2k-2|X_2|}n$. Then $n \le t \le 5^{2m}n$, since $|X_2| \ge c(\Sigma_\chi)$, and so the second assertion of the theorem holds; we must verify the first.
+
+Suppose that $x_1, x_2 \in X_2$ are distinct and $d(x_1, x_2) \le 24t$. Since $24t < 5^{2m+2}n$ and $\mathscr{T}$ is not $5^{2m+2}n$-flawed in distance \fix{(which, by the strict bounds on $rep(\mathscr{T})$ and $dist(\Gamma)$ in the definition of ``flawed internally'', means that $d(r_1^*, r_2^*) > 5^{2m+2}n$ for all distinct poles $r_1^*, r_2^*$)}\fixnote{fix:12.3-proof}{This step needs the strict bounds in the definition of ``flawed internally'' on page 362 (see the note there).}, it follows that not both $x_1, x_2$ are poles; thus we may assume that $x_2 \notin P^*$. Let $X'_2 = X_2 \setminus \{x_2\}$. For any $e \in Z$ we claim that there exists $x' \in X'_2$ with $d(e, x') \le 5^{2k-2|X'_2|}n = 25t$. For certainly there exists $x \in X_2$ with $d(e, x) \le t$, and if $x \ne x_2$ we may set $x' = x$. If $x = x_2$ we may set $x' = x_1$; for
+\begin{equation*}
+d(e, x_1) \le d(e, x_2) + d(x_1, x_2) \le t + 24t = 25t.
+\end{equation*}
+This proves our claim. But then the minimality of $X_2$ is contradicted. We deduce that the first assertion holds. This proves 12.3. $\square$
+
+A set $\mathscr{W}$ of wheels is a \textit{cover} (for $(\Gamma, \phi, \lambda, \mathscr{T})$) if
+
+\hspace*{12pt}$\bullet$ the members of $\mathscr{W}$ are mutually disjoint,
+
+\hspace*{12pt}$\bullet$ $bd(W) \subseteq \Sigma_\chi \setminus bd(\Sigma_\chi)$ for each $W \in \mathscr{W}$,
+
+\hspace*{12pt}$\bullet$ for each pole $r^*$ there exists $W \in \mathscr{W}$ with $r^* \in W$ and hence with $r \subseteq W$,
+
+\hspace*{12pt}$\bullet$ for every $e \in Z$ there exists $W \in \mathscr{W}$ with $e \subseteq W$,
+
+\hspace*{12pt}$\bullet$ for each $W \in \mathscr{W}$, $(W \setminus bd(W)) \cap V(\Gamma) \ne \emptyset$.
+
+\textbf{12.4.} \textit{There is a cover $\mathscr{W}$ with $|\mathscr{W}| \le m + c(\Sigma_\chi)$, each member of which has radius $\le 2n \cdot 5^{2m}$.}
+
+\textbf{Proof.} Choose $X_2, t$ as in 12.3. For each $x \in X_2$, let $C_x$ be some circuit of $\Gamma^*$ with $|E(C_x)| \le 2t$, with $x \in ins(C_x) \setminus U(C_x)$, chosen with $ins(C_x)$ maximal, if there is such a circuit $C_x$, and otherwise let $C_x$ be the 1-vertex subgraph of $\Gamma^*$ with vertex $x$.
+
+Let $y(x)$ be some vertex of $C_x$. If there is a $\mathscr{T}$-enclave $H$ with $y(x) \in ins(H) \setminus U(H)$ and with $|E(H)| \le 8t + 4$, let $H_x$ be such a $\mathscr{T}$-enclave $H$ with $ins(H)$ maximal; and otherwise let $H_x$ be the 1-vertex subgraph of $\Gamma^*$ with vertex $y(x)$. Let $W_x$ be a wheel such that $H_x$ is a $W_x$-hub of radius $2t$. (This exists by 12.1.)\fixnote{fix:12.4-proof}{The corrected 12.1 does not give $W_x$, since 12.4 does not assume that no edge of $\Gamma$ with three ends has an end in $bd(\Sigma_\chi)$. The wheel exists by the stronger form of 12.1 described in the note to 12.1, with $\rho = 2t$ and with the closed set $ins(C_x) \cup ins(H_x)$. Here $2t \ge 8$ is even, and $rep(\mathscr{T}) > 5^{2m+2}n \ge 25t \ge 10t + 14$ since $t \le 5^{2m}n$. In place of the hypothesis on edges with three ends, the stronger form asks only about such edges at a cuff near $H_x$. By 12.3, every pole other than $x$ is at distance more than $24t$ from $x$, so such a cuff has pole $x$. Then each such edge lies in $ins(C_x) \cup ins(H_x)$, or all its ends are close to $H_x$, through $C_x$ and $y(x)$.}
+
+\hspace*{12pt}(1) \textit{For $x \in X_2$, $ins(C_x) \subseteq W_x \setminus bd(W_x)$, and in particular, $W_x \setminus bd(W_x)$ contains $x$ and all its neighbours in $\Gamma^*$.}
+
+\textbf{Subproof.} Certainly $y(x) \in W_x \setminus bd(W_x)$, and $y(x) \in U(C_x)$, so it suffices for the first claim to show that $C_x \cap bd(W_x)$ is null. Suppose that $v \in V(C_x \cap bd(W_x))$. Then there

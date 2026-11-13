@@ -1,0 +1,25 @@
+\origpage{61}{GRAPH MINORS. III}
+\noindent there is no path of $G$ from $V(Q_k)$ to $C_s$ which avoids $V(P)$ and has no edges outside $C_j$. But then by (2), no vertex of $Q_k$ is on any $P_{i'}$ with $1 \le i' \le r$, $i' \ne i$. Let $P'$ be the subgraph of $G$ obtained from $P_i \cup Q_k$ by deleting the edges and interior vertices of $P$. Then $P'$ contains a path between $C_1$ and $C_s$, $P'_i$ say, and
+\begin{equation*}
+P_1, \dots, P_{i-1}, P'_i, P_{i+1}, \dots, P_r
+\end{equation*}
+are vertex-disjoint. But this contradicts (1), since the first edge of $P$ is not in any of $C_1, \dots, C_s$.
+
+Thus the choice of $j$ is impossible, and the theorem is proved.
+
+\stmt
+(4.2) \textit{Let $r \ge 0$, $s \ge 1$ be integers, and let $M$ be a drawing of the planar graph $G$. Let $C_1, \dots, C_s$ be a nested sequence of circuits of $M$. Then one of the following holds:}
+
+\hspace*{12pt}(i) \textit{$M$ majors the $r \times s$ cylinder,}
+
+\hspace*{12pt}(ii) \textit{there exists $X \subseteq V(G)$ with $|X| < r$, such that $X$ separates $V(C_1)$ and $V(C_s)$.}
+
+\textit{Proof.} If (ii) is false, then by Menger's theorem there are $r$ vertex-disjoint paths of $G$ between $V(C_1)$ and $V(C_s)$, and so (i) holds, from (4.1).
+
+\stmt
+(4.3) \textit{Let $r \ge 0$ be an integer, and let $r' = r + 1$ if $r$ is odd, and $r' = r$ if $r$ is even. Let $s > r'$ be an integer. Let $M$ be a drawing of the planar graph $G$, and suppose that $M$ majors the $r \times s$ cylinder. Then either $M$ majors the $(r + 1) \times (s - r')$ cylinder, or $G$ is expressible as the sleeve union of two planar graphs.}
+
+\textit{Proof.} Let $C_1, \dots, C_s$ be a nested sequence of circuits of $M$, and let $P_1, \dots, P_r$ be vertex-disjoint paths of $G$, each between $V(C_1)$ and $V(C_s)$, such that for $1 \le i \le r$ and $1 \le j \le s$, $P_i \cap C_j$ is a path. Put $r' = 2d$. Now $C_{d+1}, C_{d+2}, \dots, C_{s-d}$ is a nested sequence of $s - r'$ circuits of $M$. By (4.2) either $M$ majors the $(r + 1) \times (s - r')$ cylinder or there exists $X \subseteq V(G)$ with $|X| \le r$ which separates $V(C_{d+1})$ and $V(C_{s-d})$. We assume the latter. For $1 \le i \le r$, let $P'_i$ be the subpath of $P_i$ between $V(C_{d+1})$ and $V(C_{s-d})$, with no internal vertex in $V(C_{d+1})$ or $V(C_{s-d})$. Then $X \cap V(P'_i) \ne \emptyset$; choose $v_i \in X \cap V(P'_i)$ ($1 \le i \le r$). We have $\{v_1, \dots, v_r\} \subseteq X$ and $|X| \le r$, and so $X = \{v_1, \dots, v_r\}$. Let $(H_1, H_2)$ be a separation of $G$ with $V(H_1) \cap V(H_2) = X$, where $C_1, \dots, C_{d+1}$ are circuits of $H_1$ and $C_{s-d}, \dots, C_s$ are circuits of $H_2$. Now $H_1$ has a proper minor isomorphic to the $r \times d$ cylinder in the required way for sleeve unions, and so has $H_2$; thus $G$ is expressible as a sleeve union of two planar graphs. This completes the proof.
+
+\stmt
+(4.4) \textit{Let $r \ge 0$, $s \ge 1$ be integers, and let $M$ be a drawing of the planar graph $G$. Suppose that $G$ is not expressible as a sleeve union of two planar}

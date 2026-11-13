@@ -1,0 +1,30 @@
+\origpage{121}{GRAPH MINORS. VI}
+\hspace*{12pt}(iii) \textit{If there exists $\delta \in \Delta$ which intersects more than one component of $G$ then $\Delta$ is not feasible in $G$.}
+
+\hspace*{12pt}(iv) \textit{If $G$ has components $G_1, \dots, G_k$ for $k \ge 2$, and (ii), (iii) do not apply, let $(\Delta_1, \dots, \Delta_k)$ be the partition of $\Delta$ such that}
+\begin{equation*}
+\bigcup \Delta_i = V(G_i) \cap bd(\Sigma) \qquad (1 \le i \le k);
+\end{equation*}
+\textit{then $\Delta$ is feasible in $G$ if and only if $\Delta_i$ is feasible in $G_i$ for each $i$.}
+
+The proofs are all obvious. These observations, together with (3.2) and (2.3), yield a polynomially bounded algorithm, as follows.
+
+\stmt
+(3.4) \textit{Algorithm to decide if $\Delta$ is feasible in $G$.}
+
+We first check that $\Delta$ is cross-free. (If not it is not feasible.) We apply (3.3) as often as possible, reducing the problem on $G$ to equivalent problems on smaller graphs. If at any step (3.3)(iii) applies then $\Delta$ is not feasible in $G$, and we stop. If (3.3) cannot be applied and $G$ is non-null then $G$ is connected, and we may pass to $G^*$, $\Delta^*$ and so by (2.3) we may continue the reductions. Each reduction decreases the number of vertices plus the number of regions of $G$.
+
+It is of course not necessary to use the dual graph $G^*$; we have done so merely for ease of exposition. In practise it would be easier to apply a dual form of (3.3)(i) to $G$, rather than apply (3.3)(i) to $G^*$. But this involves some messy technicalities which we prefer to avoid.
+
+We turn now to the structural characterization for non-feasibility. Let $G$, $\Sigma$, $\Delta$ be as before. A vertex $v$ of $G$ is \textit{peripheral} if $v \in bd(\Sigma)$, and a region is \textit{peripheral} if it contains a segment of $bd(\Sigma)$ (with respect to $\bigcup \Delta$). Let $U \subseteq bd(\Sigma) - \bigcup \Delta$, such that $|U \cap S| = 1$ for each segment $S$ and define $\Delta^*$ with $\bigcup \Delta^* = U$, as before. Put $W = U \cup (\bigcup \Delta)$. For $x, y \in W$, an $(x, y)$-\textit{chain} is a sequence $A_1, A_2, \dots, A_k$ with $k \ge 1$ such that
+
+\hspace*{12pt}(i) for $1 \le i < k$, one of $A_i, A_{i+1}$ is a vertex of $G$, the other is a region, and they are incident
+
+\hspace*{12pt}(ii) if $A_1$ is a vertex then $A_1 = x$; if $A_1$ is a region then $x \in A_1$; if $A_k$ is a vertex then $A_k = y$; if $A_k$ is a region then $y \in A_k$
+
+\hspace*{12pt}(iii) for $1 \le i \le k$, $A_i$ is peripheral if and only if $i = 1$ or $i = k$.
+
+The \textit{length} of an $(x, y)$-chain is the number of terms which are vertices. The \textit{$\Delta$-redundancy} of an $(x, y)$-chain in $G$ is its length minus $\Delta(x, y)$.
+
+\stmt
+(3.5) \textit{If $G$ is connected, any $(x, y)$-chain of $G^*$ corresponds to an $(x, y)$-chain of $G$, and if $\Delta$ is cross-free the $\Delta^*$-redundancy of the first chain equals the $\Delta$-redundancy of the second.}

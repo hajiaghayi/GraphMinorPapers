@@ -1,0 +1,28 @@
+\origpage{216}{ROBERTSON AND SEYMOUR}
+\noindent are all edges of $J$, and each is disjoint from $bd(\Sigma)$; and any other edge of $J$ is included in $bd(\Sigma)$. Then (i) and (ii) follow.
+
+For the converse, suppose $J$ satisfies (i)-\del{(iv)}\fix{(v)}. Let $\Delta$ be the surface obtained from $\Sigma$ by cutting along $U(J - bd(\Sigma))$\fix{, and let $\phi \colon \Delta \to \Sigma$ be the associated surjection}. Then by (iii), $\Delta - bd(\Delta)$ is connected, and by (iv) \fix{and (v)} every $O$-arc included in $\Delta - bd(\Delta)$ is null-homotopic\fix{. For let $F$ be such an $O$-arc. Then $\phi(F)$ is an $O$-arc in $\Sigma - U(J)$, and by (iv) it bounds a closed disc $D$ of $\Sigma$. Since $U(J)$ is connected by (v) and misses $\phi(F)$, either $U(J) \cap D = \emptyset$ or $U(J) \subseteq D - \phi(F)$. In the first case $F$ bounds the closed disc $\phi^{-1}(D)$ included in $\Delta - bd(\Delta)$. In the second case $bd(\Sigma) = \emptyset$, since $bd(\Sigma) \subseteq U(J)$ by (i). If $\Sigma$ is a sphere, the other closed disc bounded by $\phi(F)$ misses $U(J)$, and we use it in place of $D$. Otherwise some $O$-arc of $\Sigma$ is not null-homotopic, and it can be moved off $D$, into $\Sigma - U(J)$, contrary to (iv)}.\fixnote{fix:2.1-proof}{The printed step ``by (iv) every $O$-arc included in $\Delta - bd(\Delta)$ is null-homotopic'' is where the converse fails without (v), because (iv) speaks of null-homotopy in $\Sigma$, not in $\Delta$. For two disjoint edges on the sphere, $\Delta$ is an annulus, and its middle circle is null-homotopic in $\Sigma$ but not in $\Delta$.} Since $\Delta$ is a surface, it follows that $\Delta$ is a closed disc, as required.
+
+\stmt
+(2.2) \textit{Let $\Sigma \cong \Sigma(a, b, c)$ and let $J$ be a seam graph in $\Sigma$ for some net. Suppose that every vertex of $J$ has valency at least $3$. Then $|V(J)| \le 2(2a + b + c - 1)$, and $|E(J)| \le 3(2a + b + c - 1)$.}
+
+\textit{Proof.} Let $\Sigma'$ be the surface obtained from $\Sigma$ by pasting a closed disc onto each cuff of $\Sigma$. Then $\Sigma' \cong \Sigma(a, b, 0)$. Now $J$ is a graph in $\Sigma'$ with $c + 1$ regions, and they are all simply connected (for definition, see Section 12). We may apply Euler's formula to deduce that
+\begin{equation*}
+|V(J)| - |E(J)| + c + 1 = 2 - 2a - b.
+\end{equation*}
+But every vertex of $J$ in $\Sigma'$ has valency $\ge 3$, and so $|V(J)| \le \frac{2}{3} |E(J)|$. The result follows.
+
+Let $(\Delta, \Pi)$ be a net for $\Sigma$, and let $G$ be a proper graph in $\Sigma$. We say that $(\Delta, \Pi)$ is \textit{$G$-normal} if $U(J)$ is $G$-normal, where $J$ is the seam graph for $(\Delta, \Pi)$. It is easy to see that if $\Sigma$ is connected and $G$ is a proper graph in $\Sigma$, there is a $G$-normal net. (We sketch a proof. It suffices to show this when $G$ is connected and every region of $G$ intersects $\Sigma - bd(\Sigma)$ in an open disc, for we can always augment $G$ to make this true. For each region $r$ choose a point $v_r \in r - bd(\Sigma)$, and for each vertex $v$ incident with $r$ make a cut in $(r - bd(\Sigma)) \cup \{v\}$ from $v_r$ to $v$, in such a way that all these cuts are internally disjoint, in the natural sense. We obtain a surface, each component of which is a disc. Now paste back together just enough of these cuts to make the surface connected; the result is the required net.)
+
+Let $G$ be a proper graph in a connected surface $\Sigma$. A net $(\Delta, \Pi)$ with associated surjection $\phi \colon \Delta \to \Sigma$ is \textit{minimal} (with respect to $G$) if
+
+\hspace*{12pt}(i) it is $G$-normal,
+
+\hspace*{12pt}(ii) among all $G$-normal nets, $(\Delta, \Pi)$ has $|\phi^{-1}(V(G)) \cap bd(\Delta)|$ minimum, and
+
+\hspace*{12pt}(iii) among all $G$-normal nets satisfying (ii), $(\Delta, \Pi)$ has $|\Pi|$ minimum.
+
+We must establish some properties of minimal nets.
+
+\stmt
+(2.3) \textit{Let $\Sigma$ be a connected surface with $\Sigma \not\cong \Sigma(0, 0, 0)$, $\Sigma(0, 0, 1)$,}

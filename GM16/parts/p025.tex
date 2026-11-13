@@ -1,0 +1,30 @@
+\origpage{67}{N. Robertson, P.D. Seymour / Journal of Combinatorial Theory, Series B 89 (2003) 43--76}
+\hspace*{12pt}(6) \textit{$P_1, \dots, P_{\zeta+\tau}$ may be numbered so that $d(z, u_i) \ge \lambda' + 2 + 2\psi$, and $V(P_i) \cap Z = \{v\}$ for $1 \le i \le \tau$.}
+
+\textit{Subproof.} Since $d(u_i, u_j) \ge \theta$ for $1 \le i < j \le \zeta + \tau$, and since $\theta \ge 2(\lambda' + 2 + 2\psi)$, it follows that $d(z, u_i) < \lambda' + 2 + 2\psi$ for at most one value of $i$. Moreover, since $|Z| \le \zeta$, there are at most $\zeta - 1$ values of $i$ such that $Z \cap V(P_i) \ne \{v\}$. This proves (6).
+
+\hspace*{12pt}(7) \textit{For $1 \le i \le \tau$, no internal vertex of $P_i$ belongs to $V(\eta'(H'))$.}
+
+\textit{Subproof.} Suppose that $w$ is an internal vertex of $P_i$, where $1 \le i \le \tau$ and $w \in V(H')$. Let $R$ be the subpath of $P_i$ between $w$ and $u_i$, and let $Q$ be a path in $\eta'(H')$ between $w$ and some $x \in V(H)$ with $d(z, x) \le \lambda' + 2$, such that no vertex of $Q$ is in $H$ except $x$ (this exists by (5).) Then by (6),
+\begin{equation*}
+\lambda' + 2 + 2\psi \le d(z, u_i) \le d(z, x) + d(x, u_i) \le \lambda' + 2 + d(x, u_i)
+\end{equation*}
+and so $d(x, u_i) \ge 2\psi$. In particular, $x \ne u_i$, and so $Q \cup R$ is an $H$-path. But $Z \cap V(Q \cup R) = \emptyset$ since $V(Q) \subseteq V(\eta'(H')) \subseteq V(G \setminus Z)$ and $V(R) \subseteq V(P_i) \setminus \{v\} \subseteq V(G) \setminus Z$ by (6). This contradicts (2), and hence proves (7).
+
+\hspace*{12pt}(8) \textit{For $1 \le i \le \tau, u_i \in V(H')$ and $u_i = \eta'(u_i) \in V(\eta'(H'))$; and for $1 \le i < j \le \tau$, $d'(u_i, u_j) \ge \psi$.}
+
+\textit{Subproof.} By (6), $d(z, u_i) > \lambda'$ and so by (4), $u_i \in V(H')$ and $u_i = \eta'(u_i) \in V(\eta'(H'))$. For the second claim, let $1 \le i < j \le \tau$. Then $d(u_i, u_j) \ge \theta$ since $\{P_1, \dots, P_{\zeta+\tau}\}$ has breadth $\ge \theta$, and so $d'(u_i, u_j) \ge \theta - 4\lambda' - 2$ since $\mathscr{T}'$ is a $(4\lambda' + 2)$-compression on $\mathscr{T}$. Since $\theta - 4\lambda' - 2 \ge \psi$, this proves (8).
+
+\hspace*{12pt}(9) \textit{For each $v \in X$ there is a horn at $v$ over $H', \eta', \mathscr{T}'$ of cardinality $\tau$ and breadth $\ge \psi$.}
+
+\textit{Subproof.} This follows from (7) and (8), because $v \notin V(\eta'(H'))$ since $v \in X \subseteq Z$ and $V(\eta'(H')) \subseteq V(G \setminus Z)$. This proves (9).
+
+Let $Y_1 = \{y \in Y \colon d(z, y) \ge \psi + 5\lambda' + 2\}$.
+
+\hspace*{12pt}(10) \textit{$|Y_1| \ge \delta - 1$, and $Y_1 \subseteq V(H')$, and $\eta'(y) = y$ for all $y \in Y_1$.}
+
+\textit{Subproof.} Suppose that $y, y' \in Y \setminus Y_1$ are distinct. Then $d(z, y), d(z, y') \le \psi + 5\lambda' + 1$, and so $d(y, y') \le 2(\psi + 5\lambda' + 1) < \theta$, a contradiction. Hence $|\delm{Y'}\fix{Y_1}| \ge |Y| - 1 = \delta - 1$.\fixnote{fix:8.3-proof}{The claim being proved is about $Y_1$.} Now if $y \in Y_1$, then $d(z, y) \ge \psi + 5\lambda' + 2 \ge \lambda'$, and so $y \in V(H')$ and $\eta'(y) = y$ by (4). This proves (10).
+
+Let $Y' = Y \cup \{s, t\}$ (we recall that $s$ and $t$ are defined in (3)). Then $Y' \subseteq V(H')$, by (10).
+
+\hspace*{12pt}(11) \textit{$d'(y_1, y_2) \ge \psi$ for all distinct $y_1, y_2 \in Y'$.}

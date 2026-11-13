@@ -1,0 +1,27 @@
+\origpage{98}{ROBERTSON AND SEYMOUR}
+Then each $B'_j$ is a subgraph of $G'$. For $1 \le i \le m$, $1 \le j \le n$, let $u_{ij}$ be the (unique) vertex of $B_j$ adjacent in $B_j$ to $v_{ij}$. For $1 \le i \le m$, let $V_i = \{u_{ij} \colon 1 \le j \le n\}$, Then $V_1, \dots, V_m \subseteq V(G')$ (since $m > 2$), and each $B'_j$ meets each $V_i$.
+
+By (4.1) there do not exist $\theta^2/2$ disjoint connected subgraphs of $G'$ each meeting each of $V_1, \dots, V_m$. Hence by (3.2) there exists $X \subseteq V(G')$ with $|X| < \alpha(\theta^2/2, \theta^2/2)$, such that every connected subgraph of $G'$ which meets all of $V_1, \dots, V_m$ also meets $X$. In particular, $X$ meets each of $B_1, \dots, B_n$. But any vertex of $X$ is in at most two of $B_1, \dots, B_n$, and so $|X| \ge n/2$. Thus $n/2 < \alpha(\theta^2/2, \theta^2/2)$ as required.
+
+Let $((A_1, \dots, A_m), (B_1, \dots, B_n))$ be an ($m, n$)-web in a graph $G$. A spider of this web is a connected subgraph $C$ of $G$ such that
+
+\hspace*{12pt}(i) $C$ is edge-disjoint from $B_1, \dots, B_n$;
+
+\hspace*{12pt}(ii) for $1 \le i \le m$, $C$ has a unique vertex in common with $A_i$, and that vertex has valency 1 in $C$.
+
+We shall need the following, proved in [9, Theorem (2.8)].
+
+\stmt
+(4.3) \textit{Let $A_1, A_2 \subseteq V(G)$, where $G \in \mathcal{F}_\theta$, and let $D_1, \dots, D_m$ be disjoint subgraphs of $G$, each with at most $d$ components. \fix{Suppose that $d + n > 0$.} Suppose that there are $n$ disjoint paths in $G$ from $A_1$ to $A_2$, and for $1 \le k \le m$, $D_k$ separates $A_1$ and $A_2$. Then either $n < d\theta^2/2$ or $m < 2^{d\theta^2/2}(\theta^2 + 2d\theta^{2\theta})$.}\fixnote{fix:4.3}{For $d=n=0$ the statement fails. Take $A_1=A_2=\emptyset$, $m=\theta^2$ and every $D_k$ null. Then $n=0\not<0$ and $m=\theta^2\not<\theta^2$. The statement is (2.8) of Graph Minors I with $r=0$ (and with $m$ and $n$ exchanged), which fails in the same way. The only use, in the proof of (4.4), has $n=p+q+m\ge p>0$.}
+
+\stmt
+(4.4) \textit{Let $G \in \mathcal{F}_\theta$, and let $p, q \ge 0$ be integers \fix{with $p > 0$}.\fixnote{fix:4.4}{For $p=q=0$ and $G$ null the statement fails. Then $m=n=0$ and the empty families form a $(0,0)$-web, but a spider is a connected subgraph of $G$, and the null graph has none. The paper allows null graphs (proof of (8.4), page 110). The only use, in the proof of (4.5), has $p=\phi_{k+1}\ge\theta^2/2>0$.} Let $m = p 2^{p\theta^2}$, $n = p + q + m$. Suppose that $((A_1, \dots, A_m), (B_1, \dots, B_n))$ is an ($m, n$)-web in $G$. Then there exists $I \subseteq \{1, \dots, m\}$, $J \subseteq \{1, \dots, n\}$ such that $|I| = p$, $|J| = q$, and $((A_i \colon i \in I), (B_j \colon j \in J))$ is a ($p, q$)-web with a spider.}
+
+\textit{Proof.} We assume $p > 0$, for otherwise the result is trivial. We assume without loss of generality that every vertex and edge of $G$ occurs in one of $A_1, \dots, A_m, B_1, \dots, B_n$. Let $L$ be the simple graph with vertex set $\{1, \dots, m\}$, in which distinct $i, i'$ are adjacent if there exists $j \in \{1, \dots, n\}$ such that a subpath of $B_j$ has initial vertex in one of $A_i, A_{i'}$, terminal vertex in the other, and no interior vertex in any of $A_1, \dots, A_m$. For each $X \subseteq V(L)$, we define $N(X)$ to be the set of vertices of $L$ not in $X$ but adjacent in $L$ to a vertex of $X$.
+
+\textit{Case 1. $|N(V(L'))| < p$ for every connected subgraph $L'$ of $L$.}
+
+Define $Y_1 = \{1\}$, and inductively, having defined $Y_1, \dots, Y_k$, define $Y_{k+1} = N(Y_1 \cup \dots \cup Y_k)$. Then $|Y_k| < p$ for all $k > 0$. Define $m' = 2^{p\theta^2}$. Now $L$ is connected and
+\begin{equation*}
+|Y_1 \cup \dots \cup Y_{m' - 1}| \le p(m' - 1) < m = |V(L)|,
+\end{equation*}

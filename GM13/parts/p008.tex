@@ -1,0 +1,20 @@
+\origpage{72}{ROBERTSON AND SEYMOUR}
+Suppose that for every separation $(A, B)$ of $G$ of order $\le \omega$, $\mathscr{T}$ contains one of $(A, B)$, $(B, A)$. By (1) and [19, Theorem (4.5)], $\mathscr{T}$ is a ``tangle of order $\omega + 1$'' in $G$, in the terminology of that paper. But this contradicts [19, Theorem (4.3)], since $G$ has branch-width $\le \omega$ and every edge of $G$ has $\le 2 \le \omega$ ends. It follows that there is a separation $(A, B)$ of $G$ of order $\le \omega$, such that $(A, B), (B, A) \notin \mathscr{T}$; but then $(A, B)$ satisfies the theorem. $\square$
+
+To apply (3.1) we use the following lemma.
+
+\stmt
+(3.2) Lemma. \textit{If $\omega \ge 2$ is an integer and $G$ is a simple graph with branch-width $\le \omega$, then $|E(G)| \le (\frac{3}{2}\omega - 1) |V(G)|$.}
+
+\textit{Proof.} Put $\frac{3}{2}\omega - 1 = \alpha$. We proceed by induction on $|V(G)|$. If $|V(G)| = 0$ the result is trivial, and we assume that $|V(G)| > 0$. By [19, Theorem (5.1)], $G$ has tree-width $\le \alpha$ (see that paper for definitions) and hence has a vertex $v$ of valency $\le \alpha$. From the inductive hypothesis, $G \setminus v$ has $\le \alpha(|V(G)| - 1)$ edges, and so
+\begin{equation*}
+|E(G)| \le \alpha(|V(G)| - 1) + \alpha = \alpha |V(G)|,
+\end{equation*}
+as required. $\square$
+
+We use (3.1) to show that if we ``greedily'' attempt to find a branch-decomposition of $G$ of width $\le 3\omega$, and fail, then $G$ has branch-width $\ge \omega$. Actually, we can obtain slightly more than this, as follows. For a graph or digraph $G$, we define $\varepsilon = \varepsilon(G) = |E(G)| + |V(G)| + 1$. Let $\omega \ge 2$ be some integer.
+
+\stmt
+(3.3) \textsc{Algorithm}. \textit{Input:} A graph $G$ with $|E(G)| \ge 2$. \textit{Output:} A subgraph $G'$ of $G$ and a branch-decomposition of $G'$ of width $\le 3\omega$, such that either $G' = G$ or $G'$ has branch-width $\ge \omega$.
+
+\textit{Running time:} $O(v^2 + \varepsilon)$. \textit{Description:} We construct the simple graph $H_1$ underlying $G$, by deleting all loops and multiple edges. We choose a maximal subgraph $H_2$ of $H_1$ with $|E(H_2)| \le (\frac{3}{2}\omega - 1) |V(H_1)| + 1$. Thus, either $H_2 = H_1$ or $H_2$ has branch-width $\ge \omega$, by (3.2). We assume that $|E(H_2)| \ge 2$, for otherwise the problem is trivial. We shall construct a subgraph $H_3$ of $H_2$ and a branch-decomposition of $H_3$ of width $\le 3\omega$, such that either $H_3 = H_2$ or $H_3$ has branch-width $\ge \omega$. Given such an $H_3$, the algorithm is completed as follows. If $H_3 \ne H_2$, we set $G' = H_3$ and stop. If $H_3 = H_2$, we have a branch-decomposition of $H_2$ of width $\le 3\omega$. If $H_2 \ne H_1$ we set $G' = H_2$ and stop. If $H_2 = H_1$, we convert our branch-decomposition to one for $G$, set $G' = G$, and stop.

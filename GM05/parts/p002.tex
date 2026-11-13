@@ -1,0 +1,187 @@
+\origpage{93}{GRAPH MINORS. V}
+\hspace*{12pt}(iii) for $t, t', t'' \in V(T)$, if $t'$ lies on the path of $T$ between $t$ and $t''$, then $X_t \cap X_{t''} \subseteq X_{t'}$.
+
+The width of the tree-decomposition is $\max(|X_t| - 1 : t \in V(T))$; and the \textit{tree-width} of $G$ is the minimum $w \ge 0$ such that $G$ has a tree-decomposition of width $\le w$.
+
+The following results are easy to prove.
+
+\stmt
+(1.1) \textit{The simple graphs of tree-width $\le 1$ are precisely the forests.}
+
+\stmt
+(1.2) \textit{The graphs of tree-width $\le 2$ are precisely the series-parallel graphs.}
+
+\stmt
+(1.3) \textit{If $H$ is a minor of $G$ then the tree-width of $H$ is no greater than the tree-width of $G$.}
+
+\stmt
+(1.4) \textit{For $n \ge 1$, the complete graph $K_n$ has tree-width $n - 1$, and for $\theta \ge 2$ the $\theta$-grid has tree-width $\theta$.}
+
+(When $\theta \ge 2$ is an integer, the $\theta$-grid is the simple graph with vertex set $\{v_{ij} : 1 \le i, j \le \theta\}$, in which $v_{ij}$ and $v_{i'j'}$ are adjacent if $|i - i'| + |j - j'| = 1$.)
+
+\fix{We give the proofs of (1.1)--(1.4). The \textit{simple graph} of a graph is obtained by
+deleting its loops and replacing each class of parallel edges by one edge. A graph and its simple
+graph have the same tree-decompositions, since (ii) holds for a loop at $v$ as soon as $v$ is in
+some $X_t$, which is true by (i). Let $(T, \chi)$ be a tree-decomposition
+of a graph $G$, and let $t \in V(T)$ have valency 1 in $T$, with neighbour $s$. We shall use two
+facts. First, if $X_t \subseteq X_s$, then deleting $t$ from $T$ and $X_t$ from $\chi$ gives a
+tree-decomposition of $G$, because $X_s$ can play the part of $X_t$ in (i) and (ii), and the paths
+of $T \setminus t$ are paths of $T$. Second, if $v \in X_t - X_s$, then every neighbour $x$ of $v$
+is in $X_t$. For by (ii) some $X_q$ contains $v$ and $x$, and if $q \ne t$ then $s$ lies on the
+path of $T$ between $t$ and $q$, and so $v \in X_t \cap X_q \subseteq X_s$ by (iii), which is
+false.
+
+\textit{Proof of} (1.1). Suppose first that $G$ has tree-width $\le 1$ and has a circuit $C$.
+Replacing each $X_t$ by $X_t \cap V(C)$ gives a tree-decomposition of $C$ of width $\le 1$, since
+(i)--(iii) for $C$ follow from (i)--(iii) for $G$. In $C$ every vertex has two distinct neighbours,
+since $G$ is simple. We show by induction on $|V(T)|$ that no non-null graph
+$G'$ in which every vertex has two distinct neighbours has a tree-decomposition $(T, \chi)$ of width
+$\le 1$. If $|V(T)| = 1$, then by (i) the only bag is $V(G')$, which contains a vertex of $G'$ and its two
+neighbours. This is impossible. Otherwise let $t$ have valency 1 in $T$, with neighbour $s$. If
+some $v \in X_t - X_s$, then $X_t$ contains $v$ and its two neighbours, by the second fact, which
+is impossible. So $X_t \subseteq X_s$, and the first fact gives a tree-decomposition of $G'$ of
+width $\le 1$ with fewer bags, contrary to induction. Hence $G$ is a forest. Conversely, we show
+by induction on $|V(G)|$ that every forest $G$ has tree-width $\le 1$. If $V(G) = \emptyset$, a
+single empty bag will do. Otherwise some vertex $v$ of $G$ has at most one neighbour (for instance an
+end of a longest path of $G$), and by induction $G \setminus v$ has a tree-decomposition $(T, \chi)$ of width $\le 1$. Choose
+$t_0 \in V(T)$ such that $X_{t_0}$ contains the neighbour of $v$, if there is one, by (i). Add to $T$ a new
+vertex $t'$ adjacent to $t_0$, with $X_{t'}$ consisting of $v$ and its neighbours. This is a
+tree-decomposition of $G$ of width $\le 1$. For (iii), $v$ is in no other bag, and
+$X_{t'} - \{v\} \subseteq X_{t_0}$, where $t_0$ lies on the path of $T$ from $t'$ to every other
+vertex.
+
+\textit{Proof of} (1.2). The paper does not define series-parallel graphs. We use the usual
+definition by series and parallel reductions, in the following form. A graph $G$ is
+\textit{series-parallel} if its simple graph can be reduced to the null graph by repeatedly deleting a vertex
+with at most two neighbours and, if it has two, joining them by an edge if they are not already
+adjacent. We call this a \textit{reduction} at the vertex.
+
+We first show that some bag $X_t$ contains a vertex of $G$ and all its neighbours, if $G$ is
+non-null. We use induction on $|V(T)|$. If $|V(T)| = 1$, any vertex will do, since the only bag is $V(G)$ by (i).
+Otherwise let $t$ have valency 1 in $T$, with neighbour $s$. If $X_t \subseteq X_s$ we apply
+induction to the tree-decomposition given by the first fact. Otherwise we take any
+$v \in X_t - X_s$, by the second fact.
+
+Now suppose that $G$ has a tree-decomposition of width $\le 2$. We show by induction on $|V(G)|$
+that $G$ is series-parallel. By the remark above we may assume that $G$ is simple, and that it is
+non-null. Some bag $X_t$ contains a vertex
+$v$ and all its neighbours, and so $v$ has at most two neighbours, since $|X_t| \le 3$. Let $G'$ be
+the graph obtained by the reduction at $v$. Removing $v$ from every bag gives a tree-decomposition
+of $G'$ of width $\le 2$. Indeed (i) and (iii) hold. For (ii), the edges of $G'$ that are edges of $G$
+are not incident with $v$, and the new edge of $G'$, if any, has both ends in $X_t - \{v\}$. By induction $G'$ is series-parallel, and therefore so is $G$. Conversely,
+suppose that $G$ is series-parallel. Again we may assume that $G$ is simple. We use induction on the number of reductions. Let the first
+reduction be at $v$, giving $G'$. By induction $G'$ has a tree-decomposition $(T, \chi)$ of width
+$\le 2$, and it is also a tree-decomposition of $G \setminus v$, since every edge of
+$G \setminus v$ is an edge of $G'$. Some bag $X_{t_0}$ contains all neighbours of $v$. If $v$ has
+at most one neighbour this follows from (i). If $v$ has two neighbours, they are adjacent in $G'$,
+and it follows from (ii). Add to $T$ a new vertex $t'$ adjacent to $t_0$, with $X_{t'}$ consisting
+of $v$ and its neighbours. As in the proof of (1.1), this is a tree-decomposition of $G$, and its
+width is $\le 2$.
+
+\textit{Proof of} (1.3). Let $(T, \chi)$ be a tree-decomposition of $G$ whose width $w$ is the
+tree-width of $G$. We show that $H$ has a tree-decomposition of width $\le w$. Since $H$ is a minor of $G$, there are disjoint non-empty
+sets $Y(v) \subseteq V(G)$ $(v \in V(H))$, each inducing a connected subgraph of $G$, such that for
+every edge of $H$ with distinct ends $u, v$, some edge of $G$ has one end in $Y(u)$ and the other in
+$Y(v)$. (Take for $Y(v)$ the set of vertices of $G$ that are contracted into $v$.) For
+$t \in V(T)$ let $X'_t$ be the set of all $v \in V(H)$ with $Y(v) \cap X_t \ne \emptyset$. Choosing
+for each $v \in X'_t$ a vertex in $Y(v) \cap X_t$ gives distinct vertices for distinct $v$, since
+the sets $Y(v)$ are disjoint, and so $|X'_t| \le |X_t|$. We claim that $(T, (X'_t))$ is a
+tree-decomposition of $H$. (i) holds since each $Y(v)$ is non-empty. For (ii), by the remark above we need
+only consider edges with two ends. If $u, v$ are the ends of an edge of $H$, some edge of $G$ has ends $x \in Y(u)$ and $y \in Y(v)$, and some $X_t$
+contains $x$ and $y$, and then $u, v \in X'_t$. For (iii), we first show:
+
+\hspace*{12pt}(1) \textit{Let $K$ be a connected subgraph of $G$, and let $a, b, c \in V(T)$, where
+$c$ lies on the path of $T$ between $a$ and $b$. If $K$ has a vertex in $X_a$ and a vertex in
+$X_b$, then $K$ has a vertex in $X_c$.}
+
+Let $x \in V(K) \cap X_a$. We show, by induction on the length of a walk of $K$ from $x$ to $y$,
+that for every $b \in V(T)$ with $y \in X_b$, and every $c$ on the path of $T$ between $a$ and $b$,
+some vertex of $K$ is in $X_c$. If the walk has length 0 then $y = x$, and
+$x \in X_a \cap X_b \subseteq X_c$ by (iii). Otherwise let $y'$ be the vertex of the walk before
+$y$. By (ii) some $X_q$ contains $y'$ and $y$. The path of $T$ between $a$ and $b$ is contained in
+the union of the paths between $a$ and $q$ and between $q$ and $b$, and so $c$ lies on one of them.
+If $c$ lies on the path between $a$ and $q$, we apply induction to the walk from $x$ to $y'$, since
+$y' \in X_q$. If $c$ lies on the path between $q$ and $b$, then $y \in X_q \cap X_b \subseteq X_c$
+by (iii). This proves (1).
+
+Now if $v \in X'_a \cap X'_b$ and $c$ lies on the path of $T$ between $a$ and $b$, then by (1)
+applied to the subgraph induced on $Y(v)$, some vertex of $Y(v)$ is in $X_c$, and so $v \in X'_c$.
+This proves (iii), and (1.3) follows.
+
+\textit{Proof of} (1.4). A single bag $V(K_n)$ shows that $K_n$ has tree-width $\le n - 1$.
+Conversely, in a tree-decomposition of $K_n$, some bag contains a vertex and all its neighbours, as
+shown in the proof of (1.2), and so it contains all $n$ vertices. Hence $K_n$ has tree-width
+$n - 1$.
+
+Now let $\theta \ge 2$, and for $1 \le i, j \le \theta$ let $r(v_{ij}) = \theta(i - 1) + j - 1$, so
+that $r$ maps the vertices of the $\theta$-grid one-to-one onto $\{0, \dots, \theta^2 - 1\}$, and
+adjacent vertices have values of $r$ differing by $1$ or $\theta$. Let $L = \theta^2 - \theta$, let
+$T$ be the path with vertices $0, 1, \dots, L - 1$ in order, and for $0 \le k \le L - 1$ let
+$X_k$ be the set of vertices $v$ with $k \le r(v) \le k + \theta$. Each $X_k$ has at most
+$\theta + 1$ vertices. A vertex $v$ is in $X_k$ for $k = \min(r(v), L - 1)$, and the ends $x, y$ of
+an edge, with $r(x) < r(y)$, are both in $X_k$ for $k = \min(r(x), L - 1)$, since
+$r(y) \le \min(r(x) + \theta, \theta^2 - 1)$. The bags containing $v$ are those with
+$r(v) - \theta \le k \le r(v)$, and they form a subpath of $T$. So this is a tree-decomposition of
+width $\le \theta$.
+
+For the converse we need two more facts.
+
+\hspace*{12pt}(2) \textit{Let $A_j$ $(j \in J)$ be non-empty sets of vertices of a tree $T$, each
+containing the path of $T$ between any two of its members, such that $A_i \cap A_j \ne \emptyset$
+for all $i, j \in J$. Then some vertex of $T$ is in every $A_j$.}
+
+We use induction on $|V(T)|$. If $|V(T)| = 1$ this holds since each $A_j$ is non-empty. Otherwise
+let $t$ have valency 1 in $T$, with neighbour $s$. If $A_i \subseteq \{t\}$ for some $i$, then
+$t \in A_j$ for every $j$, since $A_i \cap A_j \ne \emptyset$. Otherwise each $A_j$ has a vertex
+other than $t$, and so if $t \in A_j$ then $s \in A_j$, since $s$ lies on the path from $t$ to that
+vertex. Hence the sets $A_j - \{t\}$ are non-empty, each contains the path of $T \setminus t$
+between any two of its members, and any two of them meet, since if $t \in A_i \cap A_j$ then
+$s \in A_i \cap A_j$. By induction some vertex of
+$T \setminus t$ is in all of them. This proves (2).
+
+\hspace*{12pt}(3) \textit{Let $(T, \chi)$ be a tree-decomposition of $G$, and let $M_j$ $(j \in J)$ be
+connected subgraphs of $G$ such that for all
+$i, j \in J$, either $M_i$ and $M_j$ have a common vertex or some edge of $G$ joins them. Then some
+bag $X_t$ contains a vertex of every $M_j$.}
+
+For $j \in J$, let $A_j$ be the set of $t \in V(T)$ such that $X_t$ contains a vertex of $M_j$. It is
+non-empty by (i), and it contains the path of $T$ between any two of its members, by (1). For
+$i, j \in J$, a bag containing a common vertex of $M_i$ and $M_j$ (which exists by (i)), or both
+ends of an edge joining them (which exists by (ii)), is in $A_i \cap A_j$. So (3) follows from (2).
+
+Now let $(T, \chi)$ be a tree-decomposition of the $\theta$-grid. Let $R$ be the subgraph induced
+on $\{v_{1j} : 1 \le j \le \theta\}$, and let $C$ be the subgraph induced on
+$\{v_{i1} : 2 \le i \le \theta\}$. For $2 \le i, j \le \theta$, let $Q_{ij}$ be the subgraph
+induced on the union of $\{v_{ij'} : 2 \le j' \le \theta\}$ and $\{v_{i'j} : 2 \le i' \le \theta\}$.
+These subgraphs are connected, and any two of them have a common vertex or are joined by an edge.
+For $v_{11} \in V(R)$ is adjacent to $v_{21} \in V(C)$. For $2 \le i, j \le \theta$, the vertex
+$v_{1j}$ of $R$ is adjacent to $v_{2j} \in V(Q_{ij})$, and the vertex $v_{i1}$ of $C$ is adjacent to
+$v_{i2} \in V(Q_{ij})$. Finally, for $2 \le i, j, i', j' \le \theta$, the vertex $v_{ij'}$ belongs to
+both $Q_{ij}$ and $Q_{i'j'}$. By (3), some bag $X_t$ contains a vertex $x$ of $R$, a vertex $y$ of $C$, and a vertex of every
+$Q_{ij}$. Let $S$ be the set of vertices $v_{ij} \in X_t$ with $i, j \ge 2$. If for every
+$i \ge 2$ some $v_{ij}$ with $j \ge 2$ is in $X_t$, then $|S| \ge \theta - 1$. Otherwise there
+exists $i \ge 2$ such that no $v_{ij}$ with $j \ge 2$ is in $X_t$. Then for each $j \ge 2$, the
+vertex of $Q_{ij}$ in $X_t$ is $v_{i'j}$ for some $i' \ge 2$, and so again $|S| \ge \theta - 1$.
+The vertices $x$ and $y$ are distinct and not in $S$. Hence $|X_t| \ge \theta + 1$, and the
+$\theta$-grid has tree-width $\theta$.\fixnote{fix:1.1-1.4-proofs-added}{The paper says that
+(1.1)--(1.4) are easy to prove and gives no proofs. The arguments above are the ones used in the
+formalization.}}
+
+The principal result of this paper is
+
+\stmt
+(1.5) \textit{For every planar graph $H$, there is a number $w$ such that every \del{planar} graph with no minor isomorphic to $H$ has tree-width $\le w$.}\fixnote{fix:1.5}{The second ``planar'' is a misprint. The paper proves and uses the statement for every graph: (2.1), its restatement on page 95, says ``every graph'', and the proof of (8.8) on page 111 applies (1.5) to all graphs.}
+
+We remark that if $H$ is non-planar there is no such number $w$: because, for example, the $\theta$-grids have arbitrarily large tree-width and yet have no minor isomorphic to $H$.
+
+The main step in the proof of (1.5) is the following, which seems to be of some independent interest.
+
+\stmt
+(1.6) \textit{For any positive integer $\theta$ there exists an integer $\theta'$ such that if $G$ has subgraphs $H$ and $K$, each with $\ge \theta'$ components, and if each component of $H$ meets each component of $K$, then $G$ contains a $\theta$-grid minor.}
+
+In earlier papers of this series, (1.5) was used to show the following.
+
+\stmt
+(1.7) [11]. \textit{If $G_1, G_2, \ldots$ is a countable sequence of graphs and $G_1$ is planar, then there exist $i, j$ with $j > i$ such that $G_i$ is isomorphic to a minor of $G_j$.}
+
+(This is a partial result towards an unpublished conjecture of Wagner, that (1.7) is true even if $G_1$ is not planar.)

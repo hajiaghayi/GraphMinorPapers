@@ -1,0 +1,30 @@
+\origpage{193}{GRAPH MINORS, XVII}
+\textit{Proof.} Suppose that (ii) is false, and let $(A_1, A_2)$ be a separation as in (ii). Let $F_0 = bd(\Delta) \cap bd(\Sigma)$ have ends $n_1, n_2$ and let $F_1, F_2 \subseteq \Delta$ be closed line segments, both with ends $n_1, n_2$ and with
+\begin{equation*}
+F_1 \cap F_2 = (F_1 \cup F_2) \cap bd(\Delta) = \{n_1, n_2\},
+\end{equation*}
+where $F_2$ is a subset of the disc in $\Delta$ bounded by $F_1 \cup F_0$. Let $\Delta_2 \subseteq \Delta$ be the disc bounded by $F_0 \cup F_2$ and let $\Delta_1 \subseteq \Delta$ be the disc bounded by $(bd(\Delta) - F_0) \cup F_1$. Let
+\begin{equation*}
+\Gamma' = ((U(\Gamma) - \Delta) \cup \Delta_1 \cup \Delta_2, (N(\Gamma) - \Delta) \cup \{n_1, n_2, n_3\}).
+\end{equation*}
+Then $\Gamma'$ is a painting in $\Sigma$ and $c_1 = \Delta_1 - \{n_1, n_2, n_3\}$, $c_2 = \Delta_2 - \{n_1, n_2\}$ are cells of it, and $C(\Gamma') = \{c_1, c_2\} \cup \{c \in C(\Gamma) : c \nsubseteq \Delta\}$. Define
+\begin{align*}
+\alpha'(c_1) &= A_1 \\
+\alpha'(c_2) &= A_2 \\
+\alpha'(c) &= \alpha(c) && (c \in C(\Gamma') - \{c_1, c_2\}) \\
+\beta'(n) &= \beta(n) && (n \in N(\Gamma') \cap bd(\Sigma)) \\
+\gamma'(n) &= \gamma'n) && (n \in N(\Gamma')).
+\end{align*}
+Then it is easy to check that $\pi' = (\Sigma, \Gamma', \alpha', \beta', \gamma')$ is a portrayal of $G$. Since $\alpha(\Delta)$ is small it follows that $A_1$ and $A_2$ are small, and so $\pi'$ is $\mathscr{T}$-central. Let us check its warp. It suffices to check the warp condition for $c_2$. Now $\beta(n_1 +) \cap \beta(n_2 +) \subseteq \beta(n +)$ for every $n \in N(\Gamma) \cap F_0$, by (6.7) with $z = 2p + 4$, since $\pi$ is $(2p + 4)$-redundant and $ord(\mathscr{T}) > 4p + 6$. By applying (7.3) to the ``restriction'' of $\pi$ to $A_2$ we deduce that the warp condition holds for $c_2$. Consequently, $\pi'$ is a $\mathscr{T}$-central portrayal of $G$ resembling $\pi$. Since it is not truer, and yet $\Delta$ includes a cell $c_0$ of $\Gamma$ with $|\tilde{c}_0| = 3$, it follows that (i) holds. $\square$
+
+We denote by $S$ the union, over all border cells $c$, of the vertex set of the standard linkage in $\alpha(c)$. For any separation $(A, B)$ of $G$ we define
+\begin{equation*}
+D(A, B) = \{c \in C^*(\Gamma) : \gamma(\tilde{c}) \nsubseteq V(A) \text{ and } \gamma(\tilde{c}) \nsubseteq V(B)\}.
+\end{equation*}
+(We remind the reader that $C^*(\Gamma)$ was defined immediately before (8.7).)
+
+\stmt
+(11.4) \textit{For any separation $(A, B)$ of $G$, if $d \in D(A, B)$ then}
+\begin{equation*}
+V(A \cap B) \cap (V(\alpha(d)) - (S \cup V(\alpha(-d)))) \ne \emptyset.
+\end{equation*}

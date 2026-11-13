@@ -1,0 +1,36 @@
+\origpage{81}{GRAPH MINORS. XIII}
+\noindent two members of $Z$, and by (1) again, condition (iii) holds after contraction of $e$. This proves (2).
+
+Let $X = V(G) - Z$, and $Y = \bigcup(V(G_i) : 1 \le i \le k, |V(G_i)| \ge 2)$.
+
+\hspace*{12pt}(3) \textit{$Y \subseteq Z$; every vertex $x \in X$ is adjacent to every member of $(X - \{x\}) \cup (Z - Y)$; and $|X| - |Y| \ge k - \lfloor \frac{1}{2}|Y| \rfloor - \xi \ge 0$.}
+
+\textit{Subproof.} From (2) and hypothesis (i), it follows that for $1 \le i \le k$, either $|V(G_i)| = 1$ or $V(G_i) \subseteq Z$; and so $Y \subseteq Z$. Since no vertex is isolated, it follows from (2) that
+\begin{equation*}
+V(G) = \bigcup(V(G_i) : 1 \le i \le k).
+\end{equation*}
+Hence the second claim holds and, moreover,
+\begin{equation*}
+X \cup (Z - Y) = \bigcup(V(G_i) : 1 \le i \le k, |V(G_i)| = 1).
+\end{equation*}
+Consequently,
+\begin{equation*}
+|X| + |Z - Y| = |\{1 \le i \le k, |V(G_i)| = 1\}|;
+\end{equation*}
+but
+\begin{equation*}
+\lfloor \frac{1}{2}|Y| \rfloor \le |\{i : 1 \le i \le k, |V(G_i)| \ge 2\}|
+\end{equation*}
+and, adding, we deduce the first inequality. The second holds since $k \ge \lfloor \frac{3}{2}\xi \rfloor$ and $|Y| \le \xi$. This proves (3).
+
+\hspace*{12pt}(4) \textit{There is a matching $M \subseteq E(G)$ with $|M| = |Y|$, such that every member of $M$ has one end in $Y$ and the other in $X$.}
+
+\textit{Subproof.} Let $Y' \subseteq Y$ and let $X' \subseteq X$ be the set of vertices of $X$ with a neighbour in $Y'$. Suppose that $|X'| < |Y'|$. Then $X' \ne X$, since $|X| \ge |Y| \ge |Y'|$ by (3); choose $x \in X - X'$. Choose $i$ with $1 \le i \le k$ and $V(G_i) = \{x\}$. Let $(A, B)$ be a separation of $G$ with $V(A) = Z \cup X'$, $V(B) = V(G) - Y'$. Then $A \cap G_i$ is null, and yet $(A, B)$ has order $|Z - Y'| + |X'| < \xi$, contrary to (iii). Thus $|X'| \ge |Y'|$, and (4) follows from Hall's theorem.
+
+Let $\mu = |Z - Y|$, let $\kappa = k - \lfloor \frac{1}{2}|Y| \rfloor$, and let $M$ be as in (4). For $1 \le i \le \kappa$ we define $H_i$ as follows, mutually vertex-disjoint:
+
+\hspace*{12pt}(i) for $1 \le i \le \mu$, $H_i$ consists of a vertex of $Z - Y$
+
+\hspace*{12pt}(ii) for $\mu + 1 \le i \le \xi$, $H_i$ consists of an edge of $M$ and its ends
+
+\hspace*{12pt}(iii) for $\xi + 1 \le i \le \kappa$, $H_i$ consists of a vertex of $X$ incident with no member of $M$.

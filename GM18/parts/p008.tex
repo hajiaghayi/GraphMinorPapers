@@ -1,0 +1,30 @@
+\origpage{84}{N. Robertson, P. Seymour / Journal of Combinatorial Theory, Series B 89 (2003) 77--108}
+\textbf{3.4.} \textit{Let $\mathscr{L}$ be a location in a hypergraph $G$, such that each $(A, B) \in \mathscr{L}$ is titanic, and $\mathscr{L}$ has order $< \theta$, where $\theta \ge 2$. Then either there is a tangle $\mathscr{T}$ in $G$ of order $\theta$ with $\mathscr{L} \subseteq \mathscr{T}$, or $\mathscr{L}$ has tree-width $\le \frac{3}{2}\theta$.}
+
+\textbf{Proof.} Define $H$ as above. If there is no tangle in $H$ of order $\theta$, then by 2.2 the tree-width of $H$ is at most $\frac{3}{2}\theta$, as required. So we may assume that there is a tangle $\mathscr{T}_0$ in $H$ of order $\theta$. Let
+\begin{equation*}
+\mathscr{L} = \{(A_1, B_1), \dots, (A_n, B_n)\},
+\end{equation*}
+and for $1 \le i \le n$ let $C_i$ be the subhypergraph of $H$ with $V(C_i) = V(A_i \cap B_i)$ and $E(C_i) = \{e(A_i, B_i)\}$. Thus,
+\begin{equation*}
+H = M(G, \mathscr{L}) \cup C_1 \cup \dots \cup C_n,
+\end{equation*}
+and
+\begin{equation*}
+G = M(G, \mathscr{L}) \cup A_1 \cup \dots \cup A_n.
+\end{equation*}
+For $0 \le k \le n$, let
+\begin{equation*}
+H_k = M(G, \mathscr{L}) \cup A_1 \cup \dots \cup A_k \cup C_{k+1} \cup \dots \cup C_n.
+\end{equation*}
+Then $H_0 = H$ and $H_n = G$. For $1 \le j \le k$, let
+\begin{equation*}
+B_{jk} = M(G, \mathscr{L}) \cup \bigcup (A_i \colon 1 \le i \le k, \ i \ne j) \cup C_{k+1} \cup \dots \cup C_n.
+\end{equation*}
+Then $(A_j, B_{jk})$ is a separation of $H_k$, and $A_j \cap B_{jk} = A_j \cap B_j$. We claim that, for $0 \le k \le n$,
+
+\hspace*{12pt}(1) \textit{There is a tangle $\mathscr{T}_k$ in $H_k$ of order $\theta$ such that $(A_j, B_{jk}) \in \mathscr{T}_k$ for $1 \le j \le k$.}
+
+\textbf{Subproof.} We proceed by induction on $k$. It holds for $k = 0$, and we therefore assume that $1 \le k \le n$ and that $\mathscr{T}_{k-1}$ satisfies (1) with $k$ replaced by $k - 1$. Since $(C_k, B_{kk})$ has order $< \theta$ (because $\mathscr{L}$ has order $< \theta$) it follows from (T3) that $(C_k, B_{kk}) \in \mathscr{T}_{k-1}$. Now $(A_k, B_k)$ is titanic, and hence so is $(A_k, B_{kk})$ by 3.1. Let $\mathscr{T}_k$ be the set of all separations $(A', B')$ of $H_k$ of order $< \theta$ such that there exists $(A, B) \in \mathscr{T}_{k-1}$ with $E(A \cap B_{kk}) = E(A' \cap B_{kk})$. By 3.2 (with $C, D, G, C', G', \mathscr{T}, \theta, \mathscr{T}'$ replaced by $C_k, B_{kk}, H_{k-1}, A_k, H_k, \mathscr{T}_{k-1}, \theta, \mathscr{T}_k$) $\mathscr{T}_k$ is a tangle in $H_k$ of order $\theta$. Let $1 \le j \le k$; we must verify that $(A_{\delm{k}\fix{j}}, B_{jk}) \in \mathscr{T}_k$.\fixnote{fix:3.4-claim1}{The next sentences are about $A_j$.} If $j < k$, then $(A_j, B_{j, k-1}) \in \mathscr{T}_{k-1}$ from the inductive hypothesis, and so $(A_j, B_{jk}) \in \mathscr{T}_k$ from the definition of $\mathscr{T}_k$. We assume then that $j = k$. But $(C_k, B_{kk}) \in \mathscr{T}_{k-1}$ as we saw above, and $E(C_k \cap B_{kk}) = \emptyset = E(A_k \cap B_{kk})$ and so $(A_k, B_{kk}) \in \mathscr{T}_k$ from the definition of $\mathscr{T}_k$. Thus $\mathscr{T}_k$ satisfies (1); and so (1) holds, by induction on $k$.
+
+From (1) with $k = n$, we deduce that $(A_j, B_j) \in \mathscr{T}_n$ for $1 \le j \le n$, since $B_j = B_{jn}$; and so $\mathscr{L} \subseteq \mathscr{T}_n$. This proves 3.4. $\square$

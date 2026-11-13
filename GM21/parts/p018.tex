@@ -1,0 +1,26 @@
+\origpage{16}{}
+\hspace*{12pt}(2) \textit{If} $\Gamma \setminus v$ \textit{is not 2-cell in} $\hat{\Sigma}$ \textit{then there is no vital linkage in} $\Gamma$ \textit{with set of terminals} $V(\Gamma) \cap bd(\Sigma)$.
+
+\textit{Subproof.} Suppose that $L$ is a vital linkage in $\Gamma$ with set of terminals $V(\Gamma) \cap bd(\Sigma)$, and that $r$ is a region of $\Gamma \setminus v$ in $\hat{\Sigma}$ which is not homeomorphic to an open disc. Consequently $v \in r$. Since $r$ is not homeomorphic to an open disc there is by [5, theorem (4.2)] an $O$-arc $F \subseteq r$ which bounds no disc in $r$; and it can be chosen so that $F \cap U(\Gamma) = \{v\}$. Since $|F \cap V(\Gamma)| \le 1$ it follows that $ins(F)$ exists, and $ins(F) \not\subseteq r$. Consequently, $ins(F) \cap U(\Gamma \setminus v) \ne \emptyset$. Since $L$ is vital there exists a component of $P$ of $L$ with $V(P) \cap ins(F) \not\subseteq F$, and it follows that one end $s$ of $P$ is in $ins(F) \setminus F$, since $V(P) \cap F \subseteq \{v\}$. Let $r_1$ be the cuff region with $s \in \bar{r}_1$. Then $\bar{r}_1 \cap (ins(F) \setminus F) \ne \emptyset$, and so $d(r_1, v) \le 1$, contrary to (1). This proves (2).
+
+Let $\Gamma' = \Gamma \setminus v$. By (2), we may assume that $\Gamma$ is 2-cell in $\hat{\Sigma}$. Since $d(\{v\}, e) \le 2$ for every edge $e$ of $\Gamma$ not in $\Gamma'$, and $ord(\mathcal{T}) \ge \theta' \ge 7$, it follows from theorem (7.8) of [7] that
+
+\hspace*{12pt}(3) \textit{There is a respectful tangle} $\mathcal{T}'$ \textit{in} $\Gamma'$ \textit{of order} $ord(\mathcal{T}) - 4$, \textit{such that}
+
+\hspace*{12pt}(i) $(A \cap \Gamma', B \cap \Gamma') \in \mathcal{T}'$ \textit{for every} $(A, B) \in \mathcal{T}$ \textit{of order} $< ord(\mathcal{T}) - 4$, \textit{and}
+
+\hspace*{12pt}(ii) \textit{if} $a, b \in A(\Gamma, \hat{\Sigma})$ \textit{and} $a', b' \in A(\Gamma', \hat{\Sigma})$ \textit{satisfy} $a \subseteq a'$ \textit{and} $b \subseteq b'$, \textit{then}
+\begin{equation*}
+d(a, b) \ge d'(a', b') \ge d(a, b) - 8,
+\end{equation*}
+\textit{where} $d'$ \textit{is the metric of} $\mathcal{T}'$.
+
+Let $ins'$ be the function derived from $\mathcal{T}'$ analogous to $ins$.
+
+\hspace*{12pt}(4) \textit{If} $F \subseteq \Sigma$ \textit{is a} $\Gamma'$\textit{-normal} $O$\textit{-arc with} $|F \cap V(\Gamma')| < |C \cap V(\Gamma')|$ \textit{for some cuff} $C$, \textit{then} $C \not\subseteq ins'(F)$.
+
+\textit{Subproof.} Let $r_1$ be the cuff region of $\Gamma$ in $\hat{\Sigma}$ corresponding to $C$. Since $d(r_1, v) \ge 2$ it follows that $v$ is not incident with $r_1$ and so $r_1$ is also the cuff region of $\Gamma'$ in $\hat{\Sigma}$ corresponding to $C$. Let $r$ be the region of $\Gamma'$ with $v \in r$. If $F \cap r \ne \emptyset$, then
+\begin{equation*}
+d'(r, r_1) \le |F \cap V(\Gamma')| < |C \cap V(\Gamma')| \le |bd(\Sigma) \cap V(\Gamma)| = p
+\end{equation*}
+and so by (3)(ii), $d(v, r_1) \le p+8$, contrary to (1) since $\theta' \ge p+9$. Consequently $F \cap r = \emptyset$, and so $F$ is $\Gamma$-normal, and $|F \cap V(\Gamma)| < |C \cap V(\Gamma)|$. From (i) it follows that $C \not\subseteq ins(F)$. Let $\Delta = ins(F)$. Then

@@ -1,0 +1,38 @@
+\origpage{85}{GRAPH MINORS. XIII}
+\noindent automatically maximal, if we run the augmenting paths starting from $V(G_i)$. Thus this is easy.) We choose $\xi'$ minimum such that some $(A_i, B_i)$ has order $\xi'$, and we choose $i$ with $A_i$ maximal such that $(A_i, B_i)$ has order $\xi'$. We choose $v \in V(G_i)$. Then $v$ is the desired irrelevant vertex, by (6.1), since $(A_i, B_i)$ satisfies the conditions for $(A, B)$ in (6.1).
+
+The algorithm involves computing $(A_i, B_i)$ for $\le p$ values of $i$; and each computation can be performed with a standard network flow algorithm in time $O(\varepsilon)$. Thus the algorithm has running time $O(\varepsilon)$. $\square$
+
+\stmt
+(6.2) will form one of the key steps of our algorithm for Folio, but there is also a peripheral application for it, to reduce our general problem to the case when $|E(G)| \le O(\nu)$ and, thus, to improve the overall running time of the main algorithm. In the remainder of this section we explain this.
+
+If $G$ is a graph and $X \subseteq V(G)$, we denote by $N(X)$ the set of vertices in $V(G) - X$ with a neighbour in $X$. First, we need the following.
+
+\stmt
+(6.3) \textsc{Algorithm}.
+
+\textit{Input:} An integer $k > 0$ and a non-null simple graph $G$ with $|E(G)| \ge k |V(G)|$.
+
+\textit{Output:} A subset $X \subseteq V(G)$ such that
+
+\hspace*{12pt}(i) the restriction of $G$ to $X$ is non-null and connected
+
+\hspace*{12pt}(ii) $N(X)$ is non-null, and
+
+\hspace*{12pt}(iii) every vertex of $N(X)$ has $\ge k$ neighbours in $N(X)$.
+
+\textit{Running time:} $O(\nu\varepsilon)$.
+
+\textit{Description:} (1) Choose a component $H$ of $G$ with $|E(H)| \ge k |V(H)|$, and choose $v_1 \in V(H)$.
+
+\hspace*{12pt}(2) We perform a recursion. Set $X_1 = \{v_1\}$. At the start of the $i$ th step of the recursion we have a subset $X_i \subseteq V(H)$ with $|X_i| = i$ such that $X_i$ meets at most $|N(X_i)| + k(i - 1)$ edges, and such that the restriction of $G$ to $X_i$ is connected.
+
+\hspace*{12pt}(3) If there exists $v \in N(X_i)$ with $< k$ neighbours in $N(X_i)$, we set $X_{i+1} = X_i \cup \{v\}$ and return for the next iteration. To check the inequality, let $v$ have $d_1$ neighbours in $N(X_i)$ and $d_2$ in $V(H) - (X_i \cup N(X_i))$. Then
+\begin{equation*}
+|N(X_{i+1})| = |N(X_i)| - 1 + d_2
+\end{equation*}
+and $X_{i+1}$ meets $d_1 + d_2 \le k - 1 + d_2$ edges not met by $X_i$. It follows that $X_{i+1}$ meets at most
+\begin{equation*}
+|N(X_i)| + k(i - 1) + k - 1 + d_2 = |N(X_{i+1})| + ki
+\end{equation*}
+edges in total, and so $X_{i+1}$ has the properties claimed.

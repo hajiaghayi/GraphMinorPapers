@@ -1,0 +1,20 @@
+\origpage{1}{}
+\sectionhead{1 Introduction}
+
+A \textit{linkage} in a graph $G$ is a subgraph every component of which is a path. (All graphs in this paper are finite and undirected, and may have loops or parallel edges. \textit{Paths} have at least one vertex, and have no ``repeated'' vertices or edges.) A vertex of $G$ is a \textit{terminal} of a linkage $L$ in $G$ if $v \in V(L)$ and $v$ has degree $\le 1$ in $L$. The \textit{pattern} of a linkage $L$ is the partition of its terminals in which two terminals are in the same block if and only if they belong to the same component of $L$. A linkage is a \textit{$p$-linkage} if it has $\le p$ terminals, where $p \ge 0$ is an integer. A linkage $L$ in $G$ is \textit{vital} if $V(L) = V(G)$, and no linkage in $G$ different from $L$ has the same pattern as $L$.
+
+A \textit{tree-decomposition} of a graph $G$ is a pair $(T, W)$, where $T$ is a tree and $W = (W_t : t \in V(T))$ is a family of subgraphs of $G$, satisfying
+
+\hspace*{12pt}1. $\bigcup(W_t : t \in V(T)) = G$, and
+
+\hspace*{12pt}2. if $t, t', t'' \in V(T)$ and $t'$ lies on the path of $T$ between $t$ and $t''$, then $W_t \cap W_{t''} \subseteq W_{t'}$.
+
+It has width $\le w$ if $|V(W_t)| \le w + 1$ for every $t \in V(T)$, and $G$ has \textit{tree-width} $\le w$ if some tree-decomposition has width $\le w$.
+
+The main objective of this paper is to prove the following.
+
+\textbf{1.1} \textit{For every integer $p \ge 0$ there exists $w \ge 0$ such that every graph with a vital $p$-linkage has tree-width $\le w$.}
+
+This has a large number of applications. For instance, in section 11 we use it to obtain a constructive proof of the intertwining conjecture, proved non-constructively in [11]. In the next paper of this series we show that it implies theorem (10.2) of [8], which was left unproved in that paper, and which is needed to justify the main algorithm for the $p$ disjoint paths problem described in that paper; and that it also implies, for example, the main theorem of [5].
+
+Despite all these applications, it seems unlikely that such an apparently innocuous statement should need the elaborate proof that we give in this paper; and perhaps (1.1) has an easy proof that we have missed. If $p \le 5$ (1.1) is indeed easy, and in fact for $p \le 5$, every graph with a vital $p$-linkage has path-width $\le p$. (\textit{Path-width} is defined in the same way as tree-width except that the tree $T$ is required to be a path.) We shall not need this result, and so we omit its proof, but it follows easily by induction from the following.

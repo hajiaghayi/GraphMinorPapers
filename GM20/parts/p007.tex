@@ -1,0 +1,27 @@
+\origpage{331}{N. Robertson, P.D. Seymour / Journal of Combinatorial Theory, Series B 92 (2004) 325--357}
+\noindent $Q_i$ in $Q_j$. Consequently
+\begin{equation*}
+\omega_2 = \phi_i(e_i) \le \phi_j(\eta(e_i))
+\end{equation*}
+and so $\phi_j(\eta(e_i)) = \omega_2$, that is, $\eta(e_i) = e_j$. But $e_i \in dom(\mu_i)$, and so $\mu_i(e_i)$ and $\mu_j(\eta(e_i))$ have the same length; that is,
+\begin{equation*}
+n_i = |\bar{\mu}_i(e_i)| = |\bar{\mu}_j(\eta(e_i))| = |\bar{\mu}_j(e_j)| = n_j,
+\end{equation*}
+a contradiction. The result follows. $\square$
+
+Let $\Omega_1, \Omega_2$ be quasi-orders, and let $\mathcal{F}_i$ be a set of $\Omega_i$-patchworks ($i = 1, 2$). A function $\gamma : \mathcal{F}_2 \to \mathcal{F}_1$ is an \textit{encoding} of $\mathcal{F}_2$ in $\mathcal{F}_1$ if $P$ is simulated in $P'$ for all $P, P' \in \mathcal{F}_2$ such that $\gamma(P)$ is simulated in $\gamma(P')$. The following is a convenient lemma for producing new well-behaved sets of patchworks.
+
+\textbf{4.2.} \textit{Let $\mathcal{F}_1, \mathcal{F}_2$ be sets of patchworks where $\mathcal{F}_1$ is well-behaved. Suppose that for every well-quasi-order $\Omega_2$ there is a well-quasi-order $\Omega_1$ and an encoding of the set of all $\Omega_2$-completions of members of $\mathcal{F}_2$ in the set of all $\Omega_1$-completions of members of $\mathcal{F}_1$. Then $\mathcal{F}_2$ is well-behaved.}
+
+The proof is clear.
+
+\textbf{4.3.} \textit{Let $\mathcal{F}_1$ be a well-behaved set of patchworks. Let $\mathcal{F}_2$ be the set of all patchworks $P_2 = (G_2, \mu, \Delta)$ such that there exist $(G_1, \mu, \Delta) \in \mathcal{F}_1$ and $v \in V(G_1) \setminus \bar{\pi}(G_1)$ such that $G_2^- = G_1^-$ and $\pi(G_2)$ is the concatenation of $\pi(G_1)$ with a new last term $v$ and $v$ is incident with some edge $e \in dom(\mu)$. Then $\mathcal{F}_2$ is well-behaved.}
+
+\textbf{Proof.} Choose $N$ as in 4.1 (with $\mathcal{F}$ replaced by $\mathcal{F}_1$). For $1 \le r \le N$, let $\delm{C^r}\fix{\mathcal{F}^r}$\fixnote{fix:4.3-Fr}{In the same way, $C_1$ below becomes $\mathcal{F}_1$. The rest of the proof uses the names $\mathcal{F}^r$ and $\mathcal{F}_1$.} be the set of those patchworks $P_2 = (G_2, \mu, \Delta) \in \mathcal{F}_2$ such that $v, e$ may be chosen as above with $v$ the $r$th term of $\mu(e)$. Since $\mathcal{F}_2 = \mathcal{F}^1 \cup \dots \cup \mathcal{F}^N$ and the union of finitely many well-behaved sets is well-behaved, it suffices to show that $\mathcal{F}^r$ is well-behaved for each $r$.
+
+Let $\Omega_2$ be a well-quasi-order. Let $\Omega_3$ be an isomorphic copy of $\Omega_2$ with $E(\Omega_2) \cap E(\Omega_3) = \emptyset$, and let $\lambda \delm{=}\fix{\colon} \Omega_2 \to \Omega_3$ be an isomorphism.\fixnote{fix:4.3-lambda}{Here $\lambda$ is a map from $\Omega_2$ to $\Omega_3$.} Let $\Omega_1 = \Omega_2 \cup \Omega_3$. Let $Q_2 = (G_2, \mu, \Delta, \phi_2)$ be an $\Omega_2$-completion of a member $P_2 = (G_2, \mu, \Delta)$ of $\mathcal{F}^r$. Let $v$ be the last term of $\pi(G_2)$, and let $G_1$ be the hypergraph with $G_1^- = G_2^-$ and $\pi(G_1)$ the sequence obtained from $\pi(G_2)$ by deleting $v$. Then $P_1 = (G_1, \mu, \Delta) \in \delm{C_1}\fix{\mathcal{F}_1}$. Choose $f \in dom(\mu)$ such that $v$ is the $r$th term of $\mu(f)$. Define an $\Omega_1$-completion $Q_1 = (G_1, \mu, \Delta, \phi_1)$ of $P_1$ as follows:
+\begin{align*}
+\phi_1(e) &= \phi_2(e) \quad (e \in E(G_1) \setminus \{f\}), \\
+\phi_1(f) &= \lambda(\phi_2(f)).
+\end{align*}
+We define $\delm{\lambda}\fix{\gamma}(Q_2) = Q_1$, and claim that $\gamma$ is an encoding.\fixnote{fix:4.3-gamma}{The map being defined is the encoding $\gamma$.} For suppose that $\gamma(Q'_2) = Q'_1$, where $Q'_2 = (G'_2, \mu', \Delta', \phi'_2)$, etc., and $\eta$ is a realizable expansion of $Q_1$ in $Q'_1$. Then

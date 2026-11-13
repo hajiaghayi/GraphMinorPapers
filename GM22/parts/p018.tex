@@ -1,0 +1,42 @@
+\origpage{547}{N. Robertson, P. Seymour / Journal of Combinatorial Theory, Series B 102 (2012) 530--563}
+\noindent such that $d(y, \Sigma \setminus \Delta) < \theta - 3$. Now $y, z$ both intersect $D(A)$, and $bd(D(A))$ is a $\Gamma$-normal $O$-arc with $|bd(D(A)) \cap V(\Gamma)| \le 3$ and $ins(D(A)) = D(A)$, by (J4). Consequently $d(y, z) \le 3$. But
+\begin{equation*}
+\theta \le d(D(A'), \Sigma \setminus \Delta) \le d(z, \Sigma \setminus \Delta) \le d(y, z) + d(y, \Sigma \setminus \Delta) \le 3 + (\theta - 4),
+\end{equation*}
+a contradiction. This proves (iii). $\square$
+
+Let (J1)--(J6) hold, and let $\phi'$ be a model of $(H, \chi)$ in $(G, \omega)$. We say that $\mathcal{A}' \subseteq \mathcal{A}$ is \textit{adequate} for $\phi'$ if
+
+\hspace*{12pt}(i) for each $v \in V(H)$ and $A \in \mathcal{A}$, if $A \cap \phi'(v) \not\subseteq \Gamma \cup N_W$ then $A \in \mathcal{A}'$,
+
+\hspace*{12pt}(ii) for each $v \in V(H)$, $\phi'(v) \cap (K \cup \bigcup(A : A \in \mathcal{A}'))$ is non-null,
+
+\hspace*{12pt}(iii) for each $e \in E(H)$, $\phi'(e) \in E(K \cup \bigcup(A : A \in \mathcal{A}'))$, and
+
+\hspace*{12pt}(iv) for each $A \in \mathcal{A}$, if $A \cap K \ne N_W$ then $A \in \mathcal{A}'$.
+
+This implies that, if we define $N' = \Gamma \cup N_W \cup \bigcup(A : A \in \mathcal{A}')$ and $G' = N' \cup K$, then (J1)--(J6) remain true with $G, \mathcal{A}, N, \phi$ replaced by $G', \mathcal{A}', N', \phi'$ respectively.
+
+\textbf{7.2.} \textit{For all $q, \delta \ge 0$ there exists $\theta \ge 4$ with the following property. Let (J1)--(J6) hold, and let $\mathcal{A}' \subseteq \mathcal{A}$ be adequate for some model $\phi'$ of $(H, \chi)$ in $(G, \omega)$, where $d(v^*, D(A)) \ge \theta$ for all $A \in \mathcal{A}'$. Then there is a model of $(H, \chi)$ in $(G \setminus \{v^*\}, \omega)$.}
+
+\textbf{Proof.} Let $p = q + 3\delta$, choose $h \ge 1$ so that 3.1 holds, and let $\theta = 2h + 5$. We claim that $\theta$ satisfies 7.2. For let the hypotheses of 7.2 hold. Let $K' = K \cup \bigcup(A : A \in \mathcal{A}')$.
+
+\hspace*{12pt}(1) \textit{$v^*$ is $h$-insulated from $V(\Gamma \cap K')$ by $\Gamma$.}
+
+\textit{Subproof.} Let $v \in V(\Gamma \cap K')$; we claim that $d(v^*, v) \ge \theta$. If $v \in V(K)$ this follows from (J5). If $v \notin V(K)$ then $v \in V(A)$ for some $A \in \mathcal{A}'$; but then $v \in V(A \cap \Gamma) \subseteq D(A)$ by (J4), and so $d(v^*, v) \ge d(v^*, D(A)) \ge \theta$. This proves that $d(v^*, V(\Gamma \cap K')) \ge \theta$. By 5.2, this proves (1).
+
+\hspace*{12pt}(2) \textit{There is a basis $Z$ for $\phi'$ with $Z \subseteq V(K')$.}
+
+\textit{Subproof.} For $W \subseteq V(K) \subseteq V(K')$, and $\phi(e) \in E(K')$ for each $e \in E(H)$, by statement (iii) in the definition of ``adequate''; and $\phi'(v) \cap K'$ is non-null for each $v \in V(H)$, by statement (ii) in the definition of ``adequate''. This proves (2).
+
+Choose $Z$ as in (2), minimal. Then $|Z| \le q + 3\delta = p$, by 6.1. Let $L = \bigcup(\phi'(v) : v \in V(H))$. Since $|Z| \le p$ and $Z \subseteq V(K')$, it follows from (1) and 3.1 (with $K, v$ replaced by $K', v^*$) that there exists $L' \subseteq (\Gamma \cup K') \setminus \{v^*\}$ with the same effect on $Z$ as $L$, such that $L' \cap K' \subseteq L$. Now $\phi'(E(H)) \subseteq E(K')$, and $\phi'(E(H)) \cap E(L) = \emptyset$, and so $\phi'(E(H)) \cap E(L') = \emptyset$, since $L' \cap K' \subseteq L$. By 6.2, there is a model of $(H, \chi)$ in $(G \setminus \{v^*\}, \omega)$, as required. $\square$
+
+If $\pi$ and $\omega$ are the finite sequences $v_1, \dots, v_p$ and $w_1, \dots, w_q$, we denote their concatenation $v_1, \dots, v_p, w_1, \dots, w_q$ by $\pi + \omega$.
+
+\textbf{7.3.} \textit{For all integers $q, \delta, \tau \ge 0$ there exists $\theta \ge 5$ with the following property. Let (J1)--(J6) hold, and let $\mathcal{B} \subseteq \mathcal{A}$ be adequate for $\phi$. Let $A_1, \dots, A_t \in \mathcal{B}$ where $t \le \tau$, and let $d(D(A), \Sigma \setminus \Delta) \ge \theta$ for every $A \in \mathcal{B} \setminus \{A_1, \dots, A_t\}$. Let $A_1', \dots, A_t' \in \mathcal{A}$, and suppose that}
+
+\hspace*{12pt}(i) \textit{for $1 \le i \le t$, $(A_i', \pi(A_i') + \omega)$ has the same $\delta$-folio as $(A_i, \pi(A_i) + \omega)$,}
+
+\hspace*{12pt}(ii) \textit{for $1 \le i \le t$, $D(A_i) \cap \Delta = \emptyset$,}
+
+\hspace*{12pt}(iii) \textit{for $1 \le i \le t$, $d(v^*, D(A_i')) \ge \theta$ and $D(A_i') \cap \Delta = \emptyset$,}

@@ -1,0 +1,28 @@
+\origpage{91}{GRAPH MINORS. XIII}
+\hspace*{12pt}(i) $P_1, \dots, P_l$ are paths of $G$ and all have one end $v$, and are otherwise mutually vertex-disjoint
+
+\hspace*{12pt}(ii) for $1 \le i \le l$, let the ends of $P_i$ be $v, u_i$; then $u_i \ne v$, and $u_i \in V(H)$, and no edge or internal vertex of $P_i$ is in $H$
+
+\hspace*{12pt}(iii) for $1 \le i < j \le l$, $u_i$ and $u_j$ are at distance $\ge m$ in $H$.
+
+We say that $v$ is the \textit{center} of the star. (It is unique.) The star is \textit{external} if $v \notin V(H)$.
+
+\stmt
+(7.5) \textit{For any $p \ge 2$ there are integers $l \ge 3$, $m \ge 0$ with the following property. Let $G$ be a graph and let $H$ be a wall in $G$. Suppose that there are $\binom{p}{2}$ external $(l, m)$-stars over $H$ with distinct centers (but not necessarily disjoint). Then $G$ has a $K_p$-minor.}
+
+\textit{Proof.} We shall prove the following for $k, m \ge 0$ by induction on $k$.
+
+\textit{Let $l = 2k^2 - k + 3$. For any $k$ external $(l, m)$-stars $S_1, \dots, S_k$ over $H$ with distinct centers there are $k$ mutually vertex-disjoint $H$-paths of $G$, each a subgraph of $S_1 \cup \dots \cup S_k$, with their $2k$ ends mutually at distance $\ge \frac{1}{2}m$.}
+
+The claim is true for $k = 0$, and we assume that $k > 0$. For $1 \le i \le k - 1$, let $S'_i$ be an $(l - 1, m)$-star with the same center as $S_i$, with $S'_i \subseteq S_i$, and with $v_k \notin V(S'_i)$, where $v_k$ is the center of $S_k$. Since $l - 1 \ge 2(k - 1)^2 - (k - 1) + 3$, there are (from our inductive hypothesis) $k - 1$ mutually vertex-disjoint $H$-paths $Q_1, \dots, Q_{k - 1}$ of $G$, with
+\begin{equation*}
+Q_1 \cup \dots \cup Q_{k - 1} \subseteq S'_1 \cup \dots \cup S'_{k - 1}
+\end{equation*}
+and with their $2(k - 1)$ ends mutually at distance $\ge \frac{1}{2}m$.
+
+Let $S_k = P_1 \cup \dots \cup P_l$, with the $P_i$'s as in the definition of a star. Suppose that for some $j$ with $1 \le j \le k - 1$ there are $\ge 2k$ values of $i$ with $1 \le i \le l$ such that $P_i \cap Q_j$ is non-null. For each such $i$, let $u_i$ be the first vertex of $P_i$ which belongs to $V(Q_j)$ (first as $P_i$ is traversed starting from its end in $V(H)$). Choose distinct $i_1, i_2, \dots, i_{2k}$ such that $P_{i_t} \cap Q_j$ is non-null for each $t$, numbered so that $u_{i_1}, \dots, u_{i_{2k}}$ occur in this order on $Q_j$. Then we may construct $k$ $H$-paths $R_1, \dots, R_k$ with their ends mutually at distance $\ge m \ge \frac{1}{2}m$, where each $R_t$ is formed from subpaths of $P_{i_{2t - 1}}$ and $P_{i_{2t}}$ and the path of $Q_j$ between $u_{i_{2t - 1}}, u_{i_{2t}}$. We may assume therefore that there is no such $j$.
+
+Hence the total number of pairs $i, j$ with $P_i \cap Q_j$ non-null is at most $(k - 1)(2k - 1)$; and so there are at least
+\begin{equation*}
+l - (k - 1)(2k - 1) \ge 2k
+\end{equation*}

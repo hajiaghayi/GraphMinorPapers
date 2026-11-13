@@ -1,0 +1,37 @@
+\origpage{137}{GRAPH MINORS. XV. GIANT STEPS}
+\noindent $\{a, b, c, d\}$ is free with respect to $\mathcal{T}_1$. The first claim follows from (3). For the second, we observe that, for all $v \in \{a, b, c, d\}$, by (3),
+\begin{equation*}
+d(v, z) \ge d(r_i, z) - 1 \ge \theta' + 9\mu + 11 > 8 + 5(3\mu + 3) + 2.
+\end{equation*}
+Hence, by (4.7) applied to $\mathcal{T}$ and $\mathcal{T}_1$ (taking $\lambda = 3\mu + 3$) and (1), we deduce that $\{a, b, c, d\}$ is free with respect to $\mathcal{T}_1$. This proves (5).
+
+From (4.6), $H', \mathcal{T}_1$ is a $\Sigma$-span of order $\theta - 12\mu - 14$, obtained from $H, \mathcal{T}$ by rearranging within $3\mu + 3$ of $z$.
+
+\hspace*{12pt}(6) \textit{The} $\Sigma$\textit{-span} $H', \mathcal{T}_1$ \textit{is} $(\lambda', \mu)$\textit{-flat.}
+
+\textit{Subproof.} From (5.2), since $H, \mathcal{T}$ is $(\lambda, \mu)$-flat, it suffices to check that $3\mu + 3 \ge 4$, $\lambda' \ge 4$, $\lambda \ge 6(3\mu + 3) + 5\lambda' + 3\mu + 4$, and $\theta \ge 4\lambda + \mu + 2$. All these inequalities hold, and so (6) follows.
+
+Let $\mathcal{T}_2$ be the $\theta'$-truncation of $\mathcal{T}_1$. Then $H', \mathcal{T}_2$ is a $\Sigma$-span, and by (5.1) and (6), it is $(\lambda', \mu)$-flat, since $\theta' \ge 4\lambda' + \mu + 2$.
+
+\hspace*{12pt}(7) $r_1, \dots, r_k, r_{k+1}$ \textit{are eyes of} $H', \mathcal{T}_2$ \textit{in} $G$, \textit{and for} $1 \le i < j \le k + 1$, $d_2(r_i, r_j) = \theta'$.
+
+\textit{Subproof.} Since $\theta' \ge 4$ and $\mathcal{T}_2$ is the $\theta'$-truncation of $\mathcal{T}_1$, and since by (5) $r_1, \dots, r_{k+1}$ are eyes of $H', \mathcal{T}_1$ in $G$, it follows that $r_1, \dots, r_{k+1}$ are eyes of $H', \mathcal{T}_2$ in $G$. Now for $1 \le i < j \le k + 1$,
+\begin{equation*}
+d_2(r_i, r_j) = \min(\theta', d_1(r_i, r_j)).
+\end{equation*}
+But if $j = k + 1$ then $d_1(r_i, r_j) \ge \theta'$ by (4); and if $j \ge k$ then
+\begin{equation*}
+d_1(r_i, r_j) \ge d(r_i, r_j) - 12\mu - 14 = \theta - 12\mu - 14 \ge \theta'
+\end{equation*}
+by (1). In either case $d_1(r_i, r_j) \ge \theta'$, and so $d_2(r_i, r_j) = \theta'$. This proves (7).
+
+From (7) we see that (S1) holds, as required. $\square$
+
+Let $H$ be a subgraph of $G$, and let $H$ be a 2-cell drawing in $\Sigma$. Let $\alpha$ be an arrangement in $\Sigma$ of a segregation $\mathcal{S}$ of $G$. We say that $\alpha$ is \textit{compatible with} $H$ \textit{if}
+
+\hspace*{12pt}(i) $\alpha(v) = v$ for all $v \in V(H) \cap V(\mathcal{S})$, and
+
+\hspace*{12pt}(ii) for each $(A, \Omega) \in \mathcal{S}$, $U(H) \cap \text{bd}(\alpha(A, \Omega)) = V(H) \cap \bar{\Omega}$, and $H \cap \alpha(A, \Omega) = H \cap A$.
+
+\stmt
+(7.4) \textit{If (S1) does not hold, there is a} $\mathcal{T}$\textit{-local 3-segregation} $\mathcal{S}_0$ \textit{of} $G_0$ \textit{and an arrangement} $\alpha_0$ \textit{of it in} $\Sigma$ \textit{compatible with} $H$.*

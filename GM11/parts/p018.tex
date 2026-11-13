@@ -1,0 +1,22 @@
+\origpage{89}{GRAPH MINORS. XI}
+\noindent pretangles in $\Gamma$ and slopes in $\Gamma'$; in other words, that if $ins$ is derived from $\mathscr{T}$ then $\mathscr{T}$ is induced from $ins$. To prove that we use the following lemma.
+
+\stmt
+(6.2) \textit{Let $\mathscr{T}$ be a pretangle in a hypergraph $G$, and let $(A, B) \in \mathscr{T}$. Then there do not exist $(A_1, B_2), \dots, (A_k, B_k) \in \mathscr{T}$ such that $V(A_i \cap B_i) \subseteq V(A \cap B)$ ($1 \le i \le k$) and $B \subseteq A_1 \cup \cdots \cup A_k$.}
+
+\textit{Proof.} Suppose that such $(A_1, B_1), \dots, (A_k, B_k)$ exist. For $0 \le i \le k$, let $A'_i = A \cup A_1 \cup \cdots \cup A_i$, $B'_i = B \cap B_1 \cap \cdots \cap B_i$. Thus $(A'_0, B'_0) = (A, B) \in \mathscr{T}$, and we prove by induction on $i$ that $(A'_i, B'_i) \in \mathscr{T}$ for $0 \le i \le k$. Suppose then that $1 \le i \le k$, and $(A'_{i-1}, B'_{i-1}) \in \mathscr{T}$. Now $A'_i = A'_{i-1} \cup A_i$, $B'_i = B'_{i-1} \cap B_i$, and so $(B'_i, A'_i) \notin \mathscr{T}$ by the second tangle axiom, since $A_i \cup A'_{i-1} \cup B'_i = G$. But $A'_i \cap B'_i \subseteq A \cap B$ and so $(A'_i, B'_i)$ has order $\le |V(A \cap B)|$; and hence $(A'_i, B'_i) \in \mathscr{T}$, by the first axiom. This completes the inductive argument, and we deduce that $(A'_k, B'_k) \in \mathscr{T}$. But $A'_k = A \cup B = G$, contrary to the second tangle axiom. $\square$
+
+We deduce
+
+\stmt
+(6.3) \textit{Let $\Gamma$ be a 2-cell painting or drawing in a connected surface $\Sigma$ with $E(\Gamma) \ne \emptyset$, and let $\mathscr{T}$ be a respectful pretangle in $\Gamma$ of order $\theta \ge 1$. Let $\Gamma'$ be a radial drawing of $\Gamma$, and let $ins$ be the derived slope. Then for every separation $(A, B)$ of $\Gamma$ of order $< \theta$, the following are equivalent:}
+
+\hspace*{12pt}(i) $(A, B) \in \mathscr{T}$
+
+\hspace*{12pt}(ii) \textit{there are circuits $C_1, \dots, C_k$ of $\Gamma'$ with $V(C_i) \cap V(\Gamma) \subseteq V(A \cap B)$ ($1 \le i \le k$), such that every edge of $A$ is a subset of one of $ins(C_1), \dots, ins(C_k)$.}
+
+\textit{In particular, $\mathscr{T}$ is the pretangle induced from $ins$.}
+
+\textit{Proof.} We observe first that (ii) $\Rightarrow$ (i). For suppose that $(A, B)$, $C_1, \dots, C_k$ satisfy (ii). Let $\Delta_i = ins(C_i)$ and let $A_i = \Gamma \cap \Delta_i$, $B_i = \Gamma \cap \overline{\Sigma - \Delta_i}$; then $(A_i, B_i) \in \mathscr{T}$ ($1 \le i \le k$). Let $A_0 = A \cap B$, $B_0 = \Gamma$; then $(A_0, B_0) \in \mathscr{T}$ by the first axiom, since $(B_0, A_0) \notin \mathscr{T}$ by the second. Moreover, $A \subseteq A_0 \cup A_1 \cup \cdots \cup A_k$; for any edge of $A$ is an edge of one of $A_1, \dots, A_k$, by hypothesis, and any isolated vertex of $A$ belongs to $B$ (since $\Gamma$ has no isolated vertices) and hence to $A_0$. Since $A_i \cap B_i \subseteq A \cap B$ for $0 \le i \le k$, we deduce from (6.2) that $(B, A) \notin \mathscr{T}$, and so $(A, B) \in \mathscr{T}$ by the first axiom. This proves (ii) $\Rightarrow$ (i).
+
+Now we prove (i) $\Rightarrow$ (ii). Let $\mathscr{T}'$ be the pretangle induced from $ins$. By definition of $\mathscr{T}'$, every member $(A, B)$ of $\mathscr{T}'$ satisfies (ii). Let $(A, B) \in \mathscr{T}$; then $(B, A) \notin \mathscr{T}$, and so (since (ii) $\Rightarrow$ (i)) $(B, A)$ does not satisfy (ii) (with $A, B$ exchanged). Hence $(B, A) \notin \mathscr{T}'$, and so $(A, B) \in \mathscr{T}'$; and hence $(A, B)$

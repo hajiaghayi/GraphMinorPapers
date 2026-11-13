@@ -1,0 +1,20 @@
+\origpage{366}{N. Robertson, P.D. Seymour / Journal of Combinatorial Theory, Series B 90 (2004) 325--385}
+\sectionhead{13. The spokes of a wheel}
+
+Let $\Gamma, \phi, \mathscr{W}$ etc. be as in 12.4 (and in particular with $\operatorname{rep}(\mathscr{T}) \ge 5^{2m+2}n$), and let $W \in \mathscr{W}$. Our next objective is to examine the structure of the interior of $W$. Let $W$ have radius $\rho$, and so $1 \le \rho \le 2n \cdot 5^{2m}$. Let $H$ be a $W$-hub with radius $\rho$. We recall that $R^* = V(\Gamma^*) \setminus V(\Gamma)$.
+
+\textbf{13.1.} \textit{There is no path in $\Gamma^*$ from $R^* \cap bd(W)$ to $V(H)$ with $\le \rho - 1$ edges.}
+
+\textbf{Proof.} Suppose that there is such a path, and let $r^*$ be its end in $R^* \cap bd(W)$. From the fourth condition in the definition of a wheel, $W$ contains every neighbour of $r^*$ in $\Gamma^*$. Let $e_1, e_2$ be the \del{ends} \fix{edges}\fixnote{fix:13.1-proof}{Here $e_1, e_2$ are edges, as ``$e_1, e_2 \subseteq bd(W)$'' and ``their other ends'' show.} of $\Gamma^*$ incident with $r^*$ with $e_1, e_2 \subseteq bd(W)$, and let their other ends be $v_1, v_2$ respectively. Now $v_1 \ne v_2$, and indeed $|V(\Gamma^*) \cap bd(W)| \ge 6$, because $bd(W) \cap bd(\Sigma_\chi) = \emptyset$ and $(W \setminus bd(W)) \cap V(\Gamma) \ne \emptyset$ and $\Gamma$ is 3-connected. Since $W$ includes every edge of $\Gamma^*$ incident with $r^*$, it follows that there is an edge $e$ of $sk(\Gamma)$ with ends $v_1, v_2$ and with $e \subseteq \bar{r} \setminus W$. If there is a region $r_1 \ne r$ of $\Gamma$ in $\hat{\Sigma}$ with $e \subseteq \bar{r}_1$, then $r_1^*$ has two neighbours in $bd(W) \cap V(\Gamma)$ and so $r_1^* \in W$; but then $bd(W) \cap V(\Gamma^*) = \{v_1, v_2, r^*, r_1^*\}$, a contradiction. Thus there is no such $r_1$. Choose $f \in E(\Gamma)$ with $e \subseteq f$. Then $|\tilde{f}| = 3$, because of the non-existence of $r_1$. Moreover, $\bar{r} \cap V(\Gamma) = \{v_1, v_2\}$, because $v_1, v_2 \notin bd(\Sigma_\chi)$ and $\Gamma$ fits $\Phi_\chi$ (using the fifth condition in the definition of ``fit``). Hence the path of $\Gamma^*$ from $r^*$ to $V(H)$ with $\le \rho - 1$ edges passes through one of $v_1, v_2$, a contradiction to the fifth condition in the definition of a wheel. Thus there is no such path, as required. $\square$
+
+By a \textit{spoke} of $W$ we mean a path $P$ of $\Gamma^*$ from some $v \in V(\Gamma) \cap bd(W)$ to some $h \in V(H)$, such that
+
+\hspace*{12pt}$\bullet$ there is no path of $\Gamma^*$ from $v$ to $V(H)$ with fewer than $|E(P)|$ edges, and
+
+\hspace*{12pt}$\bullet$ there is no path $P'$ of $\Gamma^*$ from $v$ to $V(H)$ with $|E(P)|$ edges and with $\lambda(P') < \lambda(P)$.
+
+For each $v \in V(\Gamma) \cap bd(W)$ there is thus a unique spoke ending at $v$, and we denote it by $S_v$. Clearly no vertex of $S_v$ except its end different from $v$ belongs to $V(H)$. From 13.1, no vertex of $S_v$ except $v$ belongs to $bd(W)$. We call the end of $S_v$ different from $v$ the \textit{inner end} of $S_v$.
+
+\textbf{13.2.} \textit{Let $v_1, v_2 \in V(\Gamma) \cap bd(\Sigma)$. If $S_{v_1}$ meets $S_{v_2}$ then they have the same inner end, and $S_{v_1} \cap S_{v_2}$ is a path.}
+
+\textbf{Proof.} Let $u \in V(S_{v_1} \cap S_{v_2})$ be the first vertex of $S_{v_2}$ in $S_{v_1}$ (that is, nearest to $v_1$), and let $P_i, Q_i$ be the subpaths of $S_{v_i}$ from $v_i$ to $u$ and from $u$ to the inner end of $S_{v_i}$ respectively. Since $S_{v_1}$ is a spoke, $|E(P_1 \cup Q_2)| \ge |E(S_{v_1})|$, that is, $|E(Q_2)| \ge |E(Q_1)|$, and similarly $|E(Q_1)| \ge |E(Q_2)|$ since $S_{v_2}$ is a spoke. Thus $|E(Q_1)| = |E(Q_2)|$. Again, since $S_{v_1}$ is a spoke, $\lambda(P_1 \cup Q_2) \ge \lambda(S_{v_1})$, that is, $\lambda(Q_2) \ge \lambda(Q_1)$, and similarly $\lambda(Q_1) \ge \lambda(Q_2)$. Thus $\lambda(Q_1) = \lambda(Q_2)$, and so $E(Q_1) = E(Q_2)$. Since $Q_1, Q_2$ both have one end $u$, it follows that $Q_1 = Q_2$ and hence that $S_{v_1}, S_{v_2}$ have the same inner end.

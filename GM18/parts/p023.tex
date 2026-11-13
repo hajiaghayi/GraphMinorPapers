@@ -1,0 +1,24 @@
+\origpage{99}{N. Robertson, P. Seymour / Journal of Combinatorial Theory, Series B 89 (2003) 77--108}
+\textbf{5.7.} \textit{For $i = 1, 2$ let $(P_i, \mathscr{L}_i)$ be an $\Omega$-place with heart $Q_i$, using new elements $e_i(A)$ ($A \in \mathscr{L}_i$). Suppose that $\eta$ is a realizable expansion of $Q_1$ in $Q_2$ such that}
+
+\hspace*{12pt}$\bullet$ \textit{if $e \in E(Q_1)$ and $\eta(e) = e_2(A_2)$ for some $A_2 \in \mathscr{L}_2$ then $e = e_1(A_1)$ for some $A_1 \in \mathscr{L}_1$,}
+
+\hspace*{12pt}$\bullet$ \textit{for each $A_1 \in \mathscr{L}_1$ there exists $A_2 \in \mathscr{L}_2$ such that $\eta(e_1(A_1)) = e_2(A_2)$ and $P_1|A_1$ is simulated in $P_2|A_2$.}
+
+\textit{Then $P_1$ is simulated in $P_2$.}
+
+\textbf{Proof.} We proceed by induction on $|\mathscr{L}_2|$. If $\mathscr{L}_2 = \emptyset$ then by the second displayed hypothesis $\mathscr{L}_1 = \emptyset$, and so $Q_1 = P_1$ and $Q_2 = P_2$, and $\eta$ is a realizable expansion of $P_1$ in $P_2$, as required. We assume then that $\mathscr{L}_2 \ne \emptyset$. Choose $A_2 \in \mathscr{L}_2$. There are two cases, depending on whether or not $e_2(A_2) = \eta(e)$ for some $e \in E(Q_1)$.
+
+First, we assume that $e_2(A_2) \ne \eta(e)$ for all $e \in E(Q_1)$. Let $\mathscr{L}_2' = \mathscr{L}_2 \setminus \{A_2\}$, and let $Q_2'$ be the heart of the $\Omega$-place $(P_2, \mathscr{L}_2')$, using new elements $e_2(A)$ ($A \in \mathscr{L}_2'$). Let $Q_2 = (G, \mu, \Delta, \phi)$, and $Q_2' = (G', \mu', \Delta', \phi')$; then $e_2(A_2) \in E(G)$, and $(A_2, G \setminus e_2(A_2))$ is a separation of $G'$. Let $K$ be the rooted subhypergraph of $G$ formed by $e_2(A_2)$ and its ends, with $\pi(K) = \pi(A_2)$; then $(K, G \setminus e_2(A_2))$ is a separation of $G$. Now $\pi(K) = \pi(A_2)$ and $Q_2|(G \setminus e_2(A_2)) = Q_2'|(G \setminus e_2(A_2))$, and every grouping feasible in $Q_2|K$ is also feasible in $P_2|A_2 = Q_2'|A_2$ (by definition of $\Delta(e_2(A_2)))$. Moreover, $\eta$ is a realizable expansion of $Q_1$ in $Q_2$, and $\eta(e) \in E(G \setminus e_2(A_2))$ for all $e \in E(Q_1)$, and $\eta(v) \cap V(G \setminus e_2(A_2)) \ne \emptyset$ for each $v \in V(Q_1)$ (because $V(G \setminus e_2(A_2)) = V(G)$). From 5.3 with $P_1, G_1, \mu_1, \Delta_1, P_2, G_2, \mu_2, \Delta_2, G_1', G_2', G_0, \eta_1$ replaced by $(G, \mu, \Delta), G, \mu, \Delta, (G', \mu', \Delta'), G', \mu', \Delta', K, A_2, G \setminus e_2(A_2), \eta$ respectively, and with $P$ replaced by the patchwork formed by the first three components of the quadruple $Q_1$, we deduce that there is a realizable expansion $\eta_0$ of $Q_1$ in $Q_2'$ such that $\eta_0(e) = \eta(e)$ for all $e \in E(Q_1)$. In particular, if $e \in E(Q_1)$ and $\eta_0(e) = e_2(A_2')$ for some $A_2' \in \mathscr{L}_2'$ then $e = e_1(A_1)$ for some $A_1 \in \mathscr{L}_1$; and for each $A_1 \in \mathscr{L}_1$, $\eta_0(e_1(A_1)) = e_2(A_2')$ and $P_1|A_1$ is simulated in $P_2|A_2'$ for some $A_2' \in \mathscr{L}_2'$. From the inductive hypothesis we deduce that $P_1$ is simulated in $P_2$, as required.
+
+In the second case, we assume that $e_2(A_2) = \eta(e_1(A_1))$ for some $A_1 \in \mathscr{L}_1$. For $i = 1, 2$, let $\mathscr{L}_i' = \mathscr{L}_i \setminus \{A_i\}$, let $Q_i' = (G_i', \mu_i', \Delta_i', \phi_i')$ be the heart of $(P_i, \mathscr{L}_i')$ using new elements $e_i(A)$ ($A \in \mathscr{L}_i'$), and let $B_i = G_i' \setminus A_i$. We claim that for $i = 1, 2$, $Q_i \setminus e_i(A_i) = Q_i'|B_i$. For let $P_i = (G_i, \mu_i, \Delta_i, \phi_i)$ say. Then
+\begin{equation*}
+M(G_i, \mathscr{L}_i) = M(G_i, \mathscr{L}_i') \cap (G_i \setminus A_i)^- = M(G_i, \mathscr{L}_i') \cap (G_i' \setminus A_i)^-
+\end{equation*}
+since $M(G_i, \mathscr{L}_i') \subseteq G_i'^-$ and $M(G_i, \mathscr{L}_i') \subseteq G_i^-$. Hence
+\begin{equation*}
+Q_i \setminus \{e_i(A) : A \in \mathscr{L}_i\} = (Q_i'|B_i) \setminus \{e_i(A) : A \in \mathscr{L}_i'\},
+\end{equation*}
+and so $Q_i \setminus e_i(A_i) = Q_i'|B_i$, as claimed.
+
+Since $e_2(A_2) = \eta(e_1(A_1))$, the second hypothesis of the theorem implies that there is a realizable expansion $\eta'$ of $P_1|A_1$ in $P_2|A_2$, and hence of $Q_1'|A_1$ in $Q_2'|A_2$, since $P_i|A_i = Q_i'|A_i$ ($i = 1, 2$). Let $\eta''$ be the restriction of $\eta$ to $V(Q_1') \cup E(Q_1')$; then $\eta''$ is a realizable expansion of $Q_1 \setminus e_1(A_1)$ in $Q_2 \setminus e_2(A_2)$; that is, of $Q_1'|B_1$ in $Q_2'|B_2$. Let $|\bar{\pi}(A_1)| = |\bar{\pi}(A_2)| = k$ say. For $1 \le i \le k$, let $v$ be the $i$th term of $\pi(A_1)$; we claim that $\eta''(v)$ contains the $i$th term of $\pi(A_2)$. For $\eta$ is a realizable expansion of $Q_1$ in $Q_2$, and

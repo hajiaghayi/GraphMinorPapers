@@ -1,0 +1,25 @@
+\origpage{249}{GRAPH MINORS. VII}
+\noindent most of them we have not been able to locate suitable references. We therefore sketch their proofs here. If $\phi \colon A \to B$ is a function and $X \subseteq A$, $\phi(X)$ denotes $\{\phi(x) \colon x \in X\}$. We abbreviate $\phi(A)$ by $|\phi|$. We require the following.
+
+\stmt
+(11.1) \textit{If $\Sigma$ is a surface and $\phi \colon [0, 1] \to \Sigma$ is continuous with $\phi(0) \ne \phi(1)$, there is a $[0, 1]$-arc included in $|\phi|$ with ends $\phi(0), \phi(1)$.}
+
+For a proof, see, for example, [7, (4.2.5)].
+
+If $\Sigma$ is a surface and $Z \subseteq \Sigma$, we say that $Z$ is \textit{flat} if every continuous $\phi \colon S^1 \to Z$ is null-homotopic in $\Sigma$. We apply (11.1) to deduce
+
+\stmt
+(11.2) \textit{If $\Sigma$ is a surface, and $\phi \colon S^1 \to \Sigma$ is continuous and non-null-homotopic, there is a non-null-homotopic $O$-arc included in $|\phi|$.}
+
+\textit{Proof.} Let $\Delta_i (i \in I)$ be an open cover of $\Sigma$ such that for $i, i' \in I$, $\Delta_i \cup \Delta_{i'}$ is flat. If $\psi \colon S^1 \to \Sigma$ is continuous and non-null-homotopic, and $|\psi| \subseteq |\phi|$, we may choose, by compactness, a finite subset $K_\psi \subseteq S^1$ such that for every component $X$ of $S^1 - K_\psi$ there exists $i \in I$ with $\psi(\bar{X}) \subseteq \Delta_i$. Let us choose $\psi$ and $K_\psi$ with $|K_\psi|$ minimum. Let $\chi$ be the set of components of $S^1 - K_\psi$. We see that
+
+\hspace*{12pt}(1) $|K_\psi| \ge 3$; for by hypothesis, the union of any two $\Delta_i$'s is flat, and
+
+\hspace*{12pt}(2) if $X, X' \in \chi$ and $\bar{X} \cap \bar{X}' = \emptyset$ then $\psi(\bar{X}) \cap \psi(\bar{X}') = \emptyset$.
+
+Moreover, by (11.1) we may choose $\psi$ such that the restriction to $\bar{X}$ is an injection, for each $X \in \chi$, since each $\Delta_i$ is flat. Take an orientation $\Omega$ of $S^1$, and let $X \in \chi$. Let $X'$ be the next member of $\chi$ (under $\Omega$). Let $x \in \bar{X}$ be the first member of $X$ (under $\Omega$) such that $\psi(x) = \psi(x')$ for some $x' \in \bar{X}'$. Now the restriction of $\psi$ to the portion of $\overline{X \cup X'}$ between $x$ and $x'$ is null-homotopic, by our choice of the $\Delta_i$'s, and so this portion of $\psi$ may be ``removed``; that is, we may choose $\psi$ such that $x = x'$. If we repeat this process for all $X \in \chi$ we find that the resultant $|\psi|$ is an $O$-arc, as required.
+
+A subset $Z \subseteq \Sigma$ is \textit{connected} if there do not exist non-empty $A_1, A_2 \subseteq Z$ with $A_1 \cup A_2 = Z$ and with $\bar{A}_1 \cap \bar{A}_2 \cap Z = \emptyset$. We say $Z \subseteq \Sigma$ is \textit{arc-connected} if for every pair $a, b \in Z$ with $a \ne b$ there is a $[0, 1]$-arc included in $Z$ with ends $a, b$.
+
+\stmt
+(11.3) \textit{Let $\Sigma$ be a connected surface, let $\Delta \subseteq \Sigma$ be a closed disc, and let $Y \subseteq \Sigma$ be such that $Y \cap bd(\Delta)$ is arc-connected. Then any continuous map $\phi \colon S^1 \to Y \cup (\Delta - bd(\Delta))$ is homotopic to a map $\psi \colon S^1 \to Y$ with $|\psi| \subseteq |\phi| \cup bd(\Delta)$. In particular, if $Y$ is flat then so is $Y \cup (\Delta - bd(\Delta))$.}

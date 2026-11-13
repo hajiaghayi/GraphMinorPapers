@@ -1,0 +1,20 @@
+\origpage{241}{GRAPH MINORS. XII}
+\noindent $V$ are called vertices. If $\Gamma = (U, V)$ is a drawing, we write $U = U(\Gamma)$, $V = V(\Gamma)$, and $E(\Gamma)$, $R(\Gamma)$ are defined to be the sets of edges and regions of $\Gamma$, respectively. The sets $\{v\}$ ($v \in V(\Gamma)$) and the edges and regions of $\Gamma$ are called the \textit{atoms} of $\Gamma$; the atoms form a partition of $\Sigma$. The set of atoms is denoted by $A(\Gamma)$. If $v$ is a vertex and $e$ is an edge or region of a drawing $\Gamma$, we say $v$ is \textit{incident with} $e$ (and vice versa) if $v$ is contained in the closure of $e$. Thus $V(\Gamma)$, $E(\Gamma)$ and the incidence relation between them define a graph, and in this sense we may regard $\Gamma$ as a graph, and use graph-theoretic terminology for drawings. If $e$ is an edge of $\Gamma$ and $r$ is a region, we say $e$ is \textit{incident with} $r$ (and vice versa) if $e$ is included in the closure of $r$. We say $\Gamma'$ is a \textit{subdrawing} of a drawing $\Gamma$, and write $\Gamma' \subseteq \Gamma$, if $V(\Gamma') \subseteq V(\Gamma)$ and $E(\Gamma') \subseteq E(\Gamma)$ (hence $U(\Gamma') \subseteq U(\Gamma)$). If $\Gamma_1$, $\Gamma_2$ are subdrawings of $\Gamma$, we define $\Gamma_1 \cup \Gamma_2$, $\Gamma_1 \cap \Gamma_2$ in the natural way. A drawing $\Gamma$ in $\Sigma$ is \textit{2-cell} if $\Sigma$ is connected and every region is an open disc (and hence $\Gamma$ is not null). Let $\Sigma$ be a surface, and let $\Gamma$ be a drawing in $\Sigma$. A subset $Z \subseteq \Sigma$ is \textit{$\Gamma$-normal} if $Z \cap U(\Gamma) \subseteq V(\Gamma)$. If $\Sigma$ is connected and not a sphere, we say that $\Gamma$ is \textit{$\theta$-representative} if $|F \cap V(\Gamma)| \ge \theta$ for every non-null-homotopic $\Gamma$-normal $O$-arc $F$ in $\Sigma$. If $\Delta \subseteq \Sigma$ is closed and $bd(\Delta)$ is $\Gamma$-normal then $(U(\Gamma) \cap \Delta, V(\Gamma) \cap \Delta)$ is a drawing which we denote by $\Gamma \cap \Delta$.
+
+A separation of a graph $G$ is a pair $(A, B)$ of subgraphs with $A \cup B = G$ and $E(A \cap B) = \emptyset$, and its order is $|V(A \cap B)|$. A tangle of order $\theta \ge 1$ in $G$ is a set $\mathscr{T}$ of separations of $G$, each of order $<\theta$, such that
+
+\hspace*{12pt}(i) for every separation $(A, B)$ of $G$ of order $<\theta$, $\mathscr{T}$ contains one of $(A, B)$, $(B, A)$
+
+\hspace*{12pt}(ii) if $(A_1, B_1)$, $(A_2, B_2)$, $(A_3, B_3) \in \mathscr{T}$ then $A_1 \cup A_2 \cup A_3 \ne G$
+
+\hspace*{12pt}(iii) if $(A, B) \in \mathscr{T}$ then $V(A) \ne V(G)$.
+
+We refer to these as the \textit{first}, \textit{second}, and \textit{third tangle axioms}. Tangles were introduced in [4].
+
+A tangle $\mathscr{T}$ in a drawing $\Gamma$ of order $\theta$ is said to be \textit{respectful} if $\Sigma$ is connected and for every $\Gamma$-normal $O$-arc $F$ in $\Sigma$ with $|F \cap V(\Gamma)| < \theta$, there is a closed disc $\Delta \subseteq \Sigma$ with $bd(\Delta) = F$ such that
+\begin{equation*}
+(\Gamma \cap \Delta, \Gamma \cap \overline{\Sigma - \Delta}) \in \mathscr{T}.
+\end{equation*}
+Then $\Delta$ is necessarily unique, and we write $\Delta = ins(F)$; the function $ins$ is called the \textit{inside function} of $\mathscr{T}$. (A drawing $\Gamma$ may be a drawing in more than one surface, and if we wish to emphasize which surface we are dealing with, we say that $\mathscr{T}$ is \textit{respectful towards} $\Sigma$.) If there is a respectful tangle of order $\theta$ in $\Gamma$ and $\Sigma$ is not a sphere, then clearly $\Gamma$ is $\theta$-representative.
+
+Let $\Gamma$ be a 2-cell drawing in $\Sigma$, and let $K$ be a drawing in $\Sigma$. We say that $K$ is a \textit{radial drawing} of $\Gamma$ if

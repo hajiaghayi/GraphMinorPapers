@@ -1,0 +1,37 @@
+\origpage{545}{N. Robertson, P. Seymour / Journal of Combinatorial Theory, Series B 102 (2012) 530--563}
+\begin{equation*}
+\psi_i(\phi(v_1)) = \phi'(v_1) = \phi'(v_2) = \psi_i(\phi(v_2))
+\end{equation*}
+and so by (3)(i), $\phi(v_1) = \phi(v_2)$; and hence $v_1 = v_2$ since $\phi$ is a model. This is a contradiction.
+
+It follows that there exists $z \in V(\phi'(v_1)) \cap Z' = V(\phi'(v_2)) \cap Z'$. By (7), $\alpha(z) \in V(\phi(v_1))$ and $\alpha(z) \in V(\phi(v_2))$, and so $\phi(v_1) = \phi(v_2)$ and $v_1 = v_2$, again a contradiction. This proves (8).
+
+\hspace*{12pt}(9) \textit{For $1 \le i \le q$, $u'_i \in V(\phi'(v_i))$.}
+
+\textit{Subproof.} For $u'_i \in Z'$ and $\alpha(u'_i) = u_i \in V(\phi(v_i))$, and so by (7), $u'_i \in V(\phi'(v_i))$, as required. This proves (9).
+
+\hspace*{12pt}(10) \textit{If $e \in E(H)$ has head (respectively, tail) $v \in V(H)$, then $\phi'(e)$ has head (respectively, tail) in $V(\phi'(v))$.}
+
+\textit{Subproof.} We assume without loss of generality that $v$ is the head of $e$. Choose $i$ with $1 \le i \le k$ such that $\phi(e) \in E(A_i)$, and let $u$ be the head of $\phi(e)$ in $A_i$. Then $u \in V(\phi(v))$. Let $u'$ be the head of $\phi'(e)$ in $A'_i$; we must show that $u' \in V(\phi'(v))$. Let $P$ be the component of $L_i$ containing $u$. By (3)(ii), $u' \in V(\psi_i(P))$. Since by (1), $\phi(v)$ is the component of $L$ containing $u$, it follows that $P \subseteq \phi(v)$. Now there are two cases. If $V(P) \cap Z_i = \emptyset$, then $P$ is a component of $L$, and so by (1), $P = \phi(v)$ and
+\begin{equation*}
+u' \in V(\psi_i(P)) = V(\psi_i(\phi(v))) = V(\phi'(v))
+\end{equation*}
+as required. If $V(P) \cap Z_i \ne \emptyset$, choose $z \in Z'_i$ with $\alpha(z) \in V(P) \cap Z_i$. By (3)(i), $z \in V(\psi_i(P))$ since $\alpha$ maps $\pi'_i$ to $\pi_i$. But $\alpha(z) \in V(P) \subseteq V(\phi(v))$, and so $z \in V(\phi'(v))$ by (7). Since $\psi_i(P)$ is a connected subgraph of $L'$, and $\phi'(v)$ is a component of $L'$, and $\psi_i(P) \cap \phi'(v)$ is non-null, it follows that $\psi_i(P) \subseteq \phi'(v)$, and hence
+\begin{equation*}
+u' \in V(\psi_i(P)) \subseteq V(\phi'(v))
+\end{equation*}
+as required. This proves (10).
+
+Since $L' \subseteq G' \setminus \phi'(E(H))$, it follows from (8), (9), (10) that $\phi'$ is a model of $(H, v_1, \ldots, v_q)$ in $(G', u'_1, \ldots, u'_q)$. Since $\phi'(E(H)) \subseteq E(A'_1 \cup \dots \cup A'_k)$ by the definition of $\phi'$, it remains to show that if $v \in V(H)$ then $\phi'(v) \cap (A'_1 \cup \dots \cup A'_k)$ is non-null. Let $v \in V(H)$, and choose $i \ge 1$ so that $\phi(v) \cap A_i$ is non-null. If $V(\phi(v)) \cap Z_i = \emptyset$ then $\phi'(v) = \psi_i(\phi(v))$ and so $\phi'(v) \cap (A'_1 \cup \dots \cup A'_k)$ is non-null. If $z \in V(\phi(v)) \cap Z_i$, choose $z' \in Z'_i$ with $\alpha(z') = z$; then $z' \in V(\phi'(v))$ by (7), and so again $\phi'(v) \cap (A'_1 \cup \dots \cup A'_k)$ is non-null. This completes the proof. $\square$
+
+\sectionhead{7. A generalization}
+
+As we said, the objective of this paper is to prove Theorem 10.2 of [5]. Now 3.1 is already a rudimentary version of what we need, but it has to be ``bootstrapped'' up into a more general, and unfortunately much more complicated, result.
+
+3.1 tells us essentially that if $Z \subseteq V(G)$ has bounded size, and we have a planar subgraph $\Gamma$ of a graph $G \setminus Z$, containing no vertex of $Z$, and the remainder of $G$ attaches only to the infinite region of $\Gamma$, then a vertex of $\Gamma$ sufficiently insulated from the infinite region can be deleted without changing the effects that can be produced on $Z$. We need to amend this in several ways, and here are some of the changes.
+
+\hspace*{12pt}$\bullet$ We need to preserve something stronger than the range of effects that can be produced on $Z$; we need to preserve the $\delta$-folio of the rooted graph made by assigning the members of $Z$ as roots to $G$.
+
+\hspace*{12pt}$\bullet$ We only need the surface to be a sphere.
+
+\hspace*{12pt}$\bullet$ Most serious, it is no longer true that the roots belong to the part of the graph that is separated from $\Gamma$ by the boundary of the infinite region. They may have neighbours anywhere in $\Gamma$; so it is no longer true that any vertex deep inside $\Gamma$ can be removed without changing the $\delta$-folio. We have to choose the vertex to be deleted more carefully.

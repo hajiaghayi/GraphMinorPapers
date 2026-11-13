@@ -1,0 +1,30 @@
+\origpage{266}{ROBERTSON AND SEYMOUR}
+\stmt
+(6.6) \textit{Let $\Gamma$ be a drawing in a disc $\Sigma$, and let $C$ be a circuit of $\Gamma$. If $F_1, F_2$ are minimal $C$-rings then $\Gamma(F_1) = \Gamma(F_2)$.}
+
+\textit{Proof.} By (6.4) there is a $C$-ring $F_3$ enclosed by $F_1$ and by $F_2$. Hence $\Gamma(F_3) \subseteq \Gamma(F_1) \cap \Gamma(F_2)$, and the result follows from the minimality of $F_1, F_2$. $\square$
+
+With $\Gamma, \Sigma, C$ as in (6.6), we define $\Delta(C)$ to be the common value of $\Gamma(F)$ taken over all minimal $C$-rings $F$.
+
+Again, let $\Gamma$ be a drawing in a disc $\Sigma$. If $r, s \ge 0$ are integers, an \textit{$(r, s)$-nest} in $\Gamma$ is a sequence $(C_1, \dots, C_s)$ of circuits of $\Gamma$, such that
+
+\hspace*{12pt}(i) for $1 \le i < i' \le s$, $C_i$ is inside $C_{i'}$ (and hence $C_i$ and $C_{i'}$ are vertex-disjoint)
+
+\hspace*{12pt}(ii) there are $r$ mutually vertex-disjoint paths of $\Gamma$ between $C_1$ and $C_s$.
+
+Let $k = |V(\Gamma) \cap bd\ \Sigma|$. A circuit $C$ of $\Gamma$ is a \textit{boss} if $\rho(C) < k$ and there is a $((1 + \rho(C)), k)$-nest $(C_1, \dots, C_k)$ with $C_1 = C$. The main result of this section is the following.
+
+\stmt
+(6.7) \textit{Let $\Gamma$ be a drawing in a disc $\Sigma$, and let $C_1, C_2$ be bosses. Then either $\Delta(C_1) \subseteq \Delta(C_2)$, or $\Delta(C_2) \subseteq \Delta(C_1)$, or $\Delta(C_1) \cap \Delta(C_2) = \emptyset$.}
+
+\textit{Proof.} Let $F_i$ be a minimal $C_i$-ring, and let $(C_i^1, \dots, C_i^k)$ be a $((\rho(C_i) + 1), k)$-nest with $C_i^1 = C_i$ ($i = 1, 2$). Now $|F_1 \cap V(G)| = \rho(C_1)$ and there are $\rho(C_1) + 1$ mutually disjoint paths of $\Gamma$ between $C_1^1$ and $C_1^k$. Thus $F_1$ does not meet all these paths. But $F_1$ encloses $C_1^1$, and so some vertex of $C_1^k$ is inside $F_1$.
+
+Suppose that some point of $F_2$ is inside $C_1$. Now
+\begin{equation*}
+|(F_1 \cup F_2) \cap V(G)| \le \rho(C_1) + \rho(C_2) < 2k
+\end{equation*}
+and so $F_1 \cup F_2$ meets some $C_1^j$ ($1 \le j \le k$) in at most one point. But then with that value of $j$, $C_1^j$ encloses $F_2$ (because some point of $F_2$ is inside $C_1^1$), and $F_1$ encloses $C_1^j$ (because some point of $C_1^k$ is inside $F_1$). It follows that $F_1$ enclose $F_2$, and so $\Delta(C_2) \subseteq \Delta(C_1)$ as required.
+
+We may assume then that no point of $F_2$ is inside $C_1$, and similarly that no point of $F_1$ is inside $C_2$. Suppose that some point of $C_1$ is inside $F_2$. Then by (6.4) there is a $C_1$-ring $F_3$ enclosed by both $F_1$ and $F_2$. From the minimality of $F_1$, it follows that $\Gamma(F_1) = \Gamma(F_3)$. But $\Gamma(F_3) \subseteq \Gamma(F_2)$, and so $\Gamma(F_1) \subseteq \Gamma(F_2)$, as required.
+
+We may assume then that no point of $C_1$ is inside $F_2$, and similarly that no point of $C_2$ is inside $F_1$. Hence the hypotheses of (6.5) hold, and so there is a $C_1$-ring $F_3$ and a $C_2$-ring $F_4$, bounding disjoint open discs, with

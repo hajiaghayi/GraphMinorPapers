@@ -1,0 +1,26 @@
+\origpage{134}{ROBERTSON AND SEYMOUR}
+\stmt
+(5.9) \textit{If $\theta_1 \le \theta_2 \le \theta_3$ and $\theta_1, \theta_3$ are feasible in $G$ and $k\theta_2$ is an integer, then $\theta_2$ is feasible in $G$.}
+
+This follows easily from (5.8). Now we apply these results to the main problem of this section, that of deciding if any given $\theta$ is feasible in $G$. We have the following characterization. (It is indeed a characterization, because Menger's theorem tells us when (5.10)(ii) is true.)
+
+\stmt
+(5.10) \textit{$\theta$ is feasible in $G$ if and only if} (i) \textit{$k\theta$ is an integer;} (ii) \textit{there is some linkage in $G$; and} (iii) \textit{for every helix $f$, $\theta(f) - k^{-1}L(f) \le \theta \le \theta(f) + k^{-1}L(f)$.}
+
+\textit{Proof.} Necessity is clear. For sufficiency, let $\theta_1$ be maximum and $\theta_2$ minimum such that $\theta_1, \theta_2$ are feasible. (This is possible by (ii).) Then there is a helix $f_1$ in $G$ with
+\begin{equation*}
+\theta(f_1) + k^{-1}L(f_1) = \theta_1
+\end{equation*}
+by (5.3); and similarly (reversing the orientation of the plane) there is a helix $f_2$ with
+\begin{equation*}
+\theta(f_2) - k^{-1}L(f_2) = \theta_2.
+\end{equation*}
+Hence by (iii), $\theta_2 \le \theta \le \theta_1$, and so by (i) and (5.9), $\theta$ is feasible in $G$. For an algorithm, we have
+
+\stmt
+(5.11) \textit{Algorithm to decide if $\theta$ is feasible in $G$.} We check that conditions (i) and (ii) of (5.10) hold; if not then $\theta$ is not feasible. Checking (ii) is simply a maximum-flow problem and so can be done efficiently. We assume that we find a linkage $\mathscr{L}$, and (by reversing the orientation of the plane if necessary) that $\theta(\mathscr{L}) \le \theta$. If $\theta(\mathscr{L}) = \theta$ we are finished. If not, we use (5.7) to test if $\theta(\mathscr{L}) + 1/k$ is feasible, and if so to find a linkage $\mathscr{L}'$ with $\theta(\mathscr{L}') = \theta(\mathscr{L}) + 1/k$. (If there is no such linkage then $\theta$ is not feasible.) If we find $\mathscr{L}'$, we replace $\mathscr{L}$ by $\mathscr{L}'$ and continue. At each replacement the magnitude of $\theta - \theta(\mathscr{L})$ is reduced by $1/k$, and so the algorithm terminates.
+
+To estimate the running time, we need to bound the number of applications of (5.7). This is bounded by
+\begin{equation*}
+1 + \max |k(\theta_1 - \theta_2)|,
+\end{equation*}

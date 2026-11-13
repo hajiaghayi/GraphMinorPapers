@@ -1,0 +1,23 @@
+\origpage{92}{N. Robertson, P. Seymour / Journal of Combinatorial Theory, Series B 89 (2003) 77--108}
+Let $P = (G, \mu, \Delta)$ be a patchwork. A grouping $K$ is \textit{feasible} in $P$ if $V(K) = \bar{\pi}(G)$ and there is a realization $H$ of $P$ such that for distinct $x, y \in V(K)$, $x$ and $y$ are connected in $H$ if and only if they are adjacent in $K$. A grouping is \textit{feasible} in a partial $\Omega$-patchwork $(G, \mu, \Delta, \phi)$ if it is feasible in $(G, \mu, \Delta)$. The set of all groupings feasible in $P$ will be denoted by $gr(P)$.
+
+\textbf{5.2.} \textit{For $i = 1, 2$ let $P_i = (G_i, \mu_i, \Delta_i)$ be a patchwork, and let $(G_i', G_0)$ be a separation of $G_i$, such that $\pi(G_1') = \pi(G_2')$, $P_1|G_0 = P_2|G_0$, and $gr(P_1|G_1') \subseteq gr(P_2|G_2')$. Then for every realization $H_1$ of $P_1$ there is a realization $H_2$ of $P_2$ such that for $x, y \in V(G_0)$, $x$ and $y$ are connected in $H_1$ if and only if they are connected in $H_2$.}
+
+\textbf{Proof.} Let $H_1$ be a realization of $P_1$; then $H_1 = H_0 \cup H_1'$, where $H_0$ is a realization of $P_1|G_0$ and $H_1'$ is a realization of $P_1|G_1'$. Let $H_2'$ be a realization of $P_2|G_2'$ such that for $x, y \in \bar{\pi}(G_1')$, $x$ and $y$ are connected in $H_1'$ if and only if they are connected in $H_2'$. (This exists because $gr(P_1|G_1') \subseteq gr(P_2|G_2')$.) Then $H_2 = H_0 \cup H_2'$ is a realization of $P_2$ satisfying the theorem, by 5.1. This proves 5.2. $\square$
+
+\textbf{5.3.} \textit{For $i = 1, 2$ let $P_i = (G_i, \mu_i, \Delta_i)$ be a patchwork, and let $(G_i', G_0)$ be a separation of $G_i$, such that $\pi(G_1') = \pi(G_2')$, $P_1|G_0 = P_2|G_0$, and $gr(P_1|G_1') \subseteq gr(P_2|G_2')$. Let $\eta_1$ be a realizable expansion of some patchwork $P = (G, \mu, \Delta)$ in $P_1$ such that $\eta_1(e) \in E(G_0)$ for every $e \in E(G)$ and $\eta_1(v) \cap V(G_0) \ne \emptyset$ for each $v \in V(G)$. Then there is a realizable expansion $\eta_2$ of $P$ in $P_2$ such that $\eta_2(e) = \eta_1(e)$ for each $e \in E(G)$, and $\eta_2(v) \cap V(G_0) = \eta_1(v) \cap V(G_0)$ for each $v \in V(G)$.}
+
+\textbf{Proof.} Let $H_1$ be a realization of $P_1 \setminus \eta_1(E(G))$ which realizes $\eta_1$. By 5.2 applied to $P_1 \setminus \eta_1(E(G))$ and $P_2 \setminus \eta_1(E(G))$, there is a realization $H_2$ of $P_2 \setminus \eta_1(E(G))$ such that for $x, y \in V(G_0)$, $x$ and $y$ are connected in $H_1$ if and only if they are connected in $H_2$. For $e \in E(G)$ let $\eta_2(e) = \eta_1(e)$. For each $v \in V(G)$ there is a component $C_1$ of $H_1$ with $V(C_1) = \eta_1(v)$, and hence a (unique) component $C_2$ of $H_2$ with
+\begin{equation*}
+V(C_2) \cap V(G_0) = V(C_1) \cap V(G_0) = \eta_1(v) \cap V(G_0),
+\end{equation*}
+since $\eta_1(v) \cap V(G_0) \ne \emptyset$. Let $\eta_2(v)$ be $V(C_2)$. Then $\eta_2$ is the required expansion. This proves 5.3. $\square$
+
+If $f, g$ are functions with domains $dom(f), dom(g)$ respectively and $x$ is any object, the statement $f(x) \equiv g(x)$ will mean ``either $x \in dom(f) \cap dom(g)$ and $f(x) = g(x)$, or $x \notin dom(f) \cup dom(g)$.''
+
+Let $G$ be a rooted hypergraph. We say that $A \subseteq G$ is \textit{complemented} if $\bar{\pi}(A)$ contains every vertex $v \in V(A)$ such that either $v \in \bar{\pi}(G)$ or some edge $e \in E(G) \setminus E(A)$ is incident with $v$. If $A$ is complemented, we define $G \setminus A \subseteq G$ to be the rooted hypergraph with
+\begin{align*}
+V(G \setminus A) &= (V(G) \setminus V(A)) \cup \bar{\pi}(A), \\
+E(G \setminus A) &= E(G) \setminus E(A), \\
+\pi(G \setminus A) &= \pi(G).
+\end{align*}

@@ -1,0 +1,25 @@
+\origpage{311}{ALGORITHMIC ASPECTS OF TREE-WIDTH}
+\noindent $P_1, \dots, P_k$ of $G$, pairwise vertex-disjoint, such that $P_i$ joins $s_i$ and $t_i$ ($1 \le i \le k$).
+
+The problem DISJOINT CONNECTING PATHS is: \textit{Given a terminated graph, decide if it is feasible.} It is known [3] that DISJOINT CONNECTING PATHS is \textit{NP}-complete. However, this depends on the index being a variable part of the input. The problem is not known to be \textit{NP}-complete for any fixed index. Indeed, we conjecture that for fixed index there is a polynomial algorithm to solve it. This is so for index 2 [15, 16, 17] and for arbitrary fixed index if the graph is restricted to lie on a fixed surface [13]. (Incidentally, even for planar graphs the problem is \textit{NP}-complete if we do not bound the index [6, 8].)
+
+The key result of the present paper (essentially (1.3)) is that for any fixed numbers $w, k$ there is a polynomial algorithm which, given as input a terminated graph with index $\le k$, either decides if it is feasible or outputs that the graph has tree-width $> w$. The next section contains some preliminaries to the proof of this, and the proof itself is given in Section 3. In Sections 4 and 5 we derive (1.1) and (1.2), using (1.3) and the results of [11] and [12] stated above.
+
+\sectionhead{2. \textsc{Preliminaries}}
+
+Suppose we have a tree-decomposition of $G$, with notation as before. For each vertex $i \in I$ of the tree $T$, the connected components of $T \setminus i$ are called the \textit{branches of} $T$ \textit{at} $i$. [$G \setminus X$ denotes the graph obtained by deleting $X$ from $G$, where $X$ may be a vertex or edge, or a set of vertices or edges.] The branches at $i$ are in a natural correspondence with the edges of $T$ incident with $i$.
+
+\stmt
+(2.1) \textit{For} $i \in I$ \textit{and} $v \in V(G)$, \textit{either} $v \in X_i$, \textit{or there is a branch of} $T$ \textit{at} $i$ \textit{which contains all} $j \in I$ \textit{with} $v \in X_j$.
+
+This follows immediately from (W1), (W3). If $v \notin X_i$, let $T_i(v)$ denote this branch. (It is unique).
+
+\stmt
+(2.2) \textit{If} $v, v' \notin X_i$ \textit{and} $v, v'$ \textit{are adjacent in} $G$ \textit{then} $T_i(v) = T_i(v')$.
+
+\textit{Proof.} By (W2), there exists $j \in I$ such that $v, v' \in X_j$. Then $j \ne i$, and so $j$ is in some branch $B$ of $T$ at $i$. But then $B = T_i(v)$, because $v \in X_j$, and similarly $B = T_i(v')$.
+
+\stmt
+(2.3) \textit{If} $v, \delm{v}\fix{v'} \notin X_i$\fixnote{fix:2.3}{The conclusion is about two vertices $v$ and $v'$, and (2.2) has ``$v, v'\notin X_i$''. As printed, nothing is assumed about $v'$.} \textit{and are not separated in} $G$ \textit{by} $X_i$, \textit{then} $T_i(v) = T_i(v')$.
+
+[$Y, Y'$ are \textit{separated} by $X$ in $G$ if every path in $G$ from $Y$ to $Y'$ meets $X$. Here $X, Y, Y'$ are vertices or sets of vertices.]

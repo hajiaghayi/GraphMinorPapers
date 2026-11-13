@@ -1,0 +1,42 @@
+\origpage{65}{GRAPH MINORS. IX}
+\hspace*{12pt}(1) \textit{If $P$ is an $\Omega$-path in $G \cup G_0$ and $P \cap Q_i$ is null for some $i$ ($1 \le i \le s$) and some end of $P$ is in $\Omega(a_i, b_i)$ then both ends of $P$ are in $\Omega(a_i, b_i)$ and no vertex of $P$ is in $G_0$.}
+
+For otherwise $P$ has a vertex in $\Omega(a_i, b_i)$ and a vertex in $\Omega(b_i, a_i) \cup V(G_0)$. Let us choose a minimal subpath $P'$ of $P$ with the same property. Then at most one vertex of $P'$ is in $V(G_0)$, and so every edge of $P'$ is in $E(G)$; thus $P' \subseteq G$ and $P'$ has a vertex in $\Omega(b_i, a_i) \cup \bar{\Omega}_0$. But $Q_i$ meets every path of $G$ from $\Omega(a_i, b_i)$ to $\Omega(b_i, a_i) \cup \bar{\Omega}_0$, and $Q_i$ does not meet $P'$ since $P' \subseteq P$, a contradiction.
+
+\hspace*{12pt}(2) \textit{If $\{P, P'\}$ is a cross in $(G \cup G_0, \Omega)$ and $P \cap Q_i, P' \cap Q_i$ are both null for some $i$ ($1 \le i \le s$) then no end of $P$ or $P'$ is in $\Omega(a_i, b_i)$.}
+
+For suppose some end $a$ of $P$ is in $\Omega(a_i, b_i)$. By (1), the other end $b$ of $P$ is in $\Omega(a_i, b_i)$, and since $\{P, P'\}$ is a cross there is an end of $P'$ in $\Omega(a_i, b_i)$ between $a$ and $b$. By (1), $P, P' \subseteq G$ and so $\{P, P'\}$ is a cross of $(G, \Omega)$, a contradiction since $(G, \Omega, \Omega_0)$ (and hence $(G, \Omega)$) is rural.
+
+\hspace*{12pt}(3) \textit{There is a crooked transaction $\mathscr{P}$ in $(G \cup G_0, \Omega)$ of cardinality $p$ with $\delm{x \notin V(\mathscr{P})}\fix{V(\mathscr{P}) \subseteq Y - \{x\}}$.}
+
+For there is a separation $(G_1, G_2)$ of $G$ with $V(G_1 \cap G_2) = V(Q_s)$, $\Omega(a_s, b_s) \subseteq V(G_1)$, $\Omega(b_s, a_s) \subseteq V(G_2)$ and $\bar{\Omega}_0 \subseteq V(G_2)$, by our choice of $Q_s$. Then $(G_1, G_2 \cup G_0)$ is a separation of $G \cup G_0$, and $V(G_1 \cap (G_2 \cup G_0)) = V(Q_s)$ since $V(G_1 \cap G_0) \subseteq \bar{\Omega}_0 \subseteq V(G_2)$. By (2), there is no cross $\{P, P'\}$ of $(G \cup G_0, \Omega)$ with $P \cap (G_2 \cup G_0), P' \cap (G_2 \cup G_0)$ both null. But $x \in \Omega(a_1, b_1)$ and so (3) follows from (5.2)\fix{, applied to the society $(G \cup G_0, \Omega \mid Y)$. Its crosses and crooked transactions are the crosses and crooked transactions of $(G \cup G_0, \Omega)$ with all ends in $Y$, since $\Omega \mid Y$ orders $Y$ as $\Omega$ does. So $\mathscr{P}$ is a crooked transaction in it, $\{Q_1, \dots, Q_s\}$ is a transaction in it since $a_i, b_i \in X \subseteq Y$, and $x \in Y$. A crooked transaction given by (5.2)(ii) has no end in $\Omega(a_1, b_1)$, and so all its ends are in $Y - \{x\}$. We use (5.2) in the following form. The paths $Q_i$ come from (10.2), and they may have internal vertices
+in $\bar{\Omega}$, which (5.2) does not allow. But (5.2) remains true without the hypothesis that
+$Q_1, \dots, Q_{p+4}$ have no internal vertex in $\bar{\Omega}$. To see this, let $(G', \Omega')$ be
+the society obtained from $(G, \Omega)$ by adding, for each $v \in \bar{\Omega}$, a new vertex $v'$
+and a new edge joining $v$ and $v'$, where $\bar{\Omega}'$ is the set of new vertices and
+$\Omega'(v') = u'$ when $\Omega(v) = u$. For an $\Omega$-path $P$ with ends $a, b$, let $P'$ be the
+$\Omega'$-path with ends $a', b'$ obtained from $P$ by adding the new edges at $a$ and $b$. Since the
+new vertices have degree one, every $\Omega'$-path is $P'$ for exactly one $\Omega$-path $P$, and no
+$\Omega'$-path has an internal vertex in $\bar{\Omega}'$. This correspondence keeps crossing, and so
+it maps separating paths to separating paths, transactions to transactions, and crooked
+transactions to crooked transactions of the same cardinality, and $\Omega(a, b) \cap V(\mathcal{P})$
+is empty if and only if $\Omega'(a', b') \cap V(\mathcal{P}')$ is empty. Given $(G_1, G_2)$ as in
+(5.2), let $G'_1$ be $G_1$ with the new edges at the vertices in
+$\Omega(a_{p+4}, b_{p+4}) \cup \{a_{p+4}, b_{p+4}\}$, and let $G'_2$ be $G_2$ with the new edges at
+the vertices in $\Omega(b_{p+4}, a_{p+4})$ and with the vertices $a'_{p+4}, b'_{p+4}$. Then
+$(G'_1, G'_2)$ is a separation of $G'$ with $V(G'_1 \cap G'_2) = V(Q'_{p+4})$,
+$\Omega'(a'_{p+4}, b'_{p+4}) \subseteq V(G'_1)$ and $\Omega'(b'_{p+4}, a'_{p+4}) \subseteq V(G'_2)$.
+So (5.2) applies to $(G', \Omega')$ and $Q'_1, \dots, Q'_{p+4}$, and its outcome (i) or (ii) there
+gives outcome (i) or (ii) for $(G, \Omega)$, since $P'_1 \cap G'_2$ is null exactly when
+$P_1 \cap G_2$ is null}\fixnote{fix:10.3-proof}{As printed, (5.2) does not apply, since the paths
+of (10.2) may have internal vertices in $\bar{\Omega}$. The form of (5.2) given here, without that
+hypothesis, is the one proved and used in the formalization.}.
+
+This completes the proof. $\square$
+
+The main result of this section is the following.
+
+\stmt
+(10.4) \textit{Let $p \ge 2$ with $p \ne 3$. Let $(G, \Omega, \Omega_0)$ be a rural neighborhood of breadth $\ge p + 5$, and let $X \subseteq \bar{\Omega}$ be linked with $|X| \ge 2p + 8$. Let $(G \cup G_0, \Omega)$ be the composition of some society $(G_0, \Omega_0)$ with $(G, \Omega, \Omega_0)$, and suppose that there is a crooked transaction $\mathscr{P}$ in $(G \cup G_0, \Omega)$ with $|\mathscr{P}| \ge p$. Then $\mathscr{P}$ may be chosen with $V(\mathscr{P}) \subseteq X$ and such that no member of $\mathscr{P}$ has any internal vertex in $\bar{\Omega}$.}
+
+\textit{Proof.} Take a presentation $(\Sigma, \Gamma, \Delta, \Delta_0)$ of $(G, \Omega, \Omega_0)$ with a $(p + 5)$-nest $(C_1', \dots, C_{p+5}')$. Then $(C_1', \dots, C_{p+4}')$ is a $(p + 4)$-nest and $V(C_1'), \dots, V(C_{p+4}')$ are all disjoint from $\bar{\Omega}$. Since $X$ is linked, there are mutually disjoint $X \to \bar{\Omega}_0$ paths $P_1', \dots, P_{2p+8}'$ of $G$ each with no internal vertex in $\bar{\Omega}$. Let $G'$ be obtained from $G$ by deleting every edge of $G$ with an end in $\bar{\Omega}$ except for the first edges of $P_1', \dots, P_{2p+8}'$. Then $C_1', \dots, C_{p+4}'$ and $P_1', \dots, P_{2p+8}'$ are all subgraphs of $G'$. By (10.1), applied to $(G', \Omega, \Omega_0)$,

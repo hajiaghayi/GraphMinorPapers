@@ -1,0 +1,25 @@
+\origpage{334}{N. Robertson, P.D. Seymour / Journal of Combinatorial Theory, Series B 90 (2004) 325--385}
+The result is well-known and the proof is easy\del{, and so we omit it}. \fix{We give the proof. Suppose that such a sequence exists. The relation $\preceq$ is transitive, as one checks from its three conditions, and so $\Omega_j \preceq \Omega_i$ for all $j \ge i \ge 1$. For each $i \ge 1$, $E(\Omega_{i+1}) \ne E(\Omega_i)$, since otherwise the third condition in the definition of $\preceq$ would imply that $\Omega_{i+1} = \Omega_i$; so we may choose $x_i \in E(\Omega_i) - E(\Omega_{i+1})$. Then $x_i \in E(\Omega_1)$ for all $i \ge 1$, and since $\Omega_1$ is a well-quasi-order, there exist $j > i \ge 1$ such that $x_i \le x_j$ in $\Omega_1$. Now $x_j \in E(\Omega_j) \subseteq E(\Omega_{i+1})$ and $\Omega_{i+1} \preceq \Omega_1$, and so the second condition in the definition of $\preceq$ implies that $x_i \in E(\Omega_{i+1})$, a contradiction. This proves 4.3.}\fixnote{fix:4.3-proof-added}{The paper omits the proof of 4.3. The argument above is the one used in the formalization.}
+
+\textbf{4.4.} \textit{There is no countable sequence $\chi_i$ $(i = 1, 2, \dots)$ of colour schemes such that $\chi_{i+1}$ is a refinement of $\chi_i$ for all $i \ge 1$.}
+
+\textbf{Proof.} Suppose that $\chi_i$ $(i = 1, 2, \dots)$ is such a sequence. For each $i \ge 1$, let $\mathscr{S}_i$ be the set of long sides of $\Phi_{\chi_i}$, and let $f_i \colon \mathscr{S}_{i+1} \to \mathscr{S}_i$ be an embedding of $\chi_{i+1}$ in $\chi_i$. Let $t_0$ be a new vertex, and let $T$ be the infinite tree with
+\begin{align*}
+V(T) &= \{t_0\} \cup \{(i, S) : i \ge 1, S \in \mathscr{S}_i\} \\
+E(T) &= \{(t_0, (1, S)) : S \in \mathscr{S}_1\} \cup \{((i, f_i(S)), (i+1, S)) : i \ge 1, S \in \mathscr{S}_{i+1}\}.
+\end{align*}
+\hspace*{12pt}(1) \textit{T has infinitely many vertices with degree $\ne 2$.}
+
+\textbf{Subproof.} Otherwise $f_i$ is a bijection for all sufficiently large $i$, say for all $i > n$. For all $i \ge n$, let $\mathscr{S}_i = \{S_i^1, \dots, S_i^k\}$, numbered such that $f_i(S_{i+1}^j) = S_i^j$ for all $i > n$ and $1 \le j \le k$. For all $j$ with $1 \le j \le k$ it follows from the first condition in the definition of ``refinement'' that
+\begin{equation*}
+\Omega_{\chi_{i+1}}(S_{i+1}^j) \preccurlyeq \Omega_{\chi_i}(S_i^j)
+\end{equation*}
+for all $i > n$, and so by 4.3, equality holds here for all sufficiently large $i$; and we may therefore assume, by increasing $n$, that equality holds for all $i > n$. From the third condition in the definition of ``refinement'', it follows that for all $i > n$, $\Phi_{\chi_{i+1}}$ has strictly fewer short sides than $\Phi_{\chi_i}$, which is impossible. This proves (1).
+
+Since every vertex of $T$ has finite degree, we can apply K\"onig's lemma to the infinite tree obtained from $T$ by suppressing all vertices of degree 2. We deduce that $T$ has a path containing infinitely many vertices of degree $\ne 2$. Thus for all $i$ there exists $S_i \in \mathscr{S}_i$ such that $f_i(S_{i+1}) = S_i$, and such that $(i, S_i)$ has degree $\ge 3$ in $T$ for infinitely many values of $i$. We deduce that
+\begin{equation*}
+\Omega_{\chi_{n+1}}(S_{n+1}) \succcurlyeq \Omega_{\chi_{n+2}}(S_{n+2}) \succcurlyeq \cdots
+\end{equation*}
+with strict inclusion infinitely many times, contrary to 4.3. Thus there is no such sequence $\chi_i$ $(i = 1, 2, \dots)$. This proves 4.4. $\square$
+
+\textbf{Proof of 3.1 (Assuming 4.1).} Suppose that 3.1 is false; then there is a bad colour scheme $\chi$, and we may choose it to satisfy $\mathbf{S}_1$. By 4.2, we may choose $\chi$ orientedly bad. By 4.3, we may choose $\chi$ so that in addition it satisfies $\mathbf{S}_2$. By choosing such a $\chi$ with $c(\Sigma_\chi)$ minimum, we find it also satisfies $\mathbf{S}_3$. By 4.4, we may choose $\chi$ to satisfy $\mathbf{S}_4$ as well. But then 4.1 is contradicted. Thus 3.1 holds. $\square$

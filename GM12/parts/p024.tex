@@ -1,0 +1,37 @@
+\origpage{263}{GRAPH MINORS. XII}
+\hspace*{12pt}(iv) of the theorem are then obviously true). We assume then that there exists $F$ as in (7.2), where $F \subseteq \{v\} \cup r$ for some region $r$ of $\Gamma$, and $\operatorname{ins}(F)$ includes an edge of $\Gamma$. Let $\Gamma''$ be obtained from $\Gamma$ by deleting all vertices and edges in $\operatorname{ins}(F) - F$, and let $\mathscr{T}'' = \{(A \cap \Gamma'', B \cap \Gamma'') : (A, B) \in \mathscr{T}\}$. By (7.2), $\Gamma''$ is 2-cell, and $\mathscr{T}''$ is a respectful tangle of order $\theta$ in $\Gamma''$, with metric $d''$ say, such that
+
+\hspace*{12pt}(v) for all $a, b \in A(\Gamma) \cap A(\Gamma'')$, $d''(a, b) \ge d(a, b)$
+
+\hspace*{12pt}(vi) for all $a \in A(\Gamma) - A(\Gamma'')$, $d(a, \{v\}) \le 1$.
+
+From the inductive hypothesis, there is a 2-cell component $\Gamma'$ of $\Gamma'' \setminus v$ and, hence, of $\Gamma \setminus v$, and a respectful tangle $\mathscr{T}'$ of order $\theta - 1$ in $\Gamma'$, with metric $d'$, such that if $r'$ is the region of $\Gamma'$ containing $v$, then
+
+(i') $U(\Gamma'') \subseteq U(\Gamma') \cup r'$
+
+(ii') $d'(a, b) \ge d''(a, b) - 2$ for all $a, b \in A(\Gamma'') \cap A(\Gamma')$
+
+(iii') $d'(a, r') \ge d''(a, \{v\}) - 1$ for all $a \in A(\Gamma'') \cap A(\Gamma')$, and
+
+(iv') $d''(a, \{v\}) \le 2$ for all $a \in A(\Gamma'')$ with $a \subseteq r'$.
+
+We claim that $\Gamma'$, $\mathscr{T}'$, $r'$ satisfy the theorem. Certainly if $r''$ is the region of $\Gamma''$ including $r$, then $r'' \subseteq r'$ and hence by (i'),
+\begin{equation*}
+U(\Gamma) \subseteq U(\Gamma'') \cup r'' \subseteq U(\Gamma') \cup r'
+\end{equation*}
+and (i) holds. For (ii), let $a, b \in A(\Gamma) \cap A(\Gamma')$; then $a, b \in A(\Gamma'')$, and by (ii') and (v),
+\begin{equation*}
+d'(a, b) \ge d''(a, b) - 2 \ge d(a, b) - 2
+\end{equation*}
+and (ii) holds. For (iii), let $a \in A(\Gamma) \cap A(\Gamma')$; then $a \in A(\Gamma'')$, and by (iii) and (v),
+\begin{equation*}
+d'(a, r') \ge d''(a, \{v\}) - 1 \ge d(a, \{v\}) - 1
+\end{equation*}
+and (iii) holds. For (iv), let $a \in A(\Gamma)$ with $a \subseteq r'$. If $a \notin A(\Gamma'')$ then by (vi), $d(a, \{v\}) \le 1$, and (iv) holds. If $a \in A(\Gamma'')$ then by (v) and (iv'),
+\begin{equation*}
+d(a, \{v\}) \le d''(a, \{v\}) \le 2,
+\end{equation*}
+and (iv) holds. $\square$
+
+\stmt
+(7.5) \textit{Let $\mathscr{T}$ be a respectful tangle of order $\theta \ge 3$ in a 2-cell drawing $\Gamma$ in a connected surface $\Sigma$, and let its metric be $d$. Let $r$ be a region of $\Gamma$, and let $Z$ be the set of vertices of $\Gamma$ incident with $r$. Then there is a 2-cell}

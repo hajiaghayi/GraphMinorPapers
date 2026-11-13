@@ -1,0 +1,24 @@
+\origpage{38}{}
+\hspace*{12pt}(R6) \textit{For each border cell $c$ with $\tilde{c} = \{u, v\}$, $\alpha(u)$ and $\alpha(v)$ are subgraphs of $\alpha(c)$, and either}
+
+\hspace*{12pt}(i) \textit{there are $|V(\alpha(u))|$ mutually vertex-disjoint paths of $\alpha(c)$ between $V(\alpha(u))$ and $V(\alpha(v))$, that is, $c$ is ``linked``, or}
+
+\hspace*{12pt}(ii) \textit{there is a cell $c'$ with $|\tilde{c}'| = 3$ and $u, v \in \tilde{c}'$.}
+
+\hspace*{12pt}(R7) \textit{If $c_1, c_2 \in C(\Gamma)$ are distinct, then $V(\alpha(c_1) \cap \alpha(c')) = \tilde{c}_1 \cap \tilde{c}_2$ unless $c_1$ and $c_2$ border the same cuff (that is, unless $c_1 \cap C \ne \emptyset \ne c_2 \cap C$ for some cuff $C$).}
+
+\hspace*{12pt}(R8) \textit{If $c_1, c_2 \in C(\Gamma)$ border a cuff $C$, and $u_1, u_2 \in V(\Gamma) \cap C$ and $c_1, u_1, c_2, u_2$ are in order around $C$, then $\alpha(c_1) \cap \alpha(c_2) \subseteq \alpha(u_1) \cup \alpha(u_2)$.}
+
+\hspace*{12pt}(R9) \textit{If $c \in C(\Gamma)$ and $|\tilde{c}| = 3$, then $\alpha(c)$ cannot be drawn in a disc so that the three members of $\tilde{c}$ are drawn in the boundary of the disc.}
+
+\hspace*{12pt}(R10) \textit{For each cuff $C, \bigcap(\alpha(u) : u \in V(\Gamma) \cap C)$ is null.}
+
+Its depth is the maximum of $q(C)$, taken over all cuffs $C$ (or $0$ if $bd(\Sigma) = \emptyset$).
+
+\textbf{9.1} \textit{If $\Gamma, \alpha$ is a portrait in a surface $\Sigma$ of a graph $G$, and $L$ is a vital linkage in $G$, then for every cell $c$ of $\Gamma$ which is not a border cell, either $V(\alpha(c)) \setminus \tilde{c}$ contains a terminal of $L$, or $\alpha(c)$ can be drawn in a disc with the members of $\tilde{c}$ drawn in the boundary.}
+
+\textbf{Proof.} Let $c \in C(\Gamma)$ be an internal cell such that $V(\alpha(c)) \setminus \tilde{c}$ contains no terminal of $L$. We must prove that $\alpha(c)$ can be drawn in a disc with $\tilde{c}$ in the boundary. If $V(\alpha(c)) = \tilde{c}$ this is clear, and we therefore may assume that $V(\alpha(c)) \ne \tilde{c}$. Since by (R2) $\tilde{c} \subseteq V(\alpha(c))$, there is a vertex in $V(\alpha(c)) \setminus \tilde{c}$. Since $V(L) = V(G)$, there is a component $P$ of $L$ with $V(P \cap (\alpha(c))) \not\subseteq \tilde{c}$. Since $V(\alpha(c)) \setminus \tilde{c}$ contains no end of $P$, and $c$ is internal, it follows from (R7) that $|V(P) \cap \tilde{c}| \ge 2$; and so $P$ is the only component of $L$ with a vertex in $V(\alpha(c)) \setminus \tilde{c}$, since $|\tilde{c}| \le 3$. Consequently, $V(\alpha(c)) \setminus \tilde{c} \subseteq V(P)$. But $L$ is vital, and so any two vertices of $P \cap \alpha(c)$ that are adjacent in $\alpha(c)$ are also adjacent in $P$. Hence either $\alpha(c)$ is a path with both ends in $\tilde{c}$, or $\alpha(c) \setminus v$ is a path with both ends in $\tilde{c}$, for some $v \in \tilde{c}$. In either case $\alpha(c)$ can be drawn in a disc with all the members of $\tilde{c}$ drawn in the boundary, as required. $\square$
+
+If $\mathcal{T}$ is a tangle in $G$, a portrait $\Gamma, \alpha$ of $G$ in $\Sigma$ \textit{surrounds} $\mathcal{T}$ if $\alpha(c)$ is small for each $c \in C(\Gamma)$.
+
+\textbf{9.2} \textit{For every surface $\Sigma$, and all integers $p \ge 0$ and $q \ge 1$, there exists $\theta \ge 1$ such that, if a graph $G$ has a portrait in $\Sigma$ of depth $\le q$ which surrounds a tangle of order $\ge \theta$, then $G$ has no vital $p$-linkage.}

@@ -1,0 +1,33 @@
+\origpage{97}{GRAPH MINORS. V}
+We remark that an assumption of the kind $G \in \mathcal{F}_\theta$ is needed in this result. For example, let $G$ be the $\phi$-grid with vertices $v_{ij}$ ($1 \le i, j \le \phi$); let
+\begin{align*}
+V_1 &= \{v_{11}, \dots, v_{\phi 1}\} \\
+V_2 &= \{v_{11}, \dots, V_{1 \phi}\} \\
+V_3 &= \{v_{1 \phi}, \dots, v_{\phi \phi}\}.
+\end{align*}
+Take $n = 2$. Then (i) of (3.2) is false, as is easily seen; and the smallest set $X$ making (ii) true has cardinality $\phi$, which can be arbitrarily large.
+
+\sectionhead{4. \textsc{Grids} \textsc{And} \textsc{Webs}}
+
+Let $G$ be a graph. An ($m, n$)-web in $G$ is a pair $((A_1, \dots, A_m), (B_1, \dots, B_n))$, where $A_1, \dots, A_m, B_1, \dots, B_n$ are paths of $G$, such that
+
+\hspace*{12pt}(i) $A_1, \dots, A_m$ are disjoint, and $B_1, \dots, B_n$ are disjoint;
+
+\hspace*{12pt}(ii) each $A_i$ meets each $B_j$;
+
+\hspace*{12pt}(iii) $A_1, \dots, A_m, B_1, \dots, B_n$ are pairwise edge-disjoint.
+
+(We permit $m = 0$ and $n = 0$.) The object of this section is to prove that if $G \in \mathcal{F}_\theta$ then $G$ has no $(\theta_2, \theta_2)$-web, where $\theta_2$ is as defined in Section 2.
+
+\stmt
+(4.1) \textit{Let $G \in \mathcal{F}_\theta$. Let $A_1, \dots, A_m, B_1, \dots, B_n$ be disjoint connected subgraphs of $G$ such that for $1 \le i \le m$, $1 \le j \le n$ there is a vertex of $A_i$ and a vertex of $B_j$ which are adjacent in $G$. Then either $m < \theta^2/2$ or $n < \theta^2/2$.}
+
+\textit{Proof.} By contracting the edges of each of $A_1, \dots, A_m, B_1, \dots, B_n$ we obtain a graph which has a subgraph isomorphic to $K_{m, n}$. But $K_{\theta^2/2, \theta^2/2} \notin \mathcal{F}_\theta$, and the result follows.
+
+\stmt
+(4.2) \textit{Let $A_1, \dots, A_{\theta^2/2}$ be disjoint connected subgraphs of $G \in \mathcal{F}_\theta$, and let $B_1, \dots, B_n$ be pairwise edge-disjoint connected subgraphs of $G$. Suppose that for $1 \le i \le \theta^2/2$, $1 \le j \le n$ there is a unique vertex $v_{ij}$ in $V(A_i) \cap V(B_j)$, and it has valency 1 in $B_j$. Suppose in addition that all vertices of $G$ have valency $\le 4$. Then $n < \theta_1$, where $\theta_1$ is as defined in Section 2.}
+
+\textit{Proof.} Put $m = \theta^2/2$. We may assume that each $B_j$ is a tree with end-vertices $v_{1j}, \dots, v_{mj}$. For $1 \le j \le n$, let $B'_j$ be the tree obtained from $B_j$ by deleting $v_{1j}, \dots, v_{mj}$. Thus no vertex of $G$ is in more than two of $B'_1, \dots, B'_n$, since $G$ has maximum valency $\le 4$. Let
+\begin{equation*}
+G' = G \setminus (V(A_1) \cup \dots \cup V(A_m)).
+\end{equation*}

@@ -1,0 +1,28 @@
+\origpage{187}{GRAPH MINORS, XVII}
+Menger's theorem, there is a separation $(A_1, A_2)$ of $\alpha(c_0)$ of order $q$ with $\beta(n_1 +) \subseteq V(A_1)$ and $\beta(n_2 +) \cup \{\gamma(n_1)\} \subseteq V(A_2)$. Let $c_1$ be the border cell with $c_1 \ne c_0$ and $n_1 \in \tilde{c}_1$. Define
+\begin{align*}
+\alpha'(c_0) &= A_2 \\
+\alpha'(c_1) &= A_1 \cup \alpha(c_1) \\
+\alpha'(c) &= \alpha(c) \quad (c \in C(\Gamma) - \{c_0, c_1\}) \\
+\beta'(n_1) &= V(A_1 \cap A_2) - \{\gamma(n_1)\} \\
+\beta'(n) &= \beta(n) \quad (n \in N(\Gamma) \cap \operatorname{bd}(\Sigma) - \{n_1\}).
+\end{align*}
+Then $\pi' = (\Sigma, \Gamma, \alpha', \beta', \gamma)$ is a $\mathcal{T}$-central portrayal resembling or simpler than $\pi$. (Both $c_1$ and $c_2$ have warp $\le q$ in $\pi'$ because $|\beta'(n_1)| < q$.) Hence $\pi'$ resembles $\pi$, and (since $\Gamma$ is unchanged) $\pi'$ is true; but $|\beta'(n_1)| < q$, contrary to (9.4).
+
+Thus there is a linkage in $\alpha(c_0) \setminus \{\gamma(n_1)\}$ from $\beta(n_1)$ to a $q$-subset of $\beta(n_2+)$, and similarly there is a linkage in $\alpha(c_0) \setminus \{\gamma(n_2)\}$ from $\beta(n_2)$ to a $q$-subset of $\beta(n_1+)$. From (9.5) we deduce that either there is a linkage in $\alpha(c_0) \setminus \{\gamma(n_1), \gamma(n_2)\}$ from $\beta(n_1)$ to $\beta(n_2)$ (and hence the theorem holds) or there is linkage $\{P_0, \dots, P_q\}$ of cardinality $q + 1$ from $\beta(n_1+)$ to $\beta(n_2+)$. We may therefore assume the latter. By the warp condition it pairs $\gamma(n_1)$ with $\gamma(n_2)$, and so we may assume $P_0$ has initial vertex $\gamma(n_1)$ and terminal vertex $\gamma(n_2)$; but then $P_1, \dots, P_q$ satisfies the theorem. $\square$
+
+\stmt
+(9.7) \textit{For every border node $n$, $\beta(n) \cap \gamma(N(\Gamma)) = \emptyset$.}
+
+\textit{Proof.} Let $n$ border a cuff $\Theta$, and suppose that $\gamma(n') \in \beta(n)$ for some $n' \in \operatorname{dom}(\gamma) = N(\Gamma)$. By \textbf{(P4)}, $n'$ borders $\Theta$. Let $c_1$, $c_2$ be the border cells with $n' \in \tilde{c}_1, \tilde{c}_2$ and let $\tilde{c}_i = \{n', n_i\}$ ($i = 1, 2$). Then $n, n_1, n', n_2$ are in order, and so
+\begin{equation*}
+\gamma(n') \in \beta(n+) \cap \beta(n'+) \subseteq \beta(n_1+) \cup \beta(n_2+)
+\end{equation*}
+and we may assume that $\gamma(n') \in \beta(n_1+)$. Since $n' \ne n_1$ and so $\gamma(n') \ne \gamma(n_1)$, it follows that $\gamma(n') \in \beta(n_1)$. But by (9.6) there is a linkage from $\beta(n')$ to $\beta(n_1)$ not passing through $\gamma(n')$, a contradiction. $\square$
+
+We summarize (9.3), (9.4), (9.6), (9.7) in the following.
+
+\stmt
+(9.8) \textit{Let $c_0$ be a border cell with $c_0 = \{n_1, n_2\}$. Then}
+
+\hspace*{12pt}(i) \textit{$|\beta(n_1)| = |\beta(n_2)| = q$ and $\beta(n_1) \cap \gamma(N(\Gamma)), \beta(n_2) \cap \gamma(N(\Gamma)) = \emptyset$;}

@@ -1,0 +1,27 @@
+\origpage{186}{ROBERTSON AND SEYMOUR}
+\noindent $m_2$, $m_3$, $m_4$ are in order around $\Theta$ (although they are not necessarily distinct), and so
+\begin{equation*}
+\beta(n_1+) \cap \beta(m_3+) \subseteq \beta(m_2+) \cup \beta(m_4).
+\end{equation*}
+Since $\beta(n_1+) \cap \beta(m_3+) = \beta'(m_1+) \cap \beta(m_3+)$ since $\gamma(n_3) \notin \beta(m_3+)$, the claim follows. If $m_2 = n_3$ it follows similarly, since now $m_1$, $n_1$, $m_3$, $m_4$ are in order around $\Theta$.
+
+Thus, $\pi'$ is a portrayal, and by (4.1)(ii) it is $\mathcal{T}$-central. It remains to check its warp, and it suffices to check the warp of $c_1$ and $c_2$ in $\pi'$. Since $|\beta'(n_1 +)| \le q$, it follows that $c_1$ has warp $\le q$. Let $\{P_0, \dots, P_q\}$ be a linkage in $\alpha'(c_2)$ from $\beta'(n_2+) = \beta(n_2+)$ to $\beta'(n_3+) = \beta(n_1+) \cup \{\gamma(n_3)\}$. Then $\gamma(n_3)$ is the terminal vertex of one of these paths, say $P_0$; and we must show that $P_0$ has initial vertex $\gamma(n_2)$. But $\gamma(n_1)$, $\gamma(n_2)$ are not internal vertices of $P_0$, since each of them is an end of one of $P_0, \dots, P_q$. But $\gamma(n_3) \notin \alpha(c_0)$, and so the edge of $P_0$ incident with $\gamma(n_3)$ is an edge of $\alpha(c_3)^*$. Since no internal vertex of $P_0$ is in $\gamma(c_3)$ it follows that $P_0$ is a path of $\gamma(c_3)$, and hence its initial vertex is in
+\begin{equation*}
+\beta(n_2+) \cap V(\alpha(c_3)) = \{\gamma(n_2)\} \cup (\{\gamma(n_1)\} \cap \beta(n_2)).
+\end{equation*}
+But $\gamma(n_1)$ is the terminal vertex of one of $P_1, \dots, P_q$ and so is not the initial vertex of $P_0$; and so $\gamma(n_2)$ is the initial vertex of $P_0$ as required.
+
+We conclude that $\pi'$ is a $\mathcal{T}$-central portrayal of $G$, resembling or simpler than $\pi$. But it is truer, a contradiction. $\square$
+
+We shall need the following standard lemma from network flow theory. If $H$ is a graph and $X \subseteq V(H)$, we denote by $H \setminus X$ the graph obtained by deleting $X$.
+
+\stmt
+(9.5) \textit{Let $H$ be a graph, let $A, B \subseteq V(H)$, and let $X \subseteq A$ and $Y \subseteq B$ with $|X| = |Y| = q$. Suppose that there is a linkage in $H \setminus (A - X)$ from $X$ to a $q$-subset of $B$, and there is a linkage in $H \setminus (B - Y)$ from a $q$-subset of $A$ to $Y$. Then either there is a linkage in $H \setminus ((A - X) \cup (B - Y))$ from $X$ to $Y$, or there are $q + 1$ mutually vertex-disjoint paths in $H$ from $A$ to $B$.}
+
+\stmt
+(9.5) is used to prove the following.
+
+\stmt
+(9.6) \textit{Let $c_0$ be a cell bordering a cuff $\Theta$ with $\tilde{c}_0 = \{n_1, n_2\}$, and let $\pi$ have warp $q$ at $\Theta$. Then there are $q$ mutually vertex-disjoint paths of $\alpha(c_0)^*$ from $\beta(n_1)$ to $\beta(n_2)$, each containing neither $\gamma(n_1)$ nor $\gamma(n_2)$.}
+
+\textit{Proof.} We claim first that there is a linkage in $\alpha(c_0)^* \setminus \{\gamma(n_1)\}$ from $\beta(n_1)$ to a subset of $\beta(n_2+)$ of cardinality $q$. For suppose not; then by

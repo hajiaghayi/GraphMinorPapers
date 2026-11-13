@@ -1,0 +1,24 @@
+\origpage{249}{GRAPH MINORS IV}
+\textit{Let $\beta$ be a bijection from $U(S)$ to $U(S')$, such that for each $s \in U(S)$,} (v) \textit{$\gamma$ maps $\pi(\sigma(s))$ to $\pi(\sigma'(\beta(s)))$} (vi) \textit{$P | \sigma(s)$ is simulated in $P' | \sigma'(\beta(s))$.} \textit{Then $P$ is simulated in $P'$.}
+
+\textit{Proof.} Let $V(S) = \{s_0, s_1, \dots, s_n\}$ where $s_0 = o(S)$, and let $V(S') = (s'_0, s'_1, \dots, s'_n)$ where $\beta(s_i) = s'_i$ ($1 \le i \le n$). For each $i \ge 1$, let $\eta_i$ be a realizable expansion of $P | \sigma(s_i)$ in $P' | \sigma'(s'_i)$. Let $\eta_0$ be the expansion of $P | \sigma(s_0)$ in $P' | \sigma'(s'_0)$ defined by
+\begin{align*}
+\eta_0(v) &= \{\gamma(v)\} && (v \in V(\sigma(s_0))) \\
+\eta_0(e) &= \alpha(e) && (e \in E(\sigma(s_0))).
+\end{align*}
+Now since $P'$ is removable, $N_X$ is a realization of $(P' | \sigma'(s'_0)) \setminus \eta_0(E(\sigma(s_0)))$, where $X = V(\sigma'(s'_0))$; and it realizes $\eta_0$. Thus $\eta_0$ is realizable.
+
+For $i \ge 0$, let $S_i$ be the subtree of $S$ with vertex set $\{s_0, s_1, \dots, s_i\}$ and let $G_i = \sigma \times S_i$; and define $S'_i$, $G'_i$ similarly. For each $j \ge 0$, let $\zeta_j$ be defined by
+\begin{align*}
+\zeta_j(e) &= \eta_i(e) \quad \text{if} \quad 0 \le i \le j \text{ and } e \in E(\sigma(s_i)) \\
+\zeta_j(v) &= \bigcup (\eta_i(v) \colon 0 \le i \le j, v \in V(\sigma(s_i))).
+\end{align*}
+We claim that $\zeta_j$ is a realizable expansion of $P | G_j$ in $P' | G'_j$, for $0 \le j \le n$. This is true if $j = 0$; we assume that it holds for some $j$ with $0 \le j < n$, and we shall prove that it holds for $j + 1$. Now for $1 \le i \le |\bar{\pi}(\sigma(s_{j+1}))|$, let $v$, $v'$ be the $i$th terms of $\pi(\sigma(s_{j+1}))$, $\pi(\sigma'(s'_{j+1}))$, respectively. By condition (v) above, $\gamma(v) = v'$, and so $\eta_0(v) = \{v'\}$. Since $\eta_0(v) \subseteq \zeta_j(v)$, it follows that $v' \in \zeta_j(v)$. Hence we may apply (8.1) to the separations $(\sigma(s_{j+1}), G_j)$ and $(\sigma'(s'_{j+1}), G'_j)$ of $G_{j+1}$, $G'_{j+1}$ (replacing $P$, $P'$ by $P | G_{j+1}$, $P' | G'_{j+1}$, and replacing $\eta_1$, $\eta_2$ by $\eta_{j+1}$, $\zeta_j$); and we deduce that $\zeta_{j+1}$ is a realizable expansion of $P | G_{j+1}$ in $P' | G'_{j+1}$. This proves our claim, by induction on $j$. In particular, $P | G_n = P$ is simulated in $P' | G'_n = P'$, as required. $\square$
+
+We shall need the following theorem of Higman [3].
+
+\stmt
+(8.3) \textit{Let $\Omega$ be a well-quasi -order, and let $X_i$ ($i = 1, 2, \dots$) be a countable sequence of finite subsets of $E(\Omega)$. Then there exists an infinite subset $I \subseteq \{1, 2, \dots\}$ with the property that for all $i$, $i' \in I$ with $i < i'$ there is an injection $\alpha \colon X_i \to X_{i'}$ such that $x \le \alpha(x)$ for all $x \in X_i$.}
+
+\stmt
+(8.4) \textit{Let $n \ge 0$, let $\Omega$ be a well-quasi-order, and let $P_i = (G_i, \mu_i, \Delta_i, \phi_i)$ ($i = 1, 2, \dots$) be a countable sequence of removable $\Omega$-patchworks. For each $i \ge 1$ let $(S_i, \sigma_i)$ be a star-decomposition of $G_i$ with $|V(\sigma_i(o(S_i)))| \le n$.}

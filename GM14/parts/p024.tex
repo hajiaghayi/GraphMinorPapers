@@ -1,0 +1,20 @@
+\origpage{46}{ROBERTSON AND SEYMOUR}
+Now for $v_i \in V(H \cap bd(\Lambda_i))$ ($i = 1, 2$), $d(z, v_1) \ge 3\beta + 1$ since $v_1 \notin \Lambda_1$, and $d(z, v_2) \le \beta + 2$ since $v_2 \in \bar{\Lambda}_2$, and so $d(v_1, v_2) \ge 2\beta - 1$. Since $d(u, v) \le 2$ for any two vertices of $H$ incident with the same region, it follows that the regional distance between $H \cap bd(\Lambda_1)$ and $H \cap bd(\Lambda_2)$ is at least $\beta$. From (5.5) there are $\beta - 1$ mutually disjoint circuits of $H$ strictly between $H \cap bd(\Lambda_1)$ and $H \cap bd(\Lambda_2)$. Counting $H \cap bd(\Lambda_i)$ ($i = 1, 2$) as well, we deduce
+
+\hspace*{12pt}(1) \textit{There are $\beta + 1$ mutually disjoint circuits $C_1, \dots, C_{\beta + 1}$ of $H \cap \bar{\Lambda}_1$, bounding closed discs $\Delta_1, \dots, \Delta_{\beta + 1} \subseteq \bar{\Lambda}_1$, respectively, such that $\bar{\Lambda}_2 \subseteq \Delta_1 \subseteq \Delta_2 \subseteq \dots \subseteq \Delta_{\beta + 1} \subseteq \bar{\Lambda}_1$.}
+
+\hspace*{12pt}(2) \textit{There are $\beta$ mutually disjoint paths $P_1, \dots, P_\beta$ of $H \cap \bar{\Lambda}_1$ from $bd(\Lambda_2)$ to $bd(\Lambda_1)$.}
+
+\textit{Subproof.} Suppose not. By a form of Menger's theorem for planar graphs, there is an O-arc $F \subseteq \bar{\Lambda}_1$ bounding a closed disc $\Delta \subseteq \bar{\Lambda}_1$ with $\bar{\Lambda}_2 \subseteq \Delta$, such that $F \cap U(H) \subseteq V(H)$ and $|F \cap V(H)| < \beta$; and we can choose $F$ so that $F = U(C)$ for some circuit $C$ of a radial graph of $H$. From (7.5), since $\Lambda_1$ is a $(3\beta + 3)$-zone and
+\begin{equation*}
+|E(C)| \le 2(\beta - 1) < 2(\theta - (3\beta + 3)),
+\end{equation*}
+we deduce that $ins(C) \subseteq \bar{\Lambda}_1$; and hence $\bar{\Lambda}_2 \subseteq ins(C)$, and so $d(z, e) \le \beta - 1$ for every edge $e$ of $H \cap bd(\Lambda_2)$. But this contradicts the choice of $\Lambda_2$. This proves (2).
+
+By [1, theorem (4.1)], or rather by the proof of that theorem, we deduce from (1) and (2) that (3) \textit{There are circuits $C_1, \dots, C_{\beta + 1}$ as in (1), and paths $P_1, \dots, P_\beta$ as in (2), such that $C_i \cap P_j$ is a path for $1 \le i \le \beta + 1$ and $1 \le j \le \beta$.}
+
+Let $h = \frac{1}{2}\beta + 2$; and let us choose $C_1, \dots, C_{\beta + 1}$ and $P_1, \dots, P_\beta$ as in (3) such that $\Delta_h$ is maximal, where $\Delta_1, \dots, \Delta_{\beta + 1}$ are the closed discs in $\bar{\Lambda}_1$ bounded by $U(C_1), \dots, U(C_{\beta + 1})$ respectively.
+
+\hspace*{12pt}(4) \textit{$\bar{r} \cap \Delta_h$ is null or connected for every region $r$ of $H$ with $r \cap \Delta_h = \emptyset$.}
+
+\textit{Subproof.} Let $u, v \in \bar{r} \cap V(C_h)$; then there is a (unique) path $P(u, v)$ of $C_h$ with ends $u, v$, and a line $F \subseteq r \cup \{u, v\}$ with ends $u, v$, such that the O-arc $F \cup U(P(u, v))$ bounds a disc $\Delta$ in $\Delta_{h+1}$ not including $\Delta_h$. If possible, let us choose $u, v \in \bar{r} \cap V(C_h)$ in distinct components of $C_h \cap \bar{r}$, with $P(u, v)$ as short as possible; and let $F, \Delta$ be as above. Let $P = P(u, v)$. It follows that no internal vertex of $P$ is incident with $r$, and no edge of $P$ is incident with $r$ (for if $e \in E(A)$ is incident with $r$ then $e$ has ends $u, v$, and so $P \subseteq C_h \cap \bar{r}$, contrary to the fact that $u, v$ are in different components of $C_h \cap \bar{r}$).

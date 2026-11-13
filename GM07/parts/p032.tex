@@ -1,0 +1,33 @@
+\origpage{243}{GRAPH MINORS. VII}
+\hspace*{12pt}(i) $V(G) \cap bd(\Sigma) = V(H) \cap bd(\Sigma)$,
+
+\hspace*{12pt}(ii) $G$ \textit{is boundary-linked, and}
+
+\hspace*{12pt}(iii) $\alpha(G) \ge 42k 5^{(g+|E(H)|)} v(\Sigma(a, b, c_0), k)$.
+
+\textit{Then $(H, H^+, H^-)$ is a boundary-rooted minor of $(G, G^+, G^-)$.}
+
+\textit{Proof.} If $g \ne 0$, let us add a (directed) loop to an isolated vertex of $H$ not in $bd(\Sigma)$. If the theorem is true for this new digraph it is true for $(H, H^+, H^-)$; and the new digraph satisfies all the hypotheses of the theorem (leaving $k$ and $c$ unchanged). Thus, by repeating this procedure we may eliminate all such isolated vertices of $H$.
+
+We assume then that $g = 0$. Let $E(H) = \{f_1, \dots, f_r\}$. By $r = |E(H)|$ applications of (7.4), we can find distinct edges $e_1, \dots, e_r$ of $G$ which are not loops such that, for $i = 1, \dots, r$,
+
+\hspace*{12pt}(i) $e_i$ has no end in $bd(\Sigma_{i-1})$,
+
+\hspace*{12pt}(ii) $\theta_i^{-1}(G_i)$ is boundary-linked in $\Sigma_i$, and
+
+\hspace*{12pt}(iii) $\alpha(\theta_i^{-1}(G_i)) \ge 42k 5^{r-i} v(\Sigma(a, b, c_0), k)$,
+
+where $\Sigma_i$ is the surface obtained from $\Sigma$ by cutting along $\bar{e}_1, \dots, \bar{e}_i$ and $\theta_i$ is the associated surjection and $G_i$ is the graph obtained from $G$ by deleting $e_1, \dots, e_i$ ($i = 0, 1, \dots, r$). It follows from (i) that no two of $e_1, \dots, e_r$ have a common end.
+
+Let $\psi \colon \Sigma \to \Sigma$ be a homeomorphism of $\Sigma$ which fixes every point of $bd(\Sigma)$ and maps the middle third of $f_i$ onto the whole of $e_i$ ($1 \le i \le r$). By replacing $(H, H^+, H^-)$ by its image under $\psi$, we may assume that $\bar{e}_i \subseteq f_i$ and the directions of $e_i$ and $f_i$ coincide ($1 \le i \le r$). Let $H' = (U(H) - Y, V(H) \cup Z)$ where $Y = e_1 \cup \dots \cup e_r$ and $Z$ is the set of all ends of $e_1, \dots, e_r$. Then $H'$ is a forest in $\Sigma$, and its components are in a natural correspondence with $V(H)$. Hence $\theta_r^{-1}(H')$ is a forest in $\Sigma_r$. Moreover,
+\begin{equation*}
+V(\theta_r^{-1}(G_r)) \cap bd(\Sigma_r) = V(\theta_r^{-1}(H')) \cap bd(\Sigma_r),
+\end{equation*}
+and
+\begin{align*}
+|V(\theta_r^{-1}(H')) \cap bd(\Sigma_r)| &= 2 |E(H)| + |V(H) \cap bd(\Sigma)| \\
+&\le 2k - 2 |E(H)| - 2c - 2 = 2k - 2c' - 2,
+\end{align*}
+where $c'$ is the number of cuffs of $\Sigma_r$. By (7.5), $\theta_r^{-1}(H')$ is $\theta_r^{-1}(G_r)$-feasible. But that implies the conclusion of the theorem, as required.
+
+If $bd(\Sigma) = \emptyset$ and $(H, H^+, H^-)$, $(G, G^+, G^-)$ are digraphs in $\Sigma$, and the first is a boundary-rooted minor of the second, we say that it is a \textit{minor} of the second. We have immediately from (9.1) the following, a form of which was stated without proof in [3].

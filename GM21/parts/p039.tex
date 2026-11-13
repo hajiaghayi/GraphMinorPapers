@@ -1,0 +1,28 @@
+\origpage{37}{}
+\noindent depth $\le q$ and defect $\le r$ which surrounds a tangle of order $\ge \theta$. For each space $s \not\subseteq F_1^* \cup \dots \cup F_r^*$ with ends $u_1, u_2$ and for each $v \in V(\mu(u_1) \cap \mu(u_2))$, split $v$ as discussed earlier in this section. After at most $qr$ splittings we obtain a graph $G'$ with a disjointed pseudo-presentation in $\Sigma$ of depth $\le q$ and defect $\le r$, which by (8.3) surrounds a tangle of order $\ge \theta - qr = \theta'$, since $\theta' + 1 \ge 2q + 3$. By (8.1), $G'$ has a presentation in $\Sigma$ of depth $\le q$ and defect $\le r$ which surrounds a tangle of order $\ge \theta'$. By (7.3), $G'$ has no vital $(p + 2qr)$-linkage, from the choice of $\theta'$. But $G'$ is obtained from $G$ by splitting $\le qr$ vertices, and so by (2.4) $G$ has no vital $p$-linkage, as required. $\square$
+
+\sectionhead{9 Paintings and portraits}
+
+In this section we derive a modification of (8.4) appropriate for applying the results of [9, 10]. A \textit{painting} $\Gamma$ in a surface $\Sigma$ is a pair $(U, V)$, where $U \subseteq \Sigma$ is closed and $V \subseteq U$ is finite, satisfying
+
+\hspace*{12pt}(i) $U \setminus V$ has only finitely many connected components, called \textit{cells}
+
+\hspace*{12pt}(ii) for each cell $c$, its closure $\bar{c}$ is a closed disc, and $\tilde{c} \subseteq bd(\bar{c})$ (where $\tilde{c}$ denotes $\bar{c} \setminus c$) and $|\tilde{c}| = 2$ or $3$
+
+\hspace*{12pt}(iii) $bd(\Sigma) \subseteq U$
+
+\hspace*{12pt}(iv) for each cell $c$, if $c \cap bd(\Sigma) \ne \emptyset$ (that is, $c$ is a border cell) then $|\tilde{c}| = 2$ and $\bar{c} \cap bd(\Sigma)$ is a line with ends the two members of $\tilde{c}$.
+
+(This differs very slightly from the definition in [10]. In that paper it was convenient to allow cells $c$ with $|\tilde{c}| = 0$ or $1$, but we no longer need such cells.) The set of cells of $\Gamma$ is denoted by $C(\Gamma)$, and we write $U = U(\Gamma), V = V(\Gamma)$. A cell which is not a border cell is called an \textit{internal cell}.
+
+Let $G$ be a graph. We say that a pair $\Gamma, \alpha$ is a \textit{portrait} of $G$ in $\Sigma$ (this is closely connected with the ``portrayal'' of [10]) if
+
+\hspace*{12pt}(R1) \textit{$\Gamma$ is a painting in $\Sigma$ and $V(\Gamma) \subseteq V(G)$, and $\alpha$ is a function with domain $(V(\Gamma) \cap bd(\Sigma)) \cup C(\Gamma)$.}
+
+\hspace*{12pt}(R2) \textit{For each $c$ of $\Gamma$, $\alpha(c) \subseteq G$ and $V(\alpha(c)) \cap V(\Gamma) = \tilde{c}$.}
+
+\hspace*{12pt}(R3) \textit{$G = \bigcup(\alpha(c) : c \in C(\Gamma))$, and $E(\alpha(c_1) \cap \alpha(c_2)) = \emptyset$ for all distinct cells $c_1, c_2$.}
+
+\hspace*{12pt}(R4) \textit{For each $v \in V(\Gamma) \cap bd(\Sigma)$, $\alpha(v)$ is an edge-less subgraph of $G$ and $V(\alpha(v)) \cap V(\Gamma) = \{v\}$.}
+
+\hspace*{12pt}(R5) \textit{For each cuff $C$ there is an integer $q(C) \ge 1$ such that $|V(\alpha(v))| = q(C)$ for all $v \in V(\Gamma) \cap C$.}

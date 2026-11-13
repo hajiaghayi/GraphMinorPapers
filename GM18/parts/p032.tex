@@ -1,0 +1,18 @@
+\origpage{108}{N. Robertson, P. Seymour / Journal of Combinatorial Theory, Series B 89 (2003) 77--108}
+\textbf{Proof.} Let $\mathscr{T}'$ be a tangle of order $\ge \theta$, and let $(D, C) \in \mathscr{T}'$ for some $(C, D) \in \mathscr{L}$. Let $(A, B)$ be the $(\mathscr{T}, \mathscr{T}')$-distinction.
+
+\hspace*{12pt}(1) \textit{$(A \cup C, B \cap D)$ has $\lambda$-order at least that of $(C, D)$.}
+
+\textbf{Subproof.} Suppose not. Since $C \subseteq A \cup C$ and $B \cap D \subseteq D$, and $(C, D)$ is $\lambda$-linked to $\mathscr{T}$, it follows that $(A \cup C, B \cap D) \notin \mathscr{T}$. But its order is at most that of $(C, D)$ (by the third tie-breaker axiom) and hence less than the order of $\mathscr{T}$, and so $(B \cap D, A \cup C) \in \mathscr{T}$. Yet $(A, B), (C, D) \in \mathscr{T}$, contrary to (T2), since $(B \cap D) \cup A \cup C = G$. This proves (1).
+
+\hspace*{12pt}(2) \textit{$(A \cap C, B \cup D)$ has $\lambda$-order at least that of $(A, B)$.}
+
+\textbf{Subproof.} Suppose not. As before, the order of $(A \cap C, B \cup D)$ is at most that of $(A, B)$, and hence less than the orders of $\mathscr{T}$ and $\mathscr{T}'$. Since $(A, B) \in \mathscr{T}$ and $A \cap C \subseteq A$ it follows that $(A \cap C, B \cup D) \in \mathscr{T}$. Since $(B, A), (D, C) \in \mathscr{T}'$ and $B \cup D \cup (A \cap C) = G$ it follows that $(A \cap C, B \cup D) \notin \mathscr{T}'$ from (T2), and so $(B \cup D, A \cap C) \in \mathscr{T}'$. Thus $(A \cap C, B \cup D)$ distinguishes $\mathscr{T}$ from $\mathscr{T}'$, and yet its $\lambda$-order is less than that of the $(\mathscr{T}, \mathscr{T}')$-distinction, a contradiction. This proves (2).
+
+From (1), (2) and the second tie-breaker axiom, we deduce that $(A \cup C, B \cap D)$ has the same $\lambda$-order as $(C, D)$, and hence $(A \cup C, B \cap D) = (C, D)$ or $(D, C)$, from the first tie-breaker axiom. Since $(B \cap D, A \cup C)$ has the same order as $(C, D)$ and hence belongs to $\mathscr{T}'$ (because $(B, A) \in \mathscr{T}'$) and $(C, D) \notin \mathscr{T}'$, it follows that $(B \cap D, A \cup C) \ne (C, D)$. Hence $(A \cup C, B \cap D) = (C, D)$, and so $A \subseteq C$ and $D \subseteq B$. Thus $\mathscr{L}$ $\theta$-isolates $\mathscr{T}$. This proves 7.1. $\square$
+
+\sectionhead{References}
+
+[1] C. St. J. A. Nash-Williams, On well-quasi-ordering trees, \textit{Theory of Graphs and its Applications} (Proc. Symp. Smolenice, 1963), Publ. House Czechoslovak Acad. Sci., 1964, pp. 83--84.
+
+[2] Neil Robertson, P.D. Seymour, Graph Minors. IV. Tree-width and well-quasi-ordering, \textit{J. Combin. Theory Ser. B} \textbf{48} (1990) 227--254. [3] Neil Robertson, P.D. Seymour, Graph Minors. X. Obstructions to tree-decomposition, \textit{J. Combin. Theory Ser. B} \textbf{52} (1991) 153--190.

@@ -1,0 +1,33 @@
+\origpage{191}{GRAPH MINORS, XVII}
+We claim
+
+\hspace*{12pt}(4) \textit{$\delta(I)$ is a circuit of length 6.}
+
+\textit{Subproof.} We prove (4) by induction on $|E(\delta(I))|$. We suppose, for a contradiction, that (4) is false, and hence $\delta(I)$ has a circuit, $C$ say, of length 4, by (3). By (2), $ins(C)$ includes a unique cell $c_0$ of $\Gamma$, and $u, v \in U(C)$ where $\tilde{c}_0 = \{u, v\}$. If $c_0 \in I$ let $I' = I - \{c_0\}$, and if $c_0 \notin I$ let $I' = I \cup \{c_0\}$. Let $J' = C(\Gamma) - I'$. Then $\gamma(I') \subseteq \gamma(I)$ and $\gamma(J') \subseteq \gamma(J)$, since $u, v \in \gamma(I) \cup \gamma(J)$. Consequently, $\gamma(I'), \gamma(J') \ne N(\Gamma)$, and $|\gamma(I') \cap \gamma(J')| \le 3$. Moreover, $E(\delta(I')) = E(\delta(I)) - E(C)$, and so from the inductive hypothesis, $\delta(I')$ is a circuit of length 6. By (3), $V(\delta(I)) \cap N(\Gamma) \subseteq V(\delta(I'))$, and so there is a 2-edge path joining $u$ and $v$ in $\delta(I')$. Consequently there are three 2-edge paths joining $u$ and $v$ in $H$, contrary to (2). This proves (4).
+
+Let $\delta(I) = D$. Now $U(D)$ partitions $C(\Gamma)$ into two sets, those cells within $ins(D)$ and the remainder, and by definition of $\delta(I)$, one of these sets is $I$ and the other is $J$. By applying (1) to $D$ we see there are three cases.
+
+\textit{Case 1. $U(D)$ is a $\Gamma$-normal $O$-arc in $\Sigma$.}
+
+Let $\Delta = ins(D)$; then the theorem holds.
+
+\textit{Case 2. $U(D) \cap \Sigma = F$ is a $\Gamma$-normal $I$-arc in $\Sigma$.}
+
+Let $\Delta$ be the disc provided by (6.3); then the theorem holds.
+
+\textit{Case 3. $U(D) \cap N(\Gamma) = \{n_1, n_2, n_3\} \subseteq \Theta$ for some cuff $\Theta$, and $U(C) \cap \Sigma = F_1 \cup F_2$ where $F_1, F_2$ are $\Gamma$-normal $I$-arcs with $F_i \cap N(\Gamma) = \{n_1, n_3\}$ ($i = 1, 2$) and $F_1 \cap F_2 = \{n_3\}$.}
+
+By applying (8.3) to $F_1$ and to $F_2$, we see that $ins(D) \cap N(\Gamma) = \{n_1, n_2, n_3\}$ and so one of $\gamma(I)$, $\gamma(J) = N(\Gamma)$, a contradiction.
+
+This completes the proof. $\square$
+
+\stmt
+(11.2) \textit{Let $(A, B) \in \mathscr{T}$ have order $< ord(\mathscr{T}) - 4p - 3$, let $c_0 \in C(\Gamma)$ with $\alpha(c_0) \subseteq A$, let $I, J$ be a partition of $C(\Gamma)$ so that $\gamma(I) \subseteq V(A)$ and $\gamma(J) \subseteq V(B)$ and let}
+\begin{equation*}
+|\{n \in N(\Gamma) : \gamma(n) \in V(A \cap B)\}| \le |\tilde{c}_0|.
+\end{equation*}
+\textit{Then equality holds, and either}
+
+\hspace*{12pt}(i) \textit{$\{n \in N(\Gamma) : \gamma(n) \in V(A)\} = \tilde{c}_0$ and $\gamma(n) \in V(B)$ for all $n \in N(\Gamma)$, or}
+
+\hspace*{12pt}(ii) \textit{$|\tilde{c}_0| = 3$, and there is a $\Gamma$-normal $I$-arc $F$ and a disc $\Delta \subseteq \Sigma$ with $\alpha(\Delta)$ small and with $F \subseteq bd(\Delta) \subseteq F \cup bd(\Sigma)$, such that $I = \{c \in C(\Gamma) : c \subseteq \Delta\}$ and for all $n \in N(\Gamma)$, $\gamma(n) \in V(A)$ if and only if $n \in \Delta$, and $\gamma(n) \in V(B)$ if and only if $n \in \Sigma - \Delta$.}

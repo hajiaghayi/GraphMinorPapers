@@ -1,0 +1,34 @@
+\origpage{61}{GRAPH MINORS}
+\noindent suitably chosen. This is a contradiction, and so $C$ has no such rooted minor.
+By induction, (5.1) is true.
+\stmt
+(5.2). \textit{If $X_0$ contains a vertex of $C$, then $C$ has path-width at most
+$q(\gamma, 3\Omega+6)$.}
+\stmt
+In this case $C$ contains no vertices of $\bigcup(X_j\colon j\in\{1,..., N\}-J)$ since $X$
+separates $X_0$ and this set. Let $P$ be a minimal path of $B_0$ from $V(C)$ to $\rho(G)$.
+Let $v$ be the vertex of $C$ on $P$. Root $C$ at $v$. Suppose that $C$ has a rooted
+minor isomorphic to $Q(\gamma, 3\Omega+6)$. Then there exist $X_0',..., X_{\Omega+1}'\subseteq V(C)$,
+disjoint, such that $C\,|\,X_0'$, rooted at $v$, has a rooted minor isomorphic to $H$,
+and for $1\le i\le\Omega+1$, $C\,|\,X_i'$ has a minor isomorphic to $\mathbf{Y}_{\gamma-1}$. But then the
+sets
+\begin{equation*}
+X_0'\cup V(P), X_1',..., X_{\Omega+1}'\qquad\text{and}\qquad X_j(j\in\{1,..., N\}-J)
+\end{equation*}
+satisfy (X1) and (X2), and there are $\Omega+1+N-|J|>N$ of them. This
+contradicts the maximality of $N$, and hence proves (5.2). This completes the
+argument for Part 3, and so proves (3.7).
+
+\sectionhead{\textsc{References}}
+
+{
+\newcommand{\refauth}{N. \textsc{Robertson and} P. D. \textsc{Seymour}}
+\begin{list}{}{\leftmargin=16pt\labelwidth=12pt\labelsep=4pt\itemsep=0pt\parsep=0pt}
+\item[1.] \refauth, Graph minors. II. Algorithmic aspects of tree-width,
+submitted.
+\item[2.] \refauth, Graph minors. III. Planar tree-width, \textit{J.
+Combinatorial Theory} (Ser. B), to appear.
+\item[3.] \refauth, Graph minors. IV. Tree-width and well-quasi-ordering, submitted.
+\item[4.] \refauth, Graph minors. V. Excluding a planar graph,
+submitted.
+\end{list}}

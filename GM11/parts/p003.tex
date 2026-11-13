@@ -1,0 +1,20 @@
+\origpage{74}{ROBERTSON AND SEYMOUR}
+\noindent finite. If $e \in E(G)$, the vertices incident with $e$ are the \textit{ends} of $e$. If $G$, $H$ are hypergraphs, $H$ is a \textit{subhypergraph} of $G$ (written $H \subseteq G$) if $V(H) \subseteq V(G)$, $E(H) \subseteq E(G)$, and every edge of $H$ has the same ends in $H$ as it has in $G$. If $H_1, H_2 \subseteq G$ we define $H_1 \cap H_2$ to be the subhypergraph of $G$ with vertex set $V(H_1) \cap V(H_2)$ and edge set $E(H_1) \cap E(H_2)$, and we define $H_1 \cup H_2$ similarly. A \textit{separation} of $G$ is a pair $(A, B)$ of subhypergraphs with $A \cup B = G$ and $E(A \cap B) = \emptyset$, and its \textit{order} is $|V(A \cap B)|$.
+
+A \textit{tangle} of order $\theta \ge 1$ in $G$ is a set $\mathscr{T}$ of separations of $G$, each of order $< \theta$, such that
+
+\hspace*{12pt}(i) for every separation $(A, B)$ of $G$ of order $< \theta$, $\mathscr{T}$ contains one of $(A, B)$, $(B, A)$
+
+\hspace*{12pt}(ii) if $(A_1, B_1), (A_2, B_2), (A_3, B_3) \in \mathscr{T}$ then $A_1 \cup A_2 \cup A_3 \ne G$
+
+\hspace*{12pt}(iii) if $(A, B) \in \mathscr{T}$ then $V(A) \ne V(G)$.
+
+We refer to these as the \textit{first, second and third tangle axioms}. Tangles were introduced in [4].
+
+\sectionhead{3. Surfaces, Drawings, and Homotopy}
+
+A \textit{surface} is a compact 2-manifold, without boundary. (In this paper we are really only concerned with connected surfaces.) Let $\Sigma$ be a surface. A \textit{line} in $\Sigma$ is a subset homeomorphic to $[0, 1]$, and its \textit{ends} are defined in the natural way. An \textit{O-arc} is a subset homeomorphic to a circle. If $\Delta \subseteq \Sigma$, then $\bar{\Delta}$ denotes the closure of $\Delta$, and $bd(\Delta)$ denotes $\bar{\Delta} \cap \overline{\Sigma - \Delta}$. A \textit{drawing} in $\Sigma$ is a pair $(U, V)$, where $V \subseteq U \subseteq \Sigma$, $U$ is closed, $V$ is finite, $U - V$ has only finitely many arc-wise connected components, called \textit{edges}, and for every edge $e$, either $\bar{e}$ is a line whose set of ends is $\bar{e} \cap V$, or $\bar{e}$ is an $O$-arc and $|\bar{e} \cap V| = 1$. The components of $\Sigma - U$ are called \textit{regions}. The members of $V$ are called \textit{vertices}. If $\Gamma = (U, V)$ is a drawing, we write $U = U(\Gamma)$, $V = V(\Gamma)$, and $E(\Gamma)$, $R(\Gamma)$ are defined to be the sets of edges and regions of $\Gamma$, respectively.
+
+If $v$ is a vertex and $e$ is an edge or region of $\Gamma$, we say $v$ is \textit{incident with} $e$ (and vice versa) if $v$ is contained in the closure of $e$. If $e$ is an edge and $r$ is a region, we say $e$ is \textit{incident with} $r$ (and vice versa) if $e \cap \bar{r} \ne \emptyset$. We say $\Gamma'$ is a \textit{subdrawing} of a drawing $\Gamma$ if $V(\Gamma') \subseteq V(\Gamma)$ and $E(\Gamma') \subseteq E(\Gamma)$ (and hence $U(\Gamma') \subseteq U(\Gamma)$). If $\Gamma'$ is a subdrawing of $\Gamma$ we write $\Gamma' \subseteq \Gamma$. If $\Gamma_1, \Gamma_2$ are subdrawings of $\Gamma$, we define $\Gamma_1 \cup \Gamma_2$, $\Gamma_1 \cap \Gamma_2$ in the natural way. If $\Gamma$ is a drawing, then $V(\Gamma)$, $E(\Gamma)$ and the incidence relation between them define a graph, and in this sense we may regard $\Gamma$ as a graph, and use graph-theoretic terminology for drawings.
+
+$\Delta \subseteq \Sigma$ is a \textit{closed disc} if it is homeomorphic to $\{(x, y) : x^2 + y^2 \le 1\}$, and

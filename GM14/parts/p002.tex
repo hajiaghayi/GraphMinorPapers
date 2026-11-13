@@ -1,0 +1,15 @@
+\origpage{24}{ROBERTSON AND SEYMOUR}
+\noindent drawing of $H$ can be extended to a drawing of $G$. This is a much easier question. Every vertex of $H$ is surrounded by a ``large planar neighbourhood'' in $\Sigma$, and the remaining parts of $G$ attached in this neighbourhood have to be drawn within it, if the extension is possible; and so the problem essentially becomes a problem about extending drawings in discs. In fact, we can make the problem even easier, because we are only concerned with the case when $H$ is a subdivision of a simple 3-connected graph. The advantage of this hypothesis is that we get better, more useful, obstructions, because we cannot have ``made a mistake'' in the embedding of $H$. If this embedding of $H$ does not extend to one for all of $G$, we cannot locally redraw $H$ so that the embedding does extend, because there are no other ways to draw $H$ (this is a consequence of a theorem of Whitney, as we shall see); and this makes the obstructions healthier, less trivial.
+
+On the other hand, one obstruction might be an edge $e$ of $G$ not in $H$, with ends $u, v \in V(H)$, not in the same region, but lying in distinct regions of $H$ which are incident with a common edge $f$. If we draw $e$ in the natural way crossing $f$, we get a graph drawn in $\Sigma$ with one crossing. In our application we can only make use of such a graph if the four ends of $e, f$ are not cut off from the main part of $H$ by a 3-separation. Crossings which are cut off by 3-separations are of no use to us, and we must modify the definition of ``extending the embedding of $H$'' so that these no longer are obstructions. For this reason, we shall only be concerned with the question, when can the embedding of $H$ be extended to one of $G$ ``up to 3-separations''? (We shall make this precise later.) Then all the obstructions (there are only two) turn out to be objects that we can make use of in our application.
+
+In order to give the reader a better idea of what we are aiming for, we first state a simplified special case of the result, as follows.
+
+\stmt
+(1.1) \textit{Let $G$ be a 4-connected graph, and let $H$ be a subgraph of $G$ which is a subdivision of a simple 3-connected graph. Let $\Sigma$ be a connected surface without boundary, not a sphere, and let $H$ be drawn in $\Sigma$. Suppose that every closed curve in $\Sigma$ that meets $H$ at most 208 times is null-homotopic. For such a curve $\phi$, let $\operatorname{ins}(\phi)$ denote the union of the points of $\Sigma$ appearing in $\phi$ together with all discs in $\Sigma$ with boundary in this set. Then either}
+
+\hspace*{12pt}(i) \textit{the drawing of $H$ can be extended to one of $G$, or}
+
+\hspace*{12pt}(ii) \textit{there is a path of $G$ with distinct ends $u, v \in V(H)$ and with no other vertex or edge in $H$, such that there is no closed curve $\phi$ meeting $H$ at most 3 times with $u, v \in \operatorname{ins}(\phi)$, or}
+
+\hspace*{12pt}(iii) \textit{there is a circuit $C$ of $H$ bounding an open disc $\Lambda \subseteq \Sigma$, and a point $x$ of $\Lambda$, and four vertices $a, b, c, d$ of $C$ in order, such that}

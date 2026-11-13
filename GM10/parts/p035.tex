@@ -1,0 +1,20 @@
+\origpage{187}{GRAPH MINORS, X}
+Let $Z_1 = (Z \cup V(A_2)) \cap V(A_1)$, $Z_2 = (Z \cup V(A_1)) \cap V(A_2)$. Then for $i = 1, 2$, $Z_i \subseteq V(A_i)$ and $|Z_i| \le 3\theta - 3$. Since $|Z_1| < |Z|$ and so $Z \not\subseteq Z_1$, it follows that $V(A_1) \ne V(G)$, and so the result holds for $A_1, Z_1$, and similarly for $A_2, Z_2$ by our inductive hypothesis. Since $\mathscr{S}$ is $\theta$-pervasive in $A_1$ and in $A_2$, it follows that for $i = 1, 2$, there is a tree-decomposition $(T_i, \tau_i)$ of $A_i$ over $\mathscr{S}'$, and there exists $t_i \in V(T_i)$ such that $Z_i \subseteq V(\tau_i(t_i))$ and $\mathscr{S}'$ contains the $Z_i$-extension of the design of $t_i$ in $(T_i, \tau_i)$. We choose $T_1, T_2$ to be disjoint. Take a new vertex $t_0$, and let $T$ be the tree with vertex set $V(T_1) \cup V(T_2) \cup \{t_0\}$, where $T \setminus t_0 = T_1 \cup T_2$ and $t_0$ is adjacent to $t_1, t_2$. Let $\tau(t_0)$ be the hypergraph with vertex set $Z \cup V(A_1 \cap A_2)$ and with no edges, and let $\tau(t) = \tau_i(t)$ if $t \in V(T_i)$ ($i = 1, 2$). Then $(T, \tau)$ is a tree-decomposition of $G$, as is easily seen. The design of $t_0$ in $(T, \tau)$ is $(\tau(t_0), \{Z_1, Z_2\})$, which is in $\mathscr{R}_{4\theta - 3}$, since
+\begin{equation*}
+|V(\tau(t_0))| = |Z \cup V(A_1 \cap A_2)| \le |Z| + |V(A_1 \cap A_2)| \le (3\theta - 2) + (\theta - 1),
+\end{equation*}
+and the $Z$-extension of this design is also in $\mathscr{R}_{4\theta - 3}$, for the same reason. For $i = 1, 2$ and each $t \in V(T_i)$, the design of $t$ in $(T, \tau)$ equals the design of $t$ in $(T_i, \tau_i)$ (or its $Z_i$-extension if $t = t_i$) and so belongs to $\mathscr{S}'$. Hence the theorem holds in this case.
+
+\textit{Case 2.} There is a location $\{(A_1, B_1), \dots, (A_k, B_k)\}$ in $G$ with design in $\mathscr{S}$, such that for $1 \le i \le k$,
+\begin{equation*}
+|Z \cap V(A_i)| \le |V(A_i \cap B_i)| < \theta.
+\end{equation*}
+For $1 \le i \le k$, let $Z_i = (Z \cup V(B_i)) \cap V(A_i)$. Then $|Z_i| \le 2(\theta - 1) \le 3\theta - 2$, and $Z_i \subseteq V(A_i)$. Also,
+\begin{equation*}
+|Z \cap V(A_i)| < \theta \le 3\theta - 2 = |Z \cap V(G)|,
+\end{equation*}
+and so $V(A_i) \ne V(G)$. By our inductive hypothesis, there is a tree-decomposition $(T_i, \tau_i)$ of $A_i$ over $\mathscr{S}'$, and there exists $t_i \in V(T_i)$ such that $Z_i \subseteq V(\tau_i(t_i))$ and $\mathscr{S}'$ contains the $Z_i$-extension of the design of $t_i$ in $(T_i, \tau_i)$. We choose $T_1, \dots, T_k$ to be disjoint. Take a new vertex $t_0$, and let $T$ be the tree with vertex set $V(T_1) \cup \dots \cup V(T_k) \cup \{t_0\}$, where $T \setminus t_0 = T_1 \cup \dots \cup T_k$ and $t_0$ is adjacent to $t_1, \dots, t_k$. Let $\tau(t_0)$ be the hypergraph with vertex set
+\begin{equation*}
+V(G \cap B_1 \cap B_2 \cap \dots \cap B_k) \cup Z
+\end{equation*}
+and with edge set and incidence relation the same as those of $G \cap B_1 \cap B_2 \cap \dots \cap B_k$. Let $\tau(t) = \tau_i(t)$ if $t \in V(T_i)$ ($1 \le i \le k$). Then $(T, \tau)$ is a tree-decomposition of $G$, as is easily seen. Let us examine the designs of the vertices of $T$ in $(T, \tau)$. First, let $1 \le i \le k$ and let $t \in V(T_i)$ with $t \ne t_i$.

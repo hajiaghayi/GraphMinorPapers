@@ -1,0 +1,50 @@
+\origpage{50}{N. Robertson, P.D. Seymour / Journal of Combinatorial Theory, Series B 89 (2003) 43--76}
+\textbf{3.2.} \textit{Let $(G, \Omega)$ be a $\rho$-vortex, and let the vertices in $\bar{\Omega}$ be $t_1, \ldots, t_n$ in order, where $n \ge 1$. Then there are separations $(A_1, B_1), \ldots, (A_n, B_n)$ of $G$, such that:}
+
+\hspace*{12pt}1. \textit{$t_1, \ldots, t_n \in V(B_i)$ for $1 \le i \le n$,}
+
+\hspace*{12pt}2. \textit{$t_i \in V(A_i)$ for $1 \le i \le n$,}
+
+\hspace*{12pt}3. \textit{$\mathscr{L} = \{(A_1, B_1), \ldots, (A_n, B_n)\}$ is a location in $G$,}
+
+\hspace*{12pt}4. \textit{$(A_i, B_i)$ has order $\le 2\rho + 1$ for $1 \le i \le n$, and}
+
+\hspace*{12pt}5. \textit{every torso of the design of $\mathscr{L}$ is a $(2\rho + 1)$-ring with perimeter $t_1, \ldots, t_n$.}
+
+\textbf{Proof.} By theorem 8.1 of [5], there is a sequence $A_1, \ldots, A_n$ of subgraphs of $G$, such that:
+
+\hspace*{12pt}(a) $A_1 \cup \cdots \cup A_n = G$.
+
+\hspace*{12pt}(b) $E(A_i \cap A_j) = \emptyset$ for $1 \le i < j \le n$.
+
+\hspace*{12pt}(c) $t_i \in V(A_i)$ for $1 \le i \le n$.
+
+\hspace*{12pt}(d) $A_i \cap A_k \subseteq A_j$ for $1 \le i \le j \le k \le n$.
+
+\hspace*{12pt}(e) $|V(A_i \cap A_j)| \le \rho$ for $1 \le i < j \le n$.
+
+Let $A_0$ and $A_{n+1}$ be the null graph. For $1 \le i \le n$, let $B_i$ be the unique subgraph of $G$ such that $(A_i, B_i)$ is a separation of $G$ and
+\begin{equation*}
+V(A_i \cap B_i) = V(A_{i-1} \cap A_i) \cup V(A_i \cap A_{i+1}) \cup \{t_i\}.
+\end{equation*}
+(This exists, because it is easy to see that for $i \ne j$ and $1 \le i, j \le n$,
+\begin{equation*}
+V(A_i \cap A_j) \subseteq V(A_{i-1} \cap A_i) \cup V(A_i \cap A_{i+1}).)
+\end{equation*}
+We claim that $(A_1, B_1), \ldots, (A_n, B_n)$ satisfies the theorem.
+
+\hspace*{12pt}(1) \textit{$A_i \subseteq B_j$ for $1 \le i, j \le n$ with $i \ne j$.}
+
+\textit{Subproof.} To show this it suffices to show that $A_i \cap A_j \subseteq B_j$, since $(A_j, B_j)$ is a separation. But $E(A_i \cap A_j) = \emptyset$ by (b), and
+\begin{equation*}
+V(A_i \cap A_j) \subseteq V(A_{i-1} \cap A_i) \cup V(A_i \cap A_{i+1}) \subseteq V(B_j),
+\end{equation*}
+and so $A_i \cap A_j \subseteq B_j$. This proves (1).
+
+\hspace*{12pt}(2) \textit{$t_i \in V(B_j)$ for $1 \le i, j \le n$.}
+
+\textit{Subproof.} If $i = j$ this is immediate. If $i \ne j$ then again the claim holds, since $t_i \in V(A_i) \subseteq V(B_j)$ by (1). This proves (2).
+
+From (1) and (2) we see that statements 1--4 of 3.2 hold. It remains to show statement 5. For $1 \le i \le n$ let $X_i = V(A_i \cap B_i)$. Let $H$ be the subgraph of $G$ with vertex set $X_1 \cup \cdots \cup X_n$ and with no edges; then it is easy to see that $H = B_1 \cap \cdots \cap B_n$. Let $M = \{X_i \colon 1 \le i \le n\}$. Then $\mathscr{L}$ has design $(H, M)$.
+
+\hspace*{12pt}(3) \textit{$X_i \cap X_k \subseteq X_j$ for $1 \le i \le j \le k \le n$.}

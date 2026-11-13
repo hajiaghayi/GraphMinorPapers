@@ -1,0 +1,36 @@
+\origpage{247}{GRAPH MINORS. XII}
+\noindent be as in (3.1)(v), bounding a closed disc $\Delta \subseteq \Sigma$, say, including exactly one of $\Delta_1, \dots, \Delta_t$, say $\Delta_i$. Then $\Delta = \text{ins}(F)$ by (2), and so
+\begin{equation*}
+(\Gamma \cap \Delta_i, \Gamma \cap \overline{\Sigma - \Delta_i}) \in \mathscr{T};
+\end{equation*}
+but since $V(\Gamma) \cap \text{bd}(\Delta_i)$ is free and $V(\Gamma) \cap \text{bd}(\Delta_i) \subseteq V(\Gamma \cap \Delta_i)$, it follows that
+\begin{equation*}
+|V(\Gamma) \cap \text{bd}(\Delta_i)| \le |V(\Gamma \cap \Delta_i \cap \overline{\Sigma - \Delta_i})| = |F \cap V(\Gamma)|,
+\end{equation*}
+as required. Finally, (3.1)(vi) holds by hypothesis. Thus (*) holds, by (3.1).
+
+It remains to deal with the case when $\Sigma$ is a sphere and $t \le 2$. If $t = 0$ the result is vacuous. Let us assume $t = 2$. Choose $\theta'$ to satisfy (3.2) with $\Sigma$, $z$ unchanged but with $t = 3$. Let $\theta = 2\theta' + 1$. By hypothesis (i), $d(r_1, r_2) \ge \theta = 2\theta' + 1$. Let $a_1, a_2, \dots, a_s$ be a sequence of regions of $\Gamma$ with $a_1 = r_1$, $a_s = r_2$, such that $a_i$ and $a_{i+1}$ are both incident with some vertex for $1 \le i < s$. Then
+\begin{equation*}
+|d(r_1, a_{i+1}) - d(r_1, a_i)| \le d(a_i, a_{i+1}) \le 2 \quad (1 \le i < s)
+\end{equation*}
+and so we may choose $i$ with $1 \le i \le s$ such that $0 \le d(r_1, a_i) - \theta' \le 1$. Now
+\begin{equation*}
+d(r_2, a_i) \ge d(r_1, r_2) - d(r_1, a_i) \ge 2\theta' + 1 - (\theta' + 1) = \theta'.
+\end{equation*}
+But also $d(r_1, a_i) \ge \theta'$. Thus
+\begin{equation*}
+d(r_1, a_i), d(r_2, a_i), d(r_1, r_2) \ge \theta'.
+\end{equation*}
+Let us take $r_3 = a_i$, and $\Delta_3 \subseteq r_3$ some closed disc, and apply the theorem proved above, that is, (3.2) with $t = 3$ and $\Sigma$ a sphere. Certainly $V(\Gamma) \cap \text{bd}(\Delta_3) = \emptyset$ and, hence, is free; we deduce that the desired $H_1, \dots, H_p$ exist.
+
+Finally, we deal with the case $t = 1$, when $\Sigma$ is a sphere. Take $\theta = z$. By [2, Theorem (3.6)] it suffices to prove that for every $\Gamma$-normal line $F_3$ with ends $a, b \in \text{bd}(\Delta_1)$ but with no other point in $\Delta_1$, we have
+\begin{equation*}
+|F_3 \cap V(\Gamma)| \ge \min (|F_1 \cap V(\Gamma)|, |F_2 \cap V(\Gamma)|),
+\end{equation*}
+where $F_1$, $F_2$ are the closures of the two components of $\text{bd}(\Delta_1) - \{a, b\}$. Suppose then that $F_3$ is such a line.
+
+Let $F_2 \cup F_3$, $F_1 \cup F_3$ bound closed discs $D_1$, $D_2 \subseteq \Sigma$ respectively, where $D_i \cap F_i = \{a, b\}$ $(i = 1, 2)$. By the second tangle axiom, it is not the case that
+\begin{equation*}
+(\Gamma \cap D_i, \Gamma \cap \overline{\Sigma - D_i}) \in \mathscr{T} \quad (i = 1, 2),
+\end{equation*}
+since $(\Gamma \cap D_1) \cup (\Gamma \cap D_2) = \Gamma$. Thus we may assume that $(\Gamma \cap D_1, \Gamma \cap \overline{\Sigma - D_1}) \notin \mathscr{T}$. On the other hand, $Z \subseteq V(\Gamma \cap \overline{\Sigma - D_1})$ and $Z$ is free, and so if $(\Gamma \cap \overline{\Sigma - D_1}, \Gamma \cap D_1) \in \mathscr{T}$, then this separation has order $\ge |Z|$. If it does not

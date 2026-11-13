@@ -1,0 +1,39 @@
+\origpage{218}{ROBERTSON AND SEYMOUR}
+An $I$-arc $F$ in $\Sigma$ is \textit{proper} if $|F \cap bd(\Sigma)| = 2$.
+
+\stmt
+(2.6) \textit{Let $(\Delta, \Pi)$ be a minimal net with respect to a proper graph $G$ in $\Sigma$, where $\Sigma \cong \Sigma(a, b, c)$ and $2a + b + c > 1$. Let $J$ be the associated seam graph and let $\phi$ be the associated surjection. Let $F$ be a $\phi^{-1}(G)$-normal proper $I$-arc in $\Delta$ with ends $s, t$, and let $F^* = F - \{s, t\}$. Then there is a $G$-normal $O$-arc $A$ in $\Sigma$ with}
+\begin{equation*}
+|A \cap V(G)| \le 2(2a + b + c)(|\phi(F^*) \cap V(G)| + 1) + |bd(\Sigma) \cap V(G)|
+\end{equation*}
+\textit{and with $\phi(F) \subseteq A \subseteq \phi(F) \cup U(J)$.}
+
+\textit{Proof.} As in (2.5), let $J'$ be $(U(J), V(J) \cup \{\phi(s), \phi(t)\})$. Let $e$ be any edge of $J'$ of type (ii). Then there exists $\{f, g\} \in \Pi$ such that
+\begin{equation*}
+e = \{\phi(f(x)) \colon 0 < x < 1\} = \{\phi(g(x)) \colon 0 < x < 1\}.
+\end{equation*}
+Let $\Delta^*$ be the surface obtained from $\Delta$ by pasting $f = g$ and cutting along $F$. Then $\Delta^*$ is a closed disc since $F$ is proper and $e$ is of type (ii), and the new net we obtain is also $G$-normal. Since $(\Delta, \Pi)$ is a minimal net, we have
+\begin{align*}
+&\delm{|e \cap V(G)| \le |\phi(F^*) \cap V(G)|}\\
+&\fix{2|e \cap V(G)| + [a \in V(G)] + [b \in V(G)]}\\
+&\qquad \fix{{} \le 2|\phi(F^*) \cap V(G)| + [\phi(s) \in V(G)] + [\phi(t) \in V(G)]}.\fixmark{fix:2.6-proof}
+\end{align*}
+\fixnotetext{Here $a,b$ are the ends of $e$, $s,t$ are the ends of $F$, and $[\,\cdot\,]$ is $1$ if the condition holds and $0$ otherwise. Pasting $f=g$ and cutting along $F$ changes the number of boundary points of $\Delta$ that map into $V(G)$ by $-2|e\cap V(G)|-[a\in V(G)]-[b\in V(G)]+2|\phi(F^*)\cap V(G)|+[\phi(s)\in V(G)]+[\phi(t)\in V(G)]$, so minimality gives the inequality above. The printed inequality can fail when $\phi(s),\phi(t)\in V(G)$ and $a,b\notin V(G)$. The full description of this correction (see the first page) gives an example in the annulus with $|e\cap V(G)|=1$ and $|\phi(F^*)\cap V(G)|=0$. Summing the corrected inequality along the edges of $P$, where inner vertices of $P$ count twice, still gives the bound for $|U(P)\cap V(G)|$ and (2.6).}%
+Let $P$ be the path of $J'$ provided by (2.5). For each edge $e$ of type (ii) of $J'$, the inequality above holds, while if $e$ is an edge of $J'$ of type (i) then $\bar{e} \cap V(G) \subseteq bd(\Sigma)$. It follows that
+\begin{equation*}
+|U(P) \cap V(G)| \le |E(P)| \cdot |\phi(F^*) \cap V(G)| + |V(P)| + |bd(\Sigma) \cap V(G)|.
+\end{equation*}
+Combining $P$ with $\phi(F^*)$ yields the required $G$-normal $O$-arc, since
+\begin{equation*}
+|E(P)| \le |V(P)| \le |V(J')| \le |V(J)| + 2 \le 2(2a + b + c)
+\end{equation*}
+by (2.4).
+
+\sectionhead{3. Matchings and Forests}
+
+Let $\Sigma$ be a surface and let $F, F'$ be proper $I$-arcs in $\Sigma$. We say that $F$ is \textit{similar} to $F'$ if there is a homeomorphism $\alpha \colon \Sigma \to \Sigma$ such that $\alpha(F) = F'$. This is an equivalence relation, and we call the equivalence classes \textit{similarity classes}.
+
+\stmt
+(3.1) \textit{For any fixed $\Sigma$ there are only finitely many similarity classes.}
+
+\textit{Proof.} Let $F$ be a proper $I$-arc in $\Sigma$. If we cut along $F$ we obtain a new surface $\Sigma^*$ and two boundary $I$-arcs $X, Y$ say in $\Sigma^*$ with arc-maps $f, g$,

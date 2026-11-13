@@ -1,0 +1,27 @@
+\origpage{123}{GRAPH MINORS. VI}
+\noindent the cylinder. We thus have a decision to make; for a natural variant of say DISJOINT CONNECTING PATHS on a cylinder is to specify not only the ends of each path but its homotopy class as well. Trial has convinced us that this variant is worthwhile---for the corresponding algorithm is simpler, and we can use it to solve the original DISJOINT CONNECTING PATHS problem on the cylinder. Analogous remarks apply for DISJOINT CONNECTING SUBGRAPHS, with a suitable definition of homotopy. We begin by making such a definition.
+
+Let $\Sigma$ be a surface. Let $s, t \in bd(\Sigma)$, and let $f_i \colon [0, 1] \to \Sigma$ be continuous, with $f_i(0) = s$, $f_i(1) = t$ ($i = 1, 2$). We say that $f_1$ is homotopic to $f_2$ if there is a continuous function $f \colon [1, 2] \times [0, 1] \to \Sigma$ such that
+\begin{align*}
+f(1, y) &= f_1(y) & (0 \le y \le 1) \\
+f(2, y) &= f_2(y) & (0 \le y \le 1) \\
+f(x, 0) &= s & (1 \le x \le 2) \\
+f(x, 1) &= t & (1 \le x \le 2).
+\end{align*}
+Now let $P_1$, $P_2$ be graphs drawn on $\Sigma$, and suppose that $P_1$, $P_2$ are both paths, and both with end vertices $s, t \in bd(\Sigma)$. Let $f_i \colon [0, 1] \to \Sigma$ be a continuous injection with image $P_i$ and $f_i(0) = s$, $f_i(1) = t$ ($i = 1, 2$). We say that $P_1$ is homotopic to $P_2$ if $f_1$ is homotopic to $f_2$. It is easy to see that this definition does not depend on the choice of $f_1$ and $f_2$.
+
+Finally, let $H_1$, $H_2$ be forests drawn in $\Sigma$. We say that $H_1$ is homotopic to $H_2$ if
+
+\hspace*{12pt}(i) $V(H_1) \cap bd(\Sigma) = V(H_2) \cap bd(\Sigma) = V$ say;
+
+\hspace*{12pt}(ii) for $s, t \in V$, there is a path of $H_1$ between $s$ and $t$ if and only if there is a path of $H_2$ between $s$ and $t$; and if these paths exist, one is homotopic to the other.
+
+Our variant of DISJOINT CONNECTING SUBGRAPHS is the following.
+
+\textit{ROUTED FOREST CONTAINMENT (ON $\Sigma$)}
+
+\textit{INSTANCE} A surface $\Sigma$, a graph $G$ drawn on $\Sigma$, and a forest $H$ drawn on $\Sigma$ with $V(H) \cap bd(\Sigma) \subseteq V(G)$.
+
+\textit{QUESTION} Does $G$ have a forest subgraph homotopic to $H$?
+
+Our approach to this is in two parts. We first give some reductions in the spirit of (3.3), which when $\Sigma$ is a cylinder serve to reduce to a simpler problem, viz. when each component of $H$ has exactly one vertex in each cuff of the cylinder. The simpler problem is solved in the next section, and in the remainder of this section we describe the reductions.

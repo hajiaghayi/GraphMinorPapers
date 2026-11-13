@@ -1,0 +1,25 @@
+\origpage{38}{ROBERTSON AND SEYMOUR}
+\textit{Proof.} For each $(A, \Omega) \in \mathscr{S}$, let
+\begin{equation*}
+J(A, \Omega) = \begin{cases} (bd(\alpha(A, \Omega)), \{\alpha(v) : v \in \bar{\Omega}\}) \text{ if } \bar{\Omega} \ne \emptyset \\ (bd(\alpha(A, \Omega)), \{x\}) \text{ for some } x \in bd(\alpha(A, \Omega)), \text{ if } \bar{\Omega} = \emptyset. \end{cases}
+\end{equation*}
+Then each $J(A, \Omega)$ is a drawing in $\Sigma$, and so is $J = \bigcup (J(A, \Omega) : (A, \Omega) \in \mathscr{S})$. We claim
+
+\hspace*{12pt}(1) \textit{$r \subseteq \Delta_1 - bd(\Delta_1)$ for every region $r$ of $J$ with $\bar{r} \cap (\Delta_2 - bd(\Delta_2)) \ne \emptyset$.}
+
+\textit{Subproof.} Suppose that for some region $r$ of $J$, $\bar{r} \cap (\Delta_2 - bd(\Delta_2)) \ne \emptyset$ and $r \not\subseteq \Delta_1 - bd(\Delta_1)$. Since $\Delta_2 \subseteq \Delta_1 - bd(\Delta_1)$ it follows that $r \cap e_1 \ne \emptyset$ for some $e_1 \in E(C_1)$; and since $U(J) \cap e_1 = \emptyset$, it follows that $e_1 \subseteq r$. Similarly, since $\bar{r} \cap (\Delta_2 - bd(\Delta_2)) \ne \emptyset$, there exists $e_2 \in E(C_2)$ with $e_2 \subseteq r$. Choose $(A, \Omega) \in \mathscr{S}$ with $e_1 \in E(A)$. Since $\alpha(A, \Omega) - bd(\alpha(A, \Omega))$ is a region of $J$ including $e_1$ (because $\alpha$ is compatible with $H$) it follows that $r = \alpha(A, \Omega) - bd(\alpha(A, \Omega))$. Since $e_2 \subseteq r$ it follows that $e_2 \in E(A)$ (because $\alpha$ is compatible with $H$). Since $C_1$, $C_2$ are disjoint and both have an edge in $A$ and $|\bar{\Omega}| \le 3$, it follows that for some $i(i = 1 \text{ or } 2)$, $C_i \subseteq A$ and $|V(C_i) \cap \bar{\Omega}| \le 1$. Let $(A, B)$ be the separation of $G$ with $V(A \cap B) = \bar{\Omega}$; then $(A \cap H, B \cap H) \in \mathscr{T}$ since $\mathscr{S}$ is $\mathscr{T}$-local. Since $|V(C_i \cap B \cap H)| \le 1$ and $C_i$ is a circuit of $A \cap H$, it follows from (7.4) that there is a circuit $D$ of a radial drawing $K$ of $H$ with $V(D) \cap V(H) \subseteq V(A \cap B \cap H)$ and $U(C_i) \subseteq ins(D)$. Since $U(C_i) \subseteq ins(D)$ and $\Delta_i$ is a $(\theta - 4)$-zone, it follows from (7.6) (taking $\lambda = \theta - 4$) that $\Delta_i \subseteq ins(D)$, and so $z \subseteq ins(D)$. But this contradicts (iii), since $ins(D) \not\subseteq \Delta_2 - bd(\Delta_2)$. This proves (1).
+
+By (5.2) applied to $J$ (taking $Z = \Delta_2 - bd(\Delta_2)$) and (1), there is a circuit $C$ of $J$ with $U(C) \subseteq \Delta_1$, bounding an open disc in $\Delta_1$ including $\Delta_2 - bd(\Delta_2)$. By perturbing $U(C)$ slightly so that it becomes $\alpha$-normal, we obtain an $O$-arc satisfying the theorem. $\square$
+
+\stmt
+(7.8) \textit{Let $\beta \ge 4$ be even, let $\lambda \ge 0$, and let $\theta \ge 4\lambda + 2$. Let $H$ be a 2-cell drawing in $\Sigma$, and let $\mathscr{T}$ be a respectful tangle in $H$ of order $\theta$. Let $z \in A(H)$, let $C_1$, $C_2$ be disjoint circuits of $H$, and let $U(C_1)$, $U(C_2)$ bound closed discs $\Delta_1$, $\Delta_2 \subseteq \Sigma$ with the following properties:}
+
+\hspace*{12pt}(i) $z \subseteq \Delta_2 - bd(\Delta_2)$, and $\Delta_2 \subseteq \Delta_1 - bd(\Delta_1)$
+
+\hspace*{12pt}(ii) $\Delta_1 - bd(\Delta_1)$ is a $(\theta - \beta - 4\lambda - 2)$-zone around $z$
+
+\hspace*{12pt}(iii) $\Delta_2 - bd(\Delta_2)$ is a $\lambda$-zone around $z$
+
+\hspace*{12pt}(iv) $x \subseteq \Delta_1 - bd(\Delta_1)$ for every $x \in A(H)$ with $d(z, x) < \beta$, and
+
+\hspace*{12pt}(v) \textit{there are circuits $C_3, \dots, C_{\beta/2}$ of $H \cap \Delta_1$ such that $C_1$, $C_2$, $\dots$, $C_{\beta/2}$ are mutually disjoint and $U(C_3), \dots, U(C_{\beta/2})$ all bound closed discs in $\Delta_1$ including $\Delta_2$.}

@@ -1,0 +1,36 @@
+\origpage{328}{N. Robertson, P.D. Seymour / Journal of Combinatorial Theory, Series B 92 (2004) 325--357}
+\noindent relation. A \textit{grouping} in $V$ is a subgraph of $K_V$ every component of which is complete. A \textit{pairing} in $V$ is a grouping in $V$ every component of which has most two vertices. A pairing $K$ in $V$ is said to \textit{pair} $X, Y$ if $X, Y \subseteq V$ are disjoint and
+
+\hspace*{12pt}$\bullet$ every 2-vertex component of $K$ has one vertex in $X$ and the other in $Y$, and
+
+\hspace*{12pt}$\bullet$ every vertex of $X \cup Y$ belongs to some 2-vertex component of $K$.
+
+A \textit{patch} $\Delta$ in $V$ consists of a subset $V(\Delta) \subseteq V$, and a collection of groupings in $V$, each with the same vertex set $V(\Delta) \subseteq V$. We denote the collection of groupings by the same symbol $\Delta$. A patch $\Delta$ is \textit{free} if it contains every grouping in $V$ with vertex set $V(\Delta)$; and it is \textit{robust} if for every choice of $X, Y \subseteq V(\Delta)$ with $|X| = |Y|$ and $X \cap Y = \emptyset$, there is a pairing in $\Delta$ which pairs $X, Y$.
+
+A \textit{patchwork} is a triple $P = (G, \mu, \Delta)$, where
+
+\hspace*{12pt}$\bullet$ $G$ is a rooted hypergraph,
+
+\hspace*{12pt}$\bullet$ $\mu$ is a function with domain $dom(\mu) \subseteq E(G)$; and for each $e \in dom(\mu)$, $\mu(e)$ is a march with $\bar{\mu}(e)$ the set of ends of $e$ in $G$,
+
+\hspace*{12pt}$\bullet$ $\Delta$ is a function with domain $E(G)$, and for each $e \in E(G)$, $\Delta(e)$ is a patch with $V(\Delta(e))$ the set of ends of $e$; and for each $e \in E(G) \setminus dom(\mu)$, $\Delta(e)$ is free.
+
+The patchwork is \textit{robust} if each $\Delta(e)$ ($e \in E(G)$) is robust (This is automatic for $e \notin dom(\mu)$, since free patches are robust.) It is \textit{rootless} if $\bar{\pi}(G) = \emptyset$.
+
+A \textit{quasi-order} $\Omega$ is a pair $(E(\Omega), \le)$, where $E(\Omega)$ is a set and $\le$ is a reflective transitive relation on $E(\Omega)$. It is a \textit{well-quasi-order} if for every countable sequence $x_i$ $(i = 1, 2, \ldots)$ of elements of $E(\Omega)$ there exist $j > i \ge 1$ such that $x_i \le x_j$. If $\Omega_1, \Omega_2$ are quasi-orders with $E(\Omega_1) \cap E(\Omega_2) = \emptyset$ we denote by $\Omega_1 \cup \Omega_2$ the quasi-order $\Omega$ with $E(\Omega) = E(\Omega_1) \cup E(\Omega_2)$ in which $x \le y$ if for some $i$ $(i = 1, 2) x, y \in E(\Omega_i)$ and $x \le y$ in $\Omega_i$. If $\Omega_1, \Omega_2$ are quasi-orders we write $\Omega_1 \subseteq \Omega_2$ if $E(\Omega_1) \subseteq E(\Omega_2)$ and for $x, y \in E(\Omega_1)$, $x \le y$ in $\Omega_1$ if and only if $x \le y$ in $\Omega_2$.
+
+If $\Omega$ is a quasi-order, a \textit{partial $\Omega$-patchwork} is a quadruple $(G, \mu, \Delta, \phi)$, where $(G, \mu, \Delta)$ is a patchwork and $\phi$ is a function from a subset $dom(\phi)$ of $E(G)$ into $E(\Omega)$. It is an \textit{$\Omega$-patchwork} if $dom(\phi) = E(G)$. It is \textit{robust} if $(G, \mu, \Delta)$ is robust. It is \textit{rootless} if $\bar{\pi}(G) = \emptyset$.
+
+If $V$ is a finite set, $N_V$ denotes the graph with vertex set $V$ and no edges. A \textit{realization} of a patchwork $(G, \mu, \Delta)$ is a subgraph of $K_{V(G)}$ expressible in the form
+\begin{equation*}
+N_{V(G)} \cup \bigcup_{e \in E(G)} \delta_e,
+\end{equation*}
+where $\delta_e \in \Delta(e)$ for each $e \in E(G)$. A \textit{realization} of a partial $\Omega$-patchwork $(G, \mu, \Delta, \phi)$ is a realization of $(G, \mu, \Delta)$. If $\mu_1, \mu_2$ are marches with the same length, we denote by $\mu_1 \to \mu_2$ the bijection from $\bar{\mu}_1$ onto $\bar{\mu}_2$ that maps $\mu_1$ onto $\mu_2$. Let $P = (G, \mu, \Delta, \phi)$, $P' = (G', \mu', \Delta', \phi')$ be $\Omega$-patchworks. An \textit{expansion} of $P$ in $P'$ is a function $\eta$ with domain $V(G) \cup E(G)$ such that
+
+\hspace*{12pt}$\bullet$ for each $v \in V(G)$, $\eta(v)$ is a non-empty subset of $V(G')$, and for each $e \in E(G)$, $\eta(e) \in E(G')$,
+
+\hspace*{12pt}$\bullet$ for distinct $v_1, v_2 \in V(G)$, $\eta(v_1) \cap \eta(v_2) = \emptyset$,
+
+\hspace*{12pt}$\bullet$ for distinct $e_1, e_2 \in E(G)$, $\eta(e_1) \ne \eta(e_2)$,
+
+\hspace*{12pt}$\bullet$ for each $e \in E(G)$, $e \in dom(\mu)$ if and only if $\eta(e) \in dom(\mu')$,

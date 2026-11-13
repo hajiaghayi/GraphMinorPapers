@@ -1,0 +1,24 @@
+\origpage{20}{}
+If $F \subseteq \hat{\Sigma}$ is a $\Gamma$-normal $O$-arc with $|F \cap V(\Gamma)| < \theta_4$, we define $ins(F)$ as usual.
+
+\hspace*{12pt}(9) \textit{If} $F \subseteq \hat{\Sigma}$ \textit{is a} $\Gamma$\textit{-normal} $O$\textit{-arc with} $|F \cap V(\Gamma)| < \theta_4$\textit{, then} $C \cap ins(F) \ne \emptyset$ \textit{for at most one cuff} $C$.
+
+\textit{Subproof.} Let $A = \Gamma \cap ins(F)$ and choose $B \subseteq \Gamma$ so that $(A, B)$ is a separation of $\Gamma$ and $V(A \cap B) = V(\Gamma) \cap F$. If $C \cap ins(F) \ne \emptyset$ for $\ge 2$ cuffs $C$, then by splitting $\le 2$ vertices of $B$, we can obtain from $B$ a drawing $\Gamma'$ in a surface $\Sigma'$ with $\hat{\Sigma}'$ homeomorphic to $\Sigma_0$ and with $c(\Sigma') < c(\Sigma)$, satisfying (6)(b), contrary to (6). This proves (9).
+
+Let $d_1$ be the metric of $\mathcal{T}_1$.
+
+\hspace*{12pt}(10) \textit{If} $r_1, r_2$ \textit{are the cuff regions corresponding to distinct cuffs} $C_1, C_2$ \textit{then} $d_1(r_1, r_2) \ge \theta_4$.
+
+\textit{Subproof.} Suppose not. From (7), (9) and the definition of the metric, and exchanging $C_1$ and $C_2$ if necessary, there is a $\Gamma$-normal $O$-arc $F_1 \subseteq \Sigma \setminus bd(\Sigma)$ with $|F_1 \cap V(\Gamma)| < \theta_4$, and with $r_1 \subseteq ins(F_1) \setminus F_1$, such that $ins(F_1) \cap bd(\Sigma) = C_1$. Moreover, there is also either
+
+\hspace*{12pt}(i) a $\Gamma$-normal line $F_0 \subseteq \Sigma$ with one end in $F_1$, the other end in $C_2$, and with no internal point in $bd(\Sigma) \cup ins(F_1)$, with $|(F_0 \cup F_1) \cap V(\Gamma)| < \theta_4$, or
+
+\hspace*{12pt}(ii) a $\Gamma$-normal $O$-arc $F_2 \subseteq \Sigma \setminus bd(\Sigma)$ with $|(F_1 \cup F_2) \cap V(\Gamma)| < \theta_4$ and with $r_2 \subseteq ins(F_2) \setminus F_2$, such that $ins(F_2) \cap bd(\Sigma) = C_2$ and $|ins(F_1) \cap ins(F_2)| = 1$, or
+
+\hspace*{12pt}(iii) a $\Gamma$-normal $O$-arc $F_2 \subseteq \Sigma \setminus bd(\Sigma)$ and a $\Gamma$-normal line $F_0 \subseteq \Sigma \setminus bd(\Sigma)$ with $|(F_0 \cup F_1 \cup F_2) \cap V(\Gamma)| < \theta_4$, such that $r_2 \subseteq ins(F_2) \setminus F_2$, $ins(F_2) \cap bd(\Sigma) = C_2$, $ins(F_1) \cap ins(F_2) = \emptyset$, one end of $F_0$ is in $F_1$, the other end is in $F_2$, and no internal point of $F_0$ is in $ins(F_1)$ or $ins(F_2)$.
+
+If (i) holds, let $A = \Gamma \cap ins(F_1)$, and let $(A, B) \in \mathcal{T}$ where $V(A \cap B) = F \cap V(\Gamma)$; then (6) is contradicted, by splitting all the vertices of $B$ in $F_0$. If (ii) or (iii) holds, let
+\begin{equation*}
+A = (\Gamma \cap ins(F_1)) \cup (\Gamma \cap ins(F_2))
+\end{equation*}
+and let $(A, B) \in \mathcal{T}$ where $V(A \cap B) = (F_1 \cup F_2) \cap V(\Gamma)$; then again (6) is contradicted, in (ii) by splitting the vertex of $B$ in $F_1 \cap F_2$ if there is one, and in (iii) by splitting all the vertices of $B$ in $F_0$. This proves (10).

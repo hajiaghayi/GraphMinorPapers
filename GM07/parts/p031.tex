@@ -1,0 +1,33 @@
+\origpage{242}{ROBERTSON AND SEYMOUR}
+\hspace*{12pt}(iv) an $X_1$-arc or $X_2$-arc such that both its $O$-arcs surround distinct cuffs of $\Sigma$, and which contains no point of $bd(\Sigma)$,
+
+\hspace*{12pt}(v) an $X_3$-arc such that all three of its $O$-arcs surround distinct cuffs, and which contains no point of $bd(\Sigma)$,
+
+\hspace*{12pt}(vi) an $X_4$-arc with its end in one cuff and its $O$-arc surrounding another cuff, containing only one point of $bd(\Sigma)$.
+
+If $G$ is a proper graph in $\Sigma$, let us define $\omega(G)$ to be the minimum of $|V(G) \cap X|$ taken over all $G$-normal schisms $X$ in $\Sigma$. Then
+\begin{equation*}
+\alpha(G) - |V(G) \cap bd(\Sigma)| \le \omega(G) \le \alpha(G)
+\end{equation*}
+because if $X$ is a schism then $X \cup bd(\Sigma)$ includes a schismatic set\del{, and any schismatic set includes a schism}.\fixnote{fix:8-schism}{A schismatic set need not include a schism. For example, in $\Sigma(0,0,3)$, the union of the outer cuff and a circle that meets it in one point and goes once around one of the other cuffs is schismatic, but includes no schism. In fact the bound $\omega(G)\le\alpha(G)$ is false: in a pants there are graphs $G$ with $\alpha(G)\le 1$ and $\omega(G)$ as large as we like. The full description of this correction (see the first page) gives both examples. The first inequality, $\alpha(G)-|V(G)\cap bd(\Sigma)|\le\omega(G)$, is not affected. The next sentence, which replaces $\alpha(G)\ge 42kv$ by $\omega(G)\ge 42kv$ in (7.5), rests on the second inequality. This paper does not use the second inequality elsewhere. Graph Minors VIII uses it in the proof of (18.1), as the note to (18.1) there explains.} Thus, for example, we can replace the condition $\alpha(G) \ge 42kv$ in (7.5) by the condition $\omega(G) \ge 42kv$. This form of (7.5) is often more convenient for use in applications.
+
+\sectionhead{9. \textsc{Minors}}
+
+We turn now to applications. The first is to the theory of graph minors. A digraph $(G, G^+, G^-)$ in a surface $\Sigma$ consists of a graph $G$ in $\Sigma$ and two functions $G^+, G^- \colon E(G) \to V(G)$ such that for every edge $e$ of $G$, $\{G^+(e), G^-(e)\} = \bar{e} - e$. The digraph is proper if $G$ is proper. Let $(G, G^+, G^-)$, $(H, H^+, H^-)$ be proper digraphs in $\Sigma$. We say that $(H, H^+, H^-)$ is a \textit{boundary-rooted minor} of $(G, G^+, G^-)$ if $V(H) \cap bd(\Sigma) = V(G) \cap bd(\Sigma)$ and if for each vertex $v$ of $H$ there is a non-null connected subgraph $\phi(v)$ of $G$, and for each edge $e$ of $H$ there is an edge $\phi(e)$ of $G$, such that
+
+\hspace*{12pt}(i) for distinct $v, v' \in V(H)$, $\phi(v)$ and $\phi(v')$ are vertex-disjoint,
+
+\hspace*{12pt}(ii) for distinct $e, e' \in E(H)$, $\phi(e)$ and $\phi(e')$ are distinct,
+
+\hspace*{12pt}(iii) for $v \in V(H)$ and $e \in E(H)$, $\phi(e)$ is not an edge of $\phi(v)$,
+
+\hspace*{12pt}(iv) for $e \in E(H)$, $G^+(\phi(e))$ is a vertex of $\phi(H^+(e))$, and $G^-(\phi(e))$ is a vertex of $\phi(H^-(e))$, and
+
+\hspace*{12pt}(v) for $v \in V(H) \cap bd(\Sigma)$, $v$ is a vertex of $\phi(v)$.
+
+\stmt
+(9.1) \textit{Let $\Sigma \cong \Sigma(a, b, c)$ where $3a + 3b + c \ge 3$. Let $(H, H^+, H^-)$ be a proper digraph in $\Sigma$. Let $g$ be the number of isolated vertices of $H$ which are not in $bd(\Sigma)$. Let $k$ be an integer with}
+\begin{equation*}
+2k \ge 4|E(H)| + 4g + |V(H) \cap bd(\Sigma)| + 2c + 2
+\end{equation*}
+\textit{and let $c_0$ be an integer with $c_0 \ge c + |E(H)| + g + 1$. Let $(G, G^+, G^-)$ be a proper digraph in $\Sigma$ such that}

@@ -1,0 +1,28 @@
+\origpage{79}{N. Robertson, P. Seymour / Journal of Combinatorial Theory, Series B 89 (2003) 77--108}
+\noindent vertices incident with an edge are the \textit{ends} of the edge. (A hypergraph is thus a graph if every edge has one or two ends.) A hypergraph $H$ is a \textit{subhypergraph} of a hypergraph $G$ (written $H \subseteq G$) if $V(H) \subseteq V(G)$, $E(H) \subseteq E(G)$, and for every $v \in V(G)$ and $e \in E(H)$, $e$ is incident with $v$ in $G$ if and only if $v \in V(H)$ and $e$ is incident with $v$ in $H$. If $A, B$ are subhypergraphs of $G$ we denote by $A \cup B$, $A \cap B$ the subhypergraphs with vertex sets $V(A) \cup V(B)$, $V(A) \cap V(B)$ and edge sets $E(A) \cup E(B)$, $E(A) \cap E(B)$, respectively. A \textit{separation} of $G$ is a pair $(A, B)$ of subhypergraphs with $A \cup B = G$ and $E(A \cap B) = \emptyset$; its \textit{order} is $|V(A \cap B)|$, and its \textit{reverse} is $(B, A)$.
+
+A central idea in our approach is that of a \textit{tangle} in a hypergraph, which was introduced in [3]. Intuitively, a tangle of order $\theta$ in a hypergraph $G$ may be thought of as a ``$\theta$-connected component'' of $G$, a highly coherent mass in $G$ which resides almost completely on one side or the other of every separation of order $<\theta$. Formally, let $G$ be a hypergraph and $\theta \ge 1$ an integer. A \textit{tangle of order $\theta$} in $G$ is a set $\mathscr{T}$ of separations of $G$, each of order $<\theta$, such that
+
+\hspace*{12pt}(T1) for every separation $(A, B)$ of $G$ of order $<\theta$, $\mathscr{T}$ contains one of $(A, B)$, $(B, A)$,
+
+\hspace*{12pt}(T2) if $(A_i, B_i) \in \mathscr{T}$ $(i = 1, 2, 3)$ then $A_1 \cup A_2 \cup A_3 \ne G$,
+
+\hspace*{12pt}(T3) if $(A, B) \in \mathscr{T}$ then $V(A) \ne V(G)$.
+
+Let us mention one lemma that we shall need later.
+
+\textbf{2.1.} \textit{Let $G$ be a hypergraph, let $G' \subseteq G$, and let $\mathscr{T}'$ be a tangle in $G'$ of order $\theta$. Let $\mathscr{T}$ be the set of all separations $(A, B)$ of $G$ of order $<\theta$ such that $(A \cap G', B \cap G') \in \mathscr{T}'$. Then $\mathscr{T}$ is a tangle in $G$ of order $\theta$.}
+
+The proof is clear. \fix{To see this, let $(A, B)$ be a separation of $G$ of order $<\theta$. Then $(A \cap G', B \cap G')$ is a separation of $G'$, since $(A \cap G') \cup (B \cap G') = G'$ and $E(A \cap B) = \emptyset$, and its order is at most $|V(A \cap B)| < \theta$. So by (T1) for $\mathscr{T}'$, one of $(A \cap G', B \cap G')$, $(B \cap G', A \cap G')$ belongs to $\mathscr{T}'$, and therefore $\mathscr{T}$ contains one of $(A, B)$, $(B, A)$. This proves (T1) for $\mathscr{T}$. If $(A_i, B_i) \in \mathscr{T}$ $(i = 1, 2, 3)$ and $A_1 \cup A_2 \cup A_3 = G$, then $(A_1 \cap G') \cup (A_2 \cap G') \cup (A_3 \cap G') = G'$, contrary to (T2) for $\mathscr{T}'$. If $(A, B) \in \mathscr{T}$ and $V(A) = V(G)$, then $V(A \cap G') = V(G')$, contrary to (T3) for $\mathscr{T}'$. Thus $\mathscr{T}$ satisfies (T1)--(T3), and so it is a tangle in $G$ of order $\theta$.}\fixnote{fix:2.1-proof-added}{The paper says only that the proof of 2.1 is clear. The argument above is the one used in the formalization.}
+
+The second concept we need is that of tree-decomposition. A \textit{tree} is a non-null connected graph without circuits. A \textit{tree-decomposition} of a hypergraph $G$ is a pair $(T, \tau)$, where $T$ is a tree and $\tau$ assigns to each $t \in V(T)$ a subhypergraph $\tau(t)$ of $G$, such that
+
+\hspace*{12pt}$\bullet$ $\cup(\tau(t): t \in V(T)) = G$,
+
+\hspace*{12pt}$\bullet$ for distinct $t_1, t_2 \in V(T)$, $E(\tau(t_1) \cap \tau(t_2)) = \emptyset$,
+
+\hspace*{12pt}$\bullet$ if $t_1, t_2, t_3 \in V(T)$ and $t_2$ lies on the path between $t_1$ and $t_3$ then $\tau(t_1) \cap \tau(t_3) \subseteq \tau(t_2)$.
+
+If $T'$ is a subtree of $T$ we denote $\cup(\tau(t): t \in V(T'))$ by $\tau \times T'$. If $e \in E(T)$ and $T_1, T_2$ are the two components of $T \setminus e$ then $(\tau \times T_1, \tau \times T_2)$ and its reverse are the \textit{separations made by $e$ under $(T, \tau)$}; their common order is the \textit{order of $e$ in $(T, \tau)$}. The tree-decomposition $(T, \tau)$ has \textit{width} $w$ if $w \ge 0$ is minimum such that $|V(\tau(t))| \le w + 1$ for each $t \in V(T)$; and the \textit{tree-width} of a hypergraph $G$ is the minimum width of all tree-decompositions of $G$. The following is proved in Theorem 5.2 of [3].
+
+\textbf{2.2.} \textit{Let $G$ be a hypergraph with no tangle of order $\ge \theta$, where $\theta \ge 1$. Then $G$ has tree-width $\le \frac{3}{2}\theta$.}

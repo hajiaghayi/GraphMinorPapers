@@ -1,0 +1,30 @@
+\origpage{275}{GRAPH MINORS. VIII}
+\noindent $\tau_i(1) = t_{i_1}$, $\tau_i(2) = t_{i_2}$ ($i = 1, 2, \dots$). By (4.3), there exist $j > i \ge 1$ such that the rooted graph $(G_i, \tau_i)$ is simulated in $(G_j, \tau_j)$. But then $(H_i, U_i)$ is simulated in $(H_j, U_j)$, as required. $\square$
+
+If $\mathcal{A}$ is a class of grafts, let $W^0(\mathcal{A}) = \mathcal{A}$; and inductively, for $i = 1, 2, \dots$ let $W^i(\mathcal{A})$ be the class of all grafts which can be obtained from a member of $W^{i-1}(\mathcal{A})$ by a vertex identification. Let
+\begin{equation*}
+W(\mathcal{A}) = W^0(\mathcal{A}) \cup W^1(\mathcal{A}) \cup \dots.
+\end{equation*}
+\stmt
+(13.3) \textit{If $\mathcal{A}$ is well-rooted then so is $W(\mathcal{A})$.}
+
+\textit{Proof.} Since $\mathcal{A}$ is well-rooted, it has an index $k$ by (4.1). We proceed by induction on $k$. If $k \le 1$ then $W(\mathcal{A}) = \mathcal{A}$ and the result is true. We assume then that $k \ge 2$. Now $W^1(\mathcal{A})$ has index $\le k - 1$ as is easily seen, and by (13.2) $W^1(\mathcal{A})$ is well-rooted. Hence $W(W^1(\mathcal{A}))$ is well-rooted, by our inductive hypothesis. By (4.2), $\mathcal{A} \cup W(W^1(\mathcal{A}))$ is well-rooted; but $W(\mathcal{A}) = \mathcal{A} \cup W(W^1(\mathcal{A}))$ and the result follows. $\square$
+
+\sectionhead{14. Chains, Trains, and Concatenations}
+
+As well as the rather easy constructions of the last section, we need a more complicated one, which we call \textit{concatenation}. Here, roughly, we paste together grafts in series, overlapping each with its predecessor. Let $\mathcal{A}$ be a class of grafts and let $(G, T)$ be a graft. A \textit{path-decomposition} of $(G, T)$ over $\mathcal{A}$ is a sequence $(G_i, Y_{i-1}, Y_i)$ ($1 \le i \le r$) for some $r \ge 1$, such that
+
+\hspace*{12pt}(i) $(G_i, Y_{i-1} \cup Y_i) \in \mathcal{A}$ for $1 \le i \le r$
+
+\hspace*{12pt}(ii) $G_i$ is a subgraph of $G$ for $1 \le i \le r$, $G_1 \cup \dots \cup G_r = G$, and $G_1, \dots, G_r$ are mutually edge-disjoint
+
+\hspace*{12pt}(iii) for $1 \le h \le i \le j \le r$, $V(G_h) \cap V(G_j) \subseteq V(G_i)$ (this condition says, roughly, that each graph in the sequence is pasted onto its predecessor)
+
+\hspace*{12pt}(iv) for $1 \le i < r$, $V(G_i) \cap V(G_{i+1}) = Y_i$
+
+\hspace*{12pt}(v) $T = Y_0 \cup Y_r$.
+
+If $k \ge 0$ is an integer, we say that $(G, T)$ is a \textit{$k$-chain} over $\mathcal{A}$ if it has a path-decomposition $(G_i, Y_{i-1}, Y_i)$ ($1 \le i \le r$) such that $|Y_i| = k$ ($0 \le i \le r$), and there are $k$ mutually vertex-disjoint paths of $G$ between $Y_0$ and $Y_r$. We begin with the following lemma which establishes some properties of $k$-chains.
+
+\stmt
+(14.1) \textit{Let $(G, T)$ be a $k$-chain, and let $(G_i, Y_{i-1}, Y_i)$ ($1 \le i \le r$) be a path-decomposition with $|Y_i| = k$ ($0 \le i \le r$). Let $P_1, \dots, P_k$ be mutually disjoint paths of $G$ from $Y_0$ to $Y_r$. Then}

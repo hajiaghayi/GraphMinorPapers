@@ -1,0 +1,35 @@
+\origpage{317}{ALGORITHMIC ASPECTS OF TREE-WIDTH}
+\noindent induced terminated graphs has been found. Then decide if $(G, \mathscr{A})$ is feasible using (2.9).
+
+We observe that $A_2(\tfrac{2}{3}n + \tfrac{1}{3}w)$ is applicable here, since
+\begin{equation*}
+|V(H)|, |V(H')| \le \tfrac{2}{3}n + \tfrac{1}{3}w
+\end{equation*}
+and the induced terminated graphs all have index $\le \tfrac{5}{2}w + \tfrac{1}{2}w = 3w$, by (2.10).
+
+\textsc{Definition of} $A_2(n)$. This is identical with the definition of $A_1(n)$, except that in step 1 we use (3.1) with $Q = S(\mathscr{A})$ instead of with $Q = V(G)$, and in step 2 we apply $A_1(n)$ instead of $A_2(\tfrac{2}{3}n + \tfrac{1}{3}w)$.
+
+We observe that $A_1(n)$ is applicable here, since
+\begin{equation*}
+|V(H)|, |V(H')| \le n
+\end{equation*}
+and, by (3.1) and (2.10), the induced terminated graphs all have index at most
+\begin{equation*}
+\tfrac{1}{2}|V(H) \cap V(H')| + \tfrac{1}{2} \cdot \tfrac{2}{3} \cdot 6w \le \tfrac{5}{2}w.
+\end{equation*}
+This completes the definition of $A_1(n)$ and $A_2(n)$.
+
+Let $f_1(n)$ and $f_2(n)$ denote the respective worst-case running times of $A_1(n)$ and $A_2(n)$. Let the algorithm of (3.1) have running time $\le c_1 n^{d_1}$ for $m \ge 1$, when $|V(G)| = n$. Then from (2.8) we have
+\begin{align*}
+\text{if } n > 4w \quad \text{then } f_1(n) &\le c_1 n^{d_1} + c_2 + c_3 f_2(\tfrac{2}{3}n + \tfrac{1}{3}w) \\
+&\le c_1 n^{d_1} + c_2 + c_3 f_2(\tfrac{3}{4}n) \\
+&\le c(n^{d_1} + f_2(\tfrac{3}{4}n)), \\
+\text{if } n > 4w \quad \text{then } f_2(n) &\le c_1 n^{d_1} + c_4 + c_5 f_1(n) \\
+&\le c(n^{d_1} + f_1(n)), \\
+\text{if } n \le 4w \quad \text{then } f_1(n), f_2(n) &\le c,
+\end{align*}
+where $c_2, \dots, c_5, c$ are appropriate constants depending only on $w$. Then for $n > 4w$,
+\begin{equation*}
+f_2(n) \le (c + c^2)n^{d_1} + c^2 f_2(\tfrac{3}{4}n)
+\end{equation*}
+and so $f_2(n)$ is bounded by a polynomial in $n$. The algorithms $A_2(n)$ ($n > 0$) therefore provide a polynomial algorithm $A_2$ (say), which, given as input a terminated graph $(G, \mathscr{A})$ of index $\le 3w$ where $G$ is simple, either decides if $(G, \mathscr{A})$ is feasible or announces that $G$ has tree-width $\ge w$.

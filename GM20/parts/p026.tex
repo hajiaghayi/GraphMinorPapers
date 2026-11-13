@@ -1,0 +1,24 @@
+\origpage{350}{N. Robertson, P.D. Seymour / Journal of Combinatorial Theory, Series B 92 (2004) 325--357}
+\noindent of $\pi(n_2)$ belong to the same component of $M_c$ (where $M_c$ is as in the second part of the definition of $(\Sigma, \rho)$-hulled patchwork).
+
+For each $c \in C(\Gamma)$ we define $\psi(c)$ as follows. If $c$ is internal we let $\psi(c) = \phi(c)$, and so we assume that $c$ borders a cuff $\Theta$, with nodes $n_1, n_2$, where $n_1$ is the first node of $c$. We define
+\begin{equation*}
+\psi(c) = (\mu(c), (n_1, n_2), \pi(n_1), \pi(n_2), \Delta(c), \phi(c), t),
+\end{equation*}
+where $t = 0$ if $c \ne c_\Theta$ and $t = 1$ if $c = c_\Theta$.
+
+In view of 8.1, to complete the proof it suffices (cf. 4.3) to show that if $P = (G, \mu, \Delta, \phi)$ and $(\Gamma, \beta)$ is a $(\Sigma, \rho)$-hull for $P$ with groupings denoted by $M_c$ as before, and $\psi$ is defined as above, and also $P' = (G', \mu', \Delta', \phi')$, $(\Gamma', \beta')$, $M'_{c'}$, $\psi'$ are related similarly (with the same graded surface and same well-quasi-orders $\Omega, \Omega_1$) and $\zeta$ is a linear inflation of $\Gamma$ in $\Gamma'$ such that $\psi(c) \le \psi'(\zeta(c))$ for each $c \in C(\Gamma)$, then $P$ is simulated in $P'$. Let $\pi(n)$ (for each border node $n$) be defined as before, and let $\pi'(n')$ be defined analogously for each border node $n'$ of $\Gamma'$.
+
+\hspace*{12pt}(1) \textit{For each cuff $\Theta$, $\zeta(c_\Theta) = c'_\Theta$.}
+
+\textit{Subproof:} Let $\zeta(c_\Theta) = c'$. Then $c'$ borders $\Theta$ (since $\zeta$ is a linear inflation) and $\psi(c_\Theta) \le \psi'(c')$, and so the seventh term of $\psi'(c')$ is 1. This proves (1).
+
+For $v \in V(G) \setminus N(\Gamma)$ we define $\eta(v)$ to be the set of all vertices $v' \in V(G')$ such that there exist a cuff $\Theta$ and $n \in N(\Gamma) \cap \Theta$ and $n' \in V(\zeta(n)) \cap \Theta$ and an integer $i > 0$ such that $v$ is the $i$th term of $\pi(n)$ and $v'$ is the $i$th term of $\pi'(n')$. For $n \in N(\Gamma)$ we define $\eta(n) = V(\zeta(n))$. For $c \in C(\Gamma)$ we define $\eta(c) = \zeta(c)$. Our next objective is to show that $\eta$ is an expansion of $P$ in $P'$.
+
+\hspace*{12pt}(2) \textit{For each $v \in V(G)$, $\eta(v) \ne \emptyset$.}
+
+\textit{Subproof:} If $v \in N(\Gamma)$ then $\zeta(v)$ is not null and so $\eta(v) \ne \emptyset$. If $v \in \beta(n)$ for some $n \in N(\Gamma) \cap \Theta$ where $\Theta$ is a cuff, let $v$ be the $i$th term of $\pi(n)$, let $n' \in V(\zeta(n)) \cap \Theta$, and let $v'$ be the $i$th term of $\pi'(n')$. Then $v' \in \eta(v)$ and so $\eta(v) \ne \emptyset$. This proves (2).
+
+\hspace*{12pt}(3) \textit{Let $v \in V(G) \setminus N(\Gamma)$ and let $v' \in \eta(v)$. For each $n \in N(\Gamma) \cap bd(\Sigma)$ and $n' \in V(\zeta(n)) \cap bd(\Sigma)$, if $v'$ is the $i$th term of $\pi'(n')$ then $v$ is the $i$th term of $\pi(n)$.}
+
+\textit{Subproof:} By the third condition in the definition of a $(\Sigma, \rho)$-hull, there is a line $F \subseteq \Theta$ for some cuff $\Theta$, such that for each $n' \in N(\Gamma) \cap bd(\Sigma)$, $v' \in \beta'(n')$ if and only if $n' \in F$. Let us say that $n' \in N(\Gamma') \cap F$ is good if for some $i > 0$, $v'$ is the $i$th term of $\pi'(n')$ and $v$ is the $i$th term of $\pi(n)$ where $n' \in V(\zeta(n))$. Certainly some node in $N(\Gamma') \cap F$ is good since $v' \in \eta(v)$; and we wish to prove that all are good. It suffices therefore to show that if $n'_1, n'_2 \in N(\Gamma') \cap F$ are consecutive and $n'_1$ is good then so is $n'_2$. Let $v'$ be the $i$th term of $\pi'(n'_1)$ and the $j$th term of $\pi'(n'_2)$; and let $n'_1 \in V(\zeta(n_1))$, $n'_2 \in V(\zeta(n_2))$. Then $v$ is the $i$th term of $\pi(n_1)$, and we must show that it is the $j$th term of $\pi(n_2)$. Let $c' \in C(\Gamma)$ border $\Theta$ with nodes $n'_1, n'_2$. If $n_1 = n_2$ then $c' \notin \zeta(C(\Gamma))$ and so $c' \ne c'_\Theta$ by (1); hence $i = j$ because the $i$th term of $\pi'(n'_1)$ and the $j$th term of $\pi'(n'_2)$ are equal and hence belong to the same

@@ -1,0 +1,16 @@
+\origpage{213}{GRAPH MINORS. VII}
+\hspace*{12pt}(iv) every separating closed curve drawn in $\Sigma$ which separates $\{s_1, t_1, \dots, s_k, t_k\}$ into two sets each with at least two members has large ``length,''
+
+then the paths will exist. This is indeed true, and is a consequence of our main result, which is more complicated but of a similar type. The new complication is introduced because we find that this kind of sufficient condition for the existence of the paths is much more useful if we relax condition (ii)---instead of asking that $s_1, t_1, \dots, s_k, t_k$ be pairwise far apart, we ask that they fall into groups, each group lying on the boundary of one region and distinct groups being far apart.
+
+Its applications are as follows:
+
+\hspace*{12pt}(i) We obtain a polynomially bounded algorithm, for any fixed integer $k$ and fixed surface $\Sigma$, to determine if the paths exist. The idea is basically that we test if our theorem can be applied. If so, the paths exist. If not, then either the paths clearly do not exist, or we find an offending curve which is too short (which we can choose so that it passes only through vertices and regions of $G$), and ``split'' the vertices it passes through. We can translate our original problem into a set of problems on this new simpler graph.
+
+\hspace*{12pt}(ii) A graph is a minor of another if it can be obtained from a subgraph of the second by contraction. We prove that for every graph $H$ which can be drawn in a connected surface $\Sigma$, not a sphere, there is a number $w$ with the following property. Every graph $G$ drawn in $\Sigma$ which has no non-null-homotopic closed curve of ``length'' $\le w$ has a minor isomorphic to $H$.
+
+\hspace*{12pt}(iii) In the next paper of this series [5], we shall use the result of this paper to show that if $G_1, G_2, \dots,$ is an infinite sequence of graphs which can be drawn in $\Sigma$, there exist $j > i \ge 1$ such that $G_i$ is isomorphic to a minor of $G_j$. In particular, this implies that for every surface $\Sigma$ there is a ``Kuratowski-type'' theorem; there is a finite list of graphs $G_1, \dots, G_k$ such that an arbitrary graph can be drawn in $\Sigma$ if and only if it topologically contains none of $G_1, \dots, G_k$. In addition, our present result will have numerous applications in later papers of the series, which we do not detail here.
+
+\sectionhead{2. Surfaces and Nets}
+
+We begin by establishing some terminology and preliminary lemmas. A \textit{surface} is a compact 2-manifold with (possibly null) boundary. The boundary of a surface $\Sigma$ is denoted by $bd(\Sigma)$, and each component of $bd(\Sigma)$ is called a \textit{cuff}. (Every cuff is homeomorphic to the circle $S^1$.) $\Sigma(a, b, c)$

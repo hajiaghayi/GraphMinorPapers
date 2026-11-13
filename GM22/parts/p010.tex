@@ -1,0 +1,31 @@
+\origpage{539}{N. Robertson, P. Seymour / Journal of Combinatorial Theory, Series B 102 (2012) 530--563}
+\textit{Subproof.} Certainly $V(\Gamma'' \cap K) \subseteq V(\Gamma \cap K)$, since $V(K) \cap \Sigma \subseteq V(\Gamma)$. Let $v \in V(\Gamma \cap K)$. Since $v \notin T$ by definition of $T$, and $v \in V(\Gamma)$, it follows that $v \in V(\Gamma'')$, and so $v \in V(\Gamma'' \cap K)$. Also, $v \notin S$, by hypothesis (ii), and so $v \in \Sigma \setminus (S \cup T)$. This proves (1).
+
+Now let $L' \subseteq \Gamma' \cup K$. For $1 \le i \le r$, let $M_i'$ be the union of the components $P$ of $M_i$ such that $s(P) \in V(L')$. Let $L_0$ be the image of $L' \cap \Gamma'$ under $\alpha$, and let $L'' = L_0 \cup M_1' \cup \cdots \cup M_r'$. Then $L'' \subseteq \Gamma''$, with the same effect on $V(\Gamma \cap K) \cup (V(\Gamma) \cap \text{bd}(\Sigma))$ as $L' \cap \Gamma'$, since $\alpha(v) = v$ for each $v \in V(\Gamma \cap K)$ by (1). By 2.6, $L'' \cup (L' \cap K) \subseteq \Gamma'' \cup K$ has the same effect on $Z$ as $L'$. By 4.1 applied to $\hat{\Sigma}$, there exists $L \subseteq \Gamma \cup K$ with the same effect on $Z$ as $L'' \cup (L' \cap K)$ and hence as $L'$, and with
+\begin{equation*}
+L \cap K \subseteq (L'' \cup (L' \cap K)) \cap K \subseteq L',
+\end{equation*}
+as required. $\square$
+
+For our applications of 4.2 in this paper, we only really need 4.2 when $\hat{\Sigma}$ is a sphere. But for general surfaces it is still of some interest. For instance, the special case of 4.2 when $K$ is null, $Z = V(\Gamma) \cap \text{bd}(\Sigma)$ and $S \cup T = \Sigma$ is still powerful, for it readily implies the main theorem of [2], indeed in a strengthened form (it shows that the lower bound on $\alpha(G)$ discussed in Theorem 7.5 of [2] can be replaced by one independent of the surface). This would therefore give a new and virtually painless proof of the result of [2], if only an easy proof of 1.1 could be found.
+
+\sectionhead{5. Tangles}
+
+If $(A, B)$ is a separation of $G$, its order is $|V(A \cap B)|$. A \textit{tangle of order $\theta \ge 1$ in a graph $G$} is a set $\mathcal{T}$ of separations of $G$, all of order $< \theta$, such that
+
+\hspace*{12pt}$\bullet$ for every separation $(A, B)$ of $G$ of order $< \theta$, $\mathcal{T}$ contains one of $(A, B)$, $(B, A)$,
+
+\hspace*{12pt}$\bullet$ if $(A_i, B_i) \in \mathcal{T}$ $(i = 1, 2, 3)$ then $A_1 \cup A_2 \cup A_3 \ne G$,
+
+\hspace*{12pt}$\bullet$ if $(A, B) \in \mathcal{T}$ then $V(A) \ne V(G)$.
+
+We write $\text{ord}(\mathcal{T}) = \theta$. If $\Gamma$ is a drawing in a surface $\Sigma$ with $\text{bd}(\Sigma) = \emptyset$, a tangle $\mathcal{T}$ in $\Gamma$ is \textit{respectful} if for every $\Gamma$-normal $O$-arc $F \subseteq \Sigma$ with $|F \cap V(\Gamma)| < \text{ord}(\mathcal{T})$ there is a closed disc $\Delta \subseteq \Sigma$ bounded by $F$ with
+\begin{equation*}
+(\Gamma \cap \Delta, \delm{\Sigma}\fix{\Gamma} \cap \overline{\Sigma \setminus \Delta}) \in \mathcal{T}.\fixmark{fix:5-respectful}
+\end{equation*}
+\fixnotetext{A misprint: the members of $\mathcal{T}$ are separations of $\Gamma$, and $\Sigma \cap \overline{\Sigma \setminus \Delta}$ is a set of points, not a subgraph of $\Gamma$.}%
+In this case, we write $\Delta = \text{ins}(F)$. We say $\Gamma$ is 2-cell if every region is homeomorphic to an open disc. Every connected drawing with a respectful tangle is 2-cell. The \textit{atoms} of $\Gamma$ are sets $r$ where $r$ is a region of $\delm{\Sigma}\fix{\Gamma}$ in $\Sigma$,\fixnote{fix:5-atoms}{The regions are those of $\Gamma$, as the next sentence (``the set of atoms of $\Gamma$'') shows.} the sets $e \in E(\Gamma)$ and the sets $\{v\}$ where $v \in V(\Gamma)$. The set of atoms of $\Gamma$ is denoted by $A(\Gamma)$. If $\Gamma$ is 2-cell, and $\mathcal{T}$ is a respectful tangle in $\Gamma$, we define a metric on $A(\Gamma)$ as discussed in [4]; this is called the \textit{metric of $\mathcal{T}$}, and denoted by $d$. If $X, Y \subseteq \Sigma$, we define $d(X, Y)$ to be the minimum of $d(a, b)$, taken over all atoms $a, b$ with $a \cap X \ne \emptyset$ and $b \cap Y \ne \emptyset$, or $d(X, Y) = \text{ord}(\mathcal{T})$ if one of $X, Y$ is empty. We need the following, from Theorem 9.2 of [6].
+
+\textbf{5.1.} \textit{Let $\Gamma$ be a 2-cell drawing in a surface $\Sigma$ with $\text{bd}(\Sigma) = \emptyset$, and let $\mathcal{T}$ be a respectful tangle in $\Gamma$, with metric $d$. Let $z \in A(\delm{H}\fix{\Gamma})$\fixnote{fix:5.1}{No $H$ is defined here, and $d(z, x)$ is defined only when $z$ is an atom of $\Gamma$. The letter $H$ comes from Theorem 9.2 of [6] (Graph Minors XIV), which 5.1 restates and where the drawing is called $H$.}, and let $\kappa$ be an integer with $2 \le \kappa \le \text{ord}(\mathcal{T}) - 3$. Then there is a closed disc $\Delta \subseteq \Sigma$ satisfying}
+
+\textit{(i) $\text{bd}(\Delta) \subseteq U(\Gamma)$,} \textit{(ii) $d(z, x) \le \kappa + 2$ for all $x \in A(\Gamma)$ with $x \cap \Delta \ne \emptyset$,} \textit{(iii) $d(z, x) \ge \kappa$ for all $x \in A(\Gamma)$ with $x \nsubseteq \Delta \setminus \text{bd}(\Delta)$ (and in particular, $z \subseteq \Delta \setminus \text{bd}(\Delta)$).}

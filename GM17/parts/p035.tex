@@ -1,0 +1,28 @@
+\origpage{196}{ROBERTSON AND SEYMOUR}
+\noindent it follows that $(A', B')$ has order $\le 2p + 5 < ord(\mathscr{T})$, and so $(A', B') \in \mathscr{T}$ by (4.1)(ii). Moreover,
+\begin{align*}
+\{n \in N(\Gamma) &\colon \gamma(n) \in V(A' \cap B')\} \\
+&= \{n \in N(\Gamma) \colon \gamma(n) \in V(A \cap B)\} \cup \{n_d \colon d \in D(A, B)\}
+\end{align*}
+and so
+\begin{align*}
+|\{n \in &N(\Gamma) \colon \gamma(n) \in V(A' \cap B')\}| \\
+&\le |\{n \in N(\Gamma) \colon \gamma(n) \in V(A \cap B)\}| + |D(A, B)| \\
+&\le |V(A \cap B) \cap \gamma(N(\Gamma))| + |V(A \cap B) - (S \cup \gamma(N(\Gamma)))| \\
+&= |V(A \cap B) - S| \le |\tilde{c}_0|,
+\end{align*}
+by (11.5), (11.6) and since $\gamma(N(\Gamma)) \cap S = \emptyset$. Furthermore, for every $c \in C(\Gamma)$, either $\gamma(\tilde{c}) \subseteq V(A')$ or $\gamma(\tilde{c}) \subseteq V(B')$; for this is true if $c \in C^*(\Gamma) - D(A, B)$ since either $\gamma(\tilde{c}) \subseteq V(A) \subseteq V(A')$ or $\gamma(\tilde{c}) \subseteq V(B) \subseteq V(B')$, and it is true if $c \in D(A, B)$ by choice of $n_c$, and it is true if $c \notin C^*(\Gamma)$ because there exists $c' \in C^*(\Gamma)$ with $\tilde{c} \subseteq \tilde{c}'$ (and we have seen it is true for $c'$). Hence we may apply (11.2), because $(A', B')$ has order $\le 2p + 5 < ord(\mathscr{T}) - 4p - 3$. We deduce that
+\begin{equation*}
+|\{n \in N(\Gamma) \colon \gamma(n) \in V(A' \cap B')\}| = |\tilde{c}_0|
+\end{equation*}
+and if $|\tilde{c}_0| = 2$ then $\{n \in N(\Gamma) \colon \gamma(n) \in V(A')\} = \tilde{c}_0$. Since
+\begin{equation*}
+|\tilde{c}_0| = |\{n \in N(\Gamma) \colon \gamma(n) \in V(A' \cap B')\}| \le |V(A \cap B) - S| \le |\tilde{c}_0|
+\end{equation*}
+we deduce that $|V(A \cap B) - S| = |\tilde{c}_0|$. The result follows from (11.6). $\square$
+
+\sectionhead{12. \textsc{Filling} \textsc{Out} A \textsc{Portrayal} \textsc{Of} \textsc{The} 1-\textsc{Skeleton}}
+
+Because of a certain excluded minor theorem for graphs that we shall discuss later, we sometimes are provided with a portrayal of the 1-skeleton of a hypergraph $G$, and what we really want is a portrayal of $G$ itself. In this section we discuss how to convert one to the other.
+
+We proceed with a series of lemmas. A \textit{clique} in a hypergraph $G$ is (for our purposes) a subset of $V(G)$ the members of which are mutually adjacent in $G^*$.

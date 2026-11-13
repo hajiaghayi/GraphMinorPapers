@@ -1,0 +1,26 @@
+\origpage{229}{GRAPH MINORS IV}
+\noindent graphs. The most obvious is the subgraph order; but that is not a well-quasi-order. (We mention in passing that it is a well-quasi-order when restricted to the class of all graphs with no path of length $\ge k$, for any fixed $k$. We omit the proof, which is easy.) A more plausible candidate for a well-quasi-order is ``topological containment.'' We say that $G_1$ \textit{topologically contains} $G_2$ if some subgraph of $G_1$ is isomorphic to a subdivision of $G_2$. (A \textit{subdivision} of a graph is a graph which may be constructed from the first by repeatedly replacing edges by pairs of edges in series.) Kruskal [5] proved the following.
+
+\stmt
+(1.2) \textit{The class of all trees is well-quasi-ordered by topological containment.}
+
+Using this, Mader [6] showed that
+
+\stmt
+(1.3) \textit{For any integer $k \ge 0$, the class of all graphs without $k$ vertex-disjoint circuits is well-quasi-ordered by topological containment.}
+
+However, the class of all graphs is not well-quasi-ordered by topological containment, as the following counterexample (basically due to Jenkyns and Nash--Williams [4]) shows. For $j \ge 3$, let $G_j$ be the graph with $j$ vertices $v_0, v_1, \dots, v_j = v_0$, and with two edges joining $v_i$ and $v_{i+1}$ ($0 \le i \le j - 1$). Then no $G_i$ is topologically contained in any $G_j$ for any $i, j \ge 3$ with $j > i$. For that reason Wagner's conjecture uses minors.
+
+When $\mathscr{C}$ is a class of graphs, we say that $\mathscr{C}$ is \textit{well-quasi-ordered by minors} if the quasi-order $(\mathscr{C}, \le)$ is a well-quasi-order, where $G \le G'$ means that $G$ is isomorphic to a minor of $G'$. One of the main results of this paper is
+
+\stmt
+(1.4) \textit{For any planar graph $H$, the class of all graphs with no minor isomorphic to $H$ is well-quasi-ordered by minors.}
+
+It is easy to see that (1.4) is equivalent to the result stated earlier in this section and in the abstract. We derive it as a corollary of some theorems about ``tree-width,'' which is a graph invariant defined in Section 5. We prove that
+
+\stmt
+(1.5) \textit{For any integer $k$ the class of all graphs with tree-width $\le k$ is well-quasi-ordered by minors.}
+
+This implies (1.4) because it is proved in [10] that the class of graphs involved in (1.4) has bounded tree-width.
+
+Thus, one object of this paper is to prove (1.5). The basic idea of the proof is that we can regard graphs of bounded tree-width as ``tree-shaped,'' and we can adapt Nash--Williams' proof [7] of Kruskal's theorem (1.2) about trees to apply to ``tree-shaped graphs'' instead.

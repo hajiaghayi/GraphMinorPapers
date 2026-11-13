@@ -1,0 +1,46 @@
+\origpage{47}{N. Robertson, P.D. Seymour / Journal of Combinatorial Theory, Series B 89 (2003) 43--76}
+We have organized the paper backwards, to try to motivate the various steps better. Thus we first prove 1.3 assuming 3.1, then prove 3.1 assuming another statement 4.1, and so on.
+
+\sectionhead{2. Structure relative to a tangle}
+
+A \textit{separation} of a graph $G$ is a pair $(A, B)$ of subgraphs with $A \cup B = G$ and $E(A \cap B) = \emptyset$, and its \textit{order} is $|V(A \cap B)|$. A \textit{tangle of order $\theta$ in $G$}, where $\theta \ge 1$ is an integer, is a set $\mathscr{T}$ of separations of $G$, all of order $<\theta$, such that
+
+\hspace*{12pt}1. For every separation $(A, B)$ of order $<\theta$, one of $(A, B)$, $(B, A)$ belongs to $\mathscr{T}$
+
+\hspace*{12pt}2. If $(A_1, B_1)$, $(A_2, B_2)$, $(A_3, B_3) \in \mathscr{T}$ then $A_1 \cup A_2 \cup A_3 \ne G$, and
+
+\hspace*{12pt}3. If $(A, B) \in \mathscr{T}$ then $V(A) \ne V(G)$.
+
+We define $ord(\mathscr{T}) = \theta$.
+
+A \textit{design} is a pair $(H, M)$ where $H$ \del{in} \fix{is}\fixnote{fix:design}{The word ``in'' stands for ``is''.} a graph and $M$ is a set of subsets of $V(H)$. A \textit{location} in $G$ is a set $\{(A_1, B_1), \ldots, (A_k, B_k)\}$ of separations of $G$ such that $A_i \subseteq B_j$ for all distinct $i, j$ with $1 \le i, j \le k$. If $\{(A_1, B_1), \ldots, (A_k, B_k)\}$ is a location then
+\begin{equation*}
+(G \cap B_1 \cap \cdots \cap B_k, \{V(A_i \cap B_i) \colon 1 \le i \le k\})
+\end{equation*}
+is a design, which we call the \textit{design of the location}.
+
+Let $\theta \ge 1$ be an integer, and let $\mathscr{D}$ be a class of designs. We say that $\mathscr{D}$ is \textit{$\theta$-pervasive in a graph $G$} if for every subgraph $G'$ of $G$ and every tangle $\mathscr{T}$ in $G'$ of order $\ge \theta$ there is a location $\mathscr{L} \subseteq \mathscr{T}$ with its design in $\mathscr{D}$.
+
+A \textit{tree-decomposition} of a graph $G$ is a pair $(T, \tau)$, where $T$ is a tree and for each $t \in V(T)$, $\tau(t)$ is a subgraph of $G$, such that
+
+\hspace*{12pt}$\bullet$ $\cup(\tau(t) \colon t \in V(T)) = G$, and $E(\tau(t) \cap \tau(t')) = \emptyset$ for all distinct $t, t' \in V(T)$,
+
+\hspace*{12pt}$\bullet$ if $t, t', t'' \in V(T)$ and $t'$ lies on the path of $T$ between $t$ and $t''$ then $\tau(t) \cap \tau(t'') \subseteq \tau(t')$.
+
+If $(T, \tau)$ is a tree-decomposition of $G$ and $t_0 \in V(T)$, and $t_0$ has neighbours $t_1, \ldots, t_k \in V(T)$, then
+\begin{equation*}
+(\tau(t_0), \{V(\tau(t_0) \cap \tau(t_i)) \colon 1 \le i \le k\})
+\end{equation*}
+is a design, called the \textit{design of $t_0$ in $(T, \tau)$}.
+
+Let $(H, M)$, $(H', M')$ be designs. We say that $(H', M')$ is an \textit{$n$-enlargement of $(H, M)$} if there exists $Z \subseteq V(H')$ such that
+
+\hspace*{12pt}$\bullet$ $H$ is a subgraph of $H'$ and $V(H') \setminus V(H) \subseteq Z$,
+
+\hspace*{12pt}$\bullet$ every edge of $H'$ is an edge of $H$,
+
+\hspace*{12pt}$\bullet$ for every $X \in M'$ with $X \ne Z$, $X \cap V(H) \in M$,
+
+\hspace*{12pt}$\bullet$ $n$ is an integer and $|Z| \le n$.
+
+If $\mathscr{D}$ is a class of designs and $n \ge 0$ is an integer, the class of all $n$-enlargements of members of $\mathscr{D}$ is denoted by $\mathscr{D}^n$. The class of all designs $(H, M)$ with $|V(H)| \le n$ is denoted by $\mathscr{R}_n$. The following is implied by theorem 11.1 of [6].

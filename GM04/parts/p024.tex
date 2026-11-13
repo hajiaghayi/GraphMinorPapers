@@ -1,0 +1,38 @@
+\origpage{250}{ROBERTSON AND SEYMOUR}
+\textit{Suppose that $\{P_i | \sigma_i(s) \colon i \ge 1, s \in U(S_i)\}$ is well-quasi-ordered by simulation. Then there exist $i' > i \ge 1$ such that $P_i$ is simulated in $P_{i'}$.}
+
+\textit{Proof.} Since there are only $n + 1$ possibilities for each $|V(\sigma_i(o(S_i)))|$ we may choose an infinite subset $I_1 \subseteq \{1, 2, \dots\}$ and $m \ge 0$ such that
+
+\hspace*{12pt}(1) \textit{For all $i \in I_1$, $|V(\sigma_i(o(S_i)))| = m$.}
+
+Similarly, we may choose an infinite $I_2 \subseteq I_1$ and $k \ge 0$ such that
+
+\hspace*{12pt}(2) \textit{For all $i \in I_2$, $|\bar{\pi}(G_i)| = k$.}
+
+By replacing each $P_i$ by an ``isomorphic'' $\Omega$-patchwork, we may therefore assume, to simplify notation, that for some set $V_0$ and march $\pi_0$ in $V_0$,
+
+\hspace*{12pt}(3) \textit{$V(\sigma_i(o(S_i))) = V_0$ and $\pi(G_i) = \pi_0$ for all $i \in I_2$.}
+
+Let $\rho$ be a march in $V_0$. Since $\Omega$ is well-quasi-ordered and there are only finitely many different patches with a given vertex set, we may choose by (8.3) an infinite $I_3 \subseteq I_2$ such that
+
+\hspace*{12pt}(4) \textit{For all $i$, $i' \in I_3$ with $i' > i$ there is an injection $\alpha$ from $\{e \in \operatorname{dom}(\mu_i) \cap E(\sigma_i(o(S_i))) \colon \mu_i(e) = \rho\}$ into $\{e' \in \operatorname{dom}(\mu_{i'}) \cap E(\sigma_{i'}(o(S_{i'}))) \colon \mu_{i'}(e') = \rho\}$, such that for each $e$, $\phi_i(e) \le \phi_{i'}(\alpha(e))$ and $\Delta_i(e) = \Delta_{i'}(\alpha(e))$.}
+
+Since $V_0$ is finite, we may assume (by repeating this procedure for all $\rho$) that (4) holds for all $\rho$. We may similarly choose an infinite subset $I_4 \subseteq I_3$ such that for all subsets $Y$ of $V_0$,
+
+\hspace*{12pt}(5) \textit{For all $i, i' \in I_4$ with $i' > i$ there is an injection $\alpha$ from $\{e \in E(\sigma_i(o(S_i))) - \operatorname{dom}(\mu_i) \colon V_{G_i}(e) = Y\}$ into $\{e' \in E(\sigma_{i'}(o(S_{i'}))) - \operatorname{dom}(\mu_{i'}) \colon V_{G_{i'}}(e') = Y\}$, such that $\phi_i(e) \le \phi_{i'}(\alpha(e))$ for each $e$.}
+
+By piecing together the injections of (4) and (5), we deduce
+
+\hspace*{12pt}(6) \textit{For all $i$, $i' \in I_4$ with $i' > i$ there is an injection $\alpha \colon E(\sigma_i(o(S_i))) \to E(\sigma_{i'}(o(S_{i'})))$ such that for each $e \in E(\sigma_i(o(S_i)))$}
+
+\hspace*{12pt}(i) \textit{$\alpha(e) \in \operatorname{dom}(\mu_{i'})$ if and only if $e \in \operatorname{dom}(\mu_i)$}
+
+\hspace*{12pt}(ii) \textit{if $e \in \operatorname{dom}(\mu_i)$ then $\mu_i(e) = \mu_{i'}(\alpha(e))$ and $\Delta_i(e) = \Delta_{i'}(\alpha(e))$}
+
+\hspace*{12pt}(iii) \textit{if $e \notin \operatorname{dom}(\mu_i)$ then $V_{G_i}(e) = V_{G_{i'}}(\alpha(e))$}
+
+\hspace*{12pt}(iv) \textit{$\phi_i(e) \le \phi_{i'}(\alpha(e))$.}
+
+Let $\rho$ be a march in $V_0$. Since $\{P_i | \sigma_i(s) \colon i \ge 1, s \in U(S_i)\}$ is well-quasi-ordered by simulation we may choose by (8.3) an infinite $I_5 \subseteq I_4$ such that
+
+\hspace*{12pt}(7) \textit{For all $i$, $i' \in I_5$ with $i' > i$ there is an injection $\beta$ from $\{s \in U(S_i) \colon \pi(\sigma_i(s)) = \rho\}$ into $\{s' \in U(S_{i'}) \colon \pi(\sigma_{i'}(s')) = \rho\}$, such that $P_i | \sigma_i(s)$ is simulated in $P_{i'} | \sigma_{i'}(\beta(s))$ for each $s$.}

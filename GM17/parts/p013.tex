@@ -1,0 +1,23 @@
+\origpage{174}{ROBERTSON AND SEYMOUR}
+Let $\mathscr{T}$ be a tangle in a hypergraph $G$, and let $\pi$ be a $\mathscr{T}$-central portrayal of $G$. We say that $\pi$ is \textit{$z$-redundant}, if $z < ord(\mathscr{T})$, and for every $Z \subseteq V(G)$ with $|Z| \le z$ there is no $\mathscr{T}/Z$-central portrayal of $G/Z$ simpler than $\pi$. In this section we develop some consequences of $z$-redundancy.
+
+We shall need the following lemma, a relative of [1, Theorem (6.3)].
+
+\stmt
+(6.1) \textit{Let $\mathscr{T}$ be a tangle of order $\theta$ in a hypergraph $G$, and let $Z \subseteq V(G)$ with $|Z| < \theta$. Let $A \subseteq G$ such that $A/Z'$ has fewer than $\theta - |Z|$ attachments in $G/Z$, where $Z' = Z \cap V(A)$. Then $A$ is small relative to $\mathscr{T}$ if and only if $A/Z'$ is small relative to $\mathscr{T}/Z$.}
+
+\textit{Proof.} Let $C \subseteq G$, where $V(C) = V(A) \cup Z$ and $E(C) = E(A)$, and choose $D \subseteq G$ such that $Z \subseteq V(C \cap D)$ and $(C, D)$ is a separation of $G$ of order $< \theta$. (This exists, from our hypothesis about the attachments of $A/Z$ in $G/Z$.) Then $A/Z' = C/Z$. Suppose first that $(C, D) \in \mathscr{T}$. Then $(D, A) \notin \mathscr{T}$ by the second tangle axiom, since $C \cup D = G$, and so $(A, D) \in \mathscr{T}$ (for $(A, D)$ is a separation of order $< \theta$) and so $A$ is small relative to $\mathscr{T}$. Moreover, $(C/Z, D/Z) \in \mathscr{T}/Z$, and so $C/Z = A/Z'$ is small relative to $\mathscr{T}/Z$. We may assume therefore that $(C, D) \notin \mathscr{T}$, and so $(D, C) \in \mathscr{T}$. Consequently $A$ is not small with respect to $\mathscr{T}$, for $A \cup D = G$; and since $(D/Z, C/Z) \in \mathscr{T}/Z$, it follows similarly that $A/Z'$ is not small with respect to $\mathscr{T}/Z$, as required. $\square$
+
+\stmt
+(6.2) \textit{Let $\mathscr{T}$ be a tangle in a hypergraph $G$ and let $\pi = (\Sigma, \Gamma, \alpha, \beta, \gamma)$ be a $\mathscr{T}$-central portrayal of $G$ with $warp \le p$. Let $Z \subseteq V(G)$, with $|Z| < ord(\mathscr{T}) - 2p - 2$. Define}
+\begin{align*}
+\alpha'(c) &= \alpha(c)/(Z \cap V(\alpha(c))) && (c \in C(\Gamma)) \\
+\beta'(n) &= \beta(n) - Z && (n \in N(\Gamma) \cap bd(\Sigma)) \\
+\gamma' &= \gamma \mid \{n : n \in dom(\gamma), \gamma(n) \notin Z\}.
+\end{align*}
+Then $\pi' = (\Sigma, \Gamma, \alpha', \beta', \gamma')$ is a $\mathscr{T}/Z$-central portrayal of $G/Z$, resembling or simpler than $\pi$.
+
+\textit{Proof.} It is easy to verify \textbf{(P1)}--\textbf{(P7)}, and so $\pi'$ is a portrayal of $G/Z$; and clearly the warp in $\pi'$ of every border cell of $\Gamma$ is at most its warp in $\pi$. Moreover, $\pi'$ is $\mathscr{T}/Z$-central; for if $c \in C(\Gamma)$, $\alpha'(c)$ has at most $2p + 2 < ord(\mathscr{T}) - |Z|$ attachments in $G/Z$, and so $\alpha'(c)$ is small by (6.1). $\square$
+
+\stmt
+(6.3) \textit{Let $\pi = (\Sigma, \Gamma, \alpha, \beta, \gamma)$ be a $z$-redundant $\mathscr{T}$-central portrayal of $G$, with $warp \le p$. Let $ord(\mathscr{T}) > z + 2p + 2$, and let $F \subseteq \Sigma$ be a $\Gamma$-normal $I$-arc with ends $n_1, n_2$ and with $|F \cap dom(\gamma)| \le z - 2p$. Then there is a disc $\Delta \subseteq \Sigma$ with $F \subseteq bd(\Delta) \subseteq F \cup bd(\Sigma)$ such that $\alpha(\Delta)$ is small.}

@@ -1,0 +1,38 @@
+\origpage{174}{ROBERTSON AND SEYMOUR}
+\sectionhead{8. Robust and Titanic Separations}
+
+The object of this section is to prove a technical lemma for use in a later paper. A separation $(A, B)$ of $G$ is \textit{robust} if for every separation $(C, D)$ of $A$, one of the separations $(C, B \cup D)$, $(D, B \cup C)$ has order at least that of $(A, B)$. (Incidentally, Noga Alon (unpublished) has shown that deciding if a separation is robust is NP-complete.) We need the following lemma.
+
+\stmt
+(8.1) \textit{Let} $(A, B)$ \textit{be a robust separation of} $G$, \textit{and let} $(C, D)$ \textit{be a separation of} $G$. \textit{Then one of} $(A \cup C, B \cap D)$, $(A \cup D, B \cap C)$ \textit{has order at most that of} $(C, D)$.
+
+\textit{Proof.} Now $(A \cap C, A \cap D)$ is a separation of $A$. Since $(A, B)$ is robust, we may assume (exchanging $C, D$ if necessary) that
+\begin{equation*}
+|V((A \cap C) \cap (B \cup D))| = |V((A \cap C) \cap (B \cup (A \cap D)))| \ge |V(A \cap B)|.
+\end{equation*}
+But
+\begin{align*}
+|V(A \cap B)| &+ |V(C \cap D)| \\
+&= |V((A \cap C) \cap (B \cup D))| + |V((A \cup C) \cap (B \cap D))|,
+\end{align*}
+and the result follows. $\square$
+
+A separation $(A, B)$ of $G$ is \textit{titanic} if for every triple $(X, Y, Z)$ of subhypergraphs of $A$ such that $A = X \cup Y \cup Z$ and $E(X)$, $E(Y)$, $E(Z)$ are mutually disjoint, we have either
+\begin{equation*}
+|V((X \cup Y) \cap Z)| \ge |V((X \cup Y) \cap B)|
+\end{equation*}
+or
+\begin{equation*}
+|V((Y \cup Z) \cap X)| \ge |V((Y \cup Z) \cap B)|
+\end{equation*}
+or
+\begin{equation*}
+|V((Z \cup X) \cap Y)| \ge |V((Z \cup X) \cap B)|.
+\end{equation*}
+\stmt
+(8.2) \textit{Every titanic separation is robust.}
+
+\textit{Proof.} Let $(A, B)$ be a titanic separation, and let $(C, D)$ be a separation of $A$. Put $X = C$, $Y = D$, and let $Z$ be the hypergraph with $V(Z) = E(Z) = \emptyset$. Since $(A, B)$ is titanic, we deduce that either $0 \ge |V(A \cap B)|$ or $|V(C \cap D)| \ge |V(B \cap D)|$ or $|V(C \cap D)| \ge |V(B \cap C)|$. If $V(A \cap B) = \emptyset$ then $(A, B)$ is robust. Thus, by symmetry, we may assume that $|V(B \cap C)| \le |V(C \cap D)|$. But
+\begin{equation*}
+|V(A \cap B)| = |V(B \cap C)| + |V(B \cap D) - V(C)|
+\end{equation*}

@@ -1,0 +1,22 @@
+\origpage{21}{}
+\hspace*{12pt}(11) \textit{If} $F \subseteq \Sigma$ \textit{is a} $\Gamma$\textit{-normal} $O$\textit{-arc with} $|F \cap V(\Gamma)| < \theta_4$\textit{, and} $ins(F)$ \textit{includes a unique cuff} $C$\textit{, then} $|F \cap V(\Gamma)| \ge |C \cap V(\Gamma)|$.
+
+\textit{Subproof.} By (9), $ins(F) \cap bd(\Sigma) = C$. Let $A = \Gamma \cap ins(F)$, and let $(A, B) \in \mathcal{T}$ where $V(A \cap B) = F \cap V(\Gamma)$. Let $\Sigma'$ be obtained from $\Sigma$ by deleting $\Sigma \cap (ins(F) \setminus F)$. Then $\Sigma'$ is homeomorphic to $\Sigma$, and so by (6),
+\begin{equation*}
+|V(B) \cap bd(\Sigma')| \ge p \ge |V(\Gamma) \cap bd(\Sigma)|.
+\end{equation*}
+Consequently $|F \cap V(\Gamma)| \ge |C \cap V(\Gamma)|$. This proves (11).
+
+\hspace*{12pt}(12) \textit{Every vertex in} $V(\Gamma) \cap bd(\Sigma)$ \textit{is a terminal of} $L$.
+
+\textit{Subproof.} If $v \in \delm{bd(\Sigma) \setminus V(\Gamma)}\fix{V(\Gamma) \cap bd(\Sigma)}$ is not a terminal of $L$,\fixnote{fix:5.2-claim12}{The claim is about vertices in $V(\Gamma) \cap bd(\Sigma)$, and the next sentence needs $v \in V(\Gamma)$, since enlarging $\Sigma$ near a point that is not a vertex does not change $V(\Gamma) \cap bd(\Sigma)$.} let $\Sigma'$ be obtained from $\Sigma$ by slightly enlarging $\Sigma$ in the neighbourhood of $v$. Then $|V(\Gamma) \cap bd(\Sigma')| < p$, contrary to (3). This proves (12).
+
+But (8), (10), (11) and (12) contradict (5.1). Thus our assumption that $\theta$ does not satisfy (*) was false, and the proof is complete. $\square$
+
+\sectionhead{6 Presentations}
+
+If $\Gamma$ is a drawing in a surface $\Sigma$ such that $|V(\Gamma) \cap C| \ge 2$ for every cuff $C$, we call the connected components of $bd(\Sigma) \setminus V(\Gamma)$ the \textit{spaces} of $\Gamma$ in $\Sigma$. For every space $s$ there are two vertices $u, v$ such that $s \cup \{u, v\}$ is a line; we call $u, v$ the \textit{ends} of $s$. A \textit{support} of $\Gamma$ in $\Sigma$ is either a set $\{v\}$ where $v \in V(\Gamma) \cap bd(\Sigma)$, or a line $F \subseteq bd(\Sigma)$ with both ends in $V(\Gamma)$ (where possibly some internal points of $F$ belong to $V(\Gamma)$). The \textit{ends} of a support $F$ are $a$ and $b$, where $a = b = v$ if $F = \{v\}$, and $a$ and $b$ are the ends of the line $F$ if $F$ is a line.
+
+Let $\Gamma$, as above, be a subgraph of some graph $G$, which is not required to be a drawing. Let $F_1^*, \dots, F_r^*$ be mutually disjoint supports of $\Gamma$ in $\Sigma$ with $V(\Gamma) \cap bd(\Sigma) \subseteq F_1^* \cup \dots \cup F_r^*$. For $1 \le j \le r$, let $H_j \subseteq G$, so that
+
+\hspace*{12pt}(V1) $H_1 \cup \dots \cup H_r \cup \Gamma = G$; $H_1, \dots, H_r$ \textit{are mutually vertex-disjoint; and for} $1 \le j \le r, V(H_j \cap \Gamma) = V(\Gamma) \cap F_j^*$, \textit{and} $E(H_j \cap \Gamma) = \emptyset$.

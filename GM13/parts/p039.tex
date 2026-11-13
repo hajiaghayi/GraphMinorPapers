@@ -1,0 +1,18 @@
+\origpage{103}{GRAPH MINORS. XIII}
+For the second claim, certainly $K_1 \cap H_2$ is null, since $K_1 \cap H_2 \subseteq K_1 \cap H \subseteq H_1$, and similarly $K_2 \cap H_1$ is null. Suppose that $t \in V(K_1 \cap K_2)$. Since $t \in V(K_1)$ and $t \notin V(H)$, there is a path of $G \setminus V(C_1)$ between $t$ and the inside of $H_1$. By combining this and a similar path for $H_2$, we obtain an $H$-path from the inside of $H_1$ to the inside of $H_2$, a contradiction. Hence $K_1 \cap K_2$ is null, as required. $\square$
+
+A subwall $H$ of $G$ is \textit{flat} in $G$ if there is no cross $P \cup Q$ over $H$ such that $P \cup Q$ is a subgraph of the compass of $H$ in $G$.
+
+\stmt
+(9.6) \textit{For any $p, s \ge 0$ and $h \ge 2$, even, there exists $h' \ge p^2 + 2$, even, and an algorithm as in (9.7) with running time $O(v\varepsilon)$ for fixed $p, s, h$.}
+
+\stmt
+(9.7) \textsc{Algorithm}. \textit{Input:} A graph $G$, and a wall $H$ in $G$ of height $h'$. \textit{Output:} Either (i) a model of $K_p$ in $G$, or (ii) a subset $X \subseteq V(G)$ with $|X| < \binom{p}{2}$ and $s$ subwalls $H_1, \dots, H_s$ of $H$ of height $h$, mutually vertex-disjoint, and each flat and dividing in $(G \setminus X) \cup H$, and each disjoint from $X$.
+
+\textit{Proof} of (9.6). We may assume that $p \ge 2$. Let $k = k_1$, $r = r_1$ satisfy (9.3), and let $k = k_2$, $r = r_2$ satisfy (9.1) for the given $p$. Let $h'$ be some even number satisfying
+\begin{equation*}
+h' \ge \left(s + k_1 + k_2 + \binom{p}{2} + 1\right) \cdot (h + \max(r_1, r_2) + 1).
+\end{equation*}
+Our algorithm is as follows. Given $G, H$ as input, we choose $s + k_1 + k_2 + \binom{p}{2}$ subwalls of $H$, each of height $h$, and mutually at distance $\ge \max(r_1, r_2)$ (this is possible from the choice of $h'$). We apply (9.4) and obtain either a model of $K_p$ in $G$ when we stop, or a subset $X \subseteq V(G)$ with $|X| < \binom{p}{2}$ and some $s + k_2 + \binom{p}{2}$ of our subwalls, each dividing in $(G \setminus X) \cup H$. Now we test which of these subwalls are flat in $(G \setminus X) \cup H$ and find crosses over them in their compasses, if possible, using (8.1). Suppose that we find crosses for at least $k_2$ of them. By (9.5), these crosses satisfy the hypotheses of (9.1). By (9.1) there is a model of $K_p$ in the union of $H$ and these crosses, and we can find it in time $O(\varepsilon)$. On the other hand, if fewer than $k_2$ of our subwalls yield crosses, then at least $s + \binom{p}{2}$ of them are flat in $(G \setminus X) \cup H$, and since $|X| < \binom{p}{2}$ we may choose $s$ of them disjoint from $X$. Again we stop. $\square$
+
+Let $H$ be a wall in $G$. The \textit{society} of $H$ in $G$ is the society $(K, \Omega)$, where $K$ is the compass of $H$ in $G$ and $\Omega$ is the cyclic permutation of the corners

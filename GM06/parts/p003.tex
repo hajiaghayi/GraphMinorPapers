@@ -1,0 +1,28 @@
+\origpage{117}{GRAPH MINORS. VI}
+\noindent more direct approach is described in Section 4. We use our tortuous method because we find it entertaining, and we think the results we obtain along the way are worthwhile.)
+
+Let $C$ be homeomorphic to a circle and let $V \subseteq C$ be finite. Every component of $C - V$ homeomorphic to $(0, 1)$ is called a \textit{segment} (of $C$ with respect to $V$). Now let $\Delta$ be a division with $\bigcup \Delta = V$. If $V = \emptyset$ let $U = \emptyset$. If $V \ne \emptyset$ let $U \subseteq C - V$ with $|U \cap S| = 1$ for every segment $S$ of $C$ with respect to $V$. Then $|U| = |V|$.
+
+If $a, b, c, d$ are distinct points of $C$ occurring in that order, we say that $\{a, c\}$ \textit{crosses} $\{b, d\}$. We define a division $\Delta^*$ with $\bigcup \Delta^* = U$ as follows. The relation between $u, u' \in U$, ``there is no $\delta \in \Delta$ and $v, v' \in \delta$ such that $\{v, v'\}$ crosses $\{u, u'\}$'' is an equivalence relation on $U$, as is easily seen. We denote the set of equivalence classes by $\Delta^*$. We define $\Delta^{**}$ to be the set of equivalence classes on $V$ of the relation between $v, v' \in V$, ``there is no $\delta^* \in \Delta^*$ and $u, u' \in \delta^*$ such that $\{u, u'\}$ crosses $\{v, v'\}$.''
+
+It is not necessarily true that $\Delta^{**} = \Delta$. For example, if $V = \{v_1, v_2, v_3, v_4\}$ and $v_1, v_2, v_3, v_4$ occur on $C$ in that order, and
+\begin{equation*}
+\Delta = \{\{v_1, v_3\}, \{v_2, v_4\}\}
+\end{equation*}
+then $\Delta^*$ contains the singleton subsets of $U$, and $\Delta^{**}$ contains only the set $V$.
+
+We say that $\Delta$ is \textit{cross-free} if there do not exist distinct $\delta, \delta' \in \Delta$ and $s, t \in \delta$, $s', t' \in \delta'$ such that $\{s, t\}$ crosses $\{s', t'\}$. If $\Sigma$ is a disc and $C = bd(\Sigma)$, and $\Delta$ is a division with $\bigcup \Delta \subseteq C$ feasible in some graph drawn in $\Sigma$, then it is easy to see that $\Delta$ must be cross-free.
+
+\stmt
+(2.1) $\Delta^*$ \textit{is cross-free, for any} $\Delta$.
+
+\textit{Proof.} Let $u_1, u_2, u_3, u_4 \in U$ occur on $C$ in that order, and suppose that
+\begin{equation*}
+\{u_1, u_3\} \subseteq \delta_1^* \in \Delta^*;\; \{u_2, u_4\} \subseteq \delta_2^* \in \Delta^*.
+\end{equation*}
+We must show that $\delta_1^* = \delta_2^*$. Suppose not; then there exists $\delta \in \Delta$ and $v_1, v_2 \in \delta$ such that $\{v_1, v_2\}$ crosses $\{u_1, u_2\}$. But $\{v_1, v_2\}$ crosses neither $\{u_1, u_3\}$ nor $\{u_2, u_4\}$, and that is impossible. Hence $\delta_1^* = \delta_2^*$, as required.
+
+\stmt
+(2.2) \textit{If} $\Delta$ \textit{is cross-free then} $\Delta^{**} = \Delta$.
+
+\textit{Proof.} Suppose that $v, v' \in V$ and there is no $\delta \in \Delta$ with $v, v' \in \delta$. We must show that there exists $\delta^* \in \Delta^*$ and $u, u' \in \delta^*$ such that $\{u, u'\}$ crosses

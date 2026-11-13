@@ -1,0 +1,30 @@
+\origpage{236}{ROBERTSON AND SEYMOUR}
+\noindent $C$, and $\phi(x) = t(x)$ ($x \in V(G) \cap C$). Let $H' = \phi(H)$; then $H'$ is a forest in $\Sigma'$, and if it is $G'$-feasible then $H$ is $G$-feasible. To show that $H'$ is $G'$-feasible we shall show that conditions (i) and (ii) of (4.6) hold; and it is easy to see that they are respectively equivalent to the claims which follow.
+
+\textit{Claim} (a). \textit{For any $G$-normal $[0, 1]$-arc $F$ in $\Sigma$ with $F \subseteq \Sigma'$, and with both ends in $bd(\Sigma')$, if $|V(G) \cap F| \le v$ then both ends of $F$ lie in $H(C)$ for some cuff $C$ of $\Sigma$.}
+
+Suppose that $F$ satisfies these hypotheses, and yet its ends lie in $H(C)$, $H(C')$, respectively, where $C$, $C'$ are different cuffs. Let $A$ be the $O$-arc $U(B_\beta(C))$. Now $H(C')$ does not meet $A$; for $A \subseteq \mathcal{A}_{2kv-1}(C)$ and $H(C') \subseteq \mathcal{A}_{2kv-1}(C')$, and by (5.3) these two sets are disjoint. $H(C')$ is not inside $A$, because it surrounds $C'$ and $A$ does not. Thus no point of $H(C')$ is in or inside $A$. But $H(C)$ is inside $A$, and so $F$ meets $A$ in some vertex $u$ say. Since $u \in Z_\beta$ and $u \notin \bar{Z}$, it follows that $u \in Y_\beta(A(C)) \subseteq Y_{\beta+1}(A(C))$, and so there is a $G$-normal $[0, 1]$-arc $F_0$ with one end $u$ and the other in $A(C)$, and with
+\begin{equation*}
+|V(G) \cap F_0| \le \beta + 1 = \frac{1}{2}v + k(C) + 3.
+\end{equation*}
+Choose similarly a $G$-normal $[0, 1]$-arc $F'_0$ with one end in $F$ and the other in $A(C')$ and with
+\begin{equation*}
+|V(G) \cap F'_0| \le \frac{1}{2}v + k(C') + 3.
+\end{equation*}
+Put $X = A(C) \cup F_0 \cup F \cup F'_0 \cup A(C')$. Then $X$ is solid, connected, $G$-normal, not near-planar, and
+\begin{align*}
+|V(G) \cap X| &\le vk(C) + (\frac{1}{2}v + k(C) + 3) + v + (\frac{1}{2}v + k(C') + 3) + vk(C') \\
+&\le 2kv + 2v + 2k + 6 \le 9kv < \alpha(G),
+\end{align*}
+a contradiction. This proves claim (a).
+
+\textit{Claim} (b). \textit{For any $G$-normal $O$-arc $F$ in $\Sigma$ with $F \subseteq \Sigma'$, and with}
+\begin{align*}
+&|\{(C, i)\colon C \text{ is a cuff of } \Sigma, 1 \le i \le k(C), \text{ and } F \text{ meets } N_i(C)\}| \\
+&\quad + |F \cap (V(G) - bd(\Sigma'))| \le v
+\end{align*}
+\textit{either $F$ is null-homotopic in $\Sigma$, or $F$ surrounds some cuff $C$ of $\Sigma$ and $F$ meets $N_i(C)$ for all $i$ ($1 \le i \le k(C)$).}
+
+Suppose $F$ satisfies these hypotheses, and is not null-homotopic in $\Sigma$. Let $L$ be the first term in the inequality above. We suppose first that $L = 0$, so that $V(G) \cap F \cap bd(\Sigma') = \emptyset$ and $|V(G) \cap F| \le v$. Since $\alpha(G) > 9kv \ge v$, $F$ is near-planar in $\Sigma$. Since it is not null-homotopic, it surrounds some cuff $C$ say. But $A(C)$ is inside $N(C)$ and hence inside $F$, contrary to our choice of $A(C)$. Hence $L \ne 0$, and so
+
+\hspace*{12pt}(1) $|F \cap (V(G) - bd(\Sigma'))| < v$.

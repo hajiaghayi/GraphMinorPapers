@@ -1,0 +1,47 @@
+\origpage{49}{GRAPH MINORS}
+\noindent such that for every $j\in J_3$, $|X\cap V(B_j)|\le 2r$ and every component of $B_j\backslash X$
+meets fewer than $\frac12\theta^2$ different $P_i$'s.
+
+Let $j\in J_3$. Let $X\cap V(B_j)=Y_j$, and let $N(Y_j)$ be the set of those vertices
+which are adjacent in $G$ to at least one element of $Y_j$. A component of $B_j\backslash X$
+which includes no element of $N(Y_j)$ is a component of $B_j$, and hence $B_j\backslash X$
+has at most $d$ such components. Each of these components meets fewer than
+$\frac12\theta^2$ paths $P_i$. Hence at least $m-\frac12\,d\theta^2\ge\frac12 r\theta^2(\theta^2-1)$ paths $P_i$ meet at least
+one component of $B_j\backslash X$ which includes an element of $N(Y_j)$. Since $|Y_j|\le 2r$,
+there exists $v_j\in Y_j$ such that at least $\frac14\theta^2(\theta^2-1)$ paths $P_i$ meet a component
+of $B_j\backslash X$ which includes a vertex adjacent to $v_j$. Let $\{D_j^1,..., D_j^{\alpha(j)}\}$ be a
+minimal set of components of $B_j\backslash X$ such that each $D_j^k$ includes a vertex
+adjacent to $v_j$ and at least $\frac14\theta^2(\theta^2-1)$ paths $P_i$ meet $D_j^1\cup\cdots\cup D_j^{\alpha(j)}$. Then
+$\alpha(j)\ge\frac12\theta^2$ since each component of $B_j\backslash X$ meets fewer than $\frac12\theta^2$ paths $P_i$. By
+the minimality of $\{D_j^1,..., D_j^{\alpha(j)}\}$ there exist $P_{i(1)},..., P_{i(\alpha(j))}$ such that $P_{i(u)}$
+meets $D_j^u$ but meets no $D_j^t$ $(t\ne u)$, for $u=1,..., \alpha(j)$. Then $i(1),..., i(\alpha(j))$ are
+distinct: define $I(j)=\{i(1),..., i(\frac12\theta^2)\}$.
+
+Then $I(j)\subseteq\{1,..., m\}$, for all $j\in J_3$, and so there exists $J_4\subseteq J_3$ with $|J_4|\ge
+2^{-m}|J_3|$, such that for $j, j'\in J_4$, $I(j)=I(j')=I$ say. Renumber, for
+simplicity, so that $I=\{1, 2,..., \frac12\theta^2\}$, and for $j\in J_4$, $P_i$ meets $D_j^i$ but does not
+meet any $D_j^{i'}$ for distinct $i, i'\in I$. For each $i\in I$, let $Q_i$ be the subgraph of $G$
+consisting of the vertices and edges in the graphs $P_i$ and $D_j^i$$(j\in J_4)$. Then
+$Q_1,..., Q_{\theta^2/2}$ are all connected, and are disjoint, and do not intersect $X$.
+Moreover, if $1\le i\le\frac12\theta^2$ and $j\in J_4$, $v_j$ is adjacent to a vertex of $Q_i$. It
+follows that $G$ has a minor isomorphic to the complete bipartite graph
+\begin{equation*}
+K_{|J_4|,\,\theta^2/2}.
+\end{equation*}
+But $K_{\theta^2/2,\theta^2/2}$ has a minor isomorphic to the $\theta$-grid, and $G\in\mathscr{F}_\theta$; thus
+$|J_4|<\frac12\theta^2$. Hence $|J_3|<2^m\frac12\theta^2$, and so
+\begin{equation*}
+\tfrac12 n-2m\theta^{2\theta-2}2^m<2^m\tfrac12\theta^2,
+\end{equation*}
+that is,
+\begin{equation*}
+n<2^m(\theta^2+4m\theta^{2\theta-2}).
+\end{equation*}
+The result follows.
+\stmt
+(2.9). \textit{If $B_1,..., B_n$ are disjoint connected subgraphs of a graph $G\in\mathscr{F}_\theta$,
+and $V'\subseteq V(G)$ and $r\ge 0$ is an integer, then one of the following is true}:
+
+\hspace*{12pt}(i)\enspace\textit{there exists $J\subseteq\{1,..., n\}$ with $|J|=r$ such that for each $j\in J$ there
+is a path $P_j$ in $G$ from $B_j$ to $V'$, and the paths $P_j$ $(j\in J)$ are disjoint, and
+each has no internal vertex in $V'\cup\bigcup_{j\in J}V(B_j)$};

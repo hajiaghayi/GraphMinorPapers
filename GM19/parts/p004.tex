@@ -1,0 +1,32 @@
+\origpage{328}{N. Robertson, P.D. Seymour / Journal of Combinatorial Theory, Series B 90 (2004) 325--385}
+Let $\Gamma, \Gamma'$ be paintings in $\Sigma$. An \textit{inflation} of $\Gamma$ in $\Gamma'$ is a function $\sigma$ with domain $V(\Gamma) \cup E(\Gamma)$, satisfying
+
+\hspace*{12pt}$\bullet$ $\sigma(e) \in E(\Gamma')$ and has the same size as $e$, for each $e \in E(\Gamma)$, and if $e_1, e_2 \in E(\Gamma)$ are distinct then $\sigma(e_1) \ne \sigma(e_2)$,
+
+\hspace*{12pt}$\bullet$ $\sigma(v)$ is a non-null connected induced subdrawing of $sk(\Gamma')$, for each $v \in V(\Gamma)$; and if $v_1, v_2 \in V(\Gamma)$ are distinct then $\sigma(v_1), \sigma(v_2)$ are disjoint,
+
+\hspace*{12pt}$\bullet$ for each $e \in E(\Gamma)$ and $1 \le i \le |\tilde{e}|$, if $v$ is the $i$th end of $e$ then $\sigma(v)$ contains the $i$th end of $\sigma(e)$.
+
+We remark that it follows that for $e \in E(\Gamma)$ and $1 \le i \le |\tilde{e}|$, if $v$ is not the $i$th end of $e$ then $\sigma(v)$ does not contain the $i$th end of $\sigma(e)$, because $\sigma(v), \sigma(v')$ are disjoint where $v'$ is the $i$th end of $e$. Consequently $\sigma(v)$ contains at most one end of $\sigma(e)$, for all $v \in V(\Gamma)$ and $e \in E(\Gamma)$, and in particular every edge of each $\sigma(v)$ is a subset of some $e \in E(\Gamma') \setminus \sigma(E(\Gamma))$. (We denote $\{\sigma(e) : e \in E(\Gamma)\}$ by $\sigma(E(\Gamma))$.)
+
+An inflation $\sigma$ of $\Gamma$ in $\Gamma'$ is \textit{linear} if
+
+\hspace*{12pt}$\bullet$ for each $e \in E(\Gamma)$ and for each cuff $\Theta$, $e$ borders $\Theta$ if and only if $\sigma(e)$ borders $\Theta$ (and so $e$ is internal if and only if $\sigma(e)$ is internal),
+
+\hspace*{12pt}$\bullet$ for each border edge $e'$ of $\Gamma'$, if $e' \notin \sigma(E(\Gamma))$ then $e'$ is an edge of $\sigma(v)$ for some $v \in V(\Gamma)$,
+
+\hspace*{12pt}$\bullet$ for each $e \in E(\Gamma)$ bordering a cuff $\Theta$, if we orient $\Theta$ such that the tail of $e$ immediately precedes $e$ under this orientation, then the tail of $\sigma(e)$ immediately precedes $\sigma(e)$ under the same orientation of $\Theta$.
+
+It follows that if $e_1, \dots, e_k$ are the edges of $\Gamma$ bordering a cuff $\Theta$, in cyclic order, then $\sigma(e_1), \dots, \sigma(e_k)$ occur in the same cyclic order around $\Theta$.
+
+Let $\Gamma$ be a drawing or painting in $\Sigma$. A subset $X \subseteq \Sigma$ is \textit{$\Gamma$-normal} if $X \cap U(\Gamma) \subseteq V(\Gamma)$. We say that $\Gamma$ is \textit{internally 3-connected} if $E(\Gamma) \ne \emptyset$ and every $\Gamma$-normal $O$-arc $F \subseteq \Sigma$ with
+\begin{equation*}
+|F \cap V(\Gamma)| + |F \cap bd(\Sigma)| \le 2
+\end{equation*}
+bounds a disc $\Delta \subseteq \Sigma$ with $\Delta \cap V(\Gamma) \subseteq F$.
+
+A \textit{quasi-order} $\Omega$ consists of a set $E(\Omega)$ and a reflexive, transitive relation $\le$. It is a \textit{well-quasi-order} if for every countable sequence $\omega_i$ ($i = 1, 2, \dots$) of elements of $E(\Omega)$ there exist $j > i \ge 1$ such that $\omega_i \le \omega_j$. If $\Gamma, \Gamma'$ are paintings in $\Sigma$, and $\sigma$ is an inflation of $\Gamma$ in $\Gamma'$, and $\phi \colon E(\Gamma) \to E(\Omega)$, $\phi' \colon E(\Gamma') \to E(\Omega)$ are functions, we write $\phi \le \phi' \circ \sigma$ if $\phi(e) \le \phi'(\sigma(e))$ for every $e \in E(\Gamma)$.
+
+The following is a version of the main theorem of this paper, although it is not yet in the most convenient form for us to prove.
+
+\textbf{2.1.} \textit{Let $\Sigma$ be a surface, and let $\Omega$ be a well-quasi-order. Let $\Gamma_i$ ($i = 1, 2, \dots$) be a countable sequence of internally 3-connected paintings in $\Sigma$, and for each $i \ge 1$ let $\phi_i \colon E(\Gamma_i) \to E(\Omega)$ be some function. Then there exist $j > i \ge 1$ and a linear inflation $\sigma$ of $\Gamma_i$ in $\Gamma_j$ satisfying $\phi_i \le \phi_j \circ \sigma$.}

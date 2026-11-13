@@ -1,0 +1,30 @@
+\origpage{195}{GRAPH MINORS, XVII}
+Since $|V(\alpha(c_0) \cap \alpha(-c_0)) - S| = |\tilde{c}_0|$, it suffices to show that
+\begin{equation*}
+|V(A \cap B) \cap S| \ge |V(\alpha(c_0) \cap \alpha(-c_0)) \cap S|.
+\end{equation*}
+If $c_0$ is internal then $V(\alpha(c_0)) \cap S = \emptyset$ and the result is trivial. Let $c_0$ border a cuff $\Theta$ with head $n_1$ and tail $n_2$. Then
+\begin{equation*}
+V(\alpha(c_0) \cap \alpha(-c_0)) \cap S = \beta(n_1) \cup \beta(n_2).
+\end{equation*}
+Let $\pi$ have warp $q$ at $\Theta$, and let $\beta(n_1) = \{u_1, \dots, u_q\}$. For $1 \le i \le q$ let $v_i$ be the terminal vertex of $L(u_i, n_1)$. Thus $\{v_1, \dots, v_q\} = \{u_1, \dots, u_q\}$. Let $1 \le i \le q$. By (10.2) there is a first vertex of $L(u_i, n_1)$ which is not in $V(A)$, and it is not $u_i$; and so the previous vertex $a_i$ of $L(u_i, n_1)$ is in $V(A \cap B)$. Similarly there is a last vertex of $L(u_i, n_1)$ which is not in $V(A)$, and it is not $v_i$; and the next vertex $b_i$ is in $V(A \cap B)$.
+
+By (10.1), the paths $L(u_i, n_1) \setminus v_i$ are mutually vertex-disjoint, and so $a_1, \dots, a_q$ are all distinct, since $a_i \ne v_i$ ($1 \le i \le q$). Similarly, $b_1, \dots, b_q$ are all distinct. Let $1 \le i, j \le q$ and suppose that $a_i = b_j$. We claim that $a_i = u_i = v_j = b_j$. For $a_i \ne b_i$ unless $L(u_i, n_1)$ is a circuit and $a_i = u_i = v_i = b_i$ as required. Hence we may assume that $i \ne j$. But $L(u_i, n_1)$ and $L(u_j, n_1)$ are disjoint, except for $u_i$ (if $u_i = v_j$) or $u_j$ (if $u_j = v_i$). Thus either $a_i = b_j = u_i = v_j$ or $a_i = b_j = u_j = v_i$. Since $a_i \ne v_i$ the second is impossible, and the first is our claim.
+
+Now if $v_j = b_j$, the vertex of $L(u_j, n_1)$ before $v_j$ is not in $V(A)$ and so the corresponding path of the standard linkage in $\alpha(c_0)$ has no edges. Hence $v_j \in \beta(n_2)$. We have shown then that if $a_i = b_j$ then $v_j \in \beta(n_2)$. It follows that
+\begin{equation*}
+|\{a_1, \dots, a_q\} \cap \{b_1, \dots, b_q\}| \le |\beta(n_1) \cap \beta(n_2)|
+\end{equation*}
+and so $|\{a_1, \dots, a_q\} \cup \{b_1, \dots, b_q\}| \ge |\beta(n_1) \cup \beta(n_2)|$. The result follows, since $a_1, \dots, a_q, b_1, \dots, b_q \in V(A \cap B) \cap S$. $\square$
+
+\stmt
+(11.7) $|V(A \cap B)| = |V(\alpha(c_0) \cap \alpha(-c_0))|.$
+
+\textit{Proof.} For each $d \in D(A, B)$, since $|\gamma(\tilde{d})| \le 3$, it follows that there exists $n_d \in \tilde{d}$ such that $\gamma(\tilde{d}) \subseteq V(A) \cup \{\gamma(n_d)\}$ or $\gamma(\tilde{d}) \subseteq V(B) \cup \{\gamma(n_d)\}$. Let $A'$ be the graph with vertex set
+\begin{equation*}
+V(A) \cup \{\gamma(n_d) \colon d \in D(A, B)\}
+\end{equation*}
+and edge set $E(A)$, and define $B'$ similarly. Then $(A', B')$ is a separation of $G$ of order at most $|D(A, B)|$ more than that of $(A, B)$. Since $(A, B)$ has order $\le 2p + 2$ and by (11.5),
+\begin{equation*}
+|D(A, B)| \le |V(A \cap B) - (S \cup \gamma(N(\Gamma)))| \le |V(A \cap B) - S| \le |\tilde{c}_0| \le 3,
+\end{equation*}

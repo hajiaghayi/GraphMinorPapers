@@ -1,0 +1,24 @@
+\origpage{354}{N. Robertson, P.D. Seymour / Journal of Combinatorial Theory, Series B 90 (2004) 325--385}
+\textbf{Proof.} Since $rep(\Gamma) > rep(\mathscr{T}) = \frac{1}{2}|E(F)|$, it follows that one of $\Sigma_1, \Sigma_2$ (and hence $\Sigma_2$) is a disc, and so the first assertion of the theorem holds. If $U(F)$ meets two distinct cuffs then $dist(\Gamma) \le \frac{1}{4}|E(F)| + 1$, while if $|U(F) \cap bd(\Sigma_\chi)| \le 1$ then $U(F) \subseteq \Sigma_\chi$, and in either case the second assertion holds. Thus, to prove the second assertion, we may assume that $U(F)$ intersects a unique cuff $\bar{r}\setminus r$ say, where $r^*$ is a pole, and $|U(F) \cap (\bar{r}\setminus r)| \ge 2$. Let $v_1, v_2 \in U(F) \cap (\bar{r}\setminus r)$ be distinct, and let $e_i \in E(\Gamma^*)$ have ends $r^*, v_i$ ($i = 1, 2$). We shall prove that $e_1, e_2 \in E(F)$, from which the second assertion follows. For suppose that $e_1 \notin E(F)$. Let $u = r^*$ if $r^* \in V(F)$, and $u = v_2$ if $r^* \notin V(F)$. Let $Q$ be a path of $\Gamma^*$ between $v_1$ and $u$ with $E(Q) \subseteq \{e_1, e_2\}$. Let $F_1, F_2$ be the two paths of $F$ with ends $v_1, u$. Now $|E(Q)| \le |E(F_1)|, |E(F_2)|$, and $\lambda(Q) < \lambda(F_i)$ ($i = 1, 2$) by the second condition in the definition of a tie-breaker. Thus if $e_1 \subseteq \Sigma_2$ then one of $F_1 \cup Q, F_2 \cup Q$ contradicts the choice of $F$. If $e_1 \not\subseteq \Sigma_2$ then one of $U(F_1 \cup Q), U(F_2 \cup Q)$ bounds a disc in $\hat{\Sigma}_\chi$ including $\Sigma_2$, because $\hat{\Sigma}$ is not a sphere and $rep(\Gamma) > \frac{1}{2}|E(F)|$, and again the choice of $F$ is contradicted. This proves the second assertion of the theorem.
+
+For the third assertion, choose $F', \Sigma_1', \Sigma_2'$ as in 8.7; then $(\Gamma \cap \Sigma_1', \Gamma \cap \Sigma_2') \in \mathscr{T}$, and $\Sigma_1'$ is not a disc. From the choice of $F$, $\lambda(F') = \lambda(F)$ and therefore $F' = F$; and so $F$ is $\lambda$-linked to $\mathscr{T}$. This proves 10.1. $\square$
+
+\textbf{10.2.} \textit{Let $\chi$ satisfy $\mathbf{S}_1$, let $F$ be a circuit in $\hat{\Sigma}_\chi$, with vertex set $\{v_1, \dots, v_{2n}\}$, numbered in order in $F$, and let $\pi$ be the march $v_2, v_4, \dots, v_{2n}$. Then there is a well-behaved set $\mathscr{C}(F, \pi)$ of $\chi$-places with the following property. Let $(\Gamma, \phi, \lambda, \mathscr{T}) \in \mathscr{D}$ satisfy}
+
+\hspace*{12pt}$\bullet$ \textit{$F \subseteq \Gamma^*$, and $U(F) \cap V(\Gamma) = \bar{\pi}$,}
+
+\hspace*{12pt}$\bullet$ \textit{$F$ is a representativeness flaw for $(\Gamma, \phi, \lambda, \mathscr{T})$, and}
+
+\hspace*{12pt}$\bullet$ \textit{$dist(\Gamma) > \frac{1}{4}|(E(F)| + 1$.}
+
+\textit{Then there is a rooted location $\mathscr{L}$ with $ord(\mathscr{L}^-) = \frac{1}{2}|E(F)|$, which $(\frac{1}{2}|E(F)| + 1)$-isolates $\mathscr{T}$ and for which $(\Gamma, \phi, \mathscr{L}) \in \mathscr{C}(F, \pi)$.}
+
+\textbf{Proof.} Let $\mathscr{D}_1$ be the set of members $(\Gamma, \phi, \lambda, \mathscr{T})$ of $\mathscr{D}$ satisfying the three displayed statements of the theorem. We may assume that $\mathscr{D}_1 \ne \emptyset$, and so $\hat{\Sigma}_\chi$ is not a sphere, and, defining $\Sigma_1$ and $\Sigma_2$ as before, $\Sigma_2$ is a disc by 10.1. Let $(\Gamma, \phi, \lambda, \mathscr{T}) \in \mathscr{D}_1$, let $A$ be the rooted hypergraph with $A^- = \Gamma \cap \Sigma_1$ and $\pi(A) = \pi$, and let $\mathscr{L} = \{A\}$. Then $\mathscr{L}$ $(\frac{1}{2}|E(F)| + 1)$-isolates $\mathscr{T}$, by 8.8, since $F$ is $\lambda$-linked to $\mathscr{T}$ by 10.1. Let $\mathscr{C}(F, \pi)$ be the set of all such $(\Gamma, \phi, \{A\})$; we must show that $\mathscr{C}(F, \pi)$ is well-behaved. By 9.3, it suffices to show that for any countable sequence $(\Gamma_i, \phi_i, \mathscr{L}_i)$ ($i = 1, 2, \dots$) of members of $\mathscr{C}(F, \pi)$, there exist $j > i \ge 1$ and an inflation $\sigma$ of $\Gamma_i \cap \Sigma_2$ in $\Gamma_j$ such that
+
+\hspace*{12pt}$\bullet$ for each $v \in V(\Gamma_i \cap \Sigma_2), V(\sigma(v)) \subseteq V(\Gamma_j \cap \Sigma_2)$,
+
+\hspace*{12pt}$\bullet$ for each $e \in E(\Gamma_i \cap \Sigma_2), \sigma(e) \in E(\Gamma_j \cap \Sigma_2)$ and $\phi_i(e) \le \phi_j(\sigma(e))$,
+
+\hspace*{12pt}$\bullet$ for each $v \in \bar{\pi}, \sigma(v)$ contains $v$.
+
+Now by 10.1 $U(F)$ meets at most one cuff of $\Sigma_\chi$, and either $|U(F) \cap bd(\Sigma_\chi)| \le 1$ and $U(F) \subseteq \Sigma_\chi$, or $|U(F) \cap bd(\Sigma_\chi)| = 2$ and $U(F) \not\subseteq \Sigma_\chi$. Thus there are two fragments

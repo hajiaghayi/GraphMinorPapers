@@ -1,0 +1,23 @@
+\origpage{33}{GRAPH MINORS. XIV}
+\sectionhead{6. Rigidity}
+
+In this section we prove an assortment of lemmas about rigidity.
+
+\stmt
+(6.1) \textit{Let $H$ be a rigid drawing in a surface $\Sigma$, and let $\Sigma' \subseteq \Sigma$ be a surface, such that $\text{bd}(\Sigma') \cap U(H) \subseteq V(H)$. Suppose that for every closed disc $\Delta' \subseteq \Sigma$ with $\Delta' \cap \Sigma' = \text{bd}(\Delta') \subseteq \text{bd}(\Sigma')$ there is a circuit $C$ of $H$ with $U(C) \subseteq \Delta'$. Then $H \cap \Sigma'$ is a rigid drawing in $\Sigma'$.}
+
+\textit{Proof.} Let $F \subseteq \Sigma'$ be an O-arc with $F \cap U(H') \subseteq V(H')$ and $|F \cap V(H')| \le 2$, where $H' = H \cap \Sigma'$. Since $F \cap U(H') = F \cap U(H)$ and $H$ is rigid in $\Sigma$, there is a dial $\Delta \subseteq \Sigma$ for $F$. We claim that $\Delta \subseteq \Sigma'$. For if not then since $\text{bd}(\Delta) \subseteq \Sigma'$ it follows that there is a closed disc $\Delta' \subseteq \Delta$ with $\Delta' \cap \Sigma' = \text{bd}(\Delta') \subseteq \text{bd}(\Sigma')$, and hence there is a circuit $C$ of $H$ with $U(C) \subseteq \Delta' \subseteq \Delta$, a contradiction. Hence $\Delta \subseteq \Sigma'$, and so $H'$ is rigid in $\Sigma'$, as required. $\square$
+
+A subset $X \subseteq \Sigma$ is \textit{simply-connected} if $X$ is arc-wise connected and every O-arc $F \subseteq X$ bounds a closed disc $\Delta \subseteq X$.
+
+\stmt
+(6.2) \textit{Let $H$ be a rigid drawing in a surface $\Sigma$. Let $v \in V(H)$, and let the regions of $H$ incident with $v$ be $r_1, \dots, r_k$, enumerated in the cyclic order of their occurrence around $v$. Then $r_1, \dots, r_k$ are all distinct. Consequently $\bar{r}$ is simply-connected for every region $r$ of $H$.}
+
+\textit{Proof.} Suppose that $r_i = r_j$ where $1 \le i < j \le k$. Then there is an O-arc $F \subseteq r_i \cup \{v\}$ such that no closed disc $\Delta \subseteq \Sigma$ bounded by $F$ has $E(H \cap \Delta) = \emptyset$, contrary to the rigidity of $H$. Thus $r_1, \dots, r_k$ are all distinct. Hence no vertex ``occurs twice'' on the boundary of one region $r$, and hence to show that $\bar{r}$ is simply-connected it suffices to show that $r$ is simply-connected. Let $F \subseteq r$ be an O-arc. Then $F \cap U(H) = \emptyset$, and so there is a closed disc $\Delta \subseteq \Sigma$ bounded by $F$ with $\Delta \cap U(H) = \emptyset$, since $H$ is rigid. Then $\Delta \subseteq r$; and so $r$ is simply-connected, as required. $\square$
+
+\stmt
+(6.3) \textit{Let $H$ be a rigid drawing in a surface $\Sigma$, and let $\Lambda \subseteq \Sigma$ be an open disc with $\text{bd}(\Lambda) \subseteq U(H)$ such that $\text{bd}(\Lambda)$ is an O-arc. Suppose that $\bar{r} \cap \bar{\Lambda}$ is null or connected for every region $r$ of $H$ with $r \cap \Lambda = \emptyset$. Then $H \cap (\Sigma - \Lambda)$ is a rigid drawing in $\Sigma$.}
+
+\textit{Proof.} Let $H' = H \cap (\Sigma - \Lambda)$, and $C$ be the circuit $H \cap \text{bd}(\Lambda)$. Let $F \subseteq \Sigma$ be an O-arc with $F \cap U(H') \subseteq V(H')$ and $|F \cap V(H')| \le 2$. We must prove that there is a dial for $F, H'$.
+
+By (6.1), $H'$ is a rigid drawing in $\Sigma - \Lambda$, and so we may assume that $F \not\subseteq \Sigma - \Lambda$, that is, $F \cap \Lambda \ne \emptyset$. If $F \subseteq \bar{\Lambda}$ then the disc in $\bar{\Lambda}$ bounded by $F$ is a dial for $F, H'$ and so we may assume that $F \not\subseteq \bar{\Lambda}$. Since $|F \cap V(H')| \le 2$ it follows that $|F \cap V(H')| = 2$, $F \cap V(H') = \{v_1, v_2\}$, say,

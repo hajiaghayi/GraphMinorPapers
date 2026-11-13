@@ -1,0 +1,25 @@
+\origpage{198}{ROBERTSON AND SEYMOUR}
+\stmt
+(12.2) \textit{Let $\mathscr{T}$ be a tangle of order $>4p+9$ in a hypergraph $G$, and let $\pi = (\Sigma, \Gamma, \alpha, \beta, \gamma)$ be a true, $(2p+7)$-redundant, $\mathscr{T}$-central portrayal of $G$, with warp $\le p$. Then for every clique $K$ of $G$, either}
+
+\hspace*{12pt}(i) \textit{there is a disc $\Delta \subseteq \Sigma$ such that $\alpha(\Delta)$ is small, $K \subseteq V(\alpha(\Delta))$, and $bd(\Delta)$ is a $\Gamma$-normal $O$-arc with $|bd(\Delta) \cap N(\Gamma)| \le 3$, or}
+
+\hspace*{12pt}(ii) $K \subseteq V(\alpha(c))$ \textit{for some $c \in C(\Gamma)$.}
+
+\textit{Proof.} By an arc of $\Gamma$ we mean a component of $bd(\bar{c}) - \tilde{c}$ for some cell $c$. Each arc is homeomorphic to the open interval $(0, 1)$, and the arcs of $\Gamma$ together with $N(\Gamma)$ yield a drawing of a graph in $\Sigma$, which we denote by $H$.
+
+\hspace*{12pt}(1) \textit{If for each $x \in K$ there is a node $n$ with $x = \gamma(n)$ then theorem holds.}
+
+\textit{Subproof.} Let $M = \{n \in N(\Gamma) \colon \gamma(n) \in K\}$. Then every two members of $M$ are adjacent in $H$. If $|K| \le 2$ the result is clear, and we may assume therefore that $|M| \ge 3$. By (8.5), for every circuit $C$ of $H$ of length 3, there is a disc $\Delta(C) \subseteq \Sigma$ with boundary the drawing of $C$, such that $\alpha(\Delta(C))$ is small. Choose a circuit $C$ of $H$ of length 3 with $V(C) \subseteq M$ such that $\Delta(C)$ is maximal. We claim that $M \subseteq \Delta(C)$. For suppose that $m_0 \in M - \Delta(C)$. Let $V(C) = \{m_1, m_2, m_3\}$. Let $e_i$ be an edge of $H$ joining $m_0$ and $m_i$ ($i = 1, 2, 3$). Let $C_i$ be the circuit of $H$ with vertex set $\{m_0\} \cup (\{m_1, m_2, m_3\} - \{m_i\})$, with one edge in common with $C$ and the other two from $\{e_1, e_2, e_3\}$ appropriately. From our choice of $C$, none of the discs $\Delta(C_1), \Delta(C_2), \Delta(C_3)$ includes $\Delta(C)$; but then $\Delta(C) \cup \Delta(C_1) \cup \Delta(C_2) \cup \Delta(C_3)$ is a sphere, and hence equals $\Sigma$, which is easily seen to be impossible since $\alpha(\Delta(C))$ and each $\alpha(\Delta(C_i))$ are small. We deduce that $M \subseteq \Delta(C)$, and hence the theorem is satisfied. This proves (1).
+
+Next, we claim
+
+\hspace*{12pt}(2) \textit{If there exists $x \in K$ and a cell $c$ with $x \in V(\alpha(c)) - V(\alpha(-c))$ then the theorem holds.}
+
+\textit{Subproof.} If $y \in K$, there is a cell $c'$ with $x, y \in V(\alpha(c'))$, and hence $c' = c$, since $x \notin V(\alpha(-c))$. Thus $K \subseteq V(\alpha(c))$. This proves (2).
+
+From (1), we may assume that there exists $x \in K$ such that $\gamma(n) \ne x$ for $n \in N(\Gamma)$. We may choose a cell $d$ with $x \in V(\alpha(d))$; and by (2), we may assume that $x \in V(\alpha(d) \cap \alpha(-d))$. Since $x \notin \gamma(\bar{d})$ it follows that $d$ is a border cell and $x \in \beta(n)$ for some end $n$ of $d$. Let $d$ border a cuff $\Theta$. For every $y \in K$ there is a cell $c$ with $x, y \in V(\alpha(c))$; and hence $c$ borders $\Theta$. We deduce that
+\begin{equation*}
+K \subseteq \bigcup (V(\alpha(c)) \colon c \in C(\Gamma) \text{ bordering } \Theta)
+\end{equation*}
+and the theorem follows from (12.1). $\square$

@@ -1,0 +1,27 @@
+\origpage{176}{ROBERTSON AND SEYMOUR}
+We may assume that $|\beta'(n)| \le p - 1$ for each node $n$ bordering $\Theta$, for otherwise the theorem holds (since $|\beta(n)| \le p$). From the definition of warp, there is a cell $c$ bordering $\Theta$ with ends $n_1, n_2$ such that $|\beta'(n_1 +)| = |\beta'(n_2 +)| = p$ and there is a linkage $\{P_1, \dots, P_p\}$ in $\alpha'(c)$ from $\beta'(n_1 +)$ to $\beta'(n_2 +)$ which does not pair $\gamma'(n_1)$ with $\gamma'(n_2)$. In particular, $p \ge 2$, and $n_1, n_2 \in dom(\gamma')$, and so $n_1, n_2 \in dom(\gamma)$ and $\gamma(n_1), \gamma(n_2) \notin V(A)$. Moreover,
+\begin{equation*}
+p = |\beta'(n_1 +)| = 1 + |\beta(n_1) - V(A)|
+\end{equation*}
+and so
+\begin{equation*}
+|\beta(n_1) - V(A)| = |\beta(n_2) - V(A)| = p - 1.
+\end{equation*}
+We claim that for $1 \le i \le p$, $P_i$ is a path of $(B/Z)^*$. For it is certainly a path of $(G/Z)^*$, and it meets $V(B/Z)$ since it meets $\beta'(n_1 +) = \beta(n_1 +) - V(A)$; but $(A/Z, B/Z)$ is a separation of $G/Z$ of order 0 and $P_i$ is connected, and so $P_i \subseteq (B/Z)^*$ as claimed.
+
+Suppose that there is a path $P_{p+1}$ of $(\alpha(c) \cap A)^*$ between $\beta(n_1)$ and $\beta(n_2)$. Then $\{P_1, \dots, P_{p+1}\}$ is a linkage in $\alpha(c)$ from $\beta(n_1 +)$ to $\beta(n_2 +)$ violating the warp condition, a contradiction. Thus there is no such $P_{p+1}$, and the result follows. $\square$
+
+\stmt
+(6.6) \textit{Let $\pi = (\Sigma, \Gamma, \alpha, \beta, \gamma)$ be a $z$-redundant $\mathscr{T}$-central portrayal of $G$ with $warp \le p$ and $ord(\mathscr{T}) > z + 2p + 2$, and let $\Theta$ be a cuff. There is no $X \subseteq V(G)$ with $|X| \le z/3$ such that $X \cap \beta(n+) \ne \emptyset$ for every node $n$ bordering $\Theta$.}
+
+\textit{Proof.} Let $\pi$ have warp $q \ge 1$ at $\Theta$, and fix an orientation of $\Theta$. From \textbf{(P7)} we have immediately:
+
+\hspace*{12pt}(1) \textit{For each $x \in X$ there is at most one $n \in N(\Gamma) \cap \Theta$ such that $x \in \beta(n+)$ and $x \notin \beta(n'+)$ where $n'$ is the node of $N(\Gamma)$ bordering $\Theta$ immediately following $n$.}
+
+We call $n$ as in (1) the \textit{terminal} of $x$. For each $x \in X$, if there is a terminal $n$ of $X$ with $n \in dom(\gamma)$, let $y(x) = \gamma(n)$. (This is unique, by (1).) Otherwise, let $y(x) = x$. For each $x \in X$, if $x = \gamma(n)$ for some $n \in dom(\gamma)$ with $|\beta(n)| = q$, let $z(x) \in \beta(n)$. Otherwise, let $z(x) = x$. Let
+\begin{equation*}
+W = X \cup \{y(x), z(x) : x \in X\}.
+\end{equation*}
+\hspace*{12pt}(2) \textit{For each $n \in N(\Gamma) \cap \Theta$, if $|\beta(n)| = q$ then $W \cap \beta(n) \ne \emptyset$.}
+
+\textit{Subproof.} Let $x \in \beta(n+) \cap X$. We may assume that $x \notin \beta(n)$, and so $n \in dom(\gamma)$ and $x = \gamma(n)$. Consequently either $|\beta(n)| < q$ or $z(x) \subseteq \beta(n)$, as required.

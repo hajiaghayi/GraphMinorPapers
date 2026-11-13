@@ -1,0 +1,28 @@
+\origpage{30}{}
+\hspace*{12pt}(iii) \textit{there is a separation $(A, B)$ of order $< ord(\mathcal{T})$, and $\mathcal{T}$ contains every such separation.}
+
+\fix{We give the proof. Let $\theta = ord(\mathcal{T})$, let $X$ be as in (ii), and let $B_X$ be the subgraph of $G$ with $V(B_X) = (V(G) \setminus V(A)) \cup X$ and $E(B_X) = E(G) \setminus E(A)$. Every end of an edge of $G$ not in $A$ is in $V(G) \setminus V(A)$ or in $X$, so $B_X$ is a subgraph of $G$, and $(A, B_X)$ is a separation of $G$ of order $|X|$. If $(A, B)$ is any separation of $G$, then every vertex of $X$ is incident with an edge of $B$, and so $X \subseteq V(A \cap B)$ and $|X| \le |V(A \cap B)|$. Theorem (2.9)(ii) of [6] says that if $(A_1, B_1) \in \mathcal{T}$ and $(A_2, B_2)$ is a separation of $G$ of order $< \theta$ with $V(A_2) \subseteq V(A_1)$, then $(A_2, B_2) \in \mathcal{T}$. Taking $A_1 = A_2 = A$, it follows that if $(A, B_1) \in \mathcal{T}$, then every separation $(A, B)$ of $G$ of order $< \theta$ belongs to $\mathcal{T}$.}
+
+\fix{(i) $\Rightarrow$ (ii): Let $(A, B_1) \in \mathcal{T}$. Then $|X| \le |V(A \cap B_1)| < \theta$, and so $(A, B_X)$ is a separation of order $< \theta$, and it belongs to $\mathcal{T}$ by the last remark. (ii) $\Rightarrow$ (i) holds since $(A, B_X) \in \mathcal{T}$. (ii) $\Rightarrow$ (iii): $(A, B_X)$ is a separation of order $< \theta$, and every separation $(A, B)$ of order $< \theta$ belongs to $\mathcal{T}$ by the last remark applied with $B_1 = B_X$. (iii) $\Rightarrow$ (ii): Let $(A, B')$ be a separation of order $< \theta$. Then $|X| \le |V(A \cap B')| < \theta$, so $(A, B_X)$ is a separation of order $< \theta$, and it belongs to $\mathcal{T}$ by (iii).}\fixnote{fix:7.1-proof-added}{The paper omits the proof of (7.1). The argument above is the one used in the formalization.}
+
+If $\Gamma, F_1^*, \dots, F_r^*, H_1, \dots, H_r, \mu$ is a presentation of $G$ in $\Sigma$, and $\mathcal{T}$ is a tangle in $G$, we say that the presentation \textit{surrounds} $\mathcal{T}$ if $\mu(s)$ is small for every space $s \subseteq F_1^* \cup \dots \cup F_r^*$.
+
+If $\Gamma$ is a drawing in a surface $\Sigma$ such that $|V(\Gamma) \cap C| \ge 2$ for every cuff $C$, we define $\Gamma^+$ to be the drawing in $\hat{\Sigma}$ with $U(\Gamma^+) = U(\Gamma) \cup bd(\Sigma)$ and $V(\Gamma^+) = V(\Gamma)$.
+
+\textbf{7.2} \textit{Let $\theta \ge 1$ \fix{and $q \ge 1$}, and let $\Gamma, F_1^*, \dots, F_r^*, H_1, \dots, H_r, \mu$ be a presentation of a graph $G$ in a surface $\Sigma$, of depth $\le q$, and surrounding a tangle of order $\ge q\theta$. Then $\Gamma^+$ has a tangle of order $\ge \theta$.}\fixnote{fix:7.2}{As printed, (7.2) fails for $q = 0$, since then the hypothesis asks only for a tangle of order $\ge 0$. For example, take a presentation with $r = 0$ in a sphere, with $G$ a single vertex, and $\theta = 2$. Then $\Gamma^+ = G$ has no tangle of order 2. Every use of (7.2) in the paper has $q \ge 1$.}
+
+\textbf{Proof.} $\Gamma^+$ has the same vertex set as $\Gamma$, and its edges are the edges and spaces of $\Gamma$. Let $S(\Gamma)$ be the set of spaces of $\Gamma$. For any subgraph $A$ of $\Gamma^+$ we define $\sigma(A)$ to be the union of $A \cap \Gamma$ with all the graphs $\mu(v)$ ($v \in V(A) \cap bd(\Sigma)$) and $\mu(s)$ ($s \in E(A) \cap S(\Gamma)$).
+
+\hspace*{12pt}(1) \textit{If $(A, B)$ is a separation of $\Gamma^+$ then $(\sigma(A), \sigma(B))$ is a separation of $G$ of order $\le q|V(A \cap B)|$.}
+
+\textit{Subproof.} Clearly $\sigma(A) \cup \sigma(B) = G$. No edge of $G$ belongs to both $\sigma(A)$ and $\sigma(B)$, by (V1) and (V4), and so $(\sigma(A), \sigma(B))$ is a separation of $G$. We claim that
+\begin{equation*}
+V(\sigma(A) \cap \sigma(B)) \subseteq V(A \cap B) \cup \bigcup (\mu(u) : u \in V(A \cap B) \cap bd(\Sigma)).
+\end{equation*}
+For let $v \in V(\sigma(A) \cap \sigma(B)) \setminus V(A \cap B)$. Since $\sigma(A) \cap \Gamma = A$ and $\sigma(B) \cap \Gamma = B$, it follows that $v \notin V(\Gamma)$; let $v \in V(H_1)$ say. There exists $x$ such that $v \in V(\mu(x))$, and either $x \in V(A) \cap F_1^*$ or $x \in E(A) \cap S(\Gamma)$ and $x \subseteq F_1^*$; and similarly there exists $y$ (with $B$ instead of $A$). Choose $x$ and $y$ as close together in $F_1^*$ as possible, in the natural sense. If $z$ lies in $F_1^*$ between $x$ and $y$, and $z \in V(\Gamma) \cup S(\Gamma)$, and $z \ne x, y$, then $z$ belongs to one of $A, B$, and $v \in V(\mu(z))$ by (V3) and (V4), contrary to our choice of $x$ and $y$. If $x \in V(\Gamma)$ and $y \in S(\Gamma)$ with one end $x$, then $x \in V(A \cap B)$ and $v \in V(\mu(x))$ as required. Finally, if $x = y \in V(\Gamma)$ then again $x \in V(A \cap B)$ and $v \in V(\mu(x))$; while if $x = y \in S(\Gamma)$ then $u \in V(A \cap B)$ and $v \in V(\mu(u))$, where $u$ is one end of $x$. This proves our claim that
+\begin{equation*}
+V(\sigma(A) \cap \sigma(B)) \subseteq V(A \cap B) \cup \bigcup (\mu(u) : u \in V(A \cap B) \cap bd(\Sigma)).
+\end{equation*}
+Consequently, $|V(\sigma(A) \cap \sigma(B))| \le q|V(A \cap B)|$. This proves (1).
+
+Let $\mathcal{T}$ be a tangle in $G$ of order $\ge q\theta$, surrounded by the presentation. Let $\mathcal{T}'$ be the set of all separations $(A, B)$ of $\Gamma^+$ of order $< \theta$ such that $(\sigma(A), \sigma(B)) \in \mathcal{T}$. We claim that $\mathcal{T}'$ is a tangle in $\Gamma^+$ of order $\theta$. Let us verify the three axioms for a tangle.

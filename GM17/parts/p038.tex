@@ -1,0 +1,23 @@
+\origpage{199}{GRAPH MINORS, XVII}
+If $G$ is a hypergraph and $X \subseteq E(G)$, we denote the subhypergraph $(V(G), E(G) - X)$ by $G \setminus X$. If $\mathscr{T}'$ is a tangle in a subhypergraph $G'$ of $G$, let $\mathscr{T}$ be the set of all separations $(A, B)$ of $G$ of order less then the order of $\mathscr{T}'$, such that $(A \cap G', B \cap G') \in \mathscr{T}'$. Then $\mathscr{T}$ is clearly a tangle in $G$; we call it the \textit{tangle induced by} $\mathscr{T}'$.
+
+\stmt
+(12.3) \textit{Let $e$ be an edge of a hypergraph $G$, and let $K$ be the set of ends of $e$. Let $K$ be a clique of $G \setminus e$. Let $\mathscr{T}$ be a tangle in $G \setminus e$ of order $> 2p+8$, inducing a tangle $\mathscr{T}'$ in $G$. Let $\pi = (\Sigma, \Gamma, \alpha, \beta, \gamma)$ be a 6-redundant, $\mathscr{T}$-central portrayal of $G \setminus e$ with warp $\le p$. Let $c_0 \in C(\Gamma)$ with $K \subseteq V(\alpha(c_0))$. Define $\alpha'$ by}
+\begin{align*}
+\alpha'(c_0) &= (V(\alpha(c_0)), E(\alpha(c_0)) \cup \{e\}) \\
+\alpha'(c) &= \alpha(c) \qquad (c \in C(\Gamma) - \{c_0\}).
+\end{align*}
+\textit{Then $\pi' = (\Sigma, \Gamma, \alpha', \beta, \gamma)$ is a $\mathscr{T}'$-central portrayal of $G$, resembling $\pi$.}
+
+\textit{Proof.} Since $K \subseteq V(\alpha(c_0))$, $\pi'$ is a portrayal of $G$; and from definition of $\mathscr{T}$, $\alpha'(c_0)$ is small relative to $\mathscr{T}'$. Thus $\pi'$ is $\mathscr{T}'$-central. We suppose that $\pi'$ does not resemble $\pi$. Then $c_0$ borders a cuff $\Theta$, and the warp of $c_0$ in $\pi'$ is greater than $q$, the warp of $\pi$ at $\Theta$. Let $n_1, n_2$ be the ends of $c_0$. Then $|\beta(n_1 +)| = |\beta(n_2 +)| = q + 1$, and there is a linkage $\{P_0, \dots, P_q\}$ in $\alpha'(c_0)$ from $\beta(n_1 +)$ to $\beta(n_2 +)$ which does not pair $\gamma(n_1)$ with $\gamma(n_2)$. Since the warp of $\pi$ at $\Theta$ is $q$ it follows that $\{P_0, \dots, P_q\}$ is not a linkage in $\alpha(c_0)$, and so there is an edge $f$ of $P_0$ say with $f \notin E(\alpha(c_0)^*)$. Let $f$ have ends $v_1, v_2$. Since $f \in E(\alpha'(c_0)^*)$ it follows that $v_1, v_2$ are ends of $e$, and so $f \in E((G \setminus e)^*)$. Hence there exists $c \ne c_0$ such that $f \in E(\alpha(c)^*)$. Since $v_1, v_2 \in V(\alpha(c))$ it follows that
+\begin{equation*}
+v_1, v_2 \in V(\alpha(c_0) \cap \alpha(-c_0)) = \beta(n_1 +) \cup \beta(n_2 +).
+\end{equation*}
+But since $P_0, \dots, P_q$ are vertex-disjoint it follows that no internal vertex of $P_0$ is in $\beta(n_1 +) \cup \beta(n_2 +)$; and so $P_0$ has ends $v_1, v_2$ and $v_i \in \beta(n_i +)$ ($i = 1, 2$). Since $\{P_0, \dots, P_q\}$ does not pair $\gamma(n_1)$ with $\gamma(n_2)$ and it pairs $v_1$ with $v_2$, we may assume that $v_1 \ne \gamma(n_1)$, and so $v_1 \in \beta(n_1)$. Consequently $c$ borders $\Theta$.
+
+\hspace*{12pt}(1) $\{v_1, v_2\} \cap \beta(n +) \ne \emptyset$ \textit{for every} $n \in N(\Gamma) \cap \Theta$.
+
+\textit{Subproof.} Let $n \in N(\Gamma) \cap \Theta$; we may assume that $n, n_1, n_2, c$ are in order. Since $v_1 \in V(\alpha(c) \cap \alpha(-c))$, there is an end $n_3$ of $c$ such that $v_1 \in \beta(n_3 +)$. Then from (P7)
+\begin{equation*}
+v_1 \in \beta(n_1 +) \cap \beta(n_3 +) \subseteq \beta(n_2 +) \cup \beta(n +).
+\end{equation*}

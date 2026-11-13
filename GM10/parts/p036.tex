@@ -1,0 +1,17 @@
+\origpage{188}{ROBERTSON AND SEYMOUR}
+Then the design of $t$ in $(T, \tau)$ equals the design of $t$ in $(T_i, \tau_i)$, and hence this design belongs to $\mathscr{S}'$. Secondly, let $1 \le i \le k$ and let $t = t_i$; the design of $t$ in $(T, \tau)$ is the $Z_i$-extension of the design of $t$ in $(T_i, \tau_i)$ and hence also belongs to $\mathscr{S}'$. Finally, the design of $t_0$ in $(T, \tau)$ is $(\tau(t_0), \{Z_i: 1 \le i \le k\})$ and its $Z$-extension is $(\tau(t_0), \{Z_i: 1 \le i \le k\} \cup \{Z\})$. But these designs are both $|Z|$-enlargements of
+\begin{equation*}
+(G \cap B_1 \cap \dots \cap B_k, \{V(A_i \cap B_i): 1 \le i \le k\}) \in \mathscr{S},
+\end{equation*}
+and so they both belong to $\mathscr{S}^{3\theta - 2} \subseteq \mathscr{S}'$, as required.
+
+Thus, we have proved that the result holds for $G, Z$ when $|Z| = 3\theta - 2$. Now let $Z \subseteq V(G)$ with $|Z| \le 3\theta - 2$. If $|V(G)| < 3\theta - 2$ then $(G, \{Z\}) \in \mathscr{R}_{3\theta - 3} \subseteq \mathscr{S}'$, and so the desired tree-decomposition $(T, \tau)$ exists with $T$ a 1-vertex tree. We may assume then that $|V(G)| \ge 3\theta - 2$. Choose $Z' \subseteq V(G)$ with $Z \subseteq Z'$ and $|Z'| = 3\theta - 2$. As we have seen above, the result holds for $G, Z'$, and so there is a tree-decomposition $(T_1, \tau_1)$ of $G$ over $\mathscr{S}'$, such that for some $t_1 \in V(T_1)$, $Z' \subseteq V(\tau_1(t_1))$ and $\mathscr{S}'$ contains the $Z'$-extension of the design of $t_1$ in $(T_1, \tau_1)$. Take a new vertex $t_0$, and let $T$ be the tree with vertex set $V(T_1) \cup \{t_0\}$, where $T \setminus t_0 = T_1$ and $t_0$ is adjacent to $t_1$. Let $\tau(t_0)$ be the hypergraph with vertex set $Z'$ and no edges, and for $t \in V(T_1)$, let $\tau(t) = \tau_1(t)$. Then $(T, \tau)$ is a tree-decomposition of $G$. For $t \in V(T)$ with $t \ne t_0, t_1$, the design of $t$ in $(T, \tau)$ equals the design of $t$ in $(T_1, \tau_1)$ and hence belongs to $\mathscr{S}'$. The design of $t_1$ in $(T, \tau)$ is the $Z'$-extension of the design of $t_1$ in $(T_1, \tau_1)$ and hence belongs to $\mathscr{S}'$. Finally, the design of $t_0$ in $(T, \tau)$ is $(\tau(t_0), \{Z'\})$, and the $Z$-extension of this is $(\tau(t_0), \{Z, Z'\})$, and both of these belong to $\mathscr{R}_{3\theta - 2} \subseteq \mathscr{S}'$. This completes the proof. $\square$
+
+We remark that in essence (11.1) generalizes (5.2). For let $\mathscr{S} = \emptyset$. Then it follows from (11.1) that if $G$ is a hypergraph with no tangle of order $\theta$ (and so $\mathscr{S}$ is $\theta$-pervasive) then $G$ has a tree-decomposition over $\mathscr{R}_{4\theta - 3}$, and hence $\omega(G) \le 4\theta - 4$; in other words, $\omega(G) \le 4\theta(G)$. Apart from the size of the multiplicative constant, this is the main part of (5.2).
+
+\sectionhead{12. Tangles and Matroids}
+
+Finally, let us discuss some matroidal aspects of tangles. Let $\mathscr{T}$ be a tangle in a hypergraph $G$, of order $\theta$. For $X \subseteq V(G)$, let us define $r(X)$ to be the least order of a separation $(A, B) \in \mathscr{T}$ with $X \subseteq V(A)$, if one exists, and $\theta$ otherwise.
+
+\stmt
+(12.1) \textit{$r$ is the rank function of a matroid on $V(G)$.}

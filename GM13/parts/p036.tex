@@ -1,0 +1,22 @@
+\origpage{100}{ROBERTSON AND SEYMOUR}
+\noindent is the only leaf of $S_j$ inside $H_i$ or in its perimeter. Let $u \ne v$ be a leaf of $S_j$. We have already seen that $u$ is outside $H_i$, and hence the path of $S_j$ between $u$ and $v$ uses $e$. This proves (1).
+
+We deduce
+
+\hspace*{12pt}(2) \textit{For $1 \le j \le t$, at most one vertex of $S_j$ has valency $\ge 3$ in $S_j$; and if $S_j$ has $\ge 3$ leaves they are all essential, and if $S_j$ has two leaves then at least one is essential.}
+
+\textit{Subproof.} The first claim follows from (1) applied to an edge $e$ of the path of $S_j$ between two vertices of valency $\ge 3$. The second and third claims also follow from (1).
+
+\hspace*{12pt}(3) \textit{If $r \ge m$ then any vertex of $F$ of valency $\ge l$ (in $F$) is the center of an $(l, m)$-star in $G$ over $H$.}
+
+\textit{Subproof.} If $v$ is such a vertex and $v \notin V(H)$ then $v$ is the unique vertex of valency $\ge 3$ of some $S_j$ by (2), and we may choose the desired $(l, m)$-star from $S_j$. If $v \in V(H)$, then $v$ is a leaf of at least $l$ different $S_j$'s, each of which is an $H$-path from $v$ to some essential vertex, by (2); thus the union of $l$ of these $S_j$'s yields the desired $(l, m)$-star.
+
+By (3) we may assume that every vertex of $F$ has valency $< l$. It follows that
+
+\hspace*{12pt}(4) \textit{For any $n \ge 0$, if $k \ge n(l-1)^2$, then there exist $n$ mutually vertex-disjoint $H$-paths $Q_1, \dots, Q_n \subseteq F$ with ends $s_i, t_i$ $(1 \le i \le n)$, and we may renumber $H_1, \dots, H_k$ so that $s_i$ is inside $H_i$, $t_i$ is outside $H_i$, and no other $s_j$ or $t_j$ is inside $H_i$ $(1 \le i \le n)$.}
+
+\textit{Subproof.} By (2), for $1 \le j \le k$ at most one vertex of $S_j$ belongs to $S_{j'}$ for some $j' \ne j$, and that vertex only belongs to $\le l-2$ $S_{j'}$'s for $j' \ne j$. Thus $V(S_j \cap S_{j'}) \ne \emptyset$ for $\le l-2$ values of $j' \ne j$. Choose $J \subseteq \{1, \dots, t\}$ maximal such that $S_j \cap S_{j'}$ is null for all distinct $j, j' \in J$. Since each $S_{j'}$ ($j' \notin J$) meets $S_j$ for some $j \in J$, and any $S_j$ ($j \in J$) meets $\le l-2$ $S_{j'}$'s ($j' \notin J$), it follows that $t - |J| \le (l-2)|J|$, that is, $|J| \ge t(l-1)^{-1}$. Now each $S_j$ ($1 \le j \le t$) has $\le l-1$ leaves, and each $H_i$ ($1 \le i \le k$) contains a leaf of some $S_j$, and so $(l-1)t \ge k$. Thus $|J| \ge k(l-1)^{-2} \ge n$. For each $j \in J$ let $Q_j \subseteq S_j$ be an $H$-path with one end an essential vertex $v$, and the other end outside $H_i$, where $v$ is inside $H_i$; then the claim follows.
+
+Later we shall specify five numbers $r_1, n_1, n_2, n_3, r$ depending on $l, m, p$ but not on $G$. Then $n$ will be defined in terms of $r_1, n_1, n_2, n_3, r$ and $k$ will be determined by (4).
+
+\hspace*{12pt}(5) \textit{For all sufficiently large $r_1$ and $n_1$, if there exists $I \subseteq \{1, \dots, n\}$ with $|I| = n_1$ such that $d(s_i, t_i) \ge r_1$ for $i \in I$ and $d(t_i, t_{i'}) \ge r$, for distinct $i, i' \in I$, then $G$ has a $K_p$-minor.}

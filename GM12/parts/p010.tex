@@ -1,0 +1,38 @@
+\origpage{249}{GRAPH MINORS. XII}
+Let $\mathscr{T}$ be a tangle in a graph $G$, and let $L$ be a graph. We say that $\mathscr{T}$ \textit{controls an $L$ minor of $G$} if there is a function $\alpha$ with domain $V(L) \cup E(L)$ such that
+
+\hspace*{12pt}(i) for each $v \in V(L)$, $\alpha(v)$ is a non-null connected subgraph of $G$, and $\alpha(u), \alpha(v)$ are disjoint for all distinct $u, v \in V(L)$
+
+\hspace*{12pt}(ii) for each $e \in E(L)$ with distinct ends $u, v$, $\alpha(e)$ is an edge of $G$ with ends in $V(\alpha(u))$ and in $V(\alpha(v))$
+
+\hspace*{12pt}(iii) for each loop $e \in E(L)$ with end $v$, $\alpha(e)$ is an edge of $G$ not in $E(\alpha(v))$ with both ends in $V(\alpha(v))$
+
+\hspace*{12pt}(iv) for distinct $e, f \in E(L)$, $\alpha(e) \ne \alpha(f)$
+
+\hspace*{12pt}(v) $\mathscr{T}$ has order $\ge |V(L)|$, and there is no $(A, B) \in \mathscr{T}$ of order $< |V(L)|$ such that $V(\alpha(v)) \subseteq V(A)$ for some $v \in V(L)$.
+
+(The quantity $|V(L)|$ in (v) is somewhat arbitrary, but will do for our applications. We remark that it could be replaced by any other increasing function of $L$, and (4.3)--(4.5) would remain true.)
+
+We observe the following.
+
+\stmt
+(4.2) \textit{If $L$ is isomorphic to a minor of $L'$, and $\mathscr{T}$ is a tangle in a graph $G$, and $\mathscr{T}$ controls an $L'$ minor of $G$ then $\mathscr{T}$ controls an $L$ minor of $G$.}
+
+The proof is clear\del{, and we omit it}\fix{, and we give it here}.
+
+\fix{Let $\alpha$ be a function showing that $\mathscr{T}$ controls an $L'$ minor of $G$. First, for each edge $f$ of $L'$, the edge $\alpha(f)$ belongs to no $\alpha(w)$ $(w \in V(L'))$. For suppose that $\alpha(f) \in E(\alpha(w))$. Then both ends of $\alpha(f)$ are in $V(\alpha(w))$. If $f$ has distinct ends $u, u'$, then by (ii) $\alpha(w)$ meets both $\alpha(u)$ and $\alpha(u')$, and so $w = u$ and $w = u'$ by (i), which is impossible. If $f$ is a loop with end $u$, then by (iii) $\alpha(w)$ meets $\alpha(u)$, and so $w = u$ by (i), contrary to (iii).
+
+Since $L$ is isomorphic to a minor of $L'$, there are mutually disjoint non-empty sets $Y(v) \subseteq V(L')$ $(v \in V(L))$, and distinct edges $\eta(e)$ of $L'$ $(e \in E(L))$, with the following properties. If $e \in E(L)$ has distinct ends $u, v$, then $\eta(e)$ has one end in $Y(u)$ and the other in $Y(v)$. If $e \in E(L)$ is a loop with end $v$, then both ends of $\eta(e)$ are in $Y(v)$. For each $v \in V(L)$, the subgraph $M(v)$ of $L'$ with vertex set $Y(v)$ and edge set all edges of $L'$ with both ends in $Y(v)$ which are not of the form $\eta(e)$ is connected. (Take for $Y(v)$ the set of vertices of $L'$ contracted into $v$, and for $\eta(e)$ the edge of $L'$ that becomes $e$.)
+
+For $v \in V(L)$, let $\alpha'(v)$ be the union of the subgraphs $\alpha(w)$ $(w \in Y(v))$, together with the edges $\alpha(f)$ $(f \in E(M(v)))$ and their ends. For $e \in E(L)$, let $\alpha'(e) = \alpha(\eta(e))$. We claim that $\alpha'$ shows that $\mathscr{T}$ controls an $L$ minor of $G$. For (i), $\alpha'(v)$ is non-null, and it is connected, since each $\alpha(w)$ is connected, $M(v)$ is connected, and for each edge $f$ of $M(v)$ the edge $\alpha(f)$ joins $\alpha(w)$ and $\alpha(w')$, where $w, w'$ are the ends of $f$, by (ii) and (iii) for $\alpha$. For distinct $u, v \in V(L)$, the subgraphs $\alpha'(u)$ and $\alpha'(v)$ are disjoint, since $Y(u) \cap Y(v) = \emptyset$, and since the subgraphs $\alpha(w)$ $(w \in V(L'))$ are mutually disjoint and include all ends of the edges $\alpha(f)$. For (ii), let $e$ have distinct ends $u, v$. Then $\eta(e)$ has ends $w \in Y(u)$ and $w' \in Y(v)$, and so by (ii) for $\alpha$, $\alpha'(e)$ has ends in $V(\alpha(w)) \subseteq V(\alpha'(u))$ and in $V(\alpha(w')) \subseteq V(\alpha'(v))$. For (iii), let $e$ be a loop with end $v$. Both ends of $\eta(e)$ are in $Y(v)$, and so by (ii) and (iii) for $\alpha$, both ends of $\alpha'(e)$ are in $V(\alpha'(v))$. Moreover $\alpha'(e) \notin E(\alpha'(v))$, because $\alpha'(e)$ belongs to no $\alpha(w)$, as we saw, and $\alpha'(e) \ne \alpha(f)$ for $f \in E(M(v))$ by (iv) for $\alpha$, since $f \ne \eta(e)$. For (iv), if $e, e' \in E(L)$ are distinct, then $\eta(e) \ne \eta(e')$, and so $\alpha'(e) \ne \alpha'(e')$ by (iv) for $\alpha$. For (v), the sets $Y(v)$ $(v \in V(L))$ are mutually disjoint and non-empty, and so $|V(L)| \le |V(L')|$. Hence $\mathscr{T}$ has order $\ge |V(L)|$, by (v) for $\alpha$. Let $(A, B) \in \mathscr{T}$ have order $< |V(L)|$, and suppose that $V(\alpha'(v)) \subseteq V(A)$ for some $v \in V(L)$. Choose $w \in Y(v)$. Then $V(\alpha(w)) \subseteq V(\alpha'(v)) \subseteq V(A)$, and $(A, B)$ has order $< |V(L')|$, contrary to (v) for $\alpha$. This proves (4.2).}\fixnote{fix:4.2-proof-added}{The paper omits this proof. The argument above is the one used in the formalization.}
+
+\stmt
+(4.3) \textit{For any connected surface $\Sigma$ and any graph $L$ which can be drawn in $\Sigma$, there is an integer $\theta \ge 1$ such that the following is true. Let $G$ be a graph, let $\Gamma$ be a subgraph of $G$ which is a 2-cell drawing in $\Sigma$, and let $\mathscr{T}$ be a respectful tangle in $\Gamma$ of order $\ge \theta$. Then the tangle in $G$ induced by $\mathscr{T}$ controls an $L$ minor of $G$.}
+
+\textit{Proof.} Choose a graph $L'$ which can be drawn in $\Sigma$, with a minor isomorphic to $L$, such that $L'$ is loopless and every vertex of $L'$ is incident with $\ge 2$ edges of $L'$. By (4.2), if the result holds for $L'$ then it holds for $L$. We may therefore assume that $L$ is loopless and every vertex of $L$ is incident with $\ge 2$ edges. Let $t = |E(L)|$ and choose $\theta_1 \ge 2 |V(L)|$ to satisfy (3.2) (with $z = 2t$). We claim that $\theta = 5 + t(\theta_1 + 7)$ satisfies (4.3). For let $G$, $\Gamma$, $\mathscr{T}$ be as in (4.3). It suffices to show that $\mathscr{T}$ controls an $L$ minor of $\Gamma$. Let $E(L) = \{e_1, \dots, e_t\}$.
+
+An edge $f$ of $G$ with ends $u, v$ is free if $u \ne v$ and $\{u, v\}$ is free. Let $g_1 \in E(\Gamma)$. By (1.2), there is an edge $g_2 \in E(\Gamma)$ such that $d(g_1, g_2) \ge \theta$. Let $P$ be a path of $\Gamma$ from $v_1$ to $v_2$, where $v_i$ is an end of $g_i$ ($i = 1, 2$).
+
+\hspace*{12pt}(1) \textit{For each $f \in E(P)$, if $d(g_1, f), d(g_2, f) \ge 2$ then $f$ is free.}
+
+\textit{Subproof.} Suppose that $f$ is not free. Let $f$ have ends $u, v$. Certainly $u \ne v$ since $P$ is a path, and so there exists $(A, B) \in \mathscr{T}$ of order $\le 1$ with

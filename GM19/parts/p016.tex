@@ -1,0 +1,23 @@
+\origpage{340}{N. Robertson, P.D. Seymour / Journal of Combinatorial Theory, Series B 90 (2004) 325--385}
+\noindent \textit{inflation of $\Gamma_1$ in $\Gamma_2$ respecting $\Phi$. Then there is a linear inflation $\sigma'$ of $\Gamma_1$ in $\Gamma_2$ respecting $\Phi$, such that $\sigma(e) = \sigma'(e)$ for all $e \in E(\Gamma_1)$, and $\sigma(v) \subseteq \sigma'(v)$ for all $v \in V(\Gamma_1)$.}
+
+\textbf{Proof of 6.1 (Assuming 6.2).} Choose $n$ to satisfy 6.2, taking $\Sigma = \Sigma_\chi$. Choose $h \ge 1$ such that $rep(\Gamma_i) \ge n$ for all $i \ge h$ (this is possible by 5.5). Suppose that $j > i \ge h$ and $\sigma$ is an inflation of $(\Gamma_i, \phi_i)$ in $(\Gamma_j, \phi_j)$. Then $\sigma$ is an inflation of $\Gamma_i$ in $\Gamma_j$ respecting $\Phi_\chi$, and $\phi_i \le \phi_j \circ \sigma$. From 6.2, there is a linear inflation $\sigma'$ of $\Gamma_i$ in $\Gamma_j$ respecting $\Phi_\chi$ with $\sigma(e) = \sigma'(e)$ for all $e \in E(\Gamma_1)$, and hence with $\phi_i \le \phi_j \circ \sigma'$. But then $\sigma'$ is a linear inflation of $(\Gamma_i, \phi_i)$ in $(\Gamma_j, \phi_j)$, a contradiction. Thus there are no such $i, j, \sigma$, as required. $\square$
+
+The proof of 6.2 will require several lemmas, however. If $G$ is a drawing in a surface $\Sigma$, not a sphere, we define $rep(G)$ to be the minimum of $|F \cap V(G)|$, taken over all non-null-homotopic $G$-normal $O$-arcs $F$ in $\Sigma$. If $\Sigma$ is a sphere, we set $rep(G) = \infty$. If $G, G'$ are drawings in $\Sigma, \Sigma'$ respectively we say that $G, G'$ are \textit{isomorphic} if there is a bijection $\beta : V(G) \cup E(G) \to V(G') \cup E(G')$, mapping vertices to vertices and edges to edges and preserving incidence. (This is the usual definition of isomorphism for non-embedded graphs, and it takes no note of the way the graphs are drawn in the surface.) An \textit{enlargement} of $G$ in $G'$ is a function $\sigma$ with domain $V(G) \cup E(G)$, such that
+
+\hspace*{12pt}$\bullet$ for each $e \in E(G)$, $\sigma(e) \in E(G')$, and if $e_1, e_2 \in E(G)$ are distinct then $\sigma(e_1) \ne \sigma(e_2)$,
+
+\hspace*{12pt}$\bullet$ for each $v \in V(G)$, $\sigma(v)$ is a non-null connected subdrawing of $G'$, and if $v_1, v_2 \in V(G)$ are distinct then $\sigma(v_1), \sigma(v_2)$ are disjoint,
+
+\hspace*{12pt}$\bullet$ for each $e \in E(G)$ and $v \in V(G)$, $\sigma(v)$ contains an end of $\sigma(e)$ if and only if $v$ is an end of $e$.
+
+(Thus, there is an enlargement of $G$ in $G'$ if and only if $G$ is isomorphic to a minor of $G'$, with the usual definition of ``minor'' for graphs.)
+
+\textbf{6.3.} \textit{Let $G, G'$ be drawings in a surface $\Sigma$ with $bd(\Sigma) = \emptyset$, such that there is an enlargement of $G$ in $G'$. Then $G$ is isomorphic to a drawing $H$ in $\Sigma$ with $rep(H) \le rep(G')$.}
+
+\textbf{Proof.} Let $\sigma$ be an enlargement of $G$ in $G'$. We may assume that $\sigma(v)$ is a tree, for each $v \in V(G)$. Let $H'$ be the subdrawing of $G'$ with
+\begin{align*}
+V(H') &= \bigcup (V(\sigma(v)) : v \in V(G)), \\
+E(H') &= \bigcup (E(\sigma(v)) : v \in V(G)) \cup \{\sigma(e) : e \in E(G)\}.
+\end{align*}
+Then $rep(H') \le rep(G')$. Let $\Sigma'$ be obtained from $\Sigma$ by identifying all the elements of $U(\sigma(v))$, for each $v \in V(G)$, and let $H$ be the image of $H'$ under this identification. Since each $\sigma(v)$ is a tree it follows that $\Sigma' \cong \Sigma$; and since $\sigma$ is an enlargement of $G$ it follows that $H$ is isomorphic to $G$. But $rep(H) \le rep(H')$, and so $rep(H) \le rep(G')$, as required. $\square$

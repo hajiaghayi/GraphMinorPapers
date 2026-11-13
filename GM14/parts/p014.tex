@@ -1,0 +1,29 @@
+\origpage{36}{ROBERTSON AND SEYMOUR}
+\stmt
+(7.2) \textit{Let $H$ be a 2-cell drawing in $\Sigma$ with $E(H) \ne \emptyset$, and let $\mathscr{T}$ be a respectful tangle in $H$. Let $K$ be a radial drawing of $H$, and let $(A, B) \in \mathscr{T}$. Then for every edge $e$ of $A$ there is a circuit $D$ of $K$ with $V(D) \cap V(H) \subseteq V(A \cap B)$ and with $e \subseteq ins(D)$.}
+
+We deduce
+
+\stmt
+(7.3) \textit{Let $H$ be a 2-cell drawing in $\Sigma$ with $E(H) \ne \emptyset$, and let $\mathscr{T}$ be a respectful tangle in $H$ of order $\theta$, with metric $d$. Let $z \in A(H)$, and let $(A, B) \in \mathscr{T}$ with $E(B) \ne \{z\}$. Then there exists $e \in E(B)$ with $d(z, e) \ge \theta - |V(A \cap B)|$.}
+
+\textit{Proof.} We proceed by induction on $|V(B)|$. If there exists $v \in V(A \cap B)$ such that $(A, B \setminus v)$ is a separation of $G$, then $(A, B \setminus v) \in \mathscr{T}$ and the result follows from the inductive hypothesis. We may assume then that for every $v \in V(A \cap B)$ there is an edge of $B$ incident with $v$.
+
+If $|E(H)| = 1$ then $\theta = 1$ and $B = H$, and $z \notin E(H)$ (since $E(B) \ne \{z\}$), and so $d(z, e) \ge 1 \ge \theta - |V(A \cap B)|$ where $E(H) = \{e\}$, as required. We assume then that $|E(H)| \ge 2$. By (7.1) there exists $e \in E(H)$ with $d(z, e) = \theta$. If $e \in E(B)$ we are finished, and so we may assume that $e \in E(A)$. Let $K$ be a radial graph of $H$. By (7.2) there is a circuit $D$ of $K$ with $V(D) \cap V(H) \subseteq V(A \cap B)$ and which $e \subseteq ins(D)$. Choose $v \in V(D) \cap V(H)$. Then
+\begin{equation*}
+d(v, e) \le |V(D) \cap V(H)| \le |V(A \cap B)|
+\end{equation*}
+and so $d(z, v) \ge \theta - |V(A \cap B)|$. Since $v \in V(D) \cap V(H) \subseteq V(A \cap B)$, there is an edge $f$ of $B$ incident with $v$. If $z \ne f$, then $d(z, f) \ge d(z, v) \ge \theta - |V(A \cap B)|$, as required. If $z = f$, since $E(B) \ne \{z\}$ there exists $g \in E(B) - \{f\}$; and then $d(z, g) \ge \delm{1 \ge{}} d(z, v) \ge
+\fixnote{fix:7.3-proof}{The step $1 \ge d(z, v)$ is false in general: the atom of the edge $f$ is a region of the radial drawing bounded by a circuit of length 4, so $d(f, v)$ can be 2. But $d(z, g) \ge d(z, v)$ still holds. That circuit has $v$ and the atom of $z$ in its inside, so $d(z, v) \le 2$. A closed walk of the radial drawing whose inside contains the atoms of both $z$ and $g$ cannot lie in the closure of the atom of $z$, so it has length at least 4, and $d(z, g) \ge 2$. So (7.3) holds as printed.} \theta - |V(A \cap B)|$ as required. $\square$
+
+\stmt
+(7.4) \textit{Let $H$ be a 2-cell drawing in $\Sigma$, and let $\mathscr{T}$ be a respectful tangle in $H$. Let $K$ be a radial drawing of $H$, let $(A, B) \in \mathscr{T}$, and let $C$ be a circuit of $A$ with $|V(B \cap C)| \le 1$. Then there is a circuit $D$ of $K$ with $V(D) \cap V(H) \subseteq V(A \cap B)$ and $U(C) \subseteq ins(D)$.}
+
+\textit{Proof.} Let $e \in E(C)$. Then $e \in E(A)$, and by (7.2) there is a circuit $D$ of $K$ with $V(D) \cap V(H) \subseteq V(A \cap B)$ and with $e \subseteq ins(D)$. Since
+\begin{equation*}
+U(C) \cap U(D) = U(C) \cap (V(D) \cap V(H)) \subseteq U(C) \cap V(B)
+\end{equation*}
+it follows that $|U(C) \cap U(D)| \le 1$, and so $U(C) \subseteq ins(D)$, as required. $\square$
+
+\stmt
+(7.5) \textit{Let $H$ be a 2-cell drawing in $\Sigma$, and let $\mathscr{T}$ be a respectful tangle in $H$ of order $\theta$. Let $\lambda \ge 0$ be an integer, and let $\Lambda \subseteq \Sigma$ be an $\lambda$-zone. Let $K$ be}

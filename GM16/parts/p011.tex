@@ -1,0 +1,24 @@
+\origpage{53}{N. Robertson, P.D. Seymour / Journal of Combinatorial Theory, Series B 89 (2003) 43--76}
+We remark that in the first outcome of 4.1 there are three possibilities for $\Sigma'$ (up to homeomorphism) if $\Sigma$ is orientable, because a handle can be added in two ways, preserving or destroying orientability. If $\Sigma$ is non-orientable, there are only two possibilities.
+
+To show that 4.1 implies 3.1, we need two lemmas. The $m \times n$ grid has vertex set
+\begin{equation*}
+\{(i,j) : 1 \le i \le m, 1 \le j \le n\},
+\end{equation*}
+and $(i,j)$, $(i',j')$ are adjacent if $|i - i'| + |j - j'| = 1$. For $1 \le j \le n$, the set of edges joining $(i,j)$ and $(i + 1, j)$ for $1 \le i \le m - 1$ is called a row of the grid. Our first lemma is as follows.
+
+\textbf{4.2.} \textit{For any integer $\theta \ge 1$ there exists $\theta^* \ge 1$ such that if $\mathscr{T}^*$ is a tangle of order $\ge \theta^*$ in a graph $G$, there is a $\Sigma$-span of order $\ge \theta$, where $\Sigma$ is the sphere.}
+
+\textbf{Proof.} We may assume that $\theta$ is even, by increasing $\theta$ if necessary. Let $N_0$ be the $(2\theta + 1) \times \theta$ grid, and let its rows be $P_1, \dots, P_\theta$. Let $N_1$ be obtained from $N_0$ by deleting all edges with ends $(i,j)$ and $(i,j + 1)$, where $1 \le i \le 2\theta + 1$, $1 \le j \le \theta - 1$ and $i + j$ is odd. We see that there is a rigid drawing (see [8, sections 2 and 4]) in a sphere, isomorphic to $N_1$.
+
+Let $\mathscr{T}_1$ be the set of all separations $(A, B)$ of $N_1$ of order $< \theta$ such that $E(B)$ includes one of $P_1, \dots, P_\theta$.
+
+\hspace*{12pt}(1) \textit{$\mathscr{T}_1$ is a tangle in $N_1$ of order $\theta$.}
+
+\textit{Subproof.} Let us delete the vertices $(2\theta + 1, 1), \dots, (2\theta + 1, \theta)$ from $N_1$, and contract the edges joining $(i,j)$ and $(i + 1, j)$ with $1 \le i \le 2\theta$ and $1 \le j \le \theta$ such that $i$ is odd. We thereby obtain a graph $N_2$ isomorphic to the $\theta \times \theta$ grid. Let $\mathscr{T}_2$ be the set of all separations $(A', B')$ of $N_2$ of order $< \theta$ such that $E(B')$ includes $P_j \cap E(N_2)$ for some $j$. By theorem 7.3 of [6], $\mathscr{T}_2$ is a tangle of order $\theta$ in $N_2$. But $\mathscr{T}_1$ is the tangle in $N_1$ induced by $\mathscr{T}_2$. This proves (1).
+
+By theorem 6.1 of [10], there exists $\theta^* \ge 1$ such that
+
+\hspace*{12pt}(2) \textit{For every graph $G$ and tangle $\mathscr{T}^*$ in $G$ of order $\ge \theta^*$, there is a $(2\theta + 1) \times (2\theta + 1)$ grid minor of $G$ such that for all $(A, B) \in \mathscr{T}^*$ of order $\le 2\theta$, $E(A)$ includes no row of the grid.}
+
+We claim that $\theta^*$ satisfies the theorem. For let $\mathscr{T}^*$ be a tangle of order $\ge \theta^*$ in a graph $G$. By (2), $G$ has a $(2\theta + 1) \times (2\theta + 1)$ grid minor as in (2). Since this grid has a subgraph isomorphic to $N_1$ (and to simplify notation we may assume that it is $N_1$) it follows that $N_1$ is a minor of $G$, and for every $(A, B) \in \mathscr{T}^*$ of order $\le 2\theta$, $E(A)$ includes none of $P_1, \dots, P_\theta$. Let $\mathscr{T}_3$ be the tangle in $G$ induced by $\mathscr{T}_1$. If $(A, B) \in \mathscr{T}_3$ then $E(B) \cap E(N_1)$ (and hence $E(B)$) includes one of $P_1, \dots, P_\theta$, and so $(B, A) \notin \mathscr{T}^*$. Consequently $(A, B) \in \mathscr{T}^*$, and so $\mathscr{T}_3 \subseteq \mathscr{T}^*$.

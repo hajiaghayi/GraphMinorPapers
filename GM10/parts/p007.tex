@@ -1,0 +1,26 @@
+\origpage{159}{GRAPH MINORS, X}
+\textit{Proof.} It suffices to prove the result when $(A, B)$ is extreme. By (2.8), $|A\cap B|\ge 2$; let $v_1, v_2\in V(A\cap B)$ be distinct.
+
+\hspace*{12pt}(1) \textit{There is no separation $(B_1, B_2)$ of $B$ of order $\le 1$ with $v_1\in V(B_1) - V(B_2)$ and $v_2\in V(B_2) - V(B_1)$.}
+
+For such a separation would satisfy
+\begin{equation*}
+\min(|V(A\cap B_1)|, |V(A\cap B_2)|)\ge 1
+\end{equation*}
+and $B_1, B_2\ne B$, contrary to (2.8).
+
+Moreover, from (2.8), $v_1$ and $v_2$ are not adjacent in $B$. From (1) and Menger's theorem, there are two paths of $B$ between $v_1$ and $v_2$, internally disjoint, and hence $B$ has a circuit, as required. $\square$
+
+\sectionhead{3. A Lemma About Submodular Functions}
+
+Now we turn to our first main result, the minimax theorem relating tangle number and branch-width. It is most convenient to prove a generalization, which is a statement about submodular functions.
+
+Let $E$ be a finite set. A \textit{connectivity function} on $E$ is a function $\kappa$ from the set of all subsets of $E$ to the set of integers such that (i) for $X\subseteq E$, $\kappa(X) = \kappa(E - X)$ (ii) for $X, Y\subseteq E$, $\kappa(X\cup Y) + \kappa(X\cap Y)\le \kappa(X) + \kappa(Y)$.
+
+For instance, if $G$ is a hypergraph and $E = E(G)$, we would let $\kappa(X)$ be the number of vertices of $G$ incident both with an edge in $X$ and with an edge in $E - X$; or if $M$ is a matroid with rank function $r$ and $E = E(M)$, we could let $\kappa(X) = r(X) + r(E - X)$.
+
+A subset $X\subseteq E$ is \textit{efficient} if $\kappa(X)\le 0$. A \textit{bias} is a set $\mathscr{B}$ of efficient sets, such that (i) if $X\subseteq E$ is efficient then $\mathscr{B}$ contains one of $X, E - X$ (ii) if $X, Y, Z\in \mathscr{B}$ then $X\cup Y\cup Z\ne E$.
+
+A bias $\mathscr{B}$ is said to \textit{extend} a set $\mathscr{A}$ of efficient sets if $\mathscr{A}\subseteq \mathscr{B}$. We are concerned with the problem of, given $\mathscr{A}$, when is there a bias extending $\mathscr{A}$?
+
+Let us describe an obstacle to the existence of such a bias. A tree is a connected non-null graph with no circuits; its vertices of valency $\le 1$ are its \textit{leaves}. A tree is \textit{ternary} if every vertex has valency $1$ or $3$. (Thus, ternary trees have $\ge 2$ leaves.) An \textit{incidence} in a tree $T$ is a pair $(v, e)$, where $v\in V(T)$, $e\in E(T)$, and $e$ is incident with $v$. A \textit{tree-labelling over} $\mathscr{A}$ is a pair $(T, \alpha)$, where $T$ is a ternary tree, and $\alpha$ is a function from the set of all incidences in $T$ to the set of efficient subsets of $E$, such that

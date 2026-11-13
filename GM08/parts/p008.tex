@@ -1,0 +1,28 @@
+\origpage{262}{ROBERTSON AND SEYMOUR}
+\noindent $(G_i, T_i) \in \mathscr{A}$ be the underlying graft of $(G_i, \tau_i)$. Since $\mathscr{A}$ is well-rooted, there is by (3.1) a countable sequence of integers $0 < i_1 < i_2 < \dots$ such that for $j \ge 1$, $(G_{i_j}, T_{i_j})$ is simulated in $(G_{i_{j+1}}, T_{i_{j+1}})$.
+
+We wish to show that for some $i' > i \ge 1$, $(G_i, \tau_i)$ is simulated in $(G_{i'}, \tau_{i'})$. If this is true for the subsequence $(G_{i_j}, \tau_{i_j})$ ($j = 1, 2, \dots$) then it is true for the original sequence. Thus, for simplicity of notation, we replace the original sequence by the subsequence. Hence $(G_i, T_i)$ is simulated in $(G_{i+1}, T_{i+1})$, for $i = 1, 2, \dots$. Let $\sigma_i$ be a simulation of $(G_i, T_i)$ in $(G_{i+1}, T_{i+1})$ and for each $v \in T_{i+1}$, let $\sigma_i^{-1}(v)$ be the element $u \in T_i$ such that $v$ is a vertex of $\sigma_i(u)$.
+
+For $i = 1, 2, \dots$ and for each $v \in T_i$, let $\pi_i(v)$ be
+\begin{equation*}
+\sigma_1^{-1}(\dots \sigma_{i-2}^{-1}(\sigma_{i-1}^{-1}(v))\dots).
+\end{equation*}
+Then $\pi_i(v) \in T_1$. Since $T_1$ is finite, there exist $i' > i \ge 1$ such that
+\begin{equation*}
+\pi_{i'}((\tau_{i'}(j)) = \pi_i(\tau_i(j)) \qquad (1 \le j \le k).
+\end{equation*}
+But then
+\begin{equation*}
+\tau_i(j) = \sigma_i^{-1}(\sigma_{i+1}^{-1}\dots (\sigma_{i'-1}^{-1}(\tau_{i'}(j)))\dots) \qquad (1 \le j \le k)
+\end{equation*}
+and so the composition in the natural sense of $\sigma_i, \sigma_{i+1}, \dots, \sigma_{i'}$ is a simulation of $(G_i, \tau_i)$ in $(G_{i'}, \tau_{i'})$ as required. $\square$
+
+\sectionhead{5. Drawings of Grafts}
+
+A surface is a compact 2-manifold with (possibly empty) boundary. We denote the boundary of a surface $\Sigma$ by $bd \, \Sigma$, and each component of $bd \, \Sigma$ is called a cuff of $\Sigma$. We denote the closure of a subset $Z \subseteq \Sigma$ by $\bar{Z}$. If $X$ is a topological space, an $X$-arc in $\Sigma$ is a subset of $\Sigma$ homeomorphic to $X$. In particular, an $O$-arc is a subset of $\Sigma$ homeomorphic to a circle. (Every cuff of $\Sigma$ is thus an $O$-arc.) We denote by $\Sigma(a, b, c)$ the surface obtained from the sphere by adding $a$ handles and $b$ cross-caps, and removing the interiors of $c$ pairwise disjoint closed discs. Every connected surface is homeomorphic to $\Sigma(a, b, c)$ for some choice of $a, b, c$. A drawing $\Gamma$ is a pair $(U(\Gamma), V(\Gamma))$, where $U(\Gamma) \subseteq \Sigma$ is closed and $V(\Gamma) \subseteq U(\Gamma)$ is finite, such that
+
+\hspace*{12pt}(i) $U(\Gamma) - V(\Gamma)$ has only finitely many components, called edges
+
+\hspace*{12pt}(ii) for each edge $e$, $(e, \bar{e})$ is homeomorphic either to $((0, 1), [0, 1])$ or to $(S^1 - \{x\}, S^1)$ where $x \in S^1$
+
+\hspace*{12pt}(iii) for each edge $e$, $e \cap bd \, \Sigma = \emptyset$.

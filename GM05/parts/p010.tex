@@ -1,0 +1,26 @@
+\origpage{101}{GRAPH MINORS. V}
+Now $J_1 \cup \dots \cup J_n = \{1, ..., p^q - 1\}$, since each $V_j$ is non-empty. Choose $N \subseteq \{1, ..., n\}$ minimal such that
+\begin{equation*}
+\bigcup_{k \in N} J_k = \{1, ..., p^q - 1\}.
+\end{equation*}
+Then
+\begin{equation*}
+|N| \ge \frac{p^q - 1}{p^{q-1} - 1} \ge p
+\end{equation*}
+and by the minimality of $N$, for each $k \in N$ there exists $j(k) \in \{1, ..., p^q - 1\}$ such that $j(k) \in J_k$ and such that $j(k) \notin J_{k'}$ for each $k' \in N - \{k\}$. Let $L'$ be the subgraph of $G$ induced on the set
+\begin{equation*}
+V(L) \cup \bigcup (V(B_k) : k \in N).
+\end{equation*}
+Then $L'$ is connected, and meets $V_j$ for all $j \in \{1, ..., p^q - 1\}$, and $v \in V(L')$. Let $j_1, ..., j_p$ be the numbers $j(k)$ corresponding to $p$ distinct numbers $k \in N$. Let $C$ be a minimal connected subgraph of $L'$ with $v \in V(C)$ such that $V(C) \cap V_{j_i} \ne \emptyset$ $(1 \le i \le p)$. Then $C$ satisfies (i), as may be easily seen.
+
+\textit{Case 2.} $|J_k| \ge p^{q-1}$ \textit{for some} $k$ $(1 \le k \le n)$.
+
+Let $u$ be a vertex of $B_k$ adjacent in $G$ to a vertex of $L$. By the maximality of $L$, $u \in V_i$ for some $i \in \{1, ..., p^q - 1\}$. Choose $J \subseteq J_k$ with $i \in J$ and $|J| = p^{q-1}$. We apply our inductive hypothesis to $B_k$, $u$, $V_j \cap V(B_k)$ $(j \in J)$. If (i) holds here then it holds for $G$, and if (ii) holds here then it holds for $G$. This completes the proof.
+
+\stmt
+(5.2) \textit{Let $G \in \mathcal{F}_\theta$, and let $p, q \ge 2$ be integers. Let $n = (\theta^2/2)^{q-1}$, $m = p \binom{n}{q} + \frac{1}{2}\theta^2 \binom{n}{\theta^2/2}$. Suppose that $((A_1, ..., A_m), (B_1, ..., B_n))$ is an $(m, n)$-mesh in $G$. Then there exists $I \subseteq \{1, ..., m\}$ and $J \subseteq \{1, ..., n\}$ with $|I| = p$, $|J| = q$, and for each $i \in I$ a path $P_i$ of $A_i$, such that $((P_i : i \in I), (B_j : j \in J))$ is a $(p, q)$-mesh.}
+
+\textit{Proof.} Fix $i$ with $1 \le i \le m$ for the moment. For $1 \le j \le n$, let $V_j = V(A_i) \cap V(B_j)$. Then $V_1, ..., V_n$ are disjoint non-empty subsets of $V(A_i)$. Let us say that $i$ is \textit{starred} if there is a connected subgraph $C$ of $A_i$ and there are vertices $v_1, ..., v_{\theta^2/2}$ of $C$, each with valency 1 in $C$, and there are distinct $j_1, ..., j_{\theta^2/2} \in \{1, ..., n\}$, such that
+\begin{equation*}
+V_{j_k} \cap V(C) = \{v_k\} \qquad (1 \le k \le \theta^2/2).
+\end{equation*}

@@ -1,0 +1,34 @@
+\origpage{80}{N. Robertson, P. Seymour / Journal of Combinatorial Theory, Series B 89 (2003) 77--108}
+A \textit{location} in $G$ is a set $\mathscr{L}$ of separations of $G$ such that $A_1 \subseteq B_2$ for all distinct $(A_1, B_1), (A_2, B_2) \in \mathscr{L}$. We define $M(G, \mathscr{L})$ to be $\cap(B: (A, B) \in \mathscr{L})$ if $\mathscr{L} \ne \emptyset$, and $M(G, \emptyset) = G$.
+
+\textbf{2.3.} \textit{Let $\mathscr{L} = \{(A_1, B_1), \dots, (A_n, B_n)\}$ be a location in a hypergraph $G$. Then}
+
+\hspace*{12pt}1. \textit{$A_1, \dots, A_n, M(G, \mathscr{L})$ are mutually edge-disjoint, and have union $G$,}
+
+\hspace*{12pt}2. \textit{for $1 \le i \le n$, $B_i = M(G, \mathscr{L}) \cup \bigcup(A_j: 1 \le j \le n, j \ne i)$, and $A_i \cap M(G, \mathscr{L}) = A_i \cap B_i$,}
+
+\hspace*{12pt}3. \textit{for $1 \le i < j \le n$, $A_i \cap A_j \subseteq M(G, \mathscr{L})$, and}
+\begin{equation*}
+V(A_i \cap A_j) = V(A_i \cap B_i) \cap V(A_j \cap B_j) \cap V(M(G, \mathscr{L})).
+\end{equation*}
+\textbf{Proof.} For $1 \le i \le n$, $M(G, \mathscr{L}) \subseteq B_i$ and $A_j \subseteq B_i$ for $j \ne i$; since $E(A_i \cap B_i) = \emptyset$, the first assertion of 2.3.1 follows. For the second assertion of 2.3.1, we observe that any vertex or edge of $G$ not in $M(G, \mathscr{L})$ fails to belong to some $B_i$, and therefore belongs to the corresponding $A_i$. Thus 2.3.1 holds. For 2.3.2, we have already seen that
+\begin{equation*}
+M(G, \mathscr{L}) \cup \bigcup(A_j: 1 \le j \le n, j \ne i) \subseteq B_i.
+\end{equation*}
+Conversely, any vertex or edge of $B_i$ not in $M(G, \mathscr{L})$ fails to belong to $B_j$ for some $j \ne i$, and hence belongs to $A_j$. This proves the first assertion of 2.3.2, and the second will follow from the first and 2.3.3. For 2.3.3, let $1 \le i < j \le n$. By 2.3.1, $E(A_i \cap A_j) = \emptyset$; let $v \in V(A_i \cap A_j)$. For $1 \le k \le n$, if $k \ne i$ then $v \in V(A_i) \subseteq V(B_k)$, and if $k = i$ then $v \in V(A_j) \subseteq V(B_k)$. Thus $v \in V(B_k)$ for all $k$ ($1 \le k \le n$), and so $v \in V(M(G, \mathscr{L}))$. This proves the first assertion of 2.3.3. For the second, $A_i \cap A_j \subseteq A_i \cap B_i$ since $A_j \subseteq B_i$, and similarly $A_i \cap A_j \subseteq A_j \cap B_j$, and so the second assertion of 2.3.3 follows. This proves 2.3. $\square$
+
+The following is easily seen to be true (compare Theorem 9.1 of [3]).
+
+\textbf{2.4.} \textit{Let $(T, \tau)$ be a tree-decomposition of a hypergraph $G$, let $t_0 \in V(T)$ and let $e_1, \dots, e_k$ be the edges of $T$ incident with $t_0$. For $1 \le i \le k$ let the components of $T \setminus e_i$ be $T_i, T'_i$, where $t_0 \in V(T'_i)$. Then}
+\begin{equation*}
+\{(\tau \times T_i, \tau \times T'_i): 1 \le i \le k\}
+\end{equation*}
+\textit{is a location.}
+
+\fix{\textbf{Proof.} For $1 \le i \le k$, let $u_i$ be the end of $e_i$ different from $t_0$. Since every vertex of $T$ belongs to one of $T_i, T'_i$, the first condition in the definition of a tree-decomposition implies that $\tau \times T_i \cup \tau \times T'_i = G$; and since $T_i, T'_i$ are disjoint, the second condition implies that $E(\tau \times T_i \cap \tau \times T'_i) = \emptyset$. So each $(\tau \times T_i, \tau \times T'_i)$ is a separation of $G$. Now let $1 \le i, j \le k$ with $(\tau \times T_i, \tau \times T'_i) \ne (\tau \times T_j, \tau \times T'_j)$. Then $i \ne j$, and so $u_i \ne u_j$. We claim that $V(T_i) \subseteq V(T'_j)$. For let $s \in V(T_i)$. Since $s$ and $t_0$ belong to different components of $T \setminus e_i$, the path of $T$ between $s$ and $t_0$ uses $e_i$, and so $u_i$ is its vertex next to $t_0$. If $s \notin V(T'_j)$, then in the same way $u_j$ is the vertex of this path next to $t_0$, and so $u_i = u_j$, a contradiction. This proves our claim. Consequently $\tau \times T_i \subseteq \tau \times T'_j$, and so the set in 2.4 is a location. This proves 2.4. $\square$}\fixnote{fix:2.4-proof-added}{The paper says only that 2.4 is easily seen to be true. The argument above is the one used in the formalization.}
+
+We call this the \textit{location of $t_0$ in $(T, \tau)$}. It is possible that $(\tau \times T_i, \tau \times T'_i) = (\tau \times T_j, \tau \times T'_j)$ for distinct $i, j$, but only if $\tau \times T'_i = G$. We say $(T, \tau)$ is \textit{proper} if no edge of $T$ makes a separation $(A, B)$ with $B = G$.
+
+\textbf{2.5.} \textit{Let $(T, \tau)$ be a tree-decomposition of a hypergraph $G$, and let $t \in V(T)$. Let $\mathscr{L}$ be the location of $t$ in $(T, \tau)$; then $\tau(t) = M(G, \mathscr{L})$.}
+
+\textbf{Proof.} Certainly $\tau(t) \subseteq B$ for every $(A, B) \in \mathscr{L}$ and so $\tau(t) \subseteq M(G, \mathscr{L})$. For the converse inclusion, let $x$ be a vertex or edge of $G$ not in $\tau(t)$, and choose $t' \in V(T)$

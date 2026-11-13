@@ -1,0 +1,31 @@
+\origpage{108}{ROBERTSON AND SEYMOUR}
+For any rooted graph with $\le q+3$ roots, its $\delta$-folio is a union of some of $W_1, \dots, W_l$. Let
+\begin{equation*}
+\mathcal{T}_1 = \left\{ \bigcup (W_i : i \in I) : I \subseteq \{1, \dots, l\} \right\}.
+\end{equation*}
+Thus, $\mathcal{T}_1$ contains the $\delta$-folio of every rooted graph with $\le q+3$ roots, and $\mathcal{T}_1$ is finite. Let $|\mathcal{T}_1| = n$, let $h_{n+1} = 2$, for $1 \le i \le n$ let $h_i = f(h_{i+1})$, and let $h = h_1$. Then $h$ satisfies (10.3), for an algorithm proceeds as follows. Given input as in (10.4), we first use (10.1) to find a vision. Second we set $H_1 = H$ and perform a recursion. At the beginning of the $i$th iteration we have $H_i$ and $\mathcal{T}_i$ such that
+
+\hspace*{12pt}(i) $H_i$ is a subwall of $H$ of height $h_i$
+
+\hspace*{12pt}(ii) $\mathcal{T}_i \subseteq \mathcal{T}_1$ and $|\mathcal{T}_i| = n + 1 - i$
+
+\hspace*{12pt}(iii) for each internal $A \in \mathcal{A}$, if $v(A)$ is inside $H_i$, then $\mathcal{T}_i$ contains the $\delta$-folio of $(\tilde{A}, \pi(A))$.
+
+The iteration proceeds as follows. We check if $H_i$ is $h_{i+1}$-homogeneous. If it is, we may output one of its middle vertices and stop, by (10.2). Otherwise we choose a subwall $H_{i+1}$ of $H_i$ of height $h_{i+1}$ such that some $T \in \mathcal{T}_1$ is the $\delta$-folio of $(\tilde{A}, \pi(A))$ for some internal $A \in \mathcal{A}$ with $v(A)$ inside $H_i$, and $T$ is not the $\delta$-folio of $(\tilde{A}, \pi(A))$ for any internal $A \in \mathcal{A}$ with $v(A)$ inside $H_{i+1}$. Then $T \in \mathcal{T}_i$; we set $\mathcal{T}_{i+1} = \mathcal{T}_i - \{T\}$, and return for the next iteration.
+
+Each iteration takes time $O(v)$ (since there are only a bounded number of subwalls of $H_i$ to check) and there are at most $l+1$ iterations. Finding a $\delta$-vision initially takes time $O(\varepsilon^2)$, and so the algorithm also has running time $O(\varepsilon^2)$. $\square$
+
+Now we give the complete algorithm for Folio. Let $\xi$ and $\delta \ge 0$ be fixed integers.
+
+\stmt
+(10.5) \textsc{Algorithm}.
+
+\textit{Input:} A digraph $G$ and a subset $Z \subseteq V(G)$ with $|Z| \le \xi$.
+
+\textit{Output:} The $\delta$-folio of $G$ relative to $Z$.
+
+\textit{Running time:} $O(v^3)$.
+
+\textit{Description:} (1) Let $p$, $C$ be as in (6.5). We apply (6.5) to $G$, $Z$, and obtain a subdigraph $G' \subseteq G$ with $Z \subseteq V(G')$ such that $G$ and $G'$ have the same $\delta$-folio relative to $Z$ and such that $|E(G')| \le C|V(G')|$.
+
+Let $q = \binom{p}{2} + \xi - 1$; let $h$ be as in (10.3); let $\omega$ be as in (9.8). We set $G_1 = G'$ and perform a recursion. At the beginning of the $i$th iteration we have a subdigraph $G_i$ of $G'$ with $|V(G_i)| = |V(G')| - i + 1$ and with $Z \subseteq V(G_i)$, such that the $\delta$-folios of $G_i$ and $G'$ relative to $Z$ are equal. The iteration proceeds as follows. We apply (9.9) to $G_i \setminus Z$.

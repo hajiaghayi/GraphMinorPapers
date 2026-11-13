@@ -1,0 +1,24 @@
+\origpage{54}{ROBERTSON AND SEYMOUR}
+\stmt
+(5.4) \textit{Let $(G, \Omega)$ be internally 4-connected. Let $Q$ be a separating $\Omega$-path with ends $a, b$ and with no internal vertex in $\bar{\Omega}$, and let $(G_1, G_2)$ be a separation of $G$ such that $V(G_1 \cap G_2) = V(Q)$, $\Omega(a, b) \subseteq V(G_1)$ and $\Omega(b, a) \subseteq V(G_2)$. Let $G' = G \setminus V(G_2)$, let $\Omega' = \Omega \mid V(G')$, and let $\Omega_1 = \Omega \mid V(G_1)$. If $(G', \Omega')$ has a tripod then $(G_1, \Omega_1)$ has a cross.}
+
+\textit{Proof.} Let $G''$ be the graph obtained from $G_1$ by contracting all the edges of $Q$, and let $q$ be the new vertex thus formed. Let $\Omega''$ be the cyclic permutation with $\bar{\Omega}'' = \bar{\Omega}' \cup \{q\}$ and $\Omega'' \mid V(G') = \Omega'$, such that $(x, y, q)$ is $\Omega''$-clockwise whenever $(x, y, a)$ is $\Omega$-clockwise and $x, y \in \bar{\Omega}'$.
+
+Now if $(G'', \Omega'')$ has a cross then so does $(G_1, \Omega_1)$. We assume then that $(G'', \Omega'')$ has no cross. Let $\{P_1, P_2, P_3\}$ be a tripod of $(G', \Omega')$; then it is also a tripod of $(G'', \Omega'')$ not meeting $q$. By (2.3), $(G'', \Omega'')$ has an internal 3-separation $(G''_1, G''_2)$ with $P_1 \cup P_2 \cup P_3 \subseteq G''_1$. Then $(G''_1 \setminus q, G''_2 \setminus q)$ is an internal 3-separation of $(G', \Omega')$ with $P_1 \cup P_2 \cup P_3 \subseteq G''_1 \setminus q$, and yet $\{P_1, P_2, P_3\}$ is a tripod of $(G', \Omega')$. Thus $|V((G''_1 \cap G''_2) \setminus q)| = 3$. Hence $q \notin V(G''_1 \cap G''_2)$, and it follows that $(G, \Omega)$ has an internal 3-separation, contrary to hypothesis. This completes the proof. $\square$
+
+We combine these lemmas for the following.
+
+\stmt
+(5.5) \textit{Let $(G, \Omega)$ be internally 4-connected and let $p \ge 2$ with $p \ne 3$. Let $\{Q_1, \dots, Q_{p+5}\}$ be a transaction such that for $1 \le i \le p+5$, $Q_i$ is separating, has no internal vertex in $\bar{\Omega}$, and has ends $a_i, b_i$, where $(a_{p+5}, a_{p+4}, \dots, a_1, b_1, b_2, \dots, b_{p+5})$ is clockwise. Let $\Omega(a_1, b_1) = \emptyset$, and let $r \in V(Q_1) - \{a_1, b_1\}$. Let $(G_1, G_2)$ be a separation of $G$ with $V(G_1 \cap G_2) = V(Q_{p+5})$, $\Omega(a_{p+5}, b_{p+5}) \subseteq V(G_1)$, and $\Omega(b_{p+5}, a_{p+5}) \subseteq V(G_2)$. Let $\Omega_0$ be the cyclic permutation with $\bar{\Omega}_0 = \bar{\Omega} \cup \{r\}$ and $\Omega_0 \mid \bar{\Omega} = \Omega$, such that $(a_1, r, b_1)$ is $\Omega_0$-clockwise. Suppose that $Q_1$ is induced, that $\bar{\Omega} - \{a_1, b_1\}$ catches $G \setminus V(Q_1)$, that $(G, \Omega_0)$ has a crooked transaction of cardinality $p$ and that $(G, \Omega)$ has no crooked transaction of cardinality $p$. Then there is a non-separating $\Omega$-path $P$ of $(G, \Omega)$ with $P \subseteq G_1$.}
+
+\textit{Proof.} We observe first that
+
+\hspace*{12pt}(1) \textit{$Q_2, \dots, Q_{p+5}$ are separating $\Omega_0$-paths of $(G, \Omega_0)$.}
+
+For if $\{P, Q_j\}$ is a cross in $(G, \Omega_0)$ for some $j$ with $2 \le j \le p+5$ then $r$ is an end of $P$ since $Q_j$ is separating in $(G, \Omega)$; and we can choose an $\Omega$-path $P' \subseteq P \cup Q_1$ with an end in $\Omega(b_j, a_j)$. But then $\{P', Q_j\}$ is a cross in $(G, \Omega)$, a contradiction.
+
+Let $K$ be the maximal subgraph of $G_1 \setminus V(Q_{p+5})$ caught by $\bar{\Omega} - V(G_2)$.
+
+\hspace*{12pt}(2) \textit{There is a cross in $(K, \Omega_0 \mid V(K))$.}
+
+For by (1), we may apply (5.2) to the transaction $\{Q_2, \dots, Q_{p+5}\}$ of $(G, \Omega_0)$. Certainly there is no crooked transaction $\mathcal{P}$ in $(G, \Omega_0)$ with

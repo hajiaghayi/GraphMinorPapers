@@ -1,0 +1,35 @@
+\origpage{220}{ROBERTSON AND SEYMOUR}
+\noindent edge we may cut along it, and the result follows from our inductive hypothesis.
+
+A \textit{forest} in a surface $\Sigma$ is a proper graph in $\Sigma$ with no circuits. Two forests $H_1, H_2$ are \textit{homotopic} in $\Sigma$ if
+
+\hspace*{12pt}(i) $V(H_1) \cap bd(\Sigma) = V(H_2) \cap bd(\Sigma)$,
+
+\hspace*{12pt}(ii) for $s, t \in V(H_1) \cap bd(\Sigma)$, there is a path of $H_1$ from $s$ to $t$ if and only if there is such a path in $H_2$, and
+
+\hspace*{12pt}(iii) for $s, t \in V(H_1) \cap bd(\Sigma)$, if $P_i$ is a path of $H_i$ from $s$ to $t$ ($i = 1, 2$) then $P_1$ is homotopic in $\Sigma$ to $P_2$.
+
+(Homotopy of paths in $\Sigma$ is defined in the usual way.) We say that forests $H_1, H_2$ in $\Sigma$ are \textit{homoplastic} if there is a homeomorphism $\alpha \colon \Sigma \to \Sigma$ such that
+
+\hspace*{12pt}(i) $\alpha(x) = x$ for all $x \in bd(\Sigma)$, and
+
+\hspace*{12pt}(ii) the forest $\alpha(H_1)$ is homotopic in $\Sigma$ to $H_2$.
+
+The equivalence classes of this equivalence relation are called \textit{homoplasty classes}. For $Y \subseteq bd(\Sigma)$, a $Y$-\textit{forest} is a forest $H$ with $V(H) \cap bd(\Sigma) = Y$.
+
+\stmt
+(3.4) \textit{For any surface $\Sigma$ and finite $Y \subseteq bd(\Sigma)$, there are only finitely many homoplasty classes of $Y$-forests.}
+
+\textit{Proof.} For each $y \in Y$, choose a boundary $I$-arc $F_y$ with $y \in F_y$, such that $y$ is not an end of $F_y$, and $F_y \cap F_{y'} = \emptyset$ for distinct $y, y' \in Y$. Let $X$ be the set of ends of all the $F_y$ ($y \in Y$); thus $|X| = 2 |Y|$. An $X$-matching $G$ surrounds a $Y$-forest $H$ if $U(G) \cap U(H) = \emptyset$ and for each component $H'$ of $H$ with $V(H') \cap bd(\Sigma) \ne \emptyset$ there is a simply connected region of $G$ including $U(H')$\fix{, and any two points of $Y$ in the same region of $G$ are joined by a path of $H$}.\fixnote{fix:3.4-surrounds}{Without the added condition, Claim (2) below is false. In a disc, let $Y=\{y_1,y_2\}$ and $X=\{x_1,x_1',x_2,x_2'\}$, in this cyclic order. The $X$-matching with chords $x_1'x_2$ and $x_2'x_1$ has one simply connected region containing $y_1$ and $y_2$. It would surround both the $Y$-forest with the edge $y_1y_2$ and the edgeless one, which are not homotopic. With the condition, Claims (1) and (2) hold.} We observe
+
+\hspace*{12pt}(1) \textit{Every $Y$-forest is surrounded by some $X$-matching.}
+
+For if $H$ is a $Y$-forest, let us ``thicken'' each edge of $H$ slightly, so that each component of $H$ is enlarged into a closed disc, the discs are mutually disjoint, and their union intersects $bd(\Sigma)$ in precisely $\bigcup (F_y \colon y \in Y)$. Then the desired $X$-matching may be found in the boundary of these discs.
+
+Clearly,
+
+\hspace*{12pt}(2) \textit{If $G$ is an $X$-matching surrounding $Y$-forests $H, H'$ then $H$ and $H'$ are homotopic.}
+
+From (2) we deduce
+
+\hspace*{12pt}(3) \textit{If $H, H'$ are $Y$-forests surrounded by $X$-matchings $G, G'$, respectively, and $G$ and $G'$ are congruent, then $H$ and $H'$ are homoplastic.}

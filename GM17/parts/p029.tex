@@ -1,0 +1,24 @@
+\origpage{190}{ROBERTSON AND SEYMOUR}
+\textit{Proof.} Let $\hat{\Sigma}$ be a surface with $bd(\hat{\Sigma}) = \emptyset$, obtained from $\Sigma$ by pasting a disc onto each cuff of $\Sigma$. We may regard $\Gamma$ as a painting in $\hat{\Sigma}$. For each region $r$ of $\Gamma$ in $\hat{\Sigma}$, $r$ is an open disc and $\bar{r} - r$ is an $O$-arc by (8.1) and (8.2). Choose a representative point from each region of $\Gamma$ in $\hat{\Sigma}$, and let $H$ be the simple bipartite graph with vertex set the union of $N(\Gamma)$ and the set of all these representative points, in which the point representing a region $r$ is adjacent to $n \in N(\Gamma)$ if $n \in \bar{r}$. Take a drawing of $H$ in $\hat{\Sigma}$ in the natural way, and for each circuit $C$ of $H$ let $U(C)$ be the $O$-arc in $\hat{\Sigma}$ corresponding to $C$ in the drawing.
+
+\hspace*{12pt}(1) \textit{For every circuit $C$ of $H$ of length $\le 6$, either}
+
+\hspace*{12pt}(i) \textit{$U(C)$ is a $\Gamma$-normal $O$-arc in $\Sigma$, or}
+
+\hspace*{12pt}(ii) \textit{$U(C) \cap \Sigma$ is a $\Gamma$-normal $I$-arc in $\Sigma$, or}
+
+\hspace*{12pt}(iii) \textit{$U(C) \cap N(\Gamma) = \{n_1, n_2, n_3\} \subseteq \Theta$ for some cuff $\Theta$ of $\Sigma$, and $U(C) \cap \Sigma = F_1 \cup F_2$ where $F_1, F_2$ are $\Gamma$-normal $I$-arcs with $F_i \cap N(\Gamma) = \{n_i, n_3\}$ ($i = 1, 2$) and $F_1 \cap F_2 = \{n_3\}$.}
+
+\textit{Subproof.} Since $|E(C)| \le 6$ it follows that $|U(C) \cap N(\Gamma)| \le 3$ and so $U(C)$ meets at most one component of $\hat{\Sigma} - \Sigma$. If $U(C) \subseteq \Sigma$ then (i) holds, and so we assume that for some component $r$ of $\hat{\Sigma} - \Sigma$, the point $v$ representing $r$ belongs to $C$. Its neighbours in $C$ are both nodes $n_1, n_2 \in N(\Gamma)$ bordering the corresponding cuff $\Theta$. If no other point of $U(C) \cap \Sigma$ belongs to $bd(\Sigma)$ then (ii) holds; and if some point $n_3 \in U(C) \cap \Sigma$ belongs to $bd(\Sigma)$, then $n_3 \in N(\Gamma)$ and $n_3 \in \Theta$ by (6.3), and so (iii) holds. This proves (1).
+
+From (1), (6.3) and (6.4) it follows that for every circuit $C$ of $H$ of length $\le 6$, there is a disc $ins(C) \subseteq \hat{\Sigma}$ bounded by $U(C)$ such that $\alpha(ins(C))$ is small. From (1), (8.3) and (8.4), we deduce that
+
+\hspace*{12pt}(2) \textit{For every circuit $C$ of $H$ with $|E(H)| = 4$, $ins(C)$ is the closure of a region of $H$ in $\hat{\Sigma}$.}
+
+Now every region of $H$ includes a unique cell of $\Gamma$, and every cell of $\Gamma$ is in a unique region. Let $\delta(I)$ be the subgraph of $H$ consisting of all edges $e$ of $H$ (and their ends) such that one of the regions of $H$ incident with $e$ includes a cell in $I$, and the other includes a cell in $C(\Gamma) - I$. We see that
+
+\hspace*{12pt}(3) \textit{$E(\delta(I)) \ne \emptyset$, and every vertex of $\delta(I)$ has even valency in $\delta(I)$, and every edge of $\delta(I)$ has an end in $V(\delta(I)) \cap N(\Gamma)$; and}
+\begin{equation*}
+V(\delta(I)) \cap N(\Gamma) \subseteq \gamma(I) \cap \gamma(J)
+\end{equation*}
+\textit{and consequently $|V(\delta(I)) \cap N(\Gamma)| \le |\gamma(I) \cap \gamma(J)| \le 3$.}

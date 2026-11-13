@@ -1,0 +1,24 @@
+\origpage{91}{N. Robertson, P. Seymour / Journal of Combinatorial Theory, Series B 89 (2003) 77--108}
+\noindent patchwork and $F \subseteq E(G)$, $P \setminus F$ denotes the patchwork $(G \setminus F, \mu', \Delta')$, with $\mu', \Delta'$ as before. We often write $P \setminus e$ for $P \setminus \{e\}$, etc. Let $\eta$ be an expansion of $P = (G, \mu, \Delta)$ in $P' = (G', \mu', \Delta')$, or of $P = (G, \mu, \Delta, \phi)$ in $P' = (G', \mu', \Delta', \phi')$. A realization $H$ of $P' \setminus \eta(E(G))$ is said to \textit{realize} $\eta$ if for every $v \in V(G)$, $\eta(v)$ is the vertex set of some component of $H$; and if there is such a realization, $\eta$ is said to be \textit{realizable}. Let us say that $P$ is \textit{simulated} in $P'$ if there is a realizable expansion of $P$ in $P'$.
+
+If $P = (G, \mu, \Delta)$ is a patchwork and $A \subseteq G$, we denote by $P|A$ the patchwork $(A, \mu', \Delta')$, where $\mu', \Delta'$ are the restrictions of $\mu, \Delta$ to $E(A) \cap dom(\mu)$, $E(A)$ respectively. If $P = (G, \mu, \Delta, \phi)$ is a partial $\Omega$-patchwork, $P|A$ is the partial $\Omega$-patchwork $(A, \mu', \Delta', \phi')$ where $\mu', \Delta'$ are as before and $\phi'$ is the restriction of $\phi$ to $E(A) \cap dom(\phi)$.
+
+A \textit{separation} of a rooted hypergraph $G$ is a pair $(A, B)$ of rooted hypergraphs such that $(A^-, B^-)$ is a separation of $G^-$, $\bar{\pi}(A) = V(A \cap B)$, and $\pi(B) = \pi(G)$. Two vertices of a graph $H$ are \textit{connected in $H$} if they belong to the same component of $H$. We begin with the following lemma.
+
+\textbf{5.1.} \textit{For $i = 1, 2$ let $P_i = (G_i, \mu_i, \Delta_i)$ be a patchwork, and let $(G_i', G_0)$ be a separation of $G_i$. Let $\pi(G_1') = \pi(G_2')$, and let $P_1|G_0 = P_2|G_0$. For $i = 1, 2$ let $H_i'$ be a realization of $P_i|G_i'$, such that for $x, y \in \bar{\pi}(G_1') = \bar{\pi}(G_2')$, $x$ and $y$ are connected in $H_1'$ if and only if they are connected in $H_2'$. Let $H_0$ be a realization of $P_1|G_0 = P_2|G_0$, and let $H_i = H_0 \cup H_i'$ ($i = 1, 2$). Then for $i = 1, 2, H_i$ is a realization of $P_i$, and for $x, y \in V(G_0)$, $x$ and $y$ are connected in $H_1$ if and only if they are connected in $H_2$.}
+
+\textbf{Proof.} Let $x, y \in V(G_0)$ be connected in $H_1$ say; we shall prove that they are connected in $H_2$. Choose a sequence
+\begin{equation*}
+x = v_0, e_1, v_1, e_2, \dots, e_t, v_t = y
+\end{equation*}
+such that $v_0, \dots, v_t \in V(H_1)$, $e_1, \dots, e_t \in E(H_1)$ and for $1 \le i \le t$, $e_i$ is incident with $v_{i-1}$ and $v_i$ in $H_1$. Let
+\begin{equation*}
+I = \{i \colon 0 \le i \le t, \ v_i \in V(G_0)\}.
+\end{equation*}
+Then $0, t \in I$; let $I = \{s(1), s(2), \dots, s(r)\}$ say, in order, where $s(1) = 0$ and $s(r) = t$.
+
+\hspace*{12pt}(1) \textit{For $1 \le j \le r - 1$, $v_{s(j)}$ and $v_{s(j+1)}$ are connected in $H_2$.}
+
+\textbf{Subproof.} If $e_k \in E(H_0)$ for some $k$ with $s(j) + 1 \le k \le s(j + 1)$ then $v_{k-1}, v_k \in V(G_0)$ since they are both incident with $e_k$; hence $k - 1, k \in I$, and so from the definition of $I$, $k - 1 = s(j)$, $k = s(j + 1)$ and $v_{s(j)}, v_{s(j+1)}$ are connected in $H_2$, as claimed. If $e_k \notin E(H_0)$ for $s(j) + 1 \le k \le s(j + 1)$ then $v_{s(j)}, v_{s(j+1)}$ are vertices of $H_1'$ and are connected in $H_1'$; but $v_{s(j)}, v_{s(j+1)} \in V(G_0)$ and so both belong to $\bar{\pi}(G_1')$. Since $v_{s(j)}, v_{s(j+1)}$ are connected in $H_1'$ it follows from our hypothesis that they are connected in $H_2'$ and hence in $H_2$, as claimed. This proves (1).
+
+From (1) it follows that $x, y$ are connected in $H_2$. This proves 5.1. $\square$

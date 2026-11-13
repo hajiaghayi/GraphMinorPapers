@@ -1,0 +1,35 @@
+\origpage{64}{N. Robertson, P.D. Seymour / Journal of Combinatorial Theory, Series B 89 (2003) 43--76}
+\sectionhead{8. Non-level $\Sigma$-spans}
+
+Let $\mathcal{T}$ be a respectful tangle (see [8, section 3]) of order $\theta$ in a rigid drawing $H$ in a surface $\Sigma$, and let $Y \subseteq V(H)$. If $\gamma \ge 0$, a \textit{$\gamma$-envelope around $Y$} is a family $(\Lambda_y\colon y \in Y)$ such that:
+
+\hspace*{12pt}$\bullet$ for each $y \in Y$, $\Lambda_y$ is a $\gamma$-zone around $y$,
+
+\hspace*{12pt}$\bullet$ for all distinct $y, y' \in Y$, $\bar{\Lambda}_y \cap \bar{\Lambda}_{y'} = \emptyset$,
+
+\hspace*{12pt}$\bullet$ for every subset $Y' \subseteq Y$, the drawing $H \cap (\Sigma \setminus \cup (\Lambda_y\colon y \in Y'))$ is rigid.
+
+(Actually, the third statement here is implied by the same statement for all singleton subsets $Y'$, but it is convenient to present it this way.)
+
+In this section we show that 7.1 is implied by the following. (8.1 will be proved in the next section.)
+
+\textbf{8.1.} \textit{Let $\Sigma$ be a surface and let $\delta \ge 0$ and $\phi, \psi \ge 3$. Then there exists $\gamma \ge 0$ and $\theta > (4\gamma + 2)\delta$ such that if $\mathcal{T}^*$ is a tangle in a graph $G$ and $H, \mathcal{T}$ is a $\Sigma$-span of order $\ge \theta$, and $Y \subseteq V(H)$ satisfies $|Y| = \delta$ and $d(y, y') \ge \theta$ for all distinct $y, y' \in Y$ (where $d$ is the metric of $\mathcal{T}$), then either:}
+
+\hspace*{12pt}1. \textit{there is a $\Sigma'$-span of order $\ge \phi$ for some surface $\Sigma'$ obtained from $\Sigma$ by adding a handle, or}
+
+\hspace*{12pt}2. \textit{there is an $H$-path in $G$ with ends $s, t$, such that $d(s, t) \ge \psi$ and $d(s, y) \ge \psi$ for all $y \in Y$, or}
+
+\hspace*{12pt}3. \textit{there is a $\gamma$-envelope $(\Lambda_y\colon y \in Y)$ around $Y$, and there exists $Z \subseteq V(G) \setminus V(H')$ with $|Z| \le \frac{1}{2}\delta^2\phi^2$, such that $Z$ meets every $H'$-path in $G$ with ends $s, t$, satisfying $d'(s, t) \ge 2\psi$, where $H' = H \cap (\Sigma \setminus \cup (\Lambda_y\colon y \in Y))$ and $d'$ is the metric of the $(4\gamma + 2)\delta$-compression of $\mathcal{T}$ in $H'$.}
+
+To show that 8.1 implies 7.1, we need two lemmas. The first is a kind of converse of 7.4. If $\mathcal{T}$ is a tangle in $G$ and $1 \le \theta \le ord(\mathcal{T})$, the set of members of $\mathcal{T}$ of order $< \theta$ is called the \textit{truncation} of $\mathcal{T}$ to order $\theta$.
+
+\textbf{8.2.} \textit{Let $\mathcal{T}^*$ be a tangle in a graph $G$, and let $H, \mathcal{T}$ be a $\Sigma$-span. Let $Z \subseteq V(G) \setminus V(H)$ with $|Z| < ord(\mathcal{T})$, let $1 \le \theta' \le ord(\mathcal{T}) - |Z|$, and let $\mathcal{T}'$ be the truncation of $\mathcal{T}$ to order $\theta'$. Then $H, \mathcal{T}'$ is a $\Sigma$-span in $G \setminus Z$ with respect to $\mathcal{T}^* \setminus Z$.}
+
+\textbf{Proof.} Since $H$ is a subgraph of $G \setminus Z$ and
+\begin{equation*}
+ord(\mathcal{T}') = \theta' \le ord(\mathcal{T}) - |Z| \le ord(\mathcal{T}^*) - |Z| = ord(\mathcal{T}^* \setminus Z),
+\end{equation*}
+it suffices to show that $(A \cap H, B \cap H) \in \mathcal{T}'$ for all $(A, B) \in \mathcal{T}^* \setminus Z$ of order $< \theta'$. Thus, let $(A, B) \in \mathcal{T}^* \setminus Z$ have order $< \theta'$. By definition of $\mathcal{T}^* \setminus Z$, there exists $(A^*, B^*) \in \mathcal{T}^*$ with $Z \subseteq V(A^* \cap B^*)$, such that $A^* \setminus Z = A$ and $B^* \setminus Z = B$. Then $(A^*, B^*)$ has order
+\begin{equation*}
+|Z| + |V(A \cap B)| < |Z| + \theta' = ord(\mathcal{T})
+\end{equation*}

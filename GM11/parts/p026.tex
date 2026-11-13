@@ -1,0 +1,30 @@
+\origpage{97}{GRAPH MINORS. XI}
+\stmt
+(8.3) \textit{If $X \subseteq \Sigma$ is a restraint, then $\mathrm{ins}(\Gamma \cap bd(X)) = X$.}
+
+\textit{Proof.} By (7.6), $\Sigma - X$ is a region $r_1$ of $\Gamma \cap bd(X)$. But $\Gamma \cap bd(X)$ is confined, and so from (4.4), $\Sigma - \mathrm{ins}(\Gamma \cap bd(X))$ is a region $r_2$ of $\Gamma \cap bd(X)$. Since $\Sigma - X \notin \mathrm{ins}(\Gamma \cap bd(X))$ and hence $r_1 \cap r_2 \ne \emptyset$, it follows that $r_1 = r_2$, that is, $\mathrm{ins}(\Gamma \cap bd(X)) = X$, as required. $\square$
+
+\stmt
+(8.4) \textit{If $X_1, X_2, X_3$ are restraints then $X_1 \cup X_2 \cup X_3 \ne \Sigma$.}
+
+\textit{Proof.} Let $X_i$ have perimeter walk $W_i$ ($i = 1, 2, 3$). By (8.3), $X_i = \mathrm{ins}(W_i)$ for $i = 1, 2, 3$, and the result follows from (8.2). $\square$
+
+\stmt
+(8.5) \textit{Let $W$ be a closed walk in $\Gamma$ of length $< 2\theta$. Then $\mathrm{ins}(W)$ is a restraint and $l(\mathrm{ins}(W)) \le l(W)$.}
+
+\textit{Proof.} Let $Z = \mathrm{ins}(W)$. Since $\Gamma | W$ is confined, it follows that any O-arc in $U(W)$ bounds a disc in $Z$, and hence, by (7.3), any continuous $\phi \colon S^1 \to U(W)$ is null-homotopic in $Z$. By repeated application of (3.1) it follows that $Z$ is simply-connected. By (8.2), $Z \ne \Sigma$. Let us show that $l(Z) \le l(W) < 2\theta$. Let $W'$ be a perimeter walk of $Z$. Certainly every edge of $W'$ is an edge of $W$. Moreover, if an edge $e$ occurs twice in $W'$ then $(\Gamma | W) \setminus e$ is disconnected (for otherwise $e$ is in a circuit $C$ of $\Gamma | W$, and $\mathrm{ins}(C)$ includes one of the two regions of $\Gamma$ incident with $e$, which contradicts that $e$ occurs twice in $W'$) and so $e$ occurs at least twice in $W$, because $W$ is closed. Hence the length of $W'$ is at most the length of $W$, and thus $l(Z) \le l(W) < 2\theta$. Finally, we must show that $\Sigma - Z \notin \mathrm{ins}(\Gamma \cap bd(Z))$. But $\Gamma \cap bd(Z) \subseteq \Gamma | W$, and so
+\begin{equation*}
+\mathrm{ins}(\Gamma \cap bd(Z)) \subseteq \mathrm{ins}(\Gamma | W) = \mathrm{ins}(W) = Z.
+\end{equation*}
+Since $Z \ne \Sigma$, it follows that $\Sigma - Z \notin \mathrm{ins}(\Gamma \cap bd(Z))$. Consequently $Z$ is a restraint. $\square$
+
+\stmt
+(8.6) \textit{If $X, Y$ are restraints, and $X \cup Y$ is simply-connected and $l(X \cup Y) < 2\theta$, then $X \cup Y$ is a restraint.}
+
+\textit{Proof.} By (8.4), $X \cup Y \ne \Sigma$, and so $l(X \cup Y)$ is defined. Let $Z = \mathrm{ins}(\Gamma \cap bd(X \cup Y))$. By (8.5), $Z$ is a restraint. By (8.4), $X \cup Y \cup Z \ne \Sigma$, and so
+\begin{equation*}
+\Sigma - (X \cup Y) \notin \mathrm{ins}(\Gamma \cap bd(X \cup Y)).
+\end{equation*}
+But $X \cup Y$ is non-empty, closed, simply-connected and $\Gamma$-nice, and so $X \cup Y$ is a restraint. $\square$
+
+A restraint $X$ is \textit{extreme} if there is no restraint $Y \ne X$ with $X \subseteq Y$ and $l(Y) \le l(X)$.

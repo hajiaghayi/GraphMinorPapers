@@ -1,0 +1,30 @@
+\origpage{111}{GRAPH MINORS. V}
+\noindent cardinality $k'$, and so by induction there is an independent subset $X' \subseteq V(G')$ with $|X' \cap Z_i'| = x_i'$ $(1 \le i \le m)$. Then $X = X' \cup \{v\}$ is independent in $G$, and satisfies the theorem, as required.
+
+If we apply the foregoing to trees we obtain the following.
+
+\stmt
+(8.6) \textit{Let $T$ be a tree, and let $\mathcal{A}_1, \dots, \mathcal{A}_m$ be families of subtrees of $T$. Let $x_1, \dots, x_m \ge 0$ be integers, and let $x_1 + \dots + x_m = k$. Suppose that for $1 \le i \le m$, there are $k$ members of $\mathcal{A}_i$ which are pairwise vertex-disjoint. Then for $1 \le i \le m$ there are $x_i$ members $T_1^i, \dots, T_{x_i}^i$ of $\mathcal{A}_i$, such that}
+\begin{equation*}
+T_1^1, \dots, T_{x_1}^1, T_1^2, \dots, T_{x_2}^2, \dots, T_1^m, \dots, T_{x_m}^m
+\end{equation*}
+\textit{are all pairwise vertex-disjoint.}
+
+\textit{Proof.} For $1 \le i \le m$, let $S_1^i, \dots, S_k^i$ be pairwise vertex-disjoint members of $\mathcal{A}_i$. Let $G$ be the subtree intersection graph associated with $S_1^1, \dots, S_k^1, S_1^2, \dots, S_k^2, \dots, S_1^m, \dots, S_k^m$. The theorem follows by applying (8.5) to $G$, which is chordal by (8.3).
+
+We also require the following, which is a standard result in hypergraph theory; see, for example, [6].
+
+\stmt
+(8.7) \textit{Let $T$ be a tree, and let $\mathcal{F}$ be a family of subtrees of $T$. Then for any integer $k \ge 0$, either there are $k$ pairwise vertex-disjoint members of $\mathcal{F}$, or there is a subset $X \subseteq V(T)$ with $|X| < k$ which has non-empty intersection with every member of $\mathcal{F}$.}
+
+We can now prove one half of (8.2).
+
+\stmt
+(8.8) \textit{If $H$ is planar then $H$ has the Erd\"os-P\'osa property.}
+
+\textit{Proof.} Let $k$ be a positive integer, and let $H'$ be the graph consisting of $k$ disjoint copies of $H$. Then $H'$ is planar, and so by (1.5) there is a number $w \ge 0$ such that every graph with no minor isomorphic to $H'$ has tree-width $\le w$. Let $H$ have $m$ connected components, and put $k' = (mk - 1)(w + 1)$. We shall show that $k'$ satisfies condition (ii) of the Erd\"os-P\'osa property. Let the components of $H$ be $H_1, \dots, H_m$.
+
+Suppose then that $G$ is a graph, and there do not exist $k$ vertex-disjoint $H$-expansions in $G$. Then $G$ has no minor isomorphic to $H'$, and so $G$ has tree-width $\le w$. Let $(T, (X_t : t \in V(T)))$ be a tree-decomposition of $G$ such that $|X_t| \le w + 1$ for each $t \in V(T)$. For $1 \le j \le m$, let $\mathcal{A}_j$ be the set of all $H_j$-expansions in $G$, and for each $A \in \mathcal{A}_j$ let
+\begin{equation*}
+T(A) = \{t \in V(T) : V(A) \cap X_t \ne \emptyset\}.
+\end{equation*}

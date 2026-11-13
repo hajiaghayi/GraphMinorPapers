@@ -1,0 +1,31 @@
+\origpage{182}{ROBERTSON AND SEYMOUR}
+\textit{Proof.} The second claim follows from the first. If the first is false then there is a $\Gamma$-normal $O$-arc $F$ with $|F \cap N(\Gamma)| = 1$, such that there is no disc $\Delta \subseteq \Sigma$ with $bd(\Delta) = F$ and $\Delta \cap U(\Gamma) \subseteq F$. Hence (7.1) and (6.4) yield a truer portrayal, a contradiction. $\square$
+
+\stmt
+(8.3) \textit{For every $\Gamma$-normal $I$-arc $F$ with $|F \cap N(\Gamma)| = 2$, there is a disc $\Delta \subseteq \Sigma$ with $F \subseteq bd(\Delta) \subseteq F \cup bd(\Sigma)$ such that $\Delta \cap N(\Gamma) \subseteq F$ and $\Delta$ includes exactly one cell of $\Gamma$.}
+
+\textit{Proof.} By (6.3), there is a disc $\Delta \subseteq \Sigma$ with $F \subseteq bd(\Delta) \subseteq F \cup bd(\Sigma)$ such that $\alpha(\Delta)$ is small. But (7.4) applied to $\Delta$ does not yield a truer portrayal, and so the result holds. $\square$
+
+\stmt
+(8.4) $dom(\gamma) = N(\Gamma)$.
+
+\textit{Proof.} Suppose that $n \in N(\Gamma) - dom(\gamma)$. If $n \in \tilde{c}$ and $c$ is internal then shrinking $c$ from $n$ yields a truer portrayal, a contradiction. Thus, $n \in \tilde{c}$ for only two cells $c$, both border cells. But this contradicts (8.3). $\square$
+
+\stmt
+(8.5) \textit{For every $\Gamma$-normal $O$-arc $F \subseteq \Sigma$ with $|F \cap N(\Gamma)| \le 3$, there is a disc $\Delta \subseteq \Sigma$ with $F = bd(\Delta)$ such that $\alpha(\Delta)$ is small, and either}
+
+\hspace*{12pt}(i) \textit{$\Delta \cap N(\Gamma) \subseteq F$ and $\Delta$ includes at most one cell of $\Gamma$, or}
+
+\hspace*{12pt}(ii) \textit{$|F \cap N(\Gamma)| = 3$, and $|\tilde{c}| = 2$ for every cell $c \subseteq \Delta$.}
+
+\textit{Proof.} By (6.4), there is a disc $\Delta \subseteq \Sigma$ with $F = bd(\Delta)$ such that $\alpha(\Delta)$ is small. We may assume that $\Delta$ includes some cell, for otherwise (i) holds, by (8.2). We may therefore assume that there is a cell $c \subseteq \Delta$ with $|\tilde{c}| \ge |F \cap N(\Gamma)|$, for otherwise (ii) holds, by (8.2). But (7.2) applied to $\Delta$ does not yield a truer portrayal, and so (i) holds, as required. $\square$
+
+\stmt
+(8.6) \textit{If $c$ is an internal cell, then $|\bar{c} \cap bd(\Sigma)| \le 2$, and if equality holds then $|\tilde{c}| = 3$ and the two members of $\bar{c} \cap bd(\Sigma)$ are consecutive.}
+
+\textit{Proof.} From (8.3), any two members of $\bar{c} \cap bd(\Sigma)$ lie on the same cuff, and are consecutive nodes in that cuff. It follows that $|\bar{c} \cap bd(\Sigma)| \le 2$ (unless $\bar{c} \cap bd(\Sigma) = N(\Gamma)$ and $|C(\Gamma)| \le 4$, which is easily seen to be impossible). If $|\bar{c} \cap bd(\Sigma)| = 2$, then again there is an $I$-arc violating (8.3) unless $|\tilde{c}| \ge 3$, as required. $\square$
+
+We define $C^*(\Gamma)$ to be the set of all $c \in C(\Gamma)$ such that there is no $c' \in C(\Gamma)$ with $c' \ne c$ and $\tilde{c} \subseteq \tilde{c}'$.
+
+\stmt
+(8.7) \textit{For every node $n$ there are at least two cells $c \in C^*(\Gamma)$ with $n \in \tilde{c}$, and if there are only two and $|\tilde{c}| = 2$ for one of them, then $c$ is a border cell.}

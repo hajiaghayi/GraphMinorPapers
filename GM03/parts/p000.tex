@@ -1,0 +1,26 @@
+\sectionhead{\textbf{About this copy}}
+
+This is a corrected copy of the paper cited above. The text is retyped from the printed paper.
+It keeps the paper's wording and the numbering of its results, equations and footnotes, and a
+marker such as \origpagemark{$N$} shows where page $N$ of the printed paper begins.
+
+The corrections come from a formalization of the Graph Minors series in the Lean proof
+assistant, \href{https://github.com/mahdi-jfri/GraphMinor}{github.com/mahdi-jfri/GraphMinor},
+in which the results of this paper are proved. Where the formalization found that a statement
+or a step of a proof is wrong as printed, this copy corrects it in place. Where the paper leaves a proof or a step to the reader, this copy adds it, also in blue. Text \del{struck
+through in red} is removed and text \fix{in blue} is inserted. Each change has a note, marked
+\textcolor{fixcolor}{\sffamily F1}, \textcolor{fixcolor}{\sffamily F2}, \dots, that gives the
+reason. The file
+\href{https://github.com/mahdi-jfri/GraphMinor/blob/main/corrections/GM03.md}{corrections/GM03.md}
+of the formalization describes each correction in full. Each note, and each item in the list below, begins with the kind of the change. A \kindname{misprint} is a wrong symbol, index or word. A \kindname{statement} is a result or a claim of the text that is false as printed. A \kindname{degenerate} is a statement that fails only in a trivial case, such as an empty graph or a parameter equal to~$0$. A \kindname{gap} is a step of a proof that does not follow as written. A \kindname{missing} is a proof that the paper omits, leaves to the reader or only sketches, and that this copy adds.
+
+The corrections and added proofs, in the order of the pages:
+\begin{enumerate}\setlength{\itemsep}{1pt}
+\item \kindtag{fix:2.2-claim2-proof-added}\hyperref[fix:2.2-claim2-proof-added]{Proof of (2.2), Claim (2), pages 53--54}: the verification that the enlarged graph satisfies (i)--(iv), including the radius, is added.
+\item \kindtag{fix:2.3-proof-added}\hyperref[fix:2.3-proof-added]{Proof of (2.3), page 55}: the omitted part is added.
+\item \kindtag{fix:2.5-center}\hyperref[fix:2.5-center]{Proof of (2.5), page 55}: in the definition of $t'$, ``if $t'$ is not the center'' becomes ``if $t$ is not the center''.
+\item \kindtag{fix:2.5-proof-added}\hyperref[fix:2.5-proof-added]{Proof of (2.5), pages 55--56}: the verification of the tree-decomposition is added.
+\item \kindtag{fix:2.6-proof-added}\hyperref[fix:2.6-proof-added]{Proof of (2.6), page 56}: the proof is added.
+\item \kindtag{fix:2.8-proof-added}\hyperref[fix:2.8-proof-added]{Proof of (2.8), page 56}: the proof is added.
+\item \kindtag{fix:3-sleeve}\hyperref[fix:3-sleeve]{Section 3, page 59}: in the definition of a sleeve union, $s$ is the least \emph{positive} integer with $2s\ge r$, so that the cylinder exists also for $r=0$.
+\end{enumerate}

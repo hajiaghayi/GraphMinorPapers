@@ -1,0 +1,29 @@
+\origpage{246}{ROBERTSON AND SEYMOUR}
+\noindent is no $(A, B) \in \mathscr{T}$ of order $< |X|$ with $X \subseteq V(A)$. Our revised form of (3.1) is the following.
+
+\stmt
+(3.2) \textit{For every connected surface $\Sigma$ and all integers $t \ge 0$ and $z \ge 0$, there exists an integer $\theta \ge 1$ such that the following is true. Let $\Delta_1, \dots, \Delta_t$ be mutually disjoint closed discs in $\Sigma$, and let $\Gamma$ be a $2$-cell drawing in $\Sigma$ such that $U(\Gamma) \cap \Delta_i = V(\Gamma) \cap \text{bd}(\Delta_i)$ for $1 \le i \le t$. Let $|Z| \le z$, where}
+\begin{equation*}
+Z = \bigcup_{1 \le i \le t} V(\Gamma) \cap \text{bd}(\Delta_i),
+\end{equation*}
+\textit{and let $(Z_j \colon 1 \le j \le p)$ be a partition of $Z$ satisfying the topological feasibility condition above. Let $\mathscr{T}$ be a respectful tangle of order $\ge \theta$ in $\Gamma$, with metric $d$, such that}
+
+\hspace*{12pt}(i) \textit{$d(r_i, r_j) \ge \theta$ for $1 \le i < j \le t$, where $r_i$ is the region of $\Gamma$ meeting $\Delta_i$ for $1 \le i \le t$, and}
+
+\hspace*{12pt}(ii) \textit{$V(\Gamma) \cap \text{bd}(\Delta_i)$ is free for $1 \le i \le t$.}
+
+Then (*) holds.
+
+\textit{Proof.} We assume first that either $\Sigma$ is not a sphere or $t \ge 3$. Choose $N$ satisfying (3.1) and let $\theta = 2N + 1$. We shall verify (3.1) (i)-(vi). Let $K$ be a radial drawing of $\Gamma$. First, we observe:
+
+\hspace*{12pt}(1) \textit{Let $\phi \colon S^1 \to \Sigma$ be continuous, of length $< \theta$, with $|\phi|$ $\Gamma$-normal and $|\phi| \subseteq \Sigma^*$. Let $F_1$, $F_2 \subseteq |\phi|$ be $O$-arcs, and let $\Delta_i \subseteq \text{ins}(F_1)$, $\Delta_j \subseteq \text{ins}(F_2)$, say, where $1 \le i, j \le t$. Then $i = j$.}
+
+\textit{Subproof.} Let $v_i$, $v_j \in V(K)$ with $v_i \in r_i$, $v_j \in r_j$. Let $W$ be a trace of $\phi$. Now $\Delta_i \subseteq \text{ins}(F_1)$ and so $r_i \cap \text{ins}(F_1) \ne \emptyset$; therefore, $r_i \cap \text{ins}(W) \ne \emptyset$ by (2.1). Similarly $r_j \cap \text{ins}(W) \ne \emptyset$, and so $d(r_i, r_j) < \theta$. From hypothesis (i) we deduce that $i = j$. This proves (1).
+
+\hspace*{12pt}(2) \textit{If $F \subseteq \Sigma^*$ is a $\Gamma$-normal $O$-arc with $|F \cap V(\Gamma)| < \theta$ and $F$ bounds a closed disc $\Delta \subseteq \Sigma$ which includes at most one of $\Delta_1, \dots, \Delta_t$, then $\Delta = \text{ins}(F)$.}
+
+\textit{Subproof.} By (1), $\text{ins}(F)$ is such a disc. If there is another, then $\Sigma$ is a sphere and $t \le 2$, a contradiction. This proves (2).
+
+Now we verify (3.1)(i)-(vi). Let $F$ be as in (3.1)(i). Let $\Delta = \text{ins}(F)$; then by (1), $\Delta$ includes at most one of $\Delta_1, \dots, \Delta_t$. This verifies (3.1)(i). For (3.1)(ii), (iii), suppose that one of them is false. Then there is a continuous $\phi \colon S^1 \to \Sigma$ of length $\le 2N$, with $|\phi|$ $\Gamma$-normal and $|\phi| \subseteq \Sigma^*$, and there are $F_1$, $F_2$, $\Delta_i$, $\Delta_j$ as in (1), where $i \ne j$. But this contradicts (1), since $\theta > 2N$.
+
+To verify (3.1)(iv) let $F_1$, $F_2$, $F_3$, $D_1$, $D_2$, $D_3$ be as in (3.1)(iv). By (2), $D_1 = \text{ins}(F_2 \cup F_3)$, $D_2 = \text{ins}(F_3 \cup F_1)$, $D_3 = \text{ins}(F_1 \cup F_2)$. But then $D_1 \cup D_2 \cup D_3 = \Sigma$ contrary to the second tangle axiom. To verify (3.1)(v), let $F$

@@ -1,0 +1,26 @@
+\origpage{259}{GRAPH MINORS. VIII}
+\noindent so is incident with at least two edges of $H'$ not in $E(T)$. It follows that $u$ has valency $\ge 3$ in $H_i$. We deduce that $H_i$ is obtained from $H_{i-1}$ by splitting a vertex, and so $H'$ is obtained from $H$ by splitting vertices, as required. $\square$
+
+For any graph $H$, let $Z(H)$ denote the class of all graphs which can be obtained from $H$ by splitting vertices.
+
+\stmt
+(2.3) \textit{For any graph $H$, $Z(H)$ is finite up to isomorphism.}
+
+\textit{Proof.} For any graph $G$, define $N(G)$ to be $2 |E(G)| - 3 |V'|$ where $V'$ is the set of vertices of $G$ with valency $\ge 3$. It is easy to see that $N(G) \ge 0$, and that if $G$ is obtained from $H$ by splitting a vertex then $N(G) < N(H)$. The result follows. $\square$
+
+\textit{Proof of} (2.1). If $H$ is minor-minimal without property $P$, then it is certainly minimal without $P$ under topological containment, and so $S(P) \subseteq T(P)$. Suppose now that $G \in T(P)$. We know that $G$ does not have property $P$, and so it has a minor $H \in S(P)$. By (2.1), there is a graph $H' \in Z(H)$ which is topologically contained in $G$. But $H'$ does not have $P$, since $H$ is a minor of $H'$, and yet $G \in T(P)$; thus $G = H'$. If follows that $G \in Z(H)$. Hence
+\begin{equation*}
+S(P) \subseteq T(P) \subseteq \bigcup (Z(H) : H \in S(P)).
+\end{equation*}
+But by (2.2), $Z(H)$ is finite up to isomorphism for each graph $H$; and the result follows. $\square$
+
+\sectionhead{3. Well-Quasi-Orders}
+
+We state in this section some basic results about well-quasi-orders which we shall need for our argument. For proofs, see [4].
+
+A quasi-order $\mathbf{Q} = (Q, \le)$ is a class $Q$ together with a transitive, reflexive relation $\le$. (It becomes a partial order if we also require $\le$ to be antisymmetric.) A quasi-order $(Q, \le)$ is a well-quasi-order if for every countable sequence $q_1, q_2, \dots$ of members of $Q$ there exist $j > i \ge 1$ such that $q_i \le q_j$.
+
+\stmt
+(3.1) \textit{If $\mathbf{Q} = (Q, \le)$ is a well-quasi-order then every countable sequence $q_1, q_2, \dots$ of members of $Q$ has a countable subsequence $q_{i_1}, q_{i_2}, \dots$ (where $i_1 < i_2 < \dots$) such that $q_{i_1} \le q_{i_2} \le \dots$.}
+
+If $\mathbf{Q}_1 = (Q_1, \le_1)$ and $\mathbf{Q}_2 = (Q_2, \le_2)$ are quasi-orders, we define $\mathbf{Q}_1 \times \mathbf{Q}_2 = (Q_1 \times Q_2, \le)$, where $(p_1, p_2) \le (q_1, q_2)$ if $p_1 \le_1 q_1$ and $p_2 \le_2 q_2$.

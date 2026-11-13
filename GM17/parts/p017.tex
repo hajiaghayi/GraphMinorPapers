@@ -1,0 +1,33 @@
+\origpage{178}{ROBERTSON AND SEYMOUR}
+Since in both cases we have obtained a contradiction, it follows that there is no such $v, n'$, as required. $\square$
+
+\sectionhead{7. \textsc{Some} \textsc{Constructions}}
+
+Now we give three ways of making new portrayals from old ones, which will be of use later.
+
+\stmt
+(7.1) \textit{Let $\pi = (\Sigma, \Gamma, \alpha, \beta, \gamma)$ be a $\mathcal{T}$-central portrayal of a hypergraph $G$. Let $\Delta \subseteq \Sigma$ be a disc with $bd(\Delta)$ $\Gamma$-normal and $|bd(\Delta) \cap N(\Gamma)| \le 1$, such that $\alpha(\Delta)$ is small. Let $c' \in C(\Gamma)$ with $c' \subseteq \Sigma - \Delta$, chosen with $\tilde{c}' \cap bd(\Delta) \ne \emptyset$ if possible. If $\tilde{c}' \cap bd(\Delta) \ne \emptyset$, let $\Gamma' = (U(\Gamma) \cap \overline{\Sigma - \Delta}, N(\Gamma) \cap \overline{\Sigma - \Delta})$. If $\tilde{c}' \cap bd(\Delta) = \emptyset$, let $\Gamma' = (U(\Gamma) - \Delta, N(\Gamma) - \Delta)$. Define}
+\begin{align*}
+\alpha'(c') &= \alpha(c') \cup \alpha(\Delta) \\
+\alpha'(c) &= \alpha(c) \quad (c \in C(\Gamma') - \{c'\}) \\
+\gamma' &= \gamma \mid N(\Gamma').
+\end{align*}
+\textit{Then $\pi' = (\Sigma, \Gamma', \alpha', \beta, \gamma')$ is a $\mathcal{T}$-central portrayal of $G$ resembling $\pi$.}
+
+The proof is clear.
+
+\stmt
+(7.2) \textit{Let $\pi = (\Sigma, \Gamma, \alpha, \beta, \gamma)$ be a $\mathcal{T}$-central portrayal of a hypergraph $G$. Let $\Delta \subseteq \Sigma$ be a disc, with $bd(\Delta)$ $\Gamma$-normal and $|bd(\Delta) \cap N(\Gamma)| \le 3$, such that $\alpha(\Delta)$ is small. Define $\Gamma' = (U(\Gamma) \cup \Delta, N(\Gamma) \cap \overline{\Sigma - \Delta})$; thus $c' = \Delta - (bd(\Delta) \cap N(\Gamma))$ is a cell of $\Gamma'$. Let $A \subseteq G$ be minimal such that $\alpha(\Delta) \subseteq A$ and $\gamma(N(\Gamma) \cap bd(\Delta)) \subseteq V(A)$. Define}
+\begin{align*}
+\alpha'(c') &= A \\
+\alpha'(c) &= \alpha(c) \quad (c \in C(\Gamma') - \{c'\}) \\
+\gamma' &= \gamma \mid N(\Gamma').
+\end{align*}
+\textit{Then $\pi' = (\Sigma, \Gamma', \alpha', \beta, \gamma')$ is a $\mathcal{T}$-central portrayal of $G$ resembling $\pi$.}
+
+Again, the proof is clear.
+
+We shall need a third construction, and to prove that it works we need the following lemma.
+
+\stmt
+(7.3) \textit{Let $\pi = (\Sigma, \Gamma, \alpha, \beta, \gamma)$ be a portrayal of a hypergraph $G$. Let $n_1, n_2$ be distinct nodes bordering a cuff $\Theta$, and let $F \subseteq \Sigma$ be a $\Gamma$-normal $I$-arc with}

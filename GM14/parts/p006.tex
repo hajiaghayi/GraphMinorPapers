@@ -1,0 +1,30 @@
+\origpage{28}{ROBERTSON AND SEYMOUR}
+\noindent observation allows us to use the metric without mentioning the corresponding atoms of $K$.
+
+\stmt
+(3.1) \textit{If $W$ is a closed walk of $K$ with length $<2\theta$ (so that $ins(W)$ is defined), and $x \in A(H)$, and $x'$ is the corresponding atom of $K$, then $x' \subseteq ins(W)$ if and only if $x \cap ins(W) \ne \emptyset$.}
+
+The proof is clear. \fix{We give the details. Let $K'$ be the subgraph of $K$ formed by the vertices and edges of $W$, so that $ins(W)$ is the union of $U(K')$ and the discs $ins(C)$ for the circuits $C$ of $K'$. Since $x \subseteq x'$ unless $x$ is a region of $H$, and $x' \subseteq x$ if $x$ is a region, the condition $x' \subseteq ins(W)$ implies $x \cap ins(W) \ne \emptyset$. For the converse, let $y \in x \cap ins(W)$. If $x = \{v\}$ with $v \in V(H)$, then $x' = x \subseteq ins(W)$. Suppose that $x \in E(H)$. Then $y \notin U(K)$, since $U(H) \cap U(K) = V(H)$, and so $y \in ins(C)$ for some circuit $C$ of $K'$. Now $x'$ is a region of $K$, and so it is connected and disjoint from $U(C)$, which is the boundary of $ins(C)$. Since $y \in x' \cap ins(C)$, it follows that $x' \subseteq ins(C) \subseteq ins(W)$. Finally, suppose that $x \in R(H)$, and let $x' = \{w\}$. The only points of $U(K)$ in $x$ are $w$ and the points of the edges of $K$ incident with $w$. Hence if $y \in U(K')$, then $w \in V(K') \subseteq ins(W)$. Otherwise $y \in ins(C)$ for some circuit $C$ of $K'$. If $w \in V(C)$, then $w \in ins(C)$. If not, then $x$ is disjoint from $U(C)$, since $C$ has no edge incident with $w$. Since $x$ is connected and meets $ins(C)$, it follows that $x \subseteq ins(C)$, and so $w \in ins(C) \subseteq ins(W)$.}\fixnote{fix:3.1-proof-added}{The paper says only that the proof of (3.1) is clear. The argument above is the one used in the formalization.}
+
+Let $H$ be a 2-cell drawing in $\Sigma$, and let $\mathscr{T}$ be a respectful tangle in $H$ of order $\theta$, with metric $d$. Let $z \in A(H)$ and let $\lambda \ge 0$ be an integer. A \textit{$\lambda$-zone around $z$} is an open disc $\Lambda \subseteq \Sigma$ with $z \subseteq \Lambda$, such that $bd(\Lambda)$ is an $O$-arc and \del{hence} $\overline{\Lambda}$ is a closed disc,\fixnote{fix:3-zone}{That $\overline{\Lambda}$ is a closed disc does not follow from the other conditions. In the projective plane, seen as a closed disc with opposite boundary points identified, the image of the open disc is an open disc $\Lambda$ whose frontier is an $O$-arc, but $\overline{\Lambda}$ is the whole projective plane. So the condition is made part of the definition. Every $\lambda$-zone built in Section 9 has this property, so the results about $\lambda$-zones hold as printed.} $bd(\Lambda) \subseteq U(H)$, $d(z, x) \le \lambda$ for all $x \in A(H)$ with $x \subseteq \overline{\Lambda}$, and if $z \in E(H)$ then $\lambda \ge 2$. A \textit{$\lambda$-zone (for $H$)} is a subset of $\Sigma$ which is a $\lambda$-zone around $z$ for some $z \in A(H)$. Thus, if $\Lambda$ is a $\lambda$-zone then $H \cap bd(\Lambda)$ is a circuit.
+
+Let $\Lambda$ be a $\lambda$-zone around $z$ and let $H' = H \cap (\Sigma - \Lambda)$. Since $H \cap bd(\Lambda)$ is a circuit it follows that $\Lambda$ is a region of $H'$, and every other region of $H'$ is a region of $H$. Consequently $H'$ is a 2-cell drawing in $\Sigma$. We say that $\mathscr{T}'$ is a \textit{tangle of order $\theta - 4\lambda - 2$ obtained by clearing $\Lambda$} if $\mathscr{T}'$ is a tangle in $H'$ of order $\theta - 4\lambda - 2$, and
+
+\hspace*{12pt}(i) $\mathscr{T}'$ is respectful, and has metric $d'$ say
+
+\hspace*{12pt}(ii) $(A \cap H', B \cap H') \in \mathscr{T}'$ for all $(A, B) \in \mathscr{T}$ of order $<\theta - 4\lambda - 2$, and
+
+\hspace*{12pt}(iii) if $x, y \in A(H)$ and $x', y' \in A(H')$ with $x \subseteq x'$ and $y \subseteq y'$, then $d(x, y) \ge d'(x', y') \ge d(x, y) - 4\lambda - 2$.
+
+It was shown in [6, theorem (7.10)] that
+
+\stmt
+(3.2) \textit{If $\theta \ge 4\lambda + 3$ then there is a unique tangle of order $\theta - 4\lambda - 2$ obtained by clearing $\Lambda$.}
+
+In general, if $\mathscr{T}$ is a tangle of order $\theta$ in a graph $H$ then $X \subseteq V(H)$ is \textit{free with respect to $\mathscr{T}$} if $|X| \le \theta$ and there is no $(A, B) \in \mathscr{T}$ of order $<|X|$ with $X \subseteq V(A)$. It is easy to see and was shown in [4, theorem (12.2)] that any subset of a free set is free.
+
+If $H$ is a subgraph of $G$, an \textit{$H$-path} is a path of $G$ with distinct ends both in $V(H)$ and with no other vertex or edge in $H$. Let $H$ be a subgraph of $G$, and let $H$ be a 2-cell drawing in $\Sigma$. Let $\mathscr{T}$ be a respectful tangle in $H$. A region $r$ of $H$ is an \textit{eye of $H$(in $G$) with respect to $\mathscr{T}$} if
+
+\hspace*{12pt}(i) there is a circuit $C$ of $H$ with $U(C) = bd(r)$
+
+\hspace*{12pt}(ii) there are distinct vertices $a, b, c, d$ occurring in $V(C)$ in that order, and $\{a, b, c, d\}$ is free with respect to $\mathscr{T}$, and

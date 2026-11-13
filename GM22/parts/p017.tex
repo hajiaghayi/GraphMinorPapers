@@ -1,0 +1,34 @@
+\origpage{546}{N. Robertson, P. Seymour / Journal of Combinatorial Theory, Series B 102 (2012) 530--563}
+\hspace*{12pt}$\bullet$ The concept of insulation is not enough any more; we need to work with a tangle and its metric.
+
+\hspace*{12pt}$\bullet$ The part of $G$ around the vertex $v^*$ we hope to delete is no longer really planar; it is just planar ``up to 3-separations''. Thus, it breaks into a set of subgraphs $\mathcal{A}$, each attaching to the others only via a set of at most three vertices, that fit together as a ``planar hypergraph'', a system of discs in $\Sigma$.
+
+\hspace*{12pt}$\bullet$ We will still have a subgraph that really is planar (and is called $\Gamma$ below), but this is by no means all there is in $G$ close to $v^*$. In the application this subgraph is just a large wall (a subdivision of a large piece of a hexagonal grid), and it is included mainly to give us the tangle and its metric. A closer analogue to the $\Gamma$ of 3.1 is the planar hypergraph above.
+
+Thus, we need to consider a system of subgraphs of a graph with the following properties (J1)--(J6). ($\Gamma$ below is a drawing, but it is also a subgraph of the digraph $G$, and so its edges inherit directions from $G$. We therefore regard $\Gamma$ both as a drawing and as a digraph.)
+
+\hspace*{12pt}(J1) $(G, \omega)$ is a rooted digraph where $\omega$ is the sequence $w_1, \dots, w_q$; $w_1, \dots, w_q$ are all distinct and $W = \{w_1, \dots, w_q\}$; and $N_W$ is the graph with vertex set $W$ and no edges.
+
+\hspace*{12pt}(J2) $\mathcal{A}$ is a set of subdigraphs of $G$; for all distinct $A, A' \in \mathcal{A}$, $E(A \cap A') = \emptyset$; for all $A \in \mathcal{A}$, $W \subseteq V(A)$ and $\pi(A)$ is a sequence of distinct vertices of $A$ not in $W$, with one, two or three terms, and $\bar{\pi}(A)$ is the set of terms of $\pi(A)$; and for all distinct $A, A' \in \mathcal{A}$,
+\begin{equation*}
+V(A \cap A') = (\bar{\pi}(A) \cap \bar{\pi}(A')) \cup W.
+\end{equation*}
+\hspace*{12pt}(J3) $\Gamma \subseteq G \setminus W$ is a directed 2-cell drawing in a sphere $\Sigma$; an orientation of $\Sigma$ is specified, called ``clockwise''; $\mathcal{T}$ is a tangle in $\Gamma$ of order $\ge \theta \ge 4$, $ins$ is defined by $\mathcal{T}$, and $d$ is the metric of $\mathcal{T}$.
+
+\hspace*{12pt}(J4) For each $A \in \mathcal{A}$, $D(A) \subseteq \Sigma$ is a closed disc such that $bd(D(A))$ is $\Gamma$-normal, $D(A) = ins(bd(D(A)))$, $\Gamma \cap D(A) = \Gamma \cap A$, $\bar{\pi}(A) = bd(D(A)) \cap V(G)$, and if $|\bar{\pi}(A)| = 3$ then $\pi(A)$ enumerates $\bar{\pi}(A)$ in clockwise order around $D(A)$; and for all distinct $A, A' \in \mathcal{A}$, $D(A) \cap D(A') = \bar{\pi}(A) \cap \bar{\pi}(A')$.
+
+\hspace*{12pt}(J5) $N = \Gamma \cup N_W \cup \bigcup(A : A \in \mathcal{A})$; $(N, K)$ is a separation of $G$ and $W \subseteq V(N \cap K)$; $\Delta \subseteq \Sigma$ is a closed disc with $bd(\Delta) \subseteq U(\Gamma)$; $d(v, \Sigma \setminus \Delta) \ge \theta$ for all $v \in V(\Gamma \cap K)$; $d(D(A), \Sigma \setminus \Delta) \ge \theta$ for all $A \in \mathcal{A}$ with $A \cap K \ne N_W$; and $v^* \in V(\Gamma)$ with $v^* \notin \Delta$.
+
+\hspace*{12pt}(J6) $\delta \ge 0$ is an integer; $(H, \chi)$ is a rooted digraph with detail $\le \delta$; $\phi$ is a model of $(H, \chi)$ in $(G, \omega)$; for each $v \in V(H)$, $\phi(v) \cap (K \cup \bigcup(A : A \in \mathcal{A}))$ is non-null; and for each $e \in E(H)$, $\phi(e) \in E(K \cup \bigcup(A : A \in \mathcal{A}))$.
+
+\textbf{7.1.} \textit{Let (J1)--(J6) hold, and let $K_1 = K \cup \bigcup(A \in \mathcal{A} : d(D(A), \Sigma \setminus \Delta) \ge \theta)$. Then} (i) $d(V(\Gamma \cap K_1), \Sigma \setminus \Delta) \ge \theta$, (ii) \textit{for $A \in \mathcal{A}$, if $d(D(A), \Sigma \setminus \Delta) < \theta$ then $E(A \cap K_1) = \emptyset$ and $V(A \cap K_1) \subseteq \bar{\pi}(A) \cup W$,}
+
+\hspace*{12pt}(iii) \textit{for $A \in \mathcal{A}$, if $d(D(A), \Sigma \setminus \Delta) < \theta - 3$ then $A \cap K_1 = N_W$.}
+
+\textbf{Proof.} To prove (i), let $v \in V(\Gamma \cap K_1)$. If $v \in V(K)$, then $v \in V(\Gamma \cap K)$, and so $d(v, \Sigma \setminus \Delta) \ge \theta$ by (J5). If $v \notin V(K)$, then $v \in V(A)$ for some $A \in \mathcal{A}$ with $d(D(A), \Sigma \setminus \Delta) \ge \theta$; but then $v \in V(A \cap \Gamma) \subseteq D(A)$ by (J4), and so
+\begin{equation*}
+d(v, \Sigma \setminus \Delta) \ge d(D(A), \Sigma \setminus \Delta) \ge \theta
+\end{equation*}
+as required. This proves (i). For (ii), let $A \in \mathcal{A}$ with $d(D(A), \Sigma \setminus \Delta) < \theta$. By (J5), $A \cap K = N_W$; and for all $A' \in \mathcal{A}$ with $d(D(A), \Sigma \setminus \Delta) \ge \theta$, since $A \ne A'$ it follows from (J2) that $E(A \cap A') = \emptyset$ and $V(A \cap A') \subseteq \bar{\pi}(A) \cup W$. This proves (ii).
+
+For (iii), let $A \in \mathcal{A}$ with $d(D(A), \Sigma \setminus \Delta) < \theta - 3$, and suppose that $A \cap K_1 \ne N_W$. By the argument of (ii), $A \cap K$ is null, and so there exists $A' \in \mathcal{A}$ with $d(D(A'), \Sigma \setminus \Delta) \ge \theta$ such that $A \cap A' \ne N_W$. Since $A \ne A'$, by (J2), $\bar{\pi}(A) \cap \bar{\pi}(A') \ne \emptyset$. By (J4), $D(A) \cap D(A') \ne \emptyset$. Choose $z \in \delm{Z(\Gamma)}\fix{A(\Gamma)}$\fixnote{fix:7.1-proof}{No $Z(\Gamma)$ is defined. The next sentence chooses $y \in A(\Gamma)$, and the proof uses $d(y, z)$ and $d(z, \Sigma \setminus \Delta)$, which need $z$ to be an atom.} with $D(A) \cap D(A') \cap z \ne \emptyset$. Since $d(D(A), \Sigma \setminus \Delta) < \theta - 3$, there exists $y \in A(\Gamma)$ with $y \cap D(A) \ne \emptyset$

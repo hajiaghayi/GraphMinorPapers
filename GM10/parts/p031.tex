@@ -1,0 +1,21 @@
+\origpage{183}{GRAPH MINORS, X}
+\noindent and so $T'_2 \not\subseteq T_1$ by the second tangle axiom; thus, $T_2 \cap T'_2$ is non-null, as required.
+
+\hspace*{12pt}(4) \textit{If $e \in E(T)$ has ends $x, y \in V(T)$, and $x \in H_i$, $y \notin H_i$, then $e$ is $i$-relevant.}
+
+For since $x \in H_i$ and $y \notin H_i$, some edge of $T$ is directed towards $x$ and not towards $y$. The only possible such edge is $e$, and so $e$ is directed and hence $i$-relevant.
+
+\hspace*{12pt}(5) \textit{For $1 \le i, j \le n$, and $e \in E(T)$, $e$ makes a separation which distinguishes $\mathscr{T}_i$ from $\mathscr{T}_j$ if and only if $e$ lies on the (unique) minimal path of $T$ between $V(H_i)$ and $V(H_j)$ and is $i$- and $j$-relevant.}
+
+For if $e$ makes a separation which distinguishes $\mathscr{T}_i$ from $\mathscr{T}_j$, this separation has order less than the smaller of the orders of $\mathscr{T}_i, \mathscr{T}_j$, and so $e$ is $i$-relevant and $j$-relevant, and from (2), $e$ lies on the unique minimal $H_i - H_j$ path in $T$. Conversely, if $e$ lies on this path and is $i$- and $j$-relevant, then it makes a separation $(A, B)$ with $(A, B) \in \mathscr{T}_i$ and $(B, A) \in \mathscr{T}_j$, by definition of $H_i$ and $H_j$, as required.
+
+\hspace*{12pt}(6) \textit{For $1 \le i \le n$, $|H_i| = 1$.}
+
+For suppose that $|H_i| \ge 2$ for some $i$. Choose $t_1, t_2 \in H_i$, distinct and adjacent in $T$ (this is possible by (3)) joined by an edge $e$. Then $e$ is not $i$-relevant. Choose $j, k$ with $j \ne k$ and $1 \le j, k \le n$ such that $e$ makes the $(\mathscr{T}_j, \mathscr{T}_k)$-distinction. Let $P$ be the minimal $H_j - H_k$ path in $T$. Then $e \in E(P)$ by (5), and so $j, k \ne i$. Let $f \in E(T)$ make the $(\mathscr{T}_i, \mathscr{T}_j)$-distinction. Then by (5), $f \in E(P)$. Since $f$ is $i$-relevant and $e$ is not, $f$ makes a separation of order (and hence $\lambda$-order) strictly smaller than that of the $(\mathscr{T}_j, \mathscr{T}_k)$-distinction, and by (5) makes a separation of that order which distinguishes $\mathscr{T}_j$ from $\mathscr{T}_k$, a contradiction, as required.
+
+\hspace*{12pt}(7) $H_1 \cup \dots \cup H_n = V(T)$.
+
+For suppose that $t_0 \in V(T) - (H_1 \cup \dots \cup H_n)$. Since $n \ne 0$, $|V(T)| \ge 2$, and so there is a neighbour of $t_0$ in $T$. Let the edges of $T$ incident with $t_0$ be $e_1, \dots, e_k$, let $T_p$ be the component of $T \setminus e_p$ not containing $t_0$, and let $T'_p$ be the other component of $T \setminus e_p$ ($1 \le p \le k$). The separations made by $e_1, \dots, e_k$ are all distinct, since each of them is the $(\mathscr{T}_i, \mathscr{T}_j)$-distinction for some $i, j$, and the $(\mathscr{T}_i, \mathscr{T}_j)$-distinction is made by a unique edge, from our initial choice of the tree-decomposition. Thus we may assume, by the first tie-breaker axiom, that the separations made by $e_1$ have $\lambda$-order strictly more than the separations made by $e_2, \dots, e_k$. Choose $i, j$ with $i \ne j$ such that
+\begin{equation*}
+\left( \bigcup_{t \in V(T_1)} \tau(t), \bigcup_{t \in V(T'_1)} \tau(t) \right)
+\end{equation*}

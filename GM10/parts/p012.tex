@@ -1,0 +1,15 @@
+\origpage{164}{ROBERTSON AND SEYMOUR}
+\noindent the other end of $e_0$. Then $\alpha(v, e_0) = \emptyset$. If $v$ is also a leaf, then either $E = \emptyset$ or $E \in \mathscr{A}$, as required. We assume then that $v$ has two other neighbours $v_1, v_2$ in $T$; let $e_i$ be the edge joining $v$ and $v_i$ ($i = 1, 2$). Now since $(T, \alpha)$ is exact, $\alpha(v, e_0)$, $\alpha(v, e_1)$, $\alpha(v, e_2)$ are mutually disjoint and have union $E$. Since $\alpha(v, e_0) = \emptyset$, it follows that $\alpha(v_1, e_1) = \alpha(v, e_2)$ and $\alpha(v, e_1) = \alpha(v_2, e_2)$. Let $T'$ be obtained from $T$ by deleting $v$ and $v_0$ and adding a new edge $f$ joining $v_1$ and $v_2$. We define $\alpha'(v_1, f) = \alpha(v_1, e_1)$, $\alpha'(v_2, f) = \alpha(v_2, e_2)$, and otherwise $\alpha' = \alpha$; then $(T', \alpha')$ is an exact tree-labelling over $\mathscr{A}$ with $|V(T')| < |V(T)|$, a contradiction. $\square$
+
+\sectionhead{4. \textsc{Branch-width}}
+
+A \textit{branch-decomposition} of a hypergraph $G$ is a pair $(T, \tau)$, where $T$ is a ternary tree and $\tau$ is a bijection from the set of leaves of $T$ to $E(G)$. The \textit{order} of an edge $e$ of $T$ is the number of vertices $v$ of $G$ such that there are leaves $t_1, t_2$ of $T$ in different components of $T \setminus e$, with $\tau(t_1), \tau(t_2)$ both incident with $v$. The \textit{width} of $(T, \tau)$ is the maximum order of the edges of $T$, and the \textit{branch-width} $\beta(G)$ of $G$ is the minimum width of all branch-decompositions of $G$ (or 0 if $|E(G)| \le 1$, when $G$ has no branch-decompositions). For example, Fig. 1 shows a branch-decomposition with width 2 of a series-parallel graph.
+
+Let us prove some properties of branch-width. A graph $H$ is a \textit{minor} of a graph $G$ if $H$ can be obtained from a subgraph of $G$ by contracting edges.
+
+\stmt
+(4.1) \textit{If $H$ is a minor of a graph $G$, then $\beta(H) \le \beta(G)$.}
+
+\textit{Proof.} We may assume that $|E(H)| \ge 2$, for otherwise $\beta(H) = 0$. Let $(T, \tau)$ be a branch-decomposition of $G$ with width $\beta(G)$. Let $S$ be a minimal subtree of $T$ such that $\tau^{-1}(e) \in V(S)$ for all $e \in E(H)$, and let $T'$ be obtained from $S$ by suppressing all vertices of valency 2 (that is, for any vertex of valency 2 we delete it and add an edge joining its neighbours and continue this process until no such vertices remain). Let $\tau'$ be the restriction of $\tau$ to the set of leaves of $T'$; then $(T', \tau')$ is a branch-decomposition of $H$, and its width is $\le \beta(G)$, as is easily seen. The result follows. $\square$
+
+\origfig{figures/fig1}{270bp}{\textsc{Figure} 1}

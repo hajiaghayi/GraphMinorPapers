@@ -1,0 +1,34 @@
+\origpage{336}{N. Robertson, P.D. Seymour / Journal of Combinatorial Theory, Series B 92 (2004) 325--357}
+\noindent \textit{$\le k$ ends and $P_1 = (G_1, \mu_1, \Delta_1) \in \mathcal{F}_1$ so that $G_2 \setminus f = G_1 \setminus A$ and $\pi(A) = \mu_2(f)$ for some complemented rooted hypergraph $A \subseteq G_1$, and $P_2 \setminus \{f\} = P_1|(G_2 \setminus \{f\})$. Then $\mathcal{F}_2$ is well-behaved.}
+
+\textbf{Proof.} \fix{Since $\mathcal{F}_1$ is well-behaved, there exists $K_0$ such that $|\bar{\pi}(G)| \le K_0$ for every $(G, \mu, \Delta) \in \mathcal{F}_1$.} Let $\mathcal{F}_3$ be the set of all patchworks $(G_3, \mu_3, \Delta_3)$ such that $|\bar{\pi}(G_3)| \le \delm{k}\fix{K_0 + k}$ and there exists a march $\pi$ such that $((G_3^-, \pi),\allowbreak \mu_3, \Delta_3) \in \mathcal{F}_1$. By 4.5, $\mathcal{F}_3$ is well-behaved. Let $\mathcal{F}_4$ be related to $\mathcal{F}_3$ as $\mathcal{F}_2$ is to $\mathcal{F}_1$ in 4.11. By 4.11, $\mathcal{F}_4$ is well-behaved. Let $\mathcal{F}_5$ be related to $\mathcal{F}_4$ as $\mathcal{F}_2$ is to $\mathcal{F}_1$ in 4.6. By 4.6, $\mathcal{F}_5$ is well-behaved. \fix{Let $\mathcal{F}_6$ be related to the set of active members of $\mathcal{F}_5$ as $\mathcal{F}_2$ is to $\mathcal{F}_1$ in 4.5, with $K_0$ in place of $k$. By 4.5, $\mathcal{F}_6$ is well-behaved.} We claim that $\mathcal{F}_2 \subseteq \delm{\mathcal{F}_5}\fix{\mathcal{F}_6}$; for let $P_2 = (G_2, \mu_2, \Delta_2) \in \mathcal{F}_2$, and let $f$, $P_1$ be as in the statement of the theorem. \fix{Let $\pi'$ be the march formed by $\pi(G_1)$ followed by the terms of $\mu_2(f)$ not in $\bar{\pi}(G_1)$; for a patchwork $P$ whose hypergraph contains every term of $\pi'$, let $(P)'$ be $P$ with root march $\pi'$.} Then $((G_1^-, \delm{\mu_2(f)}\fix{\pi'}), \mu_1, \Delta_1) \in \mathcal{F}_3$, and so $\fix{(}P_2 \setminus f\fix{)'} \in \mathcal{F}_4$, and therefore $\fix{(}P_2\fix{)'} \in \mathcal{F}_5$\fix{, and $P_2 \in \mathcal{F}_6$ since $\pi(G_2) = \pi(G_1)$}. This proves that $\mathcal{F}_2 \subseteq \delm{\mathcal{F}_5}\fix{\mathcal{F}_6}$, and the result follows.\fixnote{fix:4.12-proof}{As printed, every member of $\mathcal{F}_4$ built from $((G_1^-, \mu_2(f)), \mu_1, \Delta_1)$ has root march $\mu_2(f)$, but $P_2 \setminus f$ has root march $\pi(G_2) = \pi(G_1)$. For instance, if $G_1$ has no roots and $f$ has an end, then $P_2 \setminus f \notin \mathcal{F}_4$. Also, 4.6 needs every end of $f$ to be a root. The inserted steps use the longer march $\pi'$, which contains $\pi(G_1)$ and every end of $f$, and then apply 4.5 once more to go back to $\pi(G_1)$. The member $(P_2)'$ of $\mathcal{F}_5$ is active, since $G_1$ is active and every vertex that $G_1 \setminus A$ shares with $A$ is a root of $A$, that is, a term of $\mu_2(f)$. So 4.12 holds as printed.} $\square$
+
+By $w$ applications of 4.12, we deduce
+
+\textbf{4.13.} \textit{Let $\mathcal{F}_1$ be a well-behaved set of active patchworks, let $k, w \ge 0$ and let $\mathcal{F}_2$ be a set of patchworks such that for each $P_2 = (G_2, \mu_2, \Delta_2) \in \mathcal{F}_2$ there exists $F \subseteq dom(\mu_2)$ with $|F| \le w$ and $P_1 = (G_1, \mu_1, \Delta_1) \in \mathcal{F}_1$, and a rooted location $\mathcal{L} = \{A_f : f \in F\}$ in $G_1$, such that}
+
+\hspace*{12pt}$\bullet$ \fix{$\pi(G_2) = \pi(G_1)$,}\fixnote{fix:4.13}{As printed, the first condition below is an equation of hypergraphs without roots, so nothing bounds the root march $\pi(G_2)$. With $w = 0$ and $F = \emptyset$, $\mathcal{F}_2$ could then contain patchworks with any number of roots, and no such set is well-behaved, since expansions keep the number of roots. In 4.12 the equation $G_2 \setminus f = G_1 \setminus A$ is one of rooted hypergraphs and gives $\pi(G_2) = \pi(G_1)$, so the added condition follows from $w$ applications of 4.12. It also holds at the one use of 4.13, in the proof of 5.5, where $G_1$ and $G_2$ have no roots.}
+
+\hspace*{12pt}$\bullet$ $G_2^- \setminus F = G_1^- \cap \bigcap((G_1 \setminus A)^- : A \in \mathcal{L})$,
+
+\hspace*{12pt}$\bullet$ $P_2 \setminus F = P_1|(G_2 \setminus F)$, and
+
+\hspace*{12pt}$\bullet$ for each $f \in F$, $\pi(A_f) = \mu_2(f)$ and $f$ has $\le k$ ends.
+
+\textit{Then $\mathcal{F}_2$ is well-behaved.}
+
+\sectionhead{5. Isolation modulo a subset}
+
+In the previous section we gave several ways to construct new well-behaved sets from old. Now, we use these constructions to begin to bridge the gap between what is given by the theorem of [3] and what is required by 3.1.
+
+If $G$ is a hypergraph or rooted hypergraph, we denote $V(G) \cup E(G)$ by $Z(G)$. Let $\mathcal{T}$ be a tangle in a hypergraph $G$, let $\lambda$ be a tie-breaker in $G$, let $\theta \ge 1$, and let $W \subseteq Z(G)$. We define $\mathcal{M}(\mathcal{T}, W, \theta)$ to be the set of all separations $(A, B) \in \mathcal{T}$ such that
+
+\hspace*{12pt}$\bullet$ $(A, B)$ has order $< \theta$ and $W \nsubseteq Z(B)$,
+
+\hspace*{12pt}$\bullet$ $(A, B)$ is the $(\mathcal{T}, \mathcal{T}')$-distinction for some tangle $\mathcal{T}'$,
+
+\hspace*{12pt}$\bullet$ there is no $(A', B') \in \mathcal{T}$ with $(A', B') \ne (A, B)$ satisfying the first two conditions with $A \subseteq A'$ and $B' \subseteq B$.
+
+\textbf{5.1.} \textit{Let $(C, D) \in \mathcal{M}(\mathcal{T}, W, \theta)$, and let $(A, B)$ be the $(\mathcal{T}, \mathcal{T}')$-distinction for some tangle $\mathcal{T}'$. Then either $A \subseteq C$ and $D \subseteq B$, or $A \subseteq D$ and $C \subseteq B$, or $C \subseteq A$ and $B \subseteq D$, and if $(A, B)$ has order $< \theta$ then one of the first two alternatives holds.}
+
+\textbf{Proof.} By theorems 9.4 and 10.2 of [2], either one of these three alternatives holds or $D \subseteq A$ and $B \subseteq C$; and this last is impossible since $(A, B), (C, D) \in \mathcal{T}$. If $(A, B)$ has order $< \theta$

@@ -1,0 +1,47 @@
+\origpage{44}{ROBERTSON AND SEYMOUR}
+\noindent and so
+\begin{align*}
+n&<\binom{\frac12\theta^2}{\theta}(\tfrac12\theta\cdot\theta!+\theta(\theta-1))\\
+&\le\theta^{2\theta-2}
+\end{align*}
+since $\theta\ge 6$, a contradiction, as required.
+\stmt
+(2.4). \textit{If $P_1,..., P_m$ are disjoint paths of $G\in\mathscr{F}_\theta$\fix{, where $m\ge\frac12\theta^2$}, and $B_1,..., B_n$ are disjoint
+connected subgraphs of $G$, and each $B_j$ meets at least $\frac12\theta^2$ of $P_1,..., P_m$, and
+for $1\le i\le m$ and for $1\le j<j'\le n$, all vertices of $B_j$ on $P_i$ occur before all
+vertices of $B_{j'}$, then $n<\theta^{2\theta-2}\binom{m}{\frac12\theta^2}$.}\fixnote{fix:2.4}{Without the added hypothesis the statement fails when $n=0$ and $m<\frac12\theta^2$, since then the binomial coefficient is $0$ and the conclusion reads $0<0$ (for example, the empty graph with $m=0$). If $n\ge 1$, then $B_1$ meets $\frac12\theta^2$ of the paths, so $m\ge\frac12\theta^2$ holds anyway. The only use, in the proof of (2.6), has $m\ge\frac12\theta^2$ by the hypothesis added to (2.6).}
+\stmt
+\textit{Proof}. For $1\le j\le n$, choose $I_j\subseteq\{1,..., m\}$ with $|I_j|=\frac12\theta^2$ such that $P_i$
+meets $B_j$ for each $i\in I_j$. Now there exists $J\subseteq\{1,..., n\}$ with $|J|\ge n\binom{m}{\frac12\theta^2}^{-1}$,
+such that for $j, j'\in J$, $I_j=I_{j'}=I$ say. Then $|I|=\frac12\theta^2$. Now each path $P_i$
+$(i\in I)$ meets each $B_j$ $(j\in J)$ in order, and so by (2.3), $|J|<\theta^{2\theta-2}$. The result
+follows.
+\stmt
+(2.5). \textit{If $A_1, A_2\subseteq V(G)$, and there is a unique set $\{P_1,..., P_m\}$ of $m$ disjoint
+paths in $G$ from $A_1$ to $A_2$, and every vertex of $G$ is in one of these paths, then
+there is an integer-valued function $\mu$ defined on $V(G)$, such that}
+
+\hspace*{12pt}(i)\enspace\textit{if $v'$ is after $v$ on $P_i$, then $\mu(v')>\mu(v)$ $(1\le i\le m)$};
+
+\hspace*{12pt}(ii)\enspace\textit{for any integer $t$, $Z_t$ separates $\{v\colon\mu(v)<t\}$ from $\{v\colon\mu(v)\ge t\}$,
+where $Z_t=\{v\colon$ for some $i$, $v$ is the first vertex on $P_i$ with $\mu(v)\ge t\}$.}
+\stmt
+\textit{Proof. Step} 1. \textit{There is no sequence $u_1, v_1, u_2, v_2,..., u_r, v_r$ of distinct
+vertices of $G$, where $r\ge 1$, and for $1\le j\le r$ $v_{j-1}, u_j$ are adjacent, joined by
+an edge not in any of $P_1,..., P_m$ (setting $v_0=v_r$), and $u_1, u_2,..., u_r$ are all on
+different $P_i$'s, and for $1\le j\le r$, $v_j$ occurs after $u_j$ on one of $P_1,..., P_m$.}
+\stmt
+For if there is such a sequence, let us renumber $P_1,..., P_m$ for simplicity so
+that $u_i$ lies on $P_i$ $(1\le i\le r)$. For $1\le i\le r$, let $e_i$ be an edge of $G$ joining $v_{i-1}$
+and $u_i$. Let $Q_i, R_i, S_i$ be the subpaths of $P_i$ from $A$ to $u_i$, from $u_i$ to $v_i$, and
+from $v_i$ to $B$, respectively. Then $R_i$ has at least one edge, since $u_i\ne v_i$.
+Setting $S_0=S_r$, we have $Q_i$ and $S_{i-1}$ are disjoint $(1\le i\le r)$ and so $Q_i$, $e_i$,
+and $S_{i-1}$ form a path $P_i'$ say from $A_1$ to $A_2$. Then $P_1',..., P_r', P_{r+1},..., P_m$ are
+disjoint paths of $G$ from $A_1$ to $A_2$; and this set is different from $P_1,..., P_m$,
+since none of $P_1,..., P_m$ uses the edge $e_1$. This contradicts our hypothesis that
+$P_1,..., P_m$ are unique.
+\stmt
+\textit{Step} 2. \textit{There is no sequence $u_1, v_1,..., u_r, v_r$ of vertices of $G$, where
+$r\ge 1$, such that for $1\le i\le r$, $v_{i-1}, u_i$ are adjacent, joined by an edge not in
+any of $P_1,..., P_m$ (setting $v_0=v_r$), and for $1\le i\le r$, $v_i$ occurs after $u_i$ on one
+of $P_1,..., P_m$.}

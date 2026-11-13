@@ -1,0 +1,24 @@
+\origpage{101}{N. Robertson, P. Seymour / Journal of Combinatorial Theory, Series B 89 (2003) 77--108}
+The following is a consequence of Theorem 9.1 of [2].
+
+\textbf{6.2.} \textit{If $\Omega$ is a well-quasi-order and $w \ge 0$, the class of all robust partial $\Omega$-patchworks of tree-width $\le w$ is well-behaved.}
+
+Let $\mathscr{C}$ be a class of partial $\Omega$-patchworks, and let $(P, \mathscr{L})$ be a partial $\Omega$-place. If $P|A \in \mathscr{C}$ for all $A \in \mathscr{L}$ we say that $P$ is an \textit{enlargement of} $P|\mathscr{L}$ \textit{by} $\mathscr{C}$.
+
+\textbf{6.3.} \textit{Let $\Omega$ be a well-quasi-order, and let $\mathscr{C}_1, \mathscr{C}_2$ be well-behaved classes of partial $\Omega$-patchworks. Then the class of all enlargements of members of $\mathscr{C}_1$ by $\mathscr{C}_2$ is well-behaved.}
+
+\textbf{Proof.} Let $\mathscr{C}$ be the class of all enlargements of members of $\mathscr{C}_1$ by $\mathscr{C}_2$. Let $\Omega'$ be a well-quasi-order with $\Omega \subseteq \Omega'$. Let $\Omega''$ be the class of all $\Omega'$-completions of members of $\mathscr{C}_2$, ordered by simulation; then $\Omega''$ is a well-quasi-order, since $\mathscr{C}_2$ is well-behaved. By replacing $\Omega, \Omega'$ by isomorphic well-quasi-orders we may assume that $E(\Omega') \cap E(\Omega'') = \emptyset$. Let $\Omega^* = \Omega' \cup \Omega''$.
+
+Let $P_1$ be an $\Omega'$-completion of a member of $\mathscr{C}$. We construct an $\Omega^*$-patchwork $enc(P_1)$ as follows. (Throughout, for $i = 1, 2, 3, 4$, $P_i = (G_i, \mu_i, \Delta_i, \phi_i)$.) Choose $P_2 \in \mathscr{C}$ so that $P_1$ is an $\Omega'$-completion of $P_2$. Choose $P_3 \in \mathscr{C}_1$ so that $P_2$ is an enlargement of $P_3$ by $\mathscr{C}_2$ and let $\mathscr{L}$ be the corresponding rooted location in $G_2$, so that $(P_2, \mathscr{L})$ has heart $P_3$. Let the new elements of $P_3$ be $\{e(A) \colon A \in \mathscr{L}\}$. Since $G_2 = G_1$, $\mathscr{L}$ is also a rooted location in $G_1$, and so $(P_1, \mathscr{L})$ is an $\Omega'$-place; let its heart be $Q$ (using the same new elements as for $P_3$). Let $(G_4, \mu_4, \Delta_4) = (G_3, \mu_3, \Delta_3)$ and define $\phi_4 \colon E(G_4) \to E(\Omega^*)$ by
+\begin{equation*}
+\phi_4(e) = \begin{cases}
+\phi_3(e) & \text{if } e \in \text{dom}(\phi_3), \\
+\phi_1(e) & \text{if } e \in E(G_3) \setminus \text{dom}(\phi_3) \text{ and } e \ne e(A) \text{ for all } A \in \mathscr{L}, \\
+P_1|A & \text{if } e = e(A) \text{ for some } A \in \mathscr{L}.
+\end{cases}
+\end{equation*}
+Let $P_4 = (G_4, \mu_4, \Delta_4, \phi_4)$. Thus, $P_4$ is an $\Omega^*$-completion of both $P_3$ and $Q$. We define $enc(P_1) = P_4$.
+
+Now let $P_1'$ be another $\Omega'$-completion of a member of $\mathscr{C}$, and suppose that $enc(P_1)$ is simulated in $enc(P_1')$. We claim that $P_1$ is simulated in $P_1'$. For let $P_2, P_3, \mathscr{L}, Q, P_4$ and $(G_i, \mu_i, \Delta_i, \phi_i)$ ($i = 1, \dots, 4$) be as above for $P_1$, and define $P_2', P_3', \mathscr{L}', Q', P_4'$ and $(G_i', \mu_i', \Delta_i', \phi_i')$ ($i = 1, \dots, 4$) similarly for $P_1'$. Let $\eta$ be a realizable expansion of $enc(P_1) = P_4$ in $enc(P_1') = P_4'$. Then $\eta$ is a realizable expansion of $Q$ in $Q'$ (since $P_4, P_4'$ are $\Omega^*$-completions of $Q, Q'$ respectively). Moreover, for each $e \in E(Q)$, $\phi_4(e) \le \phi_4'(\eta(e))$, and so $\phi_4(e) \in E(\Omega'')$ if and only if $\phi_4'(\eta(e)) \in E(\Omega'')$; that is, $e$ is one of the new elements of $Q$ if and only if $\eta(e)$ is one of the new elements of $Q'$. Moreover, if $e = e(A)$ say for some $A \in \mathscr{L}$, and $\eta(e) = e'(A')$ say for some $A' \in \mathscr{L}'$, then $P_1|A$ is simulated in $P_1'|A'$ since $\phi_4(e) \le \phi_4'(\eta(e))$. Consequently the hypotheses of 5.7 are satisfied (with $P_1, \mathscr{L}_1, Q_1, P_2, \mathscr{L}_2, Q_2, \Omega$ replaced by $P_1, \mathscr{L}, Q, P_1', \mathscr{L}', Q', \Omega'$ respectively) and so by 5.7, $P_1$ is simulated in $P_1'$.
+
+Let $P_1, P_2, \dots$ be a countable sequence of $\Omega'$-completions of members of $\mathscr{C}$. Since $\Omega^*$ is a well-quasi-order and $\mathscr{C}_1$ is well-behaved, there exist $j > i \ge 1$ such that $enc(P_i)$

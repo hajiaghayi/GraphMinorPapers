@@ -1,0 +1,28 @@
+\origpage{175}{GRAPH MINORS, X}
+\noindent and
+\begin{equation*}
+|V((B \cup C) \cap D)| = |V(C \cap D)| + |V(B \cap D) - V(C)|,
+\end{equation*}
+and so $|V(A \cap B)| \le |V((B \cup C) \cap D)|$, as required. $\square$
+
+The main result of this section is another way to construct new tangles from old, the following.
+
+\stmt
+(8.3) \textit{Let} $(C, D)$ \textit{be a separation of a hypergraph} $G$, \textit{and let} $(C', D)$ \textit{be a titanic separation of a hypergraph} $G'$, \textit{with} $V(C \cap D) = V(C' \cap D)$. \textit{Let} $\mathscr{T}$ \textit{be a tangle in} $G$ \textit{of order} $\theta \ge 2$ \textit{with} $(C, D) \in \mathscr{T}$. \textit{Let} $\mathscr{T}'$ \textit{be the set of all separations} $(A', B')$ \textit{of} $G'$ \textit{of order} $<\theta$ \textit{such that there exists} $(A, B) \in \mathscr{T}$ \textit{with} $E(A \cap D) = E(A' \cap D)$. \textit{Then} $\mathscr{T}'$ \textit{is a tangle in} $G'$ \textit{of order} $\theta$.
+
+\textit{Proof.} We verify the hypotheses of (4.5). For the first axiom, let $(A', B')$ be a separation of $G'$ of order $<\theta$. Since $(C', D)$ is robust by (8.2), we may assume by (8.1) (exchanging $A', B'$ if necessary) that $(A' \cap D, B' \cup C')$ has order at most that of $(A', B')$. Now $(A' \cap D, (B' \cap D) \cup C)$ is a separation of $G$ with the same order as $(A' \cap D, B' \cup C')$, since $B' \cup C' = (B' \cap D) \cup C'$ and
+\begin{equation*}
+(A' \cap D) \cap C = A' \cap (D \cap C) = A' \cap (D \cap C') = (A' \cap D) \cap C'.
+\end{equation*}
+Hence $(A' \cap D, (B' \cap D) \cup C)$ has order $<\theta$ and so $\mathscr{T}$ contains one of $(A' \cap D, (B' \cap D) \cup C)$, $((B' \cap D) \cup C, A' \cap D)$. If the first, then $(A', B') \in \mathscr{T}'$, while if the second, then since $E(((B' \cap D) \cup C) \cap D) = E(B' \cap D)$, it follows that $\mathscr{T}'$ contains $(B', A')$. This verifies that $\mathscr{T}'$ satisfies the first axiom.
+
+For (4.5) (i), suppose that $(A'_1, B'_1), (A'_2, B'_2) \in \mathscr{T}'$. Choose $(A_i, B_i) \in \mathscr{T}$ with $E(A_i \cap D) = E(A'_i \cap D)$ ($i = 1, 2$). Since $(C, D) \in \mathscr{T}$, $E(C \cup A_1 \cup A_2) \ne E(G)$ by (2.3), and so $E(D) \nsubseteq E(A_1 \cup A_2)$. Hence $E(D) \nsubseteq E(A'_1 \cup A'_2)$, and so $A'_1 \cup A'_2 \ne G'$, and $B'_1 \nsubseteq A'_2$, as required.
+
+For (4.5) (ii), suppose that $A'_1$, $A'_2$, $A'_3$ are mutually edge-disjoint subhypergraphs of $G'$ with union $G'$, and $(A'_i, B'_i) \in \mathscr{T}'$ for $i = 1, 2, 3$, where $B'_1 = A'_2 \cup A'_3$, $B'_2 = A'_3 \cup A'_1$, $B'_3 = A'_1 \cup A'_2$. Choose $(A_i, B_i) \in \mathscr{T}$ with $E(A_i \cap D) = E(A'_i \cap D)$ ($1 \le i \le 3$). Let $F_i = A'_i \cap C'$ ($1 \le i \le 3$). Then $F_1 \cup F_2 \cup F_3 = C'$, and since $(C', D)$ is titanic we may renumber so that
+\begin{equation*}
+|V((F_2 \cup F_3) \cap F_1)| \ge |V((F_2 \cup F_3) \cap D)|;
+\end{equation*}
+that is,
+\begin{equation*}
+|V(B'_1 \cap C' \cap A'_1)| \ge |V(B'_1 \cap C' \cap D)|.
+\end{equation*}

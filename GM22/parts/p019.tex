@@ -1,0 +1,42 @@
+\origpage{548}{N. Robertson, P. Seymour / Journal of Combinatorial Theory, Series B 102 (2012) 530--563}
+\hspace*{12pt}(iv) \textit{for $1 \le i < j \le t$, $d(D(A_i'), D(A_j')) \ge \theta$,}
+
+\hspace*{12pt}(v) \textit{for $1 \le i \le t$, there is no $\Gamma$-normal $O$-arc $F \subseteq \Sigma$ with $|F \cap V(\Gamma)| < |\bar{\pi}(A_i')|$ and with $D(A_i') \subseteq ins(F)$.}
+
+\textit{Then there is a model of $(H, \chi)$ in $(G \setminus \{v^*\}, \omega)$.}
+
+\textbf{Proof.} Let $p = q + 3\delta + 3\tau$. Choose $\theta' \ge \max(p, 4)$ so that 7.2 holds with $\theta$ replaced by $\theta'$ and so that 5.3 holds with $\theta$ replaced by $\theta'$. Let $\theta = \theta' + 3$. We claim that $\theta$ satisfies 7.3. For let the hypothesis of 7.3 hold. Let
+\begin{equation*}
+K_1 = K \cup \bigcup(A \in \mathcal{A} : d(D(A), \Sigma \setminus \Delta) \ge \theta).
+\end{equation*}
+Let $L \subseteq G$ be minimal such that $\phi(v) \subseteq L$ for each $v \in V(H)$ and $\bar{\pi}(A_i) \subseteq V(L)$ for $1 \le i \le t$.
+
+\hspace*{12pt}(1) \textit{$L \subseteq \Gamma \cup K_1 \cup A_1 \cup \dots \cup A_t$, and $\phi(E(H)) \subseteq E(K_1 \cup A_1 \cup \dots \cup A_t)$.}
+
+\textit{Subproof.} Now $\phi(v) \subseteq \Gamma \cup K_1 \cup A_1 \cup \dots \cup A_t$ for all $v \in V(H)$ since $\mathcal{B}$ is adequate for $\phi$; and $\bar{\pi}(A_i) \subseteq V(A_i)$ for $1 \le i \le t$. Hence the first inclusion holds, and the second also holds since $\mathcal{B}$ is adequate for $\phi$. This proves (1).
+
+\hspace*{12pt}(2) \textit{We may assume that $d(V(K_1) \cap \Sigma, \Sigma \setminus \Delta) \ge \theta$.}
+
+\textit{Subproof.} We may assume that no vertex of $G$ is in $\Sigma$ except for the vertices of $\Gamma$ and the vertices of $\bigcup(\bar{\pi}(A) : A \in \mathcal{A})$. Let $v \in V(K_1) \cap \Sigma$. If $v \in V(\Gamma)$ then by 7.1(i), $d(v, \Sigma \setminus \Delta) \ge \theta$ as required. We assume then that $v \in V(A)$ for some $A \in \mathcal{A}$ with $d(D(A), \Sigma \setminus \Delta) \ge \theta$. Since $v \in \Sigma \cap V(G)$ and $v \notin V(\Gamma)$, there exists $A' \in \mathcal{A}$ with $v \in \bar{\pi}(A')$, by our assumption. We claim that $v \in \bar{\pi}(A)$; for if $A = A'$ this is true since $v \in \bar{\pi}(A')$, and if $A \ne A'$ it follows from (J2). Thus $v \in \bar{\pi}(A) \subseteq D(A)$, and so
+\begin{equation*}
+d(v, \Sigma \setminus \Delta) \ge d(D(A), \Sigma \setminus \Delta) \ge \theta
+\end{equation*}
+as required. This proves (2).
+
+For $1 \le i \le t$, let $bd(D(A_i')) = F_i$.
+
+\hspace*{12pt}(3) \textit{For $1 \le i \le t$, $F_i \cap V(\Gamma) = \bar{\pi}(A_i')$.}
+
+\textit{Subproof.} By hypothesis (v), $|F \cap V(\Gamma)| \ge |\bar{\pi}(A_i')|$. But $F \cap V(\Gamma) \subseteq \bar{\pi}(A_i')$ by (J4), and so there is equality. This proves (3).
+
+For $1 \le i \le t$, let $D_i \subseteq D(A_i) \setminus bd(D(A_i))$ be a closed disc.
+
+\hspace*{12pt}(4) \textit{There is a homeomorphism $\beta : \Sigma \to \Sigma$ fixing $\Delta$ pointwise and mapping $D_i$ to $D(A_i')$ for $1 \le i \le t$.}
+
+\textit{Subproof.} For $D(A_1), \dots, D(A_t)$ are disjoint from $\Delta$ by hypothesis (ii). Hence $D_1, \dots, D_t, \Delta$ are mutually disjoint closed discs. But $D(A_1'), \dots, D(A_t')$ are also disjoint from $\Delta$, by hypothesis (iii), and from each other, also by (iii). This proves (4).
+
+For $1 \le i \le t$, let $\pi_i$ be the sequence of points of $bd(D_i)$ mapped by $\beta$ to $\pi(A_i')$ and let $\bar{\pi}_i$ be the set of terms of $\pi_i$.
+
+\hspace*{12pt}(5) \textit{For $1 \le i \le t$, $|\bar{\pi}_i| = |\bar{\pi}(A_i)| = |\bar{\pi}(A_i')|$.}
+
+\textit{Subproof.} Since $\beta$ is a homeomorphism, it follows that $|\bar{\pi}_i| = |\bar{\pi}(A_i')|$. But $|\bar{\pi}(A_i)| = |\bar{\pi}(A_i')|$ since $(A_i, \pi(A_i) + \omega)$ and $(A_i', \pi(A_i') + \omega)$ have the same $\delta$-folio. This proves (5).

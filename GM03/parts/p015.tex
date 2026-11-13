@@ -1,0 +1,17 @@
+\origpage{63}{GRAPH MINORS. III}
+\noindent $|E(G)|)$. Suppose that $G$ is expressible as the sleeve union of two planar graphs $G_1$, $G_2$. Then $G_1$, $G_2$ are isomorphic to proper minors of $G$, by (3.9), and so each has no minor isomorphic to the $r \times r$ cylinder. Moreover, the sizes of $G_1$, $G_2$ are less than the size of $G$, and so by induction $G_1$, $G_2$ both have tree-width $\le \frac{3}{2}(r^2 + 2r) - 2$. Hence by (3.10), $G$ has tree-width $\le \frac{3}{2}(r^2 + 2r) - 2$. We may therefore assume that $G$ is not expressible as a sleeve union of two planar graphs; but then the result follows from (4.5). This completes the proof.
+
+We deduce (1.4), which we restate.
+
+\stmt
+(5.3) \textit{For every planar graph $H$ there is a number $w$ such that every planar graph with no minor isomorphic to $H$ has tree-width $\le w$.}
+
+\textit{Proof.} From (5.1) there is a number $r \ge 1$ such that the $r \times r$ cylinder has a minor isomorphic to $H$. Let $G$ be any planar graph with no minor isomorphic to $H$. Then $G$ certainly has no minor isomorphic to the $r \times r$ cylinder, and so by (5.2) $G$ has tree-width $\le \frac{3}{2}(r^2 + 2r) - 2$. Thus (5.3) is true with any number $w \ge \frac{3}{2}(r^2 + 2r) - 2$.
+
+\sectionhead{6. \textsc{Remarks}}
+
+One natural question concerning the tree-width of planar graphs is, what is the tree-width of the geometric dual? It seems that the tree-width of a planar graph and the tree-width of its geometric dual are approximately equal---indeed, we have convinced ourselves that they differ by at most one. However, they need not be equal. The two graphs of Fig. 4 are duals; but the first has tree-width 4 while the second has tree-width 5.
+
+Concerning our main theorem (1.4), one method of generalization is the
+
+\origfig{figures/fig4}{312bp}{\textsc{Figure} 4}

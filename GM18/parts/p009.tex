@@ -1,0 +1,25 @@
+\origpage{85}{N. Robertson, P. Seymour / Journal of Combinatorial Theory, Series B 89 (2003) 77--108}
+\sectionhead{4. Isolating locations}
+
+Let $\mathscr{T}$ be a tangle in a hypergraph $G$, and let $\lambda$ be a tie-breaker in $G$. A location $\mathscr{L}$ is said to $\theta$-isolate $\mathscr{T}$ if $\mathscr{L} \subseteq \mathscr{T}$ and has order $<\theta$, and for every $(C, D) \in \mathscr{L}$ and every tangle $\mathscr{T}'$ in $G$ of order $\ge \theta$ with $(D, C) \in \mathscr{T}'$, if $(A, B)$ is the $(\mathscr{T}, \mathscr{T}')$-distinction then $A \subseteq C$ and $D \subseteq B$. Our objective in this section is to study the global structure of a hypergraph $G$ given, for every tangle $\mathscr{T}$ in $G$ of high order, a location $\theta$-isolating $\mathscr{T}$.
+
+We shall need the following lemma (our thanks to M. Saks for its proof).
+
+4.1. \textit{Let $T$ be a tree and let $\le$ be some linear order on $E(T)$. For each $t \in V(T)$, let $T_t$ be a subtree of $T$ such that}
+
+\hspace*{12pt}$\bullet$ \textit{$t \in V(T_t)$,}
+
+\hspace*{12pt}$\bullet$ \textit{if $e \in E(T)$ has one end in $V(T_t)$ and the other end in $V(T) \setminus V(T_t)$ and $f$ is an edge of the path of $T$ with first vertex $t$ and last edge $e$, then $e \le f$.}
+
+\textit{Then there exists $I \subseteq V(T)$ such that the sets $V(T_t)$ ($t \in I$) form a partition of $V(T)$.}
+
+\textbf{Proof.} We proceed by induction on $|V(T)|$. We may assume that $E(T) \ne \emptyset$, and may therefore choose $f \in E(T)$ minimum under $\le$. Let $T^1, T^2$ be the two components of $T \setminus f$, and let the ends of $f$ be $u^1 \in V(T^1)$, $u^2 \in V(T^2)$. For each $t \in V(T^i)$, define $T_t^i = T_t \cap T^i$ ($i = 1, 2$). These satisfy the hypotheses of 4.1, so from our inductive hypothesis, we may choose $I^i \subseteq V(T^i)$ such that the sets $V(T_t^i)$ ($t \in I^i$) form a partition of $V(T^i)$ ($i = 1, 2$). Now if for $i = 1, 2$, $T_t^i = T_t$ for every $t \in I^i$ then $I = I^1 \cup I^2$ satisfies our requirement. We assume then that there exists $s \in I^1$ with $T_s^1 \ne T_s$. Hence $T_s \nsubseteq T^1$, and so $f \in E(T_s)$, and in particular $u^1 \in V(T_s^1)$. It follows that $T_t^1 = T_t$ for all $t \in I^1 \setminus \{s\}$, since no other $V(T_t^1)$ contains $u^1$. Moreover, we claim that $T^2 \subseteq T_s$. For if not, there is an edge $e$ of $T^2$ with one end in $V(T_s)$ and the other in $V(T^2) \setminus V(T_s)$. Then $f$ is in the path of $T_s$ with first vertex $s$ and last edge $e$, and so $e \le f$. But $f < e$ from our choice of $f$ since $e \ne f$, a contradiction. Thus $T^2 \subseteq T_s$, and so the sets $V(T_t)$ ($t \in I^1$) partition $V(T)$. This proves 4.1. $\square$
+
+4.2. \textit{Let $\mathscr{T}_j$ ($j \in J$) be distinct tangles of order $\theta$ in a hypergraph $G$, let $\lambda$ be a tie-breaker in $G$, and for each $j \in J$ let $\mathscr{L}_j \subseteq \mathscr{T}_j$ be a location which $\theta$-isolates $\mathscr{T}_j$ with respect to $\lambda$. Then there exists $I \subseteq J$ such that for every $j \in J$ there is a unique $i \in I$ with $\mathscr{L}_i \subseteq \mathscr{T}_j$.}
+
+\textbf{Proof.} We may assume that $J \ne \emptyset$. Let $J = \{1, \dots, n\}$ say where $n \ge 1$. Let $(T, \tau)$ be a standard tree-decomposition relative to $\mathscr{T}_1, \dots, \mathscr{T}_n$ in which $t_i$ represents $\mathscr{T}_i$ for $1 \le i \le n$.
+
+\hspace*{12pt}(1) \textit{If $e, e' \in E(T)$ are distinct, and make separations $(A, B), (A', B')$ of $G$ say, then}
+\begin{equation*}
+(A, B), (B, A) \ne (A', B'), (B', A').
+\end{equation*}

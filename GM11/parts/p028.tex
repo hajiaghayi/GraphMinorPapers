@@ -1,0 +1,27 @@
+\origpage{99}{GRAPH MINORS. XI}
+Let $v_0, e_1, v_1, e_2, \dots, e_t, v_t = v_0$ be a perimeter walk of $X_1$. For $1 \le h \le k$ let
+\begin{align*}
+i(h) &= \min \{i : 0 \le i \le t, v_i \in D_h\} \\
+j(h) &= \max \{j : 0 \le j \le t, v_j \in D_h\}.
+\end{align*}
+Both $i(h)$ and $j(h)$ exist by (1). Choose $h$ with $1 \le h \le k$ such that $j(h) - i(h)$ is minimum.
+
+\hspace*{12pt}(2) \textit{If $0 \le i, j \le t$ and $i(h) \le i \le j(h)$ and either $j < i(h)$ or $j > j(h)$, then $v_i \ne v_j$, and none of $D_1, \dots, D_k$ contains both $v_i$ and $v_j$.}
+
+\textit{Subproof.} Since either $j < i(h)$ or $j > j(h)$ it follows that $v_j \notin D_h$. If $i(h) \le i \le j(h)$ and $v_i = v_j$, let $D = \{v_j\}$; and if $i(h) \le i \le j(h)$ and $v_i, v_j$ both belong to some $D_{h'}$, let $D = D_{h'}$. In the latter case $h' \ne h$ since $v_j \notin D_h$, and so in either case $D \cap D_h = \emptyset$, contrary to (8.1). This proves (2).
+
+\hspace*{12pt}(3) \textit{For all $h' \ne h$ with $1 \le h' \le k$, $v_i \notin D_{h'}$ for $i(h) \le i \le j(h)$.}
+
+\textit{Subproof.} From the minimality of $j(h) - i(h)$, either $i(h') \le i(h)$ or $j(h') \ge j(h)$, and by the symmetry we may assume the latter without loss of generality. Since $h' \ne h$ and hence $D_h \cap D_{h'} = \emptyset$, it follows that $j(h') \ne j(h)$ and so $j(h') > j(h)$. The claim follows from (2) (setting $j = j(h')$).
+
+Let $i = i(h)$ and $j = j(h)$. We may assume that
+
+\hspace*{12pt}(4) \textit{$i \ge 1$ and $j \le t - 1$ and $e_i, e_{j+1} \subseteq \Sigma - X_2$.}
+
+\textit{Subproof.} If $i = 0$ or $j = t$ then $v_0 = v_t \in D_h$ and $i(h) = 0$ and $j(h) = t$; and then by (1) and (3), $k = 1$ and we are finished. Thus we may assume that $i \ge 1$ and $j \le t - 1$. Since $v_{i-1} \notin D_h$ it follows that $e_i \nsubseteq D_h$ (because $D_h$ is closed) and similarly $e_{j+1} \nsubseteq D_h$. Thus $e_i, e_{j+1} \subseteq \Sigma - X_2$. This proves (4).
+
+Let $Y_1 = \{v_i, v_{i+1}, \dots, v_j\}$, $Y_2 = \{v_0, v_1, \dots, v_{i-1}, v_{j+1}, v_{j+2}, \dots, v_t\}$. By (2),
+
+\hspace*{12pt}(5) \textit{$Y_1 \cap Y_2 = \emptyset$, and no component of $X_1 \cap X_2$ meets both $Y_1$ and $Y_2$.}
+
+Let $Z_i = bd(X_2) \cap Y_i$ ($i = 1, 2$). Then $Z_1 \cup Z_2 = bd(X_1) \cap bd(X_2) \cap V(\Gamma)$. Since $v_i, v_j \in D_h \subseteq X_2$ and $e_i, e_{j+1} \subseteq \Sigma - X_2$ by (4), it follows that $v_i, v_j \in Z_1$ and so $Z_1 \ne \emptyset$. Suppose that also $Z_2 \ne \emptyset$. For $i = 1, 2$ let $Q_i$ be the shortest walk of $\Gamma \cap bd(X_i)$ from a vertex in $Z_1$ to a vertex in $Z_2$. These exist, for $Z_1, Z_2 \ne \emptyset$ and $bd(X_1), bd(X_2)$ are both arc-wise connected. $Q_1$ and $Q_2$ are both simple walks, and no internal vertex of either belongs to $Z_1 \cup Z_2$. Let $Q_1, Q_2$ have ends $a_1, b_1$ and $a_2, b_2$, respectively. From (5), $U(Q_1), U(Q_2) \nsubseteq X_1 \cap X_2$, and so $U(Q_1) \nsubseteq X_2$ and $U(Q_2) \nsubseteq X_1$. Since no internal vertex of $Q_1$ belongs to $bd(X_2)$ we deduce that $U(Q_1) \cap X_2 =$

@@ -1,0 +1,51 @@
+\origpage{555}{N. Robertson, P. Seymour / Journal of Combinatorial Theory, Series B 102 (2012) 530--563}
+\begin{equation*}
+L' \cup (L \cap B) \cup \Gamma = L \cup \Gamma,
+\end{equation*}
+and so
+\begin{equation*}
+L \cap A \subseteq (L \cup \Gamma) \cap A = (L' \cup (L \cap B) \cup \Gamma) \cap A = (L' \cap A) \cup (L \cap A \cap B) \cup (\Gamma \cap A).
+\end{equation*}
+But $L' \cap A \subseteq (\Gamma \cap A) \cup N_W$, and $L \cap A \cap B$ has no edges and has vertex set $\bar{\pi}(A) \cup W \subseteq V(\Gamma \cap A) \cup W$. Consequently,
+\begin{equation*}
+L \cap A \subseteq (\Gamma \cap A) \cup N_W \subseteq \Gamma \cup N_W
+\end{equation*}
+as required. This proves (7).
+
+\hspace*{12pt}(8) \textit{$\mathcal{B}$ is adequate for $\phi$.}
+
+\textit{Subproof.} Let $v \in V(H)$ and $A \in \mathcal{A}$; we must show that if $A \cap \phi(v) \not\subseteq \Gamma \cup N_W$ then $A \in \mathcal{B}$. But $\phi(v) \subseteq L$, so this follows from (7).
+
+\hspace*{12pt}(9) \textit{For $1 \le i \le t$, there is no separation $(C, D)$ of $G$ with $W \subseteq V(C \cap D)$ such that}
+
+\hspace*{12pt}$\bullet$ \textit{$A'_i \subseteq C$,}
+
+\hspace*{12pt}$\bullet$ \textit{$K \subseteq D$, and $A \subseteq D$ for all $A \in \mathcal{A}$ with $d(D(A), \Sigma \setminus \Delta) \ge \theta$, and}
+
+\hspace*{12pt}$\bullet$ \textit{$(\Gamma \cap C, \Gamma \cap D) \in \mathcal{T}$ and has order $< |\bar{\pi}(A'_i)|$.}
+
+\textit{Subproof.} Suppose there is such a separation $(C, D)$, and choose it of minimum order. Suppose first that it has order $\ge |\bar{\pi}(A'_i)| + |W|$. Then $V(C \cap D) \not\subseteq V(\Gamma) \cup W$; choose $v \in V(C \cap D) \setminus (V(\Gamma) \cup W)$. If there is no $A \in \mathcal{A}$ with $v \in V(A)$ such that $d(D(A), \Sigma \setminus \Delta) < \theta$, then every edge of $G$ incident with $v$ belongs to $E(D)$ and $v \notin V(A'_i)$; but then $(C \setminus \{v\}, D)$ is a separation of $G$ contrary to the minimality of $|V(C \cap D)|$. Thus there exists $A \in \mathcal{A}$ with $v \in V(A)$ such that $d(D(A), \Sigma \setminus \Delta) < \theta$. Let $B \subseteq G$ be such that $(A, B)$ is a separation of $G$ and $V(A \cap B) = \bar{\pi}(A) \cup W$. (This exists, since $d(D(A), \Sigma \setminus \Delta) < \theta$ and so $A \cap K = N_W$, from the hypothesis.) Now $(A \cup C, B \cap D)$ is a separation of $G$. Moreover, $W \subseteq V((A \cup C) \cap B \cap D)$ and $A'_i \subseteq A \cup C$, and $K \subseteq B \cap D$ (because $A \cap K = N_W \subseteq B$), and $A' \subseteq B \cap D$ for each $A' \in \mathcal{A}$ with $d(D(A'), \Sigma \setminus \Delta) \ge \theta$, since $A' \ne A$. The separation $(\Gamma \cap (A \cup C), \Gamma \cap (B \cap D))$ has order at most
+\begin{equation*}
+|V(\Gamma \cap C \cap D)| + |V(\Gamma \cap A \cap B)| \le |\bar{\pi}(A'_i)| + |\bar{\pi}(A)| - 1 \le 5 \le \theta
+\end{equation*}
+and so $(\Gamma \cap (A \cup C), \Gamma \cap (B \cap D)) \in \mathcal{T}$. Since $(A \cup C, B \cap D)$ does not contradict the choice of $(C, D)$, it follows that either
+\begin{equation*}
+|V((A \cup C) \cap B \cap D \cap \Gamma)| > |V(C \cap D \cap \Gamma)|
+\end{equation*}
+or
+\begin{equation*}
+|V((A \cup C) \cap B \cap D)| > |V(C \cap D)|.
+\end{equation*}
+Consequently, either
+\begin{align*}
+&|V(B \cap C \cap D \cap \Gamma)| + |V(A \cap B \cap \Gamma) \setminus V(C)| \\
+&\quad > |V(B \cap C \cap D \cap \Gamma)| + |V(C \cap D \cap \Gamma) \setminus V(B)|,
+\end{align*}
+that is,
+\begin{equation*}
+|V(A \cap B \cap \Gamma) \setminus V(C)| > |V(C \cap D \cap \Gamma) \setminus V(B)|,
+\end{equation*}
+or
+\begin{equation*}
+|V(A \cap B) \setminus V(C)| > |V(C \cap D) \setminus V(B)|.
+\end{equation*}

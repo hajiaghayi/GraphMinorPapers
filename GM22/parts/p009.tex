@@ -1,0 +1,36 @@
+\origpage{538}{N. Robertson, P. Seymour / Journal of Combinatorial Theory, Series B 102 (2012) 530--563}
+\noindent of $\Gamma'$ (and hence of $\Gamma$) obtained from $\Gamma'$ by deleting $x$ if $x \in V(\Gamma')$, and deleting $e$ if $x \in e \in E(\Gamma')$; then $U(\Gamma) \subseteq U(\Gamma'')$, $V(\Gamma) \subseteq V(\Gamma'')$, and
+\begin{equation*}
+|V(\Gamma'')| + |E(\Gamma'')| < |V(\Gamma')| + |E(\Gamma')|.
+\end{equation*}
+Moreover, $L'' \subseteq \Gamma'' \cup K$, and so from the inductive hypothesis, there exists $L \subseteq \Gamma \cup K$ with the same effect on $Z$ as $L''$ and hence as $L'$, and with $L \cap K \subseteq L'' \cap K \subseteq L' \cap K$, as required. $\square$
+
+Let $\Sigma$ be a surface. We denote by $\hat{\Sigma}$ the surface obtained from $\Sigma$ by pasting an open disc onto each cuff of $\Sigma$. Let $\Gamma$ be a drawing in $\Sigma$. If $C$ is a cuff of $\Sigma$, a \textit{sleeve for $C$ in $\Gamma$} is a closed disc $\Delta \subseteq \hat{\Sigma}$ such that
+
+\hspace*{12pt}$\bullet$ $\text{bd}(\Delta) \subseteq U(\Gamma)$,
+
+\hspace*{12pt}$\bullet$ $\Delta$ includes the open disc pasted onto $C$ in forming $\hat{\Sigma}$,
+
+\hspace*{12pt}$\bullet$ $\Delta \cap \text{bd}(\Sigma) = C$.
+
+\textbf{4.2.} \textit{For every integer $p \ge 0$ there exists $h \ge 1$ with the following property. Let $\Gamma, K$ be subgraphs of a graph $\Gamma \cup K$, let $\Gamma$ be a drawing in a surface $\Sigma$, and let}
+\begin{equation*}
+Z \subseteq V(K) \cup (V(\Gamma) \cap \text{bd}(\Sigma)),
+\end{equation*}
+\textit{with $|Z| \le p$. For each cuff $C$ of $\Sigma$ let $S(C)$ be a sleeve for $C$ in $\Gamma$, so that $S(C_1) \cap S(C_2) = \emptyset$ for all distinct cuffs $C_1, C_2$. Let $S$ be the union of $\Sigma \cap S(C)$ over all cuffs $C$, and let $T$ be the set of all points of $\Sigma$ that are $h$-insulated in $\hat{\Sigma}$ from $V(\Gamma \cap K) \cup (V(\Gamma) \cap \text{bd}(\Sigma))$ by $\Gamma$. Suppose that}
+
+\textit{(i) for each cuff $C$ there are $|V(\Gamma) \cap C|$ mutually vertex-disjoint paths of $\Gamma$ between $V(\Gamma) \cap C$ and $V(\Gamma) \cap \text{bd}(S(C))$,}
+
+\textit{(ii) for each cuff $C$, $\text{bd}(S(C)) \subseteq T$ and $S(C) \cap V(\Gamma \cap K) = \emptyset$.} \textit{Then for every $(S \cup T)$-variant $\Gamma'$ of $\Gamma$ with $\Gamma' \cap K = \Gamma \cap K$ and $V(\Gamma') \cap \text{bd}(\Sigma) = V(\Gamma) \cap \text{bd}(\Sigma)$, and for every $L' \subseteq \Gamma' \cup K$, there exists $L \subseteq \Gamma \cup K$ with the same effect on $Z$ as $L'$, with $L \cap K \subseteq L'$.}
+
+\textbf{Proof.} Let $h$ be as in 4.1. Without loss of generality, we may assume that $V(K) \cap \Sigma \subseteq V(\Gamma)$. Let $C_1, \ldots, C_r$ be the cuffs of $\Sigma$. For $1 \le i \le r$, let $C_i'$ be the circuit of $\Gamma$ with $U(C_i') = \text{bd}(S(C_i))$, let $|V(\Gamma) \cap C_i| = k_i$, and let $M_i$ be a minimal linkage in $\Gamma$ with $k_i$ components, each with one end in $V(\Gamma) \cap C_i$ and the other end in $V(C_i')$. For each component $P$ of $M_i$, let the ends of $P$ be $s(P) \in V(\Gamma) \cap C_i$ and $s'(P) \in V(C_i')$. From the minimality of $M_i$ it follows that $U(M_i) \subseteq S(C_i)$, and for each component $P$ of $M_i$, $U(P) \cap \text{bd}(S(C_i)) = \{s'(P)\}$.
+
+Let $\Sigma_0$ be the surface obtained from $\hat{\Sigma}$ by deleting the interior of $S(C)$ for each cuff $C$. Then $\Sigma_0$ is homeomorphic to $\Sigma$. Since $T$ is open and $\text{bd}(S(C)) \subseteq T$ for each cuff $C$, there is a homeomorphism $\alpha \colon \Sigma \to \Sigma_0$ fixing $\Sigma \setminus (S \cup T)$ pointwise, such that for $1 \le i \le r$, $\alpha$ maps $U(C_i)$ onto $U(C_i')$, and for each component $P$ of $M_i$, $\alpha$ maps $s(P)$ to $s'(P)$.
+
+Now let $\Gamma'$ be as in the theorem, and let $\Gamma_0$ be the image of $\Gamma'$ under $\alpha$. Then $\Gamma_0$ is a drawing in $\Sigma_0$. Since $\Gamma'$ is an $(S \cup T)$-variant of $\Gamma$ and $\alpha$ fixes $\Sigma \setminus (S \cup T)$ pointwise, it follows that $\Gamma_0$ is an $(S \cup T)$-variant of $\Gamma$. Moreover, for $1 \le i \le r$,
+\begin{equation*}
+U(\Gamma_0) \cap U(C_i') = V(\Gamma_0) \cap U(C_i') = V(M_i \cap C_i').
+\end{equation*}
+Let $\Gamma'' = \Gamma_0 \cup \bigcup ( \Gamma \cap S(C_i) : 1 \le i \le r )$. Then $\Gamma''$ is a drawing in $\Sigma$, and $V(\Gamma'') \cap \text{bd}(\Sigma) = V(\Gamma) \cap \text{bd}(\Sigma)$. Moreover, $\Gamma''$ is a $T$-variant of $\Gamma$, for it is an $(S \cup T)$-variant of $\Gamma$ (since $\Gamma_0$ is) and for each cuff $C$, $\Gamma'' \cap S(C) = \Gamma \cap S(C)$.
+
+\hspace*{12pt}(1) $V(\Gamma'' \cap K) = V(\Gamma \cap K) \subseteq \Sigma \setminus (S \cup T)$.

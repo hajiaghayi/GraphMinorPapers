@@ -1,0 +1,20 @@
+\origpage{56}{N. Robertson, P.D. Seymour / Journal of Combinatorial Theory, Series B 89 (2003) 43--76}
+We also need
+
+\textbf{5.3.} \textit{Let $G$ be a graph and let $Y \subseteq V(G)$, such that no component of $G$ contains exactly one vertex in $Y$. If $\mu, \tau \ge 0$ are integers and $|Y| > \tau(\mu - 1)$, then either:}
+
+\hspace*{12pt}$\bullet$ \textit{there are $\mu$ disjoint paths of $G$ each with both ends distinct and in $Y$ and with no internal vertex in $Y$, or}
+
+\hspace*{12pt}$\bullet$ \textit{there exist $v \in V(G)$ and $\tau$ paths $P_1, \dots, P_\tau$ of $G$, with ends $v, u_i (1 \le i \le \tau)$ respectively, mutually disjoint except for $v$, and such that for $1 \le i \le \tau, u_i \in Y$ and $u_i \ne v$, and no internal vertex of $P_i$ is in $Y$.}
+
+\textbf{Proof.} Let $T$ be a minimal subgraph of $G$ with the properties that $Y \subseteq V(T)$ and any two vertices in $Y$ which belong to the same component of $G$ also belong to the same component of $T$. We deduce that $T$ is a forest, every component of $T$ contains at least two vertices in $Y$, and every vertex $T$ with degree 1 in $T$ belongs to $Y$.
+
+Now let $\mathscr{P}$ be the set of all paths $P$ of $T$ with distinct ends both in $Y$, and with no internal vertex in $Y$. Since $\mathscr{P}$ is a set of subtrees of a forest, it follows by an elementary theorem that either there are $\mu$ members of $\mathscr{P}$, mutually vertex-disjoint, or there exists $X \subseteq V(T)$ with $|X| < \mu$ meeting all members of $\mathscr{P}$. In the first case we are finished, and so we assume that the second case holds. For each $y \in Y$, $X$ meets the component $T'$ of $T$ containing $y$, since $|V(T') \cap Y| \ge 2$ and $X$ meets every member of $\mathscr{P}$. Hence there is a minimal path $P_y$ of $T$ from $y$ to some member $v_y$ of $X$. Since $|Y| > \tau(\mu - 1) \ge \tau|X|$, there exists $x \in X$ and $Y' \subseteq Y$ such that $|Y'| \ge \tau + 1$ and $v_y = x$ for all $y \in Y'$. For each $y \in Y$, no vertex of $P_y$ belongs to $X$ except $v_y$, and so for distinct $y, y' \in Y'$, $P_y$ and $P_{y'}$ intersect in precisely $x$ (since $X$ meets every path between $y$ and $y'$). Since there are at least $\tau$ members of $Y'$ different from $x$, it follows that the second outcome of the theorem holds. This proves 5.3. $\square$
+
+\textbf{5.4.} \textit{Let $G$ be a graph, and let $v \in V(G)$. For $1 \le i \le n$ let $P_i$ be a path of $G$ with distinct ends $v, u_i$, such that $P_1, \dots, P_n$ are mutually disjoint except for $v$. Let $Q_1, \dots, Q_m$ be mutually disjoint paths of $G$, not passing through $v$, such that $Q_i$ has ends $s_i, t_i$ for $1 \le i \le m$. Let}
+\begin{equation*}
+Z = \{u_1, \dots, u_n, s_1, t_1, \dots, s_m, t_m\}.
+\end{equation*}
+\textit{If $n \ge 5m + 2$, there are $m + 1$ mutually disjoint paths of $G$, each with distinct ends both in $Z$.}
+
+\textbf{Proof.} Let $H$ be the graph formed by the union of $P_1, \dots, P_n$ and $Q_1, \dots, Q_m$; we see that no vertex of $H$ has degree $> 4$ except possibly $v$. Let $J$ be the union of all components of $H \setminus v$ which contain at least two vertices in $Z$, and let $Y = Z \cap V(J)$. Let us apply 5.3 to $J, Y$, setting $\mu = m + 1$ and $\tau = 5$. Certainly the second statement

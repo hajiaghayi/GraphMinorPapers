@@ -1,0 +1,24 @@
+\origpage{73}{N. Robertson, P.D. Seymour / Journal of Combinatorial Theory, Series B 89 (2003) 43--76}
+\textit{Subproof.} If $s_1, t_1$ are adjacent in $P_0$, joined by an edge of $H$, then $d(s_1, t_1) \le 2 < \psi$, so we assume not. Then the subpath of $P_0$ between $s_1$ and $t_1$ is an $H$-path. But for $1 \le i \le \delta$, since $s_1 \notin \Lambda_i$ it follows from the definition of a battlefield that $d(s_1, y_i) \ge \beta \ge \psi$. Consequently, $d(s_1, t_1) < \psi$ by (1). This proves (7).
+
+We may assume that
+
+\hspace*{12pt}(8) \textit{$t_1 \in \Lambda_1$ and $t_2 \in \Lambda_2$.}
+
+\textit{Subproof.} Now $t_1 \ne s_2$ since $d(s_1, s_2) \ge d'(s_1, s_2) \ge 2\psi$ and $d(s_1, t_1) < \psi$. Consequently, $t_1 \in \Lambda_1 \cup \cdots \cup \Lambda_\delta$ since $P_0$ is an $H'$-path. Similarly, $t_2 \in \Lambda_1 \cup \cdots \cup \Lambda_\delta$. If for some $i, \{t_1, t_2\} \subseteq \Lambda_i$, then by (7), $d'(s_1, \Lambda_i) \le d(s_1, t_1) < \psi$ and similarly $d'(s_2, \Lambda_i) < \psi$, and so $d'(s_1, s_2) < 2\psi$ contrary to (6). Thus $t_1, t_2$ belong to distinct members of $\Lambda_1, \ldots, \Lambda_\delta$, and we may assume from the symmetry that $t_1 \in \Lambda_1$ and $t_2 \in \Lambda_2$. This proves (8).
+
+We may assume that
+
+\hspace*{12pt}(9) \textit{There is no path $Q$ of $H$ from $X_1$ to $V(P_0)$ with $V(Q) \cap V(H') \subseteq X_1$ and with $Z_0 \cap V(Q) = \emptyset$.}
+
+\textit{Subproof.} Suppose that for $i = 1, 2$, $Q_i$ is a path of $H$ from $X_i$ to $V(P_0)$ with $V(Q_i) \cap V(H') \subseteq X_i$ and with $Z_0 \cap V(Q_i) = \emptyset$. The union of $Q_1, Q_2$ and $P_0$ includes a path $P$ of $G$ from $X_1$ to $X_2$ with $V(P) \cap V(H') \subseteq X_1 \cup X_2$ and with $Z_0 \cap V(P) = \emptyset$. But this contradicts (5). Thus either $Q_1$ or $Q_2$ does not exist, and without loss of generality we may assume the former. This proves (9).
+
+For $3 \le i \le \beta - 3$ there is an $(i + 2)$-zone $M_i$ around $y_1$ including every $x \in A(H)$ with $d(y_1, x) < i$, since $\theta > \beta$.
+
+\hspace*{12pt}(10) \textit{There are $\kappa$ mutually disjoint paths of $H$ between $V(H) \cap bd(M_\kappa)$ and $V(H) \cap bd(\Lambda_1)$.}
+
+\textit{Subproof.} Suppose not. By a form of Menger's theorem for planar graphs, there is a circuit $C$ of a radial drawing (see [8, section 2]) $K$ of $H$, of length $< 2\kappa$ with $U(C) \subseteq \bar{\Lambda}_1$, bounding an open disc in $\bar{\Lambda}_1$ including $M_\kappa$. By theorem 7.5 of [8], $ins(C) \subseteq \bar{\Lambda}_1$ since
+\begin{equation*}
+|E(C)| < 2\kappa < 2(\theta - (3\beta + 3)).
+\end{equation*}
+Let $r$ be a region of $H$ with $r \cap U(C) \ne \emptyset$ (see [8, section 2]). Then $d(r, y_1) \le \frac{1}{2}|E(C)| < \kappa$ since $r \cap U(C) \delm{\notin}\fix{\ne} \emptyset$\fixnote{fix:8.1-p73}{The sentence before shows the intended text.} and $y_1 \in ins(C)$; and so $r \subseteq M_\kappa$ by the choice of $M_\kappa$. But then $r$ is a subset of the open disc bounded by $U(C)$, and so $r \cap U(C) = \emptyset$, a contradiction. This proves (10).

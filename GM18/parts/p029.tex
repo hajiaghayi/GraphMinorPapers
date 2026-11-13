@@ -1,0 +1,20 @@
+\origpage{105}{N. Robertson, P. Seymour / Journal of Combinatorial Theory, Series B 89 (2003) 77--108}
+\hspace*{12pt}(1) \textit{Let $t \in V(T)$ and let $N(t)$ be the set of all $y \in V(T)$ such that there is an edge of $T$ with head $y$ and tail $t$. Then $P|\tau \times T^t$ is an enlargement of a member of $\mathscr{C}^*$ by the set of $\Omega$-patchworks $\mathscr{C}_t = \{P|\tau \times T^y \colon y \in N(t)\}$.}
+
+\textbf{Subproof.} Let $B = P|\tau \times T^t = (G^*, \mu^*, \Delta^*, \phi^*)$. Let $N(t) = \{t_1, \ldots, t_n\}$, and let $F$ be the path of $T$ between $t$ and $o(T)$. For $1 \le i \le n$, let $P_i = P|\tau \times T^{t_i}$, and let $P_i = (G_i, \mu_i, \Delta_i, \phi_i)$. Since $(T^-, \tau^-)$ is proper, $G_1, \ldots, G_n$ are distinct; and $\mathscr{L} = \{G_1, \ldots, G_n\}$ is a rooted location in $G^*$ by 6.5.3. Thus $(B, \mathscr{L})$ is an $\Omega$-place. If $t = o(T)$, then by 6.5.1 $\mathscr{L}^-$ is the location of $t$ in $(T^-, \tau^-)$, and so $B|\mathscr{L}$ is a piece of $P$ under $(T^-, \tau^-)$, and consequently belongs to $\mathscr{C}$. But for each $A \in \mathscr{L}$,
+\begin{equation*}
+P|A = P_i = P|\tau \times T^{t_i} \in \mathscr{C}_t
+\end{equation*}
+for some $i$, and so $B$ is an enlargement of a member of $\mathscr{C} \subseteq \mathscr{C}^*$ by $\mathscr{C}_t$. We may assume then that $t \ne o(T)$. Let $t_0$ be the neighbour of $t$ in $V(F)$ and let $f_0 \in E(T)$ have ends $t, t_0$. Let $G_0 = \tau \times (T, f_0)$. Then $G_0, G_1, \ldots, G_n$ are all distinct since $(T^-, \tau^-)$ is proper; and $\mathscr{L}^* = \{G_0, G_1, \ldots, G_n\}$ is a rooted location in $G$, by 6.5.3; and $\mathscr{L}^{*-}$ is the location of $t$ in $(T^-, \tau^-)$, by 6.5.1 and 6.5.2. Consequently, $P|\mathscr{L}^*$ is a piece of $P$ under $(T^-, \tau^-)$, and hence belongs to $\mathscr{C}$. Now $B|\mathscr{L}$ is a rooting of $P|\mathscr{L}^*$, because $\mathscr{L} = \mathscr{L}^* \setminus \{G_0\}$, and $M(G^*, \mathscr{L}) = M(G, \mathscr{L}^*)$ by 6.5.3, and $\pi(B) = \pi(G_0)$. Consequently, $B|\mathscr{L} \in \mathscr{C}^*$, and since
+\begin{equation*}
+B|G_i = (P|\tau \times T^t)|\tau \times T^{t_i} = P|\tau \times T^{t_i}
+\end{equation*}
+for $1 \le i \le n$, we deduce that $B$ is an enlargement of a member of $\mathscr{C}^*$ by $\mathscr{C}_t$. This proves (1).
+
+Now let $P_1, P_2, \ldots$ be a countable sequence of members of $\mathscr{C}'$. For all $i \ge 1$, let $(T_i, \tau_i)$ be the corresponding rooted decomposition of $P_i$; that is, such that $(T_i^-, \tau_i^-)$ is a rotund, proper tree-decomposition of $\|P_i\|^-$ such that all pieces of $P_i$ under this decomposition belong to $\mathscr{C}$. We may assume that $T_1, T_2, \ldots$ are mutually disjoint; let their union be $M$. For $X \subseteq V(M)$, let $N(X)$ be the set of all $y \in V(M)$ such that for some $x \in X$, there is an edge $xy$ of $M$ with head $y$. Let $B(X)$ be the set of all $P_i|\tau_i \times T_i^x$, for $i \ge 1$ and $x \in X \cap V(T_i)$.
+
+\hspace*{12pt}(2) \textit{If $X \subseteq V(M)$ and $B(N(X))$ is well-quasi-ordered by simulation, then so is $B(X)$.}
+
+\textbf{Subproof.} By (1), each member of $B(X)$ is an enlargement of a member of $\mathscr{C}^*$ by $B(N(X))$. Since $\mathscr{C}^*$ is well-behaved by 6.1 (for the union of two well-behaved classes is well-behaved) and $B(N(X))$ is well-behaved by hypothesis, the claim follows from 6.3. This proves (2).
+
+We may assume that for $1 \le i < j$, $(V(P_i) \cup E(P_i)) \cap (V(P_j) \cup E(P_j)) = \emptyset$. Let $\mathscr{R}$ be the set of all rooted hypergraphs $G$ such that $G \subseteq \|P_i\|$ for some $i > 0$; then $\mathscr{R}$ satisfies Axioms 1 and 2 of [2] (as is explained at the start of Section 9 of [2]). Let $i > 0$ and let $s \in V(T_i)$. Let $S$ be the subtree of $T_i$ induced on $\{s\} \cup N(s)$; that is, the star formed by

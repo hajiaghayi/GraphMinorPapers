@@ -1,0 +1,29 @@
+\origpage{101}{GRAPH MINORS. XIII}
+\textit{Subproof.} If $i \in I$, there are at most two $i' \in I - \{i\}$ such that either $d(s_i, t_{i'}) \le \frac{1}{2}r_1$ or $d(t_i, s_{i'}) \le \frac{1}{2}r_1$. Thus we may choose $I' \subseteq I$ with $|I'| \ge \frac{1}{3}n_1$ such that for distinct $i, i' \in I'$,
+\begin{equation*}
+d(s_i, s_{i'}), d(s_i, t_{i'}), d(t_i, s_{i'}), d(t_i, t_{i'}) > \frac{1}{2}r_1.
+\end{equation*}
+By (7.4), if $r_1$ and $n_1$ are sufficiently large, $G$ has a $K_p$-minor. This proves (5).
+
+Choose $r_1, n_1$ to satisfy (5).
+
+\hspace*{12pt}(6) \textit{If $n_2$ and $r$ are sufficiently large, and there exists $I \subseteq \{1, \dots, n\}$ with $|I| = n_2$ such that $d(s_i, t_i) \le r_1$ for all $i \in I$, then $G$ has a $K_p$-minor.}
+
+\textit{Subproof.} Now $d(s_i, C) \ge \frac{1}{2}r - 1$ for all $i \in I$ except possibly one, where $C$ is the perimeter of $H$. Hence we may enlarge $n_2 - 1$ of the $H_i$'s to subwalls $H'_i$, say of $H$, still mutually far apart but now with $t_i$ inside $H'_i$. These $H'_i$'s have crosses as in (9.1), and the claim follows from (9.1).
+
+\hspace*{12pt}(7) \textit{If $n_3$ and $r$ are sufficiently large, and there exist $i_0$ with $1 \le i_0 \le n$ and $I \subseteq \{1, \dots, n\} - \{i_0\}$ such that $|I| = n_3$ and $d(t_i, t_{i_0}) \le r_1$ for $i \in I$, then $G$ has a $K_p$-minor.}
+
+\textit{Subproof.} By (7.3) we may choose a wall $H' \subseteq H$ with $t_i \notin V(H')$ ($i \in I$) and with all the $t_i$'s ($i \in I$) in the same component of $H \setminus V(H')$. Since $H \setminus V(H')$ has maximum valency $\le 3$, we may pair many of the $t_i$'s by vertex-disjoint paths of $H$ disjoint from $H'$. This yields many $H'$-paths in $G$ with their ends mutually far apart, and $G$ has a $K_p$-minor by (7.4), with suitable choice of $n_3$ and $r$. This proves (7).
+
+Choose $n_2, n_3$, and $r$ to satisfy (6) and (7). (All these choices are independent of $G$.) Finally, we observe that
+
+\hspace*{12pt}(8) \textit{If $n$ is sufficiently large, then there exists $I \subseteq \{1, \dots, n\}$ as in (5), (6), or (7).}
+
+We choose $n$ to satisfy (8) and $k$ as in (4). The result follows.
+
+With $k$ and $r$ chosen as in the theorem, the algorithm to find an $(l, m)$-star over $H$ or a model of $K_p$ is trivial. First, we determine $F$. This takes time $O(\varepsilon)$. Since the size of $F$ is bounded (exept for divalent vertices) by a function of $l, m$, and $p$, we can find an $(l, m)$-star or a model of $K_p$ in $H \cup F$ in time $\le C\varepsilon(G)$, where $C$ depends only on $l, m, p$, and the height of $H$. $\square$
+
+From (9.2) we obtain
+
+\stmt
+(9.3) \textit{For any $p \ge 0$ there exists $k, r \ge 0$ such that there is an algorithm as in (9.4), with running time $\le C\varepsilon(G)$, where $C$ depends on $p, t$, and the height of $H$.}

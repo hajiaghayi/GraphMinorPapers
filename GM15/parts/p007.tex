@@ -1,0 +1,32 @@
+\origpage{118}{ROBERTSON AND SEYMOUR}
+\begin{equation*}
+P_i = \bigcup (X_j : 1 \le j \le i)
+\end{equation*}
+\begin{equation*}
+Q_i = \bigcup (X_j : i \le j \le n),
+\end{equation*}
+and let $P_0$ and $Q_{n+1}$ be the null graph.
+
+\hspace*{12pt}(8) \textit{For $0 \le i \le n$, if $|V(P_i) \cap R| < ord(\mathscr{T}) - \rho$ then $P_i \cap B$ is small.}
+
+\textit{Subproof.} The result holds if $i = 0$, and we assume that $i \ge 1$ and proceed by induction on $i$. Since $V(P_{i-1}) \cap R \subseteq V(P_i) \cap R$ and hence $|V(P_{i-1}) \cap R| < ord(\mathscr{T}) - \rho$, it follows from the inductive hypothesis that $P_{i-1} \cap B$ is small. Since $X_i$ is small by (6), and $P_i \cap B \subseteq (P_{i-1} \cap B) \cup X_i$, it suffices by (7) to show that $|N(P_i \delm{\cup}\fix{\cap} B)| < ord(\mathscr{T})$.\fixnote{fix:2.1-claim8}{Claim (8) is about $P_i \cap B$, and the next display bounds $N(P_i \cap B)$.} To show this we shall prove that
+\begin{equation*}
+N(P_i \cap B) \subseteq (V(P_i) \cap R) \cup V(X_i \cap X_{i+1});
+\end{equation*}
+for since $|V(P_i) \cap R| < ord(\mathscr{T}) - \rho$ and $|V(X_i \cap X_{i+1})| \le \rho$, the desired inequality is a consequence. Thus, let $v \in N(P_i \cap B)$, incident with an edge $e$ of $G$ not in $E(P_i \cap B)$. If $e \notin E(B)$ then $v \in N(B) \subseteq R$ as required. If $e \in E(B)$, then since $e \notin E(P_i \cap B)$ and $B \subseteq C$ it follows that $e \in E(X_j)$ for some $j$ with $i < j \le n$. Hence $v \in V(X_j)$, and since $v \in V(P_i)$ it follows from (3) that $v \in V(X_i \cap X_{i+1})$. This proves that
+\begin{equation*}
+N(P_i \cap B) \subseteq V(P_i \cap R) \cup V(X_i \cap X_{i+1})
+\end{equation*}
+as claimed, and (8) follows.
+
+Now choose $j$ with $0 \le j \le n$, maximum such that $|V(P_j) \cap R| < ord(\mathscr{T}) - 2\rho - 1$. (This is possible, since $P_0$ is null.)
+
+\hspace*{12pt}(9) \textit{$j < n$, and $(P_j \cap B) \cup X_{j+1}$ is small, and $|P_{j+1} \cap R| \ge ord(\mathscr{T}) - 2\rho - 1$.}
+
+\textit{Subproof.} Now $P_j \cap B$ is small by (8). Since $P_n \cap B$ is not small because $(A, B) \in \mathscr{T}$, it follows that $j < n$. Now
+\begin{equation*}
+N((P_j \cap B) \cup X_{j+1}) \subseteq N(P_j \cap B) \cup N(X_{j+1})
+\end{equation*}
+and so $|N((P_j \cap B) \cup X_{j+1})| < ord(\mathscr{T})$, since $|N(P_j \cap B)| < ord(\mathscr{T}) - 2\rho - 1$ by hypothesis and $|N(X_{j+1})| \le 2\rho+1$ by (5). From (7) we deduce that $(P_j \cap B) \cup X_{j+1}$ is small. Finally, from the maximality of $j$ it follows that $|P_{j+1} \cap R| \ge ord(\mathscr{T}) - 2\rho - 1$. This proves (9).
+
+Choose $k$ with $1 \le k \le n+1$, minimum such that $|V(Q_k) \cap R| < ord(\mathscr{T}) - 2\rho - 1$. Then, similarly,

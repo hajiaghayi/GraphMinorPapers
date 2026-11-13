@@ -1,0 +1,24 @@
+\origpage{61}{N. Robertson, P.D. Seymour / Journal of Combinatorial Theory, Series B 89 (2003) 43--76}
+\textit{Subproof.} Let $y \in Y_4$. Then $d(w, v(y)) < \theta_1$, but $d(y, v(y)) \delm{=}\fix{\ge} \delm{\theta_1}\fix{\theta}$ and so $d(w, y) > \theta - \theta_1$.\fixnote{fix:6.3-dist}{The paths $P_y$ were chosen on page 59 with $d(y, v(y)) \ge \theta$, and with $d(w, v(y)) < \theta_1$ this gives $d(w, y) > \theta - \theta_1$.} Since $\theta - \theta_1 \ge \theta_1 + 8$ and $\Lambda$ is a $(\theta_1 + 8)$-zone, it follows that $y \notin \Lambda$, and so $y \in V(H')$. This proves (3).
+
+Let $d'$ be the metric of $\mathcal{T}'$. Since $\mathcal{T}'$ is a $(4\theta_1 + 34)$-compression of $\mathcal{T}$, and $d(y_1, y_2) \delm{=}\fix{\ge} \theta$, it follows that $d'(y_1, y_2) \delm{=}\fix{\ge} \theta_1$\fixnote{fix:6.3-compression}{Here $\ge$ is meant in both places.} for all distinct $y_1, y_2 \in Y_4$. Let $G_2$ be the union of $H_2$ and all $P_y(y \in Y_4)$. From 5.2, since $H', \mathcal{T}'$ is a $\Sigma$-span of order $\theta_1$, it follows that there do not exist $\mu$ mutually disjoint paths of $G_2$ each with distinct ends both in $Y_4$ and with no internal vertex in $Y_4$.
+
+Now $G_2$ is connected and $Y_4 \subseteq V(G_2)$ and $|Y_4| \ge \mu\tau' \ge 2$. From 5.3 (applied to $G_2, Y_4$), we deduce there exist $v \in V(G_2)$ and $\tau'$ paths of $G_2$ from $v$ to $Y_4 \setminus \{v\}$, mutually disjoint except for $v$, and each with no internal vertex in $Y_4$. Since each $y \in Y_4$ has degree 1 in $G_2$, and $\tau' > 1$, it follows that $v \notin Y_4$ and so $v \in V(G)\setminus V(H')$, since $V(G_2 \cap H') = Y_4$. Consequently there is a horn at $v$ over $H', \mathcal{T}'$, with breadth $\ge \theta_1$ and cardinality $\tau$. But $v \notin X$ since $X \cap V(G_2) = \emptyset$; and from 6.2, for each $x \in X$ there is a horn at $x$ over $H', \mathcal{T}'$ with breadth $\ge \theta_1$ and cardinality $\tau$, since $\theta \ge 4\theta_1 + 35$. Hence $(H', \mathcal{T}', X \cup \{v\})$ is a hairless animal with $\chi + 1$ horns, of strength $\ge (\theta_1, \tau) \ge (\psi, \tau)$, and so the first outcome of 6.3 holds. This proves 6.1. $\square$
+
+\textbf{Proof of 5.1} (assuming 6.1). Let $\Sigma$ be a surface and let $p, \tau, \chi \ge 0$ and $\phi, \psi \ge 1$ be integers. Choose $\delta$ and $\theta_\delta$ so that 6.3 is satisfied (with $\theta$ replaced by $\theta_\delta$). Let $\kappa_\delta = \rho_\delta = \zeta_\delta = 0$ and $\sigma_\delta = \tau + 1$. For $0 \le i \le \delta$ we define $\theta_i, \sigma_i, \kappa_i, \rho_i, \zeta_i$ inductively, as follows. Suppose that $0 \le i < \delta$ and $\sigma_{i+1}, \theta_{i+1}$ have already been defined. Choose $\theta_i, \sigma_i, \kappa_i, \rho_i, \zeta_i$ so that 6.1 is satisfied (with $\tau, \delta, \psi, \sigma, \kappa, \rho, \zeta, \theta$ replaced by $\sigma_{i+1}, i, \theta_{i+1}, \sigma_i, \kappa_i, \rho_i, \zeta_i, \theta_i$). This completes the inductive definition.
+
+Let $\kappa = \max(\kappa_0, \dots, \kappa_\delta)$, $\rho = \max(\rho_0, \dots, \rho_\delta)$, $\zeta = \max(\zeta_0, \dots, \zeta_\delta)$, $\sigma = \sigma_0$ and $\theta = \theta_0$. We claim that $\sigma, \kappa, \rho, \zeta, \theta$ satisfy 5.1. For let $\mathcal{T}^*$ be a tangle in a graph $G$, with a hairless animal with $\chi$ horns of strength $\ge (\theta, \sigma) = (\theta_0, \sigma_0)$. Choose $i$ with $\delm{\theta}\fix{0} \le i \le \delta$ maximum\fixnote{fix:5.1-proof}{Here $i$ counts the hairs, and $\theta_i, \sigma_i, \dots$ were defined for $0 \le i \le \delta$. The hairless animal given has $i = 0$.} such that there is an animal with $\chi$ horns and $i$ hairs of strength $\ge (\theta_i, \sigma_i)$. If $i = \delta$ then by 6.3, either
+
+\hspace*{12pt}$\bullet$ there is a hairless animal with $\chi + 1$ horns, of strength $\ge (\psi, \tau)$, or
+
+\hspace*{12pt}$\bullet$ $\mathcal{T}^*$ controls a $K_p$-minor of $G$
+
+and in either case 5.1 holds. We assume then that $i < \delta$. From the maximality of $i$, there is no animal with $\chi$ horns and $i + 1$ hairs and strength $\ge (\theta_{i+1}, \sigma_{i+1})$. By 6.1, either
+
+\hspace*{12pt}$\bullet$ there is a $\Sigma'$-span of order $\ge \phi$, for some surface $\Sigma'$ obtained from $\Sigma$ by adding a handle or a crosscap, or
+
+\hspace*{12pt}$\bullet$ there exist $Z \subseteq V(G)$ with $|Z| \le \zeta_i \le \zeta$, and a $\mathcal{T}^*\setminus Z$-central segregation of $G\setminus Z$ of type $(\rho_i, \kappa_i)$ (and hence of type $(\rho, \kappa)$) with a proper arrangement in $\Sigma$, or
+
+\hspace*{12pt}$\bullet$ $\mathcal{T}^*$ controls a $K_p$-minor of $G$.
+
+In each case 5.1 holds, as required. $\square$

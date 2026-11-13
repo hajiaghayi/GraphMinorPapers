@@ -1,0 +1,21 @@
+\origpage{45}{GRAPH MINORS. IX}
+\noindent has a cross, or there is an internal 3-separation $(G_1, G_2)$ of $(G, \Omega)$ with $P_1 \cup P_2 \cup P_3 \subseteq G_1$.*
+
+\textit{Proof.} Let $s_1, s_2, s_3, t_1, t_2, t_3$ be as in the definition of a tripod. If there exist four mutually disjoint paths of $G$ between $V(P_1 \cup P_2 \cup P_3)$ and $\bar{\Omega}$, then by (2.2) we may choose them to be $V(P_1 \cup P_2 \cup P_3) \to \bar{\Omega}$ paths, and to have $s_1, s_2, s_3$ among their initial vertices. But then $(G, \Omega)$ has a cross as is easily seen. If there do not exist four such paths, then by Menger's theorem $(G, \Omega)$ has a 3-separation $(G_1, G_2)$ with $P_1 \cup P_2 \cup P_3 \subseteq G_1$; and this 3-separation is internal, since $|V(P_1 \cup P_2 \cup P_3)| \ge 5$. $\square$
+
+A society $(G, \Omega)$ is rural if $(G, \Omega, \Omega_0)$ is rural where $\bar{\Omega}_0 = \emptyset$. The characterization of [3-6] essentially asserts that every internally 4-connected society with no cross is rural. Since this may easily be derived from the 3-connected, internally 4-connected case, the characterization is implied by (2.3) and the following.
+
+\stmt
+(2.4) \textit{Let $(G, \Omega)$ be a 3-connected society with no cross or tripod. Then $(G, \Omega)$ is rural.}
+
+\textit{Proof.} We proceed by induction on $|E(G)|$, and may therefore assume that $G$ is simple and connected. We assume that $|\bar{\Omega}| \ge 3$, for otherwise the result is trivial. We may choose distinct $s, t \in \bar{\Omega}$ such that there is a path between $s$ and $t$ avoiding $Z$, where $Z = \bar{\Omega} - \{s, t\}$. We apply (2.1), and deduce that there is a path $P$ joining $s$ and $t$ such that $P$ is an induced subgraph of $G$ and $Z$ catches $G \setminus V(P)$. In particular, no internal vertex of $P$ is in $\bar{\Omega}$.
+
+Put $W_1 = \Omega(s, t)$ and $W_2 = \Omega(t, s)$. For $i = 1, 2$, let $H_i$ be the union of those components of $G \setminus V(P)$ of which some vertex is in $W_i$. Then $H_1 \cup H_2 = G \setminus V(P)$ since $Z$ catches $G \setminus V(P)$. Moreover, $H_1 \cap H_2$ is null, since $(G, \Omega)$ has no cross.
+
+Let $\Omega_1$ be the cyclic permutation in $V(G)$ such that $\bar{\Omega}_1 = W_1 \cup V(P)$, such that
+\begin{equation*}
+\Omega_1 \mid (W_1 \cup \{s, t\}) = \Omega \mid (W_1 \cup \{s, t\})
+\end{equation*}
+and such that the sequence of vertices obtained by following $P$ from $t$ to $s$ is $\Omega_1$-clockwise. Define $\Omega_2$ similarly, where $\bar{\Omega}_2 = W_2 \cup V(P)$, and the sequence of vertices obtained by following $P$ from $s$ to $t$ is $\Omega_2$-clockwise. Let $G_1 = (G \setminus E(P)) \setminus V(H_2)$, $G_2 = (G \setminus E(P)) \setminus V(H_1)$. Then $(G_1, \Omega_1)$, $(G_2, \Omega_2)$ are 3-connected societies, both with fewer edges than $(G, \Omega)$.
+
+Suppose that $\{P_1, P_2, P_3\}$ is a tripod in $(G_1, \Omega_1)$. For $i = 1, 2, 3$, let $Q_i$ be a $V(P_1 \cup P_2 \cup P_3) \to \bar{\Omega}_1$ path of $G_1$ with ends $s_i, t_i$ where $s_i$ is an internal vertex of $P_i$ and $t_i \in \bar{\Omega}_1$, chosen so that $Q_1, Q_2, Q_3$ are mutually disjoint.

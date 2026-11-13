@@ -1,0 +1,29 @@
+\origpage{99}{GRAPH MINORS. V}
+\noindent and so $Y_{m'} \ne \emptyset$. We assume $2 \in Y_{m'}$ (say). Now for $1 \le k \le m'$, $Y_k$ separates $\{1\}$ and $\{2\}$ in $L$, and so $D_k$ separates $A_1$ and $A_2$ in $G$, where $D_k$ is the subgraph of $G$ with $|Y_k|$ components $A_j$ ($j \in Y_k$). But there are $n$ disjoint paths in $G$ from $A_1$ to $A_2$ (subpaths of $B_1, \dots, B_n$) and so by (4.3), either $n < (p - 1)\theta^2/2$ or
+\begin{equation*}
+m' < 2^{(p-1)\theta^2/2}(\theta^2 + 2(p-1)\theta^{2\theta}).
+\end{equation*}
+But $n = p + q + p 2^{p\theta^2}$ and $m' = 2^{p\theta^2}$, a contradiction.
+
+\textit{Case 2. $|N(V(L'))| \ge p$ for some connected subgraph $L'$ of $L$.}
+
+Choose $I \subseteq N(V(L'))$ with $|I| = p$. For each $i \in I$ choose $j_i \in \{1, \dots, n\}$ such that there is a subpath of $B_{j_i}$ joining $A_i$ and $A_h$ for some $h \in V(L')$, with no interior vertex in any of $A_1, \dots, A_m$. Let $P_i$ be such a subpath. Choose a spanning tree of $L'$ with edge-set $E'$ say, and for each $e \in E'$ with ends $i$, $i'$ say, choose $j_e \in \{1, \dots, n\}$ such that there is a subpath of $B_{j_e}$ joining $A_i$ and $A_{i'}$ with no interior vertex in any of $A_1, \dots, A_m$. Let $Q_e$ be such a subpath. Let $C$ be the subgraph of $G$ consisting of the paths $A_i$ ($i \in V(L')$), $P_i$ ($i \in I$) and $Q_e$ ($e \in E'$). Then $C$ is connected, and has a unique vertex in common with each $A_i$ ($i \in I$), and that vertex has valency 1 in $C$. Choose
+\begin{equation*}
+J \subseteq \{1, \dots, n\} - \{j_i \colon i \in I\} - \{j_e \colon e \in E'\}
+\end{equation*}
+with $|J| = q$. This is possible since
+\begin{equation*}
+n - |I| - |E'| \ge n - p - m = q.
+\end{equation*}
+Then $((A_i \colon i \in I), (B_j \colon j \in J))$ is a ($p, q$)-web with spider $C$. This completes the proof.
+
+Define $\phi_{\theta_1}, \dots, \phi_0$ as in Section 2. Define $\psi_{\theta_1} = 0$, and for $0 \le k < \theta_1$, define
+\begin{equation*}
+\psi_k = \phi_k + 2\phi_{k+1} + 2\phi_{k+2} + \dots + 2\phi_{\theta_1 - 1} + \phi_{\theta_1}.
+\end{equation*}
+Then for $0 \le k < \theta_1$ we have $\psi_k = \psi_{k+1} + \phi_k + \phi_{k+1}$.
+
+\stmt
+(4.5) \textit{For $0 \le k < \delm{\theta_2}\fix{\theta_1}$,\fixnote{fix:4.5}{Here $\phi_k$ and $\psi_k$ are defined only for $0\le k\le\theta_1$ (three lines above), and (4.6) applies (4.5) up to $k=\theta_1$.} if $G \in \mathcal{F}_\theta$ has a ($\phi_k, \psi_k$)-web with $k$ edge-disjoint spiders, then it has a ($\phi_{k+1}, \psi_{k+1}$)-web with $k + 1$ edge-disjoint spiders.}
+
+\textit{Proof.} Let $((A_1, \dots, A_{\phi_k}), (B_1, \dots, B_{\psi_k}))$ be a ($\phi_k, \psi_k$)-web with $k$ edge-disjoint spiders $C_1, \dots, C_k$. Let $G'$ be obtained from $G$ by deleting the edges of $C_1, \dots, C_k$. Then $((A_1, \dots, A_{\phi_k}), (B_1, \dots, B_{\psi_k}))$ is a ($\phi_k, \psi_k$)-web in $G'$. By (4.4) there exists $I \subseteq \{1, \dots, \phi_k\}$ with $|I| = \phi_{k+1}$, and $J \subseteq \{1, \dots, \psi_k\}$ with $|J| = \psi_{k+1}$ such that $((A_i \colon i \in I), (B_j \colon j \in J))$ is a ($\phi_{k+1}, \psi_{k+1}$)-web in $G'$ with a spider $C_{k+1}$. But then this is a web in $G$, and in $G$ it has $k + 1$ edge-disjoint spiders $C_1, \dots, C_{k+1}$.

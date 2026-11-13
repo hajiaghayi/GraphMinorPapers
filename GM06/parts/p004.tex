@@ -1,0 +1,32 @@
+\origpage{118}{ROBERTSON AND SEYMOUR}
+\noindent $\{v, v'\}$. Let $P_1, P_2$ be the closures of the two components of $C - \{v, v'\}$. Choose $\delta \in \Delta$ with $v \in \delta$, and for $i = 1, 2$ choose $v_i \in P_i \cap \delta$ as close to $v'$ as possible. (It is possible that $v_1, v_2 = v$.) Now $v' \notin \delta$, and so $v_1, v_2 \ne v'$. For $i = 1, 2$ let $S_i$ be the segment of $C$ with respect to $V$ with $S_i \subseteq P_i$ and $v_i \in \bar{S}_i$, such that $S_i$ and $v'$ are in the same component of $C - \{v, v_i\}$. Let $U \cap S_i = \{u_i\}$ ($i = 1, 2$). Now by choice of $v_1, v_2$ and since $\Delta$ is cross-free, there is no $\delta' \in \Delta$ and $w, w' \in \delta'$ such that $\{w, w'\}$ crosses $\{v_1, v_2\}$, and hence none such that $\{w, w'\}$ crosses $\{u_1, u_2\}$. Thus there exists $\delta^* \in \Delta^*$ such that $u_1, u_2 \in \delta^*$. But $\{u_1, u_2\}$ crosses $\{v, v'\}$, as required.
+
+Put $\Gamma = \Delta \cup \Delta^*$ and $W = V \cup U$.
+
+\stmt
+(2.3) \textit{If} $W \ne \emptyset$, \textit{one of} $\Delta, \Delta^*$ \textit{has a member with cardinality} $1$.
+
+\textit{Proof.} Choose $c \in C - W$, and let $W = \{w_1, \dots, w_{2k}\}$, numbered in order on $C - \{c\}$. Choose $i, j$ with $1 \le i \le j \le 2k$ so that
+
+\hspace*{12pt}(i) for some $\gamma \in \Gamma$, $\{x, c\}$ crosses $\{w_i, w_j\}$ for all $x \in \gamma - \{w_i, w_j\}$
+
+\hspace*{12pt}(ii) subject to (i), $j - i$ is minimum.
+
+(This is possible since the choice $i = 1$, $j = 2k$ satisfies (i), because $k \ge 1$.) If $j = i$ the theorem is true. Suppose for a contradiction that $j > i$, and choose $\gamma$ satisfying (i). Now $w_i, w_j \in \gamma$ by the minimality of $j - i$, and so $j - i$ is even and hence $j - i \ge 2$. Choose $\gamma' \in \Gamma$ with $w_{i+1} \in \gamma'$. Now if $x \in \gamma'$ then $x \ne w_j$, and $\{w_{i+1}, x\}$ does not cross $\{w_i, w_j\}$ by definition of $\Delta^*$; thus either $x = w_{i+1}$ or $\{x, c\}$ crosses $\{w_{i+1}, w_j\}$. This contradicts the minimality of $j - i$, as required.
+
+For $x, y \in W$ we define
+\begin{equation*}
+\Delta(x, y) = |\{\delta \in \Delta : \text{either } \delta \cap \{x, y\} \ne \emptyset\text{, or there exist } u, v \in \delta \text{ such that } \{u, v\} \text{ crosses } \{x, y\}\}|,
+\end{equation*}
+and we define $\Delta^*(x, y)$ analogously.
+
+\stmt
+(2.4) \textit{If} $\Delta$ \textit{is cross-free and} $x, y \in W$, \textit{then}
+\begin{align*}
+\Delta(x, y) - \Delta^*(x, y) &= 1 &&\text{if } x, y \in V \\
+&= -1 &&\text{if } x, y \in U. \\
+&= 0 &&\text{otherwise.}
+\end{align*}
+\textit{Proof.} If $x = y$ the theorem may easily be verified, and we assume that $x \ne y$. Let $C_1, C_2$ be the closures of the two components of $C - \{x, y\}$. Let $v_1 \in C_1, v_2 \in C_2$. We say that $(v_1, v_2)$ is a $\Delta$-\textit{minimizer} if
+
+\hspace*{12pt}(i) $v_1, v_2 \in V$ and $v_1, v_2 \ne x$;

@@ -1,0 +1,21 @@
+\origpage{247}{GRAPH MINORS IV}
+For choose $p, q \in \eta(v)$ with $a \in \eta'(p)$, $b \in \eta'(q)$. Since $H$ realizes $\eta$ there is a path of $H$ joining $p$ and $q$ with $t$ edges, say. By applying (8) to each edge of this path, we deduce that there is a sequence $a = a_0, b_1, a_1, b_2, \dots, a_{t-1}, b_t, a_t, b_{t+1} = b$ of vertices of $H''$ such that for $1 \le i \le t$, $a_i$ and $b_i$ are adjacent in $H''$ and for $0 \le i \le t$, $a_i$ and $b_{i+1}$ both belong to $\eta'(r)$ for some vertex $r$ of our path. Since $H'$ realizes $\eta'$ we deduce that for $0 \le i \le t$, $a_i$ and $b_{i+1}$ belong to the same component of $H'$, and hence of $H''$ since $H' \subseteq H''$. We deduce that $a$ and $b$ belong to the same component of $H''$ as required.
+
+From (7) and (9) we deduce that $H''$ realizes $\eta''$, and hence $\eta''$ is realizable. This completes the proof of the second statement of the theorem; and the third follows, for the simulation relation has been shown to be transitive, and it is reflexive, because the ``identity'' expansion of an $\Omega$-patchwork $P = (G, \mu, \Delta, \phi)$ in itself is realized by the realization $N_{V(G)}$ of $P \setminus E(G)$. $\square$
+
+\sectionhead{8. Stars with Small Hearts}
+
+The results of the previous two sections will be used to show that our containment relation satisfies Axioms 1, 2, and 3. In this section we prove a result will be used for Axiom 4. We begin with the following lemma.
+
+Let $P = (G, \mu, \Delta, \phi)$ be an $\Omega$-patchwork. If $G'$ is a rooted hypergraph with $G'^- \subseteq G^-$, and $\mu'$, $\Delta'$, $\phi'$ are the restrictions of $\mu$, $\Delta$, $\phi$ to $\operatorname{dom}(\mu) \cap E(G')$, $E(G')$, $E(G')$, respectively, then $(G', \mu', \Delta', \phi')$ is an $\Omega$-patchwork which we denote by $P | G'$.
+
+\stmt
+(8.1) \textit{Let $P = (G, \mu, \Delta, \phi)$, $P' = (G', \mu', \Delta', \phi')$ be $\Omega$-patchworks, and let $(G_1, G_2)$, $(G'_1, G'_2)$ be separations of $G$, $G'$ respectively. Let $\eta_1$ be a realizable expansion of $P | G_1$ in $P' | G'_1$ (whence $|\bar{\pi}(G_1)| = |\bar{\pi}(G'_1)| = k$, say) and let $\eta_2$ be a realizable expansion of $P | G_2$ in $P' | G'_2$ such that for $1 \le i \le k$, $\eta_2(v)$ contains the $i$th term of $\pi(G'_1)$, where $v$ is the $i$th term of $\pi(G_1)$. Define $\eta$ by}
+\begin{align*}
+\eta(v) &= \eta_1(v) && (v \in V(G_1) - V(G_2)) \\
+&= \eta_2(v) && (v \in V(G_2) - V(G_1)) \\
+&= \eta_1(v) \cup \eta_2(v) && (v \in V(G_1) \cap V(G_2)) \\
+\eta(e) &= \eta_1(e) && (e \in E(G_1)) \\
+&= \eta_2(e) && (e \in E(G_2)).
+\end{align*}
+\textit{Then $\eta$ is a realizable expansion of $P$ in $P'$.}

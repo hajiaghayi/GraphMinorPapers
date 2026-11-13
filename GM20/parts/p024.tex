@@ -1,0 +1,34 @@
+\origpage{348}{N. Robertson, P.D. Seymour / Journal of Combinatorial Theory, Series B 92 (2004) 325--357}
+\noindent the $i$th node of $c$; and in particular, the first node of $c$ is its \textit{tail}. A cell $c$ is a \textit{border cell} if $c \cap bd(\Sigma) \ne \emptyset$, and otherwise is \textit{internal}. Nodes in $bd(\Sigma)$ are \textit{border nodes} and the others are \textit{internal}. If $\Theta$ is a cuff, we say a cell $c$ or node $n$ \textit{borders} $\Theta$ if $c \cap \Theta \ne \emptyset$ or $n \in \Theta$. The \textit{size} of a cell $c$ is $|\tilde{c}|$. The components of $\Sigma \setminus U(\Gamma)$ are the \textit{regions} of $\Gamma$. A subset $X \subseteq \Sigma$ is \textit{$\Gamma$-normal} if $X \cap U(\Gamma) \subseteq N(\Gamma)$. A painting $\Gamma$ is \textit{3-connected} if
+
+\hspace*{12pt}$\bullet$ for every $\Gamma$-normal O-arc $F$ in $\Sigma$ with $|F \cap N(\Gamma)| \le 2$ there is a closed disc $\Delta \subseteq \Sigma$ with $bd(\Delta) = F$ which includes at most one cell of $\Gamma$ and with $\Delta \cap N(\Gamma) \subseteq F$,
+
+\hspace*{12pt}$\bullet$ for every $\Gamma$-normal line $F$ in $\Sigma$ with $|F \cap N(\Gamma)| \le 2$ and with both ends in $bd(\Sigma)$ and with no other point in $bd(\Sigma)$, there is a closed disc $\Delta \subseteq \Sigma$ with $F \subseteq bd(\Delta) \subseteq F \cup bd(\Sigma)$ which includes at most one cell of $\Gamma$ and with $\Delta \cap N(\Gamma) \subseteq F$.
+
+Let $\Gamma$ be a painting in $\Sigma$. We define its skeleton $sk(\Gamma)$ to be the subgraph of $K_{N(\Gamma)}$ with vertex set $N(\Gamma)$ in which for distinct $n_1, n_2 \in N(\Gamma)$, $n_1$ and $n_2$ are adjacent in $sk(\Gamma)$ if and only if there is a cell $c \in \mathcal{C}(\Gamma)$ with $n_1, n_2 \in \tilde{c}$.
+
+Let $\Gamma$, $\Gamma'$ be paintings in $\Sigma$. Let $\zeta$ be a function with domain $\mathcal{C}(\Gamma) \cup N(\Gamma)$ and with the following properties:
+
+\hspace*{12pt}$\bullet$ $\zeta(c) \in \mathcal{C}(\Gamma')$ for each $c \in \mathcal{C}(\Gamma)$, and $\zeta(c)$ has the same size as $c$, and for each cuff $\Theta$, $c$ borders $\Theta$ if and only if $\zeta(c)$ does (and hence $c$ is internal if and only if $\zeta(c)$ is),
+
+\hspace*{12pt}$\bullet$ $\zeta(c_1) \ne \zeta(c_2)$ for all distinct $c_1, c_2 \in \mathcal{C}(\Gamma)$,
+
+\hspace*{12pt}$\bullet$ for each cuff $\Theta$, if $c \in \mathcal{C}(\Gamma)$ borders $\Theta$ and we orient $\Theta$ so that the tail of $c$ immediately precedes $c \cap \Theta$, then the tail of $\zeta(c)$ immediately precedes $\zeta(c) \cap \Theta$ under the same orientation of $\Theta$,
+
+\hspace*{12pt}$\bullet$ for each $n \in N(\Gamma)$, $\zeta(n)$ is a non-null induced connected subgraph of $sk(\Gamma')$,
+
+\hspace*{12pt}$\bullet$ $\zeta(n_1)$ and $\zeta(n_2)$ are disjoint for distinct $n_1, n_2 \in N(\Gamma)$,
+
+\hspace*{12pt}$\bullet$ for all $n \in N(\Gamma)$ and $c \in \mathcal{C}(\Gamma)$ and $1 \le i \le |\tilde{c}|$, $n$ is the $i$th node of $c$ if and only if $\zeta(n)$ contains the $i$th node of $\zeta(c)$,
+
+\hspace*{12pt}$\bullet$ for every border cell $c' \in \mathcal{C}(\Gamma')$, if $c' \notin \zeta(\mathcal{C}(\Gamma))$ then the nodes of $c'$ are adjacent in $\zeta(n)$ for some $n \in N(\Gamma)$.
+
+We call such a function $\zeta$ a \textit{linear inflation} of $\Gamma$ in $\Gamma'$ (There are no ``nonlinear'' inflations in this paper, but there were in [5].) Theorem 2.1 of [5] implies the following (Note that there is a minor discrepancy between the meanings of ``painting'' in these two papers; in this paper, if $|\tilde{c}| = 2$ then the closure of $c$ is a disc, while in [5], the closure of $c$ is a line. But it is easy to convert from one version to the other; make the discs narrow and the lines thick.)
+
+\textbf{8.1.} \textit{Let $\Sigma$ be a surface and let $\Omega$ be a well-quasi-order. For each $i \ge 1$ let $\Gamma_i$ be a 3-connected painting in $\Sigma$ and let $\phi_i : \mathcal{C}(\Gamma_i) \to E(\Omega)$ be a function. Then there exist $j > i \ge 1$ and a linear inflation $\zeta$ of $\Gamma_i$ in $\Gamma_j$ such that $\phi_i(c) \le \phi_j(\zeta(c))$ for each $c \in \mathcal{C}(\Gamma_i)$.}
+
+The objective of the next two sections is to deduce Wagner's conjecture from 8.1 and the main theorem of [3].
+
+\sectionhead{9. Patchworks from a surface}
+
+We wish now to discuss certain patchworks associated with paintings in a surface. Let $\Sigma$ be a surface, and for each cuff $\Theta$ let $\rho(\Theta) \ge 0$ be an integer. We call $(\Sigma, \rho)$ a \textit{graded surface}. Let $\Gamma$ be a 3-connected painting in $\Sigma$, and let $G$ be a hypergraph with $N(\Gamma) \subseteq V(G)$ and

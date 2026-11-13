@@ -1,0 +1,35 @@
+\origpage{60}{ROBERTSON AND SEYMOUR}
+\noindent crossing $Q_1$. If $P$ crosses $Q_{s-1}$ then (ii) is true. We assume then that it does not, and so $P$ does not cross any $Q_j$ for $s-1 \le j \le n$. Similarly, we may assume that there exists $P' \in \mathscr{P}$ crossing $Q_n$ but not crossing any $Q_j$ for $1 \le j \le n-s+2$. Now $t \ge 4$, and so $s-1 \le n-s+2$. Hence neither $P$ nor $P'$ crosses $Q_{s-1}$, and so $P$ does not cross $P'$. It follows that
+\begin{equation*}
+\{P, Q_1, Q_{s-1}, Q_s, \dots, Q_{s+t-7}, Q_{s+t-6}, Q_n, P'\}
+\end{equation*}
+is a doublecross and (iii) is true. $\square$
+
+\sectionhead{8. Societies with No Large Transaction}
+
+The other possible outcome of (6.1), that $(G, \Omega)$ has sophistication at most $3p+7$, can also be made more concrete at some sacrifice of sharpness. To do so we investigate the structure of societies with no large transaction.
+
+Let $(G, \Omega)$ be a society. A \textit{linear decomposition} of $(G, \Omega)$ is an enumeration $\{t_1, \dots, t_n\}$ of $\bar{\Omega}$ where $(t_1, \dots, t_n)$ is clockwise, together with a family $(X_i: 1 \le i \le n)$ of subgraphs of $G$, with the following properties:
+
+\hspace*{12pt}(i) $\bigcup(X_i: 1 \le i \le n) = G$
+
+\hspace*{12pt}(ii) for $1 \le i < i' \le n$, $E(X_i \cap X_{i'}) = \emptyset$
+
+\hspace*{12pt}(iii) for $1 \le i \le n$, $t_i \in V(X_i)$
+
+\hspace*{12pt}(iv) for $1 \le i \le i' \le i'' \le n$, $X_i \cap X_{i''} \subseteq X_{i'}$.
+
+The \textit{depth} of such a linear decomposition is
+\begin{equation*}
+\max(|V(X_i \cap X_{i'})|: 1 \le i < i' \le n).
+\end{equation*}
+It is easy to see that every society with a linear decomposition of depth $\le k$ has no transaction of cardinality $>2k$. (We omit the proof because we shall not need the result.) What concerns us here is a partial converse, the following.
+
+\stmt
+(8.1) \textit{Every society} \fix{\textit{$(G, \Omega)$ with $\bar{\Omega} \neq \emptyset$ or $V(G) = \emptyset$, and}} \textit{with no transaction of cardinality $>k$ has a linear decomposition of depth $\le k$.}\fixnote{fix:8.1}{As printed, (8.1) fails when $\bar{\Omega} = \emptyset$ and $G$ is not null. Then every transaction is empty, so there is no transaction of cardinality $>k$. But a linear decomposition has $n = |\bar{\Omega}| = 0$, and then condition (i) asks that the empty union be $G$, which is false. With the added hypothesis (8.1) holds. The use of (8.1) in Graph Minors XV assumes $\bar{\Omega} \neq \emptyset$.}
+
+\textit{Proof.} Let $(G, \Omega)$ be a society with no transaction of cardinality $>k$, and let $\bar{\Omega} = \{t_1, \dots, t_n\}$, where $(t_1, \dots, t_n)$ is clockwise. For $1 \le j \le n-1$, let $A_j = \{t_1, \dots, t_j\}$, $B_j = \{t_{j+1}, \dots, t_n\}$, so that $(A_j, B_j)$ is a fence of $\Omega$. Choose $k_j$ maximum so that there are $k_j$ mutually disjoint $A_j \to B_j$ paths in $G$. Let $(Y_j, Z_j)$ be a separation of $G$ satisfying the following conditions (1) and (2).
+
+\hspace*{12pt}(1) $A_j \subseteq V(Y_j)$, $B_j \subseteq V(Z_j)$, and $|V(Y_j \cap Z_j)| = k_j$.
+
+(This is possible by Menger's theorem.)

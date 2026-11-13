@@ -1,0 +1,27 @@
+\origpage{59}{GRAPH MINORS. IX}
+\noindent more about the structure of the transaction than just that it is crooked, even at some sacrifice of size. In this section we prove that every large crooked transaction contains a (fairly) large crooked transaction which is of one of three special types. We now describe these three types.
+
+Let $\mathcal{P}$ be a transaction. If there is a fence $(A, B)$ for $\mathcal{P}$, and an enumeration $\mathcal{P} = \{P_1, \dots, P_p\}$, where $P_i$ has ends $a_i \in A$, $b_i \in B$ ($1 \le i \le p$), such that $(a_p, a_{p-1}, \dots, a_1, b_1)$ is clockwise, and
+
+\hspace*{12pt}(i) $p \ge 2$ and $(a_p, a_{p-1}, \dots, a_2, a_1, b_p, b_{p-1}, \dots, b_2, b_1)$ is clockwise, we say $\mathcal{P}$ is a \textit{crosscap}
+
+\hspace*{12pt}(ii) $p \ge 3$ and $(a_p, a_{p-1}, \dots, a_2, a_1, b_2, b_3, \dots, b_p, b_1)$ is clockwise, we say $\mathcal{P}$ is a \textit{leap}
+
+\hspace*{12pt}(iii) $p \ge 4$ and $(a_p, a_{p-1}, \dots, a_2, a_1, b_2, b_1, b_3, b_4, \dots, b_{p-3}, b_{p-2}, b_p, b_{p-1})$ is clockwise, we say $\mathcal{P}$ is a \textit{doublecross}.
+
+These are represented pictorially in Fig. 3.
+
+The result of this section is the following.
+
+\stmt
+(7.1) \textit{Let $r \ge 2$, $s \ge 3$, $t \ge 4$ be integers. Let $\mathcal{P}$ be a crooked transaction in $(G, \Omega)$ such that $|\mathcal{P}| \ge (r - 1)(2s + t - 7)$. Then there exists $\mathcal{P}' \subseteq \mathcal{P}$ such that either}
+
+\hspace*{12pt}(i) \textit{$|\mathcal{P}'| = r$ and $\mathcal{P}'$ is a crosscap, or}
+
+\hspace*{12pt}(ii) \textit{$|\mathcal{P}'| = s$ and $\mathcal{P}'$ is a leap, or}
+
+\hspace*{12pt}(iii) \textit{$|\mathcal{P}'| = t$ and $\mathcal{P}'$ is a doublecross.}
+
+\textit{Proof.} Choose $Q_1, \dots, Q_n \in \mathcal{P}$ in order with $n$ maximum. By a result of [1], if $n(r - 1) < |\mathcal{P}|$ then (i) is true. We assume then that $n \ge 2s + t - 7$. From the maximality of $n$ and the fact that $\mathcal{P}$ is crooked, there exists $P \in \mathcal{P}$
+
+\origfig{figures/fig3}{284bp}{\textsc{Fig}. 3. Three crooked transactions.}

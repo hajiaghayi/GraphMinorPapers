@@ -1,0 +1,30 @@
+\origpage{215}{GRAPH MINORS. VII}
+\textit{(along the appropriate subset of the surface)}. More generally, for any proper graph $J$ drawn in a surface $\Sigma$ with no isolated vertices, we can ``cut'' along $U(J)$ in the obvious way, and obtain a new surface $\Sigma'$. There is a natural surjection $\phi \colon \Sigma' \to \Sigma$, which we call the \textit{associated surjection}. For $z \in \Sigma$, $\phi^{-1}(z)$ denotes $\{z' \in \Sigma' \colon \phi(z') = z\}$, and for $Z \subseteq \Sigma$, $\phi^{-1}(Z)$ denotes $\bigcup (\phi^{-1}(z) \colon z \in Z)$. If $G$ is a proper graph in $\Sigma$ and $U(J)$ is $G$-normal, then $(\phi^{-1}(U(G)), \phi^{-1}(V(G)))$ is a proper graph in $\Sigma'$, which we denote by $\phi^{-1}(G)$.
+
+It is known that any connected surface can be constructed by repeated pasting, starting from a closed disc. A \textit{net} $(\Delta, \Pi)$ for a connected surface $\Sigma$ is a closed disc $\Delta$ together with a set
+\begin{equation*}
+\Pi = \{\{f_1, g_1\}, \dots, \{f_r, g_r\}\},
+\end{equation*}
+where $f_1, g_1, \dots, f_r, g_r$ are arc-maps of pairwise internally disjoint boundary $I$-arcs in $\Delta$, such that $\Sigma$ can be obtained by pasting $f_1 = g_1$, $f_2 = g_2$, \dots, $f_r = g_r$. Let $\phi \colon \Delta \to \Sigma$ be the associated surjection. Let $J = (U, V)$, where $U = \{\phi(x) \colon x \in bd(\Delta)\}$ and
+\begin{equation*}
+V = \{z \in \Sigma \colon \text{for some } \{f, g\} \in \Pi\text{, } f \text{ has an end in } \phi^{-1}(z)\}.
+\end{equation*}
+Then, provided that $\Pi \ne \emptyset$, $J$ is a graph which we call the \textit{seam graph} for the net $(\Delta, \Pi)$.
+
+\stmt
+(2.1) \textit{Let $J$ be a graph in $\Sigma$. Then $J$ is a seam graph for some net if and only if}
+
+\hspace*{12pt}(i) \textit{$bd(\Sigma) \subseteq U(J)$, and for every edge $e$ of $J$, either $e \subseteq bd(\Sigma)$ or $e \cap bd(\Sigma) = \emptyset$,}
+
+\hspace*{12pt}(ii) \textit{$J - bd(\Sigma)$ has no isolated vertices,}
+
+\hspace*{12pt}(iii) \textit{$J$ has a unique region, and}
+
+\hspace*{12pt}(iv) \textit{every $O$-arc included in that region is null-homotopic\del{.}\fix{, and}}
+
+\hspace*{12pt}\fix{(v) \textit{$U(J)$ is connected (and so non-empty).}}\fixnote{fix:2.1}{Without (v) the ``if'' direction fails. A seam graph has $U(J)=\phi(bd(\Delta))$, the image of a circle, so $U(J)$ is connected and non-empty. But (i)--(iv) hold for the empty graph on the sphere, and for two disjoint edges on the sphere (the complement of two disjoint arcs is connected). The ``only if'' direction holds as printed. The proof of the converse is completed on page 216.}
+
+\textit{Proof.} Suppose that $J$ is a seam graph for some net $(\Delta, \Pi)$, where $\Pi = \{\{f_1, g_1\}, \dots, \{f_r, g_r\}\}$. Let $\phi$ be the associated surjection. Then the restriction of $\phi$ to $\Delta - bd(\Delta)$ is injective, and hence provides a homeomorphism from $\Delta - bd(\Delta)$ to $\Sigma - U(J)$. Since $\Delta - bd(\Delta)$ is connected, it follows that $\Sigma - U(J)$ is connected, that is, $J$ has a unique region; and since every $O$-arc included in $\Delta - bd(\Delta)$ is null-homotopic, the same is true for $\Sigma - U(J)$. Thus (iii) and (iv) are verified. To verify (i) and (ii), we observe that the sets
+\begin{equation*}
+\{f_i(x) \colon 0 < x < 1\} \quad (1 \le i \le r)
+\end{equation*}

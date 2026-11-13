@@ -1,0 +1,59 @@
+\origpage{314}{ROBERTSON AND SEYMOUR}
+\noindent tree-decomposition with width $< w$, there exists $X \subseteq V(G)$ with $|X| \le w$ such that every component of $G \setminus X$ has at most $\tfrac{1}{2} |Q - X|$ vertices which are in $Q$, by (2.5).
+
+Let $G \setminus X$ have components $C_1, C_2, \dots, C_r$, where
+\begin{equation*}
+|V(C_i) \cap Q| = c_i \qquad (1 \le i \le r)
+\end{equation*}
+and $c_1 \ge c_2 \ge \dots \ge c_r$. Then $c_1 + \dots + c_r = |Q - X|$, and so $c_1 \le \tfrac{1}{2}(c_1 + \dots + c_r)$, and $r \ge 2$. If $c_1 \ge \tfrac{1}{3}(c_1 + \dots + c_r)$ we may take $Y = V(C_1)$, $Y' = V(C_2) \cup \dots \cup V(C_r)$. We assume then that $c_1 < \tfrac{1}{3}(c_1 + \dots + c_r)$. Choose $i$ minimum such that
+\begin{equation*}
+c_1 + \dots + c_i \ge \tfrac{1}{3}(c_1 + \dots + c_r).
+\end{equation*}
+Then
+\begin{equation*}
+c_1 + \dots + c_{i-1} \le \tfrac{1}{3}(c_1 + \dots + c_r),
+\end{equation*}
+and $c_i \le c_1 \le \tfrac{1}{3}(c_1 + \dots + c_r)$, and so
+\begin{equation*}
+c_1 + \dots + c_i \le \tfrac{2}{3}(c_1 + \dots + c_r).
+\end{equation*}
+Thus we may take $Y = V(C_1) \cup \dots \cup V(C_i)$, $Y' = V(C_{i+1}) \cup \dots \cup V(C_r)$, and the theorem is satisfied.
+
+For the algorithms of the next section, the only facts we need about tree-width are (2.6) and the following elementary observation.
+
+\stmt
+(2.7) \textit{If $G$ has tree-width $< w$, so does every minor of $G$.}
+
+\fix{We give the details. Let $(X_i : i \in I)$, $T$ be a tree-decomposition of $G$ with $|X_i| \le w$
+for all $i \in I$, and let $H$ be a minor of $G$. Then there are disjoint non-empty sets
+$Y(v) \subseteq V(G)$ $(v \in V(H))$, each inducing a connected subgraph of $G$, and for each edge $e$
+of $H$ an edge $f(e)$ of $G$, such that if $e$ has ends $u, v$, then $f(e)$ has one end in $Y(u)$ and
+the other in $Y(v)$. (Take for $Y(v)$ the set of vertices of $G$ that are contracted into $v$, and for
+$f(e)$ the edge of $G$ that becomes $e$.) For $i \in I$ let $X'_i$ be the set of all $v \in V(H)$ with
+$Y(v) \cap X_i \ne \emptyset$. Choosing for each $v \in X'_i$ a vertex in $Y(v) \cap X_i$ gives distinct
+vertices for distinct $v$, since the sets $Y(v)$ are disjoint, and so $|X'_i| \le |X_i| \le w$. We claim
+that $(X'_i : i \in I)$, $T$ is a tree-decomposition of $H$, and this proves (2.7). For (W1), each $Y(v)$
+is non-empty, and every vertex of $G$ is in some $X_i$. For (W2), let $e$ be an edge of $H$ with ends
+$u, v$. Then $f(e)$ has ends $a \in Y(u)$ and $b \in Y(v)$, and $a, b \in X_i$ for some $i$, by (W2) for
+$G$. Then $u, v \in X'_i$. For (W3), let $j$ lie on the path of $T$ from $i$ to $k$, and let
+$v \in X'_i \cap X'_k$. Suppose that $Y(v) \cap X_j = \emptyset$. We claim that for all
+$a, b \in Y(v)$ and all $i', k' \in I$ with $a \in X_{i'}$ and $b \in X_{k'}$, there is a walk of $T$ from
+$i'$ to $k'$ that does not pass through $j$. If $a = b$, then $j$ is not on the path of $T$ from $i'$ to
+$k'$, since otherwise $a \in X_{i'} \cap X_{k'} \subseteq X_j$ by (W3) for $G$, and we take this path.
+Since $Y(v)$ induces a connected subgraph of $G$, it is enough now to show that if the claim holds for
+$a, b$, and $c \in Y(v)$ is adjacent to $b$, then it holds for $a, c$. Let $a \in X_{i'}$ and
+$c \in X_{k'}$. By (W2) for $G$, some $X_t$ contains $b$ and $c$. There is a walk from $i'$ to $t$ not
+through $j$, since the claim holds for $a, b$, and a walk from $t$ to $k'$ not through $j$, by the case
+$a = b$ applied to $c$. Together they give a walk from $i'$ to $k'$ not through $j$. This proves the
+claim. Now choose $a \in Y(v) \cap X_i$ and $b \in Y(v) \cap X_k$. By the claim there is a walk of $T$
+from $i$ to $k$ not through $j$. But every walk of the tree $T$ from $i$ to $k$ passes through every
+vertex of the path of $T$ from $i$ to $k$, and in particular through $j$. This is a contradiction, and
+so $Y(v) \cap X_j \ne \emptyset$, that is, $v \in X'_j$.\fixnote{fix:2.7-proof-added}{The paper calls
+(2.7) an elementary observation and gives no proof. The argument above is the one used in the
+formalization.}}
+
+Our algorithm (1.3) to test feasibility of a terminated graph $G$ takes advantage of the separation given by (2.6) with $Q = V(G)$ to reduce to two smaller problems, each with at most two-thirds (approximately) of the original vertices. There are basically two difficulties.
+
+\hspace*{12pt}(i) This reduction can sometimes increase the index of the terminated graph, if the support of the original termination is not divided fairly evenly between the two sides of the separation, because the ``separating'' vertices are included in the supports of the new terminations. This is easily overcome; we simply apply (2.6) to both these smaller problems, this time with $Q$ the support of the current termination, and reduce to four problems, each with index at most that of the original and each containing at most two-thirds of the original vertices.
+
+\hspace*{12pt}(ii) The original terminated graph may be feasible only by means of paths which cross from $H$ to $H'$ and back several times, and our method of reduction to smaller problems must take account of this. For that reason we need the following technical device.

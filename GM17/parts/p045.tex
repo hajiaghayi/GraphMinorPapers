@@ -1,0 +1,21 @@
+\origpage{206}{ROBERTSON AND SEYMOUR}
+\hspace*{12pt}(1) \textit{For all $\Sigma'$, $z'$, if $\Sigma'$ is simpler then or homeomorphic to $\Sigma$, and $z' \le z$, then $\sigma(\Sigma', p, z') \le \sigma(\Sigma, p, z)$.}
+
+We prove the theorem by induction on $h$. We first assume that $h = 0$. Let $z = z_0$ and $\theta = \sigma(\Sigma, p, z) + 1$ where $\Sigma$ is the sphere; we claim that the result holds. For let $\mathscr{T}$, $G$, $Z_0$, $\pi_0 = (\Sigma_0, \Gamma_0, \alpha_0, \beta_0, \gamma_0)$ be as in the theorem, with $h_p(\pi_0) = 0$. Then $\Sigma_0$ is a sphere, and so $\pi_0$ is $z'$-redundant for all $z' < \operatorname{ord}(\mathscr{T})$. In particular, it is $\sigma(\Sigma_0, p, |Z_0|)$-redundant by (1), as required.
+
+Now we assume that $h > 0$, and that the result holds for $h - 1$ and all $z_0$. Choose $z'_0$ so that
+\begin{equation*}
+z'_0 \ge z_0 + \sigma(\Sigma(a, b, c), p, z_0)
+\end{equation*}
+for all $a, b, c, \ge 0$ such that $p(4a + 2b + c)^2 \le h$. Since $p \ge 1$, there are only finitely many such $a, b, c$, so such a choice is possible.
+
+Let $h' = h - 1$, and choose $\theta, z$ so that the result holds with $h, z_0, \theta, z$ replaced by $h', z'_0, \theta, z$. We claim that the theorem holds. For let $\mathscr{T}$, $G$, $Z_0$ and $\pi_0 = (\Sigma_0, \Gamma_0, \alpha_0, \beta_0, \gamma_0)$ be as in the theorem. If $\pi_0$ is $\sigma(\Sigma_0, p, z_0)$-redundant, the result holds, taking $Z = Z_0$, $\pi = \pi_0$; for $|Z_0| \le z_0 \le z$, and so $\sigma(\Sigma_0, p, |Z|) \le \sigma(\Sigma_0, p, z_0)$ by (1). We assume then that $\pi_0$ is not $\sigma(\Sigma_0, p, z_0)$-redundant. Consequently there exists $Z'_0 \subseteq V(G)$ with $Z_0 \subseteq Z'_0$ and $|Z'_0| \le |Z_0| + \sigma(\Sigma_0, p, z_0) \le z'_0$, such that there is a $(\mathscr{T} \setminus Z_0 / (Z'_0 - Z_0))$-central portrayal of $G \setminus Z_0 / (Z'_0 - Z_0)$ which is simpler than $\pi_0$. But $G \setminus Z_0 / (Z'_0 - Z_0)$ and $G \setminus Z'_0$ differ only by certain edges with $\le 1$ end. By deleting such edges, we deduce that there is a $(\mathscr{T} \setminus Z'_0)$-central portrayal $\pi'_0 = (\Sigma'_0, \Gamma'_0, \alpha'_0, \beta'_0, \gamma'_0)$ of $G \setminus Z'_0$ which is simpler than $\pi_0$. By (13.2), $h_p(\pi'_0) < h_p(\pi_0) \le h$, and so $h_p(\pi'_0) \le h'$. Since $\pi'_0$ is simpler than $\pi_0$, it follows that $\pi'_0$ has warp $\le p$. From the choice of $\theta, z$, there exists $Z \subseteq V(G)$ with $Z'_0 \subseteq Z$ such that $|Z| \le z$, and there is a $(\mathscr{T} \setminus Z)$-central portrayal $\pi = (\Sigma, \Gamma, \alpha, \beta, \gamma)$ of $G \setminus Z$ which is simpler than or resembles $\pi'_0$, such that $\pi$ is $\sigma(\Sigma, p, |Z|)$-redundant. The result follows, since $\pi'_0$ is simpler than $\pi_0$. $\square$
+
+By means of (13.3), we obtain a version of (13.1) with high redundancy, as follows.
+
+\stmt
+(13.4) \textit{For any graph $H$ and standard $\sigma$, there are numbers $p, q, z$ and $\theta > z$, such that for every graph $G$ and every tangle $\mathscr{T}$ in $G$ of order $\ge \theta$, either}
+
+\hspace*{12pt}(i) $\mathscr{T}$ \textit{controls an $H$-minor of $G$, or}
+
+\hspace*{12pt}(ii) \textit{there exists $Z \subseteq V(G)$ with $|Z| \le z$, and a $(\mathscr{T} \setminus Z)$-central portrayal $\pi = (\Sigma, \Gamma, \alpha, \beta, \gamma)$ of $G \setminus Z$ with warp $\le p$, such that $\Sigma$ has $\le q$ cuffs, $H$ cannot be drawn in $\Sigma$, and $\pi$ is $\sigma(\Sigma, p, |Z|)$-redundant and true.}

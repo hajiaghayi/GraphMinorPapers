@@ -1,0 +1,35 @@
+\origpage{87}{GRAPH MINORS. XIII}
+\noindent $u \in Y_{p\ 1}$ has a neighbour in $Y_{p-1}$.) Then $G_1, \dots, G_p$ are disjoint, non-null, connected subgraphs of $G$, and for $1 \le i < j \le p$ every vertex of $G_j$ has a neighbour in $G_i$. From this we obtain a model of $K_p$.
+
+There are $p-2$ iterations of the recursion, and each takes time $O(v(H)\varepsilon(H))$. Since $|E(H)| = 2^{p-3} |V(G)|$, the running time is $O(v(G)^2)$. $\square$
+
+Next, let $\xi, \delta \ge 0$ be integers.
+
+\stmt
+(6.5) \textsc{Algorithm}.
+
+\textit{Input:} A digraph $G$ and a subset $Z \subseteq V(G)$ with $|Z| \le \xi$.
+
+\textit{Output:} A subdigraph $G'$ of $G$ with $Z \subseteq V(G')$, such that $G$ and $G'$ have the same $\delta$-folio relative to $Z$, and such that $|E(G')| \le C|V(G')|$, where $C = \delta + 2(\delta+1)2^{p-3}$ and where $p = \lfloor\frac{5}{2}\xi\rfloor + 3\delta + 1$.
+
+\textit{Running time:} $O(v^3)$.
+
+\textit{Description:}
+
+\hspace*{12pt}(1) Let $H$ be a maximal subdigraph of $G$ with at most $\delta$ loops at each vertex and at most $\delta+1$ edges with head $u$ and tail $v$, for all distinct $u, v \in V(G)$. Certainly $G$ and $H$ have the same $\delta$-folios relative to $Z$.
+
+\hspace*{12pt}(2) We set $G_1 = H$ and perform a recursion. At the start of the $i$ th iteration we have a subdigraph $G_i$ of $H$ with $Z \subseteq V(G_i)$ and $|V(G_i)| = |V(H)| - i + 1$ such that $G_i$ and $H$ (and hence $G$) have the same $\delta$-folios relative to $Z$. If $|E(G_i)| \le C|V(G_i)|$ we set $G' = G_i$ and stop. Otherwise, the $i$ th iteration proceeds as follows.
+
+\hspace*{12pt}(3) Let $J_i$ be the simple (undirected) graph underlying $G_i$. Then
+\begin{align*}
+(\delta + 2(\delta+1)2^{p-3}) |V(J_i)| = C|V(G_i)| &\le |E(G_i)| \\
+&\le \delta |V(J_i)| + 2(\delta+1) |E(J_i)|
+\end{align*}
+and so $2^{p-3} |V(J_i)| \le |E(J_i)|$. We apply (6.4) to $J_i$ and obtain a model of $K_p$ in $J_i$ (and hence in $G_i$).
+
+\hspace*{12pt}(4) We apply (6.2) to $G_i$ and the model of $K_p$ and find a vertex $v$ of $G_i$ irrelevant to the $\delta$-folio of $G_i$ relative to $Z$. We set $G_{i+1} = G_i \setminus v$ and return for the next iteration.
+
+There are at most $v(G)$ iterations, and each iteration involves an application of (6.4) to $J_i$, which takes time $O(v^2)$, and an application of (6.2) to $G_i$, which takes time $O(\varepsilon(G_i)) \le O(v^2)$. Thus the total running time for constant $\delta, \xi$ is $O(v^3)$.
+
+\stmt
+(6.3)-(6.5) can all be implemented more quickly than stated, but for us it makes no difference.

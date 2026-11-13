@@ -1,0 +1,20 @@
+\origpage{342}{N. Robertson, P.D. Seymour / Journal of Combinatorial Theory, Series B 92 (2004) 325--357}
+By applying 5.3--5.5 in turn, we deduce:
+
+\textbf{5.6.} \textit{Let $\mathcal{F}$ be a well-behaved set of patchworks, and let $\theta \ge 1$. Then there is a well-behaved set of patchworks $\mathcal{F}'$ with the following property. Let $P = (G, \mu, \Delta)$ be a rootless removable patchwork, let $\lambda$ be a tie-breaker in $G$, let $\mathcal{T}$ be a tangle in $G$ of order $\ge \theta^2$, and let $W \subseteq Z(G)$ with $|W| \le \theta$. Suppose that $\mathcal{L}$ is a fine rooted location in $G$ such that $\mathcal{L}$ $\theta$-isolates $\mathcal{T}$ modulo $W$, and $\mathcal{F}$ contains a heart of $(P, \mathcal{L})$. Then there is a fine rooted location $\mathcal{L}'$ in $G$ such that $\mathcal{L}$ $\theta^2$-isolates $\mathcal{T}$ and $\mathcal{F}'$ contains a heart of $(P, \mathcal{L}')$.}
+
+From 3.1 and 5.6 we deduce the main result of this section:
+
+\textbf{5.7.} \textit{Let $\Omega$ be a well-quasi-order, let $\mathcal{F}$ be a well-behaved set of patchworks, and let $\theta \ge 1$. Let $P_i = (G_i, \mu_i, \Delta_i, \phi_i)$ ($i = 1, 2, \dots$) be a countable sequence of rootless robust $\Omega$-patchworks. For each $i \ge 1$ let $\lambda_i$ be a tie-breaker in $G_i$; and suppose that for each tangle $\mathcal{T}$ in $G_i$ of order $\ge \theta$, there exist $W \subseteq Z(G_i)$ with $|W| \le \theta$ and a fine rooted location $\mathcal{L}$ in $G_i$, such that $\mathcal{L}$ $\theta$-isolates $\mathcal{T}$ modulo $W$, and $\mathcal{F}$ contains a heart of $((G_i, \mu_i, \Delta_i), \mathcal{L})$. Then there exist $j > i \ge 1$ such that $P_i$ is simulated in $P_j$.}
+
+\textit{Proof.} Define $\mathcal{F}'$ as in 5.6, and let $\mathcal{F}''$ be the set of all rootless partial $\Omega$-patchworks $(G, \mu, \Delta, \phi)$ with $\operatorname{dom}(\phi) = \emptyset$ and $(G, \mu, \Delta) \in \mathcal{F}'$. Thus $\mathcal{F}''$ is a well-behaved set of partial $\Omega$-patchworks. We claim that the hypothesis of 3.1 are satisfied, with $\mathcal{F}, \theta$ replaced by $\mathcal{F}'', \theta^2$. For let $i \ge 1$, let $Q = (G_i, \mu_i, \Delta_i)$, and let $\mathcal{T}$ be a tangle in $G_i$ of order $\ge \theta^2$. Then $\mathcal{T}$ has order $\ge \theta$, and so there exist $W, \mathcal{L}$ as in the hypothesis of 5.7. Hence $Q, \lambda_i, \mathcal{T}_i, W, \mathcal{L}$ satisfy the hypothesis of 5.6 (in particular $Q$ is removable, since it is robust), and so there is a fine rooted location $\mathcal{L}'$ in $G_i$ which $\theta^2$-isolates $\mathcal{T}$, such that $\mathcal{F}'$ contains a heart of $(Q, \mathcal{L}')$. Since $\mathcal{L}'$ is fine and $Q$ is rootless, the heart of $(P_i, \mathcal{L}')$ belongs to $\mathcal{F}''$. Consequently the hypotheses of 3.1 are satisfied, and the result follows from 3.1. $\square$
+
+\sectionhead{6. Eliminating the tie-breaker}
+
+Our next objective is to prove a form of 5.7 with no tie-breakers. Let $G$ be a hypergraph and let $f \in E(G)$. For each $x \in Z(G)$ let $v(x) > 0$ be a real number, such that the numbers $v(x)$ ($x \in Z(G)$) are rationally independent. For each separation $(A, B)$ of $G$ with $f \in E(A)$, we define
+\begin{equation*}
+\lambda(A, B) = (|V(A \cap B)|, \Sigma(v(x) : x \in Z(G) \setminus Z(A)), \Sigma(v(x) : x \in V(A \cap B))).
+\end{equation*}
+Thus each $\lambda(A, B)$ is a triple of real numbers. We order $\mathbf{R}^3$ lexicographically, that is, $(a_1, a_2, a_3) < (b_1, b_2, b_3)$ if for some $k \in \{1, 2, 3\}$, $a_i = b_i$ for $1 \le i < k$ and $a_k < b_k$. If $(A, B)$ is a separation with $f \in E(B)$, we define $\lambda(A, B) = \lambda(B, A)$.
+
+\textbf{6.1.} \textit{$\lambda$ is a tie-breaker.}

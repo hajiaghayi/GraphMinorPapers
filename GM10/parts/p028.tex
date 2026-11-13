@@ -1,0 +1,28 @@
+\origpage{180}{ROBERTSON AND SEYMOUR}
+Given a tie-breaker $\lambda$, a separation $(A, B)$ of $G$ is $\lambda$-\textit{robust} if for every separation $(C, D)$ of $A$, one of $(C, B \cup D)$, $(D, B \cup C)$ has $\lambda$-order at least the $\lambda$-order of $(A, B)$. Clearly a $\lambda$-robust separation is robust. The separation $(A, B)$ is \textit{doubly} $\lambda$-\textit{robust} if both $(A, B)$ and $(B, A)$ are $\lambda$-robust.
+
+\stmt
+(9.4) \textit{Let $(A, B)$, $(C, D)$ be doubly $\lambda$-robust separations of $G$. Then $(A, B)$ and $(C, D)$ do not cross.}
+
+\textit{Proof.} By the symmetry, we may assume that of the four separations $(A \cap C, B \cup D)$, $(A \cap D, B \cup C)$, $(B \cap C, A \cup D)$, $(B \cap D, A \cup C)$, the first has smallest $\lambda$-order. Since $(C \cap A, D \cap A)$ is a separation of $A$ and $(A, B)$ is $\lambda$-robust, one of
+\begin{equation*}
+(C \cap A, (D \cap A) \cup B), \qquad (D \cap A, (C \cap A) \cup B)
+\end{equation*}
+has $\lambda$-order at least that of $(A, B)$. These separations are $(A \cap C, B \cup D)$ and $(A \cap D, B \cup C)$, respectively, and so, in view of the assumption in the first sentence of this proof, $(A \cap D, B \cup C)$ has $\lambda$-order at least that of $(A, B)$. Similarly, $(B \cap C, A \cup D)$ has $\lambda$-order at least that of $(C, D)$. By (9.3) applied to $(B, A)$, $(C, D)$, we deduce that either $C \subseteq B$ and $A \subseteq D$, or $A = C = G$ and $B = D$, and in either case $(A, B)$, $(C, D)$ do not cross. $\square$
+
+\sectionhead{10. Tangle Tree-Decompositions}
+
+Let $\mathscr{T}_1$, $\mathscr{T}_2$ be tangles in a graph $G$. They are \textit{indistinguishable} if one is a truncation of the other, that is, either $\mathscr{T}_1 \subseteq \mathscr{T}_2$ or $\mathscr{T}_2 \subseteq \mathscr{T}_1$, and otherwise they are \textit{distinguishable}. A separation $(A, B)$ of $G$ \textit{distinguishes} $\mathscr{T}_1$ \textit{from} $\mathscr{T}_2$ if $(A, B) \in \mathscr{T}_1$ and $(B, A) \in \mathscr{T}_2$.
+
+\stmt
+(10.1) \textit{Either there is a separation of $G$ which distinguishes $\mathscr{T}_1$ from $\mathscr{T}_2$ or $\mathscr{T}_1$, $\mathscr{T}_2$ are indistinguishable and not both.}
+
+\textit{Proof.} Since there is a separation distinguishing $\mathscr{T}_1$ from $\mathscr{T}_2$ if and only if there is one distinguishing $\mathscr{T}_2$ from $\mathscr{T}_1$, we may assume that $\mathscr{T}_2$ has order at least that of $\mathscr{T}_1$. Then
+\begin{align*}
+\mathscr{T}_1 &\text{ and } \mathscr{T}_2 \text{ are distinguishable} \\
+&\Leftrightarrow \mathscr{T}_1 \nsubseteq \mathscr{T}_2 \\
+&\Leftrightarrow \text{there exists } (A, B) \in \mathscr{T}_1 \text{ with } (A, B) \notin \mathscr{T}_2 \\
+&\Leftrightarrow \text{there exists } (A, B) \in \mathscr{T}_1 \text{ with } (B, A) \in \mathscr{T}_2 \\
+&\Leftrightarrow \text{there is a separation distinguishing } \mathscr{T}_1 \text{ from } \mathscr{T}_2,
+\end{align*}
+as required. $\square$

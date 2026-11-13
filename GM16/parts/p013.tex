@@ -1,0 +1,42 @@
+\origpage{55}{N. Robertson, P.D. Seymour / Journal of Combinatorial Theory, Series B 89 (2003) 43--76}
+A horn at $v$ of breadth $\ge \theta$ (over $H, \eta, \mathscr{T}$) is a set $\{P_1, \dots, P_\sigma\}$ of paths of $G$, such that
+
+\hspace*{12pt}$\bullet$ $P_1, \dots, P_\sigma$ each have one end $v$ and are otherwise mutually disjoint,
+
+\hspace*{12pt}$\bullet$ for $1 \le i \le \sigma$, $P_i$ has precisely one vertex in $V(\eta(H))$, its end different from $v$; let this end be $\eta(u_i)$, where $u_i \in V(H)$,
+
+\hspace*{12pt}$\bullet$ for $1 \le i < j \le \sigma$, $d(u_i, u_j) \ge \theta$ where $d$ is the metric of $\mathscr{T}$ (see [8, section 3]).
+
+Let $\Sigma$ be a surface. An animal (in $G$, with respect to $\mathscr{T}^*$) is a quintuple $(H, \eta, \mathscr{T}, X, Y)$, such that $H, \eta, \mathscr{T}$ is a $\Sigma$-span, $X \subseteq V(G) \setminus V(\eta(H))$ and $Y \subseteq V(H)$. If $|X| = \chi$ and $|Y| = \delta$, we call this an animal with $\chi$ horns and $\delta$ hairs. The animal has strength $\ge (\theta, \sigma)$, where $\theta \ge 1$ and $\sigma \ge 0$ are integers, if
+
+\hspace*{12pt}$\bullet$ $\mathscr{T}$ has order $\ge \theta$,
+
+\hspace*{12pt}$\bullet$ for each $v \in X$ there is a horn at $v$ of cardinality $\ge \sigma$ and breadth $\ge \theta$,
+
+\hspace*{12pt}$\bullet$ for each $u \in Y$ there is an $\eta(H)$-path (see [8, section 3]) $P$ with ends $\eta(u), \eta(v)$ say, such that $X \cap V(P) = \emptyset$ and $d(u, v) \ge \theta$, where $d$ is the metric of $\mathscr{T}$,
+
+\hspace*{12pt}$\bullet$ $d(u_1, u_2) \ge \theta$ for all distinct $u_1, u_2 \in Y$.
+
+As usual, we shall omit reference to $\eta$ if $\eta$ is the identity, and instead speak of the animal $(H, \mathscr{T}, X, Y)$. The animal $(H, \eta, \mathscr{T}, X, Y)$ is hairless if $Y = \emptyset$, and in that case we shall speak of $(H, \eta, \mathscr{T}, X)$ or $(H, \mathscr{T}, X)$. In this section we shall only be concerned with hairless animals.
+
+We shall show that the following implies 4.1.
+
+\textbf{5.1.} \textit{Let $\Sigma$ be a surface and let $p, \tau, \chi \ge 0$ and $\phi, \psi \ge 1$. Then there exist $\sigma, \kappa, \rho, \zeta \ge 0$ and $\theta \ge 1$ such that if $\mathscr{T}^*$ is a tangle in a graph $G$, and there is a hairless animal with $\chi$ horns, of strength $\ge (\theta, \sigma)$, then either:}
+
+\hspace*{12pt}1. \textit{there is a $\Sigma'$-span of order $\ge \phi$, for some surface $\Sigma'$ obtained from $\Sigma$ by adding a handle or a crosscap, or}
+
+\hspace*{12pt}2. \textit{there is a hairless animal with $\chi + 1$ horns, of strength $\ge (\psi, \tau)$, or}
+
+\hspace*{12pt}3. \textit{there exists $Z \subseteq V(G)$ with $|Z| \le \zeta$, and a $\mathscr{T}^* \setminus Z$-central segregation of $G \setminus Z$ of type $(\rho, \kappa)$ with a proper arrangement in $\Sigma$, or}
+
+\hspace*{12pt}4. \textit{$\mathscr{T}^*$ controls a $K_p$-minor of $G$.}
+
+To prove that 5.1 implies 4.1 we need several lemmas. The first is theorem 4.4 of [7].
+
+\textbf{5.2.} \textit{Let $\Sigma$ be a surface and let $p \ge 0$. Then there exists $\theta \ge 1$ such that if $\mathscr{T}^*$ is a tangle in a graph $G$, and $H, \eta, \mathscr{T}$ is a $\Sigma$-span of order $\ge \theta$ with metric $d$, and}
+
+\hspace*{12pt}$\bullet$ \textit{$s_1, t_1, \dots, s_\mu, t_\mu$ are distinct vertices of $H$, where $\mu = \frac{1}{2}p(p - 1)$, such that $d(u, v) \ge \theta$ for all distinct $u, v \in \{s_1, t_1, \dots, s_\mu, t_\mu\}$, and}
+
+\hspace*{12pt}$\bullet$ \textit{$Q_1, \dots, Q_\mu$ are mutually disjoint $\eta(H)$-paths, such that $Q_i$ has ends $\eta(s_i), \eta(t_i) (1 \le i \le \mu)$,}
+
+\textit{then $\mathscr{T}^*$ controls a $K_p$-minor of $G$.}

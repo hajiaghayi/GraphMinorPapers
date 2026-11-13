@@ -1,0 +1,35 @@
+\origpage{312}{ROBERTSON AND SEYMOUR}
+\textit{Proof.} Let $v_1, v_2, \dots, v_r$ be a sequence of vertices of $G$ not in $X_i$, each adjacent to the next, with $v_1 = v$ and $v_r = v'$. Then by (2.2),
+\begin{equation*}
+T_i(v_1) = T_i(v_2) = \cdots = T_i(v_r)
+\end{equation*}
+and so $T_i(v) = T_i(v')$.
+
+\stmt
+(2.4) \textit{Let} $e$ \textit{be an edge of} $T$ \textit{with ends} $j, j'$ \textit{say, and} $N, N'$ \textit{be the vertex sets of the two components of} $T \setminus e$. \textit{Then} $X_j \cap X_{j'}$ \textit{separates} $\bigcup(X_i : i \in N)$ \textit{and} $\bigcup(X_i : i \in N')$.
+
+\textit{Proof.} Suppose not. Then from (W1), there exist
+\begin{equation*}
+v, v' \in V(G) - (X_j \cap X_{j'})
+\end{equation*}
+with $v \in X_i$ and $v' \in X_{i'}$ say, where $i \in N$ and $i' \in N'$, such that either $v = v'$ or $v, v'$ are adjacent in $G$. From (W1), (W2) there exists $k \in I$ such that $v, v' \in X_k$. We assume without loss of generality that $k \in N'$. Then $j, j'$ are both on the path of $T$ between $i$ and $k$, and so $X_i \cap X_k \subseteq X_j, X_{j'}$ by (W3). Hence $v \in X_j \cap X_{j'}$, a contradiction, as required.
+
+\stmt
+(2.5) \textit{If the tree-decomposition has width} $< w$ \textit{and} $Q \subseteq V(G)$, \textit{then there exists} $X \subseteq V(G)$ \textit{with} $|X| \le w$ \textit{such that every component of} $G \setminus X$ \textit{has at most} $\tfrac{1}{2} |Q - X|$ \textit{vertices which are in} $Q$.
+
+\textit{Proof.} There are two cases.
+
+\textit{Case} 1. \textit{Some} $i \in I$ \textit{has the property that for each branch} $B$ \textit{of} $T$ \textit{at} $i$,
+\begin{equation*}
+|\{q \in Q - X_i : T_i(q) = B\}| \le \tfrac{1}{2} |Q - X_i|.
+\end{equation*}
+Then we may take $X = X_i$. For $|X_i| \le w$, and if $C$ is a component of $G \setminus X_i$, all vertices $v$ of $C$ have $T_i(v)$ the same, by (2.3), and so $C$ has at most $\tfrac{1}{2} |Q - X_i|$ vertices which are in $Q$, as required.
+
+\textit{Case} 2. \textit{For each} $i \in I$ \textit{there is a branch} $B_i$ \textit{of} $T$ \textit{at} $i$ \textit{such that}
+\begin{equation*}
+|\{q \in Q - X_i : T_i(q) = B_i\}| > \tfrac{1}{2} |Q - X_i|.
+\end{equation*}
+Let $e_i$ be the edge of $T$ incident with $i$ and with some vertex of $B_i$. Now $T$ has fewer edges than vertices, and so there exist distinct $j, j' \in I$ such that $e_j = e_{j'}$. Then $j, j'$ are adjacent in $T$, and $j' \in V(B_j)$, $j \in V(B_{j'})$. Put $N = V(B_{j'})$, $N' = V(B_j)$. Then $N \cup N' = I$, and $N \cap N' = \emptyset$. Put $X_j \cap X_{j'} = A$, and put
+\begin{equation*}
+W = \bigcup_{i \in N} (X_i - A), \qquad W' = \bigcup_{i \in N'} (X_i - A).
+\end{equation*}

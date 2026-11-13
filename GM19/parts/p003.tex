@@ -1,0 +1,30 @@
+\origpage{327}{N. Robertson, P.D. Seymour / Journal of Combinatorial Theory, Series B 90 (2004) 325--385}
+\noindent closed disc (or just ``disc'') in $\Sigma$ is a subset of $\Sigma$ homeomorphic to the unit disc in the real plane $\{(x, y) : x^2 + y^2 \le 1\}$, and an \textit{open disc} is defined similarly. Each component of $bd(\Sigma)$ is an $O$-arc, and we call them the \textit{cuffs} of $\Sigma$. The surface obtained from $\Sigma$ by ``pasting'' a disc onto each cuff we denote by $\hat{\Sigma}$. (It will not be necessary to distinguish between the different surfaces obtained by pasting different discs onto the cuffs.) If $X \subseteq \Sigma$, we denote its closure by $\bar{X}$, and define $\tilde{X} = \bar{X} \setminus X$.
+
+A \textit{drawing} $G$ in $\Sigma$ is a pair $(U, V)$, where $U \subseteq \Sigma$ is closed and $V \subseteq U$ is finite, such that
+
+\hspace*{12pt}$\bullet$ $U \setminus V$ has only finitely many arc-wise connected components, called \textit{edges},
+
+\hspace*{12pt}$\bullet$ for each edge $e$, $|\tilde{e}| = 2$, and $\bar{e}$ is a line with ends the two members of $\tilde{e}$,
+
+\hspace*{12pt}$\bullet$ for each edge $e$, either $e \subseteq bd(\Sigma)$ or $e \cap bd(\Sigma) = \emptyset$.
+
+Thus, our drawings may have multiple edges, but not loops. We write $U(G) = U$ and $V(G) = V$. The set of edges of $G$ is denoted by $E(G)$, and the elements of $V(G)$ are the \textit{vertices} of $G$. The components of $\Sigma \setminus U(G)$ are called the \textit{regions} of $G$ in $\Sigma$ (we shall occasionally also need to discuss the regions of $G$ in $\hat{\Sigma}$). \textit{Paths} and \textit{circuits} have no ``repeated'' vertices. The remainder of our graph-theory terminology is standard.
+
+A \textit{march} in a set $V$ is a sequence of distinct elements of $V$. If $\mu$ is the march $v_1, \dots, v_k$ we denote the set $\{v_1, \dots, v_k\}$ by $\bar{\mu}$. A \textit{painting} $\Gamma$ in $\Sigma$ is a triple $(U, V, \gamma)$, where $U \subseteq \Sigma$ is closed and $V \subseteq U$ is finite, such that
+
+\hspace*{12pt}$\bullet$ $bd(\Sigma) \subseteq U$, and $U \setminus V$ has only finitely many arc-wise connected components, called \textit{edges},
+
+\hspace*{12pt}$\bullet$ for each edge $e$, either $|\tilde{e}| = 2$ and $\bar{e}$ is a line with ends the two members of $\tilde{e}$, or $|\tilde{e}| = 3$ and $\bar{e}$ is a disc with $\tilde{e} \subseteq bd(\bar{e})$,
+
+\hspace*{12pt}$\bullet$ $\gamma$ is a function assigning to each edge $e$ a march $\gamma(e)$ with $\bar{\gamma}(e) = \tilde{e}$; we call the $i$th term of $\gamma(e)$ the $i$th \textit{end} of $e$, and the first and last terms of $\gamma(e)$ are the \textit{tail} and \textit{head} of $e$,
+
+\hspace*{12pt}$\bullet$ every edge $e$ with $e \cap bd(\Sigma) \ne \emptyset$ satisfies $|\tilde{e}| = 2$ and $e \subseteq bd(\Sigma)$. (This definition is a little different from the definition of a painting in [9], but since we do not use here any results from [9] about paintings, we do not have to pay for the discrepancy yet.)
+
+We write $U(\Gamma) = U$, $V(\Gamma) = V$, $\gamma_{\Gamma} = \gamma$, and we denote the set of edges of $\Gamma$ by $E(\Gamma)$. Again, the elements of $V$ are the \textit{vertices} of $\Gamma$, and the connected components of $\Sigma \setminus U$ are the \textit{regions} of $\Gamma$. We call $|\tilde{e}|$ the \textit{size} of an edge $e$. Let
+\begin{equation*}
+U' = V \cup \bigcup (e : e \in E(\Gamma), |\tilde{e}| = 2) \cup \bigcup (bd(\bar{e}) : e \in E(\Gamma), |\tilde{e}| = 3).
+\end{equation*}
+Then $(U', V)$ is a drawing in $\Sigma$ which we denote by $sk(\Gamma)$ (it is the ``1-skeleton'' of $\Gamma$).
+
+For a painting or drawing in $\Sigma$, an edge $e$ is a \textit{border edge} if $e \cap bd(\Sigma) \ne \emptyset$, and otherwise is \textit{internal}. (It is possible that $\tilde{e} \cap bd(\Sigma) \ne \emptyset$ for internal edges $e$.) An edge $e$ \textit{borders} a cuff $\Theta$ if $e \cap \Theta \ne \emptyset$. Note that all border edges in paintings have size 2.

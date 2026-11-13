@@ -1,0 +1,30 @@
+\origpage{95}{GRAPH MINORS. V}
+\begin{align*}
+\theta_2 &= \phi_0 + 2\phi_1 + 2\phi_2 + \cdots + 2\phi_{\theta_1 - 1} + \phi_{\theta_1} \\
+\theta_3 &= (\theta^2/2)^{\theta_2 - 1} \\
+\theta_4 &= \theta_2 \binom{\theta_3}{\theta_2} + \frac{1}{2}\theta^2 \binom{\theta_3}{\theta^2/2} \\
+\theta_5 &= (\theta^2/2)^{\theta_4 - 1} \\
+\theta_6 &= \theta_3 \binom{\theta_5}{\theta_4} + \frac{1}{2}\theta^2 \binom{\theta_5}{\theta^2/2} \\
+\theta_7 &= \alpha(\theta_5, \theta_6) \\
+\theta_8 &= 3\theta_5(3^{\theta_5} - 1)/4 \\
+\theta_9 &= \theta_7(\theta_8 + 1) + 1.
+\end{align*}
+To emphasize the dependence of these parameters on $\theta$, we occasionally write $\theta_9(\theta)$ instead of $\theta_9$, etc.
+
+\stmt
+(2.1) \textit{If $H$ is a planar graph, then every graph with no minor isomorphic to $H$ has tree-width at most $\theta_9(\theta(H))$.}
+
+To prove this, we observe that if $G$ has no minor isomorphic to $H$ then $G$ certainly has no minor isomorphic to the $\theta$-grid, where $\theta = \theta(H)$. It suffices therefore to prove that for $\theta \ge 6$ and even, if $G$ has no minor isomorphic to the $\theta$-grid then $G$ has tree-width $\le \theta_9$. This we shall show in (7.3). Throughout the rest of the paper, $\theta$ is a fixed even integer with $\theta \ge 6$. Let $\mathscr{F}_\theta$ be the class of all graphs with no minor isomorphic to the $\theta$-grid.
+
+\sectionhead{3. \textsc{Grids}}
+
+The following was proved in [9, Theorem (2.9)].
+
+\stmt
+(3.1) \textit{Let $B_1, \ldots, B_n$ be disjoint connected subgraphs of $G \in \mathscr{F}_\theta$, and let $V' \subseteq V(G)$. Let $r \ge 0$ be an integer. Then at least one of the following is true:}
+
+\hspace*{12pt}(i) \textit{there exists $J \subseteq \{1, \ldots, n\}$ with $|J| = r$ such that for each $j \in J$ there is a path $P_j$ in $G$ from $B_j$ to $V'$, and the paths $P_j (j \in J)$ are disjoint, and each has no internal vertex in $V' \cup \bigcup_{j \in J} V(B_j)$;}
+
+\hspace*{12pt}(ii) \textit{there exists $X \subseteq V(G)$ and $J \subseteq \{1, \ldots, n\}$ with $|X| + |J| \le 2^{r\theta^4}$ such that $X$ separates $V'$ from every $B_j$ ($j \in \{1, \ldots, n\} - J$).}
+
+The object of the present section is to use (3.1) to prove the following. Note that $\alpha(k, n)$ is defined in Section 2.

@@ -1,0 +1,33 @@
+\origpage{96}{ROBERTSON AND SEYMOUR}
+\stmt
+(3.2) \textit{Let $G \in \mathcal{F}_\theta$, and let $V_1, \dots, V_k \subseteq V(G)$, where $k \ge 2$. Let $n \ge 0$ be an integer. Then at least one of the following is true:}
+
+\hspace*{12pt}(i) \textit{there are disjoint connected subgraphs $B_1, \dots, B_n$ of $G$ such that each $B_j$ meets each $V_i$ ($1 \le i \le k, 1 \le j \le n$)}
+
+\hspace*{12pt}(ii) \textit{there exists $X \subseteq V(G)$ with $|X| < \alpha(k, n)$ such that every connected subgraph of $G$ which meets all of $V_1, \dots, V_k$ also meets $X$.}
+
+\textit{Proof.} We proceed by induction on $k$. If $k = 2$ the result follows from Menger's theorem, and we assume then that $k \ge 3$ and that the result holds for $k - 1$.
+
+Let $C_1, \dots, C_N$ be disjoint connected subgraphs of $G$, each meeting all of $V_1, \dots, V_{k-1}$, chosen so that $N$ is maximum. We may assume that $N \ge n$; for otherwise the result follows from our inductive hypothesis and the fact that $\alpha(k - 1, n) \le \alpha(k, n)$. We may assume that fewer than $n$ of $C_1, \dots, C_N$ meet $V_k$ since otherwise (i) holds, and so we may assume that $C_1, \dots, C_{N-n}$ do not meet $V_k$. We apply (3.1), and deduce that one of the following cases holds.
+
+\textit{Case 1. There exists $J \subseteq \{1, \dots, N - n\}$ with $|J| = n$ such that for each $j \in J$ there is a path $P_j$ from $C_j$ to $V_k$, and the paths $P_j$ ($j \in J$) are disjoint, and each has no internal vertex in $V_k \cup \bigcup_{j \in J} V(C_j)$.}
+
+In this case (i) is true, using the subgraphs $C_j \cup P_j$ ($j \in J$).
+
+\textit{Case 2. There exists $X' \subseteq V(G)$ and $J \subseteq \{1, \dots, N - n\}$ with $|X'| + |J| \le 2^{n\theta^4}$ such that $X'$ separates $V_k$ from every $C_j$ ($j \in \{1, \dots, N - n\} - J$).}
+
+In this case, let $(W_1, W_2)$ be a separation of $G$ with $W_1 \cap W_2 = X'$, $V_k \subseteq W_1$, and $V(C_j) \subseteq W_2$ ($j \in \{1, \dots, N - n\} - J$). Let $W = W_1 - W_2$, let $G' = G | W$, and let $V'_i = V_i \cap W$ ($1 \le i \le k - 1$).
+
+Now $V(C_j) \cap W = \emptyset$ for each $j \in \{1, \dots, N - n\} - J$, since $V(C_j) \subseteq W_2$. By the maximality of $N$, the maximum number of disjoint connected subgraphs of $G'$ each meeting all of $V'_1, \dots, V'_{k-1}$ is at most
+\begin{equation*}
+|J| + n < 2^{n\theta^4} + n + 1
+\end{equation*}
+and so by our inductive hypothesis there exists $X'' \subseteq V(G')$ with
+\begin{equation*}
+|X''| < \alpha(k - 1, 2^{n\theta^4} + n + 1)
+\end{equation*}
+such that every connected subgraph of $G'$ which meets all of $V'_1, \dots, V'_{k-1}$ also meets $X''$. But then every connected subgraph $B$ of $G$ which meets all of $V_1, \dots, V_k$ also meets $X' \cup X''$. For if such a $B$ does not meet $X'$, then $V(B) \subseteq W$ since $B$ meets $V_k$; hence $B$ meets all of $V'_1, \dots, V'_{k-1}$, and so $B$ meets $X''$. But
+\begin{equation*}
+|X' \cup X''| < 2^{n\theta^4} + \alpha(k - 1, 2^{n\theta^4} + n + 1) = \alpha(k, n)
+\end{equation*}
+and so $X = X' \cup X''$ satisfies (ii), as required.

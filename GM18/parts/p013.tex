@@ -1,0 +1,22 @@
+\origpage{89}{N. Robertson, P. Seymour / Journal of Combinatorial Theory, Series B 89 (2003) 77--108}
+\textbf{Proof.} Let $\theta'$ be the least integer with $\theta' \ge \frac{4}{3}\theta$. Then $\theta' \ge 2$. Let $\mathscr{T}_j$ ($j \in J$) be all the tangles of order $\theta'$ in $G$. Then $J \ne \emptyset$, by hypothesis. For each $j \in J$, $\mathscr{L}(\mathscr{T}_j)$ $\theta'$-isolates $\mathscr{T}_j$ since it $\theta$-isolates $\mathscr{T}_j$. By 4.2, there exists $I \subseteq J$ such that for every $j \in J$ there is a unique $i \in I$ with $\mathscr{L}(\mathscr{T}_i) \subseteq \mathscr{T}_j$. Let $I = \{1, \dots, n\}$ say. Now $n \ge 1$ since $J \ne \emptyset$. Let $(T, \tau)$ be a standard decomposition of $G$ relative to $\mathscr{T}_1, \dots, \mathscr{T}_n$ in which $t_i$ represents $\mathscr{T}_i$ for $1 \le i \le n$. By 2.7, the first two statements of the theorem hold. Let us verify the third. Let $1 \le i \le n$, and let $\mathscr{L}$ be the location of $t_i$ in $(T, \tau)$. From 4.3 (with $\theta$ replaced by $\theta'$) $\mathscr{L}$ is an enlargement of $\mathscr{L}(\mathscr{T}_i)$ by tree-width $\le \frac{9}{4}\theta'$. Since $\theta' \le \frac{4}{3}\theta + \frac{2}{3}$ and $\frac{9}{4}(\frac{4}{3}\theta + \frac{2}{3}) < 3\theta + 2$ we deduce that the third statement holds. This proves 4.4. $\square$
+
+\sectionhead{5. Patchworks}
+
+Our application of 4.4 will be to prove that certain classes of ``patchworks'' in the sense of [2] are well-quasi-ordered by our patchwork containment relation, ``simulation'', and now we need to define these things. A \textit{march} in a set $V$ is a finite sequence of distinct elements of $V$; and if $\pi$ is the march $v_1, \dots, v_k$, we denote the set $\{v_1, \dots, v_k\}$ by $\bar{\pi}$. A \textit{rooted hypergraph} $G$ is a pair $(G^-, \pi(G))$ where $G^-$ is a hypergraph and $\pi(G)$ is a march in $V(G^-)$. We define $V(G) = V(G^-)$, $E(G) = E(G^-)$. If $G, H$ are rooted hypergraphs and $G^- \subseteq H^-$ we write $G \subseteq H$ and say that $G$ is a \textit{rooted subhypergraph} of $H$.
+
+If $V$ is a finite set we denote by $K_V$ the complete graph on $V$, that is, the graph with vertex set $V$ and edge set the set of all subsets of $V$ of cardinality 2, with the natural incidence relation. A \textit{grouping} in $V$ is a subgraph of $K_V$ every component of which is complete. A \textit{pairing} in $V$ is a grouping in $V$ every component of which has at most two vertices. If $K$ is a pairing in $V$, we say that $K$ \textit{pairs} $X, Y$ if $X, Y \subseteq V$ are disjoint and
+
+\hspace*{12pt}$\bullet$ every 2-vertex component of $K$ has one vertex in $X$ and the other in $Y$, and
+
+\hspace*{12pt}$\bullet$ every vertex of $X \cup Y$ belongs to some 2-vertex component of $K$.
+
+A \textit{patch} $\Delta$ in $V$ is a subset $V(\Delta)$ of $V$, together with a collection of groupings in $V$, each with vertex set $V(\Delta)$. (We shall use the same symbol $\Delta$ to denote the collection of groupings.) A patch $\Delta$ is \textit{free} if $\Delta$ contains every grouping in $V$ with vertex set $V(\Delta)$; and it is \textit{robust} if for every choice of $X, Y \subseteq V(\Delta)$ with $|X| = |Y|$ and $X \cap Y = \emptyset$, there is a pairing in $\Delta$ which pairs $X, Y$.
+
+A \textit{patchwork} is a triple $P = (G, \mu, \Delta)$, where
+
+\hspace*{12pt}$\bullet$ $G$ is a rooted hypergraph,
+
+\hspace*{12pt}$\bullet$ $\mu$ is a function with domain $dom(\mu) \subseteq E(G)$; and for each $e \in dom(\mu)$ $\mu(e)$ is a march with $\bar{\mu}(e)$ the set of ends of $e$ in $G$,
+
+\hspace*{12pt}$\bullet$ $\Delta$ is a function with domain $E(G)$, such that for each $e \in E(G)$ $\Delta(e)$ is a patch with $V(\Delta(e))$ the set of ends of $e$; and for each $e \in E(G) \setminus dom(\mu)$, $\Delta(e)$ is free.

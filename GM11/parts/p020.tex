@@ -1,0 +1,19 @@
+\origpage{91}{GRAPH MINORS. XI}
+\noindent sentative. (Remove the vertices one at a time.) In particular, $\Gamma^*$ is 1-representative, and so there is no closed disc $\Delta \subseteq \Sigma$ with $U(\Gamma^*) \subseteq \Delta$, for otherwise $\Sigma - \Delta$ would be a subset of a region of $\Gamma^*$ and yet would include a non-null-homotopic $O$-arc, since $\Sigma$ is not a sphere. By (7.5) below, there is a non-null-homotopic $O$-arc $F \subseteq U(\Gamma^*) \subseteq U(\Gamma) - V(A \cap B)$. Since $(A, B)$ is a separation, it follows that $F \subseteq U(A) - U(B)$ or $F \subseteq U(B) - U(A)$, and the latter must hold, since $U(A)$ includes no non-null-homotopic $O$-arc. This proves (2) if $\Gamma$ is a painting. On the other hand, if $\Gamma$ is a drawing, then $\Gamma \setminus V(A \cap B)$ is 1-representative, and a similar argument (via (7.5)) applies.
+
+\hspace*{12pt}(3) \textit{If $U(B) - U(A)$ includes a non-null-homotopic $O$-arc then $(A, B) \in \mathscr{T}$.}
+
+\textit{Subproof.} $(B, A) \notin \mathscr{T}$ by (1), and so $(A, B) \in \mathscr{T}$ by the first tangle axiom.
+
+This proves the equivalence of (i), (ii), and (iii).
+
+For each $e \in E(\Gamma)$, let $K_e \subseteq \Gamma$ be the painting or drawing formed by $e$ and its ends. We claim that if $e$ has $< \theta$ ends then $U(K_e)$ includes no non-null-homotopic $O$-arc. This is clear if $\Gamma$ is a painting, and so we assume that $\Gamma$ is a drawing; and again the claim is true unless $e$ is a loop of $\Gamma$ such that $\bar{e}$ is a non-null-homotopic $O$-arc. But then $\Gamma$ is not 2-representative, and since $\mathscr{T}$ is respectful of order $\theta$, it follows that $\theta = 1$, contradicting that $e$ has $< \theta$ ends. This proves that $U(K_e)$ includes no non-null-homotopic $O$-arc. Since $(K_e, \Gamma \setminus e)$ has order equal to the number of ends of $e$, and hence has order $< \theta$, we deduce from the equivalence of (i) and (ii) that $(K_e, \Gamma \setminus e) \in \mathscr{T}$. Therefore, $\mathscr{T}$ is a tangle, by [4, Theorem (2.7)], as required. $\square$
+
+Now we can prove (4.1).
+
+\textit{Proof of} (4.1). Let $\Gamma'$ be a radial drawing of $\Gamma$. Certainly $E(\Gamma) \ne \emptyset$ since $\Gamma$ is 2-cell and $\Sigma$ is not a sphere. Since $\Gamma$ is $\theta$-representative, every circuit of $\Gamma'$ of length $< 2\theta$ is null-homotopic; and this defines a slope $ins$ in $\Gamma'$ of order $\theta$. Let $\mathscr{T}$ be the induced pretangle; then by (6.1), $\mathscr{T}$ is respectful and by (6.4), $\mathscr{T}$ is a tangle. $\mathscr{T}$ is unique by (6.3), since $ins$ is the unique slope in $\Gamma'$ of order $\theta$. $\square$
+
+If $r$ is a region of a drawing $\Gamma$, the \textit{perimeter} of $r$ is the drawing $\Gamma \cap \bar{r}$; and its \textit{length} is $\sum_{e \in E(\Gamma \cap \bar{r})} n(e)$, where $n(e) = 1$ or $2$, depending whether $e$ is incident with another region or not. A slope $ins$ in $\Gamma$ of order $\theta$ is \textit{even} if for every region $r$ of $\Gamma$ with perimeter of length $< 2\theta$, there is a circuit $C$ of $\Gamma$ of length $< 2\theta$ with $r \subseteq ins(C)$.
+
+\stmt
+(6.5) \textit{Let $\Gamma$ be a 2-cell painting or drawing in a connected surface $\Sigma$ with}

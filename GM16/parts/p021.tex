@@ -1,0 +1,20 @@
+\origpage{63}{N. Robertson, P.D. Seymour / Journal of Combinatorial Theory, Series B 89 (2003) 43--76}
+\textbf{7.3.} \textit{Let $\mathcal{T}^*$ be a tangle in a graph $G$, let $Z \subseteq V(G)$ with $|Z| < ord(\mathcal{T}^*)$, and let $(A, B)$ be a separation of $G$ of order $< ord(\mathcal{T}^*) - |Z|$. Then $(A, B) \in \mathcal{T}^*$ if and only if}
+\begin{equation*}
+(A \setminus (Z \cap V(A)), B \setminus (Z \cap V(B))) \in \mathcal{T}^* \setminus Z.
+\end{equation*}
+\textbf{Proof.} Choose a separation $(A^*, B^*)$ of $G$ such that $Z \subseteq V(A^*) \cap V(B^*)$, and $A^* \setminus Z = A$, $B^* \setminus Z = B$. Then $(A^*, B^*)$ has order at most $|Z|$ more than that of $(A, B)$, and hence less than $ord(\mathcal{T}^*)$. By theorem 2.9 of [6], $(A, B) \in \mathcal{T}^*$ if and only if $(A^*, B^*) \in \mathcal{T}^*$. But $(A^*, B^*) \in \mathcal{T}^*$ if and only if $(A^* \setminus Z, B^* \setminus Z) \in \mathcal{T}^* \setminus Z$. This proves 7.3. $\square$
+
+\textbf{7.4.} \textit{Let $\mathcal{T}^*$ be a tangle in $G$, and let $Z \subseteq V(G)$ with $|Z| < ord(\mathcal{T}^*)$. If $H, \eta, \mathcal{T}$ is a $\Sigma$-span in $G \setminus Z$ with respect to $\mathcal{T}^* \setminus Z$ then $H, \eta, \mathcal{T}$ is a $\Sigma$-span in $G$ with respect to $\mathcal{T}^*$.}
+
+\textbf{Proof.} For simplicity we assume that $\eta$ is the identity. Let $(A, B) \in \mathcal{T}^*$ have order $< ord(\mathcal{T})$; it suffices to show that $(A \cap H, B \cap H) \in \mathcal{T}$. Now
+\begin{equation*}
+|V(A \cap B)| < ord(\mathcal{T}) \le ord(\mathcal{T}^* \setminus Z) = ord(\mathcal{T}^*) - |Z|
+\end{equation*}
+and so by 7.3, $(A', B') \in \mathcal{T}^* \setminus Z$, where $A' = A \setminus (Z \cap V(A))$, $B' = B \setminus (Z \cap V(B))$. Since $H, \eta, \mathcal{T}$ is a $\Sigma$-span in $G \setminus Z$ with respect to $\mathcal{T}^* \setminus Z$ and $(A', B')$ has order $< ord(\mathcal{T})$, it follows that $(A' \cap H, B' \cap H) \in \mathcal{T}$. But $A \cap H = A' \cap H$ since $Z \cap V(H) = \emptyset$, and similarly $B \cap H = B' \cap H$. Hence $(A \cap H, B \cap H) \in \mathcal{T}$. This proves 7.4. $\square$
+
+\textbf{Proof of 6.1 (assuming 7.1).} Let $\Sigma$ be a surface, and let $p, \tau, \chi, \delta \ge 0$ and $\phi, \psi \ge 1$. By increasing $\phi, \psi$ we may assume that $\phi, \psi \ge 3$. Choose $\kappa, \lambda, \rho \ge 0$ and $\theta' \ge 1$ so that 7.2 is satisfied (with $\theta, \mu$ replaced by $\theta', 2\psi$). Choose $\theta, \sigma$ as in 7.1 and let $\zeta = \lfloor \frac{1}{2}\delta^2 \phi^2 \rfloor + \chi$. We claim that 6.1 holds. For let $\mathcal{T}^*$ be a tangle in $G$, with an animal with $\chi$ horns and $\delta$ hairs, of strength $\ge (\theta, \sigma)$. Let us apply 7.1. If 7.1.1 or 7.1.2 holds then 6.1.1 or 6.1.2 holds, and so we may assume that 7.1.3 holds, that is,
+
+\hspace*{12pt}(1) \textit{There exists $Z \subseteq V(G)$ with $|Z| \le \zeta$ such that some $\Sigma$-span of order $\ge \theta'$ in $G \setminus Z$ with respect to $\mathcal{T}^* \setminus Z$ is $(\lambda, 2\psi)$-level.}
+
+Let us apply 7.2 (with $\theta, \mathcal{T}^*, G, \mu$ replaced by $\theta', \mathcal{T}^* \setminus Z, G \setminus Z, 2\psi$). By (1), the hypotheses of 7.2 are satisfied. We deduce that one of the outcomes of 7.2 holds. But if 7.2.1 holds, that is, there is a $\Sigma'$-span of order $\ge \phi$ in $G \setminus Z$ with respect to $\mathcal{T}^* \setminus Z$, then 6.1.1 holds, by 7.4. If 7.2.2 holds then 6.1.3 holds, while if 7.2.3 holds then 6.1.4 holds, because it is easy to see that $\mathcal{T}^*$ controls every minor controlled by $\mathcal{T}^* \setminus Z$. The result follows. $\square$

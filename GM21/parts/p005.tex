@@ -1,0 +1,44 @@
+\origpage{3}{}
+\noindent that $\delta_1 \cup \delta_2$ is the set of all edges of $G$ incident with $v$. Take two new elements $v_1, v_2$, and let $G'$ be the graph with vertex set $(V(G) \setminus \{v\}) \cup \{v_1, v_2\}$ and edge set $E(G)$, in which an edge $e$ is incident with a vertex $u \in V(G')$ if either $u \ne v_1, v_2$ and $e$ is incident with $u$ in $G$, or $u = v_i$ and $e \in \delta_i$ for $i = 1$ or $2$. We say that $G'$ is obtained from $G$ by \textit{splitting} $v$ \textit{(according to $\delta_1, \delta_2$)}.
+
+\textbf{2.4} \textit{If $G'$ is obtained from $G$ by splitting a vertex $v$, and $G$ has a vital $p$-linkage, then $G'$ has a vital $(p+2)$-linkage.}
+
+\textbf{Proof.} Let $L$ be a vital $p$-linkage in $G$. Let $L'$ be the subgraph of $G'$ with $V(L') = V(G')$ and $E(L') = E(L)$. Then $L'$ is a vital $(p+2)$-linkage as is easily seen. \fix{We give the details. A vertex of $G'$ other than $v_1, v_2$ has the same edges in $L'$ as in $L$, and the degree of $v$ in $L$ is the sum of the degrees of $v_1$ and $v_2$ in $L'$. So $L'$ has maximum degree $\le 2$. If some $H' \subseteq L'$ had an edge and no vertex of degree $1$, then the subgraph of $L$ formed by the edges of $H'$ and their ends would also have an edge and no vertex of degree $1$ (the degree of $v$ in it is the sum of two numbers, each $0$ or $2$), which is impossible. Hence $L'$ is a linkage in $G'$. Its terminals are the terminals of $L$ other than $v$, and possibly $v_1, v_2$, and so it is a $(p+2)$-linkage; and $V(L') = V(G')$. In the same way,}
+
+\fix{\hspace*{12pt}(1) \textit{If $v_1$ and $v_2$ both have degree $1$ in $L'$, they belong to different components of $L'$,}}
+
+\fix{since otherwise the path of $L'$ between them would give a subgraph of $L$ with an edge and no vertex of degree $1$ (the vertex $v$ having degree $2$ in it).}
+
+\fix{Now let $M'$ be a linkage in $G'$ with the same pattern as $L'$. Then $M'$ and $L'$ have the same terminals, each with the same degree in both, and a vertex of $M'$ that is not a terminal of $L'$ has degree $2$ in $M'$. Let $M$ be the subgraph of $G$ with $E(M) = E(M')$, whose vertices are the ends of these edges in $G$, the vertices of $M'$ other than $v_1, v_2$, and also $v$ if $v$ is a terminal of $L$. Then each vertex other than $v$ has the same edges in $M$ as in $M'$, and the degree of $v$ in $M$ is the sum of the degrees of $v_1, v_2$ in $M'$.}
+
+\fix{\hspace*{12pt}(2) \textit{$M$ is a linkage in $G$, with the same terminals as $L$, and each terminal of $L$ has the same degree in $M$ and in $L$.}}
+
+\fix{\textit{Subproof.} If $v_1$ and $v_2$ are both terminals of $L'$, they have the same degrees in $M'$ as in $L'$, and so $v$ has the same degree in $M$ as in $L$. Otherwise one of them, say $v_1$, has degree $2$ in $L'$; then $v_2$ has degree $0$ in $L'$ and in $M'$, $v$ is not a terminal of $L$, and $v$ has degree $0$ or $2$ in $M$ (and if $0$, then $v \notin V(M)$). Every other vertex of $M$ has degree $\le 2$, and is a terminal of $M$ if and only if it is a terminal of $M'$, that is, of $L'$, that is, of $L$; and it then has the same degree in all four. If $v$ is a terminal of $L$, then $v_1, v_2$ are terminals of $L'$, and so $v$ is a terminal of $M$ with its degree in $L$. Next, suppose that $C$ is a circuit of $M$. The edges of $C$ form a circuit of $M'$, which is impossible, unless $C$ passes through $v$ with one edge incident with $v_1$ and the other with $v_2$ in $G'$; and then they form a path of $M'$ between $v_1$ and $v_2$. In this case $v_1, v_2$ have degree $1$ in $M'$, since $v$ has degree $2$ in $M$; so they are terminals of $M'$ in the same component, and $\{v_1, v_2\}$ is a block of the pattern of $M'$, and so of $L'$, contrary to (1). This proves (2).}
+
+\fix{\hspace*{12pt}(3) \textit{$M$ has the same pattern as $L$.}}
+
+\fix{\textit{Subproof.} Let $u \ne w$ be terminals of $M$ joined by a path $C$ of $M$, and let $C'$ be the subgraph of $M'$ formed by the edges of $C$ and their ends in $G'$. The vertices of degree $1$ in $C'$ are $u$ and $w$ (with $u$ or $w$ replaced by $v_1$ or $v_2$ if it equals $v$), and also $v_1$ and $v_2$ if $C$ passes through $v$ with one edge incident with each. All of them are terminals of $M'$: $u$ and $w$ since they are terminals of $L$ (if $v \in \{u, w\}$, then $v_1, v_2$ are terminals of $L'$, since $v$ has degree $\le 1$ in $L$), and $v_1, v_2$ in the last case since $v$ has degree $2$ in $M$. Hence each component of $C'$ is a component of $M'$, and its ends form a block of the pattern of $M'$, and so of $L'$. Let $H$ be the subgraph of $L$ formed by the edges of the paths of $L'$ between these pairs of ends. Then $u, w$ have degree $1$ in $H$, and every other vertex has degree $0$ or $2$ (the vertex $v$ has degree $2$ in $H$ in the last case, since then $v_1, v_2$ are ends of these paths of $L'$). Hence the component of $H$ that contains $u$ is a path of $L$ from $u$ to $w$. Since a terminal of degree $0$ in $M$ has degree $0$ in $L$, by (2), every block of the pattern of $M$ is a block of the pattern of $L$, and since $M$ and $L$ have the same terminals, the two patterns are equal. This proves (3).}
+
+\fix{From (2), (3) and since $L$ is vital, $M = L$. Hence $E(M') = E(M) = E(L) = E(L')$. Every terminal of $L'$ is in $M'$, and every other vertex of $L'$ is incident with an edge of $L'$, which is in $M'$; so $V(M') = V(G') = V(L')$, and $M' = L'$. Thus $L'$ is vital.}\fixnote{fix:2.4-proof-added}{The paper leaves the verification to the reader. The argument above is the one used in the formalization.} $\square$
+
+If $A, B$ are graphs, we write $A \subseteq B$ to denote that $A$ is a subgraph of $B$.
+
+\textbf{2.5} \textit{Let $p, k \ge 0$ and let $n = (2p + 1)(p + k + 1)^{2(p+k)} + 1$. Let $L$ be a vital $p$-linkage in a graph $G$, and for $1 \le i \le n$ let $(A_i, B_i)$ be a separation of $G$ of order $k$, such that}
+
+\hspace*{12pt}1. \textit{$A_i \subseteq A_j$ and $B_j \subseteq B_i$ for $1 \le i < j \le n$, and}
+
+\hspace*{12pt}2. \textit{for $1 \le i < n$, there is a linkage $M_i$ in $B_i \cap A_{i+1}$ with $k$ components, each with one end in $V(A_i \cap B_i)$ and the other in $V(A_{i+1} \cap B_{i+1})$.}
+
+\textit{Then there exists $i$ with $1 \le i < n$ such that $L \cap B_i \cap A_{i+1} = M_i$.}
+
+\textbf{Proof.} Let $Z$ be the set of terminals of $L$.
+
+\hspace*{12pt}(1) \textit{At most $2p + 1$ of the pairs $(V(A_i) \cap Z, V(B_i) \cap Z)$ $(1 \le i \le n)$ are distinct.}
+
+\textit{Subproof.} Let $c_i = |V(A_i) \cap Z| - |V(B_i) \cap Z|$ ($1 \le i \le n$). Then $-p \le c_i \le p$, and so at most $2p + 1$ of the integers $c_i$ ($1 \le i \le n$) are mutually distinct. But if $i < j$, then $V(A_i) \cap Z \subseteq V(A_j) \cap Z$ and $V(B_i) \cap Z \supseteq V(B_j) \cap Z$, and so if $c_i = c_j$ then
+\begin{equation*}
+(V(A_i) \cap Z, V(B_i) \cap Z) = (V(A_j) \cap Z, V(B_j) \cap Z)
+\end{equation*}
+as required. This proves (1).
+
+For $1 \le i \le n$, let $V(A_i \cap B_i) = \{v_i^1, \dots, v_i^k\}$, numbered so that for $1 \le i < n$, the pattern of $M_i$ is $\{\{v_i^1, v_{i+1}^1\}, \dots, \{v_i^k, v_{i+1}^k\}\}$. Let $Z_i = V(A_i \cap B_i) \cup (Z \cap V(B_i))$, and let $L_i = L \cap B_i$. By (2.2),

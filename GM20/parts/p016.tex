@@ -1,0 +1,30 @@
+\origpage{340}{N. Robertson, P.D. Seymour / Journal of Combinatorial Theory, Series B 92 (2004) 325--357}
+\noindent such that distinct $x, y \in \bar{\pi}(f_i(C))$ are adjacent in $K_i$ if and only if they are connected in $H_i$. By $k + 1$ applications of (1) and theorem 5.1 of [4], distinct $x, y \in \bar{\pi}(C)$ are connected in $H$ if and only if they are connected in $K_0 \cup K_1 \cup \cdots \cup K_k$. This proves (2).
+
+Let $\mathcal{L}' = \{f_i(C) : C \in \mathcal{L}, 0 \le i \le k\}$. Then by (1), $\mathcal{L}'$ is a fine rooted location in $G$, and $\mathcal{L}' \subseteq \mathcal{T}$, and $\mathcal{L}'$ has order at most that of $\mathcal{L}$, and hence $< \theta^2$.
+
+To verify that $\mathcal{L}'$ is $W$-suitable, take a member of $\mathcal{L}'^-$, say $(f_h(C), G \setminus f_h(C))$ where $C \in \mathcal{L}$ and $0 \le h \le k$. Let $\mathcal{T}'$ be a tangle in $G$ of order $\ge \theta^2$ such that $(G \setminus f_h(C), f_h(C)) \in \mathcal{T}'$, and let $(A', B')$ be the $(\mathcal{T}, \mathcal{T}')$-distinction. We will show that either
+
+\hspace*{12pt}$\bullet$ $h = 0$ and $A' \subseteq f_0(C)$ and $G \setminus f_0(C) \subseteq B'$, or
+
+\hspace*{12pt}$\bullet$ $A' \subseteq A_i$ and $B_i \subseteq B'$ for some $i$ with $1 \le i \le k$.
+
+Since $(G \setminus f_h(C), f_h(C)) \in \mathcal{T}'$ it follows that $((G \setminus C)^-, C^-) \in \mathcal{T}'$ since $\mathcal{T}'$ has order $\ge \theta^2$ and $|\bar{\pi}(C)| < \theta^2$. We may assume that $A' \subseteq C^-$ and $(G \setminus C)^- \subseteq B'$, since otherwise the second alternative above holds because $\mathcal{L}$ is $W$-suitable. For $1 \le i \le k$ it is not true that $A_i \subseteq A'$ and $B' \subseteq B_i$, since that would imply that $A_i \subseteq C^-$ and $(G \setminus C)^- \subseteq B_i$ contrary to the hypothesis. We may also assume it is not true that $A' \subseteq A_i$ and $B_i \subseteq B'$, since otherwise we are done. By 5.1 it follows that $A_i \subseteq B'$ and $A' \subseteq B_i$ for $1 \le i \le k$, and hence $A' \subseteq A_0$ and $B_0 \subseteq B'$. Since $(B', A'), (G \setminus f_h(C), f_h(C)) \in \mathcal{T}'$, it follows that $f_h(C) \nsubseteq B'$, and so $f_h(C) \nsubseteq B_0$. Consequently $h = 0$, and the first alternative above holds, as required. This proves that $\mathcal{L}'$ is $W$-suitable.
+
+From (2) and the facts that $P$ is removable and $\mathcal{L}$, $\mathcal{L}'$ are both fine (and hence their hearts $(G_1, \mu_1, \Delta_1)$, $(G_2, \mu_2, \Delta_2)$ satisfy $dom(\mu_i) = E(G_i)$ ($i = 1, 2$)), it follows that $\mathcal{F}'$ contains a heart of $(P, \mathcal{L}')$. Let $C \in \mathcal{L}$ and $0 \le i \le k$. For $1 \le j \le k$, if $i = j$ then $f_i(C)^- \subseteq A_i = A_j$ and $B_j = B_i \subseteq (G \setminus f_i(C))^-$; and if $i \ne j$ then $f_i(C)^- \subseteq A_i \subseteq B_j$ and $A_j \subseteq B_i \subseteq (G \setminus f_i(C))^-$. This proves 5.4. $\square$
+
+\textbf{5.5.} \textit{Let $\mathcal{F}$ be a well-behaved set of patchworks and let $\theta \ge 1$. Then there is a well-behaved set of patchworks $\mathcal{F}'$ with the following property. Let $P = (G, \mu, \Delta)$ be a patchwork, let $\lambda$ be a tie-breaker in $G$, let $\mathcal{T}$ be a tangle in $G$ of order $\ge \theta^2$, and let $W \subseteq Z(G)$ with $|W| \le \theta$. Suppose that}
+
+\hspace*{12pt}$\bullet$ \textit{$P$ is rootless,}
+
+\hspace*{12pt}$\bullet$ \textit{$\mathcal{L}$ is a $W$-suitable rooted location in $G$ such that $\mathcal{F}$ contains a heart of $(P, \mathcal{L})$, and}
+
+\hspace*{12pt}$\bullet$ \textit{for each $C \in \mathcal{L}$ and each $(A^*, B^*) \in \mathcal{M}(\mathcal{T}, W, \theta)$, either}
+
+\hspace*{12pt}$\bullet$ \textit{$C^- \subseteq A^*$ and $B^* \subseteq (G \setminus C)^-$ or}
+
+\hspace*{12pt}$\bullet$ \textit{$C^- \subseteq B^*$ and $A^* \subseteq (G \setminus C)^-$.}
+
+\textit{Then there is a fine rooted location $\mathcal{L}'$ such that $\mathcal{L}'$ $\theta^2$-isolates $\mathcal{T}$ and $\mathcal{F}'$ contains a heart of $(P, \mathcal{L}')$.}
+
+\textbf{Proof.} Let $\mathcal{F}_1$ be the set of active members of $\mathcal{F}$, and let $\mathcal{F}_2$ be defined as in 4.13, taking $k = w = 0$. We claim that $\mathcal{F}_2$ satisfies the theorem. For let $P = (G, \mu, \Delta)$, $\lambda$, $\mathcal{T}$, $W, \mathcal{L}$ be as above. Let $\mathcal{L} = \mathcal{L}_1 \cup \mathcal{L}_2$ where $C \in \mathcal{L}$ belongs to $\mathcal{L}_2$ if and only if there exists $(A^*, B^*) \in \mathcal{M}(\mathcal{T}, W, \theta)$ with $C^- \subseteq A^*$ and $B^* \subseteq (G \setminus C)^-$, and $\mathcal{L}_1 = \mathcal{L} \setminus \mathcal{L}_2$. For each $(A, B) \in \mathcal{M}(\mathcal{T}, W, \theta)$, let $f(A, B)$ be a rooted hypergraph with $f(A, B)^- = A$ and $\bar{\pi}(f(A, B)) = V(A \cap B)$. Let $\mathcal{L}' = \mathcal{L}_1 \cup \{f(A^*, B^*) : (A^*, B^*) \in \mathcal{M}(\mathcal{T}, W, \theta)\}$.

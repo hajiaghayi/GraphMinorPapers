@@ -1,0 +1,24 @@
+\origpage{101}{GRAPH MINORS. XI}
+\textit{Proof.} First, we assume that $\Gamma$ is connected. Choose $u \in V(\Gamma)$ such that
+\begin{align*}
+&u = c && \text{if } c \in V(\Gamma) \\
+&u \in \bar{e} && \text{if } c \in e \text{ for some edge } e \text{ of } \Gamma \\
+&u \in \bar{r} && \text{if } c \in r \text{ for some region } r \text{ of } \Gamma.
+\end{align*}
+For each $v \in V(\Gamma) \cap Z$, let $X_v$ be a $c, v$-optimal restraint. Since $v \in Z$ it follows that $l(X_v) \le k$, and hence $X_v \subseteq Z$. Since $\Gamma \cap bd(X_v)$ is connected and so is $\Gamma$, and $u, v \in X_v$, there is a simple walk $P_v$ of $\Gamma$ from $v$ to $u$ with $U(P_v) \subseteq X_v$.
+
+\hspace*{12pt}(1) \textit{For any edge $e \in E(\Gamma)$ with $e \subseteq Z$ and with ends $v_1$, $v_2$, let $P_e$ be the walk $v_1, e, v_2$; then $P_e$ is homotopic in $Z$ to $P_{v_1} + P_{v_2}^{-1}$.}
+
+\textit{Subproof.} Let $X$ be a $c, e$-extreme restraint. Since $e \subseteq Z$ it follows that $l(X) \le k$, and hence $X \subseteq Z$. Now $v_1 \in X$ and so $X_{v_1} \subseteq X$ by (8.9). Thus $P_{v_1}$ is a walk of $\Gamma \cap X$, and similarly so is $P_{v_2}$. Since $X$ is simply-connected and $X \subseteq Z$, and $P_e$, $P_{v_1} + P_{v_2}^{-1}$ are both walks of $\Gamma \cap X$ from $v_1$ to $v_2$, the claim follows.
+
+\hspace*{12pt}(2) \textit{Any closed walk of $\Gamma \cap Z$ is null-homotopic in $Z$.}
+
+\textit{Subproof.} Let $v_0, e_1, v_1, \dots, e_t, v_t = v_0$ be a closed walk of $\Gamma \cap Z$. By (1) it is homotopic in $Z$ to
+\begin{equation*}
+P_{v_0} + P_{v_1}^{-1} + P_{v_1} + P_{v_2}^{-1} + \dots + P_{v_{t-1}} + P_{v_0}^{-1};
+\end{equation*}
+and since each $P_{v_i}^{-1} + P_{v_i}$ is null-homotopic in $Z$, the claim follows.
+
+If $X$ is a restraint with $l(X) \le k$ and $c \in X$, then by (8.3), $X$ is the union of $bd(X)$ and finitely many discs with boundary in $bd(X)$ (namely, all discs of the form $\operatorname{ins}(C)$, where $C \subseteq \Gamma \cap bd(X)$ is a circuit of length $< 2\theta$). Since $bd(X) \subseteq U(\Gamma \cap Z)$, it follows that $Z$ is the union of $U(\Gamma \cap Z)$ with some closed discs with boundary in $U(\Gamma \cap Z)$; but $U(\Gamma \cap Z)$ is arc-wise connected, and so $Z$ is simply-connected, from (2), (7.3), and (7.11). This completes the proof when $\Gamma$ is connected.
+
+For the general case, let $\Gamma$ have components $\Gamma_1, \dots, \Gamma_t$, say. For $1 \le i \le t$ let $Z_i$ be the union of all restraints $X$ with $l(X) \le k$ and $c \in X$ such that $bd(X) \subseteq U(\Gamma_i)$. Then $Z = Z_1 \cup \dots \cup Z_t$, since every restraint has connected boundary. Let $1 \le i < j \le t$. We claim that either $Z_i \subseteq Z_j$ or $Z_j \subseteq Z_i$. For suppose not, and let $a \in Z_i - Z_j$, $b \in Z_j - Z_i$. Let $X$ be a restraint with $c, a \in X$, $l(X) \le k$ and $bd(X) \subseteq U(\Gamma_i)$, and define $Y$ similarly with $c, b \in Y$ and $bd(Y) \subseteq U(\Gamma_j)$. Then $bd(X) \cap bd(Y) = \emptyset$, and $X \cap Y \ne \emptyset$, and $X \cup Y \ne \Sigma$ by (8.4), and $X \nsubseteq Y$ (since $a \in X$, and $a \notin Z_j \supseteq Y$) and $Y \nsubseteq X$ similarly. But this contradicts (7.7). Thus either $Z_i \subseteq Z_j$ or $Z_j \subseteq Z_i$ for $1 \le i < j \le t$. Hence there exists $i$ with $1 \le i \le t$ such that $Z_1 \cup \dots \cup Z_t = Z_i$, and hence $Z = Z_i$.

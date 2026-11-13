@@ -1,0 +1,28 @@
+\origpage{71}{N. Robertson, P.D. Seymour / Journal of Combinatorial Theory, Series B 89 (2003) 43--76}
+\sectionhead{9. The main proof}
+
+Now we complete the series of reductions by proving 8.1.
+
+\textbf{Proof of 8.1.} Let $\Sigma$ be a surface, and let $\delta \ge 0$ and $\phi, \psi \ge 3$ be integers. Let $\kappa = \lfloor \frac{1}{2}\phi^2\delta^2 \rfloor + 1$, let $\beta$ be even with $\kappa(\psi + 6) \le \beta \le \kappa(\psi + 6) + 1$, let $\gamma = 3\beta + 3$, and let $\theta = 12(\delta + 3)(\beta + 1)$. We claim that $\gamma, \theta$ satisfy 8.1. For let $\mathscr{T}^*$ be a tangle in a graph $G$, let $H, \mathscr{T}$ be a $\Sigma$-span of order $\ge \theta$ with metric $d$, and let $Y \subseteq V(H)$ with $|Y| = \delta$, such that $d(y, y') \ge \theta$ for all distinct $y, y' \in Y$. We may assume that 8.1.2 is false, that is,
+
+\hspace*{12pt}(1) \textit{There is no $H$-path with ends $s, t$ such that $d(s, t) \ge \psi$ and $d(s, y) \ge \psi$ for all $y \in Y$.}
+
+Let $Y = \{y_1, \ldots, y_\delta\}$. For $1 \le i \le \delta$ there is a battlefield $(\Lambda_i, C_i, X_i)$ around $y_i$ of size $\beta$ (see [8, section 9]), by theorem 9.5 of [8], since $\beta \ge 4$ is even and $\theta \ge 16\beta + 17$. We may assume that $|X_i| = \beta$ for each $i$.
+
+For $1 \le i < j \le \delta$, if $\sigma \in \bar{\Lambda}_i \cap \bar{\Lambda}_j$ then $d(y_{\delm{1}\fix{i}}, \sigma), d(y_j, \sigma) \le 3\beta + 3$,\fixnote{fix:8.1-p71}{The next display uses $d(y_i, \sigma)$.} and so
+\begin{equation*}
+\theta \le d(y_i, y_j) \le d(y_i, \sigma) + d(y_j, \sigma) \le 6\beta + 6,
+\end{equation*}
+a contradiction. Thus the discs $\bar{\Lambda}_1, \ldots, \bar{\Lambda}_\delta$ are mutually disjoint.
+
+For $i = 0, 1, \ldots, \delta$, let $H_i = H \cap (\Sigma \setminus (\Lambda_1 \cup \cdots \cup \Lambda_i))$.
+
+\hspace*{12pt}(2) \textit{For $0 \le i \le \delta$, $H_i$ is a rigid drawing in $\Sigma$.}
+
+\textit{Subproof.} Certainly $H_0 = H$ is rigid, and so we may assume that $i \ge 1$. Let $F \subseteq \Sigma$ be an $O$-arc with $F \cap U(H_i) \subseteq V(H_i)$ and $|F \cap V(H_i)| \le 2$. Since the circuits $H \cap bd(\Lambda_1), \ldots, H \cap bd(\Lambda_i)$ are mutually disjoint and $|F \cap V(H_i)| \le 2$, and $i \ge 1$, it follows that for some $j (1 \le j \le i)$, the sets $F \cap \Lambda_1, \ldots, F \cap \Lambda_i$ are all empty except possibly $F \cap \Lambda_j$. Consequently, if $H'$ denotes $H \cap (\Sigma \setminus \Lambda_j)$, then $F \cap U(H') \subseteq V(H')$ and $|F \cap V(H')| \le 2$. But $H'$ is rigid, since $(\Lambda_j, C_j, X_j)$ is a battlefield, and so there is a dial $\Delta$ for $F, H'$ (see [8, section 4]). Now $\Delta$ includes none of $bd(\Lambda_1), \ldots, bd(\Lambda_i)$ since it includes no circuit of $H'$, and $F$ meets none of $\Lambda_1, \ldots, \Lambda_i$ except possibly $\Lambda_j$, and it follows that $\Delta$ is disjoint from all of $\Lambda_1, \ldots, \Lambda_i$ except possibly $\Lambda_j$. Consequently, $\Delta$ is a dial for $F, H_i$. This proves (2).
+
+Let $\mathscr{T}_0 = \mathscr{T}$, and for $i = 1, \ldots, \delta$ let $\mathscr{T}_i$ be the tangle obtained from $\mathscr{T}_{i-1}$ by clearing the $(3\beta + 3)$-zone $\Lambda_i$. (We observe that $\Lambda_i$ is indeed a $(3\beta + 3)$-zone with respect to $\mathscr{T}_{i-1}$ since it is for $\mathscr{T}_0$, and thus this clearing operation is possible since $\mathscr{T}_{i-1}$ has order $\ge \theta - (12\beta + 14)(i - 1) > 12\beta + 14$. We see that $\mathscr{T}_i$ has order $ord(\mathscr{T}) - (12\beta + 14)i$ and is the $(12\beta + 14)i$-compression of $\mathscr{T}$ in $H_i$.
+
+For ``free``, see [8, section 3].
+
+\hspace*{12pt}(3) \textit{For $1 \le i \le \delta$, $X_1$ is free with respect to $\mathscr{T}_i$.}

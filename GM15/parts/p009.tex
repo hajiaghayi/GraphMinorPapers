@@ -1,0 +1,21 @@
+\origpage{120}{ROBERTSON AND SEYMOUR}
+\hspace*{12pt}(i) \textit{if $r$ is a region of $H$ in $\Sigma$ and $r \subseteq \Sigma_1$, there is at most one component $F$ of $\Sigma_1 \cap \Sigma_2$ with $\bar{r} \cap F \ne \emptyset$}
+
+\hspace*{12pt}(ii) \textit{for every $O$-arc $F \subseteq \hat{\Sigma}_1$, with $F \cap U(H) \subseteq V(H)$ and $|F \cap V(H)| \le 2$, there is a dial $\Delta \subseteq \hat{\Sigma}_1$ for $F, H \cap \Sigma_1$ with $|X \cap \Delta| \le |F \cap V(H)|$}
+
+\hspace*{12pt}(iii) \textit{for every $O$-arc $F \subseteq \Sigma_2$ with $F \cap U(H) \subseteq V(H)$ and $|F \cap V(H)| \le 2$, there is a dial $\Delta \subseteq \Sigma_2$ for $F, H$}
+
+\hspace*{12pt}(iv) \textit{if $F \subseteq \Sigma_2$ is a line with ends $u, v \in \Sigma_1 \cap \Sigma_2 \cap V(H)$ and is otherwise disjoint from $U(H)$, and $P$ is a path of $H \cap \Sigma_1 \cap \Sigma_2$ with ends $u, v$ and with $|V(P) \cap X| \le 2$, then the $O$-arc $U(P) \cup F$ bounds an open disc in $\Sigma_2$ disjoint from $U(H)$.}
+
+\textit{Then $H$ is rigid in $\Sigma$.}
+
+\textit{Proof.} Let $F \subseteq \Sigma$ be an $O$-arc with $F \cap U(H) \subseteq V(H)$ and $|F \cap V(H)| \le 2$. We shall show that $\Sigma$ includes a dial for $F, H$. From (iii) we may assume that $F \not\subseteq \Sigma_2$. Suppose that $F \subseteq \Sigma_1$. From (ii), there is a dial $\Delta \subseteq \hat{\Sigma}_1$ for $F, H \cap \Sigma_1$. Every component of $\hat{\Sigma}_1 - \Sigma_1$ is bounded by an $O$-arc in $\Sigma_1 \cap \Sigma_2 \subseteq U(H)$, and hence $\Delta$ includes no such component, since $(H \cap \Sigma_1) \cap \Delta$ has no circuit. Since $bd(\Delta) \subseteq \Sigma_1$, it follows that $\Delta \subseteq \Sigma_1 \subseteq \Sigma$, and hence $\Delta$ is a dial in $\Sigma$ for $F, H$ as required. We may assume then that $F \not\subseteq \Sigma_1$.
+
+Since $F \not\subseteq \Sigma_1$ and $F \not\subseteq \Sigma_2$, it follows that $|F \cap \Sigma_1 \cap \Sigma_2| \ge 2$. Since $F \cap U(H) \subseteq V(H)$ and $\Sigma_1 \cap \Sigma_2 \subseteq U(H)$ and $|F \cap V(H)| \le 2$, we deduce that $F \cap \Sigma_1 \cap \Sigma_2 = \{u, v\} \subseteq V(H)$ say, and $F = F_1 \cup F_2$ where $F_1, F_2$ are lines with ends $u, v$ and $F_i \subseteq \Sigma_i$ ($i = 1, 2$). For $i = 1, 2$, let $r_i$ be the region of $H$ in $\Sigma$ with $F_i \subseteq r_i \cup \{u, v\}$. Then $r_i \subseteq \Sigma_i$ ($i = 1, 2$). From (i), $u$ and $v$ lie in the same component $C$ of $\Sigma_1 \cap \Sigma_2$. Let $\Lambda$ be the component of $\hat{\Sigma}_1 - \Sigma_1$ bounded by $U(C)$. By adding a line joining $u, v$ within $\Lambda \cup \{u, v\}$ we extend $F_1$ to an $O$-arc in $\hat{\Sigma}_1$, and thereby deduce from (ii) that there is a path $P$ of $C$ between $u$ and $v$ such that $|V(P) \cap X| \le 2$, and $F_1 \cup U(P)$ bounds an open disc in $\Sigma_1$ included in $r_1$. From (iv), $F_2 \cup U(P)$ bounds an open disc in $\Sigma_2$ included in $r_2$. It follows that the union of the closures of these open discs is a dial in $\Sigma$ for $F, H$, as required. $\square$
+
+If $\mathscr{T}$ is a tangle of order $\theta$ in a graph $H$, and $1 \le \theta' \le \theta$, the set $\mathscr{T}'$ of all members of $\mathscr{T}$ of order $< \theta'$ is a tangle in $H$ of order $\theta'$, and we call it the \textit{$\theta'$-truncation} of $\mathscr{T}$.
+
+We apply (3.2) to deduce the following.
+
+\stmt
+(3.3) \textit{Let $\Sigma$ be a surface and let $\phi \ge 3$ be an integer. Let $\mathscr{T}^*$ be a tangle in a graph $G$, and let $H, \eta, \mathscr{T}$ be a $\Sigma$-span. Let $\Lambda \subseteq \Sigma$ be a region of $H$ such that $H \cap bd(\Lambda)$ is a circuit, and let $a_1, \dots, a_\phi, b_1, \dots, b_\phi$ be distinct vertices of this circuit, in order, such that $\{a_1, \dots, a_\phi, b_1, \dots, b_\phi\}$ is free with respect to $\mathscr{T}$. For $1 \le i \le \phi$ let $P_i$ be an $\eta(H)$-path with ends $\eta(a_i), \eta(b_i)$, such that}

@@ -1,0 +1,26 @@
+\origpage{131}{GRAPH MINORS. XV. GIANT STEPS}
+\noindent because $\theta \ge d(\sigma_1, \sigma_2)$ and $\lambda_1 + \lambda_2 < \lambda$. This proves (iii), and hence proves that $H'', \eta'', \mathscr{T}^0$ is obtained from $H, \eta, \mathscr{T}$ by rearranging within $\lambda$ of $z_3$. But it is $\mu$-stepped, a contradiction since $H, \eta, \mathscr{T}$ is $(\lambda, \mu)$-flat. This proves (3).
+
+\hspace*{12pt}(4) \textit{For all $\sigma_1 \in Z_1$, $d(\tau, \sigma_1) > \lambda - 2\lambda_1$, and hence $d'(\tau, \sigma_1) > \lambda - 6\lambda_1 - 2$.}
+
+\textit{Subproof.} By (3), $\lambda - \lambda_1 < d(z_1, \tau) \le d(z_1, \sigma_1) + d(\sigma_1, \tau) \le \lambda_1 + d(\sigma_1, \tau)$, and so the first inequality holds. The second follows since $\mathscr{T}'$ is a $(4\lambda_1 + 2)$-compression of $\mathscr{T}$. This proves (4).
+
+\hspace*{12pt}(5) \textit{For all $\sigma_2 \in Z_2$, $d(\tau, \sigma_2) \le \lambda_2$.}
+
+\textit{Subproof.} For all $\sigma_1 \in Z_1$, $d'(\tau, \sigma_1) > \lambda - 6\lambda_1 - 2 \ge \lambda_2 \ge d'(\tau, \sigma_2)$ by (4). Hence, by (4.2) (applied to $\mathscr{T}, \mathscr{T}', Z_1$), $d(\tau, \sigma_2) \le d'(\tau, \sigma_2) \le \lambda_2$. This proves (5).
+
+\hspace*{12pt}(6) \textit{For all $\sigma_1 \in Z_1$ and $\sigma_2 \in Z_2$, $d(\sigma_1, \sigma_2) > \lambda - 2\lambda_1 - \lambda_2$.}
+
+\textit{Subproof.} Since $d(z_1, \tau) \le d(z_1, \sigma_1) + d(\sigma_1, \sigma_2) + d(\sigma_2, \tau)$, the claim follows from (3) and (5).
+
+In particular, from (6) $Z_1 \cap Z_2 = \emptyset$ and so $z_2 = z_3$. Let $H_0 \subseteq H$ be the subdrawing formed by the edges of $H$ not in $Z_1 \cup Z_2$ and their ends. Let $L_1, M_1, L_2, M_2$ be the subdrawings of $H, H', H, H''$ formed by its edges in $Z_1, Z_1, Z_2, Z_2$ and their ends, respectively. Then $H = H_0 \cup L_1 \cup L_2$, $H' = H_0 \cup M_1 \cup L_2$, $H'' = H_0 \cup M_1 \cup M_2$.
+
+\hspace*{12pt}(7) \textit{$L_1$ and $L_2$ both have circuits.}
+
+\textit{Subproof.} There is a region $r$ of $H$ with $d(z_1, r) \le 2$; and hence $d(z_1, e) \le 4 \le \lambda_1$ and so $e \subseteq \delm{\Lambda_1}\fix{Z_1}$,\fixnote{fix:5.2-claim7}{Here and in Claim (8), the sets $Z_1$ and $Z_2$ defined in the proof are meant, as the next sentences show.} for every edge $e$ of $H$ incident with $r$. Since $H$ is not a forest (because it has a tangle of order $\ge 3$) this set of edges includes a circuit. Similarly $L_2$ has a circuit, since $\lambda_2 \ge 4$. This proves (7).
+
+Let $H''' = H_0 \cup L_1 \cup M_2$.
+
+\hspace*{12pt}(8) \textit{$H'''$ is rigid and $2$-cell.}
+
+\textit{Subproof.} Let $F \subseteq \Sigma$ be an $O$-arc with $F \cap U(H''') \subseteq V(H''')$ and $|F \cap V(H''')| \le 2$. Suppose first that $F \cap \delm{\Lambda_2}\fix{Z_2} = \emptyset$.\fixnote{fix:5.2-claim8}{The set $Z_2$ is meant, as in the note to Claim (7).} Then $F \cap U(H) \subseteq V(H)$ and $|F \cap V(H)| \le 2$, and so there is a dial $\Delta \subseteq \Sigma$ for $F, H$. Now by (7), $Z_2 \not\subseteq \Delta$, because $L_2$ has a circuit, and so $Z_2 \cap \Delta = \emptyset$, and $\Delta$ is a dial for $F, H'''$ as required. Thus we may assume that $F \cap Z_2 \ne \emptyset$. Suppose now that $F \cap Z_1 = \emptyset$; then a similar argument applied to $H''$ yields the desired dial. Finally, we assume that $F \cap Z_2 \ne \emptyset$ and $F \cap Z_1 \ne \emptyset$. But $|F \cap U(H''')| \le 2$, and this is impossible by (6). This proves that $H'''$ is rigid.

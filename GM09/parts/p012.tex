@@ -1,0 +1,20 @@
+\origpage{51}{GRAPH MINORS. IX}
+\noindent separating. Suppse that $Q_1, Q_2, Q_3$ are all half-covered. Then one end of $Q_2$ is in $A$ and the other is in $B$.*
+
+\textit{Proof.} Let $Q_i$ have ends $a_i, b_i$ ($1 \le i \le 3$), where $(a_3, a_2, a_1, b_1, b_2, b_3)$ is clockwise. Suppose that $a_2, b_2 \in A$. Then either $B \subseteq \Omega(a_2, b_2)$ or $B \subseteq \Omega(b_2, a_2)$; we assume the second without loss of generality. Choose $P_i \in \mathscr{P}$ such that $P_i$ meets $Q_i$ ($i = 1, 2, 3$). Now both ends of $Q_1$ are in $A$, but one end of $P_1$ is in $B$ (and the other is one of $a_1, b_1$). $Q_2$ is separating and so $P_1$ does not cross $Q_2$; hence $P_1 \cap Q_2 \ne \emptyset$. But $Q_2$ only meets one member of $\mathscr{P}$, namely, $P_2$, and so $P_1 = P_2$. It follows that one of $a_2, b_2$ is an end of $P_1$, and so both ends of $P_1$ are in $A$, a contradiction. Thus not both $a_2, b_2$ are in $A$, and similarly they are not both in $B$, as required. $\square$
+
+\stmt
+(4.5) \textit{Let S be true, and let $Q_1, Q_2, Q_3, Q_4, Q_5 \in \mathscr{Q}$ be in order. Suppose that $Q_2, Q_3, Q_4$ are all separating. Then not all of $Q_1, ..., Q_5$ are half-covered.}
+
+\textit{Proof.} Suppose that $Q_1, ..., Q_5$ are all half-covered. For $1 \le i \le 5$, choose $P_i \in \mathscr{P}$ so that $Q_i$ meets $P_i$. Let $Q_i$ have ends $a_i, b_i$ ($1 \le i \le 5$) where $(a_5, a_4, ..., a_1, b_1, ..., b_5)$ is clockwise. By (4.4) we may assume that $a_2, a_3, a_4 \in A$ and $b_2, b_3, b_4 \in B$. In particular, $\mathscr{P}' = (\mathscr{P} - \{P_3\}) \cup \{Q_3\}$ is a transaction, and so it is not crooked, from the minimality of $\bigcup \mathscr{P} \cup \bigcup \mathscr{Q}$. Thus either $Q_3$ is peripheral in $\mathscr{P}'$, or some $P \in \mathscr{P}' - \{Q_3\}$ is peripheral in $\mathscr{P}'$.
+
+Suppose that $Q_3$ is peripheral in $\mathscr{P}'$. We assume without loss of generality that $V(\mathscr{P}') \cap \Omega(a_3, b_3) = \emptyset$. Now both $P_1$ and $P_2$ have an end in $\Omega(a_3, b_3)$, and so neither $P_1$ nor $P_2$ is in $\mathscr{P}'$. Hence $P_1 = P_2 = P_3$, which is impossible since $P_i$ and $Q_i$ have a common end ($i = 1, 2, 3$).
+
+We deduce that some $P \in \mathscr{P}' - \{Q_3\}$ is peripheral in $\mathscr{P}'$. Let the ends of $P$ be $a, b$ where $a \in A$, $b \in B$. Now $Q_3$ does not cross $P$, and so we may assume without loss of generality that $(a_3, a, b, b_3)$ is clockwise. Thus $V(\mathscr{P}') \cap \Omega(a, b) = \emptyset$. Let the ends of $P_3$ be $a_3, b'_3$, say (again, without loss of generality), where $b'_3 \in B$. Then $b'_3 \in \Omega(a, b)$ since $P$ is not peripheral in $\mathscr{P}$.
+
+Suppose that $b_2 \notin \Omega(a, b)$. Then $b_2 \in \Omega(b'_3, b_3)$ since $b_2 \in B$, and $a_2 \in \Omega(a_3, b'_3)$ since $a_2 \in A$. But $P_3$ does not cross $Q_2$ and so $Q_2 \cap P_3 \ne \emptyset$; hence $P_2 = P_3$, and $b'_3$ is an end of $Q_2$, which (since $b'_3 \in B$ and $a_2 \in A$) implies that $b_2 = b'_3 \in \Omega(a, b)$, contrary to our assumption.
+
+We deduce that $b_2 \in \Omega(a, b)$. If $a_2 \in \Omega(a_3, a)$ then $P \cap Q_2 \ne \emptyset$ since $P$ does not cross $Q_2$, and so $P = P_2$, which implies that $\{a, b\} \cap \{a_2, b_2\} \ne \emptyset$, a contradiction. We deduce that $a_2 \notin \Omega(a_3, a)$, and so $a_2 \in \{a\} \cup \Omega(a, b'_3)$, since $a_2 \in A$. Since $Q_1, Q_2, Q_3$ are in order, it follows that
+\begin{equation*}
+a_1, b_1 \in \Omega(a_2, b_2) \subseteq \Omega(a, b)
+\end{equation*}

@@ -1,0 +1,44 @@
+\origpage{225}{GRAPH MINORS. VII}
+\noindent for every region $r$ of $G'$, and there is a $G$-normal $O$-arc $F$, homotopic to $F'$, with
+\begin{equation*}
+V(G) \cap F \subseteq (V(G') \cap F') \cup ((V(G) \cap C) - \{z\}).
+\end{equation*}
+Then $|V(G) \cap F| \le v$, and so by (ii), either $F$ is null-homotopic in $\Sigma$, or $F$ is null-homotopic in $\Sigma + \hat{C}'$ for some cuff $C'$ with $V(G) \cap C' \subseteq F$. Now $F$ is not null-homotopic in $\Sigma$, since $F'$ is not. On the other hand, $V(G) \cap C \nsubseteq F$ since $z \notin F$, and if $C'$ is a cuff with $C' \ne C$ then $V(G) \cap C' \nsubseteq F$, because $V(G) \cap C' \ne \emptyset$ by (iii) and
+\begin{equation*}
+V(G) \cap F \cap C' \subseteq V(G') \cap F' \cap C' = \emptyset.
+\end{equation*}
+This is a contradiction. \fix{We give the details of this step, without moving $F'$. Let $X = V(G') \cap F'$, let
+$D = (V(G) \cap C) - \{z\}$, and let $Z$ be the union of $X \cup D$ and the set of points of $\Sigma$
+not in $U(G) \cup bd(\Sigma)$. Let $F \subseteq Z$ be an $O$-arc. Then $F$ is $G$-normal, and
+$V(G) \cap F \subseteq X \cup D$, which gives the inclusion displayed above. Moreover
+$|V(G) \cap F| \le |X| + |D| \le v$, and $z \notin F$ since $z \notin Z$. So the argument above shows
+that $F$ is null-homotopic in $\Sigma$, for otherwise the cuff $C'$ given by (ii) could be neither $C$
+nor another cuff. By (11.2), it follows that $Z$ is flat, that is, every continuous map from $S^1$ to
+$Z$ is null-homotopic in $\Sigma$. Now let $Z'$ be the union of $Z$ and the edges of $G$ with an end in
+$D$. Then $Z'$ is also flat. For we may add these edges one at a time, and each edge $e$ added has a
+thin closed disc around $\bar{e}$, whose boundary lies in the current set except possibly at the
+other end of $e$, so that (11.3) applies. Finally, $F' \subseteq Z'$. For let $x \in F'$. Then
+$x \notin bd(\Sigma)$. If $x \notin U(G)$ then $x \in Z$. If $x \in V(G)$ then $x \in V(G')$ since
+$x \notin C$, and so $x \in X$. Otherwise $x$ lies in an edge $e$ of $G$. This edge is not an edge of
+$G'$, since $F'$ is $G'$-normal, and so $e$ has an end in $D$, and $x \in Z'$. Hence $F'$ is
+null-homotopic, contrary to its choice.\fixnote{fix:4.6-p225-added}{The paper says that it is easy to
+see how to find $F$. The details above avoid moving $F'$: they apply the last lines of the paper's
+argument to every $O$-arc in the set $Z$, and show that $F'$ lies in a flat set.}}
+
+We deduce that there are $v - 2k$ paths of $G$, each between $z$ and $bd(\Sigma) - C$, pairwise vertex-disjoint except for their ends, as claimed.
+
+Let $e_1, \dots, e_{v - 2k}$ be the edges of these paths incident with $z$. Then $\phi^{-1}(e_1), \dots, \phi^{-1}(e_{v - 2k})$ are edges of $\phi^{-1}(G)$, each incident with exactly one member of $\phi^{-1}(z)$. Now if $z \in V(J)$ then $|\phi^{-1}(z)| = d(z) - 1$ where $d(z)$ is the valency of $z$ in $J$, counting loops twice. But
+\begin{equation*}
+d(z) \le 2|E(J)| \le 6(2a + b + c - 1)
+\end{equation*}
+by (2.4). Thus if $z \in V(J)$ then $|\phi^{-1}(z)| \le 6(2a + b + c - 1)$. But this inequality also holds if $z \notin V(J)$, since then $|\phi^{-1}(z)| = 1 \le 6(2a + b + c - 1)$. Hence at least
+\begin{equation*}
+\frac{v - 2k}{6(2a + b + c - 1)} \ge \mu
+\end{equation*}
+of $\phi^{-1}(e_1), \dots, \phi^{-1}(e_{v - 2k})$ are incident in $\phi^{-1}(G)$ with the same member of $\phi^{-1}(z)$. Let us denote such a member of $\phi^{-1}(z)$ by $l(z)$.
+
+For each edge $e$ of $J$, we say that $e$ is \textit{long} if $|\bar{e} \cap V(G)| \ge 2\mu + w + 2$ and \textit{short} otherwise. Every long edge of $J$ is an edge of $J - bd(\Sigma)$, because
+\begin{equation*}
+|V(G) \cap bd(\Sigma)| \le 2k < 2\mu + w + 2.
+\end{equation*}
+Let $e$ be a long edge of $J$, and let the vertices of $G$ in $\bar{e}$ be $v_1, \dots, v_r$, in order on $\bar{e}$. Then $r \ge 2\mu + w + 2$ since $e$ is long. Let $W(e) = \{v_{\mu + 1}, v_{r - \mu}\}$ and let $W = \bigcup (W(e))$, the union being taken over all long edges $e$ of $J$. Let $J^+$ be the graph $(U(J), V(J) \cup W)$. Evidently each short edge of $J$ is an edge of $J^+$, which we call a \textit{short edge of} $J^+$. Every long edge of $J$ is divided into three edges of $J^+$; the middle one we call a \textit{central edge}, while the other two are \textit{linking edges}. For each linking edge $e$ of $J^+$, $|\bar{e} \cap V(G)| = \mu + 1$ while for each central edge $e$ of $J^+$, $|e \cap V(G)| \ge w$. Let $K$ be the subgraph

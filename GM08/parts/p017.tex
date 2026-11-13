@@ -1,0 +1,37 @@
+\origpage{271}{GRAPH MINORS. VIII}
+A painting $\Gamma = (U, N)$ is said to have \textit{tree-width} $w$ if $w \ge 0$ is minimum such that there is a hypertree $(V, T, \mathscr{F})$, where $\mathscr{F} = (X_t : t \in V(T))$, with
+
+\hspace*{12pt}(i) $|X_t| \le w + 1$ for each $t \in V(T)$, and
+
+\hspace*{12pt}(ii) for each cell $e$ of $\Gamma$, $\bar{e} - e \subseteq X_t$ for some $t \in V(T)$.
+
+If $X$ is a finite set, an \textit{ordering} of $X$ is a bijection from $\{1, 2, \dots, |X|\}$ to $X$. Let $\mathbf{Q} = (Q, \le)$ be a quasi-order. A $\mathbf{Q}$-\textit{portrait} in a disc $\Sigma$ is a quintuple $(U, N, \alpha, \mu, \phi)$, where $(U, N)$ is a painting, $\alpha$ is an ordering of $U \cap \text{bd } \Sigma$, $\mu_e$ is an ordering of $\bar{e} - e$ for each cell $e$ of $(U, N)$, and $\phi$ is a function from the set of cells of $(U, N)$ to $Q$. Its \textit{index} is $|U \cap \text{bd}(\Sigma)|$.
+
+Let $(U, N, \alpha, \mu, \phi)$, $(U', N', \alpha', \mu', \phi')$ be $\mathbf{Q}$-portraits. A \textit{simulation} of the first in the second is a pair $(\Xi, \sigma)$, where $\Xi$ is a drawing of a forest in $\Sigma$ with vertex set $N'$, and $\sigma(v)$ is a component of $\Xi$ for each $v \in N$, and $\sigma(e)$ is a cell of $(U', N')$ for each cell $e$ of $(U, N)$, such that
+
+\hspace*{12pt}(i) every edge of $\Xi$ is a subset of a cell of $(U', N')$
+
+\hspace*{12pt}(ii) for distinct $v_1, v_2 \in N$, $\sigma(v_1)$ and $\sigma(v_2)$ are distinct
+
+\hspace*{12pt}(iii) for distinct cells $e_1, e_2$ of $(U, N)$, $\sigma(e_1)$ and $\sigma(e_2)$ are distinct
+
+\hspace*{12pt}(iv) for $v \in N$ and each cell $e$ of $(U, N)$, no edge of $\sigma(v)$ intersects $\sigma(e)$
+
+\hspace*{12pt}(v) for each cell $e$ of $(U, N)$, $|\bar{e} - e| = |\overline{\sigma(e)} - \sigma(e)|$
+
+\hspace*{12pt}(vi) for each cell $e$ of $(U, N)$ and each integer $n$ with $1 \le n \le |\bar{e} - e|$, $\mu'_{\sigma(e)}(n)$ is a vertex of $\sigma(\mu_e(n))$
+
+\hspace*{12pt}(vii) $|U \cap \text{bd } \Sigma| = |U' \cap \text{bd } \Sigma|$, and for $1 \le n \le |U \cap \text{bd } \Sigma|$, $\alpha'(n)$ is a vertex of $\sigma(\alpha(n))$
+
+\hspace*{12pt}(viii) for each cell $e$ of $(U, N)$, $\phi(e) \le \phi'(\sigma(e))$.
+
+The \textit{tree-width} of a $\mathbf{Q}$-portrait $(U, N, \alpha, \mu, \phi)$ equals the tree-width of $(U, N)$. The following is proved in [8, Theorem (9.2)].
+
+\stmt
+(10.1) \textit{Let} $\mathbf{Q}$ \textit{be a well-quasi-order, and let} $k, w \ge 0$ \textit{be integers. Let} $P_1, P_2, \dots$ \textit{be a countable sequence of} $\mathbf{Q}$\textit{-portraits all with index} $k$ \textit{and tree-width} $\le w$. \textit{Then there exist} $j > i \ge 1$ \textit{such that} $P_i$ \textit{is simulated in} $P_j$.
+
+[We remark that the definition of tree-width in [8] differs slightly from our definition here; but the two quantities differ by at most $k$, and hence the tree-width in the sense of [8] is at most $w + k$.]
+
+\sectionhead{11. Paintings from Foundations}
+
+Let $\Sigma$ be a disc and $k \ge 0$ an integer. Let $\mathscr{A}(k)$ denote the class of all rooted graphs $(G, \tau)$ with index $\le k$ whose underlyng grafts have drawings

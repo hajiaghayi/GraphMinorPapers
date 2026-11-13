@@ -1,0 +1,21 @@
+\origpage{41}{GRAPH MINORS. IX}
+\noindent develop some of the theory behind the use of ``almost'' in the statement of the theorem.
+
+Let $\Omega$ be a cyclic permutation of the elements of some finite set; we denote this set by $\bar{\Omega}$. We denote the image under $\Omega$ of $x \in \bar{\Omega}$ by $\Omega(x)$. If $X \subseteq \bar{\Omega}$, $\Omega$ induces a cyclic permutation $\Omega'$ of $X$ in the natural way---that is, for $x \in X$ we define $\Omega'(x)$ to be the first term of the sequence $\Omega(x)$, $\Omega(\Omega(x))$, ... which is in $X$. We define $\Omega \mid X = \Omega'$.
+
+Let $v_1, ..., v_k \in \bar{\Omega}$ be distinct. We say that $(v_1, v_2, ..., v_k)$ is $\Omega$-\textit{clockwise} (or more briefly, \textit{clockwise}, when the dependence on $\Omega$ is to be understood) if $\Omega'(v_1) = v_2$, $\Omega'(v_2) = v_3$, ..., $\Omega'(v_k) = v_1$ where $\Omega' = \Omega \mid X$. If $v_1, v_2, v_3, v_4 \in \bar{\Omega}$ are distinct and one of $(v_1, v_2, v_3, v_4)$, $(v_4, v_3, v_2, v_1)$ is clockwise, we say that $\{v_1, v_3\}$ \textit{crosses} $\{v_2, v_4\}$. If $v_1, v_2 \in \bar{\Omega}$ are distinct, we define
+\begin{equation*}
+\Omega(v_1, v_2) = \{v \in \bar{\Omega} - \{v_1, v_2\} : (v_1, v, v_2) \text{ is clockwise}\}.
+\end{equation*}
+Then $(\Omega(v_1, v_2), \Omega(v_2, v_1), \{v_1, v_2\})$ is a partition of $\bar{\Omega}$. A fence of $\Omega$ is a pair $(A, B)$ of subsets of $\bar{\Omega}$ such that $A \cap B = \emptyset$, $A \cup B = \bar{\Omega}$, and for distinct $a_1, a_2 \in A$ and distinct $b_1, b_2 \in B$, $\{a_1, a_2\}$ does not cross $\{b_1, b_2\}$. Thus, intuitively, a fence is a partition of $\bar{\Omega}$ into two ``segments.'' If $V$ is a set, a cyclic permutation $\Omega$ is said to be \textit{in} $V$ if $\bar{\Omega} \subseteq V$.
+
+Graphs in this paper are finite, and may have loops or multiple edges. If $G_1$ is a subgraph of $G$ we write $G_1 \subseteq G$. If $G_1, G_2 \subseteq G$, we define the subgraphs $G_1 \cup G_2$, $G_1 \cap G_2$ by
+\begin{align*}
+G_1 \cup G_2 &= (V(G_1) \cup V(G_2), E(G_1) \cup E(G_2)) \\
+G_1 \cap G_2 &= (V(G_1) \cap V(G_2), E(G_1) \cap E(G_2)).
+\end{align*}
+A society is a pair $(G, \Omega)$ where $G$ is a graph and $\Omega$ is a cyclic permutation in $V(G)$. If $(G, \Omega)$ is a society we say that $P$ is an $\Omega$-\textit{path} if $P$ is a path in $G$ with ends distinct and both in $\bar{\Omega}$. If $\mathcal{P}$ is a set of mutually vertex-disjoint $\Omega$-paths, we say that a fence $(A, B)$ of $\Omega$ is a \textit{fence for} $\mathcal{P}$ if each $P \in \mathcal{P}$ has one end in $A$ and the other in $B$; and if there is a fence for $\mathcal{P}$ we say that $\mathcal{P}$ is a \textit{transaction in} $(G, \Omega)$.
+
+Let $\mathcal{P}$ be a transaction in $(G, \Omega)$. We denote by $V(\mathcal{P})$ the set of all ends of all members of $\mathcal{P}$, and by $\bigcup \mathcal{P}$ the subgraph of $G$ which is the union of all members of $\mathcal{P}$. Let $P \in \mathcal{P}$ have ends $a, b$. We say that $P$ is \textit{peripheral in} $\mathcal{P}$ if one of $\Omega(a, b) \cap V(\mathcal{P})$, $\Omega(b, a) \cap V(\mathcal{P})$ is empty. It is easy to see that any transaction has at most two peripheral members. A transaction with no peripheral members is said to be \textit{crooked}.
+
+The object of this paper is to prove a theorem concerning the structure of societies in which there is no large crooked transaction. If a society can be drawn without crossings in a disc with the vertices of $\bar{\Omega}$ on the outside in the correct order, it can have no non-null crooked transaction. (This

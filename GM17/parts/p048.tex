@@ -1,0 +1,25 @@
+\origpage{209}{GRAPH MINORS, XVII}
+Now there exists $(A_i, B_i) \in \mathscr{T}$ with $V(A_i) = V(A'_i), V(B_i) = V(B'_i)$. Since $|W_0| + |W_1| + |W_2| + |W_3| \le \theta$, it follows by [1, Theorem (2.9)] that there exists $(A_i, B_i) \in \mathscr{T}$ with $V(A_i) = V(A'_i) \cup W_i, V(B_i) = V(B'_i)$. Choose such $(A_i, B_i)$ with $E(A_i)$ maximal. Let $e$ be an edge of $G$. We claim that $e \in E(A_1 \cup A_2 \cup A_3)$. For if some end $v$ of $e$ is not in $W_0 \cup W_1 \cup W_2 \cup W_3$, say
+\begin{equation*}
+v \in V(A'_1) - V(B'_1),
+\end{equation*}
+then every other end $v'$ of $e$ is in $V(A'_1)$ (since $v'$ is adjacent to $v$ in $G^*$, and $(A'_1, B'_1)$ is a separation of $G^*$); but then $e \in E(A_1)$ by [1, Theorem (2.9)] and the maximality of $E(A_1)$. On the other hand, if every end of $e$ belongs to $W_0 \cup W_1 \cup W_2 \cup W_3$ then every end of $e$ belongs to $V(A_1)$, and again $e \in E(A_1)$ by [1, Theorem (2.9)] and the maximality of $A_1$. Consequently $E(A_1 \cup A_2 \cup A_3) = E(G)$. Hence $A_1 \cup A_2 \cup A_3 = G$, contrary to the second axiom. This proves (2).
+
+From (1), (2) and [1, Theorem (4.5)], we deduce that $\mathscr{T}^*$ satisfies the second tangle axiom, as required. $\square$
+
+The following is the main result of this section.
+
+\stmt
+(14.2) \textit{For any graph $H$ there are numbers $p, q, z$ and $\theta > z$, such that for every hypergraph $G$ and every tangle $\mathscr{T}$ in $G$ of order $\ge \theta$, either}
+
+\hspace*{12pt}(i) $\mathscr{T}$ \textit{controls an $H$-minor of $G^*$, or}
+
+\hspace*{12pt}(ii) \textit{there exists $Z \subseteq V(G)$ with $|Z| \le z$ and a $\mathscr{T}/Z$-central portrayal $\pi = (\Sigma, \Gamma, \alpha, \beta, \gamma)$ of $G/Z$ with warp $\le p$, such that $\Sigma$ has $\le q$ cuffs and $H$ cannot be drawn in $\Sigma$, and $\pi$ is true and $(2p + 7)$-redundant.}
+
+\textit{Proof.} Let $\sigma$ be the standard defined by $\sigma(\Sigma, p, z) = 2p + 7$ for all $\Sigma, z$. Choose $p, q, z$ and $\theta_0 > z$ so that (13.4) holds (with $\theta$ replaced by $\theta_0$). Let $\theta^* = \max(|V(H)|, \theta_0, 4p + z + 10)$ and let $\theta = \lceil 3\theta^*/2 \rceil$.
+
+We claim that the theorem is satisfied. For let $\mathscr{T}$ be a tangle in a hypergraph $G$ of order $> \theta$, not controlling an $H$-minor of $G^*$. Let $\mathscr{T}^*$ be the tangle in $G^*$ of order $\theta^*$ obtained as in (14.1).
+
+\hspace*{12pt}(1) $\mathscr{T}^*$ \textit{controls no $H$-minor of $G^*$.}
+
+\textit{Subproof.} Let $\eta$ be an $H$-minor of $G^*$. Since $\mathscr{T}$ does not control $\eta$, there exists $v \in V(H)$ and $(A, B) \in \mathscr{T}$ of order $< |V(H)|$ such that $V(\delm{\alpha}\fix{\eta}(v)) \subseteq V(A)$.\fixnote{fix:14.2-claim1}{Here and in the next sentence, $\eta$ is the $H$-minor of the claim.} Let $(A', B')$ be a separation of $G^*$ with $V(A') = V(A), V(B') = V(B)$. Then $(A', B')$ has order $< |V(H)| \le \theta^*$, and so $(A', B') \in \mathscr{T}^*$. Since $V(\delm{\alpha}\fix{\eta}(v)) \subseteq V(A')$, it follows that $\mathscr{T}$ does not control $\eta$. This proves (1).

@@ -1,0 +1,25 @@
+\origpage{68}{N. Robertson, P.D. Seymour / Journal of Combinatorial Theory, Series B 89 (2003) 43--76}
+\textit{Subproof.} If $\{y_1, y_2\} = \{s, t\}$ this is true by (3). If $y_1, y_2 \in Y_1$, then
+\begin{equation*}
+d'(y_1, y_2) \ge d(y_1, y_2) - 4\lambda' - 2 \ge \theta - 4\lambda' - 2 \ge \psi
+\end{equation*}
+since $\mathscr{T}'$ is a $(4\lambda' + 2)$-compression of $\mathscr{T}$. Finally, if $y_1 \in Y_1$ and $y_2 \in \{s, t\}$, then
+\begin{align*}
+d'(y_1, y_2) &\ge d'(y_1, z) - d'(y_2, z) \ge d(y_1, z) - 4\lambda' - 2 - d(y_2, z) \\
+&\ge (\psi + 5\lambda' + 2) - 4\lambda' - 2 - \lambda \ge \psi
+\end{align*}
+since $d(y_2, z) \le \lambda$ by (3). This proves (11).
+
+\hspace*{12pt}(12) \textit{For all $y \in Y'$ there is an $\eta'(H')$-path in $G \setminus X$ with ends $\eta'(x), \eta'(y)$ say, where $d'(x, y) \ge \psi$.}
+
+\textit{Subproof.} If $y = s$ or $t$ this is true by (3), since $d'(s, t) \ge 2\psi \ge \psi$ by (4). We assume then that $y \in Y_1$. Since $Y_1 \subseteq Y$ and $(H, \mathscr{T}, X, Y)$ is an animal over $H, \mathscr{T}$ of strength $\ge (\theta, \zeta + \tau)$, it follows that there is an $H$-path $Q$ in $G \setminus X$ with ends $x, y$ say, where $d(x, y) \ge \theta$. Suppose first that some vertex of $Q$ different from $y$ belongs to $\eta'(H')$. Let $w$ be the first such vertex, and let $Q'$ be the subpath of $Q$ between $y$ and $w$. Let $w = \eta'(y')$ where $y' \in V(H')$. We claim that $d'(y, y') \ge \psi$. For let $a \in A(H)$ with $y' \in a$. If $d(a, z) > \lambda'$ then by (4), $a \in A(H')$ and so $a = \{y'\}$, and $y' \in V(H)$; and by (4) again, $w = \eta'(y') = y'$. Thus $w \in V(H)$, and so $w = x$, since $Q$ is an $H$-path. But $d(x, y) \ge \theta$, and so $d'(x, y) \ge \theta - 4\lambda' - 2$, since $\mathscr{T}'$ is a $(4\lambda + 2)$-compression of $\mathscr{T}$; that is, $d'(y', y) \ge \theta - 4\lambda - 2 \ge \psi$, as claimed.
+
+We may therefore assume that $d(a, z) \le \lambda'$, and so
+\begin{equation*}
+d(a, y) \ge d(z, y) - d(a, z) \ge (\psi + 5\lambda' + 2) - \lambda' = \psi + 4\lambda' + 2.
+\end{equation*}
+Since $y' \in a$ and $\mathscr{T}'$ is a $(4\lambda' + 2)$-compression of $\mathscr{T}$, it follows that $d(y, y') \ge d(a, y) - 4\lambda' - 2 \ge \psi$, and so again our claim is true. Thus we have shown that $d'(y, y') \ge \psi$, and consequently $y \ne y'$ and $y, y'$ are not adjacent in $H'$ (since $\psi \ge 3$). We deduce that $Q'$ is an $\eta'(H')$-path with ends $y, y'$ (for no vertex of $Q'$ belongs to $\eta'(H')$ except $y, w$, and $E(Q') \cap E(\eta'(H')) = \emptyset$ even if $|E(Q')| = 1$, since $y, y'$ are not adjacent in $H'$). Hence (12) holds in this case.
+
+We may therefore assume that $y$ is the only vertex of $Q$ in $\eta'(H')$. Since $x \in V(H)$, there is a minimal path $R$ of $H$ between $x$ and $V(\eta'(H'))$; let its ends be $x, w$ where $w = \eta'(x')$ and $x' \in V(H')$. Suppose that $d'(y, x') < \psi$. Let $a \in A(H)$ with $x' \in a$; then $d(y, a) < \psi + 4\lambda' + 2$ since $\mathscr{T}'$ is a $(4\lambda' + 2)$-compression of $\mathscr{T}$. Since $d(z, y) \ge \psi + 5\lambda' + 2$ (because $y \in Y_1$) it follows that $d(z, a) > \lambda'$. By (4), $a \in A(H')$ and so $a = \{x'\}$, and $x' \in V(H)$, and $d(z, x') > \lambda'$; and by (4) again $w = \eta'(x') = x'$. Let $e$ be the edge of $R$ incident with $w$. Then $e \in E(H)$, and $d(z, e) \ge d(z, x') > \lambda'$. By (4), $e \in E(H')$ and $\eta'(e) = e$, and so both ends of $e$ belong to $V(\eta'(H'))$, contrary to the minimality of $R$. We deduce that $d'(y, x') \ge \psi$. Hence $y \ne x'$ and so $Q \cup R$ is an $\eta'(H')$-path, satisfying (12). This proves (12).
+
+From (9)--(12) we see that $(H', \eta', \mathscr{T}', X, Y')$ is an animal with $\chi$ horns and $\ge \delta + 1$ hairs, and so the first outcome of 8.3 holds. This proves 8.3. $\square$

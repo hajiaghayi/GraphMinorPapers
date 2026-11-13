@@ -1,0 +1,32 @@
+\origpage{119}{GRAPH MINORS. VI}
+\hspace*{12pt}(ii) there exists $\delta \in \Delta$ such that $v_1, v_2 \in \delta$ and $\{v, x\}$ crosses $\{v_1, v_2\}$ for every $v \in \delta - \{v_1, v_2\}$.
+
+It follows from (i) and (ii) that $x \notin \delta$. It is easy to see that for any $\delta \in \Delta$, if $\delta \cap C_1 \ne \emptyset$, $\delta \cap C_2 \ne \emptyset$ and $x \notin \delta$ then there is a unique $\Delta$-minimizer $(v_1, v_2)$ with $v_1, v_2 \in \delta$. Thus the number of $\Delta$-minimizers equals
+\begin{equation*}
+\Delta(x, y) - |V \cap \{x\}|.
+\end{equation*}
+Again, let $u_1 \in C_1$, $u_2 \in C_2$. We say that $(u_1, u_2)$ is a \textit{$\Delta^*$-maximizer} if
+
+\hspace*{12pt}(i) $u_1, u_2 \in U$ and $u_1, u_2 \ne y$;
+
+\hspace*{12pt}(ii) there exists $\delta^* \in \Delta^*$ such that $u_1, u_2 \in \delta^*$ and $\{u, y\}$ crosses $\{u_1, u_2\}$ for every $u \in \delta^* - \{u_1, u_2\}$.
+
+Then similarly the number of $\Delta^*$-maximizers equals
+\begin{equation*}
+\Delta^*(x, y) - |U \cap \{y\}|.
+\end{equation*}
+On the other hand, there is a 1-1 correspondence between $\Delta$-minimizers and $\Delta^*$-maximizers. For let $(v_1, v_2)$ be a $\Delta$-minimizer. Let $u_i \in U \cap C_i$ be chosen to lie in $C_i$ between $v_i$ and $x$, as close to $v_i$ as possible ($i = 1, 2$). It is easy to see that $(u_1, u_2)$ is a $\Delta^*$-maximizer, and is uniquely given by $(v_1, v_2)$. Moreover, by (2.2) the construction may be reversed, to obtain a $\Delta$-minimizer from any $\Delta^*$-maximizer, and we have a 1-1 correspondence.
+
+Putting these results together, we obtain
+\begin{equation*}
+\Delta(x, y) - |V \cap \{x\}| = \Delta^*(x, y) - |U \cap \{y\}|,
+\end{equation*}
+which proves the theorem.
+
+\sectionhead{3. The Disjoint Subgraph Problem on a Disc}
+
+Let $G$ be a connected graph, properly drawn on a (closed) disc $\Sigma$. We define the \textit{dual graph} $G^*$ to have vertex set the set of all regions of $G$, and to have edges in 1-1 correspondence with the edges of $G$; if $e$ is an edge of $G$ and $R_1, R_2$ are the regions of $G$ on either side of $e$ then the corresponding edge of $G^*$ has ends $R_1, R_2$. We may obtain a drawing of $G^*$ in $\Sigma$ as usual by choosing a point from each region of $G$ to represent vertices of $G^*$, and for each edge of $G$ drawing the corresponding edge of $G^*$ crossing it in the usual way. We may further arrange that
+
+\hspace*{12pt}(i) $G^*$ is properly drawn in $\Sigma$, and
+
+\hspace*{12pt}(ii) each segment (of $bd(\Sigma)$ with respect to $V(G) \cap bd(\Sigma)$) contains a vertex of $G^*$, and no other vertices of $G^*$ lie in $bd(\Sigma)$.

@@ -1,0 +1,25 @@
+\origpage{35}{GRAPH MINORS. XIV}
+\textit{Subproof.} Otherwise, by a form of Menger's theorem for planar graphs, there is an $O$-arc $F \subseteq \Delta$ with $F \cap U(H) \subseteq V(H)$ and $|F \cap V(H)| \le 2$, bounding a closed disc in $\Delta$ including $U(C)$. But $H$ is rigid, and $F$ only bounds one closed disc in $\Delta$, a contradiction.
+
+Let $(A, \Omega) \in \mathscr{S}$, and let $J$ be a graph obtained from $A \cap H$ by adding a new vertex adjacent to all the (at most three) vertices in $V(H) \cap \bar{\Omega}$. We claim that
+
+\hspace*{12pt}(2) \textit{$J$ is planar.}
+
+\textit{Subproof.} We may assume that $A \cap H$ has a circuit $C$, for otherwise $J$ is clearly planar. By (1), there are three disjoint paths of $H$ from $V(C)$ to $V(H) \cap bd(\Delta)$, and since each of these paths has a unique vertex in $V(H) \cap \bar{\Omega}$, we deduce that there are three disjoint paths of $H$ from $V(H) \cap \bar{\Omega}$ to $V(H) \cap bd(\Delta)$. But the graph obtained from $H$ by adding a new vertex adjacent to every vertex in $V(H) \cap bd(\Delta)$ is planar, and it follows that $J$ is planar, as required.
+
+From (2), we deduce that $A \cap H$ can be drawn in the closed disc $\alpha(A, \Omega)$ in such a way that for each $v \in V(H) \cap \bar{\Omega}$, $v$ is represented in this drawing by $\alpha(v)$, and the only vertices of $A \cap H$ drawn in $bd(\fix{\alpha(}A, \Omega))$\fixnote{fix:6.5-proof-bd}{A misprint for $bd(\alpha(A, \Omega))$.} are those in $V(H) \cap \bar{\Omega}$. By taking the union of these drawings over all $(A, \Omega)$\fix{, after first moving the discs $\alpha(A, \Omega)$ away from $bd(\Delta)$ at every vertex of $V(\mathscr{S})$ not in $bd(\Delta)$},\fixnote{fix:6.5-proof-discs}{A gap in the proof: the definition of an arrangement (page 30) allows $\alpha(v) \in bd(\Delta)$ for a vertex $v$ of $V(H) \cap V(\mathscr{S})$ not in $bd(\Delta)$. Then (i) puts $\phi(v)$ in $bd(\Delta)$, against $V(H') \cap bd(\Delta) = V(H) \cap bd(\Delta)$. Moving the discs inward first removes this case. With this step, (6.5) holds as printed.} we deduce that there is a drawing $H'$ in $\Delta$ with $V(H') \cap bd(\Delta) = V(H) \cap bd(\Delta)$, and an isomorphism $\phi : H \to H'$, such that
+
+\hspace*{12pt}(i) $\alpha(v) = \phi(v)$ for all $v \in V(H) \cap V(\mathscr{S})$, and
+
+\hspace*{12pt}(ii) for each $(A, \Omega) \in \mathscr{S}$, $U(H') \cap bd(\alpha(A, \Omega)) = \phi(V(H) \cap \bar{\Omega})$, and $H' \cap \alpha(A, \Omega) = \phi(H \cap A)$.
+
+From (i) it follows that $\phi(v) = v$ for all $v \in V(H) \cap bd(\Delta)$, since $\alpha(v) = v$ for all $v \in V(H) \cap bd(\Delta)$. Since $H$ is rigid, there is a homeomorphism $\psi : \Delta \to \Delta$ extending $\phi$, by (6.4). For each $(A, \Omega) \in \mathscr{S}$, let $\alpha'(A, \Omega) = \psi^{-1}(\alpha(A, \Omega))$, and for each $v \in V(\mathscr{S})$, let $\alpha'(v) = \psi^{-1}(\alpha(v))$; then the theorem is satisfied. $\square$
+
+\sectionhead{7. Distance and Freedom}
+
+We shall need the following, which is [5, theorem (8.12)].
+
+\stmt
+(7.1) \textit{Let $H$ be a 2-cell drawing with $|E(H)| \ge 2$ in a surface $\Sigma$, and let $\mathscr{T}$ be a respectful tangle in $H$ of order $\theta \ge 1$, with metric $d$. Then for every $z \in A(H)$ there exists $e \in E(H)$ with $d(z, e) = \theta$.}
+
+Also, from [5, theorem (6.3)] it follows that

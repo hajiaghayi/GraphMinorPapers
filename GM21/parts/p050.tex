@@ -1,0 +1,20 @@
+\origpage{48}{}
+\noindent Then $(P, W)$ satisfies the theorem, as required. Consequently (1) holds.
+
+\textit{(2) We may assume that every $v \in Z \setminus Z'$ has degree $\ne 1$ in $B \cap A'$.}
+
+\textit{Subproof.} If some $v \in Z \setminus Z'$ has degree 1 in $B \cap A'$, let $e$ be the unique edge of $B \cap A'$ incident with $v$, and let $e$ have ends $v, v_1$. Let $A_1$ be obtained from $A$ by adding $v_1$ and $e$, and let $B_1 = B \setminus v$. Again the result follows from the inductive hypothesis applied to $(A_1, B_1)$ and $(A', B')$. Consequently (2) holds.
+
+Let $P_1, \dots, P_k$ be mutually vertex-disjoint paths of $B \cap A'$ between $Z$ and $Z'$. From the hypothesis,
+\begin{equation*}
+V(B \cap A') = V(P_1 \cup \dots \cup P_k).
+\end{equation*}
+Let $P_i$ have ends $z_i \in Z$ and $z'_i \in Z'$ $(1 \le i \le k)$. Let $z_i \ne z'_i$ for $1 \le i \le h$ and $z_i = z'_i$ for $h < i \le k$, where $0 \le h \le k$. Let $H$ be the directed graph with vertex set $\{1, \dots, h\}$, where there is a directed edge from $i$ to $j$ if some edge $e$ of $B \cap A'$ has one end $z_i$ and the other end a vertex of $P_j \setminus z_j$, and $e \notin E(P_i)$.
+
+\textit{(3) Every vertex of $H$ has out-degree $\ge 1$.}
+
+\textit{Subproof.} Let $1 \le i \le h$; we claim that $i$ has out-degree $\ge 1$ in $H$. Since $i \le h$ it follows that $z_i \ne z'_i$, and by (2) there is an edge $e$ of $B \cap A'$ incident with $z_i$ with $e \notin E(P_i)$. Since $V(B \cap A') = V(P_1, \dots, P_k)$, there exists $j$ with $1 \le j \le k$ such that $v \in V(P_j)$, where $e$ has ends $z_i, v$. By (1), $v \notin Z$, and in particularly $z_j \ne z'_j$, and hence $j \le h$. Consequently $i$ is adjacent to $j$ in $H$. This proves (3).
+
+\textit{(4) $H$ has no directed circuit.}
+
+\textit{Subproof.} Suppose that $\{1, 2, \dots, r\}$ is the vertex set of a directed circuit of $H$, and there are edges of $H$ from $i$ to $i + 1$ for $1 \le i < r$ and from $r$ to 1. For $1 \le i < r$, let $e_i$ be an edge of $B \cap A'$ with one end $z_i$ and the other end in $P_{i+1} \setminus z_{i+1}$, and let $e_r \in E(B \cap A')$ with one end $z_r$ and the other end in $P_1 \setminus z_1$. For $1 \le i < r$, let $P'_i$ be the path consisting of $z_i, e_i$ and the subpath of $P_{i+1}$ from the end of $e_i$ to $z'_{i+1}$, and define $P'_r$ similarly. Then $\{P'_1, \dots, P'_r, P_{r+1}, \dots, P_k\}$ is a set of $k$ mutually

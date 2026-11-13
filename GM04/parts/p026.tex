@@ -1,0 +1,23 @@
+\origpage{252}{ROBERTSON AND SEYMOUR}
+\noindent and $\bar{\pi}(G_2) \subseteq V(J_2)$ has order $\ge k$. From (6.1) and the robustness of $P(G_2)$ there is a realization $H$ of $P(G_2)$, $k$ components of which contain a vertex of $\bar{\pi}(G_2)$ and a vertex of $V(G_1^- \cap G_2^-)$. Since
+\begin{equation*}
+|V(G_1^- \cap G_2^-)| = |\pi(G_2)| = k
+\end{equation*}
+there is a march $\pi_1$ with $\bar{\pi}_1 = V(G_1^- \cap G_2^-)$ such that for $1 \le i \le k$ some component $D_i$ say of $H$ contains the $i$th vertex of $\pi(G_2)$ and the $i$th vertex of $\pi_1$. Let $\pi_1$ be $v_1, v_2, \dots, v_k$. Define $\eta$ by
+\begin{align*}
+\eta(v) &= \{v\} && (v \in V(G_1) - V(G_2)) \\
+\eta(v_i) &= V(D_i) && (1 \le i \le k) \\
+\eta(e) &= e && (e \in E(G_1)).
+\end{align*}
+Then $\eta$ is an expansion of $(G_1^-, \pi_1)$ in $G$, and it is realized by $H \cup N_{V(G_1)}$ which is a realization of $G \setminus \eta(E(G_1))$. Thus $\eta$ is realizable, and so $(G_1^-, \pi_1)$ is simulated in $G$ as required.
+
+Axiom 4. Let $n \ge 0$; we must show that $\mathscr{S}_n$ is good. Certainly $\sigma \times S \in \mathscr{R}$ for each $(S, \sigma) \in \mathscr{S}_n$, and $\mathscr{S}_n$ has index $\le n$, by definition of $\mathscr{S}_n$. Let $(S_i, \sigma_i)$ $(i = 1, 2, \dots)$ be a countable sequence of members of $\mathscr{S}_n$ such that the set of all tips of all the $(S_i, \sigma_i)$'s is well-simulated. Let $G_i = \sigma_i \times S_i$ $(i \ge 1)$. It remains to show that there exist $i' > i \ge 1$ such that $G_i$ is simulated in $G_{i'}$, that is, $P(G_i)$ is simulated in $P(G_{i'})$. Since $P_1, P_2, \dots$ are all robust, it follows that $P(G)$ is robust for all $G \in \mathscr{R}$, and in particular each $P(G_i)$ is removable. Now for each $i \ge 1$, $(S_i, \sigma_i)$ is a star-decomposition of $G_i$ with $|V(\sigma_i(o(S_i)))| \le n$; and $\{P(G_i) \mid \sigma_i(s) \colon i \ge 1, s \in U(S_i)\}$ is well-quasi-ordered by simulation, since the set of all tips of all the $(S_i, \sigma_i)$'s is well-simulated. From (8.4), it follows that there exist $i' > i \ge 1$ such that $P(G_i)$ is simulated in $P(G_{i'})$. This verifies Axiom 4.
+
+Consequently, we have
+
+\stmt
+(9.1) \textit{Let $n \ge 0$, let $\Omega$ be a well-quasi-order, and let $P_i = (G_i, \mu_i, \Delta_i, \phi_i)$ $(i = 1, 2, \dots)$ be a countable sequence of robust $\Omega$-patchworks, where each $G_i$ has tree-width $\le n$. Then there exist $i' > i \ge 1$ such that there is a realizable expansion of $P_i$ in $P_{i'}$.}
+
+\textit{Proof.} We may assume that $G_1, G_2, \dots$ are mutually disjoint, and hence we may define $\mathscr{R}$, etc. as at the start of this section; and the claim follows from (5.3). $\square$
+
+As we mentioned earlier, (1.5) is a consequence of (9.1). Let $\Omega$ be the well-quasi-order with $E(\Omega) = \{1\}$. If $G$ is a graph, let $P(G)$ be the $\Omega$-patchwork $((G, 0), \mu, \Delta, \phi)$, where

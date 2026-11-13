@@ -1,0 +1,28 @@
+\origpage{129}{GRAPH MINORS. XV. GIANT STEPS}
+\stmt
+(5.1) \textit{Let $\mathscr{T}^*$ be a tangle in $G$, and let $H, \eta, \mathscr{T}$ be a $(\lambda, \mu)$-flat $\Sigma$-span of order $\theta$. Let $0 \le \lambda_1 \le \lambda$, let $\mu_1 \ge \mu$ and let $1 \le \theta_1 \le \theta$, such that $\theta_1 \ge 4\lambda_1 + \mu_1 + 2$; and let $\mathscr{T}_1$ be the $\theta_1$-truncation of $\mathscr{T}$. Then $(H, \eta, \mathscr{T}_1)$ is $(\lambda_1, \mu_1)$-flat.}
+
+\textit{Proof.} Certainly $(H, \eta, \mathscr{T}_1)$ is a $\Sigma$-span of order $\theta_1$, and $\theta_1 \ge 4\lambda_1 + \mu_1 + 2$. Suppose it is not $(\lambda_1, \mu_1)$-flat. Let $H', \eta', \mathscr{T}_1'$ be obtained from $H, \eta, \mathscr{T}_1$ by rearranging within $\lambda_1$ of some $z \in A(H)$, and let $P$ be an $\eta'(H')$-path in $G$ with ends $\eta'(u), \eta'(v)$, where $d'(u, v) \ge \mu_1$.
+
+\hspace*{12pt}(1) \textit{$a \in A(H')$ for every $a \in A(H)$ with $d(z, a) > \lambda$.}
+
+\textit{Subproof.} Now $d_1(z, a) = \min(\theta_1, d(z, a))$, and since $\theta_1 > \lambda_1$ and $d(z, a) > \lambda \ge \lambda_1$, it follows that $d_1(z, a) > \lambda_1$. Hence $a \in A(H')$, since $H', \eta', \mathscr{T}_1'$ is obtained from $H, \eta, \mathscr{T}_1$ by rearranging within $\lambda_1$ of $z$. This proves (1).
+
+Since $\mathscr{T}_1'$ is a $(4\lambda_1 + 2)$-compression of $\mathscr{T}_1$, and $\mathscr{T}_1$ is a $(\theta - \theta_1)$-compression of $\mathscr{T}$, it follows that $\mathscr{T}_1'$ is a $(\theta - \theta_1 + 4\lambda_1 + 2)$-compression of $\mathscr{T}$. Let $\mathscr{T}'$ be the $(4\lambda + 2)$-compression of $\mathscr{T}$ in $H'$ (this exists by (4.5)). By (4.1), if $\theta - 4\lambda - 2 \ge \theta_1 - 4\lambda_1 - 2$ then $\mathscr{T}_1' \subseteq \mathscr{T}'$, and if $\theta - 4\lambda - 2 \le \theta_1 - 4\lambda_1 - 2$ then $\mathscr{T}' \subseteq \mathscr{T}_1'$.
+
+\hspace*{12pt}(2) \textit{$d'(u, v) \ge \mu$.}
+
+\textit{Subproof.} Certainly $d_1'(u, v) \ge \mu_1 \ge \mu$. If $\mathscr{T}' \subseteq \mathscr{T}_1'$, then
+\begin{equation*}
+d'(u, v) = \min(\theta - 4\lambda - 2, d_1'(u, v)) \ge \mu
+\end{equation*}
+since $\theta \ge 4\lambda + \mu$ (because $H, \eta, \mathscr{T}$ is $(\lambda, \mu)$-flat). If $\mathscr{T}_1' \subseteq \mathscr{T}'$ then $d'(u, v) \ge d_1'(u, v) \ge \mu$. This proves (2).
+
+From (1) and (2), $H', \eta', \mathscr{T}'$ is a $\mu$-stepped $\Sigma$-span, obtained from $H, \eta, \mathscr{T}$ by rearranging within $\lambda$ of $z$, which is impossible since $H, \eta, \mathscr{T}$ is $(\lambda, \mu)$-flat. The result follows. $\square$
+
+The main result of this section is the following.
+
+\stmt
+(5.2) \textit{Let $\mathscr{T}^*$ be a tangle in a graph $G$, let $\Sigma$ be a surface, and let $H, \eta, \mathscr{T}$ be a $(\lambda, \mu)$-flat $\Sigma$-span of order $\theta$. Let $\lambda_1, \lambda_2 \ge 4$ and $\mu \ge \delm{0}\fix{1}$ be integers\fixnote{fix:5.2}{As printed, (5.2) fails for $\mu = 0$. Every pair of vertices has $d(u, v) \ge 0$, so every $\Sigma$-span with an $\eta'(H')$-path is 0-stepped, and hence not $(\lambda_2, 0)$-flat. Also, for $\theta = 4\lambda + 2$, the truncation $\mathscr{T}^0$ in the proof of Claim (3) would have order 0. For $\mu \ge 1$, (5.2) holds, and all its uses have $\mu \ge 12$.} such that $\lambda \ge 6\lambda_1 + 5\lambda_2 + 3\mu + 4$. Let $z_1 \in A(H)$, and let $H', \eta', \mathscr{T}'$ be a $\Sigma$-span obtained from $H, \eta, \mathscr{T}$ by rearranging within $\lambda_1$ of $z_1$. Then $H', \eta', \mathscr{T}'$ is $(\lambda_2, \mu)$-flat.}
+
+\textit{Proof.} Let $\mathscr{T}$ have order $\theta$; then $\mathscr{T}'$ has order $\theta - 4\lambda_1 - 2$. Let $z_2 \in A(H')$, and let $H'', \eta'', \mathscr{T}''$ be obtained from $H', \eta', \mathscr{T}'$ by rearranging within $\lambda_2$ of $z_2$; and suppose, for a contradiction, that $H'', \eta'', \mathscr{T}''$ is $\mu$-stepped. Let $P$ be an $\eta''(H'')$-path in $G$ with ends $\eta''(u), \eta''(v)$, where

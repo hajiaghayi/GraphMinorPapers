@@ -1,0 +1,18 @@
+\origpage{236}{ROBERTSON AND SEYMOUR}
+\hspace*{12pt}(1) \textit{If $i' > i \ge 1$ and $u \in V(T_i)$ is $M$-adjacent to $w \in V(T_{i'})$, and $v \in V(T_{i'})$ precedes $w$, then $u$ is $M$-adjacent to $v$.}
+
+For $\tau_i \times T_i^u$ is simulated in $\tau_{i'} \times T_{i'}^w$ since $i' > i$ and $u$, $w$ are $M$-adjacent. Since $v$ precedes $w$ it follows that $v \ne o(T_{i'})$; let $e$, $f$ be the edges of $T_{i'}$ with heads $v$, $w$, respectively. Since $v$ precedes $w$ it follows that $e$ and $f$ have the same order and no edge of the path of $T_{i'}$ between them has smaller order. Since $(T_{i'}, \tau_{i'})$ is linked, we deduce that $\tau_{i'} \times T_{i'}^w$ is simulated in $\tau_{i'} \times T_{i'}^v$. By Axiom 2 it follows that $\tau_i \times T_i^u$ is simulated in $\tau_{i'} \times T_{i'}^v$, and so $u$ is $M$-adjacent to $v$, as required.
+
+\hspace*{12pt}(2) \textit{There is no infinite subset $X \subseteq V(M)$ such that $|X \cap V(T_i)| \le 1$ for each $i \ge 1$, and $X$ is $M$-stable, and the set of heads of all edges of $T_1 \cup T_2 \cup \cdots$ with tails in $X$ is $M$-rich.}
+
+For suppose that such a set $X$ exists; let $X = \{x_1, x_2, ...\}$ where for all $j' > j \ge 1$, if $x_j \in V(T_i)$ and $x_{j'} \in V(T_{i'})$, then $i' > i$. For each $j \ge 1$, let $(S_j, \sigma_j)$ be the branching of $(T_i, \tau_i)$ at $x_j$, where $x_j \in V(T_i)$; then $\sigma_j \times S_j = \tau_i \times T_i^{x_j}$. Since $X$ is $M$-stable, $\sigma_j \times S_j$ is not simulated in $\sigma_{j'} \times S_{j'}$ for $j' > j \ge 1$. Let $\mathscr{L}$ be the set of all tips of all the $(S_j, \sigma_j)$'s. Since $\mathscr{S}$ is good, $\mathscr{L}$ is not well-simulated, and so there is a countable sequence $L_1, L_2, ...$ of members of $\mathscr{L}$ such that for $j' > j \ge 1$, $L_j$ is not simulated in $L_{j'}$. For each $j \ge 1$ there exists $i \ge 1$ and a vertex $v_j \in V(T_i)$ such that $L_j = \tau_i \times T_i^{v_j}$; and $v_j$ is the head of an edge of $T_i$ with tail in $X$. Now $v_1, v_2, ...$ are all distinct, since if $v_j = v_{j'}$ for some $j' > j$ then $L_j = L_{j'}$ and hence $L_j$ is simulated in $L_{j'}$ by Axiom 2. Hence $\{v_1, v_2, ...\}$ is infinite and $M$-stable, contrary to our assumption that the set of heads of all edges of $T_1 \cup T_2 \cup \cdots$ with tails in $X$ is $M$-rich. This proves (2).
+
+From (1), (2) and (2.2), $\{o(T_1), o(T_2), ...\}$ is not $M$-stable, and the theorem follows. $\square$
+
+\sectionhead{4. \textsc{Rotundity}}
+
+Now we introduce a third axiom.
+
+\textit{Axiom} 3. \textit{Let $G \in \mathscr{R}$ and let $(G_1, G_2)$ be a separation of $G$ of order $|\bar{\pi}(G)|$. Suppose that there is no separation $(H_1, H_2)$ of $G$ with $G_1^- \subseteq H_1^-$ of order less than $|\bar{\pi}(G)|$. Then there is a march $\pi_1$ with $\bar{\pi}_1 = \bar{\pi}(G_1)$ such that $(G_1^-, \pi_1)$ is simulated in $G$.}
+
+Let $(T, \tau)$ be a tree-decomposition. A subset $F \subseteq E(T)$ is \textit{rotund} in $(T, \tau)$ if for every directed path $P$ of $T$ with first edge $f_2 \in F$ and last edge $f_1 \in F$ such that $f_1$, $f_2$ have the same order, $k$ say, and no element of $F \cap E(P)$ has smaller order, there is no separation $(H_1, H_2)$ of $(\tau \times T)^-$ with

@@ -1,0 +1,17 @@
+\origpage{244}{ROBERTSON AND SEYMOUR}
+\noindent $K \mid W$ as is easily seen; and hence if the result holds for $\phi'$ then it holds for $\phi$. Thus we may assume, to simplify notation, that $\phi = \phi'$; in other words, it suffices to prove the result when $\phi$ is a simple closed curve. We prove this by induction on $n$, the length of $\phi$. Let $W = v_0, e_1, v_1, \dots, e_{2n}, v_{2n}$, as in the definition of ``trace,'' and for $1 \le i \le n$ let $r_{2i-1}$ be the region of $\Gamma$ containing $v_{2i-1}$.
+
+\textit{Case 1.} $v_1, v_3, \dots, v_{2n-1}$ are all distinct. Now either $n = 1$ and $W$ is a walk $v, e, u, e, v$ for some edge $e$ of $K$ with ends $u, v$, or $U(W)$ is a simple closed curve. In the first case the only atoms of $\Gamma$ meeting $\text{ins}(\phi)$ are the two corresponding to the atoms $\{u\}$, $\{v\}$ of $K$, and both of these are met by $\text{ins}(W) = U(W)$ as required. We assume then that $U(W)$ is a simple closed curve; let $\Delta_2 = \text{ins}(W)$, $\Delta'_2 = \Sigma - \Delta_2$. Let $\Delta_1 = \text{ins}(|\phi|)$, $\Delta'_1 = \Sigma - \Delta_1$. Since $W$ is a trace of $\phi$, and so $U(W)$ can be obtained from $|\phi|$ by continuously deforming the portion of $\phi$ mapping into $r_{2i-1}$, for each $i$, it follows that
+\begin{equation*}
+(\Gamma \cap \Delta_1, \Gamma \cap \Delta'_1) = (\Gamma \cap \Delta_2, \Gamma \cap \Delta'_2) \quad \text{or} \quad (\Gamma \cap \Delta'_2, \Gamma \cap \Delta_2);
+\end{equation*}
+and the latter is impossible since $(\Gamma \cap \Delta_i, \Gamma \cap \Delta'_i) \in \mathscr{T} \; (i = 1, 2)$. Thus $\Gamma \cap \Delta_1 = \Gamma \cap \Delta_2$ and so $\Delta_1$ and $\Delta_2$ meet the same atoms of $\Gamma$; hence $c$ meets $\Delta_2 = \text{ins}(W)$, as required.
+
+\textit{Case 2.} $v_1, v_3, \dots, v_{2n-1}$ are not all distinct. Thus there exists $i$ with $1 \le i \le n$ such that $|\phi| \cap r_{2i-1}$ is not connected. Let $F$ be a minimal line with $F \subseteq r_{2i-1}$ meeting two components of $|\phi| \cap r_{2i-1}$. Then no internal point of $F$ belongs to $|\phi|$. Let $F_1$, $F_2$, $|\phi|$ be the three $O$-arcs included in $F \cup |\phi|$. Now $\text{ins}(F_1) \cup \text{ins}(F_2) \cup \text{ins}(|\phi|) \ne \Sigma$, from the second tangle axiom, and so one of $\text{ins}(F_1)$, $\text{ins}(F_2)$, $\text{ins}(|\phi|)$ is the union of the other two. It follows that $c$ meets one of $\text{ins}(F_1)$, $\text{ins}(F_2)$, say, $\text{ins}(F_1)$. Now $\phi_1$ has length $< n$, where $\phi_1 \colon S^1 \to F_1$ is a homeomorphism; so by our inductive hypothesis, $c$ meets $\text{ins}(W_1)$, where $W_1$ is a trace of $\phi_1$. But $K \mid W_1$ is a subdrawing of $K \mid W$; so $c$ meets $\text{ins}(W)$, as required. $\square$
+
+\sectionhead{3. \textsc{Disjoint} \textsc{Connecting} \textsc{Subgraphs}}
+
+Our first objective is to reformulate the main theorem of [3] in terms of respectful tangles; we shall see that doing so yields a considerably simpler version of the theorem. Let $\Sigma$ be a connected surface, and let $\Delta_1, \dots, \Delta_t$ be mutually disjoint closed discs in $\Sigma$. Let $\Gamma$ be a drawing in $\Sigma$ such that $U(\Gamma) \cap \Delta_i = V(\Gamma) \cap \text{bd}(\Delta_i)$ for $1 \le i \le t$; let
+\begin{equation*}
+Z = \bigcup_{1 \le i \le t} V(\Gamma) \cap \text{bd}(\Delta_i);
+\end{equation*}

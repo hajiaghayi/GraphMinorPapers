@@ -1,0 +1,18 @@
+\origpage{32}{}
+\noindent vertices and edges of $\Gamma^+$, all incident with one of $c(\Sigma)$ regions of $\Gamma^+$ in $\hat{\Sigma}$. From (4.6), $\Gamma^+$ has no tangle of order $\ge \theta_2$. From (7.2), the presentation of $G$ captures no tangle of order $\ge q\theta_2 = \theta$, a contradiction. Thus $L$ is not a a vital $p$-linkage in $G$, as required. $\square$
+
+\sectionhead{8 Pseudo-presentations}
+
+In a presentation, the graphs $H_1, \dots, H_r$ are disjoint. Now we want to consider a slightly more general object, in which the ``last'' vertices of each $H_i$ may equal some of the ``first'' vertices of the next one of $H_1, \dots, H_r$ on the same cuff. More precisely, a \textit{pseudo-presentation} of a graph $G$ in a surface $\Sigma$ is defined as follows. Let $\Gamma \subseteq G$ be a drawing in $\Sigma$ such that $|V(\Gamma) \cap C| \ge 2$ for each cuff $C$. Let $F_1^*, \dots, F_r^*$ be mutually disjoint supports of $\Gamma$ in $\Sigma$ with $V(\Gamma) \cap bd(\Sigma) \subseteq F_1^* \cup \dots \cup F_r^*$. For $1 \le j \le r$ let $q_j \ge 1$ be an integer; for each $u \in V(\Gamma) \cap F_j^*$ let $\mu(u)$ be an edge-less subgraph of $G$ with $q_j$ vertices and with $V(\mu(u) \cap \Gamma) = \{u\}$; and for each space $s$ with $s \subseteq F_j^*$ let $\mu(s) \subseteq G$, satisfying (P1)--(P4) below. A \textit{unit} is either a vertex in $V(\Gamma) \cap bd(\Sigma)$ or a space in $F_1^* \cup \dots \cup F_r^*$.
+
+\hspace*{12pt}(P1) $G = \Gamma \cup \bigcup(\mu(F_j^*) : 1 \le j \le r)$; $\Gamma$ \textit{and all the graphs} $\mu(s)$ \textit{for} $s \in S(\Gamma)$ \textit{and} $s \subseteq F_1^* \cup \dots \cup F_r^*$ \textit{are mutually edge-disjoint; and if} $x_1, x_2$ \textit{are units in different cuffs then} $\mu(x_1)$ \textit{and} $\mu(x_2)$ \textit{are mutually vertex-disjoint.}
+
+\hspace*{12pt}(P2) \textit{For} $1 \le j \le r$, \textit{if} $s \subseteq F_j^*$ \textit{is a space with ends} $u_1, u_2$ \textit{then} $V(\mu(s) \cap \Gamma) = \{u_1, u_2\}$ \textit{and} $\mu(u_1), \mu(u_2) \subseteq \mu(s)$, \textit{and there are} $q_j$ \textit{mutually vertex-disjoint paths of} $\mu(s)$ \textit{between} $V(\mu(u_1))$ \textit{and} $V(\mu(u_2))$.*
+
+\hspace*{12pt}(P3) \textit{For each cuff} $C$, \textit{if} $x_1$ \textit{and} $x_2$ \textit{are units in} $C$ \textit{and} $u_1, u_2 \in C \cap V(\Gamma)$ \textit{are such that} $x_1, u_1, x_2, u_2$ \textit{occur in order in} $C$, \textit{then} $\mu(x_1) \cap \mu(x_2) \subseteq \mu(u_1) \cup \mu(u_2)$.*
+
+\hspace*{12pt}(P4) \textit{For each cuff} $C, \bigcap(\mu(u) : u \in V(\Gamma) \cap C)$ \textit{is null.}
+
+Then we say that $\Gamma, F_1^*, \dots, \delm{F_4^*}\fix{F_r^*}, \mu$ is a \textit{pseudo-presentation} of $G$ in $\Sigma$.\fixnote{fix:8-pseudo}{There are $r$ supports $F_1^*, \dots, F_r^*$, and (8.1) writes $\Gamma, F_1^*, \dots, F_r^*, \mu$.} Its depth is $\max(q_j : 1 \le j \le r)$, or $0$ if $r = 0$, and its defect is $r$. We say that the pseudo-presentation is \textit{disjointed} if for each space $s$ with ends $u_1, u_2$ such that $s \nsubseteq F_1^* \cup \dots \cup F_r^*$, the graphs $\mu(u_1)$ and $\mu(u_2)$ are vertex-disjoint.
+
+\textbf{8.1} \textit{Let $\Gamma, F_1^*, \dots, F_r^*, \mu$ be a disjointed pseudo-presentation of a graph $G$ in a surface $\Sigma$. Then $\Gamma, F_1^*, \dots, F_r^*, \mu(F_1^*), \dots, \mu(F_r^*), \mu$ is a presentation of $G$ in $\Sigma$.}

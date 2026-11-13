@@ -1,0 +1,21 @@
+\origpage{238}{ROBERTSON AND SEYMOUR}
+\noindent which is impossible. Thus we may cut $\Sigma$ along $A$ and obtain a new surface, with one component $\Sigma'$ which is homeomorphic to $\Sigma$. Loosely, we regard $\Sigma'$ as a subset of $\Sigma$. Let $G'$ be the restriction of $G$ to $\Sigma'$. Then $G'$ is boundary-linked in $\Sigma'$, by choice of $A'$. Let $V(G) \cap A = \{a_1, a_2\}$, where if $V(G) \cap C \ne \emptyset$ there is a path of $G$ between $C$ and $a_1$ not using $a_2$. (If $V(G) \cap C \ne \emptyset$ there is such a path, because $G$ is boundary-linked.)
+
+By replacing $H$ by a homotopic forest if necessary, we may assume that $a_1, a_2 \in V(H)$, and $U(H) \cap A = \{a_1, a_2\}$, and that if $V(G) \cap C = \emptyset$ then $U(H) \subseteq \Sigma'$, and if $V(G) \cap C \ne \emptyset$ then there is a path of $H$ between $a_1$ and $C$ not using $a_2$. Let $H'$ be the restriction of $H$ to $\Sigma'$; then $H'$ is a forest in $\Sigma'$. But $V(H') \cap bd(\Sigma') = V(G') \cap bd(\Sigma')$, and
+\begin{equation*}
+|V(H') \cap bd(\Sigma')| \le |V(H) \cap bd(\Sigma)| + 2 \le 2k - 2g + 2 = 2k - 2g',
+\end{equation*}
+where $g'$ is the number of cuffs of $\Sigma'$ containing at most one vertex of $G'$. By our inductive hypothesis $H'$ is $G'$-feasible, and so $H$ is $G$-feasible as required.
+
+\sectionhead{7. Adding New Cuffs}
+
+In this section we eliminate the condition $c \ge 2$. The natural way to do so is to add another cuff, if our surface has only one, by making a small cut in the surface in as unobtrusive a way as possible. We need to know that such a cut can be made without reducing $\alpha(G)$ too much, and that is the main topic of this section.
+
+Let $\Sigma \cong \Sigma(a, b, c)$, where $3a + 3b + c \ge 3$, and let $G$ be a proper graph in $\Sigma$. Let $C$ be a cuff of $\Sigma$. If $r$ is an integer with $1 \le r \le \frac{2}{9}\alpha(G) - 1$, then by (5.7), $\mathcal{A}_r(C)$ is planar in $\Sigma + \hat{C}$. \del{Moreover, if $\mathcal{A}_r(C) \ne \emptyset$ there is an $O$-arc $A_r(C) \subseteq bd(\Sigma) \cup U(G)$ which surrounds $C$, such that $A_r(C) \subseteq \mathcal{A}_{r+1}(C)$ and $\mathcal{A}_r(C)$ is inside $A_r(C)$ (for the closure of $\mathcal{A}_r(C)$ has no ``cut-vertices'' of the relevant type, as is easily seen). Let $\Delta_r(C)$ be the set of all points of $\Sigma$ inside $A_r(C)$.} \fix{Let $\Delta_r(C)$ be the union of all the sets $X$ that generate $\mathcal{A}_r(C)$, together with the holes of these sets on the side of $C$.}\fixnote{fix:7-Delta}{The struck claim is false for every $G$ and $r$. The set $\mathcal{A}_{r+1}(C)$ is a union of $G$-normal sets, so it contains no point of an edge, and an $O$-arc in $(bd(\Sigma)\cup U(G))\cap\mathcal{A}_{r+1}(C)$ lies in $bd(\Sigma)\cup V(G)$. As $V(G)$ is finite, such an $O$-arc is a cuff, with nothing inside it. With $\Delta_r(C)$ defined as here, (7.1) and (7.3) hold.} We define $\Delta_r$ to be the union of $\Delta_r(C)$ taken over all cuffs $C$ with $\mathcal{A}_r(C) \ne \emptyset$.
+
+If $e$ is an edge of $G$, let $G \setminus e$ be the graph obtained from $G$ by deleting $e$. Let $\Sigma_e$ be the surface obtained from $\Sigma$ by cutting along $\bar{e}$. Let $\phi_e$ be the associated surjection. Then $\phi_e^{-1}(G \setminus e)$ is a proper graph in $\Sigma_e$; and provided $\bar{e} \cap bd(\Sigma) = \emptyset$ and $e$ is not a loop, we have $\Sigma_e \cong \Sigma(a, b, c + 1)$.
+
+\stmt
+(7.1) \textit{Suppose that $\Sigma$, $G$ are as above, and $2 \le r \le \frac{2}{9}\alpha(G)$, and that $e$ is an edge of $G$, not a loop, with $e \notin \Delta_{r-1}$ and with $\bar{e} \cap bd(\Sigma) = \emptyset$. Then $\alpha(\phi_e^{-1}(G \setminus e)) \ge r$.}
+
+\textit{Proof.} Let $G' = \phi_e^{-1}(G \setminus e)$. Suppose that $X \subseteq \Sigma_e$ is solid, connected, $G'$-

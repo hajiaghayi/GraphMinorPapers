@@ -1,0 +1,40 @@
+\origpage{194}{ROBERTSON AND SEYMOUR}
+\textit{Proof.} There exists $u_1 \in \gamma(\tilde{d}) - V(A)$ and $u_2 \in \gamma(\tilde{d}) - V(B)$ since $\gamma(\tilde{d}) \not\subseteq V(A)$ and $\gamma(\tilde{d}) \not\subseteq V(B)$. There is a path $P$ of $\alpha(d)^*$ from $u_1$ to $u_2$ with no internal vertex in $S \cup V(\alpha(-d))$; for if $d$ is internal then this follows from (9.1) since
+\begin{equation*}
+V(\alpha(d)) \cap (S \cup V(\alpha(-d))) = \gamma(\tilde{d}),
+\end{equation*}
+while if $d$ is a border cell then since $d \in C^*(\Gamma)$, $P$ exists by definition of the standard linkage. Since $u_1 \in V(B) - V(A)$ and $u_2 \in V(A) - V(B)$, there is an internal vertex $v$ of $P$ in $V(A \cap B)$. But then
+\begin{equation*}
+v \in V(A \cap B) \cap V(\alpha(d)) - (S \cup V(\alpha(-d))),
+\end{equation*}
+as required. $\square$
+
+\stmt
+(11.5) \textit{For any separation $(A, B)$ of $G$,}
+\begin{equation*}
+|D(A, B)| \le |V(A \cap B) - (S \cup \gamma(N(\Gamma)))|.
+\end{equation*}
+\textit{Proof.} For each $d \in D(A, B)$, there exists
+\begin{equation*}
+v_d \in V(A \cap B) \cap (V(\alpha(d)) - (S \cup V(\alpha(-d))))
+\end{equation*}
+by (11.4). Since $v_d \in V(\alpha(d)) - V(\alpha(-d))$, it follows that the vertices $v_d$ ($d \in D(A, B)$) are all distinct. Moreover, each $v_d$ belongs to $V(A \cap B)$, and not to $S \cup \gamma(N(\Gamma))$, since $\gamma(N(\Gamma)) \subseteq V(\alpha(-d))$. Hence
+\begin{equation*}
+|D(A, B)| = |\{v_d \colon d \in D(A, B)\}| \le |V(A \cap B) - (S \cup \gamma(N(\Gamma)))|,
+\end{equation*}
+as required. $\square$
+
+Throughout the remainder of this section, $c_0 \in C(\Gamma)$ and $(A, B) \in \mathscr{T}$ with $\alpha(c_0) \subseteq A$, satisfying
+\begin{equation*}
+|V(A \cap B)| \le |V(\alpha(c_0) \cap \alpha(-c_0))|.
+\end{equation*}
+\stmt
+(11.6) \textit{$|V(A \cap B) - S| \le |\tilde{c}_0|$, and if equality holds then}
+\begin{equation*}
+|V(A \cap B) \cap S| = |V(\alpha(c_0) \cap \alpha(-c_0)) \cap S|.
+\end{equation*}
+\textit{Proof.} Since $|V(A \cap B)| \le |V(\alpha(c_0) \cap \alpha(-c_0))|$, it follows that
+\begin{align*}
+|V(A \cap B) \cap S| &+ |V(A \cap B) - S| \\
+&\le |V(\alpha(c_0) \cap \alpha(-c_0)) \cap S| + |V(\alpha(c_0) \cap \alpha(-c_0)) - S|.
+\end{align*}

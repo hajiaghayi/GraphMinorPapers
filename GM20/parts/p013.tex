@@ -1,0 +1,32 @@
+\origpage{337}{N. Robertson, P.D. Seymour / Journal of Combinatorial Theory, Series B 92 (2004) 325--357}
+\noindent then the third alternative also is impossible, because of the third condition in the definition of $\mathcal{M}(\mathcal{T}, W, \theta)$, unless $(A, B) = (C, D)$ when the first alternative holds as well. $\square$
+
+\textbf{5.2.} \textit{If $(A, B), (A', B') \in \mathcal{M}(\mathcal{T}, W, \theta)$ are distinct then $A \subseteq B'$; and $\mathcal{M}(\mathcal{T}, W, \theta)$ has cardinality $\le |W|$.}
+
+\textbf{Proof.} Suppose that $A \nsubseteq B'$. By 5.1, $A \subseteq A'$ and $B' \subseteq B$, since $(A, B)$ has order $< \theta$ and $(A, B)$ is the $(\mathcal{T}, \mathcal{T}')$-distinction for some $\mathcal{T}'$. Similarly, with $(A, B)$ and $(A', B')$ exchanged, it follows that $A' \subseteq A$ and $B \subseteq B'$. But then $(A, B) = (A', B')$, a contradiction. This proves the first claim.
+
+From this, it follows that
+\begin{equation*}
+E(A) \cup (V(G) \setminus V(B)) \quad ((A, B) \in \mathcal{M}(\mathcal{T}, W, \theta))
+\end{equation*}
+are mutually disjoint, and each contains a member of $W$. It follows that $|\mathcal{M}(\mathcal{T}, W, \theta)| \le |W|$, as required. $\square$
+
+If $\mathcal{T}$ is a tangle in $G$, $\theta \ge 1$ is an integer, $\lambda$ is a tie-breaker in $G$ and $W \subseteq Z(G)$, a rooted location $\mathcal{L}$ in $G$ is said to \textit{$\theta$-isolate $\mathcal{T}$ modulo $W$} if $\mathcal{L}$ has order $< \theta$, $\mathcal{L}^- \subseteq \mathcal{T}$, and for each $A \in \mathcal{L}$ and every tangle $\mathcal{T}'$ in $G$ of order $\ge \theta$ with $((G \setminus A)^-, A^-) \in \mathcal{T}'$, if $(C, D)$ is the $(\mathcal{T}, \mathcal{T}')$-distinction then either $C \subseteq A^-$ and $(G \setminus A)^- \subseteq D$, or $W \nsubseteq Z(D)$.
+
+A rooted location $\mathcal{L}$ in a rooted hypergraph $G$ is \textit{fine} if $\bigcup(A^- : A \in \mathcal{L}) = G^-$. Let $\theta \ge 1$ be an integer, let $P = (G, \mu, \Delta)$ be a patchwork, let $\lambda$ be a tie-breaker in $G$, let $\mathcal{T}$ be a tangle in $G$ of order $\ge \theta^2$, and let $W \subseteq Z(G)$ with $|W| \le \theta$. In these circumstances, a rooted location $\mathcal{L}$ in $G$ is said to be \textit{$W$-suitable} if
+
+\hspace*{12pt}$\bullet$ $\mathcal{L}$ is fine, and $\mathcal{L}^- \subseteq \mathcal{T}$, and $\mathcal{L}$ has order $< \theta^2$,
+
+\hspace*{12pt}$\bullet$ for each tangle $\mathcal{T}'$ in $G$ of order $\ge \theta^2$, if $(C, D) \in \mathcal{L}$ and $(D, C) \in \mathcal{T}'$ and $(A, B)$ is the $(\mathcal{T}, \mathcal{T}')$-distinction then either $A \subseteq C$ and $D \subseteq B$, or $A \subseteq A^*$ and $B^* \subseteq B$ for some $(A^*, B^*) \in \mathcal{M}(\mathcal{T}, W, \theta)$.
+
+\textbf{5.3.} \textit{Let $\mathcal{F}$ be a well-behaved set of patchworks and let $\theta \ge 1$. Then there is a well-behaved set of patchworks $\mathcal{F}'$ with the following property. Let $P = (G, \mu, \Delta)$ be a patchwork, let $\lambda$ be a tie-breaker in $G$, let $\mathcal{T}$ be a tangle in $G$ of order $\ge \theta^2$, let $W \subseteq Z(G)$ with $|W| \le \theta$, let $\mathcal{L}$ be a fine rooted location in $G$ that $\theta$-isolates $\mathcal{T}$ modulo $W$, and let $\mathcal{F}$ contain a heart of $(P, \mathcal{L})$. Then there is a rooted location $\mathcal{L}'$ in $G$ and $W' \subseteq W$ such that}
+
+\hspace*{12pt}$\bullet$ \textit{$\mathcal{L}'$ is $W'$-suitable and $\mathcal{F}'$ contains a heart of $(P, \mathcal{L}')$,}
+
+\hspace*{12pt}$\bullet$ \textit{for each $(A, B) \in \mathcal{M}(\mathcal{T}, W', \theta)$,}
+
+\hspace*{12pt}$\bullet$ \textit{$V(A \cap B) \cap V(C) \subseteq \bar{\pi}(C)$ for each $C \in \mathcal{L}'$, and}
+
+\hspace*{12pt}$\bullet$ \textit{there is no $(C, D) \in \mathcal{L}'^-$ with $A \subseteq C$ and $D \subseteq B$.}
+
+\textbf{Proof.} Let $\mathcal{F}'$ be related to $\mathcal{F}$ as $\mathcal{F}_2$ is to $\mathcal{F}_1$ in 4.8, where $k = \theta^2$. By 4.8, $\mathcal{F}'$ is well-behaved, and we claim that it satisfies the theorem. For let $P = (G, \mu, \Delta)$, $\lambda$, $\mathcal{T}$, $W \subseteq Z(G)$ and $\mathcal{L}$ satisfy the hypotheses of the theorem. Choose $W' \subseteq W$ minimal such that $\mathcal{L}$ $\theta$-isolates $\mathcal{T}$ modulo $W'$.

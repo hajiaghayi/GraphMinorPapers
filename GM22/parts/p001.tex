@@ -1,0 +1,25 @@
+\origpage{530}{N. Robertson, P. Seymour / Journal of Combinatorial Theory, Series B 102 (2012) 530--563}
+{\centering
+{\Large Graph Minors. XXII. Irrelevant vertices in linkage problems\par}\medskip
+
+Neil Robertson$^{a,1}$, Paul Seymour$^{b,2}$\par
+$^a$\textit{Ohio State University, Columbus, OH 43210, United States}\par
+$^b$\textit{Princeton University, Princeton, NJ 08544, United States}\par
+}
+\begin{quote}
+\textit{Article history:} Received 3 January 1995. Available online 9 August 2011.
+
+\textit{Keywords:} Disjoint paths algorithm; Graph minors; Irrelevant vertex; Linkage problem
+
+\textbf{Abstract}
+
+In the algorithm for the disjoint paths problem given in Graph Minors XIII, we used without proof a lemma that, in solving such a problem, a vertex which was sufficiently ``insulated'' from the rest of the graph by a large planar piece of the graph was irrelevant, and could be deleted without changing the problem. In this paper we prove the lemma.
+\end{quote}
+
+\sectionhead{1. Introduction}
+
+Let $\Gamma$ be a graph drawn in a plane, let $v$ be a vertex of $\Gamma$, and suppose that there are many ($h$, say) vertex-disjoint circuits of $\Gamma$, all surrounding $v$. Suppose also that $\Gamma$ is a subgraph of a larger graph $G$, which is not necessarily planar, and the only vertices of $\Gamma$ incident with edges of $G$ not in $\Gamma$ lie in the plane outside the outermost of the $h$ circuits. Finally, suppose that $s_1, t_1, \ldots, s_p, t_p$ are vertices of $G$ but not of $\Gamma$, and we are concerned with the existence of $p$ disjoint paths $P_1, \ldots, P_p$ of $G$, where $P_i$ has ends $s_i$ and $t_i$ ($1 \le i \le p$). It is intuitively plausible, and indeed true, that if $h$ is large enough as a function of $p$, then if $P_1, \ldots, P_p$ exist at all they can be chosen so that none of them uses $v$. This fact, and a generalization of it, was used in Theorem 10.2 of [5] as a lemma to prove the correctness of an algorithm to decide whether $P_1, \ldots, P_p$ do exist. However, the proof of that lemma was postponed to the present, because it seems to need some of the main results of this series. Proving the lemma is the main goal of this paper.
+
+We shall derive it from the result about ``vital linkages'' proved in [7]. A \textit{linkage} in a graph $G$ is a subgraph of $G$, every component of which is a path. (Paths have at least one vertex, and have no ``repeated'' vertices.) If $L$ is a linkage in $G$, a vertex $v \in V(G)$ is a \textit{terminal} of $L$ if $v \in V(L)$ and $v$ has degree at most one in $L$. We say a linkage $L$ is a $p$-linkage if it has at most $p$ terminals. The \textit{pattern}%
+\origfootnote[1]{Partially supported by NSF grant DMS 8903132.}%
+\origfootnote[2]{This work was carried out while this author was employed at Telcordia Technologies in Morristown, NJ.}

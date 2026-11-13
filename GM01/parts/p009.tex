@@ -1,0 +1,51 @@
+\origpage{47}{GRAPH MINORS}
+\noindent vertex from $Z_{k_{l'}}$, because $Z_{k_{l'}}$ separates $\{v\colon\mu(v)<k_{l'}\}$ and $\{v\colon\mu(v)\ge k_{l'}\}$.
+We may assume therefore that $k_{l'-1}\le\mu(v)<k_{l'}$ for every vertex $v$ of $B_j$. By
+the minimality of $k_{l'}$, there is a vertex $v$ of $B_j$ with $\mu(v)\ge k_{l'}-1$; and so
+$\mu(v)=k_{l'}-1$. But then $v\in Z_{k_{l'}-1}$, and again our claim is true. Thus for
+$2\le l'<l$ we have $|J_{l'}-J_{l'-1}|\le 2m$. A similar argument shows that
+$|J_1|\le 2m$. It follows that
+\begin{equation*}
+|J_{l-1}|\le 2(l-1)m
+\end{equation*}
+and hence that $J_{l-1}\ne\{1,..., n\}$, since $l\le s=\lceil n/2m\rceil$. Thus $k_l$ is well defined.
+Hence by induction, $k_1,..., k_s$ are well defined.
+
+Choose $j_1$ with $1\le j_1\le n$ so that $\mu(v)<k_1$ for every vertex $v$ of $B_{j_1}$; and
+for $2\le l\le s$, choose $j_l$ with $1\le j_l\le n$ so that $k_{l-1}\le\mu(v)<k_l$ for every
+vertex $v$ of $B_{j_l}$. Put $C_l=B_{j_l}$ $(1\le l\le s)$. Then $C_1,..., C_s$ are disjoint connected
+subgraphs of $G$, and each meets at least $\frac12\theta^2$ of $P_1,..., P_m$: and moreover, for
+$1\le l<l'\le s$, all vertices of $C_l$ on $P_i$ occur before all vertices of $C_{l'}$. By
+(2.4), $s<\theta^{2\theta-2}\binom{m}{\frac12\theta^2}$, and so $n<2m\theta^{2\theta-2}\binom{m}{\frac12\theta^2}$, as required.
+\stmt
+(2.7). \textit{Suppose that there are $m$ disjoint paths in $G\in\mathscr{F}_\theta$ from $A_1$ to $A_2$,
+where $A_1, A_2\subseteq V(G)$; and that $B_1,..., B_n$ are disjoint connected subgraphs of
+$G$, and for $1\le j\le n$, $V(B_j)$ separates $A_1$ and $A_2$. Then either $m<\frac12\theta^2$ or
+$n<\theta^{2\theta}$.}
+\stmt
+\textit{Proof}. If possible, choose a counterexample with $|V(G)|+|E(G)|+m$
+minimum. Then evidently we have $m=\frac12\theta^2$.
+
+Let $\{P_1,..., P_m\}$ be a set of $m$ disjoint paths in $G$ from $A_1$ to $A_2$. If some $P_i$
+and some $B_j$ have an edge in common, we can contract that edge and
+produce a smaller counterexample. Thus no edge belongs to both some $P_i$
+and some $B_j$. Moreover, every edge belongs either to some $P_i$ or to some $B_j$,
+for otherwise we could delete it.
+
+It follows that
+\begin{equation*}
+E(P_1)\cup\cdots\cup E(P_m)=E(G)-(E(B_1)\cup\cdots\cup E(B_n)).
+\end{equation*}
+If $\{P_1',..., P_m'\}$ is another set of $m$ disjoint paths from $A_1$ to $A_2$, we have, by
+the same argument,
+\begin{equation*}
+E(P_1')\cup\cdots\cup E(P_m')=E(G)-(E(B_1)\cup\cdots\cup E(B_n))
+\end{equation*}
+and hence
+\begin{equation*}
+E(P_1')\cup\cdots\cup E(P_m')=E(P_1)\cup\cdots\cup E(P_m).
+\end{equation*}
+It follows that $\{P_1',..., P_m'\}=\{P_1,..., P_m\}$, and so the set $\{P_1,..., P_m\}$ is unique.
+
+We claim that every vertex $v$ of $G$ is in some $P_i$. For if not, and $v$ is an
+

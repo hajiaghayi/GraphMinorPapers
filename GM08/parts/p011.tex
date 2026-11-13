@@ -1,0 +1,33 @@
+\origpage{265}{GRAPH MINORS. VIII}
+\noindent of $\Sigma' - \Sigma$ is in the same component of $\Sigma' - F_2$ as a point of $C_2$. Since $C_2 \cap D_2 = \emptyset$ and $\Sigma' - \Sigma \subseteq D_2$, it follows that $F_4$ encloses $C_2$. But
+\begin{equation*}
+|V(\Gamma) \cap F_i| = \rho(C_i) \quad (i = 1, 2)
+\end{equation*}
+and so
+\begin{equation*}
+|V(\Gamma) \cap F_1 \cap F_2| + |V(\Gamma) \cap (F_1 \cup F_2)| = \rho(C_1) + \rho(C_2).
+\end{equation*}
+Hence
+\begin{equation*}
+|V(\Gamma) \cap F_3 \cap F_4| + |V(\Gamma) \cap (F_3 \cup F_4)| \le \rho(C_1) + \rho(C_2),
+\end{equation*}
+that is,
+\begin{equation*}
+|V(\Gamma) \cap F_3| + |V(\Gamma) \cap F_4| \le \rho(C_1) + \rho(C_2).
+\end{equation*}
+However,
+\begin{equation*}
+|V(\Gamma) \cap F_3| \ge \rho(C_1), \quad |V(\Gamma) \cap F_4| \ge \rho(C_2)
+\end{equation*}
+by definition of $\rho(C_1)$, $\rho(C_2)$, and so equality holds throughout. We deduce that $F_3$ is a $C_1$-ring, as required. $\square$
+
+\stmt
+(6.5) \textit{Let $\Gamma$ be a drawing in a disc $\Sigma$, and let $C_1, C_2$ be circuits of $\Gamma$. Let $F_i$ be a $C_i$-ring ($i = 1, 2$), such that $F_1$ and $C_2$ bound disjoint open discs, and $F_2$ and $C_1$ bound disjoint open discs. Then there is a $C_1$-ring $F_3$ and a $C_2$-ring $F_4$ such that $F_1$ encloses $F_3$, $F_2$ encloses $F_4$, and $F_3$ and $F_4$ bound disjoint open discs.}
+
+\textit{Proof.} Extend $\Sigma$ to a sphere $\Sigma'$, and let $z_i$ be a point of $\Sigma$ inside $C_i$ ($i = 1, 2$). By (6.3), there are $O$-arcs $F_3, F_4 \subseteq F_1 \cup F_2$, with $F_3 \cap F_4 \subseteq F_1 \cap F_2$, such that
+\begin{equation*}
+D_1 \cap (F_1 \cup F_2) = \emptyset = D_2 \cap (F_1 \cup F_2),
+\end{equation*}
+where $D_1$ is the component of $\Sigma' - F_3$ containing $z_1$, and $D_2$ is the component of $\Sigma' - F_4$ containing $z_2$. Arguing as in (6.4), we deduce that $D_1, D_2 \subseteq \Sigma$, that $D_i$ is inside $F_i$ ($i = 1, 2$), and that $D_1 \cap D_2 = \emptyset$. Hence $F_3$ encloses $C_1$, $F_4$ encloses $C_2$, $F_1$ encloses $F_3$, and $F_2$ encloses $F_4$. Counting as in (6.4), we deduce that $F_3$ is a $C_1$-ring and $F_4$ is a $C_2$-ring. The result follows. $\square$
+
+Let $\Gamma$ be a drawing in a disc $\Sigma$. If $F$ is a $\Gamma$-normal $O$-arc, we define $\Gamma(F)$ to be the set of all edges of $\Gamma$ inside $F$. If $C$ is a circuit of $\Gamma$ and $F$ is a $C$-ring, we say $F$ is a \textit{minimal $C$-ring} if there is no $C$-ring $F'$ with $\Gamma(F') \subset \Gamma(F)$.

@@ -1,0 +1,52 @@
+\origpage{58}{ROBERTSON AND SEYMOUR}
+(4.7). \textit{There is a path in $G$ from $V(D)$ to $V(H)$ avoiding $A\cup B$.}
+\stmt
+This follows from (4.5) and the definition of $W_i$ when $i=0$. When
+$1\le i\le T$ there is a path $P$ within $W_i$ from $D$ to $Y_i$, by definition of $W_i$. $P$
+certainly avoids $A\cup B$, by (4.6). Let $y$ be a vertex of $Y_i$ on $P$. By (4.3) there
+is a path $P'$ from $y$ to $S_{\nu i-\nu+1}\cup\cdots\cup S_{\nu i}$ which avoids $A\cup B$. The union
+of $P$ and $P'$ yields a path satisfying (4.7).
+
+If $i\ge 2$, let $w_1$ be the vertex of $S_{\nu i-\nu}$ which is adjacent in $H$ to a vertex of
+$S_{\nu i-\nu+1}$. If $i=0$ or 1, let $w_1$ be $\rho(G)$.
+\stmt
+(4.8). \textit{There is a path $P_1$ in $G$ from $D$ to $w_1$, avoiding $A\cup B-\{w_1\}$.}
+\stmt
+This is clear from (4.7). Let $P_1$ be a minimal such path, so that it uses
+only one vertex of $D$, $d_1$ say. Let $P_0$ be the path of $H$ from $w_1$ to $\rho(G)$.
+
+Now $D$ is a subdivision of $P(\gamma-1, 4\nu+2\delta+2)$. But
+$P(\gamma-1, 4\nu+2\delta+2)$ consists of a $(4\nu+2\delta+2)$-vertex path with vertices
+$p(1),..., p(4\nu+2\delta+2)$ say, in order, and (if $\gamma>1$) $4\nu+2\delta+2$ copies of
+$\mathbf{H}_{\gamma-2}$, $H(1),..., H(4\nu+2\delta+2)$ say, in order, and an edge from $p(j)$ to $H(j)$
+$(1\le j\le 4\nu+2\delta+2)$. By the \textit{first end} of $D$ we mean the subgraph of $D$
+corresponding to $H(1)$, $H(2)$ and the path of $D$ joining them. By the \textit{second
+end} we mean the subgraph corresponding to $H(4\nu+2\delta+1)$, $H(4\nu+2\delta+2)$
+and the path joining them.
+\stmt
+(4.9). \textit{$d_1$ is in one of the ends of $D$.}
+\stmt
+Otherwise, since $4\nu+2\delta+2\ge 2\delta$, $G$ has a rooted minor isomorphic to
+$Q(\gamma, \delta)$, as can be seen by deleting all vertices and edges of $G$ not in $D, P_0$,
+or $P_1$, and contracting all edges in $P_0$ and $P_1$.
+
+Without loss of generality we may assume that $d_1$ is in the first end of $D$.
+\stmt
+(4.10). \textit{$i\ne T$.}
+\stmt
+If $i=T$, then $G$ has a rooted minor isomorphic to $P(\gamma-1, 2\nu(T-1)+
+4\nu+2\delta)$ by (4.8) and (4.9), as can be seen by deleting all vertices and edges
+of $G$ except those of $H$ within $B$ and those of $P_1$ and $D$, and by contracting
+the edges in $P_1$ and those in the first end of $D$. But
+\begin{equation*}
+2\nu(T-1)+4\nu+2\delta>N
+\end{equation*}
+by the maximality of $T$, contrary to the maximality of $N$.
+
+Let $w_2$ be the vertex of $S_{\nu i+\nu}$ adjacent in $H$ to a vertex of $S_{\nu i+\nu-1}$.
+\stmt
+(4.11). \textit{There is a path $P_2$ from $D$ to $w_2$ avoiding $A\cup B-\{w_2\}$.}
+\stmt
+This follows from (4.7) and (4.10).
+
+Choose a minimal path $P_2$ satisfying (4.11) so that $P_2$ only contains one

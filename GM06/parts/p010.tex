@@ -1,0 +1,37 @@
+\origpage{124}{ROBERTSON AND SEYMOUR}
+For convenience, we assume that $G$ is properly drawn on $\Sigma$, and
+\begin{equation*}
+V(H) \cap bd(\Sigma) = V(G) \cap bd(\Sigma).
+\end{equation*}
+(As before, this can always be arranged by extending $\Sigma$ slightly.) Until further notice, $\Sigma$ is a general surface, not necessarily a cylinder.
+
+\textit{Reduction 1. If some component $H'$ of $H$ is such that $G$ has a subgraph with vertex set $V(H') \cap bd(\Sigma)$ which is homotopic to $H'$, then by deleting $V(H')$ from $H$ and deleting $V(H') \cap bd(\Sigma)$ from $G$, we obtain an equivalent problem.}
+
+This is easy to see.
+
+Suppose that $C$ is a cuff of $\Sigma$, and $s, t \in C$ are distinct, and $S$ is a component of $C - \{s, t\}$. Suppose that $P$ is a path drawn on $\Sigma$ with end-vertices $s$ and $t$. Then we define ''$P$ is homotopic to $S$'' in the obvious way.
+
+Again, if $C, s, t, S$ are as above, and $G$ is drawn on $\Sigma$, and $s, t \in V(G)$, and there is a path $P$ of $G$ homotopic to $S$, then there is such a path $P$ of $G$ where the portion of $\Sigma$ enclosed by $P \cup S$ is minimal, and this path is unique. (A path has no ``repeated'' vertices.) This path is denoted by $P(s, t, S)$.
+
+A \textit{segment} is a component of $bd(\Sigma) - (V(H) \cap bd(\Sigma))$ homeomorphic to $(0, 1)$ and $v \in V(H) \cap bd(\Sigma)$ is an \textit{end} of segment $S$ if $v$ is in the closure of $S$. The following describes some circumstances when the problem is infeasible.
+
+\stmt
+(4.1) \textit{With $\Sigma, G, H$ as before, if there is a segment $S$ with distinct ends $s$, $t$, and $s, t$ are joined in $H$ by a path homotopic to $S$, and if either}
+
+\hspace*{12pt}(i) \textit{$P(s, t, S)$ does not exist, or}
+
+\hspace*{12pt}(ii) \textit{some vertex of $P(s, t, S)$ lies in $V(H') \cap bd(\Sigma)$ for some component $H'$ of $H$ not containing $s, t$, or}
+
+\hspace*{12pt}(iii) \textit{some vertex $v$ of $P(s, t, S)$ lies in $bd(\Sigma)$, and is joined to $t$ in $H$ by a path not homotopic to the subpath of $P(s, t, S)$ between $v$ and $t$}
+
+\textit{then $G$ has no forest subgraph homotopic to $H$.}
+
+The proof is clear. We shall also require a further reduction.
+
+\textit{Reduction 2. If there is a segment $S$ with distinct ends $s$, $t$, and $s, t$ are joined in $H$ by a path homotopic to $S$, and}
+
+\hspace*{12pt}(i) \textit{if $P(s, t, S) \cup S$ properly encloses a vertex or edge of $G$ we may delete that vertex or edge;}
+
+\hspace*{12pt}(ii) \textit{if $P(s, t, S)$ has a vertex not in $bd(\Sigma)$, we may contract in $G$ either edge of $P(s, t, S)$ incident with it;}
+
+\hspace*{12pt}(iii) \textit{if (i) above does not apply and $P(s, t, S)$ consists of a single edge $e$ say, then we may contract $e$ in $G$ (moving $s$ along $S$ to $t$), make the iden-}

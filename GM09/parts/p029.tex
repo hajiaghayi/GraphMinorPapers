@@ -1,0 +1,24 @@
+\origpage{68}{ROBERTSON AND SEYMOUR}
+\noindent let $P'$ be the path formed by $e, e_1$. Again, since $\Delta(P')$ is not a subset of a lawn it is not defined, and so $v_2 \notin \bar{\Omega}_0$. The result follows. $\square$
+
+A triangle in $G$ is a circuit of length 3.
+
+\stmt
+(11.3) \textit{No triangle in $G$ has an internal edge and an external edge.}
+
+\textit{Proof.} Let $T$ be a triangle of $G$ with $V(T) = \{v_1, v_2, v_3\}$, $E(T) = \{e_1, e_2, e_3\}$ where $e_i$ is incident with $v_j$ for $1 \le i, j \le 3$ if $i \ne j$. Let $e_3$ be an external edge and $e_2$ an internal edge. If both ends $v_1, v_2$ of $e_3$ are drawn in the wall, then by (11.2) there are prominences $P_1, P_2$ such that $v_i$ is the middle vertex of $P_i$ ($i = 1, 2$). Since $e_2$ is internal, it is drawn in $\Delta(P_1)$, and so $v_3$ is drawn in $\Delta(P_1)$. But $e_1$ is not drawn in $\Delta(P_1)$ since $v_2$ is not drawn in $\Delta(P_1)$, and so $v_3$ is drawn in $bd(\Delta(P_1))$, and indeed $v_3 \in V(P_1)$. It follows that there is an edge of $P_1$ joining $v_1$ and $v_3$, a contradiction since $G$ is simple and $e_2$ is internal.
+
+Thus not both ends of $e_3$ are drawn in the wall. Certainly $v_1$ is drawn in the wall since $e_2$ is internal, and so $v_2$ is not drawn in the wall. Therefore $e_1$ as well as $e_3$ is external. Since $e_2$ is internal, both $v_1$ and $v_3$ are drawn in the wall. Since $\Delta(T \setminus e_2)$ is not a subset of a lawn, it is not defined and so not both $v_1, v_3 \in \bar{\Omega}_0$; thus we may assume (since we now have symmetry between $e_1$ and $e_3$) that $v_1$ is the middle vertex of some prominence $P_1$. Since $e_2$ is internal, it is drawn in $\Delta(P_1)$; but $e_1$ is external, and so $v_3 \in V(P_1)$, a contradiction as before. This completes the proof. $\square$
+
+The clockwise orientation of the wall provides a cyclic permutation $\Omega^*$ of the vertices of $G$ drawn in it. Let $G^*$ be the subgraph of $G$ consisting of all vertices and edges drawn in the closed disc bounded by the wall. Then $(G^*, \Omega^*, \Omega_0)$ is a rural neighborhood, called the \textit{park} of $(G, \Omega, \Omega_0)$ (under the presentation $(\Sigma, \Gamma, \Delta, \Delta_0)$). Any rural neighborhood which can be constructed this way is called a \textit{park}.
+
+\stmt
+(11.4) \textit{If $(G_0 \cup G^*, \Omega^*)$ is the composition of a park $(G^*, \Omega^*, \Omega_0)$ with a society $(G_0, \Omega_0)$, and $(G_0, \Omega_0)$ has no transaction of cardinality $> p$, then $(G_0 \cup G^*, \Omega^*)$ has no transaction of cardinality $> p + 2$.}
+
+\textit{Proof.} Choose $G, \Omega, \Sigma, \Gamma, \Delta, \Delta_0$ so that $(G^*, \Omega^*, \Omega_0)$ is the park of $(G, \Omega, \Omega_0)$ under the presentation $(\Sigma, \Gamma, \Delta, \Delta_0)$. For any fence $(A^*, B^*)$ of $\Omega^*$, there is a fence $(A, B)$ of $\Omega_0$ and a set $Z \subseteq \bar{\Omega}_0$ such that
+
+\hspace*{12pt}(i) $|Z| \le 2$
+
+\hspace*{12pt}(ii) $A^* \cap \bar{\Omega}_0 \subseteq A$, $B^* \cap \bar{\Omega}_0 \subseteq B$
+
+\hspace*{12pt}(iii) for every lawn $L$, the set of all vertices of $G^*$ drawn in $bd(L)$ is a subset of one of $A \cup A^* \cup Z$, $B \cup B^* \cup Z$.

@@ -1,0 +1,95 @@
+\origpage{253}{GRAPH MINORS IV}
+\hspace*{12pt}(i) $0$ is the null sequence
+
+\hspace*{12pt}(ii) $\operatorname{dom}(\mu) = E(G)$
+
+\hspace*{12pt}(iii) for each $e \in E(G)$, $\mu(e)$ is a march with $\bar{\mu}(e) = V(e)$, and $\Delta(e) = \{N_{V(e)}, K_{V(e)}\}$. (If $|V(e)| = 1$ then $N_{V(e)} = K_{V(e)}$.)
+
+\hspace*{12pt}(iv) $\phi(e) = 1$ for each $e \in E(G)$.
+
+If $P(G)$ is simulated in $P(G')$ then $G$ is isomorphic to a minor of $G'$, and hence (9.1) implies (1.5). \fix{We give the details. Let $n \ge 0$, and let $G_1, G_2, \dots$ be a countable sequence of
+graphs, each of tree-width $\le n$. Each $P(G_i)$ is robust. For let $e \in E(G_i)$, and let
+$X, Y \subseteq V(e)$ be disjoint with $|X| = |Y|$. Since $|V(e)| \le 2$, either
+$X = Y = \emptyset$, and then $N_{V(e)}$ pairs $X, Y$, or $|X| = |Y| = 1$ and $V(e) = X \cup Y$, and
+then $K_{V(e)}$ pairs $X, Y$. By (9.1) there exist $i' > i \ge 1$ such that $P(G_i)$ is simulated in
+$P(G_{i'})$. So it remains to prove the first statement.
+
+Let $P(G) = ((G, 0), \mu, \Delta, \phi)$ and $P(G') = ((G', 0), \mu', \Delta', \phi')$, and let
+$\eta$ be a realizable expansion of $P(G)$ in $P(G')$. We refer to the conditions (i)--(ix) in the
+definition of an expansion.
+
+\hspace*{12pt}(1) \textit{For $v \in V(G)$ and $e \in E(G)$, $v$ is an end of $e$ if and only if
+$\eta(v)$ contains an end of $\eta(e)$.}
+
+Since $\operatorname{dom}(\mu) = E(G)$, by (vi) $\mu(e)$ and $\mu'(\eta(e))$ have the same length. If $v$ is an end of $e$, then $v$ is
+the $j$th term of $\mu(e)$ for some $j$, since $\bar{\mu}(e) = V(e)$, and $\eta(v)$ contains the
+$j$th term of $\mu'(\eta(e))$ by (vi), which is an end of $\eta(e)$. Conversely, let
+$x \in \eta(v)$ be an end of $\eta(e)$. Then $x$ is the $j$th term of $\mu'(\eta(e))$ for some $j$.
+Let $w$ be the $j$th term of $\mu(e)$. Then $w$ is an end of $e$, and $x \in \eta(w)$ by (vi).
+Since $x \in \eta(v) \cap \eta(w)$, it follows that $v = w$ by (ii). This proves (1).
+
+\hspace*{12pt}(2) \textit{For $v \in V(G)$ and $e \in E(G)$, $e$ is a loop at $v$ if and only if
+every end of $\eta(e)$ is in $\eta(v)$.}
+
+Suppose that $e$ is a loop at $v$, and let $x$ be an end of $\eta(e)$. As in the proof of (1),
+$x \in \eta(w)$ for some end $w$ of $e$, and $w = v$ since $v$ is the only end of $e$. Conversely,
+suppose that every end of $\eta(e)$ is in $\eta(v)$, and let $a$ be an end of $e$. By (1),
+$\eta(a)$ contains an end of $\eta(e)$, which is also in $\eta(v)$, and so $a = v$ by (ii). This
+proves (2).
+
+\hspace*{12pt}(3) \textit{For each $v \in V(G)$, any two vertices in $\eta(v)$ are joined by a path
+of $G' \setminus \eta(E(G))$ with all its vertices in $\eta(v)$.}
+
+Let $R$ be a realization of $P(G') \setminus \eta(E(G))$ that realizes $\eta$, and let $D$ be the
+component of $R$ with vertex set $\eta(v)$. Each edge of $R$ joins two vertices $a, b$ that are
+adjacent in $\delta_{e'}$ for some $e' \in E(G') - \eta(E(G))$, where
+$\delta_{e'} \in \Delta'(e') = \{N_{V(e')}, K_{V(e')}\}$. Since $N_{V(e')}$ has no edges,
+$\delta_{e'} = K_{V(e')}$, and so $a$ and $b$ are the two ends of $e'$. Thus each edge of $D$ may be
+replaced by an edge of $G' \setminus \eta(E(G))$ with the same ends, and (3) follows since $D$ is
+connected.
+
+Now for each $v \in V(G)$ choose a spanning tree $F_v$ of the subgraph of
+$G' \setminus \eta(E(G))$ with vertex set $\eta(v)$ and with all the edges of
+$G' \setminus \eta(E(G))$ that have both ends in $\eta(v)$. It exists by (3). The ends of each
+$\eta(e)$ lie in sets $\eta(v)$, as in the proof of (1). Let $G''$ be the subgraph of $G'$ with
+vertex set the union of the sets $\eta(v)$ $(v \in V(G))$, and with edge set $\eta(E(G))$ together
+with the edges of all the trees $F_v$. Contract the edges of every $F_v$. Each $\eta(v)$ becomes a
+single vertex, and we identify it with $v$. Then distinct edges of $G$ give distinct edges $\eta(e)$,
+by (iii), and by (1) and (2) each $\eta(e)$ becomes an edge with the same ends as $e$. So the graph
+obtained is isomorphic to $G$, and $G$ is isomorphic to a minor of
+$G'$.\fixnote{fix:9.1-1.5-proof-added}{The paper states without proof that simulation of $P(G)$ in
+$P(G')$ gives a minor, and that $P(G)$ satisfies the hypotheses of (9.1). The argument above is
+the one used in the formalization.}}
+
+A second application of (9.1) will be important in a future paper [11], and it is convenient to deal with that application here rather than to redefine all the apparatus of patchworks in that paper. A surface is a compact 2-manifold without boundary. A painting in a surface $\Sigma$ is a pair $(U, N)$, where $U \subseteq \Sigma$ is closed and $N \subseteq U$ is finite, such that
+
+\hspace*{12pt}(i) $U - N$ has only finitely many arc-wise connected components, called \textit{cells}
+
+\hspace*{12pt}(ii) for each cell $e$, its closure $\bar{e}$ is homeomorphic to a closed disc, and $\bar{e} \cap N = \bar{e} - e$ is a finite subset of $bd(\bar{e})$.
+
+From (9.1) we deduce
+
+\stmt
+(9.2) \textit{Let $\Sigma$ be a surface, let $n \ge 0$, and let $\Omega$ be a well-quasi-order. For $i \ge 1$ let $(U_i, N_i, \pi_i, \mu_i, \phi_i)$ be such that}
+
+\hspace*{12pt}(i) \textit{$(U_i, N_i)$ is a painting in $\Sigma$ with set of cells $E_i$, say, and $\pi_i$ is a march in $N_i$}
+
+\hspace*{12pt}(ii) \textit{for each $e \in E_i$, $\mu_i(e)$ is a march with $\bar{\mu}_i(e) = \bar{e} - e$, and $\phi_i(e) \in E(\Omega)$}
+
+\hspace*{12pt}(iii) \textit{the rooted hypergraph $G_i$ with $V(G_i) = N_i$, $E(G_i) = E_i$, with the natural incidence relation and $\pi(G_i) = \pi_i$, has tree-width $\le n$.}
+
+\textit{Then there exist $i' > i \ge 1$ and a drawing $\Xi$ of a forest in $\Sigma$ with vertex set $N_{i'}$, and a function $\sigma$ with domain $N_i \cup E_i$, such that}
+
+\hspace*{12pt}(a) \textit{every edge of $\Xi$ is a subset of a cell of $(U_{i'}, N_{i'})$}
+
+\hspace*{12pt}(b) \textit{for each $v \in N_i$, $\sigma(v)$ is a component of $\Xi$, and for each $e \in E_i$, $\sigma(e) \in E_{i'}$}
+
+\hspace*{12pt}(c) \textit{for distinct $e_1, e_2 \in E_i$, $\sigma(e_1) \ne \sigma(e_2)$, and for \fix{distinct} $v_1, v_2 \in N_i$, $\sigma(v_1)$ and $\sigma(v_2)$ are disjoint}\fixnote{fix:9.2}{The word ``distinct'' is missing. For $v_1=v_2$ the condition asks that the nonempty set $\sigma(v_1)$ be disjoint from itself. For the one-node painting with $U=N=\{p\}$, no cells and empty marches, which has tree-width $0$, clause (b) gives $p$ a nonempty $\sigma(p)$, so (c) fails as printed.}
+
+\hspace*{12pt}(d) \textit{for each $v \in N_i$ and $e \in E_i$, no edge of $\sigma(v)$ intersects $\sigma(e)$}
+
+\hspace*{12pt}(e) \textit{for each $e \in E_i$, $|\bar{e} - e| = |\overline{\sigma(e)} - \sigma(e)| = k$, say, and for $1 \le j \le k$ the $j$th term of $\mu_{i'}(\sigma(e))$ is a vertex of $\sigma(v)$ where $v$ is the $j$th term of $\mu_i(e)$}
+
+\hspace*{12pt}(f) \textit{$\pi_i$ and $\pi_{i'}$ have the same length $k$, say, and for $1 \le j \le k$ the $j$th term of $\pi_{i'}$ is a vertex of $\sigma(v)$ where $v$ is the $j$th term of $\pi_i$}
+
+\hspace*{12pt}(g) \textit{for each $e \in E_i$, $\phi_i(e) \le \phi_{i'}(\sigma(e))$.}

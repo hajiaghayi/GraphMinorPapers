@@ -1,0 +1,32 @@
+\origpage{49}{N. Robertson, P.D. Seymour / Journal of Combinatorial Theory, Series B 89 (2003) 43--76}
+\noindent of $\mathscr{S}$ in $\Sigma$ is a function $\alpha$ with domain $\mathscr{S} \cup V(\mathscr{S})$, such that (writing $\alpha(A, \Omega)$ for $\alpha((A, \Omega)))$:
+
+\hspace*{12pt}$\bullet$ for $1 \le i \le k$, $\alpha(A_i, \Omega_i)$ is a closed disc $\Delta_i \subseteq \Sigma$, and $\alpha(x) \in bd(\Delta_i)$ for each $x \in \bar{\Omega}_i$,
+
+\hspace*{12pt}$\bullet$ for $1 \le i < j \le k$, if $x \in \Delta_i \cap \Delta_j$ then $x = \alpha(v)$ for some $v \in \bar{\Omega}_i \cap \bar{\Omega}_j$,
+
+\hspace*{12pt}$\bullet$ for all distinct $x, y \in V(\mathscr{S})$, $\alpha(x) \ne \alpha(y)$,
+
+\hspace*{12pt}$\bullet$ for $1 \le i \le k$, $\Omega_i$ is mapped by $\alpha$ to a natural order of $\alpha(\bar{\Omega}_i)$ from $bd(\Delta_i)$.
+
+An arrangement is \textit{proper} if $\Delta_i \cap \Delta_j = \emptyset$ for all $1 \le i < j \le k$ such that $|\bar{\Omega}_i|, |\bar{\Omega}_j| > 3$. A society $(G, \Omega)$ is a \textit{$\rho$-vortex}, where $\rho \ge 0$ is an integer, if for all distinct $u, v \in \bar{\Omega}$ there do not exist $\rho + 1$ mutually vertex-disjoint paths of $G$ between $I \cup \{u\}$ and $J \cup \{v\}$, where $I$ denotes the set of vertices in $\bar{\Omega}$ after $u$ and before $v$ and $J$ is the set after $v$ and before $u$, in the natural sense (so $(I \cup \{u\}, J \cup \{v\})$ is a partition of $\bar{\Omega}$). A segregation $\mathscr{S}$ is of \textit{type $(\rho, \kappa)$}, where $\rho, \kappa \ge 0$ are integers, if $|\bar{\Omega}| > 3$ for at most $\kappa$ members $(A, \Omega)$ of $\mathscr{S}$, and each such member is a $\rho$-vortex.
+
+Let $L$ be a graph, and let $\mathscr{T}^*$ be a tangle in a graph $G$. We say that $\mathscr{T}^*$ \textit{controls an $L$-minor of $G$} if there is a function $\alpha$, with domain $V(L) \cup E(L)$, such that
+
+\hspace*{12pt}$\bullet$ for each $v \in V(L)$, $\alpha(v)$ is a non-null connected subgraph of $G$, and for all distinct $u, v \in V(L)$, $\alpha(u)$ and $\alpha(v)$ are vertex-disjoint,
+
+\hspace*{12pt}$\bullet$ for each $e \in E(L)$ with distinct ends $u, v$, $\alpha(e) \in E(G)$ with one end in $V(\alpha(u))$ and the other in $V(\alpha(v))$,
+
+\hspace*{12pt}$\bullet$ for every loop $e \in E(L)$ with end $v$, $\alpha(e) \in E(G) \setminus E(\alpha(v))$ with both ends in $V(\alpha(v))$,
+
+\hspace*{12pt}$\bullet$ for all distinct $e, f \in E(L)$, $\alpha(e) \ne \alpha(f)$,
+
+\hspace*{12pt}$\bullet$ there is no $(A, B) \in \mathscr{T}^*$ of order $< |V(L)|$ and $v \in V(L)$ such that $V(\alpha(v)) \subseteq V(A)$.
+
+If $Z \subseteq V(G)$, we denote the graph obtained by deleting $Z$ by $G \setminus Z$. If $\mathscr{T}$ is a tangle in $G$ of order $\theta$ and $Z \subseteq V(G)$ with $|Z| < \theta$, we denote by $\mathscr{T} \setminus Z$ the set of all separations $(A', B')$ of $G \setminus Z$ of order $<\theta - |Z|$ such that there exists $(A, B) \in \mathscr{T}$ with $Z \subseteq V(A \cap B)$, $A \setminus Z = A'$ and $B \setminus Z = B'$. It is shown in Theorem 8.5 of [6] that $\mathscr{T} \setminus Z$ is a tangle in $G \setminus Z$ of order $\theta - |Z|$.
+
+If $\mathscr{T}$ is a tangle in $G$, a segregation $\mathscr{S}$ of $G$ is said to be \textit{$\mathscr{T}$-central} if for all $(A, \Omega) \in \mathscr{S}$ there is no $(A', B') \in \mathscr{T}$ with $B' \subseteq A$. Now we can state our main result.
+
+\textbf{3.1.} \textit{For any graph $L$, there are integers $\kappa, \rho, \zeta \ge 0$ and $\theta \ge 1$ with the following property. Let $\mathscr{T}$ be a tangle of order $\ge \theta$ in a graph $G$, controlling no $L$-minor of $G$. Then there exists $Z \subseteq V(G)$ with $|Z| \le \zeta$, and a $\mathscr{T} \setminus Z$-central segregation of $G \setminus Z$ of type $(\rho, \kappa)$ which has a proper arrangement in some surface in which $L$ cannot be drawn.}
+
+In the remainder of this section we shall show that 3.1 implies 1.3, by means of 2.3; and then the rest of the paper is devoted to proving 3.1. To deduce 1.3 from 3.1 we need the following lemma.

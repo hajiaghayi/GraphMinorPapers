@@ -1,0 +1,33 @@
+\origpage{241}{GRAPH MINORS IV}
+If $V$ is a finite set we denote by $K_V$ the complete graph on $V$, that is, the simple graph with vertex set $V$ and edge set the set of all subsets of $V$ of cardinality 2, with the natural incidence relation. A \textit{grouping} in $V$ is a subgraph of $K_V$ every component of which is complete. A \textit{pairing} in $V$ is a grouping in $V$ every component of which has at most two vertices. If $K$ is a pairing in $V$, we say that $K$ \textit{pairs} $X, Y$ if $X, Y \subseteq V$ are disjoint and
+
+\hspace*{12pt}(i) every 2-vertex component of $K$ has one vertex in $X$ and the other in $Y$, and
+
+\hspace*{12pt}(ii) every vertex of $X \cup Y$ belongs to some 2-vertex component of $K$.
+
+A \textit{patch} in $V$ is a collection $\Delta$ of groupings in $V$, each with the same vertex set $V(\Delta) \subseteq V$. A patch $\Delta$ is \textit{free} if it contains every grouping in $V$ with vertex set $V(\Delta)$; and it is \textit{robust} if for every choice of $X, Y \subseteq V(\Delta)$ with $|X| = |Y|$ and $X \cap Y = \emptyset$, there is a pairing in $\Delta$ which pairs $X, Y$.
+
+Let $\Omega$ be a quasi-order. An $\Omega$-\textit{patchwork} is a quadruple $(G, \mu, \Delta, \phi)$, where
+
+\hspace*{12pt}(i) $G$ is a rooted hypergraph
+
+\hspace*{12pt}(ii) $\mu$ is a function with domain $\operatorname{dom}(\mu) \subseteq E(G)$; and for each $e \in \operatorname{dom}(\mu)$, $\mu(e)$ is a march with $\bar{\mu}(e) = V(e)$.
+
+\hspace*{12pt}(iii) $\Delta$ is a function with domain $E(G)$, and for each $e \in E(G)$, $\Delta(e)$ is a patch with $V(\Delta(e)) = V(e)$; and for each $e \in E(G) - \operatorname{dom}(\mu)$, $\Delta(e)$ is free
+
+\hspace*{12pt}(iv) $\phi$ is a function from $E(G)$ into $E(\Omega)$.
+
+The $\Omega$-patchwork is \textit{robust} if each $\Delta(e)$ ($e \in E(G)$) is robust. (This is automatic if $e \notin \operatorname{dom}(\mu)$, since free patches are robust.)
+
+If $V$ is a finite set, $N_V$ denotes the graph with vertex set $V$ and no edges. A \textit{realization} of an $\Omega$-patchwork $(G, \mu, \Delta, \phi)$ is a subgraph of $K_{V(G)}$ expressible in the form
+\begin{equation*}
+N_{V(G)} \cup \bigcup (\delta_e: e \in E(G))
+\end{equation*}
+where $\delta_e \in \Delta(e)$ for each $e \in E(G)$. The significance of robustness is that for robust $\Omega$-patchworks we can prove a form of Menger's theorem, as follows.
+
+\stmt
+(6.1) \textit{Let $P = (G, \mu, \Delta, \phi)$ be a robust $\Omega$-patchwork, let $X_1, X_2 \subseteq V(G)$, and let $k \ge 0$ be an integer. The following are equivalent:}
+
+\hspace*{12pt}(i) \textit{every separation $(G_1, G_2)$ of $G^-$ with $X_i \subseteq V(G_i)$ ($i = 1, 2$) has order $\ge k$}
+
+\hspace*{12pt}(ii) \textit{there is a realization of $P$ such that $k$ of its components have non-empty intersection with both $X_1$ and $X_2$}

@@ -1,0 +1,35 @@
+\origpage{182}{ROBERTSON AND SEYMOUR}
+For $1 \le i \le n$, we say $t_0 \in V(T)$ is a \textit{home} for $\mathscr{T}_i$ if for every $e \in E(T)$,
+\begin{equation*}
+\left( \bigcup_{t \in V(T_1)} \tau(t), \bigcup_{t \in V(T_2)} \tau(t) \right) \notin \mathscr{T}_i,
+\end{equation*}
+where $T_1, T_2$ are the components of $T \setminus e$ and $t_0 \in V(T_1)$.
+
+\hspace*{12pt}(1) \textit{For $t_0 \in T$ and $1 \le i < j \le n$, $t_0$ is not a home for both $\mathscr{T}_i$ and $\mathscr{T}_j$.}
+
+For let $e$ be an edge of $T$ making the $(\mathscr{T}_i, \mathscr{T}_j)$-distinction. Let $T_1, T_2$ be the components of $T \setminus e$, where the $(\mathscr{T}_i, \mathscr{T}_j)$-distinction $(A, B)$ is
+\begin{equation*}
+\left( \bigcup_{t \in V(T_1)} \tau(t), \bigcup_{t \in V(T_2)} \tau(t) \right).
+\end{equation*}
+Then $(A, B) \in \mathscr{T}_i$ and $(B, A) \in \mathscr{T}_j$, and so if $t_0$ is a home for $\mathscr{T}_i$ then $t_0 \notin V(T_1)$, and if $t_0$ is a home for $\mathscr{T}_j$ then $t_0 \notin V(T_2)$. Since $t_0 \in V(T_1 \cup T_2)$, $t_0$ is not a home for both $\mathscr{T}_i$ and $\mathscr{T}_j$, as required.
+
+For the moment, fix $i$ with $1 \le i \le n$. An edge $e \in E(T)$ is \textit{$i$-relevant} if the separations made by $e$ have order less than the order of $\mathscr{T}_i$. Let us direct each $i$-relevant edge $e$ so that
+\begin{equation*}
+\left( \bigcup_{t \in V(T_1)} \tau(t), \bigcup_{t \in V(T_2)} \tau(t) \right) \in \mathscr{T}_i,
+\end{equation*}
+where $T_1, T_2$ are the components of $T \setminus e$ and $V(T_2)$ contains the head of $e$. We observe that
+
+\hspace*{12pt}(2) \textit{$t_0 \in V(T)$ is a home for $\mathscr{T}_i$ if and only if every $i$-relevant edge of $T$ is directed towards $t_0$.}
+
+Let $H_i$ be the set of homes for $\mathscr{T}_i$.
+
+\hspace*{12pt}(3) \textit{$H_i \ne \emptyset$ and $H_i$ is the set of vertices of a subtree of $T$.}
+
+The second assertion follows from the first and (2). To show that $H_i \ne \emptyset$, it suffices (by an elementary property of trees) to show that for all $i$-relevant edges $e, e'$ of $T$, if $T_1, T_2$ are the components of $T \setminus e$ with the head of $e$ in $V(T_2)$, and $T'_1, T'_2$ are defined similarly, then $V(T_2) \cap V(T'_2) \ne \emptyset$. Now
+\begin{equation*}
+\left( \bigcup_{t \in V(T_1)} \tau(t), \bigcup_{t \in V(T_2)} \tau(t) \right) \in \mathscr{T}_i
+\end{equation*}
+and
+\begin{equation*}
+\left( \bigcup_{t \in V(T'_1)} \tau(t), \bigcup_{t \in V(T'_2)} \tau(t) \right) \in \mathscr{T}_i,
+\end{equation*}

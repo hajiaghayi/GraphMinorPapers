@@ -1,0 +1,22 @@
+\origpage{181}{GRAPH MINORS, X}
+Given a tie-breaker $\lambda$, a separation $(A, B)$ which distinguishes $\mathscr{T}_1$ from $\mathscr{T}_2$ is a \textit{$(\mathscr{T}_1, \mathscr{T}_2)$-distinction} if it has minimum $\lambda$-order of all separations which distinguish $\mathscr{T}_1$ from $\mathscr{T}_2$. From the first tie-breaker axiom, $(A, B)$ is unique, and we may speak of \textit{the} $(\mathscr{T}_1, \mathscr{T}_2)$-distinction. (Of course, different choices of the tie-breaker $\lambda$ result in different $(\mathscr{T}_1, \mathscr{T}_2)$-distinctions in general.) There is a $(\mathscr{T}_1, \mathscr{T}_2)$-distinction if and only if $\mathscr{T}_1, \mathscr{T}_2$ are distinguishable.
+
+\stmt
+(10.2) \textit{If $\mathscr{T}_1, \mathscr{T}_2$ are distinguishable tangles in $G$, the $(\mathscr{T}_1, \mathscr{T}_2)$-distinction is doubly $\lambda$-robust.}
+
+\textit{Proof.} Let $(A, B)$ be the $(\mathscr{T}_1, \mathscr{T}_2)$-distinction. Since $(B, A)$ is the $(\mathscr{T}_2, \mathscr{T}_1)$-distinction, it suffices to show that $(A, B)$ is $\lambda$-robust. Let $(C, D)$ be a separation of $A$, and suppose that both $(C, B \cup D)$ and $(D, B \cup C)$ have $\lambda$-order strictly smaller than that of $(A, B)$. Then $(C, B \cup D)$, $(D, B \cup C)$ have order at most that of $(A, B)$ and hence less than the orders of $\mathscr{T}_1$ and $\mathscr{T}_2$. Since $(A, B) \in \mathscr{T}_1$ it follows that $(C, B \cup D) \in \mathscr{T}_1$ and $(D, B \cup C) \in \mathscr{T}_1$. Since $(A, B)$ is the $(\mathscr{T}_1, \mathscr{T}_2)$-distinction it follows that $(B \cup D, C) \notin \mathscr{T}_2$ and $(B \cup C, D) \notin \mathscr{T}_2$, and hence $(C, B \cup D)$, $(D, B \cup C) \in \mathscr{T}_2$. But $(B, A) \in \mathscr{T}_2$, and $B \cup C \cup D = G$, contrary to the second tangle axiom. Thus one of $(C, B \cup D)$, $(D, B \cup C)$ has $\lambda$-order at least that of $(A, B)$, and hence $(A, B)$ is $\lambda$-robust, as required. $\square$
+
+\stmt
+(10.3) \textit{Let $\mathscr{T}_1, \dots, \mathscr{T}_n$ be mutually distinguishable tangles in a hypergraph $G$ with $n \ge 1$, and let $\lambda$ be a tie-breaker. Then there is a tree-decomposition $(T, \tau)$ of $G$, where $V(T) = \{t_1, \dots, t_n\}$, with the following properties:}
+
+\hspace*{12pt}(i) \textit{For every $e \in E(T)$ and for $1 \le i \le n$, if $T_1, T_2$ are the components of $T \setminus e$ and $t_i \in V(T_1)$ then}
+\begin{equation*}
+\left( \bigcup_{t \in V(T_1)} \tau(t), \bigcup_{t \in V(T_2)} \tau(t) \right) \notin \mathscr{T}_i.
+\end{equation*}
+\hspace*{12pt}(ii) \textit{For all $i \ne j$ with $1 \le i, j \le n$, let $e$ be the edge of the path of $T$ between $t_i$ and $t_j$ making separations of smallest $\lambda$-order; then these separations are the $(\mathscr{T}_i, \mathscr{T}_j)$- and $(\mathscr{T}_j, \mathscr{T}_i)$-distinctions.}
+
+\textit{Proof.} For $i \ne j$ with $1 \le i, j \le n$, there is a $(\mathscr{T}_i, \mathscr{T}_j)$-distinction. Each of these separations is doubly $\lambda$-robust by (10.2), and so by (9.4) no two of them cross. By (9.1) there is a tree-decomposition $(T, \tau)$ of $G$ such that
+
+\hspace*{12pt}(i) for $1 \le i, j \le n$ with $i \ne j$, a unique edge of $T$ makes the $(\mathscr{T}_i, \mathscr{T}_j)$-distinction
+
+\hspace*{12pt}(ii) for every $e \in E(T)$, there exist $i \ne j$ with $1 \le i, j \le n$ such that $e$ makes the $(\mathscr{T}_i, \mathscr{T}_j)$- and $(\mathscr{T}_j, \mathscr{T}_i)$-distinctions.

@@ -1,0 +1,11 @@
+\origpage{43}{GRAPH MINORS. IX}
+\origfig{figures/fig1}{195bp}{\textsc{Figure} 1}
+
+\sectionhead{2. Two Crossing Paths}
+
+The case when $(G, \Omega)$ has no non-null crooked transaction is of special importance, and in essence has previously been characterized [3-6]. However, the methods of this paper give a new proof of the characterization which is simpler than those already published, and in this section we give this proof. This is not much of a digression from the proof of the main theorem, because we need the lemmas that we give here for the main proof in any case.
+
+If $P$ is a path in a graph $G$ and $Z \subseteq V(G)$ with $Z \cap V(P) = \emptyset$, we say that $P$ \textit{avoids} $Z$. We denote by $G \setminus F$ the graph obtained from $G$ by deleting $F$. (Here $F$ may be a vertex or a set of vertices, or an edge or a set of edges.) We say that $Z$ \textit{catches} $G$ if $Z \subseteq V(G)$ and $Z \cap V(G') \ne \emptyset$ for every component $G'$ of $G$.
+
+\stmt
+(2.1) \textit{Let $G$ be a simple graph and let $Z \subseteq V(G)$. Let $s, t \in V(G)$ be distinct and such that there is a path between $s$ and $t$ avoiding $Z$. Choose a subgraph $H$ of $G$ maximal such that $Z$ catches $H$, and there is a path of $G$ between $s$ and $t$ avoiding $V(H)$. Let $K = G \setminus V(H)$, and let $P$ be a path of $K$ between $s$ and $t$. Then either $P = K$, or there is a separation $(G_1, G_2)$ of $G$ with $\{s, t\} \subseteq V(G_1)$, $|V(G_1 \cap G_2)| = 2$, $E(P \cap G_2) \ne \emptyset$ (and hence $G_1 \cap G_2 \subseteq P$), $H \subseteq G_1$, and $V(G_1) \ne V(G)$.}

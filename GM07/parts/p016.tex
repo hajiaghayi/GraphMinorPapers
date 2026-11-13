@@ -1,0 +1,20 @@
+\origpage{227}{GRAPH MINORS. VII}
+Moreover, $\theta^{-1}(K)$ is a matching in $\Sigma'$; and it has at most $3(2a + b + c - 1)$ edges, by (2.4). Let
+\begin{align*}
+M_1 &= \{\psi(l(z)) \colon z \in V(G) \cap bd(\Sigma)\} \\
+M_2 &= \theta^{-1}(V(G) \cap bd(\Sigma)) - M_1 \\
+M_3 &= V(\theta^{-1}(G)) \cap bd(\Sigma') - (M_1 \cup M_2).
+\end{align*}
+Hence $M_1$, $M_2$, $M_3$ are mutually disjoint and have union $V(\theta^{-1}(G)) \cap bd(\Sigma')$.
+
+By (4.4), there is a forest $H_1$ in $\Sigma$, homotopic to $H$, such that $U(H_1) \cap U(L) \subseteq bd(\Sigma)$ and each member of $M_2$ is an isolated vertex of $\theta^{-1}(H_1)$. Let $H_2$ be the forest in $\Sigma'$ obtained from $\theta^{-1}(H_1)$ by deleting $M_2$. Then
+\begin{equation*}
+|V(H_2) \cap bd(\Sigma')| = |V(H_1) \cap bd(\Sigma)| \le 2k
+\end{equation*}
+since $U(H_1) \cap U(L) \subseteq bd(\Sigma)$. Thus by (3.6) there is a forest $H_3$ in $\Sigma'$, homoplastic to $H_2$, such that $|U(H_3) \cap U(\theta^{-1}(K))| \le w$. Since each edge of $\theta^{-1}(K)$ passes through at least $w$ vertices of $\theta^{-1}(G)$, we may choose $H_3$ so that in addition $U(H_3) \cap U(\theta^{-1}(K)) \subseteq V(\theta^{-1}(G))$. Let $H_4 = (U(H_3) \cup M_2, V(H_3) \cup M_2)$; then $H_4$ is homoplastic to $\theta^{-1}(H_1)$, and $|U(H_4) \cap U(\theta^{-1}(K))| \le w$, and each member of $M_2$ is an isolated vertex of $H_4$. Let $H_5 = \theta(H_4)$; then by (4.5) $H_5$ is a forest in $\Sigma$ homoplastic to $H_1$ and hence to $H$, and $U(H_5) \cap U(L) \subseteq bd(\Sigma)$, and $U(H_5) \cap U(K) \subseteq V(G)$, and every member of $M_2$ is an isolated vertex of $\theta^{-1}(H_5)$. Let $H_6 = (U(H_5) \cup V(G), V(H_5) \cup V(G))$. Since $H_6$ is homoplastic in $\Sigma$ to $H$, we may replace $H$ by $H_6$, for if the result holds for $H_6$ then it holds for $H$. In summary, then, we may assume that
+
+\hspace*{12pt}(1) \textit{$U(H) \cap U(J) \subseteq V(G) \subseteq V(H)$, there are at most $w$ non-isolated vertices of $H$ in $U(K)$, and for each $z' \in V(\theta^{-1}(H)) \cap bd(\Sigma')$, if $z'$ is not an isolated vertex of $\theta^{-1}(H)$ then $z' = \psi(l(z))$ for some $z \in V(G) \cap bd(\Sigma)$.}
+
+Now $\phi^{-1}(H)$ is a forest in $\Delta$, and by (1), $V(\phi^{-1}(H)) \cap bd(\Delta) = V(\phi^{-1}(G) \cap bd(\Delta))$. If $H'$ is a forest in $\Delta$ homoplastic in $\Delta$ to $\phi^{-1}(H)$, then $\phi(H')$ is a forest in $\Sigma$ homoplastic in $\Sigma$ to $H$ by (4.5). Thus, to show that $H$ is $G$-feasible it suffices to show that $\phi^{-1}(H)$ is $\phi^{-1}(G)$-feasible. To do so we use (4.1).
+
+Let $F$ be a $\phi^{-1}(G)$-normal proper $I$-arc of $\Delta$ with ends $s$, $t$, and let $F^* = F - \{s, t\}$. Let $C_1$, $C_2$ be the components of $bd(\Delta) - \{s, t\}$, and let $\Lambda$ be the set of vertex sets of all components of $\phi^{-1}(H)$ which intersect both $C_1$ and $C_2$ and contain neither $s$ nor $t$. By (4.1), it suffices to show that $|V(\phi^{-1}(G)) \cap F^*| \ge |\Lambda|$, that is, $|V(G) \cap \phi(F^*)| \ge |\Lambda|$.

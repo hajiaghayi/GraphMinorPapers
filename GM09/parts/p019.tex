@@ -1,0 +1,18 @@
+\origpage{58}{ROBERTSON AND SEYMOUR}
+For an integer $t$ with $0 \le t \le 2$, let $\mathbf{S}_t$ be the following statement.
+
+\textit{Statement} $\mathbf{S}_t$. \textit{The society $(G, \Omega)$ has a transaction $\mathcal{P}_t$ with $|\mathcal{P}_t| \ge 3p + 8 - t(p + 4)$ and with at most $2 - t$ peripheral separating members. Moreover, every separating member of $\mathcal{P}_t$ is in $\mathcal{P}$, and every peripheral separating member of $\mathcal{P}_t$ is peripheral in $\mathcal{P}$.}
+
+Now $\mathbf{S}_0$ is true, with $\mathcal{P}_0 = \mathcal{P}$. We shall show that for $t = 0$ or $t = 1$, if $\mathbf{S}_t$ is true then $\mathbf{S}_{t+1}$ is true.
+
+Put $|\mathcal{P}_t| = n$, and let $\mathcal{P}_t = \{P_1, \dots, P_n\}$; let $P_i$ have ends $a_i \in A$, $b_i \in B$ ($1 \le i \le n$), where $(A, B)$ is a fence for $\mathcal{P}_t$, and choose this lettering so that $(a_n, a_{n-1}, \dots, a_1, b_1)$ is clockwise. Now if $\mathcal{P}_t$ has no peripheral separating members then we may set $\mathcal{P}_{t+1} = \mathcal{P}_t$ and so $\mathbf{S}_{t+1}$ is true. We assume then without loss of generality that $P_1$ is peripheral in $\mathcal{P}_t$ and is separating. Thus $P_1 \in \mathcal{P}$ and $P_1$ is peripheral in $\mathcal{P}$. If one of $P_2, \dots, P_{p+5}$ is non-separating (say $P_j$), then we may set $\mathcal{P}_{t+1}$ to be $\{P_j, P_{p+6}, P_{p+7}, \dots, P_n\}$. We assume then that $P_1, \dots, P_{p+5}$ are all separating and hence all in $\mathcal{P}$. It follows that $P_1, \dots, P_{p+5}$ are in order and that, by (b), none of them has an internal vertex in $\bar{\Omega}$.
+
+Now from $\mathbf{S}_t$, $P_1$ is peripheral in $\mathcal{P}$, and hence from (9), $\Omega(a_1, b_1) = \emptyset$. By (4), $a_1$ and $b_1$ are not adjacent, and so we may choose $r \in V(P_1)$ with $r \ne a_1, b_1$. Let $\Omega_0$ be the cyclic permutation in $V(G)$ with $\bar{\Omega}_0 = \bar{\Omega} \cup \{r\}$ and $\Omega_0 \mid \bar{\Omega} = \Omega$, such that $(a_1, r, b_1)$ is $\Omega_0$-clockwise. Then $|\bar{\Omega}_0| > |\bar{\Omega}|$, and so from the maximality of $|\bar{\Omega}|$ the theorem is true for $(G, \Omega_0)$. But $(G, \Omega)$ has sophistication $\ge 3p + 8$ and hence so does $(G, \Omega_0)$. Therefore $(G, \Omega_0)$ has a crooked transaction of cardinality $p$.
+
+Let $(G_1, G_2)$ be a separation of $G$ with $V(G_1 \cap G_2) = V(P_{p+5})$, $\Omega(a_{p+5}, b_{p+5}) \subseteq V(G_1)$, and $\Omega(b_{p+5}, a_{p+5}) \subseteq V(G_2)$. Then $P_{p+6}, \dots, P_n$ are disjoint from $G_1$. By applying (5.5) to the transaction $\{P_1, \dots, P_{p+5}\}$ in $(G, \Omega)$ (which is possible by (9)) we deduce that there is a non-separating path $P'$ of $(G, \Omega)$ with $P' \subseteq G_1$. Thus we may set $\mathcal{P}_{t+1} = \{P', P_{p+6}, \dots, P_n\}$ and $\mathbf{S}_{t+1}$ is true. This completes the proof that $\mathbf{S}_{t+1}$ is true.
+
+We deduce that $\mathbf{S}_2$ is true. But every peripheral member of $\mathcal{P}_2$ is non-separating and $|\mathcal{P}_2| \ge p$, and so $(G, \Omega)$ has a crooked transaction with cardinality $p$, by (4.1) and (3.4). This is a contradiction, and completes the proof of the theorem. $\square$
+
+\sectionhead{7. \textsc{Some} \textsc{Special} \textsc{Transactions}}
+
+The remainder of the paper is devoted to proving certain lemmas which will make the application of (6.1) easier in future papers. (6.1) tells us (roughly) that either $(G, \Omega)$ has sophistication at most $3p + 7$ or it has a crooked transaction of cardinality $p$. In applications it is useful to know

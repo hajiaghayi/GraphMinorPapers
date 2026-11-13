@@ -1,0 +1,24 @@
+\origpage{347}{N. Robertson, P.D. Seymour / Journal of Combinatorial Theory, Series B 92 (2004) 325--357}
+\noindent heart of $(P/W, \mathcal{L})$. To show this, it suffices to show that if $A \in \mathcal{L}'$ and $K$ is a grouping with $V(K) = \bar{\pi}(A) \setminus W$, then $K$ is feasible in $(P/W)|(A/W)$ if and only if $K \cup N_W$ is feasible in $P|A$. But this follows from 7.1, since $(P/W)|(A/W) = (P|A)/W$, and $P|A$ is free. Hence $P'/W$ is a heart of $(P/W, \mathcal{L})$ as claimed. Since $\mathcal{F}$ contains a heart of $(P/W, \mathcal{L})$, we may choose $P'$ such that $P'/W \in \mathcal{F}$. But $dom(\mu') = E(G')$ since no edge of $G'$ is an edge of $G$, and so $P' \in \mathcal{F}'$. This proves that the third statement holds, as required. $\square$
+
+Incidentally, the hypothesis that $P$ be free in 7.2 is not really necessary, but it makes the proof slightly easier, and our only application is to a free patchwork anyway. From 7.2 and 6.3 we obtain another variant of 3.1, as follows.
+
+\textbf{7.3.} \textit{Let $\Omega$ be a well-quasi-order, let $\mathcal{F}$ be a well-behaved set of patchworks, and let $\theta \ge 1$. Let $P_i = (G_i, \mu_i, \Delta_i, \phi_i)$ ($i = 1, 2, \ldots$) be a countable sequence of free rootless $\Omega$-patchworks. Suppose that for each tangle $\mathcal{T}$ in $G_i$ of order $\ge \theta$, there exist $W \subseteq V(G_i)$ with $|W| < \theta$ and a fine rooted location $\mathcal{L}$ in $G/W$, such that $\mathcal{L}$ is linked to $\mathcal{T}/W$, and $\mathcal{F}$ contains a heart of $((G_i, \mu_i, \Delta_i)/W, \mathcal{L})$. Then there exist $j > i \ge 1$ such that $P_i$ is simulated in $P_j$.}
+
+\textbf{Proof.} Let $\mathcal{F}'$ be as in 7.2. We claim that the hypotheses of 6.3 are satisfied (with $\mathcal{F}$ replaced by $\mathcal{F}'$). For let $\mathcal{T}$ be a tangle in $G_i$ of order $\ge \theta$. Let $W$, $\mathcal{L}$ be as in the hypotheses of 7.3, and choose $\mathcal{L}'$ as in the proof of 7.2. Thus the hypotheses of 6.3 hold (with $\mathcal{L}$ replaced by $\mathcal{L}'$) and the result follows from 6.3. $\square$
+
+\sectionhead{8. Surfaces and paintings}
+
+Now we come to the second part of the paper, where we shall apply 7.3 to deduce Wagner's conjecture from a theorem about hypergraphs drawn on a fixed surface. In this paper, by a \textit{surface} we mean a compact connected 2-manifold with (possibly null) boundary. If $\Sigma$ is a surface, its boundary is denoted by $bd(\Sigma)$, and each component of $bd(\Sigma)$ is a \textit{cuff} of $\Sigma$. An \textit{O-arc} in $\Sigma$ is a subset of $\Sigma$ homeomorphic to a circle; every cuff is thus an \textit{O-arc}. A \textit{line} is a subset homeomorphic to the closed interval [0,1]. If $X \subseteq \Sigma$ the closure of $X$ is denoted by $\bar{X}$ and $\bar{X} \setminus X$ by $\tilde{X}$.
+
+A \textit{painting} $\Gamma$ in a surface $\Sigma$ is a triple $(U, N, \gamma)$, where $U \subseteq \Sigma$ is closed, $N \subseteq U$ is finite, and
+
+\hspace*{12pt}$\bullet$ $bd(\Sigma) \subseteq U$, and $U \setminus N$ has only finitely many arc-wise connected components, called \textit{cells},
+
+\hspace*{12pt}$\bullet$ for each cell $c$, $\bar{c}$ is a closed disc and $|\tilde{c}| = 2$ or 3 and $\bar{c} \cap N = \tilde{c} \subseteq bd(\bar{c})$,
+
+\hspace*{12pt}$\bullet$ for each cell $c$, if $c \cap bd(\Sigma) \ne \emptyset$ then $|\tilde{c}| = 2$, and $\bar{c} \cap bd(\Sigma)$ is a line and its ends are the members of $\tilde{c}$,
+
+\hspace*{12pt}$\bullet$ for each cell $c$, $\gamma(c)$ is a march $\mu$ with $\bar{\mu} = \tilde{c}$,
+
+We write $U(\Gamma) = U$, $N(\Gamma) = N$, $\gamma_\Gamma = \gamma$, and denote the set of cells of $\Gamma$ by $\mathcal{C}(\Gamma)$. The members of $N(\Gamma)$ are called \textit{nodes}. If $c \in \mathcal{C}(\Gamma)$ and $1 \le i \le |\tilde{c}|$, we call the $i$th term of $\gamma(c)$

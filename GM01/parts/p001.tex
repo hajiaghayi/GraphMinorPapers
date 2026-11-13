@@ -1,0 +1,45 @@
+\origpage{39}{}
+{\centering
+\medskip
+{\Large Graph Minors. I. Excluding a Forest\par}
+{\textsc{Neil Robertson and P. D. Seymour}$^*$\par}
+{\itshape Department of Mathematics, Ohio State University,\\
+231 W. 18th Ave, Columbus, Ohio 43210\par}
+{\itshape Communicated by the Editors\par}
+{Received May 3, 1982\par}
+}
+
+\begin{quote}
+The path-width of a graph is the minimum value of $k$ such that the graph can be
+obtained from a sequence of graphs $G_1,..., G_r$ each of which has at most $k+1$
+vertices, by identifying some vertices of $G_i$ pairwise with some of $G_{i+1}$ $(1\le i<r)$.
+For every forest $H$ it is proved that there is a number $k$ such that every graph with
+no minor isomorphic to $H$ has path-width $\le k$. This, together with results of other
+papers, yields a ``good'' algorithm to test for the presence of any fixed forest as a
+minor, and implies that if $P$ is any property of graphs such that some forest does
+not have property $P$, then the set of minor-minimal graphs without property $P$ is
+finite.
+\end{quote}
+
+\sectionhead{1. \textsc{Introduction}}
+
+Let $G$ be a graph. (All graphs in this paper are finite, and may have loops
+or multiple edges unless we state otherwise.) A sequence $X_1,..., X_r$ of subsets
+of $V(G)$ (the vertex set of $G$) is a \textit{path-decomposition} of $G$ if the following
+conditions are satisfied.
+\stmt
+\hspace*{24pt}(W1)\quad \textit{For every edge $e$ of $G$, some $X_i$ $(1\le i\le r)$ contains both ends
+of $e$.}
+\stmt
+\hspace*{24pt}(W2)\quad \textit{For $1\le i\le i'\le i''\le r$, $X_i\cap X_{i''}\subseteq X_{i'}$.}
+
+\noindent The \textit{path-width} of $G$ is the minimum value of $k\ge 0$ such that $G$ has a path-decomposition $X_1,..., X_r$ with $|X_i|\le k+1$ $(1\le i\le r)$.
+
+\noindent\hspace*{6pt}$H$ is a \textit{minor} of $G$ if $H$ can be obtained from $G$ by deleting some vertices
+and/or edges, and/or contracting some edges. The main theorem of this
+paper is the following:
+\stmt
+(1.1). \textit{For every forest $H$ there is an integer $w$ such that every graph with
+no minor isomorphic to $H$ has path-width $\le w$.}%
+\begingroup\renewcommand{\thefootnote}{$*$}%
+\footnotetext{Partially supported by National Science Foundation Grant MCS 8103440.}\endgroup

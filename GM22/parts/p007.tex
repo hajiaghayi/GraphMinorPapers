@@ -1,0 +1,28 @@
+\origpage{536}{N. Robertson, P. Seymour / Journal of Combinatorial Theory, Series B 102 (2012) 530--563}
+\textit{Subproof.} If there exists $z \in Z \setminus V(L)$, let $G' = G \setminus \{z\}$, and let $\Gamma' = \Gamma \setminus \{z\}$ if $z \in V(\Gamma)$ and $\Gamma' = \Gamma$ otherwise; then $L, \Gamma' \subseteq G'$ and $Z' \subseteq V(G')$ where $Z' = Z \setminus \{z\}$, and no subgraph of $G' \setminus \{v\}$ has the same effect on $Z'$ as $L$, contrary to (2). Thus $Z \subseteq V(L)$. Suppose next that there exists $e \in E(K) \setminus E(L)$. If $e \in E(\Gamma)$ then $e \cap \Delta_1 = \emptyset$ by (3), and moreover $L, \Gamma' \subseteq G \setminus \{e\}$ (where $\Gamma' = \Gamma \setminus \{e\}$ if $e \in E(\Gamma)$, and $\Gamma' = \Gamma$ otherwise), contrary to (2). Thus $E(K) \subseteq E(L)$, and similarly $V(K) \subseteq V(L)$ and so $K \subseteq L$. Consequently, $G = L \cup M$. The second claim follows from (1). This proves (4).
+
+\hspace*{12pt}(5) $|E(C_i)| \ge 2$ for $1 \le i \le h$.
+
+\textit{Subproof.} If $|E(C_i)| = 1$, let $X = V(L) \cap (\Delta_i \setminus bd(\Delta_i))$; then $L \setminus X$ has the same effect on $Z$ as $L$, and $v \notin V(L \setminus X)$, contrary to (1). This proves (5).
+
+\hspace*{12pt}(6) $L$ is vital for $Z$ in $G$.
+
+\textit{Subproof.} Let $L' \subseteq G$ have the same effect on $Z$ as $L$. By (4) (with $L$ replaced by $L'$), $L' \cup M = G$. Suppose that there exists $e \in E(L' \cap M)$. By (5), $e$ is not a loop, and $e$ is not incident with $v$, since $v \notin V(M)$. No end of $e$ is in $Z$, by (3). Hence no subgraph of $(G/e) \setminus \{v\}$ has the same effect on $Z$ as $L/e$ (we denote the contraction operation by $/$, if we interpret $Z$ as a subset of $V(G/e)$ in the natural way. But this contradicts (2). Consequently $E(L' \cap M) = \emptyset$, and so $E(L') = E(G) \setminus E(M)$. Since the same holds for $L$, we deduce that $E(L') = E(L)$.
+
+Suppose that there exists $u \in V(G) \setminus V(L')$. Since $L' \cup M = G$, it follows that $u \in V(M)$, and by (5), there is a non-loop edge $e$ of $M$ incident with $u$. Let $L''$ be obtained from $L'$ by adding $e$ and its ends $u, u'$ say. Now $u, u' \notin Z$ by (3), and so $L''$ has the same effect on $Z$ as $L'$ and hence as $L$. Yet $E(L'' \cap M) \ne \emptyset$, contrary to what we just proved. This shows that $V(L') = V(G)$, and hence $L' = L$, and therefore $L$ is vital. This proves (6).
+
+Let $\Gamma_1 = \Gamma \cap \Delta_1$.
+
+\hspace*{12pt}(7) \textit{At most $\frac{1}{2}(w + 1)$ components of $L \cap \Gamma_1$ meet $\Delta_{w+3}$.}
+
+\textit{Subproof.} Let $L_1, \ldots, L_t$ be components of $L \cap \Gamma_1$ meeting $\Delta_{w+3}$, and for $1 \le i \le t$ let $v_i \in V(L_i) \cap \Delta_{w+3}$. Let $1 \le i \le t$. Since $L$ is a forest there is a path of $L$ passing through $v_i$ with both ends of degree at most 1 in $L$, and hence with both ends in $Z$, by (6) and 2.2. Since $Z \subseteq V(K)$, it follows that there is a path $P$ of $L \cap \Gamma_1$ with $v_i \in V(P)$ and with both ends in $V(C_1)$. Since both subpaths of $P$ from $v_i$ to its ends meet $V(C_{w+2})$, $P$ contains two vertex-disjoint paths between $V(C_{w+2})$ and $V(C_1)$. Since this holds for all $i$ with $1 \le i \le t$, there are $2t$ mutually vertex-disjoint paths of $L \cap \Gamma_1$, each meeting $V(C_{w+2})$ and $V(C_1)$ and hence meeting all of $V(C_1), V(C_2), \ldots, V(C_{w+2})$. If $2t \ge w + 2$ then by 3.2 $G$ has tree-width $\ge w + 1$ contrary to (6) and 2.1. Thus $2t \le \delm{\omega}\fix{w} + 1$.\fixnote{fix:3.1-claim7}{The sentence before has ``if $2t \ge w + 2$'', and (7) says ``at most $\frac{1}{2}(w + 1)$''. In this paper $\omega$ is the sequence of roots of a rooted digraph.} This proves (7).
+
+Let $\Delta \subseteq \Sigma$ be a closed disc with $\Delta_1 \subseteq \Delta$, $U(\Gamma) \cap \Delta_1 = U(\Gamma) \cap \Delta$, and $U(\Gamma) \cap bd(\Delta) = V(C_1)$.
+
+\hspace*{12pt}(8) \textit{If $F$ is a $\Gamma$-normal proper line in $\Delta$ with $v \in F \cap V(\Gamma)$, there are fewer than $|F \cap V(\Gamma)|$ components of $L \cap \Gamma_1$ which meet $F \cap V(\Gamma)$.}
+
+\textit{Subproof.} Suppose that there are $|F \cap V(\Gamma)|$ such components. Then each vertex of $F \cap V(\Gamma)$ belongs to a different component of $L \cap \Gamma_1$. But there are $\ge 2h - 3 - 2w \ge \frac{1}{2}w + 1$ vertices of $F \cap V(\Gamma)$ in $\Delta_{w+3}$, because $v \in F \cap V(\Gamma) \cap \Delta_{w+3}$, and
+\begin{equation*}
+|V(C_i) \cap (F \cap V(\Gamma) \cap \Delta_{w+3})| = |F \cap U(C_i)| \ge 2
+\end{equation*}
+for $w + 3 \le i \le h$. Hence there are $\ge \frac{1}{2}w + 1$ components of $L \cap \Gamma_1$ meeting $\Delta_{w+3}$, contrary to (7). This proves (8).

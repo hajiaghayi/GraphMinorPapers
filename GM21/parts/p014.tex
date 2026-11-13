@@ -1,0 +1,22 @@
+\origpage{12}{}
+\noindent by splitting the vertices of $\Gamma$ which lie in $F$ in the natural way we obtain a new drawing $\Gamma'$ in $\Sigma'$. Provided that $\Gamma$ is loopless, this definition agrees with the definition of splitting a vertex discussed for general graphs in section 2.
+
+If $bd(\Sigma) = \emptyset$, a drawing $\Gamma$ in $\Sigma$ is \textit{2-cell} if every region of $\Gamma$ in $\Sigma$ is homeomorphic to an open disc. We need the following two well-known lemmas.
+
+\textbf{4.3} \textit{If $bd(\Sigma) = \emptyset$, a drawing $\Gamma$ in $\Sigma$ is 2-cell if and only if $V(\Gamma) \ne \emptyset$, $\Gamma$ is connected, and for every $O$-arc $F \subseteq \Sigma$ with $F \cap U(\Gamma) = \emptyset$, there is a closed disc $\Delta \subseteq \Sigma$ with $bd(\Delta) = F$.}
+
+\textbf{Proof.} The ``only if'' direction is obvious. For ``if'', let $r$ be a region of $\Gamma$ in $\Sigma$. Since $V(\Gamma) \ne \emptyset$ it follows that $r$ is not a sphere. If every $O$-arc $F \subseteq r$ bounds a closed disc in $r$, then $r$ is an open disc by [5, theorem (4.2)]. Suppose that $F \subseteq r$ is an $O$-arc which bounds no closed disc in $r$. From the hypothesis, $F$ bounds a closed disc $\Delta \subseteq \Sigma$, but $\Delta \not\subseteq r$, and so $\Delta \cap V(\Gamma) \ne \emptyset$. Since $F \cap U(\Gamma) = \emptyset$ and $\Gamma$ is connected it follows that $U(\Gamma) \subseteq \Delta$. If $\Sigma$ is not a sphere, there is a non-null-homotopic $O$-arc $F' \subseteq \Sigma$, and it can be chosen with $F' \cap \Delta = \emptyset$ since $\Delta$ is a disc; but then $F' \subseteq r$ contrary to the hypothesis. If $\Sigma$ is a sphere, let $\Delta'$ be the disc different from $\Delta$ bounded by $F$; then $\Delta' \subseteq r$, contrary to our assumption. In either case we have a contradiction, and so there is no such $F$, as required. $\square$
+
+We remind the reader of the following basic fact [1, theorem (1.7)].
+
+\textbf{4.4} \textit{If $bd(\Sigma) = \emptyset$, an $O$-arc $F \subseteq \Sigma$ bounds a closed disc in $\Sigma$ if and only if $F$ is null-homotopic in $\Sigma$.}
+
+Let $\Gamma$ be a drawing in $\Sigma$, and let $\mathcal{T}$ be a tangle in $\Gamma$. We say that $\mathcal{T}$ is \textit{respectful} if $\Gamma$ is connected and every $\Gamma$-normal $O$-arc $F \subseteq \hat{\Sigma}$ with $|F \cap V(\Gamma)| < ord(\mathcal{T})$ bounds a disc $\Delta \subseteq \hat{\Sigma}$ such that
+\begin{equation*}
+(\Gamma \cap \Delta, \overline{\Gamma \cap \hat{\Sigma} \setminus \Delta}) \in \mathcal{T}.
+\end{equation*}
+(If $\Sigma' \subseteq \Sigma$ is a surface, and $bd(\Sigma')$ is $\Gamma$-normal, we denote the drawing $(U(\Gamma) \cap \Sigma', V(\Gamma) \cap \Sigma')$ in $\Sigma'$ by $\Gamma \cap \Sigma'$.) If $\Delta$ is related to $F$ as above we write $\Delta = ins(F)$. If there is a respectful tangle in a drawing $\Gamma$ in $\Sigma$, then $\Gamma$ is automatically 2-cell in $\hat{\Sigma}$, by (4.3).
+
+The main result of this section is the following.
+
+\textbf{4.5} \textit{For every surface $\Sigma$ with $bd(\Sigma) = \emptyset$ and every integer $\theta' \ge 1$ there is an integer $\theta \ge 1$ such that, if $\Gamma$ is a drawing in $\Sigma$ with a tangle of order $\ge \theta$, and $\Gamma'$ is obtained from $\Gamma$ by deleting some vertices and edges, all incident with one region of $\Gamma$ in $\Sigma$, then $\Gamma'$ has a tangle of order $\ge \theta'$.}

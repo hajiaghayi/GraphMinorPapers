@@ -1,0 +1,28 @@
+\origpage{232}{ROBERTSON AND SEYMOUR}
+\noindent $x \in \Sigma$ and $A \subseteq \Sigma$ is non-empty, we define $d(x, A)$ to be $\min d(x, y)$, taken over all $y \in A$, and for any integer $t \ge 0$ we define
+\begin{equation*}
+Y_t(A) = \{x \in \Sigma : d(x, A) \le t\}.
+\end{equation*}
+\stmt
+(5.6) \textit{Let $\Sigma$ be a connected surface such that $\Sigma \not\cong \Sigma(0, 0, c)(c = 0, 1, 2)$, and let $G$ be a proper graph in $\Sigma$. Let $C$ be a cuff of $\Sigma$, and let $F_0$ be a $G$-normal $O$-arc surrounding $C$. Let $t$ be an integer with}
+\begin{equation*}
+|V(G) \cap F_0| \le t \le \frac{2}{9}\alpha(G) - 1.
+\end{equation*}
+\textit{Then $Y_t(F_0)$ is planar in $\Sigma + \hat{C}$.}
+
+\textit{Proof.} Let $Z$ be the closure of $Y_t(F_0)$. Then $Z$ is clearly the closure of the union of some of the regions of $G$, and so it suffices, by (5.5), to show that every $G$-normal $O$-arc $F \subseteq Z$ is null-homotopic in $\Sigma + \hat{C}$. Let $F$ be such an $O$-arc, and let the vertices of $G$ on $F$ be $v_1, \dots, v_r$, in order on $F$. For $1 \le i \le r$, let $P_i$ be a $G$-normal $[0, 1]$-arc with one end $v_i$ and the other end, $u_i$ say, in $F_0$, and with $|V(G) \cap P_i| \le t + 1$. (This exists since $d(v_i, F_0) \le t + 1$.) Let $A_1, \dots, A_r$ and $B_1, \dots, B_r$ be as in (5.4); where if $u_{i-1} \ne u_i$, choose $B_i$ to be a component of $F_0 - \{u_{i-1}, u_i\}$ with
+\begin{equation*}
+|V(G) \cap B_i| \le \frac{1}{2} |V(G) \cap F_0|.
+\end{equation*}
+Now for $1 \le i \le r$, $C_i = A_i \cup B_i \cup P_{i-1} \cup P_i$ is solid (by (1.6)), connected, and $G$-normal; and
+\begin{equation*}
+|V(G) \cap C_i| \le 0 + \frac{1}{2} |V(G) \cap F_0| + (t + 1) + (t + 1) \le \frac{5}{2}t + 2 < \alpha(G)
+\end{equation*}
+and so $C_i$ is near-planar. Suppose that $C'$ is a cuff surrounded by $C_i$. Then $C_i \subseteq \mathscr{A}_{(5/2)t + 2}(C')$, and $C_i \subseteq \mathscr{A}_{2t+1}(C)$, as is easily seen. But $(\frac{5}{2}t + 2) + (2t + 1) < \alpha(G)$ and so $C' = C$, by (5.3). Thus $C_i$ is near-planar, and surrounds no cuff except possibly $C$; and so $C_i$ is planar in $\Sigma + \hat{C}$. By (5.4) we deduce that $F$ is null-homotopic in $\Sigma + \hat{C}$, as required.
+
+If $\Sigma \cong \Sigma(a, b, c)$ where $3a + 3b + c \ge 3$, and $F$ is a null-homotopic $O$-arc, then there is a unique closed disc $\Delta \subseteq \Sigma$ with boundary $F$. If $x \in \Delta - F$ we say that $x$ is \textit{inside} $F$ (in $\Sigma$). If $F$ is an $O$-arc surrounding a cuff $C$ and $x \in \Sigma$, we say that $x$ is \textit{inside} $F$ in $\Sigma$ if it is inside $F$ in $\Sigma + \hat{C}$. If $X \subseteq \Sigma$, we say that $X$ is \textit{inside} $F$ if every $x \in X$ is inside $F$.
+
+\stmt
+(5.7) \textit{Let $\Sigma \cong \Sigma(a, b, c)$, where $3a + 3b + c \ge 3$, and let $G$ be a proper graph in $\Sigma$. Let $C$ be a cuff, and let $r \ge 0$ be an integer with $r \le \frac{2}{9}\alpha(G) - 1$. Then $\mathscr{A}_r(C)$ is planar in $\Sigma + \hat{C}$.}
+
+\textit{Proof.} Choose a $G$-normal $O$-arc $F$ surrounding $C$ with $|V(G) \cap F| \le r$,

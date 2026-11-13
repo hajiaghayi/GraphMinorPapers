@@ -1,0 +1,19 @@
+\origpage{73}{GRAPH MINORS. IX}
+For since $(C_1, C_2)$ is a 3-separation of $(C, \Omega)$, there exists $v \in V(C_1) - V(C_2)$. Since $C_1 \subseteq C$ and $V(C') \subseteq V(G_2)$ it follows that
+\begin{equation*}
+V(C_1) \cap V(C') \subseteq V(C) \cap V(G_2) = V(C_2)
+\end{equation*}
+by (11.8) and therefore $v \notin V(C')$. Hence $V(C) \neq V(C')$, and the result follows from (4).
+
+But (5) contradicts our initial choice of $\mathcal{D}$, and completes the proof. $\square$
+
+The pattern of a transaction $\mathcal{P}$ in $(G, \Omega)$ is the set $\{X(P): P \in \mathcal{P}\}$ where $X(P)$ denotes the set of ends of $P \in \mathcal{P}$.
+
+\stmt
+(11.10) \textit{Let $C$ be the core of a consolidation $\mathcal{D}$ of $(G, \Omega)$. For any $\Pi$, there is a transaction in $(G, \Omega)$ with pattern $\Pi$ if and only if there is such a transaction in $(C, \Omega)$.}
+
+\textit{Proof.} A jump is a path in $G$ with distinct ends, both in $V(C)$, and with no internal vertex in $V(C)$. If $Q$ is a jump then by (iii) and the last part of (11.7) there exists $(A, B) \in \mathcal{D}$ with $Q \subseteq A$, and hence its ends are adjacent in $C$; we define $f(Q)$ to be the 1-edge path of $C$ joining these ends. Every $\Omega$-path $P$ in $(G, \Omega)$ decomposes uniquely into a concatenation $Q_1 \cup \dots \cup Q_k$ of subpaths each of which are jumps; we define $f(P)$ to be the concatenation of $f(Q_1), \dots, f(Q_k)$. Then $f(P)$ is an $\Omega$-path in $C$. If $\mathcal{P} = \{P_1, \dots, P_p\}$ is a transaction in $(G, \Omega)$ we define $f(\mathcal{P})$ to be $\{f(P_1), \dots, f(P_p)\}$; then $f(\mathcal{P})$ is a transaction in $(C, \Omega)$ with the same pattern as $\mathcal{P}$. This proves the ``only if'' part of the lemma.
+
+For the ``if'' part we proceed as follows. For each edge $e$ of $C$, there exists $(A, B) \in \mathcal{D}$ with both ends of $e$ in $V(A \cap B)$; let $g(e)$ be a jump in $A$ between the ends of $e$. (This exists since $\mathcal{D}$ is a consolidation.) Note that $g(e_1)$ meets $g(e_2)$ only if $e_1, e_2 \in E(C)$ share an end. For, there are $(A_1, B_1)$, $(A_2, B_2) \in \mathcal{D}$ such that $e_i$ joins distinct vertices of $A_i \cap B_i$ and $g(e_i)$ is a jump in $A_i$ between these vertices, for $i = 1, 2$. If $(A_1, B_1) = (A_2, B_2)$ then $e_1, e_2$ share an end by (i). If not then $V(g(e_1) \cap g(e_2)) \subseteq V(A_1 \cap A_2) \subseteq V(C)$ by (11.7) and so, since $g(e_1)$ and $g(e_2)$ are jumps, any common vertices of $g(e_1)$ and $g(e_2)$ must be common ends of $g(e_1)$ and $g(e_2)$, and therefore also of $e_1, e_2$.
+
+For each $\Omega$-path $P$ of $(C, \Omega)$, the graph $\bigcup (g(e): e \in E(P))$ is connected, and so includes a path of $G$ between the ends of $P$. We define $g(P)$ to be such a path. For disjoint $\Omega$-paths $P_1, P_2$ of $(C, \Omega)$, the paths $g(P_1), g(P_2)$ of $G$ are also disjoint, for $g(e_1)$ meets $g(e_2)$ only if $e_1, e_2 \in E(C)$ share an end. Thus if $\mathcal{P} = \{P_1, \dots, P_p\}$ is a transaction in $(C, \Omega)$ then $\{g(P_1), \dots, g(P_p)\}$ is a transaction in $(G, \Omega)$ with the same pattern. This completes the proof. $\square$

@@ -1,0 +1,87 @@
+\origpage{320}{ROBERTSON AND SEYMOUR}
+\textit{Proof.} We use (4.6) to try the $n(n - 1) \cdots (n - p + 1)$ injections of $V(H)$ into $V(G)$, one by one (where $|V(G)| = n$ and $|V(H)| = p$).
+
+\stmt
+(4.8) \textit{For any graph $H$ there is a finite set $H_1, \dots, H_r$ of graphs such that for any graph $G$, $G$ has a minor isomorphic to $H$ if and only if $G$ topologically contains a graph isomorphic to one of $H_1, \dots, H_r$.}
+
+This is elementary. (We ``split'' every vertex of $H$ with valency $\ge 4$ into two adjacent vertices of valency $\ge 3$, repeatedly, in all possible ways.)
+
+\fix{We give the details. Valencies count a loop twice. Let $L$ be a graph with an edge $f$ whose ends
+$x, y$ are distinct and both have valency $\ge 3$, and let $K$ be obtained from $L$ by contracting
+$f$. The new vertex of $K$ has valency equal to the sum of the valencies of $x$ and $y$ minus 2, which
+is at least 4, and we say that $L$ is obtained from $K$ by \textit{splitting} it. Call a graph a
+\textit{split} of $H$ if it can be obtained from a graph isomorphic to $H$ by a sequence of such
+steps. Each step adds one vertex and one edge. It raises the sum of the valencies by 2, and the sum
+over all vertices $v$ of $\min(d(v), 3)$ by 3, where $d(v)$ is the valency of $v$. Since the second sum
+is at most the first, a split of $H$ arises after at most $2|E(H)|$ steps, and so it has at most
+$|V(H)| + 2|E(H)|$ vertices and at most $3|E(H)|$ edges. Hence there are only finitely many splits of
+$H$ up to isomorphism. Let $H_1, \dots, H_r$ contain one of each.
+
+If $G$ topologically contains a graph isomorphic to some $H_i$, then $G$ has a minor isomorphic to
+$H_i$, as observed above, and $H_i$ has a minor isomorphic to $H$, obtained by contracting edges.
+So $G$ has a minor isomorphic to $H$.
+
+Conversely, suppose that $G$ has a minor isomorphic to $H$. Then $G$ has a subgraph $J$ with
+vertex-disjoint subtrees $T_v$ $(v \in V(H))$ containing all vertices of $J$, such that the edges of
+$J$ in no $T_v$ correspond one-to-one to the edges of $H$, an edge of $H$ with ends $u, v$
+corresponding to an edge of $J$ with one end in $V(T_u)$ and the other in $V(T_v)$. (Take a subgraph
+of $G$ contractible to a graph isomorphic to $H$, and keep a spanning tree of each set of vertices
+that is contracted to one vertex, together with the edges that are not contracted.) Call the edges of
+$J$ in no $T_v$ the \textit{outer} edges, and their ends \textit{marks}. We change $J$ in three steps,
+keeping these properties, and keeping that $G$ topologically contains $J$.
+
+First, replace each $T_v$ that contains a mark by the smallest subtree of $T_v$ containing all marks
+in $T_v$, and each other $T_v$ by one of its vertices, and delete all other vertices of $J$. Now every
+leaf of a tree $T_v$ with at least two vertices is a mark, and so every vertex of such a tree has
+valency $\ge 2$ in $J$.
+
+Second, while some vertex $x$ of a tree $T_v$ with at least two vertices has valency 2, suppress $x$.
+This is possible, since $x$ is incident with an edge of $T_v$, and so with no loop. If both edges at
+$x$ are in $T_v$, the new edge joins two vertices of $T_v$, and we add it to $T_v - x$, which is then a
+tree. Otherwise $x$ is a leaf of $T_v$, the edges at $x$ are an edge of $T_v$ with other end $z$ and an
+outer edge $e$, and the new edge joins $z$ to the other end of $e$. We let it correspond to the same
+edge of $H$ as $e$, and replace $T_v$ by $T_v - x$. In both cases the valencies of the other vertices
+do not change. Each suppression removes a vertex, and so this stops. Then every vertex of a tree $T_v$
+with at least two vertices has valency $\ge 3$.
+
+Third, we show by induction on the number of edges in the trees $T_v$ that $J$ is a split of $H$. If
+there are none, every $T_v$ has one vertex, and $J$ is isomorphic to $H$. Otherwise let $f$ be an edge
+of some $T_v$, with ends $x, y$. Both have valency $\ge 3$. Contracting $f$ gives a graph with trees as above, with
+fewer edges in its trees, in which again every vertex of a tree with at least two vertices has valency
+$\ge 3$, since the new vertex has valency $\ge 4$. By induction it
+is a split of $H$, and so $J$ is a split of $H$, since it is obtained from that graph by splitting the
+new vertex. Hence $J$ is isomorphic to some $H_i$, and $G$ topologically contains $J$, as
+required.\fixnote{fix:4.8-proof-added}{The paper sketches this proof in one sentence. The argument
+above fills in the details, and it is the one used in the formalization.}}
+
+\stmt
+(4.9) \textit{For any fixed graph $H$ and fixed number $w$, there is a polynomial algorithm which has input a graph $G$, and has output either}
+
+\hspace*{12pt}(i) \textit{$G$ has a minor isomorphic to $H$, or}
+
+\hspace*{12pt}(ii) \textit{$G$ has no minor isomorphic to $H$, or}
+
+\hspace*{12pt}(iii) \textit{$G$ has tree-width $> w$.}
+
+\textit{Proof.} We apply (4.7) to $G$, testing for each of the graphs $H_1, \dots, H_r$ of (4.8) in turn.
+
+Theorem (4.1) follows from (4.8) and the following.
+
+\stmt
+(4.10) [12]. \textit{For every planar graph $H$ there is a number $w$ such that every graph with no minor isomorphic to $H$ has tree-width $\le w$.}
+
+The algorithm for (4.1) is as follows. Given a graph $G$, we apply the algorithm of (4.9) to it, with $w$ as in (4.10). Each of the three possible outcomes determines whether or not $G$ has a minor isomorphic to $H$.
+
+\sectionhead{5. \textsc{An Algorithm for Tree-Width}}
+
+Now we prove theorem (1.2). The following is shown in [11].
+
+\stmt
+(5.1) \textit{Let $w$ be a number, and let $\mathscr{C}$ be a set of graphs each with tree-width $\le w$. Suppose that no member of $\mathscr{C}$ is isomorphic to a minor of another member. Then $\mathscr{C}$ is finite.}
+
+We deduce
+
+\stmt
+(5.2) \textit{For any fixed number $w$, there is a finite set of graphs $H_1, \dots, H_r$ such that for any graph $G$, $G$ has tree-width $> w$ if and only if $G$ has a minor isomorphic to one of $H_1, \dots, H_r$.}
+
+\textit{Proof.} Let $\mathscr{C}'$ be the set of all graphs $H$ such that $H$ has tree-width $> w$ but every minor of $H$ distinct from $H$ has tree-width $\le w$. Then every

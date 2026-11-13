@@ -1,0 +1,24 @@
+\origpage{154}{ROBERTSON AND SEYMOUR}
+\noindent a consistent way. For example if $G$ is drawn on a connected surface (not a sphere) and every non-null-homotopic curve in the surface meets the drawing many times, then it can be shown (see [5]) that for each low order separation $(G_1, G_2)$, exactly one of $G_1, G_2$ contains a non-null-homotopic circuit. As a second example, let $H$ be a minor of $G$ (defined later), isomorphic to a large complete graph; then for each low order separation $(G_1, G_2)$ of $G$, exactly one of $G_1, G_2$ has a subgraph corresponding to a vertex of $H$. The object of this paper is to study such ``tangles,'' as we call them, since they play a central role in future papers of this series.
+
+Many of our results about tangles extend easily to hypergraphs, and we have expressed them in this generality. A \textit{hypergraph} $G$ consists of a set of vertices $V(G)$, a set of edges $E(G)$, and an incidence relation; each edge may or may not be incident with each vertex. If each edge is incident with either one or two vertices, the hypergraph is a \textit{graph}. All hypergraphs in this paper are finite. A \textit{subhypergraph} $G'$ of $G$ is a hypergraph such that
+
+\hspace*{12pt}(i) $V(G') \subseteq V(G)$, $E(G') \subseteq E(G)$
+
+\hspace*{12pt}(ii) for $e \in E(G')$ and $v \in V(G)$, $e$ is incident with $v$ in $G$ if and only if $v \in V(G')$ and $e$ is incident with $v$ in $G'$.
+
+We write $G' \subseteq G$ if $G'$ is a subhypergraph of $G$. We define $G_1 \cup G_2$, $G_1 \cap G_2$ for subhypergraphs $G_1, G_2$ of a hypergraph as for graphs, and a separation of a hypergraph, and its order, are defined as for graphs. If $G$ is a hypergraph and $X \subseteq E(G)$, $G \setminus X$ is the subhypergraph $G'$ with $V(G') = V(G)$, $E(G') = E(G) - X$; while if $X \subseteq V(G)$, $G \setminus X$ is the subhypergraph with $V(G') = V(G) - X$ and $E(G')$ the set of those edges of $G$ incident with no vertex in $X$. We sometimes abbreviate $G \setminus \{x\}$ to $G \setminus x$, etc.
+
+Let $G$ be a hypergraph and let $\theta \ge 1$ be an integer. A \textit{tangle} in $G$ of \textit{order} $\theta$ is a set $\mathscr{T}$ of separations of $G$, each of order $< \theta$, such that
+
+\hspace*{12pt}(i) for every separation $(A, B)$ of $G$ of order $< \theta$, one of $(A, B)$, $(B, A)$ is in $\mathscr{T}$
+
+\hspace*{12pt}(ii) if $(A_1, B_1), (A_2, B_2), (A_3, B_3) \in \mathscr{T}$ then $A_1 \cup A_2 \cup A_3 \ne G$
+
+\hspace*{12pt}(iii) if $(A, B) \in \mathscr{T}$ then $V(A) \ne V(G)$.
+
+We refer to these as the \textit{first}, \textit{second}, and \textit{third (tangle) axioms}. Every tangle $\mathscr{T}$ has order $\le |V(G)|$, since $(G, G \setminus E(G)), (G \setminus E(G), G) \notin \mathscr{T}$. The \textit{tangle number} of $G$, denoted $\theta(G)$, is the maximum order of tangles in $G$ (or 0, if there are no tangles).
+
+The main results of this paper are as follows:
+
+\hspace*{12pt}(1) Tangle number is connected with ``tree-width,'' which was discussed in earlier papers of this series (for example, [3]); indeed, there is a

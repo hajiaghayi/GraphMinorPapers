@@ -1,0 +1,41 @@
+\origpage{313}{ALGORITHMIC ASPECTS OF TREE-WIDTH}
+Then $W \cup W' = V(G) - A$ and $W \cap W' = \emptyset$. Without loss of generality we assume that
+\begin{equation*}
+|W \cap Q| \ge |W' \cap Q|. \tag{1}
+\end{equation*}
+Now since $N' = V(B_j)$ and
+\begin{equation*}
+\{q \in Q - X_j : T_j(q) = B_j\} = W' \cap Q,
+\end{equation*}
+we have $|W' \cap Q| > \tfrac{1}{2} |Q - X_j|$. But
+\begin{equation*}
+Q - X_j = (W' \cap Q) \cup ((W - X_j) \cap Q)
+\end{equation*}
+and so
+\begin{equation*}
+|(W - X_j) \cap Q| < |W' \cap Q|. \tag{2}
+\end{equation*}
+From (1) and (2) we deduce that there exists $Y \subseteq X_j - A$ such that
+\begin{equation*}
+|(W - Y) \cap Q| = |W' \cap Q|.
+\end{equation*}
+Then $(W - Y, W')$ is a partition of $V(G) - (Y \cup A)$, and so
+\begin{equation*}
+|(W - Y) \cap Q| = |W' \delm{\cup}\fix{\cap} Q| = \tfrac{1}{2} |Q - (Y \cup A)|.\fixmark{fix:2.5-proof}
+\end{equation*}
+\fixnotetext{A misprint. The set $Y$ was chosen with $|(W-Y)\cap Q|=|W'\cap Q|$, and $(W-Y)\cap Q$ and $W'\cap Q$ partition $Q-(Y\cup A)$, so each has $\frac12|Q-(Y\cup A)|$ elements. As printed, the display is false whenever $Q\ne\varnothing$, since $|W'\cup Q|\ge|Q|$.}%
+But $W - Y$ and $W'$ are separated in $G$ by $A$, from (2.4), and so every component of $G \setminus (Y \cup A)$ has at most $\tfrac{1}{2} |Q - (Y \cup A)|$ vertices which are in $Q$. Also, $|Y \cup A| \le w$, since $Y \cup A \subseteq X_j$. Thus we may take $X = Y \cup A$ and the theorem is satisfied.
+
+\stmt
+(2.6) \textit{If $G$ has tree-width $< w$ and $Q \subseteq V(G)$, there exists a separation $(H, H')$ of $G$ such that $|V(H) \cap V(H')| \le w$ and}
+\begin{align*}
+&|(V(H) - V(H')) \cap Q|, |(V(H') - V(H)) \cap Q| \\
+&\quad \le \tfrac{2}{3} |Q - (V(H) \cap V(H'))|.
+\end{align*}
+[A \textit{separation} of $G$ is a pair of subgraphs $(H, H')$ of $G$, such that $V(H) \cup V(H') = V(G)$, $E(H) \cup E(H') = E(G)$, and $E(H) \cap E(H') = \emptyset$.]
+
+\textit{Proof.} It is sufficient to find a partition $(X, Y, Y')$ of $V(G)$ such that $|X| \le w$ and $X$ separates $Y, Y'$ in $G$ and such that
+\begin{equation*}
+|Y \cap Q|, |Y' \cap Q| \le \tfrac{2}{3} |Q - X|.
+\end{equation*}
+For then $H, H'$ can be constructed with $V(H) = X \cup Y$, $V(H') = X \cup Y'$, and with the edges of $G$ divided between $H$ and $H'$. But since $G$ has a

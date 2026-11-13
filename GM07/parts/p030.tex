@@ -1,0 +1,24 @@
+\origpage{241}{GRAPH MINORS. VII}
+\noindent conclusions of (7.4) with ends $a$, $b$. Then $\alpha(\phi_e^{-1}(G \setminus e)) \ge r > 9kv$. We may assume that $U(H) \cap \bar{e} = \emptyset$. Let $a = \phi_e(a')$, $b = \phi_e(b')$, and define
+\begin{equation*}
+H' = (U(\phi_e^{-1}(H)) \cup \{a', b'\}, V(\phi_e^{-1}(H)) \cup \{a', b'\}).
+\end{equation*}
+By (6.1)\fix{, in the stronger form given by its proof on page 237 (with $|V(G)\cap bd(\Sigma)|\le 2k-2g$, where $g$ is the number of cuffs $C$ with $|V(G)\cap C|\le 1$)}, $H'$ is\fixnote{fix:7.5-proof}{As printed, (6.1) needs $|V(G)\cap bd(\Sigma)|\le 2k-4$ in $\Sigma_e$, which has two cuffs. But (7.5) allows $2k-4$ vertices on $bd(\Sigma)$, and cutting along $\bar e$ adds $a', b'$ on the new cuff, so there can be $2k-3$ or $2k-2$. The proof of (6.1), on page 237, shows that its hypothesis may be weakened to $|V(G)\cap bd(\Sigma)|\le 2k-2g$. In $\Sigma_e$ the new cuff contains $a'$ and $b'$, so $g\le 1$, and there are at most $2k-2\le 2k-2g$ vertices on the boundary.} $\phi_e^{-1}(G \setminus e)$-feasible, and so $H$ is $G$-feasible, as required.
+
+\sectionhead{8. \textsc{Schisms}}
+
+We wish to develop a more concrete definition of $\alpha(G)$, for use in applications. Let $X_1$, $X_2$, $X_3$ be the topological spaces of the graphs $G_1$, $G_2$, $G_3$ defined as follows. $G_1$ has exactly two vertices ($u$, $v$ say) and three edges, one a loop on $u$, one a loop on $v$, and the other joining $u$, $v$; $G_2$ has exactly one vertex and two edges; and $G_3$ has two vertices and three edges, mutually parallel.
+
+We say that $X \subseteq \Sigma$ is \textit{schismatic} if $X$ is either an $O$-arc or an $X_i$-arc for some $i$, and $X$ is not near-planar, and every proper subset of $X$ which is an $O$-arc is near-planar. It is easy to see that if $X$ is schismatic and $X \cong X_1$ or $X_2$ then the two $O$-arcs included in $X$ surround distinct cuffs; while if $X \cong X_3$, then $\Sigma \cong \Sigma(0, 0, 3)$ and all three $O$-arcs surround distinct cuffs.
+
+It is easy to verify, using (5.1) and (5.2), that if $X \subseteq \Sigma$ is solid and connected, then $X$ is near-planar if and only if no subset of $X$ is schismatic. Thus $\alpha(G)$ equals the minimum of $|V(G) \cap X|$, taken over all $G$-normal schismatic sets $X$; and this provides us with an alternative definition of $\alpha(G)$.
+
+In applications of our main theorem we might attempt to deal with cases where $\alpha(G)$ is too small by cutting the surface along the offending schismatic set. However, this does not work nicely; for instance, doing so may fail to produce a surface because the number of components produced may be infinite, and there are other inelegancies as well. It is more convenient to cut along a ``schism,'' a minimal set cutting along which simplifies the surface.
+
+Let $X_4$ be the topological space of the graph $G_4$ consisting of two vertices and two edges, with exactly one loop. The \textit{end} of an $X_4$-arc is defined to be the point representing the monovalent vertex of $G_4$. By a \textit{schism} in a surface $\Sigma \cong \Sigma(a, b, c)$ where $3a + 3b + c \ge 3$ we mean a subset of $\Sigma$ which is one of the following:
+
+\hspace*{12pt}(i) An $O$-arc $F$ which is not near-planar, with $|F \cap bd(\Sigma)| \le 1$,
+
+\hspace*{12pt}(ii) a proper $I$-arc with its ends in distinct cuffs,
+
+\hspace*{12pt}(iii) a proper $I$-arc $F$ with its ends in the same cuff $C$, such that $F \cup C$ is not near-planar,

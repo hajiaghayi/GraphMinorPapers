@@ -1,0 +1,29 @@
+\origpage{102}{ROBERTSON AND SEYMOUR}
+If $i$ is starred, let $J(i)$ be the set $\{j_1, ..., j_{\theta^2/2}\}$. Let the set of all starred $i \in \{1, ..., m\}$ be $I^*$, and let $|I^*| = N$. Then there exists $I \subseteq I^*$ with
+\begin{equation*}
+|I| \ge \binom{n}{\theta^2/2}^{-1} \cdot N
+\end{equation*}
+such that $J(i)$ is the same for all $i \in I$. Let $J(i) = J$ say $(i \in I)$. Now $|J| = \theta^2/2$, and so by (4.1), $|I| < \theta^2/2$. Hence
+\begin{equation*}
+N < \frac{1}{2}\theta^2 \binom{n}{\theta^2/2}.
+\end{equation*}
+It follows that there exists $I' \subseteq \{1, ..., m\} - I^*$ with
+\begin{equation*}
+|I'| = m - \frac{1}{2}\theta^2 \binom{n}{\theta^2/2} = p \binom{n}{q}.
+\end{equation*}
+Now each $i \in I'$ is not starred, and so by (5.1) there is a path $P_i$ of $A_i$ meeting exactly $q$ of $B_1, ..., B_n$. There exists $I'' \subseteq I'$ with
+\begin{equation*}
+|I''| = \binom{n}{q}^{-1} \cdot |I'| = p
+\end{equation*}
+and $J'' \subseteq \{1, ..., n\}$ with $|J''| = q$, such that $P_i$ meets $B_j$ for $i \in I''$, $j \in J''$. This is the required mesh.
+
+The result stated earlier as (1.6) is now readily proved as follows.
+
+\stmt
+(5.3) \textit{If $G \in \mathcal{F}_\theta$ then $G$ has no $(\theta_5, \theta_6)$-mesh.}
+
+\textit{Proof.} If $G$ has a $(\theta_5, \theta_6)$-mesh then it has a $(\theta_6, \theta_5)$-mesh, and so by (5.2) it has a $(\theta_3, \theta_4)$-mesh $((A_1, ..., A_{\theta_3}), (B_1, ..., B_{\theta_4}))$, where each $A_i$ is a path. We apply (5.2) to the mesh $((B_1, ..., B_{\theta_4}), (A_1, ..., A_{\theta_3}))$, and deduce that $G$ has a $(\theta_2, \theta_2)$-mesh $((C_1, ..., C_{\theta_2}), (D_1, ..., D_{\theta_2}))$, where each $C_i$ and each $D_j$ is a path. We contract every edge of $G$ which is both in some $C_i$ and in some $D_j$, and obtain a graph $G' \in \mathcal{F}_\theta$ which has a $(\theta_2, \theta_2)$-web, contrary to (4.6).
+
+\sectionhead{6. Large Subgraphs and Small Separations}
+
+It remains to show that if a graph has no large mesh then its tree-width is bounded. This will be proved in the next section. This section is devoted to a lemma which will be used in the proof. The following result is due to Tutte, implicitly in [13].

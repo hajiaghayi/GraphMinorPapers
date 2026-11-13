@@ -1,0 +1,29 @@
+\origpage{270}{ROBERTSON AND SEYMOUR}
+\noindent of them does not meet $F_1$, since $|F_1 \cap V(\Gamma)| = \rho(C_1) < k \le r$. Hence some vertex of $C_s$ is inside $F_1$. As in the proof of (8.2), $F_1$ does not meet any of $C_1, \dots, C_{\lceil k/2 \rceil}$ and so $(C_1, \dots, C_{\lceil k/2 \rceil})$ is a $(k, \lceil \frac{1}{2}k \rceil)$-nest in $\Gamma_1$. But it is easy to see that $\Gamma_1$ has no such nest (because for example, its cyclomatic number is too small).\fixnote{fix:9.1-proof}{This step fails for $k=2$: a sleeve with one ring vertex is a circuit with a spoke, and two vertices of the circuit give a $(2,1)$-nest with the same cyclomatic number. The step is repaired by keeping $\lfloor k/2\rfloor+1$ enclosed circuits, which may touch the ring, in place of $\lceil k/2\rceil$ circuits strictly inside it. A circuit not enclosed by the ring meets it at least twice, and counting these meetings gives a nest in the sleeve that is too large for it. The statement of (9.1) is not affected.} This contradiction implies that $(C_1, \dots, C_s)$ is boundary-linked, as required. $\square$
+
+\stmt
+(9.2) \textit{If $r, s \ge k$ there is a number $N$ such that for any drawing $\Gamma$ with $|V(\Gamma) \cap bd\ \Sigma| = k$, if $\Gamma$ has no boundary-linked $(r, s)$-nest, then every truncation $\Gamma^*$ has tree-width $\le N$.}
+
+This follows from (9.1) and (7.1).
+
+We shall require the following, which is essentially [11, Theorem (9.4)].
+
+\stmt
+(9.3) \textit{Let $(H, U)$ be a graft which embeds in a disc $\Sigma$, with $|U| = k$. Then there are integers $r, s \ge k$ such that for every graft $(G, T)$ with $|T| = k$, if $(G, T)$ has a drawing in $\Sigma$ with a boundary-linked $(r, s)$-nest, then $(H, U)$ is simulated in $(G, T)$.}
+
+From (9.2) and (9.3) we deduce the following.
+
+\stmt
+(9.4) \textit{Let $(H, U)$ be a graft which embeds in a disc $\Sigma$ with $|U| = k$. Then there is a number $w$ such that for every graft $(G, T)$ with $|T| = k$, if $(H, U)$ is not simulated in $(G, T)$ then every truncation of every drawing of $(G, T)$ in $\Sigma$ has tree-width $\le w$.}
+
+\sectionhead{10. Paintings}
+
+Let $\Sigma$ be a disc. A \textit{painting} $\Gamma$ in $\Sigma$ is a pair $(U(\Gamma), N(\Gamma))$ where $U(\Gamma) \subseteq \Sigma$ is closed and $N(\Gamma) \subseteq U(\Gamma)$ is finite, such that
+
+\hspace*{12pt}(i) $U(\Gamma) - N(\Gamma)$ has only finitely many components, called \textit{cells}
+
+\hspace*{12pt}(ii) for each cell $e$, $(\bar{e}, e)$ is homeomorphic to $(\Sigma, \Sigma - \{x_1, \dots, x_k\})$ where $k = |\bar{e} - e|$ and $x_1, \dots, x_k \in bd\ \Sigma$ are distinct
+
+\hspace*{12pt}(iii) for each cell $e$, $e \cap bd\ \Sigma = \emptyset$.
+
+A painting is roughly a generalization of a drawing. For if $\Gamma$ is a drawing with no loops, we may ``thicken'' each edge of $\Gamma$ slightly to obtain a painting in which $|\bar{e} - e| = 2$ for each cell $e$. If $\Gamma$ is a drawing with loops such that each loop bounds a region, we may perform an analogous construction; we thicken each non-loop edge, and we fill in the region bounded by each loop. Thus each loop of the drawing corresponds to a cell $e$ of the painting with $|\bar{e} - e| = 1$. Let us say that a drawing is \textit{cellular} if each loop bounds a region.

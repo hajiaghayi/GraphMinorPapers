@@ -1,0 +1,26 @@
+\origpage{250}{ROBERTSON AND SEYMOUR}
+\textit{Proof.} The second statement follows from the first. To prove the first, we may assume that $\Sigma$ is a topological subspace of $\mathbb{R}^n$, and that
+\begin{equation*}
+\Delta = \{(x, y, 0, \dots, 0) \colon x^2 + y^2 \le 1\}.
+\end{equation*}
+For distinct $x, y \in bd(\Delta)$, let $F(x, y) \subseteq bd(\Delta)$ be an $I$-arc with ends $x, y$ which is included in a semicircle. We define $F(x, x) = \{x\}$ for $x \in bd(\Delta)$. We observe
+
+\hspace*{12pt}(1) For $x, y \in bd(\Delta)$ and $u, v \in F(x, y)$, $\|u - v\| \le \|x - y\|$.
+
+($\|\ \|$ denotes Euclidean distance.)
+
+\hspace*{12pt}(2) \textit{There exists $\varepsilon_0 > 0$ such that for all $x, x' \in S^1$, if $\phi(x), \phi(x') \in bd(\Delta)$ and $\|\phi(x) - \phi(x')\| < \varepsilon_0$ then $F(\phi(x), \phi(x')) \subseteq Y$.}
+
+For if $bd(\Delta) \subseteq Y$ this is trivial. If not, then since $|\phi|$ is closed, there is an open interval $I \subseteq bd(\Delta)$ with $I \nsubseteq Y$ and $I \cap |\phi| = \emptyset$. Let $u, v$ be the ends of $I$; we may assume that $\bar{I} = F(u, v)$. Let $\varepsilon_0 = \|u - v\|$. Now suppose that $x, x' \in S^1$, with $\phi(x), \phi(x') \in bd(\Delta)$ and $\|\phi(x) - \phi(x')\| < \varepsilon_0$. We must show that $F(\phi(x), \phi(x')) \subseteq Y$. We may assume that $\phi(x) \ne \phi(x')$ since otherwise the result holds. Let $F_1, F_2$ be the two $I$-arcs in $bd(\Delta)$ with ends $\phi(x), \phi(x')$. Since $Y \cap bd(\Delta)$ is arc-connected we may assume that $F_1 \subseteq Y \cap bd(\Delta)$. Thus $I \nsubseteq F_1$, and so $I \subseteq F_2$, since $\phi(x), \phi(x') \notin I$. Since $\|u - v\| > \|\phi(x) - \phi(x')\|$ it follows from (1) that $F(\phi(x), \phi(x'))$ does not contain both $u$ and $v$, and so $F_2 \ne F(\phi(x), \phi(z'))$. Hence $F_1 = F(\phi(x), \phi(x'))$ and the claim follows since $F_1 \subseteq Y$.
+
+Let $Z = \{z \in S^1 \colon \phi(z) \in \Delta - bd(\Delta)\}$. We may assume that $Z \ne S^1$ since otherwise the theorem holds, and so each component of $Z$ is an open interval, since $Z$ is open. Let $\Xi$ be the set of all these intervals. For $X \in \Xi$ with ends $z, z'$, we may choose (by (2)) a continuous function $\psi_X \colon \bar{X} \to Y \cap bd(\Delta)$ such that
+
+\hspace*{12pt}(i) $\psi_X(z) = \phi(z)$, $\psi_X(z') = \phi(z')$, and
+
+\hspace*{12pt}(ii) if $\|\phi(z) - \phi(z')\| < \varepsilon_0$ then $|\psi_X| \subseteq F(\phi(z), \phi(z'))$.
+
+For $X \in \Xi$, we define $\operatorname{diam}(X) = \max(\|x - x'\| \colon x, x' \in \bar{X})$.
+
+\hspace*{12pt}(3) \textit{For all $\varepsilon > 0$ there exists $\delta > 0$ such that for all $X \in \Xi$, if $\operatorname{diam}(X) \le \delta$ then $\|\phi(x) - \psi_X(x)\| \le \varepsilon$ for all $x \in X$.}
+
+For given $\varepsilon > 0$, since $\phi$ is uniformly continuous there exists $\delta > 0$ such that for $z, z' \in S^1$, if $\|z - z'\| \le \delta$ then $\|\phi(z) - \phi(z')\| < \min(\frac{1}{2}\varepsilon, \varepsilon_0)$. Let $X \in \Xi$ have $\operatorname{diam}(X) \le \delta$, and let $x \in X$. Let $X$ have ends $z, z'$. Then $\|\phi(z) - \phi(z')\| < \min(\frac{1}{2}\varepsilon, \varepsilon_0)$, since $\|z - z'\| \le \operatorname{diam}(X)$; and so from (ii)

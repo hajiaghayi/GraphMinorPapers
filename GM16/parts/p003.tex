@@ -1,0 +1,22 @@
+\origpage{45}{N. Robertson, P.D. Seymour / Journal of Combinatorial Theory, Series B 89 (2003) 43--76}
+\noindent graph. It can be shown that there is no class of graphs of bounded genus such that all these graphs are tree-structures over it, and that shows the necessity for our third ingredient. Let $\Sigma$ be a surface, let $N \ge 0$ be an integer, and let $L$ be a graph such that no graph obtained from $L$ by deleting $\le N$ vertices can be drawn in $\Sigma$. Then there will be no $L$ minor in any graph which can be constructed by adding $\le N$ vertices (joined arbitrarily) to a graph drawn in $\Sigma$. This then yields a third type of structure which we should anticipate. If a subgraph $G'$ of $G$ can be obtained from $G$ by deleting $\le n$ vertices of $G$, let us call $G$ a \textit{($\le n$)-vertex extension} of $G'$.
+
+We conjectured for some time that these three were sufficient. But that was false.
+
+\textit{Ingredient} 4: \textit{Vortices.} Take a graph drawn in the plane, and let the vertices on the infinite region be $v_1, v_2, \dots, v_n$ in order. Add new edges joining $v_1$ to $v_3, v_2$ to $v_4, v_3$ to $v_5$ and so on, and let the resulting graph be $G$. Then it can be shown that such a graph has no large clique minor; indeed, Seese and Wessel [11] found the exact bound, that $G$ can have a $K_7$, but cannot have a $K_8$, minor. Yet such graphs $G$ cannot be constructed from our first three ingredients, and so a fourth ingredient is needed, so-called ``vortices''. Roughly, a vortex is a graph with some of its vertices arranged in a circular order, so that however these special vertices are partitioned into two intervals, there are only a bounded number of disjoint paths from one interval to the other. For instance, the graph $G$ above consists of a planar graph together with a vortex (formed by the new edges) inserted into the infinite region.
+
+Our main result implies that these four ingredients suffice. Let us turn to the statement of the theorem. We need first to define what we mean by an ``$r$-ring with perimeter $t_1, \dots, t_n$''. Roughly speaking, it consists a graph $G$ and a sequence $t_1, \dots, t_n$ of distinct vertices of $G$, such that $G$ can be constructed as follows. Let $G_1, \dots, G_n$ be mutually disjoint graphs, each with $\le r$ vertices, and for $1 \le i \le n$ let $t_i \in V(G_i)$. Let us choose some $i$ with $1 \le i \le n$, choose $u \in V(G_i)$ and $v \in V(G_{i+1})$ and identify $u$ with $v$, provided that $t_1, \dots, t_n$ remain all distinct; and repeat this process as often as we wish.
+
+More precisely, we say $G$ is an \textit{$r$-ring with perimeter $t_1, \dots, t_n$} if $t_1, \dots, t_n \in V(G)$ are distinct and there is a sequence $X_1, \dots, X_n$ of subsets of $V(G)$, such that
+
+\hspace*{12pt}$\bullet$ $X_1 \cup \dots \cup X_n = V(G)$, and every edge of $G$ has both ends in some $X_i$,
+
+\hspace*{12pt}$\bullet$ $t_i \in X_{\delm{1}\fix{i}}$ for $1 \le i \le n$,\fixnote{fix:r-ring}{As printed, all of $t_1, \dots, t_n$ lie in $X_1$, which has at most $r$ vertices, so an $r$-ring could have at most $r$ perimeter vertices. The sets $X_1, \dots, X_n$ are a path-decomposition laid along the perimeter, one for each $t_i$.}
+
+\hspace*{12pt}$\bullet$ $X_i \cap X_k \subseteq X_j$ for $1 \le i \le j \le k \le n$,
+
+\hspace*{12pt}$\bullet$ $|X_i| \le r$ for $1 \le i \le n$.
+
+It is easy to check that this is equivalent with the previous definition.
+
+Now let $G_0$ be a graph drawn in a surface $\Sigma$, and let $\Delta_1, \dots, \Delta_d \subseteq \Sigma$ be pairwise disjoint closed discs, each meeting the drawing only in vertices of $G_0$, and each containing no vertices of $G_0$ in its interior. For $1 \le i \le d$ let the vertices of $G_0$ in $\text{bd}(\Delta_i)$ be $t_1, \dots, t_n$ say, in order, and choose an $r$-ring $G_i$ with perimeter $t_1, \dots, t_n$, meeting $G_0$ just in $t_1, \dots, t_n$ and disjoint from every other $G_j$; and let $G$ be the union of $G_0, G_1, \dots, G_d$. Such a graph $G$ (and any graph isomorphic to it) is called an \textit{outgrowth by $d$ $r$-rings of a graph in $\Sigma$}. Now we can state our theorem.

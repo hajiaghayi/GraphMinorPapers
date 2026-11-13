@@ -1,0 +1,29 @@
+\origpage{105}{GRAPH MINORS. XI}
+\noindent or
+
+\hspace*{12pt}(v) $X = D \cup F$, where $D$ is a closed disc and $F$ is a line with one end in $D$ and no other point in $D$, or
+
+\hspace*{12pt}(vi) $X = D_1 \cup D_2 \cup F$, where $D_1, D_2$ are disjoint closed discs and $F$ is a line with one end in $D_1$, the other in $D_2$, and no other point in $D_1 \cup D_2$.
+
+Such a restraint $X$ we call a \textit{tie}. Our next result implies that in defining our distance function $d$ we could confine ourselves to ties.
+
+\stmt
+(9.2) \textit{Let $a, b \in A(\Gamma)$ and let $Y$ be a restraint with $a, b \subseteq Y$. Then there is a tie $X$ with $a, b \subseteq X \subseteq Y$ and $l(X) \le l(Y)$.}
+
+\textit{Proof.} If there is a closed disc $D \subseteq Y$ with $\text{bd}(D) \subseteq \text{bd}(Y)$ and $a \subseteq D$, let $A = D$. Otherwise, $a \subseteq \text{bd}(Y)$, since $Y = \text{ins}(\Gamma \setminus \text{bd}(Y))$, by (8.3); in this case let $A = \bar{a}$. We observe that in this second case, if $a \in E(\Gamma)$ then no region incident with $a$ is in $Y$ (again, because $Y = \text{ins}(\Gamma \setminus \text{bd}(Y))$), and so $a$ occurs twice in the perimeter walk of $Y$. Let $A^* = A - \text{bd}(A)$. (Thus $A^* = \emptyset$ unless $A$ is a disc.) Define $B, B^*$ similarly.
+
+Now $\text{bd}(A) \cap B^* = \emptyset$ because $\text{bd}(A) \subseteq \text{bd}(Y)$ and $B^* \cap \text{bd}(Y) = \emptyset$, and similarly $\text{bd}(B) \cap A^* = \emptyset$. If $A^* \cap B^* \ne \emptyset$, then since $A^*$ is arc-wise connected and $A^* \cap \text{bd}(B^*) = \emptyset$ it follows that $A^* \subseteq B^*$, and similarly $B^* \subseteq A^*$. But then $A = B$ and $A$ is a tie with $a, b \subseteq A$ and $l(A) \le l(Y)$, as required. Thus we may assume that $A^* \cap B^* = \emptyset$, and so $A \cap B = \text{bd}(A) \cap \text{bd}(B)$. Suppose that $|\text{bd}(A) \cap \text{bd}(B)| \ge 2$. Then neither $A$ nor $B$ is a singleton, and
+\begin{equation*}
+\Gamma' = (\Gamma \cap \text{bd}(A)) \cup (\Gamma \cap \text{bd}(B))
+\end{equation*}
+is non-separable and confined. If $\Gamma'$ has a circuit then by (4.3)(iii) there is a circuit $C$ of $\Gamma'$ with $\text{ins}(\Gamma') = \text{ins}(C)$ and hence with
+\begin{equation*}
+a, b \subseteq A \cup B \subseteq \text{ins}(\Gamma') = \text{ins}(C)
+\end{equation*}
+and
+\begin{equation*}
+\text{bd}(\text{ins}(C)) = U(C) \subseteq U(\Gamma') \subseteq \text{bd}(A) \cup \text{bd}(B) \subseteq \text{bd}(Y);
+\end{equation*}
+and so $\text{ins}(C)$ is the required tie, for $|E(C)| \le |E(\Gamma')| \le l(Y)$. If $\Gamma'$ has no circuit, then $A = B = \bar{e}$ for some edge $e$ occuring twice in the perimeter of $Y$, and $X = \bar{e}$ is the desired tie. We may assume then that $|\text{bd}(A) \cap \text{bd}(B)| \le 1$, and so $|A \cap B| \le 1$. If $|A \cap B| = 1$ then $A \cup B$ is the required tie, and so we may assume that $A \cap B = \emptyset$.
+
+Let $v_0, e_1, v_1, \dots, e_t, v_t = v_0$ be a perimeter walk of $Y$, where $v_0 \in A$. There exists $i$ such that $v_i \in B$. Thus we may choose $0 \le i_1 \le i_2 \le i_3 \le i_4 \le t$ such that $v_{i_1} \in A$, $v_{i_2} \in B$, $v_{i_3} \in B$, $v_{i_4} \in A$, and $i_2 - i_1 + i_4 - i_3$ is minimum. Let $W_1$

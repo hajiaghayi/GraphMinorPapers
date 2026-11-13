@@ -1,0 +1,27 @@
+\origpage{52}{ROBERTSON AND SEYMOUR}
+\noindent and so $P_1$ has an end in $\Omega(a, b)$. But $V(\mathcal{P}') \cap \Omega(a, b) = \emptyset$, and so $P_1 \notin \mathcal{P}'$, and hence $P_1 = P_3$. Now $P_1$ meets $Q_1$ and $P_3$ meets $Q_3$, and $Q_1, Q_2, Q_3$ are in order, and so $P_1 = P_3$ meets or crosses $Q_2$. The second is impossible since $Q_2$ is separating, and so $P_1 = P_2 = P_3$, which is impossible as before. This completes the proof. $\square$
+
+\stmt
+(4.6) \textit{Let $S$ be true, with $p \ge 2$ and $p \ne 3$, let $|\mathcal{Q}| = p + 4$, and let every member of $\mathcal{Q}$ be separating. Then $Q \cap \bigcup \mathcal{P}$ is null for some $Q \in \mathcal{Q}$.}
+
+\textit{Proof.} Suppose each $Q \in \mathcal{Q}$ meets $\bigcup \mathcal{P}$. By (4.3), for each $Q \in \mathcal{Q}$ either $Q$ is half-covered or both ends of $Q$ are in $V(\mathcal{P})$, with at most one exception. By (4.5) there are at most four members of $\mathcal{Q}$ which are half-covered. We deduce that
+\begin{equation*}
+|V(\mathcal{P})| \ge 2(|\mathcal{Q}| - 5) + 4 = 2p + 2.
+\end{equation*}
+Hence $|\mathcal{P}| > p$ which by (3.4) contradicts the minimality of $|\mathcal{P}|$. $\square$
+
+\sectionhead{5. \textsc{Separations} \textsc{And} \textsc{Crosses}}
+
+We continue with lemmas for the main proof.
+
+\stmt
+(5.1) \textit{Let $Q$ be a separating $\Omega$-path in $(G, \Omega)$ with ends $a, b$. If $\mathcal{P}$ is a crooked transaction in $(G, \Omega)$ with $Q \cap \bigcup \mathcal{P}$ null and with $V(\mathcal{P}) \cap \Omega(a, b) \ne \emptyset$ then there is a cross $\mathcal{P}' \subseteq \mathcal{P}$ with all four ends in $\Omega(a, b)$.}
+
+\textit{Proof.} If $P \in \mathcal{P}$ has an end in $\Omega(a, b)$, then both its ends are in $\Omega(a, b)$ since $P$ does not cross $Q$. Let us choose $P \in \mathcal{P}$ with ends $s, t \in \Omega(a, b)$, where $(a, s, t, b)$ is clockwise, such that $\Omega(s, t)$ is minimal. Since $P$ is not peripheral in $\mathcal{P}$, there exists $P' \in \mathcal{P} - \{P\}$ with an end in $\Omega(s, t)$. Its other end is in $\Omega(a, b)$ but not in $\Omega(s, t)$, from the minimality of $\Omega(s, t)$. Then $\{P, P'\}$ is the required cross. $\square$
+
+\stmt
+(5.2) \textit{Let $(G, \Omega)$ have a crooked transaction with cardinality $p \ge 2$ and $p \ne 3$. Let $\{Q_1, \dots, Q_{p+4}\}$ be a transaction in $(G, \Omega)$ such that for $1 \le i \le p+4$, $Q_i$ is separating, and has no internal vertex in $\bar{\Omega}$, and has ends $a_i, b_i$, where $(a_{p+4}, a_{p+3}, \dots, a_1, b_1, b_2, \dots, b_{p+4})$ is clockwise. Let $(G_1, G_2)$ be a separation of $G$ with $V(G_1 \cap G_2) = V(Q_{p+4})$, $\Omega(a_{p+4}, b_{p+4}) \subseteq V(G_1)$ and $\Omega(b_{p+4}, a_{p+4}) \subseteq V(G_2)$. Then either}
+
+\hspace*{12pt}(i) \textit{there is a cross $\{P_1, P_2\}$ of $(G, \Omega)$ with $P_1 \cap G_2$ and $P_2 \cap G_2$ both null, or}
+
+\hspace*{12pt}(ii) \textit{there is a crooked transaction $\mathcal{P}$ in $(G, \Omega)$ with cardinality $p$ and with $\Omega(a_1, b_1) \cap V(\mathcal{P}) = \emptyset$.}

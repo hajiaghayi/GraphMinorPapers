@@ -1,0 +1,28 @@
+\origpage{231}{GRAPH MINORS IV}
+\noindent sequence $z_1, z_2, \dots$ of elements of $V_0$ such that $\{z_1, z_2, \dots\}$ is $M$-stable. We may assume that there is a section, for otherwise $V_0$ is $M$-rich and the sequence $o(T_1), o(T_2), \dots$ satisfies the theorem.
+
+For each $v \in V_0$, let $T^v$ be the maximal subtree of $T_i$ (where $v \in V(T_i)$) with root $v$. Inductively we shall define a countable sequence $x_1, x_2, \dots$ of elements of $V_0$, such that
+
+\hspace*{12pt}(1) \textit{For each $i \ge 1$ there is a section with first $i$ terms $x_1, x_2, \dots, x_i$, and}
+
+\hspace*{12pt}(2) \textit{For each $i \ge 1$, there is no section with first $i$ terms $x_1, \dots, x_{i-1}, x$ where $x \in V(T^{x_i}) - \{x_i\}$.}
+
+For suppose that $k \ge 1$ and we have chosen $x_1, \dots, x_{k-1}$ to satisfy (1) and (2) for $1 \le i \le k-1$. Since there is a section with first $k-1$ terms $x_1, \dots, x_{k-1}$ we may choose $x_k$ such that there is a section with first $k$ terms $x_1, \dots, x_k$ and with $T^{x_k}$ minimal, in the sense that there is no section with first terms $x_1, \dots, x_{k-1}, x$ for any $x \in V(T^{x_k}) - \{x_k\}$. But then (1) and (2) remain satisfied for $1 \le i \le k$. This completes our inductive definition of $x_1, x_2, \dots$. Let $X = \{x_1, x_2, \dots\}$. We shall show that $X$ satisfies the theorem. We observe
+
+\hspace*{12pt}(3) \textit{$x_1, x_2, \dots$ is a section.}
+
+This is immediate from (1).
+
+\hspace*{12pt}(4) \textit{For $j' > j \ge 1$, if $z$ is the head of an edge of $T_1 \cup T_2 \cup \dots$ with tail $x_{j'}$, then $x_j$ is not $M$-adjacent to $z$.}
+
+For let $x_{j'} \in V(T_i)$. Then $x_{j'} \ne o(T_i)$ by (3), and $x_{j'}$ lies on the path of $T_i$ from $o(T_i)$ to $z$. But $x_j$ is not $M$-adjacent to $x_{j'}$ by (3), and hence $x_j$ is not $M$-adjacent to $z$, from a hypothesis of the theorem.
+
+Let $Y$ be the set of heads of all edges of $T_1 \cup T_2 \cup \dots$ with tails in $X$.
+
+\hspace*{12pt}(5) \textit{No sequence of elements of $Y$ is a section.}
+
+For suppose that $y_1, y_2, \dots$ is a section of elements of $Y$. Since $y_1 \in Y$ there is an edge of $T_1 \cup T_2 \cup \dots$ with head $y_1$ and tail $x_k$ for some $k \ge 1$. Then $x_1, x_2, \dots, x_{k-1}, y_1, y_2, \dots$ is a section; for it is increasing, and $\{x_1, x_2, \dots, x_{k-1}\}$ and $\{y_1, y_2, \dots\}$ are both $M$-stable, and for $1 \le j \le k-1$ and $j' \ge 1$, $x_j$ is not $M$-adjacent to $y_{j'}$ by (4). But $y_1 \in V(T^{x_k}) - \{x_k\}$, contrary to (2).
+
+From (5) it follows that $Y$ is $M$-rich, and so $X$ satisfies the theorem, as required. $\square$
+
+If $G$ is a graph or directed graph, $G\setminus F$ denotes the result of deleting $F$ from $G$, where $F$ may be an edge or a set of edges. If $T$ is a tree and

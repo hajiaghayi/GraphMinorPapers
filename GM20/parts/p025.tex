@@ -1,0 +1,42 @@
+\origpage{349}{N. Robertson, P.D. Seymour / Journal of Combinatorial Theory, Series B 92 (2004) 325--357}
+\noindent ($C(\Gamma) = E(G)$, such that for each $n \in N(\Gamma)$ and $c \in C(\Gamma)$, $n \in \tilde{c}$ if and only if $n$ is incident with $c$ in $G$. For each border node $n \in N(\Gamma)$, let $\beta(n) \subseteq V(G)$, such that
+
+\hspace*{12pt}$\bullet$ for each $n \in N(\Gamma) \cap bd(\Sigma)$, $\beta(n) \cap N(\Gamma) = \emptyset$ and $|\beta(n)| = \rho(\Theta)$, where $\Theta$ is the cuff bordered by $n$; for nodes $n_1, n_2$ bordering distinct cuffs, $\beta(n_1) \cap \beta(n_2) = \emptyset$; and
+\begin{equation*}
+V(G) = N(\Gamma) \cup \bigcup (\beta(n) : n \in N(\Gamma) \cap bd(\Sigma)),
+\end{equation*}
+\hspace*{12pt}$\bullet$ for each internal cell $c$, the set of ends of $c$ in $G$ is $\tilde{c}$; and for each border cell $c$ with $n_1, n_2$ the set of ends of $c$ in $G$ is $\beta(n_1) \cup \beta(n_2) \cup \{n_1, n_2\}$,
+
+\hspace*{12pt}$\bullet$ if $n_1, n_2, n_3, n_4 \in N(\Gamma)$ border the same cuff in order, then $\beta(n_1) \cap \beta(n_3) \subseteq \beta(n_2) \cup \beta(n_4)$.
+
+In these circumstances, $(\Gamma, \beta)$ is said to be a \textit{$(\Sigma, \rho)$-hull} for $G$. Now let $P = (G, \mu, \Delta)$ be a patchwork. We say that $P$ is \textit{$(\Sigma, \rho)$-hulled} if there is a $(\Sigma, \rho)$-hull $(\Gamma, \beta)$ for $G^-$ such that
+
+\hspace*{12pt}$\bullet$ for each internal cell $c \in C(\Gamma)$, $\Delta(c)$ is free,
+
+\hspace*{12pt}$\bullet$ for each border cell $c \in C(\Gamma)$ with $\tilde{c} = \{n_1, n_2\}$, there is a pairing $M_c$ with $V(M_c) = \beta(n_1) \cup \beta(n_2) \cup \{n_1, n_2\}$, such that $n_1, n_2$ are adjacent in $M_c$, and $M_c$ has $|\beta(n_1)| + 1 = |\beta(n_2)| + 1$ components, each containing one vertex of $\beta(n_1) \cup \{n_1\}$ and one of $\beta(n_2) \cup \{n_2\}$ (possibly the same), and either
+
+\hspace*{12pt}$\bullet$ $M_c \in \Delta(c)$ or
+
+\hspace*{12pt}$\bullet$ $M_c \setminus n_1n_2 \in \Delta(c)$ (where $n_1n_2$ denotes the edge of $M_c$ joining $n_1, n_2$) and there is an internal cell $c'$ of $\Gamma$ with $n_1, n_2 \in \tilde{c}'$.
+
+\hspace*{12pt}$\bullet$ $\pi(G) = 0$ and $dom(\mu) = E(G)$; and for each internal cell $c$, and for $1 \le i \le |\tilde{c}|$ the $i$th term of $\mu(c)$ is the $i$th node of $c$.
+
+The main result of this section is the following.
+
+\textbf{9.1.} \textit{For every graded surface $(\Sigma, \rho)$, the set of all $(\Sigma, \rho)$-hulled patchworks is well-behaved.}
+
+\textbf{Proof.} Let $\Omega$ be a well-quasi-order. Let $r = \max \rho(\Theta)$, taken over all cuffs $\Theta$, and $r = 0$ if $bd(\Sigma) = \emptyset$. Let $\Omega_0$ be the well-quasi-order with $E(\Omega_0)$ the set of all 7-tuples $(\mu, \pi_0, \pi_1, \pi_2, \Delta, \omega, t)$ where
+
+\hspace*{12pt}$\bullet$ $\mu$ is a march with $\le 2r + 3$ terms,
+
+\hspace*{12pt}$\bullet$ $\pi_0, \pi_1, \pi_2$ are marches in $\bar{\mu}$,
+
+\hspace*{12pt}$\bullet$ $\Delta$ is a patch with $V(\Delta) = \bar{\mu}$,
+
+\hspace*{12pt}$\bullet$ $\omega \in E(\Omega)$,
+
+\hspace*{12pt}$\bullet$ $t = 0$ or $1$,
+
+where we say that $(\mu, \pi_0, \pi_1, \pi_2, \Delta, \omega, t) \le (\mu', \pi'_0, \pi'_1, \pi'_2, \Delta', \omega', t')$ if $t = t'$, $\omega \le \omega'$, $\mu$ and $\mu'$ have the same length $k$ say, and the bijection from $\bar{\mu}$ to $\bar{\mu}'$ mapping $\mu$ to $\mu'$ also maps $\pi_i$ to $\pi'_i$ ($i = 0, 1, 2$) and maps $\Delta$ to $\Delta'$. It is easy to see that $\Omega_0$ is indeed a well-quasi-order. We may assume that $E(\Omega_0) \cap E(\Omega) = \emptyset$; let $\Omega_1 = \Omega \cup \Omega_0$.
+
+Now let $P = (G, \mu, \Delta, \phi)$ be an $\Omega$-completion of a $(\Sigma, \rho)$-hulled patchwork. Let $(\Gamma, \beta)$ be a $(\Sigma, \rho)$-hull for $P$. For each cuff $\Theta$ let $c_\Theta$ be a cell of $\Gamma$ bordering $\Theta$. For each node $n$ bordering $\Theta$ let us choose a march $\pi(n)$ with $\bar{\pi}(n) = \beta(n)$, such that for each cell $c \ne c_\Theta$ bordering $\Theta$ with nodes $n_1, n_2$ and for $1 \le i \le \rho(\Theta)$, the $i$th term of $\pi(n_1)$ and the $i$th term

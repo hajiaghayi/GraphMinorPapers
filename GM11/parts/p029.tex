@@ -1,0 +1,24 @@
+\origpage{100}{ROBERTSON AND SEYMOUR}
+\noindent $\{a_1, b_1\}$, and similarly $U(Q_2) \cap X_1 = \{a_2, b_2\}$. From (8.7) applied to $X_1$ it follows that some walk of $\Gamma \cap bd(X_1)$ between $a_1$ and $b_1$ is shorter than $Q_2$ and hence $Q_1$ is shorter than $Q_2$, because $Q_1$ is the shortest such walk. But similarly, by (8.7) applied to $X_2$, $Q_2$ is shorter than $Q_1$, a contradiction. Thus $Z_2 = \emptyset$, and hence $bd(X_2) \cap Y_2 = \emptyset$.
+
+Since $e_1 \subseteq \Sigma - X_2$, it follows that $Y_2 \subseteq \Sigma - X_2$, and hence no component of $X_1 \cap X_2$ intersects $Y_2$. By (1) and (3), $k = 1$ and so $X_1 \cap X_2$ is arc-wise connected. From (7.8), $X_1 \cup X_2$ is simply-connected. Since $X_1 \cup X_2 \ne \Sigma$ by (8.4), it follows that $X_1 \cap X_2$ is simply-connected by (7.9). $\square$
+
+Let $a, b \in \Sigma$. A restraint $X$ is \textit{$a, b$-optimal} if $a, b \in X$, and there is no restraint $Y$ with $a, b \in Y$ and $l(Y) < l(X)$. It is \textit{$a, b$-extreme} if it is $a, b$-optimal and extreme. If $b$ is an edge or region, we say that $X$ is \textit{$a, b$-optimal} if it is $a, b'$-optimal for some $b' \in b$. (We observe that if $b' \in b$, then $b' \in X$, where $X$ is a restraint if and only if $b \subseteq X$.) ``$a, b$-extreme'' is generalized similarly.
+
+\stmt
+(8.9) \textit{Let $a, b \in \Sigma$, let $X'$ be an $a, b$-optimal restraint, and let $X$ be an extreme restraint with $a, b \in X$. Then $X' \subseteq X$.}
+
+\textit{Proof.} We may assume that $X'$ is $a, b$-extreme. By (8.8) $X \cap X'$ and $X \cup X'$ are simply-connected, and $X \cup X' \ne \Sigma$ by (8.4). Let $W$, $W'$, $W_1$, $W_2$ be perimeter walks of $X$, $X'$, $X \cap X'$, $X \cup X'$, respectively.
+
+\hspace*{12pt}(1) $l(X \cap X') \ge l(X')$.
+
+\textit{Subproof.} We may assume that $l(X \cap X') < 2\theta$, and so $\Sigma - (X \cap X') \nsubseteq \operatorname{ins}(W_1)$ by (8.2), since $X \cap X' \subseteq X = \operatorname{ins}(W)$ by (8.3). It follows that $X \cap X'$ is a restraint. But $a, b \in X \cap X'$, and the claim follows since $X'$ is $a, b$-optimal.
+
+\hspace*{12pt}(2) $l(X \cup X') + l(X \cap X') \le l(X) + l(X')$.
+
+\textit{Subproof.} Any edge of $\Gamma$ contributes at least as much to the right side of this inequality as it does to the left.
+
+We deduce from (1) and (2) that $l(X \cup X') \le l(X)$. By (8.6), $X \cup X'$ is a restraint. Since $l(X \cup X') \le l(X)$ and $X$ is extreme, we deduce that $X \cup X' = X$, that is, $X' \subseteq X$, as required. $\square$
+
+\stmt
+(8.10) \textit{Let $c \in \Sigma$, let $0 \le k < 2\theta$, and let $Z$ be the union of all restraints $X$ with $l(X) \le k$ and $c \in X$. Then $Z$ is simply-connected.}

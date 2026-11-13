@@ -1,0 +1,25 @@
+\origpage{92}{ROBERTSON AND SEYMOUR}
+{\centering
+{\Large Graph Minors. V. Excluding a Planar Graph\par}\medskip
+
+NEIL ROBERTSON \textit{Department of Mathematics, The Ohio State University, Columbus, Ohio 43210}\par
+AND\par
+P. D. SEYMOUR$^*$ \textit{Bell Communications Research, Morristown, New Jersey 07960}\par
+\textit{Communicated by the Managing Editors}\par
+Received February 23, 1984\par
+}
+\begin{quote}
+We prove that for every planar graph $H$ there is a number $w$ such that every graph with no minor isomorphic to $H$ can be constructed from graphs with at most $w$ vertices, by piecing them together in a tree structure. This has several consequences; for example, it implies that: (i) if $\mathscr{A}$ is a set of graphs such that no member is isomorphic to a minor of another, and some member of $\mathscr{A}$ is planar, then $\mathscr{A}$ is finite; (ii) for every fixed planar graph $H$ there is a polynomial time algorithm to test if an arbitrary graph has a minor isomorphic to $H$; (iii) there is a generalization of a theorem of Erd\"os and P\'osa (concerning the maximum number of disjoint circuits in a graph) to planar structures other than circuits.
+
+\end{quote}
+
+\sectionhead{1. \textsc{Introduction}}
+
+Graphs in this paper are finite, and may have loops and multiple edges. A graph is a minor of another if the first can be obtained by contraction from a subgraph of the second.
+
+We begin with a definition of the ``tree-width'' of a graph. This concept has been discussed in other papers of this series, but for the reader's convenience we define it again here. A \textit{tree-decomposition} $(T, \chi)$ of a graph $G$ is a tree $T$ together with a family $\chi = (X_t : t \in V(T))$ of subsets of $V(G)$, such that
+
+\hspace*{12pt}(i) $\bigcup(X_t : t \in V(T)) = V(G)$;
+
+\hspace*{12pt}(ii) for each edge $e$ of $G$ there exists $t \in V(T)$ such that $e$ has both ends (or its end, in the case of a loop) in $X_t$;%
+\origfootnote{Research partially supported by N.S.F. Grant MCS 8103440.}

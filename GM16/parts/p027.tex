@@ -1,0 +1,28 @@
+\origpage{69}{N. Robertson, P.D. Seymour / Journal of Combinatorial Theory, Series B 89 (2003) 43--76}
+\textbf{Proof of 7.1} (assuming 8.1). Let $\Sigma$ be a surface, and let $\tau, \chi, \delta, \lambda \ge 0, \theta' \ge 1$, and $\phi, \psi \ge 3$. Choose $\gamma \ge 0$ and $\theta_1 > (4\gamma + 2)\delta$ so that 8.1 holds (with $\theta$ replaced by $\theta_1$). Let $\zeta = \lfloor \frac{1}{2}\delta^2 \phi^2 \rfloor + \chi$, and choose $\theta_2 > \zeta$ so that 8.3 holds (with $\theta$ replaced by $\theta_2$). We may assume that $\theta_2 \ge \max(\theta' + \zeta, 4\psi + 2)$. Let $\sigma = \delta + \tau + \zeta$ and $\theta = \chi + \theta_1 + 3\gamma + (4\gamma + 2)\delta + \theta_2$.
+
+We claim that $\sigma, \theta$ satisfy 7.1. For let $\mathscr{T}^*$ be a tangle in $G$, and let $(H, \mathscr{T}, X, Y)$ be an animal with $\chi$ horns and $\delta$ hairs, of strength $\ge (\theta, \sigma)$. Let $\mathscr{T}'$ be the truncation of $\mathscr{T}$ to order $\theta - \chi$. By 8.2, $H, \mathscr{T}'$ is a $\Sigma$-span in $G \setminus X$ with respect to $\mathscr{T}^* \setminus X$. Let $d'$ be the metric of $\mathscr{T}'$. From 7.4 we deduce
+
+\hspace*{12pt}(1) \textit{If there is a $\Sigma'$-span of order $\ge \phi$ in $G \setminus X$, for some surface $\Sigma'$ obtained from $\Sigma$ by adding a handle, then 7.1.1 holds.}
+
+Next, we observe
+
+\hspace*{12pt}(2) \textit{If there is an $H$-path in $G \setminus X$ with ends $s, t$ such that $d'(s, t) \ge \psi$ and $d'(s, y) \ge \psi$ for all $y \in Y$, then 7.1.2 holds.}
+
+\textit{Subproof.} Then $d(s, t) \ge d'(s, t)$, and $d(s, y) \ge d'(s, y)$ for all $y \in Y$, and so $(H, \mathscr{T}, X, Y \cup \{s\})$ is an animal (in $G$, with respect to $\mathscr{T}^*$) with $\chi$ horns and $\delta + 1$ hairs, of strength $\ge (\psi, \sigma) \ge (\psi, \tau)$. This proves (2).
+
+Now $\mathscr{T}'$ has order $\theta - \chi \ge \theta_1$, and for all distinct $y_1, y_2 \in Y$,
+\begin{equation*}
+d'(y_1, y_2) = \min(d(y_1, y_2), \theta - \chi) \ge \min(\theta, \theta - \chi) = \theta - \chi \ge \theta_1
+\end{equation*}
+and so 8.1 may be applied (with $\mathscr{T}^*, G, \mathscr{T}, \theta$ replaced by $\mathscr{T}^* \setminus X, G \setminus X, \mathscr{T}', \theta_1$). From (1) and (2) we may therefore assume that 8.1.3 holds, that is,
+
+\hspace*{12pt}(3) \textit{There is a $\gamma$-envelope $(\Lambda_y \colon y \in Y)$ around $Y$, and there exists $Z \subseteq V(G \setminus X) \setminus V(H'')$ with $|Z| \le \frac{1}{2}\delta^2 \phi^2$, such that $Z$ meets every $H$-path in $G \setminus X$ with ends $s, t$ satisfying $d''(s, t) \ge 2\psi$, where $H'' = H \cap (\Sigma \setminus \bigcup (\Lambda_y \colon y \in Y))$, and $d''$ is the metric of the $(4\gamma + 2)\delta$-compression $\mathscr{T}''$ of $\mathscr{T}'$ in $H''$.}
+
+Now $(H, \mathscr{T}', X, Y)$ is an animal of strength $\ge (\theta - \chi, \sigma)$, and $H'', \mathscr{T}''$ is obtained from $H, \mathscr{T}'$ by repeating $\delta$ times the operation of clearing a $\gamma$-zone (see [8, section 3]). From $\delta$ applications of 6.2 we deduce
+
+\hspace*{12pt}(4) \textit{For each $v \in X$ there is a horn at $v$ over $H'', \mathscr{T}''$ of cardinality $\sigma - \delta = \tau + \zeta$ and breadth $\ge \theta - \chi - (4\gamma + 2)\delta \ge \theta_2$.}
+
+For each $y \in Y$, let $P_y$ be a minimal path of $H$ between $y$ and $V(H \cap bd(\Lambda_y))$, with ends $y, p(y)$ say.
+
+\hspace*{12pt}(5) \textit{$d''(p(y_1), p(y_2)) \ge \theta_2$ for all distinct $y_1, y_2 \in Y$.}

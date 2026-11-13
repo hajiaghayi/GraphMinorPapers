@@ -1,0 +1,30 @@
+\origpage{35}{}
+For (P2), let $s \subseteq F_j^*$ be a space with ends $a, b$ say. Certainly $V(\mu'(s) \cap \Gamma) = V(\mu(s) \cap \Gamma) = \{a, b\}$. To see that $\mu'(a) \subseteq \mu'(s)$ we argue as follows. If $v \notin V(\mu(a))$ then
+\begin{equation*}
+\mu'(a) = \mu(a) \subseteq \mu(s) \setminus v = \mu'(s) \setminus v \subseteq \mu'(s)
+\end{equation*}
+as required. We assume then that $v \in V(\mu(a))$, and hence $v \in V(\mu(s))$. Thus $s \subseteq F_1$ or $s \subseteq F_2$, say $s \subseteq F_1$; and so $a \in F_1$. Hence
+\begin{equation*}
+\mu'(a) = \sigma_1(\mu(a)) \subseteq \sigma_1(\mu(s)) = \mu'(s)
+\end{equation*}
+as required. This verifies the second assertion of (P2). The third assertion follows because there is an isomorphism from $\mu(s)$ to $\mu'(s)$ mapping $\mu(a)$ to $\mu'(a)$ and $\mu(b)$ to $\mu'(b)$.
+
+For (P3), let $x_1, a, x_2, b$ be units of a cuff $C$ in order, where $a, b \in V(\Gamma)$. We must show that
+\begin{equation*}
+\mu'(x_1) \cap \mu'(x_2) \subseteq \mu'(a) \cup \mu'(b).
+\end{equation*}
+Since
+\begin{equation*}
+E(\mu'(x_1) \cap \mu'(x_2)) = E(\mu(x_1) \cap \mu(x_2)) \subseteq E(\mu(a) \cup \mu(b)) = E(\mu'(a) \cup \mu'(b)),
+\end{equation*}
+it suffices to show that every vertex of $\mu'(x_1) \cap \mu'(x_2)$ is a vertex of $\mu'(a) \cup \mu'(b)$. Let $w \in V(\mu'(x_1) \cap \mu'(x_2))$. If $w \ne v_1, v_2$ then
+\begin{equation*}
+w \in V(\mu(x_1) \cap \mu(x_2)) \subseteq V(\mu(a) \cup \mu(b))
+\end{equation*}
+and since $w \ne v$ it follows that $w \in V(\mu'(a) \cup \mu'(b))$ as required. We may assume then that $w = v_1$ say. Thus $v_1 \in V(\mu'(x_1) \cap \mu'(x_2))$. From the definition of $\mu'(x_1)$ and $\mu'(x_2)$ it follows that $v \in \mu(x_1) \cap \mu(x_2)$ and $x_1, x_2$ belong to $F_1$. Since $x_1, a, x_2, b$ occur in order in $C$ we may assume that $a \in F_1$ and lies in $F_1$ between $x_1$ and $x_2$. Since $x_1, a, x_2, u^*$ occur in order in $C$, it follows that
+\begin{equation*}
+v \in V(\mu(x_1) \cap \mu(x_2)) \subseteq V(\mu(a) \cup \mu(u^*))
+\end{equation*}
+and since $v \notin V(\mu(u^*))$ we deduce that $v \in V(\mu(a))$. But $a \in F_1$, and $\mu'(a) = \sigma_1(\mu(a))$, and so $v_1 \in V(\mu'(a))$, as required. This proves (P3).
+
+For (P4), suppose that $w \in V(\mu'(u))$ for every $u \in V(\Gamma) \cap C'$ for some cuff $C'$. If $w \ne v_1, v_2$ then $w \in \mu(a)$ for all $u \in V(\Gamma) \cap C'$, and so $w \in \bigcap(\mu(u) : u \in V(\Gamma) \cap C')$, contrary to the truth of (P4) for $\mu$. Thus we may assume that $w = v_1$ say, and hence $C' = C$. But $v_1 \notin V(\mu(u^*)) = V(\mu'(u^*))$, a contradiction. This proves (P4), and therefore completes the proof of (8.2). $\square$

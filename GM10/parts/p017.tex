@@ -1,0 +1,27 @@
+\origpage{169}{GRAPH MINORS, X}
+\hspace*{12pt}(1) \textit{We may assume that for each $e \in E(G)$, there is a leaf $t$ of $T$ with $E(\tau(t)) = \{e\}$ and $V(\tau(t))$ the set of ends of $e$, and hence that $E(\tau(t)) = \emptyset$ for each $t \in V(T)$ with valency $\ge 2$.}
+
+For if for some $e$ there is no such $t$, we choose $t' \in V(T)$ with $e \in E(\tau(t'))$; we add a new vertex $t$ to $T$ adjacent only to $t'$; we remove $e$ from $\tau(t')$, and define $\tau(t)$ to be the hypergraph formed by $e$ and its ends. This provides a new tree-decomposition of $G$ of width $\omega(G)$. By continuing this process we may arrange that (1) holds.
+
+\hspace*{12pt}(2) \textit{We may assume that $|E(\tau(t))| = 1$ for each leaf $t$ of $T$.}
+
+For by (1), $|E(\tau(t))| \le 1$. If $E(\tau(t)) = \emptyset$ let $T'$ be obtained from $T$ by deleting $t$, and let $\tau'$ be the restriction of $\tau$ to $V(T')$; then since $G$ has no isolated vertices it follows that $(T', \tau')$ is a new tree-decomposition of $G$ of width $\omega(G)$ still satisfying (1). By continuing this process we may arrange that (2) holds.
+
+\hspace*{12pt}(3) \textit{We may assume that every vertex of $T$ has valency $\le 3$.}
+
+For if $t \in V(T)$ has valency $\ge 4$, we may choose a tree $T'$ and an edge $f$ of $T'$ such that $T$ is obtained from $T'$ by contracting $f$, and the two ends $t_1, t_2$ of $f$ both have valency less than the valency of $t$, and we define $\tau(t_1) = \tau(t_2) = \tau(t)$. The new tree-decomposition still has width $\omega(G)$ and still satisfies (1) and (2), and by repeating this process we may arrange that (3) holds.
+
+Now let $E(\tau(t)) = \{\sigma(t)\}$ for each leaf $t$ of $T$. Let $S$ be the tree obtained from $T$ by suppressing each vertex of valency 2. Then $(S, \sigma)$ is a branch-decomposition of $G$. For $f \in E(S)$, the order of $f$ in $(S, \sigma)$ is at most the number of vertices in $\tau(t)$, where $t$ is an end of $f$, and hence at most $\omega(G) + 1$. Thus $\beta(G) \le \omega(G) + 1$, as required. $\square$
+
+Incidentally, both extremes of (5.1) can occur. For if $G = K_n$ (for some $n > 0$ divisible by 3) then $\omega(G) = \lfloor (3/2) \beta(G) \rfloor - 1$, by (4.4), since $\omega(G) = n - 1$, while if $G$ is obtained from $K_{n,n}$ by deleting a perfect matching (for some $n \ge 4$) then it can be shown that $\omega(G) = n - 1$ and $\beta(G) = n$.
+
+We deduce
+
+\stmt
+(5.2) \textit{For any hypergraph $G$, $\theta(G) \le \omega(G) + 1 \le (3/2) \theta(G)$.}
+
+\textit{Proof.} For from (5.1),
+\begin{equation*}
+\max(\beta(G), \gamma(G)) \le \omega(G) + 1 \le \max(\frac{3}{2}\beta(G), \gamma(G), 1)
+\end{equation*}
+and from (4.3), $\max(\beta(G), \gamma(G)) = \theta(G)$ unless $\gamma(G) = 0$ and $V(G) \ne \emptyset$.

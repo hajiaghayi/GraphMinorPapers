@@ -1,0 +1,22 @@
+\origpage{260}{ROBERTSON AND SEYMOUR}
+\noindent \textit{then $\mathscr{T}'$ is a respectful tangle in $\Gamma'$ of order $\theta$. Let its metric be $d'$, and let $r'$ be the region of $\Gamma'$ including $r$; then}
+
+\hspace*{12pt}(i) \textit{$d'(a, b) \ge d(a, b)$ for all $a, b \in A(\Gamma) \cap A(\Gamma')$, and}
+
+\hspace*{12pt}(ii) \textit{$d'(a, r') \ge d(a, r)$ for all $a \in A(\Gamma) \cap A(\Gamma')$.}
+
+\textit{Proof.} $r' = r \cup (\Delta - \{v\})$, and therefore $r'$ is an open disc, by [5, Theorem (7.9)], since $\operatorname{bd}(\Delta) \cap r$ is connected. But every other atom of $\Gamma'$ is an atom of $\Gamma$, and so $\Gamma'$ is 2-cell. Clearly $d(a, \{v\}) \le 1$ for every $a \in A(\Gamma) - A(\Gamma')$, since for any such $a$, either $a = r$ or $a \subseteq \operatorname{ins}(F)$. By (7.1), $\mathscr{T}'$ is a tangle in $\Gamma'$ of order $\theta$; we must show that it is respectful. Let $F'$ be a $\Gamma'$-normal $O$-arc with $|F' \cap V(\Gamma')| < \theta$. We may assume, by ``diverting'' $F'$ within $r'$, that $F' \cap \operatorname{ins}(F) \subseteq \{v\}$, and so $F'$ is $\Gamma$-normal and $|F' \cap V(\Gamma)| < \theta$. Let $\Delta' = \operatorname{ins}(F')$; then
+\begin{equation*}
+(\Gamma \cap \Delta', \Gamma \cap \overline{\Sigma - \Delta'}) \in \mathscr{T},
+\end{equation*}
+and so
+\begin{equation*}
+(\Gamma' \cap \Delta', \Gamma' \cap \overline{\Sigma - \Delta'}) \in \mathscr{T}'
+\end{equation*}
+by definition of $\mathscr{T}'$. Hence $\mathscr{T}'$ is respectful. Let $\operatorname{ins}'$ be its inside function, and $d'$ its metric.
+
+Let $K$ be a radial drawing of $\Gamma$. Since $r$ is incident with $v$ ``twice,'' there correspond two parallel edges $e, f$ of $K$ with ends $u, v$, say, so that $\Gamma \cap \Delta = \Gamma \cap \operatorname{ins}(C_0)$, where $C_0$ is the circuit of $K$ with $E(C_0) = \{e, f\}$. We may therefore choose a radial drawing $K'$ for $\Gamma'$ so that $K'$ is a subdrawing of $K$, by deleting from $K$ $f$ and every vertex and edge of $K$ in $\operatorname{ins}(C_0) - U(C_0)$. Now $\operatorname{ins}'(C') = \operatorname{ins}(C')$ for every circuit $C'$ of $K'$ with $<2\theta$ edges, because if $\Delta' = \operatorname{ins}(C')$, then as we saw above,
+\begin{equation*}
+(\Gamma' \cap \Delta', \Gamma' \cap \overline{\Sigma - \Delta'}) \in \mathscr{T}'
+\end{equation*}
+and so $\Delta' = \operatorname{ins}'(C')$. Consequently $\operatorname{ins}(W) = \operatorname{ins}'(W)$ for every closed walk $W$ of $K'$ with length $<2\theta$. To prove (i), let $a, b \in A(\Gamma) \cap A(\Gamma')$. To prove that $d'(a, b) \ge d(a, b)$, we may assume that $d'(a, b) < \theta$, since $d(a, b) \le \theta$, and that $a \ne b$. Consequently there is a closed walk $W$ of $K'$ with length $2d'(a, b)$ such that $\operatorname{ins}'(W) = \operatorname{ins}(W)$ meets both $a$ and $b$; hence, $d(a, b) \le d'(a, b)$. Thus (i) holds. For (ii), let $a \in A(\Gamma) \cap A(\Gamma')$. To prove that $d'(a, r') \ge d(a, r)$ we may assume that $d'(a, r') < \theta$ and $a \ne r'$, and so there is a closed walk $W$ of $K'$ of length $2d'(a, r')$ such that $\operatorname{ins}'(W) = \operatorname{ins}(W)$ meets both $a$ and $r'$. Consequently, $u \in \operatorname{ins}(W)$ (we recall that $e, f$ have ends $u, v$) and so $\operatorname{ins}(W)$ meets $a$ and $r$, and $d(a, r) \le d'(a, r')$, and (ii) holds. $\square$

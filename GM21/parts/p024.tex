@@ -1,0 +1,23 @@
+\origpage{22}{}
+For $1 \le j \le r$, let $q_j \ge 1$ be an integer; for each $u \in V(\Gamma) \cap F_j^*$ let $\mu(u)$ be an edge-less subgraph of $H_j$ with $q_j$ vertices and with $V(\mu(u) \cap \Gamma) = \{u\}$; and for each space $s$ with $s \subseteq F_j^*$, let $\mu(s)$ be a subgraph of $H_j$, satisfying the following. (For a support $F$ of $\Gamma$ in $\Sigma$, $\mu(F)$ denotes the union of $\mu(s)$ over all spaces $s \subseteq F$ and $\mu(u)$ over all $u \in F \cap V(\Gamma)$.)
+
+\hspace*{12pt}(V2) \textit{For} $1 \le j \le r, H_j = \mu(F_j^*)$.
+
+\hspace*{12pt}(V3) \textit{For} $1 \le j \le r$, \textit{if} $s \subseteq F_j^*$ \textit{is a space with ends} $u_1, u_2$, \textit{then} $V(\mu(s) \cap \Gamma) = \{u_1, u_2\}$, \textit{and} $\mu(u_1), \mu(u_2) \subseteq \mu(s)$ \textit{and there are} $q_j$ \textit{mutually vertex-disjoint paths of} $\mu(s)$ \textit{between} $V(\mu(u_1))$ \textit{and} $V(\mu(u_2))$.
+
+\hspace*{12pt}(V4) \textit{For} $1 \le j \le r$, \textit{if} $s_1, s_2 \subseteq F_j^*$ \textit{are spaces, and} $u \in F_j^* \cap V(\Gamma)$ \textit{lies between them in} $F_j^*$, \textit{then} $\mu(s_1) \cap \mu(s_2) \subseteq \mu(u)$ \textit{(and consequently} $E(\mu(s_1) \cap \mu(s_2)) = \emptyset$).
+
+In these circumstances, we call $\Gamma, F_1^*, \dots, F_r^*, H_1, \dots, H_r, \mu$ a \textit{presentation} of $G$ in $\Sigma$, with \textit{defect} $r$. Its \textit{depth} is $\max(q_j : 1 \le j \le r)$, or $0$ if $r = 0$ (which implies $bd(\Sigma) = \emptyset$). Our next goal is to prove a form of (1.1) for graphs with presentations with given defect and depth, in a fixed surface. We use the following lemma.
+
+\textbf{6.1} \textit{Let} $\Gamma, F_1^*, \dots, F_r^*, H_1, \dots, H_r, \mu$ \textit{be a presentation of} $G$ \textit{in} $\Sigma$. \textit{Let} $a, b, a', b' \in F_1^* \cap V(\Gamma)$ \textit{be in order and let} $I, I' \subseteq F_1^*$ \textit{be the supports with ends} $a, b$ \textit{and} $a', b'$ \textit{respectively. Let} $|\mu(a)| = q$; \textit{let} $P_1, \dots, P_q$ \textit{be mutually vertex-disjoint paths of} $\mu(I)$ \textit{between} $V(\mu(a))$ \textit{and} $V(\mu(b))$; \textit{and let} $P_1', \dots, P_q'$ \textit{be mutually vertex-disjoint paths of} $\mu(I')$ \textit{between} $V(\mu(a'))$ \textit{and} $V(\mu(b'))$.
+
+\hspace*{12pt}(i) \textit{For} $1 \le i, i' \le q$, \textit{if} $v \in V(P_i \cap P_{i'}')$, \textit{then} $v \in V(\mu(b) \cap \mu(a'))$ \textit{and} $v$ \textit{is an end of} $P_i$ \textit{and of} $P_{i'}'$.
+
+\hspace*{12pt}(ii) \textit{If} $a' = b$, \textit{then} $P_1, \dots, P_q$ \textit{can be renumbered so that} $P_1 \cup P_1', \dots, P_q \cup P_q'$ \textit{are mutually vertex-disjoint paths of} $\mu(I \cup I')$ \textit{between} $V(\mu(a))$ \textit{and} $V(\mu(b'))$.
+
+\hspace*{12pt}(iii) \textit{If} $|\mu(a) \cup \mu(b')| = |\mu(a') \cup \mu(b)| = k$ \textit{say, then} $\{P_1, \dots, P_q, P_1', \dots, P_q'\}$ \textit{has cardinality} $k$, \textit{and its members are} $k$ \textit{mutually vertex-disjoint paths of} $\mu(I) \cup \mu(I')$ \textit{between} $V(\mu(a) \cup \mu(b'))$ \textit{and} $V(\mu(b) \cup \mu(a'))$.
+
+\textbf{Proof.} First we prove (i). Let $v \in V(P_i \cap P_{i'}')$, where $1 \le i, i' \le q$. We claim that $v \in V(\mu(b))$. If $a = b$ this is clear since
+\begin{equation*}
+v \in V(P_i) \subseteq V(\mu(I)) = V(\mu(b))
+\end{equation*}

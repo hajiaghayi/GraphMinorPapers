@@ -1,0 +1,21 @@
+\origpage{285}{GRAPH MINORS. VIII}
+\sectionhead{18. The General Surface}
+
+So far we have proved (6.1) when $\Sigma$ is a disc or cylinder. In this section we prove it in all other cases. If $C$ is a cuff of a surface $\Sigma$, $\Sigma + \hat{C}$ denotes the surface obtained from $\Sigma$ by ``pasting'' a disc onto $C$, thereby reducing the number of cuffs by one. An $O$-arc $F$ in $\Sigma$ is said to be \textit{planar in} $\Sigma$ if it bounds a disc in $\Sigma$; it \textit{surrounds a cuff} $C$ if it is planar in $\Sigma + \hat{C}$ but not in $\Sigma$. It is \textit{near-planar} if either it is planar in $\Sigma$ or it is planar in $\Sigma + \hat{C}$ for some cuff $C$.
+
+Let $G_1$ be the graph with two vertices $u, v$ say and three edges, one a loop on $u$, one a loop on $v$, and one joining $u, v$. Let $G_2$ be the graph with one vertex and two edges. Let $G_3$ be the graph with two vertices and three edges, mutually parallel. Let $G_4$ be the graph with two vertices and two edges, exactly one of which is a loop. Let $X_1, X_2, X_3, X_4$ be the topological space associated with $G_1, G_2, G_3, G_4$, respectively. We recall that an $X_i$-arc in $\Sigma$ is a subset of $\Sigma$ homeomorphic to $X_i$. We define the \textit{end} of an $X_4$-arc to be the point representing the monovalent vertex of $G_4$.
+
+Let $\Sigma$ be a surface. By a \textit{schism} in $\Sigma$ we mean a subset of $\Sigma$ which is one of the following: (i) an $O$-arc $F$ which is not near-planar, with $|F \cap \text{bd} \Sigma| \le 1$ (ii) a $[0, 1]$-arc with its ends in distinct cuffs, containing no other point of $\text{bd} \Sigma$ (iii) a $[0, 1]$-arc $F$ with both ends in the same cuff $C$, such that $F \cup C$ is not near-planar, and such that $|F \cap \text{bd} \Sigma| = 2$ (iv) an $X_1$ or $X_2$-arc in $\Sigma$ such that both its $O$-arcs surround distinct cuffs of $\Sigma$, and which contains no point of $\text{bd} \Sigma$
+
+\hspace*{12pt}(v) an $X_3$-arc in $\Sigma$ such that all three of its $O$-arcs surround distinct cuffs, and which contains no point of $\text{bd} \Sigma$
+
+\hspace*{12pt}(vi) an $X_4$-arc with its end in one cuff and its $O$-arc surrounding another cuff, containing only one point of $\text{bd} \Sigma$.
+
+If $X$ is a schism in $\Sigma$, we may ``cut'' along $X$ in the natural way, to obtain a new surface $\Sigma'$. There is a natural surjection $\theta \colon \Sigma' \to \Sigma$. If $\Gamma$ is a drawing in $\Sigma$ and $X$ is $\Gamma$-normal, we define
+\begin{equation*}
+\theta^{-1}(\Gamma) = (\theta^{-1}(U(\Gamma)), \theta^{-1}(V(\Gamma))).
+\end{equation*}
+Then $\theta^{-1}(\Gamma)$ is a drawing in $\Sigma'$. We require the following lemma, which is a consequence of [11, Theorem (9.1)], and the discussion in Section 8 of that paper.
+
+\stmt
+(18.1) \textit{Let} $\Sigma$ \textit{be a connected surface, not a sphere, disc, or cylinder. Let} $\Delta$ \textit{be a drawing of a graft} $(H, U)$ \textit{in} $\Sigma$. \fix{\textit{Suppose that $\Sigma$ has at most one cuff or that $U=\emptyset$.}}\fixnote{fix:18.1}{As printed, (18.1) is false for surfaces with two or more cuffs and grafts with roots. The full description of this correction (see the first page) gives a drawing of a triangle with one root on each cuff of a pants, and graphs $G$ for which none of (i)--(iv) holds. The proof breaks where it uses the remark on page 242 of Graph Minors VII that every schismatic set includes a schism, which is false (see the note there). With the added hypothesis, (18.1) holds. A form that holds for every surface first makes every root a leaf, joined to its old place by a spoke across a collar of $bd(\Sigma)$, and gives (iii) and (iv) for the drawing of this new graft. The proof of (18.3) needs this form. It may pass to the new grafts, since a simulation of the new grafts gives a simulation of the old ones.} \textit{Then there is a number} $N$ \textit{such that for}

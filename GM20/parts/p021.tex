@@ -1,0 +1,26 @@
+\origpage{345}{N. Robertson, P.D. Seymour / Journal of Combinatorial Theory, Series B 92 (2004) 325--357}
+By (1) and the second tie-breaker axiom and 6.1, $\lambda(A^- \cup C, B^- \cap D) \le \lambda(A^-, B^-)$. In particular, $(A^- \cup C, B^- \cap D)$ has order $< \theta$, and so $(A^- \cup C, B^- \cap D) \in \mathcal{T}$ (because $(B^- \cap D, A^- \cup C) \notin \mathcal{T}$ by the second tangle axiom, since $(A^-, B^-), (C, D) \in \mathcal{T}$). But $W \subseteq V(A^- \cap B^-)$ since $W \subseteq \bar{\pi}(A)$; and $W \subseteq V((A^- \cup C) \cap (B^- \cap D))$ since $W \subseteq V(D)$ by our previous assumption. Since $\mathcal{L}/W$ is linked to $\mathcal{T}/W$, and $A/W \in \mathcal{L}/W$, and $((A^- \cup C)/W, (B^- \cap D)/W) \in \mathcal{T}/W$, it follows that the order of $(A^-/W, B^-/W)$ is at most that of $((A^- \cup C)/W, (B^- \cap D)/W)$; that is, the order of $(A^-, B^-)$ is at most that of $(A^- \cup C, B^- \cap D)$. Since $\lambda(A^- \cup C, B^- \cap D) \le \lambda(A^-, B^-)$, it follows that $(A^-, B^-)$ has the same order as $(A^- \cup C, B^- \cap D)$.
+
+Now the sum of the orders of $(A^- \cup C, B^- \cap D)$ and $(A^- \cap C, B^- \cup D)$ equals the sum of the orders of $(A^-, B^-)$ and $(C, D)$; and so $(A^- \cap C, B^- \cup D)$ has the same order as $(C, D)$. Since $\lambda(A^- \cap C, B^- \cup D) \ge \lambda(C, D)$, and $f \in E(D)$, it follows that
+\begin{equation*}
+\Sigma(v(x) : x \in Z(B^- \cup D)) \le \Sigma(v(x) : x \in Z(D))
+\end{equation*}
+and so $B^- \subseteq D$. Hence
+\begin{equation*}
+V((A^- \cap C) \cup (B^- \cup D)) \subseteq V(C \cap D);
+\end{equation*}
+but these two sets have the same cardinality, and so equality holds. Consequently $\lambda(A^- \cap C, B^- \cup D) = \lambda(C, D)$, and so $A^- \cap C = C$ by the first tie-breaker axiom (for $A^- \cap C \ne D$ since $f \in E(D)$). Hence $C \subseteq A^-$. This proves 6.2. $\square$
+
+By combining 6.2 and 5.7 we obtain a form of 5.7 which does not involve tie-breakers, the following.
+
+\textbf{6.3.} \textit{Let $\Omega$ be a well-quasi-order, let $\mathcal{F}$ be a well-behaved set of patchworks, and let $\theta \ge 1$. Let $P_i = (G_i, \mu_i, \Delta_i, \phi_i)$ ($i = 1, 2, \ldots$) be a countable sequence of rootless robust $\Omega$-patchworks. Suppose that for each tangle $\mathcal{T}$ in $G_i$ of order $\ge \theta$, there exist $W \subseteq V(G_i)$ with $|W| < \theta$ and a fine rooted location $\mathcal{L}$ in $G_i$, such that}
+
+\hspace*{12pt}$\bullet$ \textit{$W \subseteq \bar{\pi}(A)$ for all $A \in \mathcal{L}$,}
+
+\hspace*{12pt}$\bullet$ \textit{$\mathcal{L}/W$ is linked to $\mathcal{T}/W$, and}
+
+\hspace*{12pt}$\bullet$ \textit{$\mathcal{F}$ contains a heart of $((G_i, \mu_i, \Delta_i), \mathcal{L})$.}
+
+\textit{Then there exist $j > i \ge 1$ such that $P_i$ is simulated in $P_j$.}
+
+\textbf{Proof.} If $P$, $P'$ are two rootless $\Omega$-patchworks with $E(P) = E(P') = \emptyset$, then one of $P$, $P'$ is simulated in the other. We may therefore assume that $E(G_i) \ne \emptyset$ for each $i \ge 1$. For $i \ge 1$, let $\lambda_i$ be an edge-based tie-breaker in $G_i$ defined by $f_i$, $v_i$ say. We claim that the hypotheses of 5.7 are satisfied. For let $\mathcal{T}$ be a tangle in $G_i$ of order $\ge \theta$, and let $\mathcal{T}'$ be the set of all $(A, B) \in \mathcal{T}$ of order $< \theta$. Then $\mathcal{T}'$ is a tangle in $G_i$ of order $\theta$. Choose $W$, $\mathcal{L}$ as in 6.3 (with $\mathcal{T}$ replaced by $\mathcal{T}'$). Since $\mathcal{L}/W$ is linked to $\mathcal{T}'/W$, it follows that $\mathcal{L}/W$ has order $< \theta - |W|$, and so $\mathcal{L}$ has order $< \theta$. Since $\mathcal{L}/W$ is linked to $\mathcal{T}'/W$, it follows that $\mathcal{L}/W$ is linked to $\mathcal{T}/W$. By 6.2, $\mathcal{L}$ $\theta$-isolates $\mathcal{T}$ modulo $W \cup \{f_i\}$. Since $|W \cup \{f_i\}| \le \theta$, the hypotheses of 5.7 are satisfied. The result follows from 5.7. $\square$

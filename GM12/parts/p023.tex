@@ -1,0 +1,21 @@
+\origpage{262}{ROBERTSON AND SEYMOUR}
+\textit{Subproof.} Certainly $U(W) \subseteq U(\widetilde{W}) \cup r$. Thus, let $C'$ be a circuit of $K'$ with $U(C') \subseteq U(W)$; we must show that $\operatorname{ins}'(C') \subseteq \operatorname{ins}(\widetilde{W}) \cup r$. Now $C'$ has length $< 2\theta - 2t$. If $v \notin V(C)$ then $C'$ is a circuit of $K$ and $\operatorname{ins}'(C') = \operatorname{ins}(C')$ as we already saw, and $C' \subseteq K | \widetilde{W}$; and so $\operatorname{ins}(C') \subseteq \operatorname{ins}(\widetilde{W})$. We assume then that $v \in V(C')$. Let $e_i, e_j$ be the two edges of $C'$ incident with $v$. Let $P$ be the path in $P_i \cup P_j$ between $v_i$ and $v_j$; thus $|E(P)| = 2$ or $4$, depending whether the middle vertices of $P_i$ and $P_j$ are equal or not. Let $C$ be the circuit $P \cup (C' \setminus v)$; then $|E(C)| = |E(C')| + 2\varepsilon$, where $\varepsilon = 0$ if $|E(P)| = 2$ and $\varepsilon = 1$ if $|E(P)| = 4$. Let $\Delta = \operatorname{ins}(C)$, $A = \Gamma | \Delta$, $B = \Gamma | \overline{\Sigma - \Delta}$. Then $(A, B) \in \mathscr{T}$, and has order $\frac{1}{2}|E(C)|$. Let $A^+ \subseteq \Gamma$ be the drawing with vertex set $V(A) \cup \{v\}$ and edge set $E(A)$, and define $B^+$ similarly; then $(A^+, B^+)$ has order $\le \frac{1}{2}|E(C)| + 1 - \varepsilon \le \frac{1}{2}|E(C')| + 1$. But $|E(C')| < 2\theta - 2t \le 2\theta - 2$, and so $(A^+, B^+)$ has order $< \theta$. By [4, Theorem (2.9)], $(A^+, B^+) \in \mathscr{T}$, and so $(A^+ \setminus v, B^+ \setminus v) \in \mathscr{T}'$; that is, $(\Gamma' \cap \Delta, \Gamma' \cap \overline{\Sigma - \Delta}) \in \mathscr{T}'$. Consequently, $\operatorname{ins}'(C') \subseteq \operatorname{ins}(C) \cup r \subseteq \operatorname{ins}(\widetilde{W}) \cup r$. This proves (1).
+
+Now let us prove (i). Let $a, b \in A(\Gamma) \cap A(\Gamma')$. To show that $d'(a, b) \ge d(a, b) - 2$, we may assume that $d'(a, b) < \theta - 2$, since $d(a, b) \le \theta$, and that $a \ne b$. Consequently there is a closed walk $W$ of $K'$ of length $2d'(a, b)$, such that $a$ and $b$ both meet $\operatorname{ins}'(W)$. By [5, Theorem (9.2)] $W$ can be chosen so that $v$ occurs at most twice in it. Hence $\widetilde{W}$ has length $\le 2d'(a, b) + 4 < 2\theta$ and by (1), $\operatorname{ins}'(W) \subseteq \operatorname{ins}(\widetilde{W}) \cup r$. Since $a, b$ meet $\operatorname{ins}'(W)$ and do not meet $r$, they both meet $\operatorname{ins}(\widetilde{W})$; and so $d(a, b) \le d'(a, b) + 2$. Hence (i) holds.
+
+To prove (ii), let $a \in A(\Gamma) \cap A(\Gamma')$; we must show that $d'(a, r) \ge d(a, \{v\}) - 1$. We may assume that $d'(a, r') < \theta - 1$, and so $W$ exists as above (with $b = r$). But now $W$ can be chosen so that $v$ occurs at most once in $W$, since $v \in r$. Hence $\widetilde{W}$ has length $\le 2d'(a, b) + 2$; and $a$ and $\{v\}$ both meet $\operatorname{ins}(\widetilde{W})$, and so $d(a, v) \le d'(a, r') + 1$. Hence (ii) holds. $\square$
+
+By combining (7.2) and (7.3), we deduce
+
+\stmt
+(7.4) \textit{Let $\mathscr{T}$ be a respectful tangle of order $\theta \ge 2$ in a 2-cell drawing $\Gamma$ in a connected surface $\Sigma$, and let its metric be $d$. Let $v \in V(\Gamma)$. Then there is a 2-cell component $\Gamma'$ of $\Gamma \setminus v$ and a respectful tangle $\mathscr{T}'$ of order $\theta - 1$ in $\Gamma'$, with metric $d'$, such that if $r'$ is the region of $\Gamma'$ containing $v$, then}
+
+\hspace*{12pt}(i) \textit{$U(\Gamma) \subseteq U(\Gamma') \cup r'$}
+
+\hspace*{12pt}(ii) \textit{$d'(a, b) \ge d(a, b) - 2$ for all $a, b \in A(\Gamma) \cap A(\Gamma')$}
+
+\hspace*{12pt}(iii) \textit{$d'(a, r') \ge d(a, \{v\}) - 1$ for all $a \in A(\Gamma) \cap A(\Gamma')$, and}
+
+\hspace*{12pt}(iv) \textit{$d(a, \{v\}) \le 2$ for all $a \in A(\Gamma)$ with $a \subseteq r'$.}
+
+\textit{Proof.} We proceed by induction on $|E(\Gamma)|$. If there is no $\Gamma$-normal $O$-arc $F$ with $F \cap V(\Gamma) = \{v\}$ such that $\operatorname{ins}(F)$ includes an edge of $\Gamma$, then $\Gamma \setminus v$ is 2-cell and by (7.3) we may take $\Gamma' = \Gamma \setminus v$ (because statements (i) and

@@ -1,0 +1,26 @@
+\origpage{83}{GRAPH MINORS. XI}
+\noindent contains them both. Let $\mathscr{R}$ be the set of all $Z_1$-rings, and $\mathscr{S}$ the set of all vertices of $\Gamma$ in at least two $Z_1$-rings. Let $G$ be the graph with vertex set $\mathscr{R} \cup \mathscr{S}$, in which $C \in \mathscr{R}$ is adjacent to $v \in \mathscr{S}$ if $v \in V(C)$. It follows that $G$ is a forest. Moreover $G$ is non-empty since $Z_1$, $Z_2$, $Z_3$ are non-empty. Since every vertex of $G$ in $\mathscr{S}$ has valency $\ge 2$ in $G$, we deduce that some vertex of $G$ in $\mathscr{R}$ has valency $\le 1$; that is (since every vertex of $N(Z_1)$ has even valency and so every edge of $N(Z_1)$ is in a circuit),
+
+\hspace*{12pt}(1) \textit{There is a $Z_1$-ring $C_1$ such that at most one vertex of $C_1$ is incident with an edge of $N(Z_1)$ not in $\operatorname{ins}(C_1)$.}
+
+Let $C_1$ be as in (1). Choose $v_1 \in V(C_1)$ such that no $v \in V(C_1)$ with $v \ne v_1$ is incident with an edge of $N(Z_1)$ not in $\operatorname{ins}(C_1)$. Let $f$ be an edge of $C_1$ incident with $v_1$. Let $A = \{r \in R(\Gamma) : r \subseteq \operatorname{ins}(C_1)\}$ and $B = R(\Gamma) - A$. For each $v \in V(C_1)$ let $R(v)$ be the set of those members of $B$ which are incident with $v$.
+
+If $e \in E(C_1)$ then $e$ is incident with just two regions of $\Gamma$, regions $r \in A$ and $s \in B$ say. In these circumstances, $N(Z_1)$ does not capture $s$ by (4.3)(ii) and so, since $Z_1$ is small, $s \notin Z_1$. Therefore, since $e \in E(C_1) \subseteq E(N(Z_1))$, we must have $r \in Z_1$. We conclude that
+
+\hspace*{12pt}(2) \textit{If $e \in E(C_1)$ then one region of $\Gamma$ incident with $e$ belongs to $A \cap Z_1$ and the other belongs to $B \cap (Z_2 \cup Z_3)$.}
+
+It follows from (2) that $R(v) \subseteq Z_2 \cup Z_3$ for all $v \ne v_1$. For $i = 2, 3$, let
+\begin{equation*}
+W_i = \{v \in V(C_1) : v \ne v_1, R(v) \subseteq Z_i\}.
+\end{equation*}
+From the symmetry, we may assume that $|W_2 \cap \Omega| \ge |W_3 \cap \Omega|$, and if equality holds then $f \in E(N(Z_2))$.
+
+\hspace*{12pt}(3) $E(C_1 \cap N(Z_2)) \ne \emptyset$.
+
+\textit{Subproof.} If $W_2 \ne \emptyset$ this is clear. If $W_2 = \emptyset$ then since $|W_2 \cap \Omega| \ge |W_3 \cap \Omega|$, we deduce that equality holds and so $f \in E(N(Z_2))$, as required.
+
+For $i = 1, 2, 3$ let $Z'_i = Z_i \cap B$.
+
+\hspace*{12pt}(4) \textit{For $i = 1, 2, 3$, $N(Z'_i) \subseteq N(Z_i)$, and $Z'_i$ is small.}
+
+\textit{Subproof.} Let $e \in N(Z'_i)$, incident with regions $r$, $s$, where $r \in Z'_i$ and $s \notin Z'_i$. Then $r \in Z_i$, and $r \not\subseteq \operatorname{ins}(C_1)$. We claim that $s \notin Z_i$. For if $s \in B$ then $s \notin Z_i$ since $s \notin Z'_i$. If $s \in A$ then $e \in E(C_1)$, and by (2) $r \notin Z_1$ and $s \in Z_1$. Consequently $i \ne 1$ (since $r \in Z_i$) and $s \notin Z_i$ (since $s \in Z_1$). Thus in either

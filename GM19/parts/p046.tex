@@ -1,0 +1,31 @@
+\origpage{370}{N. Robertson, P.D. Seymour / Journal of Combinatorial Theory, Series B 90 (2004) 325--385}
+\noindent of $D_v$ are split by $(A', B')$,
+\begin{equation*}
+\frac{1}{2}|E(C)| \le |V((A \cap A') \cap (B \cup B'))| \le |V(A' \cap B')| = \frac{1}{2}|E(D_v)|.
+\end{equation*}
+If equality occurs, then since $(A \cap A', B \cup B')$ has $\lambda$-order at most that of $(A', B')$, it follows that $\lambda(C) \le \lambda(D_v)$. This proves (5).
+
+Let $\Delta$ be the closed disc in $\Delta_0$ bounded by $U(C)$.
+
+\hspace*{12pt}(6) \textit{If $ins(H) \cap \Delta \subseteq U(C)$ then the theorem holds, that is, $ins(F) \subseteq \Delta_v$.}
+
+\textbf{Subproof.} Suppose that $ins(H) \cap \Delta \subseteq U(C)$. If $h_1 \ne h_2$, let $K = D_v \cap H$, and if $h_1 = h_2$ let $K$ be the null graph. Then $K \subseteq C$, because
+\begin{equation*}
+U(K) \subseteq ins(H) \cap \Delta_v \subseteq ins(H) \cap \Delta \subseteq U(C).
+\end{equation*}
+If $h_1 = h_2$, note that $U(H)$ may not meet $U(\Delta_v)$, and indeed may not meet $U(C)$; let $L$ be a minimal subpath of $S_{v_1} \cap S_{v_2}$ from $V(C)$ to $h_1 = h_2$ (this exists, because $h_1 \notin \Delta \setminus U(C)$ and $\Delta_v \subseteq \Delta$). If $h_1 \ne h_2$, let $L$ be the null graph.
+
+Since $V(K \cup L) \subseteq W \setminus bd(W)$ and some vertex of $K \cup L$ belongs to $C$, it follows that some vertex of $C$ is in $W \setminus bd(W)$. If $U(C) \nsubseteq W$ let $M$ be a maximal path of $C$ with at least one edge, with no edge in $W$; and if $U(C) \subseteq W$ let $M$ be the path formed by the two edges $f_1, f_2$. In either case $|E(M)| \ge 2$, since $W$ is a wheel; and we may number the ends of $M$ as $v'_1, v'_2$ such that there are two paths $P_1, P_2$ of $C$, with $P_1, P_2, M, K$ mutually edge-disjoint and $P_1 \cup P_2 \cup M \cup K = C$, such that $P_i \cup L$ is a path of $\Gamma^*$ from $v'_i$ to $h_i$ ($i = 1, 2$).
+
+We claim that $|E(P_i \cup L)| \ge |E(S_{v_i})|$ ($i = 1, 2$). For certainly $|E(P_i \cup L)| \ge \rho - 1$ and $|E(S_{v_i})| \le \rho$, and if equality holds in both then since $\Gamma^*$ is bipartite it follows that $v'_i \in R^*$, contrary to 13.1. Thus $|E(P_i \cup L)| \ge |E(S_{v_i})|$ ($i = 1, 2$). From (5),
+\begin{align*}
+|E(D_v)| \ge |E(C)| &= |E(P_1)| + |E(P_2)| + |E(K)| + |E(M)| \\
+&\ge |E(S_{v_1})| + |E(S_{v_2})| - 2|E(L)| + |E(K)| + |E(M)| \\
+&= |E(D_v)| - 2 + 2|E(S_{v_1} \cap S_{v_2})| - 2|E(L)| + |E(M)|.
+\end{align*}
+Thus $2|E(S_{v_1} \cap S_{v_2})| + |E(M)| \le 2|E(L)| + 2$. Since $L \subseteq S_{v_1} \cap S_{v_2}$ and $|E(M)| \ge 2$, we have equality throughout. In particular, $|E(D_v)| = |E(C)|$, $L = S_{v_1} \cap S_{v_2}$, $|E(M)| = 2$, and $|E(P_i \cup L)| = |E(S_{v_i})|$ ($i = 1, 2$). Hence $v'_1, v'_2 \in V(\Gamma)$, since $\Gamma^*$ is bipartite. Let $v'$ be the middle vertex of $M$. Since $v'$ has two neighbours $v'_1, v'_2$ both in $V(\Gamma) \cap bd(W)$, it follows that $v' \in W$ since $W$ is a wheel. Consequently both edges of $M$ belong to $W$, and so, from the choice of $M$, $U(C) \subseteq W$, $v' = v$, $\{v'_1, v'_2\} = \{v_1, v_2\}$, and $E(M) = \{f_1, f_2\}$. Since $\Delta \subseteq \Delta_0$ and $bd(\Delta) \subseteq W$ it follows that $\Delta \subseteq W$. Since $S_{v_1}, S_{v_2}$ are spokes and $|E(P_i \cup L)| = |E(S_{v_i})|$, it follows that $\lambda(P_i) + \lambda(L) = \lambda(S_{v_i})$ ($i = 1, 2$). From (5),
+\begin{align*}
+\lambda(D_v) \ge \lambda(C) &= \lambda(P_1) + \lambda(P_2) + \lambda(K) + \lambda(M) \\
+&= \lambda(S_{v_1}) + \lambda(S_{v_2}) - 2\lambda(L) + \lambda(K) + \lambda(M) \\
+&\ge \lambda(S_{v_1}) + \lambda(S_{v_2}) - 2\lambda(S_{v_1} \cap S_{v_2}) + \lambda(K) + \lambda(M) = \lambda(D_v)
+\end{align*}

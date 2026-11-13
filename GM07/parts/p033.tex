@@ -1,0 +1,22 @@
+\origpage{244}{ROBERTSON AND SEYMOUR}
+\stmt
+(9.2) \textit{Let $\Sigma \cong \Sigma(a, b, 0)$ where $a + b \ge 1$, and let $(H, H^+, H^-)$ be a digraph in $\Sigma$. Then there is a number $N$ such that $(H, H^+, H^-)$ is a minor of every digraph $(G, G^+, G^-)$ in $\Sigma$ with $\alpha(G) \ge N$.}
+
+In a future paper we shall need a form of (9.1) which applies when $\Sigma$ is a sphere, disc, or cylinder, and we now develop such a form. If $G$ is a proper graph in a surface $\Sigma$, and $X, Y \subseteq \Sigma$ are disjoint, we define $k(X, Y)$ to be the maximum value of $k$ such that there are paths $P_1, \dots, P_k$ of $G$, mutually disjoint, and each with initial vertex in $X$ and terminal vertex in $Y$. We begin with the cylinder case.
+
+\stmt
+(9.3) \textit{Let $\Sigma$ be a cylinder with cuffs $C_1$ and $C_2$. Let $(H, H^+, H^-)$ be a proper digraph in $\Sigma$. Let $t = |V(H)| + |E(H)|$, and let $r = 84(t+2)\, 5^t v \times (\Sigma(0, 0, t+4), 2t+4)$. Let $(G, G^+, G^-)$ be a proper digraph in $\Sigma$ such that $V(G) \cap \mathrm{bd}(\Sigma) = V(H) \cap \mathrm{bd}(\Sigma)$. Suppose that there are disjoint $G$-normal $O$-arcs $F_1, F_2$ with the following properties:}
+
+\hspace*{12pt}(i) \textit{$F_1, F_2$ are not null-homotopic, and $C_1, F_2, F_1, C_2$ occur on $\Sigma$ in that order (in the natural sense),}
+
+\hspace*{12pt}(ii) \textit{$|V(G) \cap F| \ge 2r$ for every $G$-normal $[0, 1]$-arc $F$ with $F \cap F_1 \ne \emptyset \ne F \cap F_2$,}
+
+\hspace*{12pt}(iii) \textit{$k(F_1, F_2) \ge r$, and}
+
+\hspace*{12pt}(iv) \textit{$k(F_i, C_i) \ge |V(G) \cap C_i| \ (i = 1, 2)$.}
+
+\textit{Then $(H, H^+, H^-)$ is a boundary-rooted minor of $(G, G^+, G^-)$.}
+
+\textit{Proof.} Choose a $G$-normal $[0, 1]$-arc $I$ with $I \cap F_1 \ne \emptyset \ne I \cap F_2$ and with $|V(G) \cap I|$ minimum. Choose $z \in I - U(G)$ such that the two components of $I - \{z\}$ both contain at least $r$ vertices.. Let $I_1, I_2$ be the two components of $I - \{z\}$, numbered so that $I_j$ meets $F_{3-j} \ (j = 1, 2)$. It follows from the choice of $I$ that $|V(G) \cap R| \ge r$ for every $G$-normal $[0, 1]$-arc $R$ which for some $j$ ($j = 1$ or $2$) meets both $F_j$ and $I_j$. For any two disjoint non-null-homotopic $O$-arcs $A_1, A_2 \subseteq \Sigma$, let $\Sigma(A_1, A_2)$ denote the closure of the portion of $\Sigma$ between $A_1$ and $A_2$. Let $\Delta$ be a closed disc with $z \in \Delta \subseteq \Sigma$ such that $\Delta \cap (U(G) \cup \mathrm{bd}(\Sigma)) = \emptyset$. Let $C_3$ be $\mathrm{bd}(\Delta)$, and let $\Sigma'$ be the surface obtained from $\Sigma$ by removing the interior of $\Delta$. Then $\Sigma' \cong \Sigma(0, 0, 3)$, and $(G, G^+, G^-)$ is a proper digraph in $\Sigma'$. Moreover, by replacing $(H, H^+, H^-)$ by an isomorphic copy (under an isomorphism which fixes all elements of $V(H) \cap \mathrm{bd}(\Sigma)$) we may arrange that $U(H) \cap \Delta = \emptyset$, so that $(H, H^+, H^-)$ is also a proper digraph in $\Sigma'$.
+
+\textit{Claim 1.} \textit{$G$ is boundary-linked in $\Sigma'$.}

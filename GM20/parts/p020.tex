@@ -1,0 +1,30 @@
+\origpage{344}{N. Robertson, P.D. Seymour / Journal of Combinatorial Theory, Series B 92 (2004) 325--357}
+\noindent and
+\begin{equation*}
+\Sigma(v(x) : x \in V((A \cap C) \cup (B \cup D))) \ge \Sigma(v(x) : x \in V(C \cap D)),
+\end{equation*}
+that is,
+\begin{equation*}
+\Sigma(v(x) : x \in V(A)) \ge \Sigma(v(x) : x \in V(D)),
+\end{equation*}
+a contradiction. This proves the second axiom.
+
+The third axiom is clear because of the lexicographical order on $\mathbf{R}^3$. This proves 6.1. $\square$
+
+We call a tie-breaker $\lambda$ as in 6.1 the tie-breaker \textit{defined by $f, v$}; we call tie-breakers of this form \textit{edge-based}.
+
+Let $G$ be a rooted hypergraph, and let $\mathcal{T}$ be a tangle in $G$. A rooted location $\mathcal{L}$ is \textit{linked to $\mathcal{T}$} if $\mathcal{L}^- \subseteq \mathcal{T}$ and for each $A \in \mathcal{L}$ there is no $(A', B') \in \mathcal{T}$ of order less than $|\bar{\pi}(A)|$ with $A^- \subseteq A'$ and $B' \subseteq (G \setminus A)^-$. If $\mathcal{T}$ is a tangle in a hypergraph $G$ of order $\theta$, and $W \subseteq V(G)$ with $|W| < \theta$, we define
+\begin{equation*}
+\mathcal{T}/W = \{(A/W, B/W) : (A, B) \in \mathcal{T}, W \subseteq V(A \cap B)\}.
+\end{equation*}
+It is shown in theorem 6.2 of [2] that $\mathcal{T}/W$ is a tangle in $G/W$ of order $\theta - |W|$.
+
+If $\mathcal{L}$ is a rooted location in a rooted hypergraph $G$, and $W \subseteq V(G)$, and $W \subseteq \bar{\pi}(A)$ for all $A \in \mathcal{L}$, then $\{A/W : A \in \mathcal{L}\}$ is a rooted location in $G/W$ which we denote by $\mathcal{L}/W$.
+
+\textbf{6.2.} \textit{Let $G$ be a rooted hypergraph, and let $\mathcal{T}$ be a tangle in $G$ of order $\ge 1$. Let $\lambda$ be an edge-based tie-breaker in $G$ defined by $f, v$ say. Let $\mathcal{L}$ be a rooted location in $G$ with order $< \theta$, and let $W \subseteq V(G)$ be such that $W \subseteq \bar{\pi}(A)$ for all $A \in \mathcal{L}$. Let $\mathcal{L}/W$ be linked to $\mathcal{T}/W$. Then $\mathcal{L}$ $\theta$-isolates $\mathcal{T}$ modulo $W \cup \{f\}$.}
+
+\textit{Proof.} Let $A \in \mathcal{L}$, and let $B = G \setminus A$. Since $\mathcal{L}/W$ is linked to $\mathcal{T}/W$, it follows that $(A^-/W, B^-/W) \in \mathcal{T}/W$, and so $(A^-, B^-) \in \mathcal{T}$. Let $\mathcal{T}'$ be a tangle in $G$ of order $\ge \theta$ with $(B^-, A^-) \in \mathcal{T}'$, and let $(C, D)$ be the $(\mathcal{T}, \mathcal{T}')$-distinction. We must show that either $C \subseteq A^-$ and $B^- \subseteq D$, or $W \cup \{f\} \not\subseteq Z(D)$. We assume that $W \cup \{f\} \subseteq Z(D)$, and in particular $f \in E(D)$.
+
+\hspace*{12pt}(1) $\lambda(A^- \cap C, B^- \cup D) \ge \lambda(C, D)$
+
+\textit{Subproof:} We may assume that the separation $(A^- \cap C, B^- \cup D)$ has order at most that of $(C, D)$, for otherwise the desired inequality holds. But $(C, D)$ has order at most the order of $(A^-, B^-)$, since $(A^-, B^-) \in \mathcal{T}$ and $(B^-, A^-) \in \mathcal{T}'$, and hence $(C, D)$ has order $< \theta$. Consequently $(A^- \cap C, B^- \cup D)$ has order $< \theta$, and so $(A^- \cap C, B^- \cup D) \in \mathcal{T}$ since $(A^-, B^-) \in \mathcal{T}$. But $(A^- \cap C, B^- \cup D) \notin \mathcal{T}'$ since $(B^-, A^-), (D, C) \in \mathcal{T}'$ and $(A^- \cap C) \cup B^- \cup D = G^-$. Consequently $(B^- \cup D, A^- \cap C) \in \mathcal{T}'$. Since $(C, D)$ is the $(\mathcal{T}, \mathcal{T}')$-distinction it follows that $\lambda(A^- \cap C, B^- \cup D) \ge \lambda(C, D)$. This proves (1).

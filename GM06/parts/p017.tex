@@ -1,0 +1,35 @@
+\origpage{131}{GRAPH MINORS. VI}
+For if not, then $f'(x) \in R'$ ($0 \le x < z_2$) and so
+\begin{equation*}
+f'(0) = \left( 1, \frac{2i-1}{k} \pi \right).
+\end{equation*}
+Then the concatenation, in the natural way, of the function
+\begin{equation*}
+x \mapsto \left( 1, \frac{2i+1-2x}{k} \pi \right) \qquad (0 \le x \le 1)
+\end{equation*}
+with $f'$ gives another helix with $\phi_{G'}$ the same, which does satisfy (1). Choose $z_1 \in [0, z_2)$ with $f'(z_1) \in V(G')$ and with $z_1$ maximum. (This is possible by (1), for $L_{G'}(f')$ is finite, and so there are only finitely many values of $z_1$ satisfying (1).) Now $R'$ is incident with $s_i$, and so there is a region $R$ of $G$ with $R \subseteq R'$, incident with $s_i$, and with $f'(z_2) \in \bar{R}$. Define $h \colon [0, 1] \to \Sigma$ by
+\begin{equation*}
+h(x) = \left( 1, \frac{2i+1-x}{k} \pi \right) \qquad (0 \le x \le 1).
+\end{equation*}
+If $f'(z_2) = s_i$, define $f \colon [0, 1] \to \Sigma$ by
+\begin{align*}
+f(x) &= h(2x) && (0 \le x \le \frac{1}{2}) \\
+&= f'(2x - 1 + (2 - 2x)z_2) && (\frac{1}{2} \le x \le 1).
+\end{align*}
+If $f'(z_2) \ne s_i$, let $g \colon [0, 1] \to \Sigma$ be continuous, with $g(0) = s_i$, $g(1) = f'(z_2)$ and $g(x) \in R$ ($0 < x < 1$), and define $f \colon [0, 1] \to \Sigma$ by
+\begin{align*}
+f(x) &= h(4x) && (0 \le x \le \frac{1}{4}) \\
+&= g(4x - 1) && (\frac{1}{4} \le x \le \frac{1}{2}) \\
+&= f'(2x - 1 + (2 - 2x)z_2) && (\frac{1}{2} \le x \le 1).
+\end{align*}
+In either case, $f$ is a helix in $G$. We shall show that $\phi_G(f) \le \phi_{G'}(f')$. Let $f'' \colon [0, 1] \to \Sigma$ be defined by
+\begin{align*}
+f''(x) &= f'(2xz_2) && (0 \le x \le \frac{1}{2}) \\
+&= f(1 - x) && (\frac{1}{2} \le x \le 1).
+\end{align*}
+Then $\theta(f') = \theta(f) + \theta(f'')$ and $L_{G'}(f') = L_{G'}(f) + L_{G'}(f'') - l$, where
+\begin{align*}
+l &= 1 && \text{if } f'(z_2) = s_i \\
+&= 2 && \text{if } f'(z_2) \notin V(G') \\
+&= 3 && \text{if } f'(z_2) \in V(G') - \{s_i\}.
+\end{align*}

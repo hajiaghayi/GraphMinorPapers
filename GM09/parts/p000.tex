@@ -1,0 +1,28 @@
+\sectionhead{\textbf{About this copy}}
+
+This is a corrected copy of the paper cited above. The text is retyped from the printed paper.
+It keeps the paper's wording and the numbering of its results, equations and footnotes, and a
+marker such as \origpagemark{$N$} shows where page $N$ of the printed paper begins.
+
+The corrections come from a formalization of the Graph Minors series in the Lean proof
+assistant, \href{https://github.com/mahdi-jfri/GraphMinor}{github.com/mahdi-jfri/GraphMinor},
+in which the results of this paper are proved. Where the formalization found that a statement
+or a step of a proof is wrong as printed, this copy corrects it in place. Where the paper leaves a proof or a step to the reader, this copy adds it, also in blue. Text \del{struck
+through in red} is removed and text \fix{in blue} is inserted. Each change has a note, marked
+\textcolor{fixcolor}{\sffamily F1}, \textcolor{fixcolor}{\sffamily F2}, \dots, that gives the
+reason. The file
+\href{https://github.com/mahdi-jfri/GraphMinor/blob/main/corrections/GM09.md}{corrections/GM09.md}
+of the formalization describes each correction in full. Each note, and each item in the list below, begins with the kind of the change. A \kindname{misprint} is a wrong symbol, index or word. A \kindname{statement} is a result or a claim of the text that is false as printed. A \kindname{degenerate} is a statement that fails only in a trivial case, such as an empty graph or a parameter equal to~$0$. A \kindname{gap} is a step of a proof that does not follow as written. A \kindname{missing} is a proof that the paper omits, leaves to the reader or only sketches, and that this copy adds.
+
+The corrections and added proofs, in the order of the pages:
+\begin{enumerate}\setlength{\itemsep}{1pt}
+\item \kindtag{fix:3.4-proof-added}\hyperref[fix:3.4-proof-added]{Proof of (3.4), page 48}: the proof is added.
+\item \kindtag{fix:8.1}\hyperref[fix:8.1]{Statement of (8.1), page 60}: the hypothesis that $\bar{\Omega}\neq\emptyset$ or $G$ is null is added.
+\item \kindtag{fix:10.1-proof-added}\hyperref[fix:10.1-proof-added]{Proof of (10.1), page 64}: the omitted proof is added.
+\item \kindtag{fix:10.2-proof}\hyperref[fix:10.2-proof]{Proof of (10.2), page 64}: $Q_i$ runs along $C_{s+1-i}$ in place of $C_i$, and the arc of the circuit is chosen by the side on which its disc lies.
+\item \kindtag{fix:10.3-rural}\hyperref[fix:10.3-rural]{Proof of (10.3), page 64}: in place of passing to $\Omega\mid(\bar{\Omega}-\{x\})$, the induction keeps the neighborhood and shrinks a set $Y$ that holds the ends.
+\item \kindtag{fix:10.3-proof}\hyperref[fix:10.3-proof]{Proof of (10.3), page 65}: (5.2) is used in a form that allows the paths $Q_i$ to have internal vertices in $\bar{\Omega}$, and this form is derived from (5.2).
+\item \kindtag{fix:10.4-path}\hyperref[fix:10.4-path]{Proof of (10.4), page 66}: ``$P^+$ is a path of $G$'' becomes ``$P^+$ is a path of $G \cup G_0$''.
+\item \kindtag{fix:10.4-proof-added}\hyperref[fix:10.4-proof-added]{Proof of (10.4), page 66}: the reason why the extended paths form a crooked transaction is added.
+\item \kindtag{fix:11.1-proof-added}\hyperref[fix:11.1-proof-added]{Proof of (11.1), page 67}: the omitted proof is added.
+\end{enumerate}

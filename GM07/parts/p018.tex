@@ -1,0 +1,33 @@
+\origpage{229}{GRAPH MINORS. VII}
+\noindent is not a loop, since $J'$ has only one region. This contradicts the maximality of $P$. We deduce that no edge of $J'$ intersects $S$, and hence no vertex of $J'$ lies in $S$. Thus $U(J) \cap S = \emptyset$.
+
+Let $R_1$, $R_2$ be the two components of $\Delta - F$, where $R_i \cap bd(\Delta) = C_i$ ($i = 1, 2$). Then $\phi(R_1) - A$, $\phi(R_2) - A$ are the two components of $\Sigma - A$, and we assume that $\phi(R_1) - A = S$. Since $U(J) \cap S = \emptyset$, it follows that $\phi$ maps $R_1$ and its boundary $C_1 \cup F$ homeomorphically onto $S$, $A$, respectively. We deduce that
+
+\hspace*{12pt}(2) $\phi(C_1) = A - \phi(F) = U(Q) - \{\phi(s), \phi(t)\}$.
+
+We may assume that $\Lambda \ne \emptyset$. Choose $\lambda \in \Lambda$ and $d \in \lambda \cap C_1$. We claim that
+
+\hspace*{12pt}(3) $\phi(d) \in U(K)$.
+
+For as before $\psi(d)$ is a non-isolated vertex of $\theta^{-1}(H)$, and $\psi(d) \in \theta^{-1}(U(K)) \cup bd(\Sigma')$. We suppose that $\phi(d) \notin U(K)$; hence $\psi(d) \notin \theta^{-1}(U(K))$, and so $\psi(d) \in bd(\Sigma')$. By (1), $\psi(d) = \psi(l(z))$ for some $z \in V(G) \cap bd(\Sigma)$. Hence $d = l(z)$, since $\psi$ acts injectively on $\phi^{-1}(bd(\Sigma))$. By definition of $l(z)$, there are paths $P_1, \dots, P_\mu$ of $G$ such that
+
+\hspace*{12pt}(a) each has initial vertex $z$ and terminal vertex in some cuff of $\Sigma$ not containing $z$,
+
+\hspace*{12pt}(b) the paths are pairwise vertex-disjoint except for their ends,
+
+\hspace*{12pt}(c) for each $i$, if $e_i$ is the first edge of $P_i$ then $\phi^{-1}(e_i)$ is incident with $l(z)$.
+
+Now from (c), $\phi^{-1}(e_i) \subseteq R_1$, and from (a), $P_i$ meets $A$ in a vertex different from $z$, for each $i$ (because $\phi(R_1) - A = S$, which is an open disc, and therefore cannot contain the terminal vertex of $P_i$). Since
+\begin{equation*}
+|V(G) \cap A - \{z\}| < \mu,
+\end{equation*}
+$A$ meets some cuff not containing $z$, from (b). Thus there is an $I$-arc $A' \subseteq A$ with ends in different cuffs. But
+\begin{equation*}
+|V(G) \cap A'| \le |V(G) \cap A| \le \mu \le \nu
+\end{equation*}
+contrary to (i). This proves (3).
+
+Let $e$ be a long edge of $J$ with $\phi(d) \in e$. Let the vertices of $G$ in $\bar{e}$ be $v_1, \dots, v_r$ say, in order on $\bar{e}$. Choose $i$ such that $\phi(d) = v_i$; then $\mu + 1 \delm{<}\fix{\le} i \delm{<}\fix{\le} r - \mu$\fixnote{fix:4.6-p229}{Claim (3) gives only $\phi(d) \in U(K)$. On pages 225--226 the long edge $e$ is divided at the two vertices of $W(e)=\{v_{\mu+1}, v_{r-\mu}\}$, and the part of $U(K)$ in $\bar e$ is the central edge between them together with its two ends. So $\mu+1\le i\le r-\mu$, and $i$ may be $\mu+1$ or $r-\mu$. The weak inequalities suffice for the next sentence.} since $\phi(d)$ is in an edge of $K$. Since $|V(G) \cap U(Q)| \le |V(G) \cap A| \le \mu$ it follows that neither all of $v_1, \dots, v_{\mu + 1}$ nor all of $v_{r - \mu}, \dots, v_r$ belong to $U(Q)$, but (2) gives
+\begin{equation*}
+v_i = \phi(d) \in U(Q) - \{\phi(s), \phi(t)\} \subseteq U(J)
+\end{equation*}

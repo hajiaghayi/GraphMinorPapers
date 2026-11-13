@@ -1,0 +1,50 @@
+\origpage{551}{N. Robertson, P. Seymour / Journal of Combinatorial Theory, Series B 102 (2012) 530--563}
+\textit{Subproof.} Now $A_0 \cup A_{t+1} = \Gamma \cup K_1$, and so
+\begin{equation*}
+A_0 \cup A_1 \cup \cdots \cup A_{t+1} = \Gamma \cup K_1 \cup A_1 \cup \cdots \cup A_t.
+\end{equation*}
+Let $0 \le i < j \le t+1$; we must show that $V(A_i \cap A_j) \subseteq Z$ and $E(A_i \cap A_j) = \emptyset$. If $1 \le i < j \le t$, this follows from (J2). If $0 = i < j \le t$ it follows from 6.1 and the definition of $\Gamma_0$. If $1 \le i < j = t+1$ it follows since $A_i \cap A_{t+1} = N_W$ by 7.1(iii). Finally if $i = 0$ and $j = t+1$, then clearly $E(A_i \cap A_j) = \emptyset$, and $V(A_i \cap A_j) \subseteq V(A_{t+1}) = Z_0 \subseteq Z$. This proves (10).
+
+Let $A'_{t+1} = A_{t+1}$, $\pi(A'_{t+1}) = \pi(A_{t+1})$, and $\bar{\pi}(A'_{t+1}) = \bar{\pi}(A_{t+1})$. Let
+\begin{equation*}
+A'_0 = ((\Gamma \cap \Sigma') \cup K_1) \setminus (\phi(E(H)) \cap E(K_1)).
+\end{equation*}
+\hspace*{12pt}(11) \textit{$\{A'_0, A'_1, \ldots, A'_{t+1}\}$ is a $Z'$-division of $\Gamma \cup K_1 \cup A'_1 \cup \cdots \cup A'_t$, and for $1 \le i \le t+1$, $\pi(A'_i) + \omega$ is an ordering of $Z' \cap V(A'_i)$.}
+
+The proof is similar to that of (10).
+
+\hspace*{12pt}(12) \textit{There is a model $\phi'$ of $(H, \chi)$ in $(\Gamma \cup K_1 \cup A'_1 \cup \cdots \cup A'_t, \omega)$ such that $\phi'(E(H)) \subseteq E(A'_1 \cup \cdots \cup A'_{t+1})$ and $\phi'(v) \cap (A'_1 \cup \cdots \cup A'_{t+1})$ is non-null for each $v \in V(H)$.}
+
+\textit{Subproof.} Let $\chi$ be $x_1, \ldots, x_q$. Let us apply 6.3, with
+\begin{equation*}
+G, u_1, \ldots, u_q, G', u'_1, \ldots, u'_q, H, v_1, \ldots, v_q
+\end{equation*}
+replaced by
+\begin{equation*}
+\Gamma \cup K_1 \cup A_1 \cup \cdots \cup A_t, w_1, \ldots, w_q, \Gamma \cup K_1 \cup A'_1 \cup \cdots \cup A'_t, w_1, \ldots, w_q, H, x_1, \ldots, x_q
+\end{equation*}
+and with
+\begin{equation*}
+\delta, Z, k, A_0, A_1, \ldots, A_k, \pi_i, Z', A'_0, A'_1, \ldots, A'_k, \pi'_i, \alpha, \phi, L, L'_0
+\end{equation*}
+replaced by
+\begin{equation*}
+\delta, Z, t+1, A_0, A_1, \ldots, A_{t+1}, \pi(A_i), Z', A'_0, A'_1, \ldots, A'_{t+1}, \pi(A'_i), \alpha, \phi, L, L'_0
+\end{equation*}
+respectively. We must verify the hypotheses of 6.3; let us do them in order as in the statement of 6.3. The first ones are obvious, or follow from (10) and (11). For $1 \le i \le t+1$, $(A_i, \pi(A_i) + \omega)$ has the same $\delta$-folio as $(A'_i, \pi(A'_i) + \omega)$, trivially if $i = t+1$, and by hypothesis (i) of 7.3 if $i \le t$. From the definition of $\alpha$, it maps $Z'$ onto $Z$, and maps $\pi(A'_i)$ to $\pi(A_i)$ for $1 \le i \le t+1$. By (1),
+\begin{equation*}
+\phi(E(H)) \subseteq E(K_1 \cup A_1 \cup \cdots \cup A_t),
+\end{equation*}
+and $\phi(E(H)) \cap E(K_1) \subseteq E(A_{t+1})$, and so $\phi(E(H)) \subseteq E(A_1 \cup \cdots \cup A_{t+1})$. For each $v \in V(H)$, if
+\begin{equation*}
+V(\phi(v)) \cap (W \cup V(A_1 \cup \cdots \cup A_t)) \ne \emptyset
+\end{equation*}
+then $\phi(v) \cap A_1 \cup \cdots \cup A_{t+1}$ is non-null since $W \subseteq V(A_{t+1})$, and if
+\begin{equation*}
+V(\phi(v)) \cap (W \cap V(A_1 \cup \cdots \cup A_t)) = \emptyset
+\end{equation*}
+then $Y_1 \cap V(\phi(v)) \ne \emptyset$ by definition of $Y_1$, and so again $\phi(v) \cap A_1 \cap \cdots \cap A_{t+1}$ is non-null, since $Y_1 \subseteq V(A_{t+1})$. Next, $L \subseteq \Gamma \cup K_1 \cup A_1 \cup \cdots \cup A_t$ by (1), and $L$ is minimal with $Z \subseteq V(L)$ and $\phi(v) \subseteq L$ for each $v \in V(H)$ by its definition. By (8), $L'_0 \subseteq (\Gamma \cap \Sigma') \cup K_1$, and by (8) again, $E(L'_0) \cap \phi(E(H)) \subseteq E(A_1 \cup \cdots \cup A_t)$, and so $E(L'_0) \cap \phi(E(H)) \cap E(K_1) = \emptyset$. Consequently $L'_0 \subseteq A'_0$. By (9), $u, v \in Z'$ are $L'_0$-connected if and only if $\alpha(u), \alpha(v)$ are $L_0 \cup (L \cap K_1)$-connected, and
+\begin{equation*}
+L \cap A_0 = L \cap (\Gamma_0 \cup K_1) = L_0 \cup (L \cap K_1)
+\end{equation*}
+since $\phi(E(H)) \cap E(L) = \emptyset$ and $L_0 = L \cap \Gamma_0$. Thus all the hypotheses of 6.3 hold. This proves (12).

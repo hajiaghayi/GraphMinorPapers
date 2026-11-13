@@ -1,0 +1,26 @@
+\origpage{81}{GRAPH MINORS. XI}
+\noindent $r' \subseteq \Delta'$, since $r' \in R(\Gamma')$. Since $\Gamma'$ is confined, $C'$ has length $< 2\theta$; but $U(C') \subseteq \operatorname{ins}(C)$, and so by the first slope axiom, $\operatorname{ins}(C') \subseteq \operatorname{ins}(C)$, that is, $\operatorname{ins}(C') = \Delta'$. It follows that $\Gamma'$ captures $r'$, as required. $\square$
+
+\sectionhead{5. Small Sets}
+
+Again, throughout this section $\Gamma$ is a drawing in a connected surface $\Sigma$ with a slope $\operatorname{ins}$ of order $\theta$. A weighting is a pair $(\Omega, \omega)$, where $\Omega \subseteq V(\Gamma)$, $\omega \ge 1$ is an integer and $|\Omega \cap V(C)| \ge \omega$ for every circuit $C$ of $\Gamma$ of length $\ge 2\theta$. For instance, $(V(\Gamma), 2\theta)$ is a weighting; or if $\Gamma$ is bipartite and $\theta$ is integral, we could take $\Omega$ to be one side of a bipartition and $\omega = \theta$. Throughout this section $(\Omega, \omega)$ is a fixed weighting.
+
+Let $Z \subseteq R(\Gamma)$. We define $N_\Gamma(Z) = N(Z)$ to be the subdrawing of $\Gamma$ formed by those vertices and edges of $\Gamma$ incident both with a member of $Z$ and with a member of $R(\Gamma) - Z$. We say that $Z$ is \textit{small} (with respect to $(\Omega, \omega)$) if $|\Omega \cap V(N(Z))| < \omega$, and $N(Z)$ captures $r$ for each $r \in Z$. This section is devoted to proving certain properties of small sets, which will be central when we come to establish the connection between slopes and tangles.
+
+We begin with the following lemma.
+
+\stmt
+(5.1) \textit{Let $Z \subseteq R(\Gamma)$, and let $\Gamma' \subseteq \Gamma$. Let $r'$ be a region of $\Gamma'$. If there are regions $r_1 \in Z$, $r_2 \in R(\Gamma) - Z$ with $r_1, r_2 \subseteq r'$, then there are such regions $r_1, r_2$ which in addition are incident with some edge $e$ of $\Gamma$ with $e \notin E(\Gamma')$.}
+
+\textit{Proof.} Since $r_1, r_2 \subseteq r'$ and $r'$ is a region of $\Gamma'$ there is a sequence
+\begin{equation*}
+r_1 = a_1, a_2, \dots, a_s = r_2
+\end{equation*}
+of regions $a_1, a_2, \dots, a_s$ of $\Gamma$ with $a_1, a_2, \dots, a_s \subseteq r'$, such that for $1 \le i < s$ there is an edge $e_i$ of $\Gamma$ incident with both $a_i$ and $a_{i+1}$, not in $E(\Gamma')$. Choose $i$ maximum such that $a_i \in Z$ (this is possible since $a_1 \in Z$); then $i \ne s$ since $a_s \notin Z$, and $a_i$, $a_{i+1}$ satisfy the theorem. $\square$
+
+We apply (5.1) to deduce the following.
+
+\stmt
+(5.2) \textit{If $Z \subseteq R(\Gamma)$ and $|\Omega \cap V(N(Z))| < \omega$, then exactly one of $Z$, $R(\Gamma) - Z$ is small.}
+
+\textit{Proof.} Certainly $N(Z)$ is confined, from the definition of a weighting, and so by (4.4) there is a unique region $r_0$ of $N(Z)$ not captured by $N(Z)$. Thus for $r \in R(\Gamma)$, $N(Z)$ captures $r$ if and only if $r \not\subseteq r_0$. It follows that at most one of $Z$, $R(\Gamma) - Z$ is small. Suppose, for a contradiction, that neither is small, so that there exist $r_1 \in Z$, $r_2 \in R(\Gamma) - Z$ with $r_1, r_2 \subseteq r_0$. By (5.1),

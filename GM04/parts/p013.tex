@@ -1,0 +1,29 @@
+\origpage{239}{GRAPH MINORS IV}
+Indeed, Thomas found a decomposition with even stronger properties, which will not concern us. We should perhaps stress that there is no assumption in (5.1) that $t_1$, $t_2$ and $o(T)$ lie on a directed path (in contrast with our definition of rotundity) and so which vertex of the underlying undirected tree of $T$ is chosen as the root is irrelevant to (5.1), as are the arbitrary choices of the $\pi(\tau(t))$'s. Indeed, (5.1) is most naturally stated in terms of a different kind of tree-decomposition, where $T$ is undirected and the $\tau(t)$'s are (unrooted) hypergraphs.
+
+We apply (5.1) to deduce
+
+\stmt
+(5.2) \textit{Let $G$ be a rooted hypergraph of tree-width $\le w$. Then there is a rotund tree-decomposition of $G$ of width $\le w$.}
+
+\textit{Proof.} Let $K$ be the simple graph with $V(K) = V(G)$, in which distinct $v_1, v_2$ are adjacent if either some edge of $G$ is incident with them both, or $v_1, v_2$ are both terms of $\pi(G)$.
+
+\hspace*{12pt}(1) \textit{$(K, 0)$ has tree-width $\le w$.}
+
+For let $(T, \tau)$ be a tree-decomposition of $G$ of width $\le w$. Since for each edge of $K$ there exists $t \in V(T)$ such that both ends of the edge are in $V(\tau(t))$, we may choose edge-disjoint rooted subgraphs $\tau'(t)$ ($t \in V(T)$) of $K$ such that $V(\tau'(t)) = V(\tau(t))$ for each $t \in V(T)$, and such that $(T, \tau')$ is a tree-decomposition of $(K, 0)$. Then (1) follows.
+
+From (1) and (5.1), we deduce
+
+\hspace*{12pt}(2) \textit{There is a tree-decomposition $(T, \tau)$ of $(K, 0)$ of width $\le w$, such that for all distinct $t_1, t_2 \in V(T)$ and all $k \ge 0$, either there are $k$ mutually vertex-disjoint paths of $K$ between $V(\tau(t_1))$ and $V(\tau(t_2))$, or some edge of the path of $T$ between $t_1$ and $t_2$ has order $< k$.}
+
+\hspace*{12pt}(3) \textit{For every complete subgraph $X$ of $K$ there exists $t \in V(T)$ such that $V(X) \subseteq V(\tau(t))$.}
+
+For if $x \in V(X)$ the set $\{t \in V(T): x \in V(\tau(t))\}$ is the vertex set of a subtree $T_x$ of $T$, and any two of these subtrees $T_x$, $T_{x'}$ have a common vertex (since $x, x'$ are adjacent in $G$). By an elementary property of subtrees of a tree, it follows that all the $T_x$'s have a common vertex, as required.
+
+From (3) and the fact that (2) does not depend on which vertex of $T$ is the root, we may choose $(T, \tau)$ (redefining the $\pi(\tau(t))$'s suitably) so that
+
+\hspace*{12pt}(4) $\bar{\pi}(G) \subseteq V(\tau(o(T)))$.
+
+Again, from (3) and (4) we deduce that
+
+\hspace*{12pt}(5) \textit{There is a tree-decomposition $(T, \tau')$ of $G$ such that for each $t \in V(T)$, $V(\tau'(t)) = V(\tau(t))$.}

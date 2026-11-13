@@ -1,0 +1,22 @@
+\origpage{57}{N. Robertson, P.D. Seymour / Journal of Combinatorial Theory, Series B 89 (2003) 43--76}
+\noindent of 5.3 does not hold, because no vertex of $J$ has degree $\ge 5$. If the first statement holds then the theorem is satisfied, and so we assume not. By 5.3, it follows that $|Y| \le 5m$. Now certainly each $Q_j$ is a path of $J$ because it has at least two vertices in $Z$, and so $P_i \setminus v \subseteq J$ for each $i$ such that $P_i$ meets some $Q_j$. Consequently,
+\begin{equation*}
+|Z \setminus Y| = |\{i : 1 \le i \le n, P_i \text{ meets no } Q_j\}|.
+\end{equation*}
+But $|Z \setminus Y| = |Z| - |Y| \ge n - 5m \ge 2$, and so there exist distinct $i, i'$ with $1 \le i, i' \le n$ such that $P_i \cup P_{i'}$ meets no $Q_j$. But then $\{Q_1, \dots, Q_m, P_i \cup P_{i'}\}$ is a set of $m + 1$ paths satisfying the theorem. This proves 5.4. $\square$
+
+We deduce
+
+\textbf{5.5.} \textit{For any surface $\Sigma$ and integer $p \ge 0$, there exists $\theta \ge 1$ such that, if $\mathscr{T}^*$ is a tangle in a graph $G$ and there is a hairless animal with $\frac{1}{2}p(p - 1)$ horns and with strength $\ge (\theta, 4p(p - 1))$, then $\mathscr{T}^*$ controls a $K_p$-minor of $G$.}
+
+\textbf{Proof.} Let $\mu = \frac{1}{2}p(p - 1)$, and choose $\theta_1 \ge 1$ so that 5.2 is satisfied (with $\theta$ replaced by $\theta_1$). Let $\theta = 2\theta_1$: we claim that 5.5 is satisfied. For let $\mathscr{T}^*$ be a tangle in $G$, and let $(H, \mathscr{T}, X)$ be a hairless animal of strength $\ge (\theta, 8\mu)$ and with $|X| = \mu$.
+
+\hspace*{12pt}(1) \textit{For $0 \le m \le \mu$ there are $m$ $H$-paths $Q_1, \dots, Q_m$, mutually vertex-disjoint, such that}
+
+\hspace*{12pt}$\bullet$ \textit{$|V(Q_1 \cup \dots \cup Q_m) \cap X| \le m$, and}
+
+\hspace*{12pt}$\bullet$ \textit{$d(u, v) \ge \theta_1$ for all distinct $u, v \in \{s_1, t_1, \dots, s_m, t_m\}$, where $Q_i$ has ends $s_i, t_i (1 \le i \le m)$.}
+
+\textit{Subproof.} We proceed by induction on $m$. Certainly (1) holds if $m = 0$; we suppose that it holds for some $m < \mu$, and shall prove that it also holds for $m + 1$. Let $Q_1, \dots, Q_m, s_1, t_1, \dots, s_m, t_m$ be as in (1).
+
+Since $|(V(Q_1) \cup \dots \cup V(Q_m)) \cap X| \le m$, and $|X| = \mu > m$, there exists $x \in X$ with $x \notin V(Q_1), \dots, V(Q_m)$. Let $\{P_1, \dots, P_{8\mu}\}$ be a horn at $x$ with breadth $\ge \theta$, and let $P_i$ have ends $x, u_i (1 \le i \le 8\mu)$. Since $|X| = \mu$, at most $\mu - 1$ of $P_1, \dots, P_{8\mu}$ have a vertex in $X$ different from $x$, and so we may assume that $P_1, \dots, P_{7\mu}$ have no vertex in $X \setminus \{x\}$. Let $W = \{s_1, t_1, \dots, s_m, t_m\}$. Now for each $w \in W$ there is at most one $i$ (\del{l}\fix{1}\,$\le i \le 7\mu$)\fixnote{fix:5.5-proof}{The letter l for the digit 1.} such that $d(u_i, w) < \frac{1}{2}\theta = \theta_1$, since $d(u_i, u_j) \ge \theta$ for all distinct $i, j$. Consequently, we may assume that for $1 \le i \le 5\mu$, $d(u_i, w) \ge \frac{1}{2}\theta$ for all $w \in W$. Let $n = 5\mu$ and let $G' = P_1 \cup \dots \cup P_n \cup Q_1 \cup \dots \cup Q_m$. Now $n = 5\mu \ge 5m + 2$, and so by 5.4 (with $G$ replaced by $G'$) there are $m + 1$ mutually disjoint paths

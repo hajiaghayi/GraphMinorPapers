@@ -1,0 +1,43 @@
+\origpage{108}{ROBERTSON AND SEYMOUR}
+Let $V_1 = V_1' \cap V(G)$, $V_2 = V_2' \cap V(G)$. Now if $v \in (V_1 - V_2) \cap X$ then $N_v \subseteq V_1'$, and so
+\begin{align*}
+N \cdot |(V_1 - V_2) \cap X| &\le |V_1'| \\
+&\le (1 - \theta_8^{-1}) |V(G')| + \theta_7 \\
+&\le (1 - \theta_8^{-1})(N|X| + |V(G)|) + \theta_7.
+\end{align*}
+Hence
+\begin{equation*}
+|(V_1 - V_2) \cap X| \le (1 - \theta_8^{-1})|X| + N^{-1}((1 - \theta_8^{-1})|V(G)| + \theta_7)
+\end{equation*}
+and so by the choice of $N$,
+\begin{equation*}
+|(V_1 - V_2) \cap X| \le (1 - \theta_8^{-1})|X|.
+\end{equation*}
+Similarly
+\begin{equation*}
+|(V_2 - V_1) \cap X| \le (1 - \theta_8^{-1})|X|.
+\end{equation*}
+But $|V_1 \cap V_2| \le |V_1' \cap V_2'| \le \theta_7$, and $(V_1, V_2)$ is a separation of $G$. This completes the proof.
+
+We come to the principal theorem of this paper.
+
+\stmt
+(7.3) \textit{If $G \in \mathcal{F}_\theta$ then $G$ has tree-width at most $\theta_9$.}
+
+\textit{Proof.} We show, by induction on $|V(G)|$, that if $G \in \mathcal{F}_\theta$ and $X \subseteq V(G)$ and $|X| \le \theta_7 \theta_8 + 1$, then $G$ has a tree-decomposition $(T, (X_t : t \in V(T)))$ of width $\le \theta_9$, such that $X \subseteq X_t$, for some $t \in V(T)$. We assume the result holds for all graphs with fewer vertices than $G$. We may suppose that $|V(G)| > \theta_9$, for otherwise the result is clear. Hence we may assume that $|X| = \theta_7 \theta_8 + 1$. By (7.2), there is a separation $(V_1, V_2)$ of $G$ with $|V_1 \cap V_2| \le \theta_7$ and
+\begin{equation*}
+|(V_1 - V_2) \cap X|, |(V_2 - V_1) \cap X| \le (1 - \theta_8^{-1})|X|.
+\end{equation*}
+But
+\begin{equation*}
+|V_1 \cap V_2 \cap X| \le |V_1 \cap V_2| \le \theta_7
+\end{equation*}
+and so
+\begin{align*}
+|V_1 \cap X| &= |(V_1 - V_2) \cap X| + |V_1 \cap V_2 \cap X| \\
+&\le (1 - \theta_8^{-1})|X| + \theta_7 < |X|.
+\end{align*}
+Hence $V_1 \ne V(G)$. Put $G_1 = G | V_1$, and
+\begin{equation*}
+X_1 = ((V_1 - V_2) \cap X) \cup (V_1 \cap V_2).
+\end{equation*}

@@ -1,0 +1,18 @@
+\origpage{44}{ROBERTSON AND SEYMOUR}
+\textit{Proof.} Let $X \subseteq V(K)$ be the set of all vertices of $K$ which are adjacent in $G$ to some vertex of $H$. We observe, from the maximality of $H$, that
+
+\hspace*{12pt}(1) \textit{Every path of $K$ between $s$ and $t$ passes through every vertex of $X$.}
+
+In particular $X \subseteq V(P)$; let $X \cup \{s, t\} = \{x_0, x_1, \dots, x_k\}$, enumerated in order of occurrence in $P$, where $s = x_0$ and $t = x_k$. From (1), there are subgraphs $K_1, \dots, K_k$ of $K$ with union $K$, such that for $1 \le i \le k$ $K_i \cap P$ is the subpath of $P$ between $x_{i-1}$ and $x_i$, and for $1 \le i \le k - 1$ $V(K_i \cap K_{i+1}) = \{x_i\}$, and for $1 \le i, j \le k$ with $j \ge i+2$, $V(K_i \cap K_j) = \emptyset$. If $V(K_i) = \{x_{i-1}, x_i\}$ for all $i$ ($1 \le i \le k$) then $P = K$, and so we may assume that $V(K_i) \ne \{x_{i-1}, x_i\}$ for some $i$. Let $G_2 = K_i$ and $G_1 = G \setminus (V(K_i) - \{x_{i-1}, x_i\}) \setminus E(K_i)$. Then $(G_1, G_2)$ is a separation satisfying the theorem. $\square$
+
+Two paths of a graph $G$ are \textit{disjoint} if they have no common vertex. Let $G$ be a graph and let $X, Y \subseteq V(G)$. By an $X \to Y$ path in $G$ we mean a path with initial vertex and no other in $X$, and with terminal vertex and no other in $Y$. Let $X' \subseteq X$ and $Y' \subseteq Y$ be such that $|X'| = |Y'|$. We write $X' \Rightarrow Y'$ (with respect to $X, Y$) if there are $|X'|$ mutually disjoint $X \to Y$ paths of $G$ from $X'$ to $Y'$. Our second lemma is a standard result in network flow theory, and can easily be proved by an ``augmenting path'' argument.
+
+\stmt
+(2.2) \textit{Let $G$ be a graph and let $X, Y \subseteq V(G)$. Let $k \ge 0$ be an integer such that there are $k$ mutually disjoint $X \to Y$ paths. Let $X' \subseteq X$, $Y' \subseteq Y$ be such that $|X'| = |Y'| \le k$ and such that $X' \Rightarrow Y'$ with respect to $X, Y$. Then there exist $X'' \subseteq X$ and $Y'' \subseteq Y$ such that $X' \subseteq X''$, $Y' \subseteq Y''$, $|X''| = |Y''| = k$ and $X'' \Rightarrow Y''$ with respect to $X, Y$.}
+
+Let $(G, \Omega)$ be a society, and let $(G_1, G_2)$ be a separation of $(G, \Omega)$. Let $k \ge 0$ be an integer. We say that $(G_1, G_2)$ is a \textit{$k$-separation} of $(G, \Omega)$ if $|V(G_1 \cap G_2)| \le k$, and $V(G_2) \ne V(G)$. A $k$-separation is \textit{internal} if $|V(G)| \ge |V(G_2)| + 2$. We say that $(G, \Omega)$ is \textit{$k$-connected} if it has no $k'$-separation for $k' < k$, and \textit{internally $k$-connected} if it has no internal $k'$-separation for $k' < k$.
+
+Let $P_1, P_2$ be disjoint $\Omega$-paths in $(G, \Omega)$, where $P_i$ has ends $s_i, t_i$ ($i = 1, 2$). If $\{s_1, t_1\}$ crosses $\{s_2, t_2\}$, we say that $P_1$ \textit{crosses} $P_2$, and that $\{P_1, P_2\}$ is a \textit{cross}. Now let $u, v$ be distinct vertices of $G$, and let $P_1, P_2, P_3$ all be paths between $u$ and $v$, mutually disjoint except for $u$ and $v$. We say that $\{P_1, P_2, P_3\}$ is a \textit{tripod} in $(G, \Omega)$ if there is an internal vertex $s_i$ of $P_i$ ($i = 1, 2, 3$), and there exist $t_1, t_2, t_3 \in \bar{\Omega}$ such that $\{s_1, s_2, s_3\} \Rightarrow \{t_1, t_2, t_3\}$ with respect to $V(P_1 \cup P_2 \cup P_3), \bar{\Omega}$.
+
+\stmt
+(2.3) \textit{Suppose that $\{P_1, P_2, P_3\}$ is a tripod in $(G, \Omega)$. Then either $(G, \Omega)$}

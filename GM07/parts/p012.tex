@@ -1,0 +1,106 @@
+\origpage{223}{GRAPH MINORS. VII}
+We have shown then that $Y$ is connected and every $O$-arc included in $Y$ bounds a closed disc included in $Y$. Moreover, $Y$ is open and $Y \cap bd(\Sigma) = \emptyset$; and so $Y$ is open in the surface obtained from $\Sigma$ by pasting a closed disc onto each cuff of $\Sigma$. By (4.2), either $Y$ is a sphere or $Y$ is an open disc, and so $bd(Y)$ is connected. We deduce that $U(K) \cup bd(\Sigma)$ is connected, and hence there is a path $P$ of $K$ from $C$ to $bd(\Sigma) - C$. But $V(K) \cap X = \emptyset$, since $X \subseteq Y$, and so $V(P) \cap X = \emptyset$. This completes the proof.
+
+\stmt
+(4.4) \textit{Let $L$ be a proper graph in $\Sigma$ with no isolated vertices, such that no $F \subseteq U(L)$ is an $O$-arc or an $I$-arc. Let $\Sigma'$ be the surface obtained from $\Sigma$ by cutting along $U(L)$, and let $\phi \colon \Sigma' \to \Sigma$ be the associated surjection. Let $H_0$ be a forest in $\Sigma$, and for each $z \in V(H_0) \cap bd(\Sigma)$, let $l(z) \in \phi^{-1}(z)$. Then there is a forest $H$ in $\Sigma$, homotopic to $H_0$, such that $U(H) \cap U(L) \subseteq bd(\Sigma)$, and for each $z \in V(H_0) \cap bd(\Sigma)$ every member of $\phi^{-1}(z) - \{l(z)\}$ is an isolated vertex of $\phi^{-1}(H)$.}
+
+The proof is easy (for example, by induction on $|E(L)|$; we remark that if $E(L) \ne \emptyset$ then some vertex of $L$ has valency 1 and is not in $bd(\Sigma)$) \del{and is left to the reader}.
+\fix{We give a proof. Let us call a homeomorphism
+$\alpha \colon \Sigma \to \Sigma$ a \textit{move} if $\alpha(x) = x$ for all $x \in bd(\Sigma)$ and
+$\alpha$ maps each path with ends in $bd(\Sigma)$ to a homotopic path. The image of a forest under a
+move is a forest homotopic to it. The \textit{parts} of $L$ are the components of $U(L)$. Since no
+subset of $U(L)$ is an $O$-arc or an $I$-arc, each part is the drawing of a tree, and it meets
+$bd(\Sigma)$ in at most one point. Let $Z$ be the set of vertices of $H_0$ in $bd(\Sigma) \cap U(L)$.
+
+First, for each part $P$ choose a point $\rho(P)$ of $P$, in $bd(\Sigma)$ if $P$ meets $bd(\Sigma)$,
+and let $R(P) = \{\rho(P)\}$. We show that if $N(P)$ is an open set including $R(P)$, for each part
+$P$, and these sets are mutually disjoint and each misses the other parts, then one move maps each
+part $P$ into $N(P)$. Choose mutually disjoint open sets $W(P)$ with $P \subseteq W(P)$, one for each
+part. It is enough to find for each part $P$ a move $\alpha_P$ that maps $P$ into $N(P)$ and fixes
+every point outside $W(P)$. For then $\alpha_P(P) \subseteq W(P)$, and the composition of these moves
+maps each part $P$ into $N(P)$, since each $\alpha_{P'}$ with $P' \ne P$ fixes $W(P)$ pointwise.
+
+We find $\alpha_P$ by induction on the number of edges of the tree $P$, for every open set $N$
+including $R(P)$ in place of $N(P)$. If $P$ has no edge, then $P = \{\rho(P)\}$, and we take the
+identity. Otherwise, list the edges of $P$ in order of their distance from $\rho(P)$, and let $A$ be
+the closure of the last one. Then $A$ is an arc whose ends are a vertex $y$ nearer to $\rho(P)$ and a
+vertex $x$ of valency 1 in $P$. Also $x \ne \rho(P)$, and so $x \notin bd(\Sigma)$, since $P$ meets
+$bd(\Sigma)$ at most in $\rho(P)$. Let $P'$ be $P$ minus $A - \{y\}$, which is a tree with one edge
+fewer and contains $\rho(P)$. By induction there is a move $\beta$ that maps $P'$ into $N$ and fixes
+every point outside $W(P)$. The set $\beta^{-1}(N) \cap W(P)$ is open and contains $y$. Choose a small
+open disc $B$ around $y$ in this set. The arc $A$ minus $B$ is at positive distance from $P'$, from
+$bd(\Sigma)$ and from the other parts, and so it has a closed disc neighbourhood $D \subseteq W(P)$ that
+misses all of them. Sliding $A$ along itself towards $y$ gives a homeomorphism $\alpha$ of $\Sigma$ that
+is the identity outside $D$ and maps $A$ into $B$. Since $\alpha$ is
+the identity outside a closed disc that misses $bd(\Sigma)$, it is isotopic to the identity by an
+isotopy fixing $bd(\Sigma)$, and so it is a move. It fixes $P'$, since $D$ misses $P'$. Thus
+$\beta \circ \alpha$ is a move that maps $P$ into $N$ and fixes every point outside $W(P)$, which
+completes the induction.
+
+Second, a move takes the finitely many points of the sets $R(P)$ that are not in $bd(\Sigma)$ off
+$U(H_0)$, one at a time. For let $a$ be such a point. Since $U(H_0)$ contains no open set, there are
+points near $a$ not in $U(H_0)$, and a slide along a short line, which is the identity outside a small
+closed disc around $a$ that misses $bd(\Sigma)$ and the other points, moves $a$ to such a point. As in
+the first step, this slide is a move. Let $H_1$ be the image of $H_0$ under
+the inverse of the composed move. Then $H_1$ is homotopic to $H_0$, and every point of a set $R(P)$ that is
+in $U(H_1)$ is in $Z$, since $U(H_1) \cap bd(\Sigma) = V(H_0) \cap bd(\Sigma)$.
+
+Third, choose mutually disjoint open sets around the points $\rho(P)$, each missing the parts other
+than its own. Each point $z$ of $Z$ is $\rho(P)$ for the part $P$ containing it, since it is the point
+of $P$ in $bd(\Sigma)$. For $z \in Z$ we choose this set, $F(z)$ say, so small that every closed curve
+in $F(z)$ is null-homotopic in $\Sigma$. Since $H_1$ is a forest, each edge of $H_1$ at $z$ has a
+closure that is an arc with one end $z$, and we split it at a point in $F(z)$ such that the part from
+$z$ to this point lies in $F(z)$. This gives a connected piece in $F(z)$ that ends at $z$ and a
+closed piece that misses $z$. Let $N(z)$ be $F(z)$ minus these closed pieces, minus the closures of the
+edges of $H_1$ not at $z$, and minus the vertices of $H_1$ other than $z$. It is open and contains
+$z$. For a point $y = \rho(P)$ not in $Z$, let $N(y)$ be its open set minus $U(H_1)$, which is open and
+contains $y$ by the second step. For each part $P$ let $N(P) = N(\rho(P))$. Let $\beta$ be the move
+given by the first step for these sets, and let $H_2$ be the image of $H_1$ under $\beta^{-1}$. Then
+$H_2$ is homotopic to $H_0$, since the inverse of a move is a move. A part $P$ meets $U(H_2)$ only
+where $\beta(P)$ meets $U(H_1)$, and $\beta(P) \subseteq N(\rho(P))$. The set $N(y)$ misses $U(H_1)$ for
+$y \notin Z$, and for $z \in Z$ the set $N(z)$ meets $U(H_1)$ only in $z$ and in the pieces in $F(z)$ of
+the edges at $z$. So $P$ meets $U(H_2)$ only if $\rho(P)$ is a point $z$ of $Z$, and then only in $z$
+and in the images under $\beta^{-1}$ of these pieces, which are pieces of the edges of $H_2$ at $z$.
+
+Fourth, let $z \in Z$, let $P$ be the part containing $z$, and let $F'(z) = \beta^{-1}(F(z))$. Every
+closed curve in $F'(z)$ is null-homotopic in $\Sigma$, since $\beta$ is a homeomorphism. The set
+$F'(z)$ includes $P$, since $\beta(P) \subseteq N(z) \subseteq F(z)$, and it misses the other parts,
+since $\beta$ maps them into their own sets $N(P')$, which miss $F(z)$. Let $C(z)$ be the union of the
+vertices of $H_2$ other than $z$, the closures of the edges of $H_2$ not at $z$, and the images under
+$\beta^{-1}$ of the closed pieces of the edges at $z$. It is a closed set, and it misses $P$ by the
+third step. Since $P$ is a tree that meets $bd(\Sigma)$ only in $z$, cutting along it turns $P$ into an
+arc $\phi^{-1}(P)$ of $bd(\Sigma')$. So there is a homeomorphism $\chi$ from a rectangle
+$[x_1, x_2] \times [0, \delta]$ into $\Sigma'$ that maps the bottom side into $bd(\Sigma')$, such that
+$\phi^{-1}(P)$ is the image of a part of the bottom side that misses its ends, and such that
+$\phi \circ \chi$ maps the rectangle into the open set $F'(z) - C(z)$, which includes $P$. Since
+$l(z) \in \phi^{-1}(P)$, there is a point $(x_0, 0)$ of the bottom side with $\chi(x_0, 0) = l(z)$. Each point of $P$ is an interior point of the image $Q$ of the rectangle under
+$\phi \circ \chi$, since all its preimages are inside the bottom side. Each edge of $H_2$ at $z$
+starts at $z$, and its other end is not in $Q$, since it is in $C(z)$. So the edge leaves $Q$ for the
+last time at the image of a point $w$ on the top or lateral sides of the rectangle (the image of the
+rest of the bottom side lies in $P \cup bd(\Sigma)$). We replace the part of the edge up to this
+point by the image of the straight segment from $(x_0, 0)$ to $w$. Two such segments meet only at
+$(x_0, 0)$, since their ends $w$ are distinct points of the top and lateral sides, and each meets the
+bottom side only at $(x_0, 0)$. So the new lines meet each other only at $z$, and they miss $P$ except
+at $z$. They also miss the rest of the new forest, since inside $Q$ the drawing of $H_2$ consists of $z$
+and pieces of the edges at $z$, and the part of each such edge in $Q$ has been replaced. The change
+takes place inside $F'(z)$, in which every closed curve is null-homotopic, and so the new forest is
+homotopic to $H_2$. The changes at the points of $Z$ take place in the disjoint sets $F'(z)$, and so
+they do not interfere.
+
+Let $H$ be the final forest. Then $H$ is homotopic to $H_0$. A part $P$ with $\rho(P) \notin Z$ misses
+$U(H_2)$ and all the sets $F'(z)$, and so it misses $U(H)$. A part $P$ with $\rho(P) = z \in Z$ meets
+$U(H)$ only in $z$. So $U(H)$ meets $U(L)$ only in points of $Z$, which are in $bd(\Sigma)$. For
+$z \in Z$, every edge of $H$ at $z$ starts with the image of a segment from $(x_0, 0)$, and so in
+$\phi^{-1}(H)$ every edge with an end in $\phi^{-1}(z)$ has this end at $l(z)$. Hence every member of
+$\phi^{-1}(z) - \{l(z)\}$ is an isolated vertex of $\phi^{-1}(H)$. For $z \in V(H_0) \cap bd(\Sigma)$
+not in $U(L)$, the set $\phi^{-1}(z)$ has only the member $l(z)$.\fixnote{fix:4.4-proof-added}{The paper leaves (4.4) to the reader. The argument above
+is the one used in the formalization.}}
+
+\stmt
+(4.5) \textit{Let $J$ be a proper graph in $\Sigma$ with no isolated vertices. Let $\Sigma'$ be the surface obtained from $\Sigma$ by cutting along $U(J)$ and let $\phi \colon \Sigma' \to \Sigma$ be the associated surjection. Let $H$ be a forest in $\Sigma$ such that $U(J)$ is $H$-normal. Then $\phi^{-1}(H)$ is a forest in $\Sigma'$. Moreover, if $H'$ is a forest in $\Sigma'$ homoplastic to $\phi^{-1}(H)$, then $\phi(H')$ is a forest in $\Sigma$ homoplastic to $H$.}
+
+[$\phi(H)$ denotes the graph $(\phi(U(H)), \phi(V(H)))$.]
+
+\textit{Proof.} Since $U(J)$ is $H$-normal, $\phi^{-1}(H)$ is a forest in $\Sigma'$. Let $H'$ be homoplastic to $\phi^{-1}(H)$ in $\Sigma'$. Suppose that $\phi(H')$ is not a forest. Since $H'$ is a forest, there is a sequence $P'_1, \dots, P'_k$ of mutually vertex-disjoint paths of $H'$, where $k \ge 1$, $P'_i$ has distinct ends $s_i, t_i \in \phi^{-1}(U(J))$ ($1 \le i \le k$), $\phi(t_i) = \phi(s_{i+1})$ ($1 \le i < k$), and $\phi(t_k) = \phi(s_1)$. Choose such a sequence with $k \ge 1$ minimum. Let $T'_i$ be the component of $H'$ containing $P'_i$ ($1 \le i \le k$). From the minimality of $k$, $T'_i \ne T'_j$ for $1 \le i < j \le k$. Since $H'$ is homoplastic to $\phi^{-1}(H)$, for $1 \le i \le k$ there is a path $P_i$ of $\phi^{-1}(H)$ from $s_i$ to $t_i$, and $P_1, \dots, P_k$ all belong to different components of $\phi^{-1}(H)$. Hence $\phi(P_1) \cup \dots \cup \phi(P_k)$ includes a circuit of $H$, a contradiction. Thus $\phi(H')$ is a forest.
+
+Let $\alpha \colon \Sigma' \to \Sigma'$ be a homeomorphism such that $\alpha(x) = x$ for all $x \in bd(\Sigma')$ and $\alpha(H')$ is homotopic to $\phi^{-1}(H)$. For $x \in \Sigma$, we define $\beta(x)$ as follows: we choose $y \in \phi^{-1}(x)$, and let $\beta(x) = \phi(\alpha(y))$. This is uniquely defined; for if $x \in bd(\Sigma) \cup U(J)$ then $\phi(\alpha(y)) = x$ since $\alpha(y) = y$, and if

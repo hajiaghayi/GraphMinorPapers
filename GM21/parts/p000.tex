@@ -1,0 +1,141 @@
+\sectionhead{\textbf{About this copy}}
+
+This is a corrected copy of the paper cited above, which appeared in \textit{J. Combin. Theory
+Ser.~B} \textbf{99} (2009), 583--616. The text is retyped from the authors' version of April 18,
+2011 (the preprint), not from the printed paper, so its pages are those of the preprint. It keeps
+the wording of the preprint and the numbering of its results, equations and footnotes, and a
+marker such as \origpagemark{$N$} shows where page $N$ of the preprint begins.
+
+The corrections come from a formalization of the Graph Minors series in the Lean proof
+assistant, \href{https://github.com/mahdi-jfri/GraphMinor}{github.com/mahdi-jfri/GraphMinor},
+in which the results of this paper are proved. Where the formalization found that a statement
+or a step of a proof is wrong as printed, this copy corrects it in place. Where the paper leaves a proof or a step to the reader, this copy adds it, also in blue. Text \del{struck
+through in red} is removed and text \fix{in blue} is inserted. Each change has a note, marked
+\textcolor{fixcolor}{\sffamily F1}, \textcolor{fixcolor}{\sffamily F2}, \dots, that gives the
+reason. The file
+\href{https://github.com/mahdi-jfri/GraphMinor/blob/main/corrections/GM21.md}{corrections/GM21.md}
+of the formalization describes each correction in full. Each note, and each item in the list below, begins with the kind of the change. A \kindname{misprint} is a wrong symbol, index or word. A \kindname{statement} is a result or a claim of the text that is false as printed. A \kindname{degenerate} is a statement that fails only in a trivial case, such as an empty graph or a parameter equal to~$0$. A \kindname{gap} is a step of a proof that does not follow as written. A \kindname{missing} is a proof that the paper omits, leaves to the reader or only sketches, and that this copy adds.
+
+The corrections and added proofs, in the order of the pages (all page numbers are those of the preprint):
+\begin{enumerate}\setlength{\itemsep}{1pt}
+\item \kindtag{fix:1.2-proof-added}\hyperref[fix:1.2-proof-added]{Proof of (1.2), page 2 of the preprint}: the proof is added.
+\item \kindtag{fix:2.3}\hyperref[fix:2.3]{Statement of (2.3), page 2 of the preprint}: the vertices that are
+internal in $L \cap B$ are deleted from $L \cap A$.
+\item \kindtag{fix:2.3-proof-added}\hyperref[fix:2.3-proof-added]{Proof of (2.3), page 2 of the preprint}: the proof is added.
+\item \kindtag{fix:2.4-proof-added}\hyperref[fix:2.4-proof-added]{Proof of (2.4), page 3 of the preprint}: the proof that $L'$ is a vital $(p+2)$-linkage is added.
+\item \kindtag{fix:2.5-claim6}\hyperref[fix:2.5-claim6]{Claim (6) in the proof of (2.5), page 6 of the preprint}:
+$V(L) \setminus V(G)$ becomes $V(L) = V(G)$.
+\item \kindtag{fix:2.5-end}\hyperref[fix:2.5-end]{Proof of (2.5), page 6 of the preprint}: $B_j \cap A_i$ becomes
+$B_i \cap A_j$, and $B_{i+1} \cap A_i$ becomes $B_i \cap A_{i+1}$.
+\item \kindtag{fix:3.3}\hyperref[fix:3.3]{Statement of (3.3), page 9 of the preprint}: ``a tangle in $B$'' becomes
+``a tangle in $D$''.
+\item \kindtag{fix:4.1}\hyperref[fix:4.1]{Statement of (4.1), page 11 of the preprint}: in part 1,
+$c(\hat{\Sigma}') = c(\hat{\Sigma}) - 1$ becomes $c(\Sigma') = c(\Sigma) - 1$.
+\item \kindtag{fix:4.1-proof-added}\hyperref[fix:4.1-proof-added]{Proof of (4.1), page 11 of the preprint}: the proof is added.
+\item \kindtag{fix:4.2-proof-added}\hyperref[fix:4.2-proof-added]{Proof of (4.2), page 11 of the preprint}: the proof is added.
+\item \kindtag{fix:4.5-proof}\hyperref[fix:4.5-proof]{Proof of (4.5), page 13 of the preprint}: theorem (7.8) of [7] is
+replaced by theorem (7.5) of [7], with (3.7) and (3.4).
+\item \kindtag{fix:5.1-proof}\hyperref[fix:5.1-proof]{Proof of (5.1), page 17 of the preprint}: theorem (3.2) of [7] is
+used with its condition (ii) replaced by the condition of Claim (4).
+\item \kindtag{fix:5.2-claim5}\hyperref[fix:5.2-claim5]{Claim (5) in the proof of (5.2), page 18 of the preprint}: (3.3)
+becomes (3.5).
+\item \kindtag{fix:5.2-claim12}\hyperref[fix:5.2-claim12]{Claim (12) in the proof of (5.2), page 21 of the preprint}:
+$v \in bd(\Sigma) \setminus V(\Gamma)$ becomes $v \in V(\Gamma) \cap bd(\Sigma)$.
+\item \kindtag{fix:6.4-proof}\hyperref[fix:6.4-proof]{Proof of (6.4), page 24 of the preprint}: (6.2) becomes (6.4).
+\item \kindtag{fix:6.4-claim1-proof-added}\hyperref[fix:6.4-claim1-proof-added]{Claim (1) in the proof of (6.4), page 24 of the preprint}: the proof that $(A(F), B(F))$ is a separation is added.
+\item \kindtag{fix:6.4-tree}\hyperref[fix:6.4-tree]{Proof of (6.4), page 25 of the preprint}: the bound on the paths
+of $T$ is for paths with one end $r_0$, and the regions are counted from $r_0$.
+\item \kindtag{fix:6.5-n}\hyperref[fix:6.5-n]{Proof of (6.5), page 26 of the preprint}: (2.5) becomes (2.6).
+\item \kindtag{fix:6.5-t}\hyperref[fix:6.5-t]{Proof of (6.5), page 26 of the preprint}: (2.5) becomes (2.6) a second time.
+\item \kindtag{fix:6.5-disc}\hyperref[fix:6.5-disc]{Proof of (6.5), page 26 of the preprint}: $\bar{r}_j$ becomes
+$\bar{r}_i$.
+\item \kindtag{fix:6.6}\hyperref[fix:6.6]{Statement of (6.6), page 27 of the preprint}: the word ``in'' is added.
+\item \kindtag{fix:6.6-proof-H3}\hyperref[fix:6.6-proof-H3]{Proof of (6.6), page 27 of the preprint}: the second $H_2$
+becomes $H_3$.
+\item \kindtag{fix:6.6-proof-region}\hyperref[fix:6.6-proof-region]{Proof of (6.6), page 27 of the preprint}: the reason that
+a region meets all three supports is completed.
+\item \kindtag{fix:6.6-proof-Delta1}\hyperref[fix:6.6-proof-Delta1]{Proof of (6.6), page 27 of the preprint}: $\cup$ becomes
+$\cap$ in $\mu(F_2^* \cup J_1)$ and $\mu(F_3^* \cup J_1)$.
+\item \kindtag{fix:6.7-proof}\hyperref[fix:6.7-proof]{Proof of (6.7), page 28 of the preprint}: $\mu(J_i)$ becomes
+$\mu(J_j)$.
+\item \kindtag{fix:6.3-proof}\hyperref[fix:6.3-proof]{Proof of (6.3), page 28 of the preprint}: the reference to (6.3)
+in the first sentence becomes (6.7).
+\item \kindtag{fix:6.3-claim2-ends}\hyperref[fix:6.3-claim2-ends]{Claim (2) in the proof of (6.3), page 28 of the preprint}:
+the case where both ends of the line are in one support is added.
+\item \kindtag{fix:6.3-claim2-supports}\hyperref[fix:6.3-claim2-supports]{Claim (2) in the proof of (6.3), page 28 of the
+preprint}: in the ends of $I_i$, $u_1$ becomes $u_i$.
+\item \kindtag{fix:6.3-claim3}\hyperref[fix:6.3-claim3]{Claim (3) in the proof of (6.3), page 29 of the preprint}: the
+reason that $\Gamma$ is a forest is added.
+\item \kindtag{fix:6.3-claim4-Gi}\hyperref[fix:6.3-claim4-Gi]{Claim (4) in the proof of (6.3), page 29 of the preprint}:
+$\Gamma$ becomes $\Gamma_i$ in the definition of $G_i$.
+\item \kindtag{fix:6.3-claim4-support}\hyperref[fix:6.3-claim4-support]{Claim (4) in the proof of (6.3), page 29 of the
+preprint}: the case where both ends of the line are in one support is added, and $p + 2q$
+becomes $p + 4q$ in $\lambda$ (also on page 28).
+\item \kindtag{fix:7.1-proof-added}\hyperref[fix:7.1-proof-added]{Proof of (7.1), page 29 of the preprint}: the proof is added.
+\item \kindtag{fix:7.2}\hyperref[fix:7.2]{Statement of (7.2), page 30 of the preprint}: the hypothesis $q \ge 1$
+is added.
+\item \kindtag{fix:7.3-linkage-proof-added}\hyperref[fix:7.3-linkage-proof-added]{Proof of (7.3), page 31 of the preprint}: the proof that $L \cap G'$ is an exhaustive $p$-linkage is added.
+\item \kindtag{fix:7.3-proof}\hyperref[fix:7.3-proof]{Proof of (7.3), page 31 of the preprint}: a component of
+$L \cap \Gamma$ includes a $\Sigma$-jump, instead of being one.
+\item \kindtag{fix:8-pseudo}\hyperref[fix:8-pseudo]{Section 8, page 32 of the preprint}: in the definition of a
+pseudo-presentation, $F_4^*$ becomes $F_r^*$.
+\item \kindtag{fix:8.1-proof-V1}\hyperref[fix:8.1-proof-V1]{Proof of (8.1), page 33 of the preprint}: in the check of (V1),
+$v$ becomes $u$, and $\mu(S)$ becomes $\mu(s)$.
+\item \kindtag{fix:8.1-proof}\hyperref[fix:8.1-proof]{Proof of (8.1), page 33 of the preprint}: in the check of (V4),
+$\mu(s_2)$ becomes $\mu(u)$, and $\cap$ becomes $\cup$.
+\item \kindtag{fix:8-mu}\hyperref[fix:8-mu]{Section 8, page 34 of the preprint}: in the definition of $\mu'$, $v$
+becomes $u$ in the first two cases.
+\item \kindtag{fix:8.2}\hyperref[fix:8.2]{Statement of (8.2), page 34 of the preprint}: $\Sigma$ becomes
+$\Gamma$.
+\item \kindtag{fix:9.2-proof}\hyperref[fix:9.2-proof]{Proof of (9.2), page 41 of the preprint}: (2.4) becomes (2.2) and
+(2.3).
+\item \kindtag{fix:11-separation}\hyperref[fix:11-separation]{Section 11, page 43 of the preprint}: the pair $(W(T_1), W(T_2))$ is a
+separation only when no edge of $G$ is in two of the graphs $W(t)$.
+\item \kindtag{fix:11.2-proof}\hyperref[fix:11.2-proof]{Proof of (11.2), page 44 of the preprint}: the decomposition $(T, W)$
+is taken with no edge in two of its graphs.
+\item \kindtag{fix:11.2-proof-linked}\hyperref[fix:11.2-proof-linked]{Proof of (11.2), page 44 of the preprint}: $W'(e_2)$
+becomes $W'(e_i)$.
+\item \kindtag{fix:11.2-proof-end}\hyperref[fix:11.2-proof-end]{Proof of (11.2), page 44 of the preprint}: ``(i) holds''
+becomes ``every vertex of $T$ has degree $\le 3$''.
+\item \kindtag{fix:11.3-proof-added}\hyperref[fix:11.3-proof-added]{Proof of (11.3), page 44 of the preprint}: the proofs that $(T', W')$ is a tree-decomposition and is linked are added.
+\item \kindtag{fix:11.1-claim1}\hyperref[fix:11.1-claim1]{Claim (1) in the proof of (11.1), page 45 of the preprint}:
+$L'_i$ becomes $L'_1$.
+\item \kindtag{fix:11.1-claim2-proof-added}\hyperref[fix:11.1-claim2-proof-added]{Claim (2) in the proof of (11.1), page 45 of the preprint}: the proof that $G/e$ is an intertwining is added.
+\item \kindtag{fix:11.1-proof}\hyperref[fix:11.1-proof]{Proof of (11.1), page 45 of the preprint}: the
+decomposition $(T, W)$ is taken with no edge in two of its graphs.
+\item \kindtag{fix:11.1-claim4}\hyperref[fix:11.1-claim4]{Claim (4) in the proof of (11.1), page 45 of the preprint}:
+$(T, W)$ is chosen with $|V(T)|$ as small as possible.
+\item \kindtag{fix:12.1-claim1-G}\hyperref[fix:12.1-claim1-G]{Claim (1) in the proof of (12.1), page 47 of the preprint}:
+``of $B \cap A_1$'' becomes ``of $G$''.
+\item \kindtag{fix:12.1-claim1-W1}\hyperref[fix:12.1-claim1-W1]{Claim (1) in the proof of (12.1), page 47 of the preprint}:
+$W'(t)$ becomes $W_1(t)$.
+\item \kindtag{fix:12-converse}\hyperref[fix:12-converse]{Section 12, page 49 of the preprint}: the converse of (12.1)
+asks also that every vertex of an inner graph $W(t)$ be in $W(e)$ for an edge $e$ of $P$ at $t$.
+\item \kindtag{fix:12.2}\hyperref[fix:12.2]{Statement of (12.2), page 49 of the preprint}: the same condition is
+added for $(P, W')$.
+\item \kindtag{fix:12.2-ends}\hyperref[fix:12.2-ends]{Statement of (12.2), page 49 of the preprint}: $\{s, s'\}$ becomes
+$\{s_1, s_2\}$.
+\item \kindtag{fix:12.2-tree-proof-added}\hyperref[fix:12.2-tree-proof-added]{Proof of (12.2), page 49 of the preprint}: the proof that $(T^*, W^*)$ is a tree-decomposition is added.
+\item \kindtag{fix:12.2-claim3}\hyperref[fix:12.2-claim3]{Claim (3) in the proof of (12.2), page 49 of the preprint}: the
+bound uses the added hypothesis, and $W^*$ becomes $W^*(t)$.
+\item \kindtag{fix:12.2-claim3-p50}\hyperref[fix:12.2-claim3-p50]{Claim (3) in the proof of (12.2), page 50 of the preprint}:
+the bound uses the added hypothesis.
+\item \kindtag{fix:12.2-path-proof-added}\hyperref[fix:12.2-path-proof-added]{Proof of (12.2), page 50 of the preprint}: the paths between two sets $W'(e)$ along $P$ are added.
+\item \kindtag{fix:12.3-w}\hyperref[fix:12.3-w]{Proof of (12.3), page 50 of the preprint}:
+$w = w' + 3(w' + 1)2^{n-1}$ becomes $w = w' + 2^n(w' + 1)$.
+\item \kindtag{fix:12.3-trim}\hyperref[fix:12.3-trim]{Proof of (12.3), page 50 of the preprint}: the decomposition $(T, W)$
+is taken with no edge in two of its graphs.
+\item \kindtag{fix:12.3-claim1}\hyperref[fix:12.3-claim1]{Claim (1) in the proof of (12.3), page 51 of the preprint}:
+$(P, W')$ is taken as built in the proof of (12.1), so that it meets the hypothesis added to
+(12.2).
+\item \kindtag{fix:12.3-claim2}\hyperref[fix:12.3-claim2]{Claim (2) in the proof of (12.3), page 51 of the preprint}:
+$e_i$ becomes $f_i$, and the bound $w + 1 = k$ on the orders becomes $w' + 1$.
+\item \kindtag{fix:12.3-count-proof-added}\hyperref[fix:12.3-count-proof-added]{Proof of (12.3), page 51 of the preprint}: the proof of $|N(T)| \le 2^n$ is added.
+\item \kindtag{fix:12-chain}\hyperref[fix:12-chain]{Section 12, page 52 of the preprint}: in the definition of a
+$p$-chain, $|X|$ becomes $|Y|$.
+\item \kindtag{fix:12.4-bad}\hyperref[fix:12.4-bad]{Proof of (12.4), page 52 of the preprint}: a vertex $t$ that is
+not bad must also have every vertex of $W(t)$ in $W(e_1) \cup W(e_2)$.
+\item \kindtag{fix:12.4-ends}\hyperref[fix:12.4-ends]{Proof of (12.4), page 52 of the preprint}: every vertex of $P$
+that does not have degree 2 is also bad.
+\item \kindtag{fix:12.4-proof-added}\hyperref[fix:12.4-proof-added]{Proof of (12.4), page 53 of the preprint}: a full proof is added.
+\end{enumerate}

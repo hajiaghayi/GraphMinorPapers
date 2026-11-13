@@ -1,0 +1,24 @@
+\origpage{173}{GRAPH MINORS, XVII}
+Again, it is easy to verify that $\pi'$ is a portrayal of $G$, and is $\mathscr{T}$-central, and its warp is at most that of $\pi$. Since it is not simpler than $\pi$ (since $\pi$ is 0-redundant) it follows that $\Sigma' \simeq \Sigma$ and $\Sigma''$ is a disc. This disc satisfies the theorem. $\square$
+
+We shall need a second, similar result.
+
+\stmt
+(5.4) \textit{Let $\pi = (\Sigma, \Gamma, \alpha, \beta, \gamma)$ be a 0-redundant $\mathscr{T}$-central portrayal of a hypergraph $G$. Let $F \subseteq \Sigma$ be a $\Gamma$-normal O-arc with $F \cap \operatorname{dom}(\gamma) = \emptyset$. Then there is a disc $\Delta \subseteq \Sigma$ with $\operatorname{bd}(\Delta) = F$ such that $\alpha(\Delta)$ is small.}
+
+\textit{Proof.} By (5.2) we may assume that $F \cap N(\Gamma) \subseteq \operatorname{bd}(\Sigma)$ and for every internal cell $c$ of $\Gamma$, $\tilde{c} \cap F = \emptyset$. Since $F$ is $\Gamma$-normal, it follows that $F \cap \operatorname{bd}(\Sigma) \subseteq N(\Gamma)$, and by ``diverting'' $F$ around each member of $F \cap \operatorname{bd}(\Sigma)$, we may assume that $F \cap \operatorname{bd}(\Sigma) = \emptyset$ (for if the result holds for the new O-arc then it also holds for the original). Thus $F \cap U(\Gamma) = \emptyset$.
+
+Let $\Sigma_0$ be the surface obtained from $\Sigma$ by cutting along $F$, and let $\hat{\Sigma}_0$ be obtained from $\Sigma_0$ by pasting discs on the resulting (one or two) new cuffs in $\Sigma_0$. Suppose that $\hat{\Sigma}_0$ is connected. Then $(\hat{\Sigma}_0, \Gamma, \alpha, \beta, \gamma)$ is a $\mathscr{T}$-central portrayal of $G$, simpler than $\pi$ (because $\hat{\Sigma}_0$ is simpler than $\Sigma$), a contradiction.
+
+Thus $\Sigma_0$ has exactly two components $\Sigma', \Sigma''$, and from the symmetry we may assume that $(\alpha(\Sigma''), \alpha(\Sigma')) \in \mathscr{T}$, since by (2.1) this separation has order 0. Let $\hat{\Sigma}'$ be the component of $\hat{\Sigma}_0$ corresponding to $\Sigma'$. Let $\Gamma' = (U(\Gamma) \cap \Sigma', N(\Gamma) \cap \Sigma')$; then $\Gamma'$ is a painting in $\hat{\Sigma}'$. Let $c' \in C(\Gamma')$ (this exists, since $\alpha(\Sigma'') \ne G$ from one of the tangle axioms). Define $\pi' = (\hat{\Sigma}', \Gamma', \alpha', \beta', \gamma')$ as follows:
+\begin{align*}
+&\alpha'(c') = \alpha(c') \cup \alpha(\Sigma'') \\
+&\alpha'(c) = \alpha(c) &&(c \in C(\Gamma') - \{c'\}) \\
+&\beta'(n) = \beta(n) &&(n \in N(\Gamma') \cap \operatorname{bd}(\hat{\Sigma}')) \\
+&\gamma' = \gamma | N(\Gamma').
+\end{align*}
+Then it is easy to see that $\pi'$ is a portrayal of $G$; and it is $\mathscr{T}$-central since $\alpha'(c')$ is small by (4.1). Its warp is at most that of $\pi$, but it is not simpler, and so $\hat{\Sigma}'$ is not simpler than $\Sigma$. Thus $\Sigma''$ is a disc, satisfying the theorem. $\square$
+
+\sectionhead{6. \textsc{Redundancy}}
+
+Now we make a somewhat stronger hypothesis; we study portrayals such that there is no simpler portrayal even if we remove a few vertices.

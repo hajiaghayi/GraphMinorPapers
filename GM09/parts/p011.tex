@@ -1,0 +1,35 @@
+\origpage{50}{ROBERTSON AND SEYMOUR}
+\noindent end $v$. If $v \in W(\mathscr{Q})$, we define the \textit{attachment corresponding to $v$} to be the minimal subpath of $\bigcup \mathscr{Q}$ between $v$ and $\bigcup \mathscr{P}$.
+
+\stmt
+(4.2) \textit{Let} \textbf{S} \textit{be true. Suppose that $w, w' \in W(\mathscr{Q})$ are distinct, and that neither of the corresponding attachments is exchangeable. Then $w, w'$ are both ends of the same member of $\mathscr{Q}$.}
+
+\textit{Proof.} Let the corresponding attachments be $P, P'$, with feet $v, v'$, respectively. By (3.1) and (3.2), $\mathscr{P}$ has an overpass $P''$ and $v, v' \in V(P'')$. If $v = v'$ the result is true, and we assume $v \ne v'$, so that $P$ and $P'$ are disjoint. By (3.3) there is a crooked transaction $\mathscr{P}'$ with $|\mathscr{P}'| = |\mathscr{P}| + 1$ and
+\begin{equation*}
+\bigcup \mathscr{P}' \subseteq \bigcup \mathscr{P} \cup (P \cup P'),
+\end{equation*}
+and such that no edge of $P''$ between $v$ and $v'$ lies in $\bigcup \mathscr{P}'$. From the choice of $\mathscr{P}$, all the edges of $P''$ between $v$ and $v'$ lie in $\bigcup \mathscr{Q}$, and the result follows. $\square$
+
+\stmt
+(4.3) \textit{Let} \textbf{S} \textit{be true. For every $Q \in \mathscr{Q}$ except possibly one, either}
+
+\hspace*{12pt}(i) \textit{$Q \cap \bigcup \mathscr{P} = \emptyset$, or}
+
+\hspace*{12pt}(ii) \textit{both ends of $Q$ are in $V(\mathscr{P})$, or}
+
+\hspace*{12pt}(iii) \textit{$Q$ meets exactly one member $P$ of $\mathscr{P}$, $P \cap Q$ is a path, and $P, Q$ and $P \cap Q$ have a common end, and the other end of $Q$ is not in $V(\mathscr{P})$.}
+
+\textit{If (i), (ii), (iii) are all false for some $Q \in \mathscr{Q}$ then $\mathscr{P}$ has an overpass.}
+
+\textit{Proof.} We assume that $Q \in \mathscr{Q}$ satisfies none of (i), (ii), (iii). Thus $Q$ meets $\bigcup \mathscr{P}$, and some end $w$ of $Q$ is not in $V(\mathscr{P})$. Hence $w \in W(\mathscr{Q})$; let $P$ be the corresponding attachment, with leg $P_1$ and foot $s$. Suppose that it is exchangeable. Then from the minimality of $\bigcup \mathscr{P} \cup \bigcup \mathscr{Q}$ it follows that some subpath of $P_1$ from $s$ to an end $t$ of $P_1$ lies completely in $\bigcup \mathscr{Q}$ and hence in $Q$. Then $t \in V(Q)$, and since no internal vertex of $Q$ is in $\bar{\Omega}$ we deduce that $t$ is the end of $Q$ different from $w$. Hence (iii) is true, a contradiction. It follows that the corresponding attachment is not exchangeable, and by (3.2), that $\mathscr{P}$ has an overpass. Now if $Q' \in \mathscr{Q}$ also satisfies none of (i), (ii), (iii), then $Q = Q'$, by (4.2). The result follows. $\square$
+
+If $Q$ satisfies (4.3) (iii) we say that $Q$ is \textit{half-covered}.
+
+Let $P_1, ..., P_k$ be mutually disjoint $\Omega$-paths. We say that $P_1, ..., P_k$ are \textit{in order} if there is a clockwise sequence
+\begin{equation*}
+(a_k, a_{k-1}, ..., a_2, a_1, b_1, b_2, ..., b_{k-1}, b_k),
+\end{equation*}
+where $P_i$ has ends $a_i, b_i$ ($1 \le i \le k$). It follows that no two of $P_1, ..., P_k$ cross.
+
+\stmt
+(4.4) \textit{Let} \textbf{S} \textit{be true, and let $Q_1, Q_2, Q_3 \in \mathscr{Q}$ be in order, where $Q_2$ is}

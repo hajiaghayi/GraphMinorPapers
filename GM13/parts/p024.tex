@@ -1,0 +1,10 @@
+\origpage{88}{ROBERTSON AND SEYMOUR}
+\sectionhead{7. \textsc{Walls}}
+
+Now we come to the third part of the paper, which concerns what to do to solve Folio when the branch-width of our graph is too high to apply the methods of Section 4 and yet we have not found a large clique minor. In such a graph there is a large grid minor, by (4.2), and, roughly, our method is to find a section of such a minor that does not stand out among the other sections of the grid close to it in any significant way (with regard to how the rest of $G$ is attached to it.) From a theorem which we postpone to a later paper, any vertex in the middle of such an ``ordinary'' section is irrelevant. Here we give an algorithm which, given a grid minor, either finds a large clique minor, or finds an ``ordinary'' section of the grid, or moves to a better grid minor, when we start again.
+
+Although grids are natural objects to use from some viewpoints, grid minors introduce a complication (due to the fact that their vertices are mostly 4-valent) which is unnecessary and can be avoided by using elementary walls instead (which are parts of the hexagonal lattice instead of the square lattice). Figure 1 shows an elementary wall of height 8. It has four distinguished vertices, called its \textit{corners}, shaded in the figure. The \textit{elementary wall of height $h$} (where $h \ge 2$ is even) is similar; there are $h$ rows of ``bricks,'' and $h$ ``bricks'' in each row, and four ``corners.'' Thus there are $h+1$ ``horizontal'' paths and its ``vertical'' edges divide into $2h+2$ ``collinear'' sets of $\frac{1}{2}h$ edges each, and the corners are the ends of the first and the last horizontal paths. The \textit{perimeter} is the circuit which bounds the infinite region when drawn as in Fig. 1.
+
+A \textit{wall of height $h$} (where $h \ge 2$ is even) is a subdivision of an elementary wall of height $h$. It too therefore has four distinguished vertices, called its \textit{corners}. A wall is thus a pair $(H, P)$, where $H$ is a graph and $P \subseteq V(H)$ is
+
+\origfig{figures/fig1}{294bp}{\textsc{Fig}. 1. Elementary 8-wall.}

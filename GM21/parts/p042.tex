@@ -1,0 +1,22 @@
+\origpage{40}{}
+\noindent different cuffs. Then there are border cells $c_1, c_2$ of $\Gamma$ bordering different cuffs with $\mu(x_i) \subseteq \alpha(c_i)$, by (R6) and condition (iii) in the definition of a painting. By condition (iv) in the definition of a painting, $\tilde{c} \cap \tilde{c}' = \emptyset$, and so by (R7), $\alpha(c_1) \cap \alpha(c_2)$ is null. Consequently, $\mu(x_1) \cap \mu(x_2)$ is null. This proves (P1).
+
+For (P2), let $1 \le j \le r$ and let $s \subseteq F_j^*$ be a space of $\Gamma'$, with ends $u_1, u_2$. Let $c$ be the cell of $\Gamma$ with $c \cap bd(\Sigma) = s$; then $\tilde{c} = \{u_1, u_2\}$. Since $s \subseteq F_j^*$ it follows that $c \not\in \mathcal{A}_2$, and so $c$ is linked. Consequently, (P2) holds, taking $q_j = q(C)$ where $C$ is the cuff including $F_j^*$ and (see (R5)) $q(C)$ is the common cardinality of all the sets $V(\alpha(v))$ ($v \in V(\Gamma) \cap C$).
+
+For (P3), let $C$ be a cuff, let $x_1, x_2$ be units of $\Gamma'$ in $C$, and let $u_1, u_2 \in C \cap V(\Gamma)$ so that $x_1, u_1, x_2, u_2$ are in order in $C$. We must show that $\mu(x_1) \cap \mu(x_2) \subseteq \mu(u_1) \cup \mu(u_2)$. If one of $x_1, x_2$ equals one of $u_1, u_2$ then the inclusion is trivial, and so we assume that $x_1, x_2 \ne u_1, u_2$. For $i = 1, 2$, let $c_i$ be a border cell of $\Gamma$ with $c_i \cap bd(\Sigma) = x_i$ if $x_i$ is a space of $\Gamma'$, and $x_i \in \tilde{c}_i$ if $x_i \in V(\Gamma')$. By (R6),
+\begin{equation*}
+\mu(x_i) = \alpha(x_i) \subseteq \alpha(c_i) \quad (i = 1, 2)
+\end{equation*}
+and so $\mu(x_1) \cap \mu(x_2) \subseteq \alpha(c_1) \cap \alpha(c_2)$. But $c_1, u_1, c_2, u_2$ are in order, and so by (R8),
+\begin{equation*}
+\alpha(c_1) \cap \alpha(c_2) \subseteq \alpha(u_1) \cup \alpha(u_2) = \mu(u_1) \cup \mu(u_2).
+\end{equation*}
+This proves (P3).
+
+But (P4) is immediate from (R10). This completes the proof of (1).
+
+For each internal $c \in C(\Gamma)$, let $B(c) \subseteq G$ be such that $(\alpha(c), B(c))$ is a separation of $G$ and $V(\alpha(c) \cap B(c)) = \tilde{c}$. (This is possible by (R7).) For each border cell $c$, let $B(c) \subseteq G$ be such that $(\alpha(c), B(c))$ is a separation of $G$ and $\alpha(c) \cap B(c) = \mu(u_1) \cup \mu(u_2)$, where $\tilde{c} = \{u_1, u_2\}$. (This is possible by (R7) and (R8).)
+
+\hspace*{12pt}(2) $G' = G \cap \bigcap(B(c) : c \in \mathcal{A}_1 \cup \mathcal{A}_2)$.
+
+\textit{Subproof.} Certainly $G' \subseteq B(c)$ for each $c \in \mathcal{A}_1 \cup \mathcal{A}_2$. For the converse inclusion, if $e \in E(G)$ is an edge of $B(c)$ for all $c \in \mathcal{A}_1 \cup \mathcal{A}_2$, then by (R3) $e$ is an edge of $\alpha(c)$ for some $c \in C(\Gamma) \setminus (\mathcal{A}_1 \cup \mathcal{A}_2)$, and so $e \in E(G')$. If $v \in V(G)$ is a vertex of $B(c)$ for all $c \in \mathcal{A}_1 \cup \mathcal{A}_2$, choose $c \in C(\Gamma)$ with $v \in V(\alpha(c))$. If $c \in C(\Gamma) \setminus \mathcal{A}_1 \cup \mathcal{A}_2$ then $v \in V(G')$ as required. If $c \in \mathcal{A}_1$ then $v \in \tilde{c}$ because $v \in V(B(c) \cap \alpha(c)) = \tilde{c}$, and so $v \in V(\Gamma) \subseteq V(G')$ as required. If $c \in \mathcal{A}_2$, then $v \in V(\mu(u_1) \cup \mu(u_2))$ where $\tilde{c} = \{u_1, u_2\}$ for the same reason, and so again $v \in V(G')$. This proves (2).

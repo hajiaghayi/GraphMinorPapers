@@ -1,0 +1,28 @@
+\origpage{329}{N. Robertson, P.D. Seymour / Journal of Combinatorial Theory, Series B 92 (2004) 325--357}
+\hspace*{12pt}$\bullet$ for each $e \in E(G) \setminus dom(\mu)$, if $v$ is an end of $e$ in $G$ then $\eta(v)$ contains an end of $\eta(e)$ in $G'$,
+
+\hspace*{12pt}$\bullet$ for each $e \in dom(\mu)$, $\mu(e)$ and $\mu'(\eta(e))$ have the same length, $k$ say, and for $1 \le i \le k$, $\eta(v)$ contains the $i$th term of $\mu'(\eta(e))$ where $v$ is the $i$th term of $\mu(e)$,
+
+\hspace*{12pt}$\bullet$ $\pi(G)$ and $\pi(G')$ have the same length, $k$ say, and for $1 \le i \le k$, $\eta(v)$ contains the $i$th term of $\pi(G')$ where $v$ is the $i$th term of $\pi(G)$,
+
+\hspace*{12pt}$\bullet$ for each $e \in dom(\mu)$, $\Delta'(\eta(e))$ is the image of $\Delta(e)$ under $\mu(e) \to \mu'(\eta(e))$,
+
+\hspace*{12pt}$\bullet$ for each $e \in E(G)$, $\phi(e) \le \phi'(\eta(e))$.
+
+If $G$ is a hypergraph and $F \subseteq E(G)$, $G \setminus F$ denotes the subhypergraph with the same vertex set and edge set $E(G) \setminus F$. If $G$ is a rooted hypergraph, $G \setminus F$ denotes $(G^- \setminus F, \pi(G))$. If $P = (G, \mu, \Delta, \phi)$ is an $\Omega$-patchwork and $F \subseteq E(G)$, $P \setminus F$ denotes the $\Omega$-patchwork $(G \setminus F, \mu', \Delta', \phi')$ where $\mu', \Delta', \phi'$ are the restrictions of $\mu, \Delta, \phi$ to $dom(\mu) \cap E(G \setminus F)$, $E(G \setminus F)$, $E(G \setminus F)$, respectively. Let $\eta$ be an expansion of $P = (G, \mu, \Delta, \phi)$ in $P' = (G', \mu', \Delta', \phi')$. A realization $H$ of $P' \setminus \eta(E(G))$ is said to \textit{realize} $\eta$ if for every $v \in V(G)$, $\eta(v)$ is the vertex set of some component of $H$; and if there is such a realization, $\eta$ is said to be \textit{realizable}. Let us say that $P$ is \textit{simulated in} $P'$ if there is a realizable expansion of $P$ in $P'$.
+
+If $P = (G, \mu, \Delta)$ is patchwork and $A$ is a rooted hypergraph with $A \subseteq G$, we denote by $P|A$ the patchwork $(A, \mu', \Delta')$, where $\mu', \Delta'$ are the restrictions of $\mu, \Delta$ to $E(A) \cap dom(\mu)$, $E(A)$, respectively. If $P = (G, \mu, \Delta, \phi)$ is a partial $\Omega$-patchwork, $P|A$ is the partial $\Omega$-patchwork $(A, \mu', \Delta', \phi')$ where $\mu', \Delta'$ are as before and $\phi'$ is the restriction of $\phi$ to $E(A) \cap dom(\phi)$.
+
+Let $P = (G, \mu, \Delta)$ be a patchwork. A grouping $K$ is \textit{feasible in} $P$ if $V(K) = \bar{\pi}(G)$ and there is a realization $H$ of $P$ such that for distinct $x, y \in V(K)$, $x$ and $y$ belong to the same component of $H$ if and only if they are adjacent in $K$.
+
+Let $P = (G, \mu, \Delta)$ be a patchwork and let $\mathcal{L}$ be a rooted location in $G$. For each $A \in \mathcal{L}$ let $e(A)$ be a new element, and let $G'$ be the rooted hypergraph with
+\begin{align*}
+V(G') &= V(M(G, \mathcal{L})), \\
+E(G') &= E(M(G, \mathcal{L})) \cup \{e(A) : A \in \mathcal{L}\}, \\
+\pi(G') &= \pi(G),
+\end{align*}
+where for $e \in E(M(G, \mathcal{L}))$ its ends are as in $G^-$, and for $A \in \mathcal{L}$ the ends of $e(A)$ are the vertices in $\bar{\pi}(A)$. For $e \in E(M(G, \mathcal{L})) \cap dom(\mu)$ let $\mu'(e) = \mu(e)$, and for $A \in \mathcal{L}$ let $\mu'(e(A)) = \pi(A)$. For $e \in E(M(G, \mathcal{L}))$ let $\Delta'(e) = \Delta(e)$, and for $A \in \mathcal{L}$ let $\Delta'(e(A))$ be the set of all groupings feasible in $P|A$, with $V(\Delta'(e(A))) = \bar{\pi}(A)$. Then $(G', \mu', \Delta')$ is a patchwork which we call a \textit{heart of} $(P, \mathcal{L})$ (It is unique up to the choice of the new elements $e(A)$.)
+
+Now let $P' = (G, \mu, \Delta, \phi)$ be an $\Omega$-patchwork, and let $P = (G, \mu, \Delta)$ and $\mathcal{L}$ be as before. For $e \in E(M(G, \mathcal{L}))$ let $\phi'(e) = \phi(e)$; then, with $G', \mu', \Delta'$ defined as before, $(G', \mu', \Delta', \phi')$ is a partial $\Omega$-patchwork which we call a \textit{heart of} $(P', \mathcal{L})$.
+
+Let $P = (G, \mu, \Delta, \phi)$ be a partial $\Omega$-patchwork, and let $\Omega'$ be a quasi-order with $\Omega \subseteq \Omega'$. By an $\Omega'$\textit{-completion} of $P$ we mean an $\Omega'$-patchwork $(G, \mu, \Delta, \phi')$ such that $\phi'(e) = \phi(e)$ for each $e \in dom(\phi)$. A set $C$ of partial $\Omega$-patchworks is \textit{well-behaved} if $\Omega$ is a well-quasi-order and for every well-quasi-order $\Omega'$ with $\Omega \subseteq \Omega'$ and every countable sequence $P'_i$ ($i = 1, 2, \dots$) of $\Omega'$-completions of members of $C$ there exist $j > i \ge 1$ such that $P'_i$ is simulated in $P'_j$. Let $\Omega_1 \subseteq \Omega_2$ be well-quasi-orders, and let $C$ be a set of partial $\Omega_1$-

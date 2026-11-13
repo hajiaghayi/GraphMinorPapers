@@ -1,0 +1,24 @@
+\origpage{52}{N. Robertson, P.D. Seymour / Journal of Combinatorial Theory, Series B 89 (2003) 43--76}
+\noindent $Z \subseteq V(A' \cap B')$, and $B' \setminus Z \subseteq A$. But there exists $(A^*, \Omega^*) \in \mathcal{S}$ with $A \subseteq A^*$ from the construction of $\mathcal{L}$, and so $B' \setminus Z \subseteq A^*$. This contradicts the second condition in the definition of $\mathcal{S}$. Hence $\mathcal{L}^+ \subseteq \mathscr{T}$. This completes the proof of (1).
+
+From (1) and 2.3, we deduce that every graph $G$ with no $L$-minor may be constructed by clique-sums, starting from graphs $G'$ such that either
+
+\hspace*{12pt}$\bullet$ $|V(G')| \le 4\theta - 3 \le w$, or $\bullet$ $G'$ \del{is a $(\le 3\theta - 2)$-vertex extension of} \fix{contains} a torso \fix{$G''$} of a member of $\mathcal{D}^\zeta$\fix{, and $G' \setminus X = G'' \setminus X$ for some $X \subseteq V(G')$ with $|X| \le 3\theta - 2$}.
+
+But since $L$ is nonplanar, it follows that there is a surface in which $L$ cannot be drawn, and so the null graph is a torso of a member of $\mathcal{D}^\zeta$. Consequently any graph $G'$ satisfying either of the conditions above \del{is a $(\le w)$-vertex extension of a torso of a member of $\mathcal{D}$} \fix{contains a torso $G''$ of a member of $\mathcal{D}$ with $G' \setminus X = G'' \setminus X$ for some $X \subseteq V(G')$ with $|X| \le w$}, and hence is a $(\le w)$-vertex extension of an outgrowth by $\le d$ \fix{$(w + 1)$}$r$-rings of a graph in one of $\Sigma_1, \dots, \Sigma_s$. This proves 1.3\fix{, with $(w + 1)r = (w + 1)(2\rho + 1)$ in place of $r$}.\fixnote{fix:1.3-proof}{A gap in the proof: these two steps used 2.3 and the sentence before it (page 48) as printed. With their weaker forms, a graph $G'$ in the second case contains a torso $G''$ of a member of $\mathcal{D}$ with $G' \setminus X = G'' \setminus X$ for some $X$ with $|X| \le 3\theta - 2 + \zeta \le w$, and in the first case this holds with $G''$ null and $X = V(G')$. Deleting at most $n$ vertices from an outgrowth by $\le d$ $r$-rings gives an outgrowth by $\le d$ $(n + 1)r$-rings. So $G' \setminus X = G'' \setminus X$ is an outgrowth by $\le d$ $(w + 1)r$-rings, and $G'$ is a $(\le w)$-vertex extension of it. So 1.3 holds as printed, with the numbers $(w + 1)(2\rho + 1)$, $d$ and $w$ in place of the $r, d, w$ chosen on page 51.} $\square$
+
+\sectionhead{4. Induction on the surface}
+
+The remainder of the paper is devoted to proving 3.1. To get much further in this paper the reader will need to be familiar with [8,9], and so there seems little point in repeating the large number of definitions that we shall need. The reader should therefore see [8] for the meaning of the following terms and notation: drawing, $U(H)$, region, $A(H)$, radial drawing, $H$-path, respectful tangle, metric of a tangle, free, $\lambda$-zone, clearing, rigid, dial, regional distance, battlefield. Also, the reader should see [9] for the terms $\Sigma$-span, $\lambda$-compression, rearranging within $\lambda$ of $z$, $(\lambda, \mu)$-level. (As these terms turn up in the text, we shall remind the reader again where to look for the definition.)
+
+If $\mathscr{T}^*$ is a tangle in a graph $G$, we shall usually abbreviate ``$\Sigma$-span in $G$ with respect to $\mathscr{T}^*$'' by ``$\Sigma$-span'' when there is no danger of ambiguity. (For ``$\Sigma$-span'', see [9, section 1]).
+
+If $H$ is a minor of $G$, and so $E(H) \subseteq E(G)$, and $\mathscr{T}'$ is a tangle in $H$ of order $\ge 2$, let $\mathscr{T}$ be the set of all separations $(A, B)$ of $G$ of order $< ord(\mathscr{T}')$ such that there exists $(A', B') \in \mathscr{T}'$ with $E(H) \cap E(A) = E(A')$. By theorem 6.1 of [6], $\mathscr{T}$ is a tangle in $G$, called the tangle in $G$ induced by $\mathscr{T}'$.
+
+We shall show that 3.1 is implied by the following.
+
+\textbf{4.1.} \textit{Let $\Sigma$ be a surface and let $p \ge 0$, $\phi \ge 1$. Then there exist $\kappa, \rho, \zeta \ge 0$ and $\theta \ge 1$ such that if $\mathscr{T}^*$ is a tangle in a graph $G$, and there is a $\Sigma$-span of order $\ge \theta$, then either}
+
+\hspace*{12pt}$\bullet$ \textit{there is a $\Sigma'$-span of order $\ge \phi$, for some surface $\Sigma'$ obtained from $\Sigma$ by adding a handle or crosscap, or} $\bullet$ \textit{there exists $Z \subseteq V(G)$ with $|Z| \le \zeta$, and a $\mathscr{T}^* \setminus Z$-central segregation of $G \setminus Z$ of type $(\rho, \kappa)$ with a proper arrangement in $\Sigma$, or}
+
+\hspace*{12pt}$\bullet$ \textit{$\mathscr{T}^*$ controls a $K_p$ minor of $G$.}

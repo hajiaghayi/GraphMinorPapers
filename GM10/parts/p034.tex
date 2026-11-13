@@ -1,0 +1,27 @@
+\origpage{186}{ROBERTSON AND SEYMOUR}
+\noindent \textit{or} (ii) \textit{there is a location $\{(A_1, B_1), \dots, (A_k, B_k)\}$ in $G$, with design in $\mathscr{S}$, such that for $1 \le i \le k$,}
+\begin{equation*}
+|Z \cap V(A_i)| \le |V(A_i \cap B_i)| < \theta.
+\end{equation*}
+\textit{Proof.} Let $\mathscr{T}$ be the set of all separations $(A, B)$ of $G$ of order $< \theta$ such that $|Z \cap V(A)| \le |V(A \cap B)|$. Since $|Z| > 3(\theta - 1)$ the second and third tangle axioms hold for $\mathscr{T}$. Suppose the first does not; then there is a separation $(A, B)$ of order $< \theta$ such that $|Z \cap V(A)|, |Z \cap V(B)| > |V(A \cap B)|$. But then
+\begin{align*}
+|(Z \cup V(A)) \cap V(B)| &= |V(A \cap B)| + |Z - V(A)| \\
+&< |Z \cap V(A)| + |Z - V(A)| = |Z| = 3\theta - 2
+\end{align*}
+and similarly $|(Z \cup V(B)) \cap V(A)| \le 3\theta - 3$, and so (i) holds. We may assume then that $\mathscr{T}$ is a tangle of order $\theta$.
+
+Since $\mathscr{S}$ is $\theta$-pervasive, there is a location $\{(A_1, B_1), \dots, (A_k, B_k)\} \subseteq \mathscr{T}$ with design in $\mathscr{S}$. Thus for $1 \le i \le k$, $|Z \cap V(A_i)| \le |V(A_i \cap B_i)| < \theta$, and so (ii) holds, as required. $\square$
+
+If $(H, M)$ is a design and $Z \subseteq V(H)$ then $(H, M \cup \{Z\})$ is a design, which we call the \textit{$Z$-extension} of $(H, M)$. In order to prove our main result (11.1) it is convenient for inductive purposes to prove a somewhat strengthened form, the following ((11.1) may be derived from this by setting $Z = \emptyset$).
+
+\stmt
+(11.3) \textit{Let $\mathscr{S}$ be a class of designs, and let $\theta \ge 1$. Let $G$ be a hypergraph such that $\mathscr{S}$ is $\theta$-pervasive in $G$, and let $Z \subseteq V(G)$ with $|Z| \le 3\theta - 2$. Then there is a tree-decomposition $(T, \tau)$ of $G$ over $\mathscr{S}^{3\theta - 2} \cup \mathscr{R}_{4\theta - 3}$, such that for some $t_0 \in V(T)$, $Z \subseteq V(\tau(t_0))$ and $\mathscr{S}^{3\theta - 2} \cup \mathscr{R}_{4\theta - 3}$ contains the $Z$-extension of the design of $t_0$ in $(T, \tau)$.}
+
+\textit{Proof.} Let us remark, first, that from the definition of $\theta$-pervasive, if $\mathscr{S}$ is $\theta$-pervasive in $G$ then it is $\theta$-pervasive in every subhypergraph of $G$. Let $\mathscr{S}' = \mathscr{S}^{3\theta - 2} \cup \mathscr{R}_{4\theta - 3}$. For fixed $\mathscr{S}, \theta$, we prove that the result holds for all $G, Z$ by induction on $|V(G)|$. Thus, let us assume that it holds for all $G', Z'$ with $|V(G')| < |V(G)|$. First we show that it holds for $G, Z$ if $|Z| = 3\theta - 2$.
+
+Therefore, let $|Z| = 3\theta - 2$. By (11.2), one of the following two cases applies.
+
+\textit{Case 1.} There is a separation $(A_1, A_2)$ of $G$ of order $< \theta$, with
+\begin{equation*}
+|(Z \cup V(A_1)) \cap V(A_2)|, |(Z \cup V(A_2)) \cap V(A_1)| \le 3\theta - 3.
+\end{equation*}

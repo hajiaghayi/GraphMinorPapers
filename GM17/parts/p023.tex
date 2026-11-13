@@ -1,0 +1,24 @@
+\origpage{184}{ROBERTSON AND SEYMOUR}
+\stmt
+(9.2) \textit{Let $c_0$ be an internal cell with $|\tilde{c}_0| = 3$, and $\tilde{c}_0 = \{n_1, n_2, n_3\}$. Then there do not exist subhypergraphs $A_1, A_2, A_3 \subseteq \alpha(c_0)$ and $v \in V(\alpha(c_0))$ such that $\gamma(n_i) \in V(A_i)$ $(i = 1, 2, 3)$, $A_1 \cup A_2 \cup A_3 = \alpha(c_0)$, and for $1 \le i < j \le 3$, $E(A_i \cap A_j) = \emptyset$ and $V(A_i \cap A_j) = \{v\}$.}
+
+\textit{Proof.} Suppose that such $A_1, A_2, A_3$ exist. By (9.1), $v \ne \gamma(n_1), \gamma(n_2), \gamma(n_3)$. Choose $n_0 \in c_0$, and discs $\Delta_i \subseteq \bar{c}_0$ with $n_i \in \Delta_i$ $(i = 1, 2, 3)$ such that for $1 \le i < j \le 3$, $\Delta_i \cap \Delta_j = \{n_0\}$. Let $c_i = \Delta_i - \{n_0, n_i\}$ $(i = 1, 2, 3)$, and let
+\begin{equation*}
+\Gamma' = ((U(\Gamma) - c_0) \cup \Delta_1 \cup \Delta_2 \cup \Delta_3, N(\Gamma) \cup \{n_0\}).
+\end{equation*}
+Define $\alpha'(c_i) = A_i$ $(i = 1, 2, 3)$ and $\alpha'(c) = \alpha(c)$ $(c \in C(\Gamma') - \{c_1, c_2, c_3\})$. Define $\gamma'(n_0) = v$, $\gamma'(n) = \gamma(n)$ $(n \in N(\Gamma') - \{n_0\})$. Then $(\Sigma, \Gamma', \alpha', \beta, \gamma')$ is a $\mathcal{T}$-central portrayal of $G$ resembling $\pi$ but truer, a contradiction. $\square$
+
+\stmt
+(9.3) \textit{Let $c_0$ be a cell bordering a cuff $\Theta$ with $\tilde{c}_0 = \{n_1, n_2\}$, and let $\pi$ have warp $q$ at $\Theta$. Suppose that there is no internal cell $c$ with $\tilde{c}_0 \subseteq \tilde{c}$. Then there are $q + 1$ mutually vertex-disjoint paths of $\alpha(c_0)$ from $\beta(n_1 +)$ to $\beta(n_2 +)$, and in particular $|\beta(n_i)| = q$ $(i = 1, 2)$.}
+
+\textit{Proof.} Otherwise, there is a separation $(A_1, A_2)$ of $\alpha(c_0)$ of order $\le q$ with $\beta(n_1 +) \subseteq V(A_1)$ and $\beta(n_2 +) \subseteq V(A_2)$. Let $r$ be the region of $\Gamma$ with $\bar{r} \cap c_0 \ne \emptyset$. Then $\bar{r} \cap bd(\Sigma) = \{n_1, n_2\}$, for otherwise there would be an $I$-arc violating (8.3). Since there is no internal cell $c$ with $\tilde{c}_0 \subseteq \tilde{c}$, it follows that there is an internal node $n_0$ incident with $r$. Let $\Delta_0 \subseteq r \cup \{n_0\} \cup \bar{c}_0$ be a disc with $\{n_0\} \delm{\cap}\fix{\cup} \bar{c}_0 \subseteq \Delta_0$.\fixnote{fix:9.3-proof}{The disc must contain $n_0$ and $\bar{c}_0$, as the next sentence uses.} Then $n_0, n_1, n_2 \in bd(\Delta_0)$; let $F_1 \subseteq bd(\Delta_0)$ be the line segment between $n_0$ and $n_1$ not containing $n_2$, and define $F_2$ similarly. For $i = 1, 2$, let $\Delta_i \subseteq r \cup \{n_0, n_i\}$ be a disc with $\Delta_0 \cap \Delta_i = F_i$. Let $\Sigma' = \Sigma - (\Delta_0 - (F_1 \cup F_2))$, let
+\begin{equation*}
+\Gamma' = ((U(\Gamma) - c_0) \cup \Delta_1 \cup \Delta_2, N(\Gamma)).
+\end{equation*}
+Then $\Gamma'$ is a painting in $\Sigma'$, and $c_i = \Delta_i - \{n_0, n_i\}$ is a cell of it $(i = 1, 2)$. For $i = 1, 2$, let $A'_i$ be the hypergraph with $E(A'_i) = E(A_i)$ and $V(A'_i) = V(A_i) \cup \{\gamma(n_0)\}$. Define
+\begin{align*}
+\alpha'(c_i) &= A'_i \quad (i = 1, 2) \\
+\alpha'(c) &= \alpha(c) \quad (c \in C(\Gamma) - \{c_0\}) \\
+\beta'(n_0) &= V(A_1 \cap A_2) \\
+\beta'(n) &= \beta(n) \quad (n \in N(\Gamma) \cap bd(\Sigma)).
+\end{align*}

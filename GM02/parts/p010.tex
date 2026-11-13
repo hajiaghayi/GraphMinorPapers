@@ -1,0 +1,34 @@
+\origpage{318}{ROBERTSON AND SEYMOUR}
+It follows that
+
+\stmt
+(3.2) \textit{For any two fixed integers $w$, $k$ there is a polynomial algorithm which has input a terminated graph $(G, \mathscr{A})$ of index $\le k$, and outputs either}
+
+\hspace*{12pt}(i) \textit{$(G, \mathscr{A})$ is feasible, or}
+
+\hspace*{12pt}(ii) \textit{$(G, \mathscr{A})$ is not feasible, or}
+
+\hspace*{12pt}(iii) \textit{$G$ has tree-width $> w$.}
+
+\textit{Proof.} Define $w' = 1 + \max(w, k/3)$, and apply algorithm $A_2$, with $w'$ replacing $w$, to a pair $(G', \mathscr{A})$ where $G'$ is the underlying simple graph of $G$.
+
+\sectionhead{4. \textsc{Applications of the Basic Algorithm}}
+
+In this section we derive (1.1), which is the main result of this paper, and we restate it for the reader's convenience.
+
+\stmt
+(4.1) \textit{For any fixed planar graph $H$, there is a polynomial algorithm to decide if the input graph has a minor isomorphic to $H$.}
+
+Let $v$ be a vertex of a graph $G$ which is incident with only two edges $e_1$, $e_2$, and suppose $e_1$, $e_2$ are not loops. Let $e_i$ have ends $v$, $v_i$ ($i = 1, 2$), so that $v_1, v_2 \ne v$. The result of \textit{suppressing} $v$ is the graph obtained from $G$ by deleting $v$ and adding a new edge with ends $v_1, v_2$.
+
+We say that $G$ \textit{topologically contains} $H$ if $H$ can be obtained from a subgraph of $G$ by repeated suppression. We observe that if $G$ topologically contains $H$ then $V(H) \subseteq V(G)$. There is a connection between topological containment and minors, for clearly if $G$ topologically contains $H$ then $G$ has a minor isomorphic to $H$. The converse does not hold, however---it is possible for $G$ to have a minor isomorphic to $H$ and yet not to topologically contain any graph isomorphic to $H$.
+
+The following two results are clear.
+
+\stmt
+(4.2) \textit{If $V(H) \subseteq V(G)$ and $e$ is a loop of $G$ incident with $v \in V(H)$, and no loop of $H$ is incident with $v$, then $G$ topologically contains $H$ if and only if $G \setminus e$ does.}
+
+\stmt
+(4.3) \textit{If $V(H) \subseteq V(G)$, and $e$ is a loop of $G$ and $f$ is a loop of $H$, both incident with the same vertex, then $G$ topologically contains $H$ if and only if $G \setminus e$ topologically contains $H \setminus f$.}
+
+Now let $V(H) \subseteq V(G)$, and suppose that no loop of $G$ is incident with a vertex of $H$. We construct a terminated graph $(G', \mathscr{A})$ as follows. Let the edges of $H$ be $e_1, \dots, e_k$, and let $e_i$ have ends $u_i, v_i \in V(G)$ ($1 \le i \le k$).

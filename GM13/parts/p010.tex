@@ -1,0 +1,35 @@
+\origpage{74}{ROBERTSON AND SEYMOUR}
+This can be done by enumerating all partitions $(Z_1, Z_2, Z_3)$ of $Z$ with $|Z_1|, |Z_2| \le 2\omega - \frac{1}{2}|Z_3|$ and then testing for separations $(A, B)$ of order $\le \omega$ with $V(A) \cap Z = Z_1 \cup Z_3$ and $V(B) \cap Z = Z_2 \cup Z_3$. (Such a separation does not exist if and only if in $R \setminus Z_3$ there are $> \omega - |Z_3|$ paths from $Z_1$ to $Z_2$, mutually vertex-disjoint.)
+
+\hspace*{12pt}(5) If $(A, B)$ is a separation as in (4), we set $T_{i+1} = T'$, $G_{i+1} = G_i$, and define $\tau_{i+1}$ by
+\begin{align*}
+\tau_{i+1}(e) &= \tau_i(e) && (e \in E(G_i), \tau_i(e) \ne v) \\
+\tau_{i+1}(e) &= v_1 && (e \in E(A)) \\
+\tau_{i+1}(e) &= v_2 && (e \in E(B)).
+\end{align*}
+We return to (1) for the next iteration.
+
+Let us verify that $G_{i+1}$, $T_{i+1}$, $\tau_{i+1}$ satisfy (i), (ii), and (iii). Now (i) is clear, since $G_{i+1} = G_i$, and (ii) is clear from construction. To verify (iii) we observe that $E(A) \ne \emptyset \ne E(B)$; for if $E(A) = \emptyset$, say, then $B = R$ since $R$ has no isolated vertices, and so
+\begin{equation*}
+|Z - V(A)| \le \frac{2}{3}|Z| - \frac{1}{2}|Z \cap V(A)|,
+\end{equation*}
+that is, $|Z| \le \frac{3}{2}|Z \cap V(A)|$, which is impossible since $|Z| = 3\omega$ and
+\begin{equation*}
+|Z \cap V(A)| \le |V(A)| = |V(A \cap B)| \le \omega.
+\end{equation*}
+Thus $E(A), E(B) \ne \emptyset$ and so $\tau_{i+1}$ is a surjection. Every edge of $T_{i+1}$ has the same order as it does in $T_i$ except for the two new edges. The new edges have orders $|(Z \cup V(A)) \cap V(B)|$ and $|(Z \cup V(B)) \cap V(A)|$; and
+\begin{align*}
+|(Z \cup V(A)) \cap V(B)| &= |Z - V(A)| + |V(A) \cap V(B)| \\
+&\le \frac{2}{3}|Z| + |V(A \cap B)| \le 2\omega + \omega = 3\omega.
+\end{align*}
+Similarly, $|(Z \cup V(B)) \cap V(A)| \le 3\omega$. This verifies (iii).
+
+\hspace*{12pt}(6) If there is no separation $(A, B)$ as in (4), we choose $g \in E(R)$, set $G_{i+1} = G_i \setminus g$, $T_{i+1} = T_i$, and let $\tau_{i+1}$ be the restriction of $\tau_i$ to $E(G_{i+1})$. We return to (1) for the next iteration.
+
+Again, let us verify that $G_{i+1}$, $T_{i+1}$, $\tau_{i+1}$ satisfy (i), (ii), (iii). From (3.1), $G_i$ has branch-width $> \omega$, and so $G_{i+1}$ has branch-width $\ge \omega$ (we leave as an exercise the fact that deleting an edge reduces branch-width by at most one, except when branch-width $\le 2$ which does not occur here since $\omega \ge 2$). This verifies (i), and (ii) and (iii) are clear. This concludes the description of the algorithm.
+
+\fix{We give the details, in the form needed here. Suppose that $G_{i+1}$ has branch-width $\le \omega - 1$. We shall obtain a contradiction with the fact that $G_i$ has branch-width $> \omega$.
+
+Suppose first that $\omega \ge 3$. Since $G_i$ has branch-width $\ge \omega + 1$ and every edge of $G_i$ has at most $2 \le \omega + 1$ ends, by [19, Theorem (4.3)] there is a tangle in $G_i$ of order $\ge \omega + 1$. Its members of order $\le \omega$ form a tangle $\mathscr{T}$ in $G_i$ of order $\omega + 1$. Let $u$ be an end of $g$. By [19, Theorem (8.5)] applied to $\mathscr{T}$ with $W = \{u\}$, there is a tangle of order $\omega$ in $G_i \setminus u$. Since $g$ is incident with $u$, the graph $G_i \setminus u$ is a subgraph of $G_i \setminus g = G_{i+1}$, and so by [19, Theorem (6.1)] there is a tangle of order $\omega$ in $G_{i+1}$. On the other hand, $G_{i+1}$ has an edge, since $G_i$ has branch-width $> 0$ and so has at least two edges. Every edge of $G_{i+1}$ has at most $2 \le \omega - 1$ ends, and $G_{i+1}$ has branch-width $\le \omega - 1$, and so by [19, Theorem (4.3)] there is no tangle in $G_{i+1}$ of order $\ge \omega$. This is a contradiction.
+
+Now suppose that $\omega = 2$, so that $G_{i+1}$ has branch-width $\le 1$. If $G_{i+1}$ has at most one edge, then $G_i$ has at most two edges, and so it has branch-width $\le 2$, because a branch-decomposition of $G_i$, if there is one, has a tree with only one edge, and this edge has order at most $2$ since all the vertices it counts are ends of one edge of $G_i$. Thus we may assume that $G_{i+1}$ has a branch-decomposition $(T, \tau)$ of width $\le 1$. Choose $e \in E(G_{i+1})$, sharing an end with $g$ if some edge of $G_{i+1}$ does so. Let $T^+$ be the tree obtained from $T$ by adding two new vertices adjacent to the leaf $\tau(e)$, and let $\tau^+$ map $e$ and $g$ to these two new vertices and agree with $\tau$ on the other edges of $G_i$. Then $(T^+, \tau^+)$ is a branch-decomposition of $G_i$, since $\tau(e)$ now has valency $3$. The two new edges of $T^+$ have order at most $2$, since each of them separates one edge of $G_i$ from the others. Every other edge $f$ of $T^+$ is an edge of $T$, and it divides $E(G_i)$ as it divides $E(G_{i+1})$ in $T$, with $g$ added to the side that contains $e$. A vertex counted in the order of $f$ in $T^+$ but not in $T$ is therefore an end of $g$ that is incident with no edge of $G_{i+1}$ on the side of $e$. If $e$ shares an end with $g$, this end is not such a vertex, and so the order of $f$ grows by at most one. If no edge of $G_{i+1}$ shares an end with $g$, then no end of $g$ is incident with an edge of $G_{i+1}$, and the order of $f$ does not grow. Hence $(T^+, \tau^+)$ has width $\le 2$, and so $G_i$ has branch-width $\le \omega$, a contradiction.}\fixnote{fix:3.3-step6-proof-added}{The paper leaves this fact as an exercise. The argument above is the one used in the formalization.}

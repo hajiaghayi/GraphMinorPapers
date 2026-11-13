@@ -1,0 +1,30 @@
+\origpage{354}{N. Robertson, P.D. Seymour / Journal of Combinatorial Theory, Series B 92 (2004) 325--357}
+\hspace*{12pt}$\bullet$ if $c \in C(\Gamma)$ borders a cuff $\Theta$, with nodes $n_1, n_2$, and $\rho(\Theta) = r$, and $c = e(A)$ where $A \in \mathcal{L}$, then there are $r$ mutually disjoint paths $P_1, \dots, P_r$ of $sk(A^-) \setminus \{n_1, n_2\}$ from $\beta(n_1)$ to $\beta(n_2)$, and either there is another path $P_0$ of $sk(A^-)$ from $n_1, n_2$ disjoint from $P_1 \cup \cdots \cup P_r$, or there is an internal cell $c'$ of $\Gamma$ with $n_1, n_2 \in \tilde{c}'$.
+
+\textbf{10.2.} \textit{Let} $(P, \mathcal{L})$ \textit{be} $(\Sigma, \rho)$\textit{-shelled. Then it has a heart which is} $(\Sigma, \rho)$\textit{-hulled.}
+
+The proof is immediate from 10.1.
+
+Let $\mathcal{T}$ be a tangle in a hypergraph $G$, and let $H$ be a graph. We say that $\mathcal{T}$ \textit{controls an} $H$\textit{-minor of} $sk(G)$ if there is a function $\alpha$ with domain $V(H) \cup E(H)$, such that
+
+\hspace*{12pt}$\bullet$ for each $v \in V(H)$, $\alpha(v)$ is a non-null connected subgraph of $sk(G)$, and $\alpha(u)$ and $\alpha(v)$ are disjoint for all distinct $u, v \in V(H)$
+
+\hspace*{12pt}$\bullet$ $\alpha(e) \in E(sk(G))$ for each $e \in E(H)$, and $\alpha(e) \ne \alpha(f)$ for all distinct $e, f \in E(H)$
+
+\hspace*{12pt}$\bullet$ for each $e \in E(H)$ with distinct ends $u, v$, $\alpha(e) \in E(sk(G))$ with one end in $V(\alpha(u))$ and the other in $V(\alpha(v))$
+
+\hspace*{12pt}$\bullet$ for each loop $e \in E(H)$ with end $v$, $V(\alpha(v))$ contains both ends of $\alpha(e)$ and $e \notin E(\alpha(v))$
+
+\hspace*{12pt}$\bullet$ there do not exist $(A, B) \in \mathcal{T}$ of order $< |V(H)|$ and $v \in V(H)$ such that $V(\alpha(v)) \subseteq V(A)$.
+
+Next, we convert a theorem of [3] into the language of this paper.
+
+\textbf{10.3.} \textit{For every graph} $H$ \textit{there exist} $\theta \ge 1$ \textit{and a set} $\mathcal{S}$ \textit{of graded surfaces, finite up to homeomorphism, with the following property. Let} $P = (G, \mu, \Delta)$ \textit{be a rootless free patchwork, and let} $\mathcal{T}$ \textit{be a tangle in} $G$ \textit{of order} $\ge \theta$ \textit{controlling no} $H$\textit{-minor of} $sk(G)$. \textit{Then there exist} $W \subseteq V(G)$ \textit{with} $|W| < \theta$ \textit{and a fine rooted location} $\mathcal{L}$ \textit{in} $G/W$, \textit{such that}
+
+\hspace*{12pt}$\bullet$ $(P/W, \mathcal{L})$ \textit{is} $(\Sigma, \rho)$\textit{-shelled for some} $(\Sigma, \rho) \in \mathcal{S}$, \textit{and}
+
+\hspace*{12pt}$\bullet$ $\mathcal{L}$ \textit{is linked to} $\mathcal{T}/W$.
+
+\textit{Proof.} By theorem 14.2 of [3], there are integers $p, q, z \ge 0$ and $\theta > z$ with the property that, for every hypergraph $G$ and tangle $\mathcal{T}$ in $G$ of order $\ge \theta$, if $\mathcal{T}$ controls no $H$-minor of $sk(G)$, then there exists $W \subseteq V(G)$ with $|W| \le z$ and a $\mathcal{T}/W$-central portrayal $\pi = (\Sigma, \Gamma, \alpha, \beta, v)$ of $G/W$ with $\text{warp} \le p$, such that $\Sigma$ has at most $q$ cuffs and $H$ cannot be drawn in $\Sigma$, and $\pi$ is true and $(2p + 7)$-redundant (We omit the definitions of these terms; see [3]. Note in particular that ``paintings'' in [3] are defined slightly differently, in that they are not equipped with the march function $\gamma_\Gamma$ as in this paper.) Let $\mathcal{S}$ be the set of all graded surfaces $(\Sigma, \rho)$ such that $\Sigma$ has the property just mentioned (that is, $\Sigma$ has at most $q$ cuffs and $H$ cannot be drawn in $\Sigma$), and $\rho(\Theta) \le p$ for each cuff $\Theta$ of $\Sigma$. Thus $\mathcal{S}$ is finite up to homeomorphism. We claim that $\theta$ and $\mathcal{S}$ satisfy the theorem.
+
+For let $P = (G, \mu, \Delta)$ be a rootless free patchwork, and let $\mathcal{T}$ be a tangle in $G$ of order $\ge \theta$ controlling no $H$-minor of $sk(G)$. By the theorem just quoted, applied to $G$, we deduce that there exist $W$ and $\pi = (\Sigma, \Gamma, \alpha, \beta, v)$ as above. Thus $|W| \le z < \theta$. Now $\Gamma$ is a painting in the sense of [3], but not yet a painting in the sense of this paper, because it lacks a function $\gamma_\Gamma$; choose such a function, arbitrarily, and therefore we may regard $\Gamma$ as a painting in our sense. By theorems 8.3 and 8.5 of [3], it follows that $\Gamma$ is 3-connected. By replacing $\Sigma$ with a homeomorphic surface, we may assume that $v(n) = n$ for every $n \in N(\Gamma)$ (this is just to

@@ -1,0 +1,42 @@
+\origpage{50}{ROBERTSON AND SEYMOUR}
+\hspace*{12pt}(ii)\enspace\textit{there exist $X\subseteq V(G)$ and $J\subseteq\{1,..., n\}$ with $|X|+|J|\le 2^{r\theta^4}$, such
+that $X$ separates $V'$ from every $B_j$ $(j\in\{1,..., n\}-J)$.}
+\stmt
+\textit{Proof}. We assume (i) is false. Define $\nu=2^{r\theta^4/2}(\theta^2+2r\theta^{2\theta+2})$. Let
+$X_0=J_0=\varnothing$. We define inductively a sequence $X_0, X_1,..., X_\nu$ of subsets of
+$V(G)$ and a sequence $J_0, J_1,..., J_\nu$ of subsets of $\{1,..., n\}$, as follows: Suppose
+that $X_0,..., X_{i-1}, J_0,..., J_{i-1}$ are defined. Put $J'=\{1,..., n\}-(J_0\cup\cdots\cup J_{i-1})$.
+Now no $J\subseteq J'$ satisfies (i), and so (by a form of Menger's theorem) there
+exist $X_i\subseteq V(G)$ and $J_i\subseteq J'$ with $|X_i|+|J_i|<r$, such that every path in $G$
+from any $B_j$ $(j\in J')$ to $V'$ uses either some vertex of $X_i$ or some vertex of
+$\bigcup_{j\in J_i}V(B_j)$. This completes our inductive definition of $X_i, J_i$.
+
+Put $X'=X_1\cup\cdots\cup X_\nu$, $J=J_1\cup\cdots\cup J_\nu$. For $1\le i\le\nu$, let $B_i'$ be the
+union of the graphs $B_j$ $(j\in J_i)$. Then $B_i'$ has at most $r$ components. Put
+\begin{equation*}
+A_1=\bigcup\,(V(B_j)\colon j\in\{1,..., n\}-J)
+\end{equation*}
+and $A_2=V'$. Now for $1\le i\le\nu$, $X'\cup V(B_i')$ separates $A_1$ and $A_2$; for every
+path from $A_1$ to $A_2$ uses either a vertex of $X_i$ or a vertex of $B_i'$, by definition
+of $X_i, J_i$. Moreover, for $1\le i\le\nu$, $|X_i|+|J_i|<r$, and so $|X'|<r\nu$. By (2.8),
+the maximum number of disjoint paths in $G$ from $A_1$ to $A_2$, avoiding $X'$, is
+less than $\frac12 r\theta^4$ (to apply (2.8), we set $d=r$). By Menger's theorem, there
+exists $X''\subseteq V(G)$ with
+\begin{equation*}
+|X''|\le\tfrac12 r\theta^4
+\end{equation*}
+such that $X'\cup X''$ separates $A_1$ and $A_2$. Put $X=X'\cup X''$; then $X$ separates
+$V'$ from every $B_j$ $(j\in\{1,..., n\}-J)$; and
+\begin{align*}
+|X|+|J|&\le|X''|+|X'|+|J|\\
+&\le|X''|+\sum_{1\le i\le\nu}(|X_i|+|J_i|)\\
+&\le\tfrac12 r\theta^4+r\nu\\
+&\le 2^{r\theta^4}
+\end{align*}
+(after some arithmetic) and so (ii) is true.
+
+Incidentally, the following extension of (2.7) will appear in [4].
+\stmt
+(2.10). \textit{There is an integer $\theta'>0$ such that if $A_1,..., A_{\theta'}$ are disjoint
+connected subgraphs of a graph $G\in\mathscr{F}_\theta$, and $B_1,..., B_{\theta'}$ are also disjoint
+connected subgraphs of $G$, then some $A_i$ is disjoint from some $B_j$.}

@@ -1,0 +1,26 @@
+\origpage{347}{N. Robertson, P.D. Seymour / Journal of Combinatorial Theory, Series B 90 (2004) 325--385}
+\noindent rationally independent; that is,
+\begin{equation*}
+\sum (\alpha(e)\lambda(e) : e \in E(\Gamma^*)) = \sum (\beta(v)\lambda(v) : v \in V(\Gamma))
+\end{equation*}
+for rationals $\alpha(e), \beta(v)$ only if each $\alpha(e) = 0$ and each $\beta(v) = 0$. Moreover, let $\lambda(e) < \lambda(f)$ for all $e, f \in E(\Gamma^*)$ such that $e \subseteq \hat{\Sigma} \setminus \Sigma$ and $f \subseteq \Sigma$. We call $\lambda$ a tie-breaker in $\Gamma$. Throughout this section, $\lambda$ is a fixed tie-breaker in $\Gamma$. We define the $\lambda$-order of a separation $(A, B)$ of $\Gamma$ to be the triple $(N_1, N_2, N_3)$, where
+\begin{align*}
+N_1 &= |V(A \cap B)|, \\
+N_2 &= \sum (\lambda(e) : e \text{ is split by } (A, B)), \\
+N_3 &= \sum (\lambda(v) : v \in V(A \cap B)).
+\end{align*}
+We order $\lambda$-orders lexicographically; thus, if $(A, B), (A', B')$ have $\lambda$-orders $(N_1, N_2, N_3)$ and $(N_1', N_2', N_3')$ respectively, we say that $(A, B)$ has smaller $\lambda$-order than $(A', B')$ if either $N_1 < N_1'$, or $N_1 = N_1'$ and $N_2 < N_2'$, or $N_1 = N_1'$ and $N_2 = N_2'$ and $N_3 < N_3'$. The next two results prove that the tie-breakers in this paper are indeed tie-breakers in the sense of [5]. It is easy to prove that
+
+\textbf{8.2.} \textit{If $(A, B), (A', B')$ are separations with the same $\lambda$-order, then $(A, B) = (A', B')$ or $(B', A')$.}
+
+Moreover,
+
+\textbf{8.3.} \textit{If $(A, B), (A', B')$ are separations then so are $(A \cup A', B \cap B')$, $(A \cap A', B \cup B')$, and either $(A \cup A', B \cap B')$ has smaller $\lambda$-order than $(A, B)$, or $(A \cap A', B \cup B')$ has $\lambda$-order at most that of $(A', B')$.}
+
+\textbf{Proof.} Let these four separations have $\lambda$-orders $(N_1, N_2, N_3)$, $(N_1', N_2', N_3')$, $(N_1'', N_2'', N_3'')$, and $(N_1''', N_2''', N_3''')$ respectively. Then $N_1 + N_1' = N_1'' + N_1'''$, $N_2 + N_2' \ge N_2'' + N_2'''$, and $N_3 + N_3' = N_3'' + N_3'''$, and the result follows. $\square$
+
+Let $\mathscr{T}, \mathscr{T}'$ be tangles in $\Gamma$, with $\mathscr{T} \nsubseteq \mathscr{T}'$ and $\mathscr{T}' \nsubseteq \mathscr{T}$. Then there exists $(A, B) \in \mathscr{T}$ with $(B, A) \in \mathscr{T}'$, and there is a unique such $(A, B)$ with minimum $\lambda$-order, called the $(\mathscr{T}, \mathscr{T}')$-distinction.
+
+\textbf{8.4.} \textit{Let $\mathscr{T}, \mathscr{T}'$ be tangles in $\Gamma$ and let $(A, B)$ be the $(\mathscr{T}, \mathscr{T}')$-distinction. Suppose that $|V(A \cap B)| < rep(\mathscr{T})$. Then there is a circuit $F$ in $\Gamma^*$ such that $A = \Gamma \cap ins(F)$, $B = \Gamma \cap out(F)$.}
+
+\textbf{Proof.} By the second tangle axiom, $E(A), E(B) \ne \emptyset$ since $(A, B) \in \mathscr{T}$ and $(B, A) \in \mathscr{T}'$. By 8.1 there is a circuit $F$ of $\Gamma^*$ such that $(A, B)$ splits every edge of $F$ and there is a disc $\Delta \subseteq \hat{\Sigma}$ bounded by $U(F)$ with either $\Gamma \cap \Delta \subseteq A$ or $\Gamma \cap \Delta \subseteq B$. Let $\Delta'$ be the closure of $\hat{\Sigma} \setminus \Delta$, and let $H = \Gamma \cap \Delta$ and $H' = \Gamma \cap \Delta'$. Then $H \cap H' \subseteq A \cap B$.

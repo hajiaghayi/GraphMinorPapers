@@ -1,0 +1,24 @@
+\origpage{17}{}
+\noindent $(\Gamma \cap \Delta, \Gamma \cap \overline{\Sigma \setminus \Delta}) \in \mathcal{T}$, and has order $< k \le ord(\mathcal{T}) - 4$ and so by (3)(i), $(\Gamma' \cap \Delta, \Gamma' \cap \overline{\Sigma \setminus \Delta}) \in \mathcal{T}'$. Consequently, $\Delta = ins'(F)$. This proves (4).
+
+\hspace*{12pt}(5) \textit{For every two distinct cuffs} $C_1, C_2$, \textit{the corresponding cuff regions} $r_1, r_2$ \textit{of} $\Gamma'$ \textit{in} $\hat{\Sigma}$ \textit{are distinct and satisfy} $d'(r_1, r_2) \ge \theta'$.
+
+\textit{Subproof.} As we saw in (4), $r_1$ and $r_2$ are cuff regions of $\Gamma$ in $\hat{\Sigma}$. Since $d(r_1, r_2) \ge \theta$ by hypothesis, it follows that $r_1 \ne r_2$. By (3)(ii),
+\begin{equation*}
+d'(r_1, r_2) \ge d(r_1, r_2) - 8 \ge \theta - 8 \ge \theta'.
+\end{equation*}
+This proves (5).
+
+Suppose that $L$ is a linkage in $\Gamma$ with set of terminals $V(\Gamma) \cap bd(\Sigma)$. From (4), (5) and theorem (3.2) of [7]\fix{, in the form with its condition (ii) replaced by the condition of (4)}, there is a linkage in $\Gamma \setminus v$ with the same pattern as $L$, from the choice of $\theta'$.\fixnote{fix:5.1-proof}{Condition (ii) of theorem (3.2) of [7] asks that $V(\Gamma) \cap bd(\Delta_i)$ be free, which is a condition on every separation in the tangle (Graph Minors XII, pages 245--246). Claim (4) speaks only of the separations cut out by $\Gamma$-normal $O$-arcs. The proof of theorem (3.2) of [7] uses freeness at one step only, on page 247 of Graph Minors XII, and there the separation is cut out by an $O$-arc. So the same proof gives the form used here.} But then $L$ is not vital. The result follows. $\square$
+
+The main result of this section is the following.
+
+\textbf{5.2} \textit{For every surface} $\Sigma$ \textit{with} $bd(\Sigma) = \emptyset$ \textit{and every integer} $p \ge 0$ \textit{there exists} $\theta \ge 1$ \textit{such that every drawing in} $\Sigma$ \textit{with a tangle of order} $\ge \theta$ \textit{has no vital} $p$\textit{-linkage.}
+
+\textbf{Proof.} Let $\Sigma_0$ be a surface with $bd(\Sigma_0) = \emptyset$, and assume that the result holds for all pairs $\Sigma', p'$ where $\Sigma'$ is simpler than $\Sigma_0$. We shall prove that it holds for $\Sigma_0$ and all $p$. By cutting at most $p$ small holes in $\Sigma_0$, one at each terminal, we deduce that it suffices to prove the following.
+
+(\textit{) *For every surface} $\Sigma$ \textit{with} $\hat{\Sigma}$ \textit{homeomorphic to} $\Sigma_0$ \textit{and every integer} $p \ge 0$, \textit{there exists} $\theta \ge 1$ \textit{such that every drawing} $\Gamma$ \textit{in} $\Sigma$ \textit{with} $|V(\Gamma) \cap bd(\Sigma)| \le p$ \textit{and with a tangle of order} $\ge \theta$ \textit{has no vital linkage with all its terminals in} $bd(\Sigma)$.
+
+We shall prove (*) for all $p$ by induction on $c(\Sigma)$, and then, with $c(\Sigma)$ fixed, by induction on $p$. Our three inductive hypothesis may be summarized as follows.
+
+\hspace*{12pt}(1) \textit{For all} $p' \ge 0$ \textit{there exists} $\theta_1(p') \ge 1$ \textit{such that for every surface} $\Sigma'$ \textit{with} $bd(\Sigma') = \emptyset$ \textit{which is simpler than} $\Sigma_0$, \textit{every drawing in} $\Sigma'$ \textit{with a tangle of order} $\ge \theta_1(p')$ \textit{has no vital} $p'$\textit{-linkage.}

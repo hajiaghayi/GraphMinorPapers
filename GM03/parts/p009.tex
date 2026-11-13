@@ -1,0 +1,27 @@
+\origpage{57}{GRAPH MINORS. III}
+\stmt
+(3.4) \textit{Let $e$ be an edge of $T$ with ends $t, t'$ say, and let $N, N'$ be the vertex sets of the two components of $T \setminus e$. Then $X_t \cap X_{t'}$ separates $\bigcup(X_n : n \in N)$ and $\bigcup(X_n : n \in N')$.}
+
+\textit{Proof.} Suppose not. Then from (W1), there exist
+\begin{equation*}
+v, v' \in V(G) - (X_t \cap X_{t'})
+\end{equation*}
+with $v \in X_n$ and $v' \in X_{n'}$ say, where $n \in N$ and $n' \in N'$, such that either $v = v'$ or $v, v'$ are adjacent in $G$. From (W1), (W2) there exists $t'' \in V(T)$ such that $v, v' \in X_{t''}$. We assume without loss of generality that $t'' \in N'$. Then $t, t'$ are both on the path of $T$ between $n$ and $t''$, and so $X_n \cap X_{t''} \subseteq X_t, X_{t'}$ by (W3). Hence $v \in X_t \cap X_{t'}$, a contradiction, as required.
+
+\stmt
+(3.5) \textit{Let $|V(T)| \ge 2$, and for each $t \in V(T)$ let $G_t$ be a connected subgraph of $G$ with $V(G_t) \cap X_t = \emptyset$. Then there exist $t, t' \in V(T)$, adjacent in $T$, such that $X_t \cap X_{t'}$ separates $V(G_t)$ and $V(G_{t'})$ in $G$.}
+
+\textit{Proof.} For each $t \in V(T)$, let $B_t$ be a branch of $T$ at $t$ such that $T_t(v) = B_t$ for all $v \in V(G_t)$. This is possible by (3.3). (We use the fact that $|V(T)| \ge 2$ to ensure that $T$ has a branch at $t$.) Let $e_t$ be the edge of $T$ joining $t$ to a vertex of $B_t$. Now $T$ has fewer edges than vertices, and so there exist distinct $t, t' \in V(T)$ with $e_t = e_{t'}$. Then $t, t'$ are adjacent in $T$. Let $N, N'$ be the vertex sets of the two components of $T \setminus e_t$, with $t \in N, t' \in N'$. Then $N = V(B_{t'}), N' = V(B_t)$, and
+\begin{equation*}
+V(G_t) \subseteq \bigcup(X_n : n \in N'), \qquad V(G_{t'}) \subseteq \bigcup(X_n : n \in N)
+\end{equation*}
+and the result follows from (3.4).
+
+Our object in this section is to introduce the ``sleeve union'' of two graphs, and to prove that the tree-width of the union is the maximum of the tree-widths of the two pieces. We need some further lemmas.
+
+Let $S$ be the $r \times s$ cylinder, where $r \le 2s$, and let $C_1, \dots, C_s$ be its circles in order, where $C_s$ is the central circle.
+
+\stmt
+(3.6) \textit{Suppose $X \subseteq V(S)$ and $|X \cap V(C_j)| \ge 2$ $(1 \le j \le s)$. Then there are $r$ vertex-disjoint paths of $S$, each between $X$ and $V(C_s)$.}
+
+\textit{Proof.} By Menger's theorem, it is enough to show that if $Y \subseteq V(S)$ and $|Y| < r$, there is a path of $S$ between $X$ and $V(C_s)$ which avoids $Y$. Thus, let $Y \subseteq V(S)$, with $|Y| < r$. Now since $r \le 2s$, there exists $j$ with $1 \le j \le s$ such that $|V(C_j) \cap Y| \le 1$. Choose $v \in V(C_j)$ such that $V(C_j) \cap Y \subseteq \{v\}$. Then $V(C_j) - \{v\}$ contains no vertex of $Y$. However, it does contain a vertex of $X$, since $|V(C_j) \cap X| \ge 2$. Let $L$ be the set of vertices in a radial line of $S$ such that $L \cap Y = \emptyset$. (This is possible since $S$ has $r$ radial lines and $|Y| < r$.)

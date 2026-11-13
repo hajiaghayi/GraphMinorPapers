@@ -1,0 +1,29 @@
+\origpage{167}{GRAPH MINORS, X}
+Let us mention the following weakening of the second tangle axiom.
+
+\stmt
+(4.5) \textit{Let $\theta \ge 2$, and let $\mathscr{T}$ be a set of separations of a hypergraph $G$, each of order $< \theta$. Suppose that the first tangle axiom holds, and}
+
+\hspace*{12pt}(i) \textit{if $(A_1, B_1), (A_2, B_2) \in \mathscr{T}$ then $B_1 \not\subseteq A_2$}
+
+\hspace*{12pt}(ii) \textit{there do not exist subhypergraphs $A_1, A_2, A_3 \subseteq G$, mutually edge-disjoint, with $A_1 \cup A_2 \cup A_3 = G$ and with $(A_1, A_2 \cup A_3)$, $(A_2, A_3 \cup A_1)$, $(A_3, A_1 \cup A_2)$ all in $\mathscr{T}$.}
+
+\textit{Then the second tangle axiom holds.}
+
+\textit{Proof.} Suppose that the second axiom fails, and choose $(A_1, B_1), (A_2, B_2), (A_3, B_3) \in \mathscr{T}$ such that $A_1 \cup A_2 \cup A_3 = G$, satisfying
+
+\hspace*{12pt}(1) $\sum_{1 \le i \le 3} |V(A_i \cap B_i)|$ is minimum, and
+
+\hspace*{12pt}(2) subject to (1), $A_1, A_2, A_3$ are minimal.
+
+We observe
+
+\hspace*{12pt}(3) \textit{For $1 \le i \le 3$, if $v \in V(A_i \cap B_i)$ then $v$ is incident with an edge of $B_i$; and also with an edge of $A_i$, unless $v$ belongs to no other $A_j$ ($j \ne i$).}
+
+For if $v$ is incident with no edge of $B_i$ then $(A_i, B_i \setminus v)$ is a separation, and it belongs to $\mathscr{T}_1$ by the first axiom and (i), contrary to (1). If $v$ is incident with no edge of $A_i$ then $(A_i \setminus v, B_i)$ is a separation, and it belongs to $\mathscr{T}$, by the first axiom and (i), and so by (1), $v$ belongs to no $A_j$ ($j \ne i$).
+
+\hspace*{12pt}(4) \textit{For $1 \le i, j \le 3$ with $i \ne j$, $A_i \subseteq B_j$.}
+
+For let $i = 1$, $j = 2$, say. The sum of the orders of $(A_1 \cap B_2, B_1 \cup A_2)$ and $(A_1 \cup B_2, B_1 \cap A_2)$ equals the sum of the orders of $(A_1, B_1)$ and $(A_2, B_2)$. If $(A_1 \cap B_2, B_1 \cup A_2)$ has order at most that of $(A_1, B_1)$, then since $(A_1 \cap B_2) \cup A_2 \cup A_3 = G$ and $(A_1 \cap B_2, B_1 \cup A_2) \in \mathscr{T}$ by the first axiom and (i), it follows from (2) that $A_1 \cap B_2 = A_1$; that is, $A_1 \subseteq B_2$. Thus $E(A_2) \subseteq E(B_1)$. Suppose that $A_2 \not\subseteq B_1$, and choose $v \in V(A_2) - V(B_1)$. Then $v \in V(A_1 \cap A_2)$, and by (3), $v$ is incident with an edge in $E(A_2) \subseteq E(B_1)$; yet $v \notin V(B_1)$, a contradiction. Thus $A_2 \subseteq B_1$. Similarly, if $(A_2 \cap B_1, B_2 \cup A_1)$ has order at most that of $(A_2, B_2)$, then $A_1 \subseteq B_2$ and $A_2 \subseteq B_1$. The result follows, since one of these inequalities must apply.
+
+From (4), $A_1 \cup A_2 \subseteq B_3$, and so $(A_3, A_1 \cup A_2)$ is a separation of order $< \theta$. Since $(A_3, B_3) \in \mathscr{T}$, it follows from (i) that $(A_1 \cup A_2, A_3) \notin \mathscr{T}$, and so $(A_3, A_1 \cup A_2) \in \mathscr{T}$, from the first axiom. Similarly $(A_1, A_2 \cup A_3)$, $(A_2, A_3 \cup A_1) \in \mathscr{T}$, contrary to (ii). $\square$

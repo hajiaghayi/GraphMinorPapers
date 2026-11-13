@@ -1,0 +1,30 @@
+\origpage{147}{GRAPH MINORS. XV. GIANT STEPS}
+\hspace*{12pt}(1) \textit{If $d(z, a), d(z, b) \le \lambda + \mu + 2$, then $H, \eta, \mathcal{T}$ is not $(\lambda + \mu + 2)$-level.}
+
+\textit{Subproof.} Let $\mathcal{T}''$ be the $(\theta - 4(\lambda + \mu + 2) - 2)$-truncation of $\mathcal{T}'$; then $H', \eta', \mathcal{T}''$ is a $\Sigma$-span of order $\theta - 4(\lambda + \mu + 2) - 2$, obtained from $H, \eta, \mathcal{T}$ by rearranging within $\lambda + \mu + 2$ of $z$, and $P$ is an $\eta'(H')$-path, and
+\begin{equation*}
+d''(a, b) = \min(\theta - 4(\lambda + \mu + 2) - 2, d'(a, b)) \ge \mu,
+\end{equation*}
+and so condition (iii) in the definition of ``level'' is false. This proves (1).
+
+From (1) we may, therefore, assume that
+
+\hspace*{12pt}(2) \textit{$d(z, a) \ge \lambda + \mu + 3$, and $a \in V(H)$, and $\eta(a) = \eta'(a)$.}
+
+Let $e$ be the edge of $P$ incident with $\eta(a)$.
+
+\hspace*{12pt}(3) \textit{$e$ is not an edge of $\eta(H)$.}
+
+\textit{Subproof.} Suppose that $e = \eta(f)$ for some $f \in E(H)$. Since $\eta(f)$ is incident with $\eta(a)$ it follows that $a$ is an end of $f$ in $H$, and so $d(a, f) \le 2$. From (2), it follows that $d(z, f) \ge \lambda + \mu + 1$, and so $f \in E(H')$ and $\eta'(f) = \eta(f) = e$. But $e \in E(P)$, and $P$ is an $\eta'(H')$-path, a contradiction. This proves (3).
+
+Let $\Lambda$ be the union of all $x \in A(H)$ with $d(z, x) \le \lambda$. We may assume that
+
+\hspace*{12pt}(4) \textit{There is no $v \in V(H)$ with $v \ne a$ such that $\eta(v) \in V(P)$.}
+
+\textit{Subproof.} Suppose that there is such a vertex, and choose it so that the subpath $Q$ of $P$ between $\eta(a)$ and $\eta(v)$ is minimal. Then $Q$ is an $\eta(H)$-path, by (3). If $d(a, v) \ge \mu$ then $H, \eta, \mathcal{T}$ is $\mu$-stepped and so not $(\lambda + \mu + 2, \mu)$-level, as required, and so we suppose, for a contradiction, that $d(a, v) \le \mu - 1$. Consequently, $d(z, v) \ge \lambda + 4$ and so $v \in V(H')$ and $\eta'(v) = \eta(v)$. Since $P$ is an $\eta'(H')$-path it follows that $Q = P$, $v = b$, and $d(a, b) \le \mu - 1$. Since $d(z, a) \ge \lambda + \mu + 3$, and $d(z, \sigma) \le \lambda$ for all $\sigma \in \Lambda$, it follows that $d(a, \sigma) \ge \mu + 3 > d(a, b)$ for all $\sigma \in \Lambda$. By (4.2), we deduce that $d'(a, b) \le d(a, b) < \mu$, a contradiction. We may, therefore, assume that (4) holds.
+
+From (4), it follows that $b \in \Lambda$; for otherwise $b \in V(H)$ and $\eta(b) = \eta'(b) \in V(P)$, contrary to (4). Since $H'$ is 2-cell and hence connected, there is a path of $H'$ from $b$ to $a$, and hence we may choose a minimal path $Q$ of $\eta'(H')$ from $\eta'(b)$ to $V(\eta(H))$. Let $Q$ have ends $\eta'(b), \eta(c)$ where $c \in V(H)$. It follows that no edge of $Q$ is in $E(\eta(H))$, and no vertex of $Q$ is in $V(\eta(H))$ except $\eta(c)$.
+
+\hspace*{12pt}(5) \textit{$Q$ has at least one edge.}
+
+\textit{Subproof.} Otherwise $\eta'(b) = \eta(c)$, and so $\eta(c) \in V(P)$. By (4), $c = a$, and so $\eta'(b) = \eta(c) = \eta(a) = \eta'(a) \ne \eta'(b)$, a contradiction. This proves (5).

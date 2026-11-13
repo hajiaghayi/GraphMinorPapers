@@ -1,0 +1,29 @@
+\origpage{163}{GRAPH MINORS, X}
+On the other hand, we may assume that $T_1$ has at least one bad leaf, for otherwise $(T_1, \alpha_1)$ is the desired tree-labelling over $\mathscr{A}$. Let $t_0$ be the unique bad leaf of $T_1$, incident with an edge $e_0$. Then $\alpha_1(t_0, e_0) = E - X$. Let the ends of $e_0$ be $t_0, s$. Then $\alpha_1(s, e_0) = X$. Since $X \ne E$ and $E - X$ is not a subset of any member of $\mathscr{A}_1$, $s$ is not a leaf of $T_1$. Let $S = T_1 \setminus t_0$; then $s$ has valency 2 in $S$.
+
+Let the bad leaves of $T_2$ be $t_1, \dots, t_r$, incident with edges $e_1, \dots, e_r$, respectively. Then as before
+\begin{equation*}
+\alpha_2(t_i, e_i) \cup (E - X) = E,
+\end{equation*}
+that is, $X \subseteq \alpha_2(t_i, e_i)$, for $1 \le i \le r$. Let $S^1, \dots, S^r$ be $r$ copies of $S$, mutually disjoint. For $v \in V(S)$ and $e \in E(S)$ let $v^i$ and $e^i$ denote the corresponding vertex and edge of $S^i$ ($1 \le i \le r$). Choose $S^1, \dots, S^r$ so that $s^i = t_i$ and $V(S^i) \cap V(T_2) = t_i$ ($1 \le i \le r$), and let $T$ be the tree formed by the union of $T_2$ and $S^1, \dots, S^r$. Every incidence of $T$ is an incidence of exactly one of $T_2$, $S^1, \dots, S^r$. We define $\alpha$ by
+\begin{align*}
+\alpha(v, e) &= \alpha_2(v, e) && \text{if } (v, e) \text{ is an incidence of } T_2 \\
+\alpha(v^i, e^i) &= \alpha_1(v, e) \ (1 \le i \le r) && \text{if } (v, e) \text{ is an incidence of } T_1.
+\end{align*}
+We claim that $(T, \alpha)$ is a tree-labelling over $\mathscr{A}$, and this follows easily from the fact that
+\begin{equation*}
+\alpha_1(s, e_0) = X \subseteq \alpha_2(t_i, e_i) \quad (1 \le i \le r).
+\end{equation*}
+Then the result follows. $\square$
+
+In summary then we have shown
+
+\stmt
+(3.5) \textit{The following are equivalent:} (i) \textit{there is no bias extending $\mathscr{A}$} (ii) \textit{there is a tree-labelling over $\mathscr{A}$} (iii) \textit{there is an exact tree-labelling over $\mathscr{A}$.}
+
+We observe also
+
+\stmt
+(3.6) \textit{If there is an exact tree-labelling over $\mathscr{A}$, then either $E = \emptyset$, or $E \in \mathscr{A}$, or there is an exact tree-labelling $(T, \alpha)$ over $\mathscr{A}$ such that for each leaf $v$ and incident edge $e$, $\alpha(v, e) \ne E$.}
+
+\textit{Proof.} Choose an exact tree-labelling $(T, \alpha)$ with $|V(T)|$ minimum. Suppose that for some leaf $v_0$ and incident edge $e_0$, $\alpha(v_0, e_0) = E$. Let $v$ be

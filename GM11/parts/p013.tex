@@ -1,0 +1,25 @@
+\origpage{84}{ROBERTSON AND SEYMOUR}
+\noindent case $s \notin Z_i$, as claimed. We deduce that $e \in N(Z_i)$. The first claim follows. Since
+\begin{equation*}
+|V(N(Z_i')) \cap \Omega| \le |V(N(Z_i)) \cap \Omega| < \omega
+\end{equation*}
+and $Z_i' \subseteq Z_i$, the second claim follows from (5.3).
+
+\hspace*{12pt}(5) $|V(N(Z_2 \cup A)) \cap \Omega| \le |V(N(Z_2)) \cap \Omega|$.
+
+\textit{Subproof.} Let $V(N(Z_2)) = X$, $V(N(Z_2 \cup A)) = Y$, $\{v_1\} - V(N(Z_2)) = D$. (Thus $|D| \le 1$.) Then $W_2 \subseteq X - Y$, and $Y - X \subseteq W_3 \cup D$, for $N(Z_2 \cup A) \subseteq N(Z_2) \cup N(A) = N(Z_2) \cup C_1$. Hence
+\begin{align*}
+|X \cap \Omega| - |Y \cap \Omega| &= |(X - Y) \cap \Omega| - |(Y - X) \cap \Omega| \\
+&\ge |W_2 \cap \Omega| - |W_3 \cap \Omega| - |D|.
+\end{align*}
+But $|W_2 \cap \Omega| \ge |W_3 \cap \Omega|$, and if equality occurs then $f \in E(N(Z_2))$ and therefore $|D| = 0$. Hence $|X \cap \Omega| \ge |Y \cap \Omega|$ as required.
+
+Let $K = N(Z_1, Z_2, Z_3)$.
+
+\hspace*{12pt}(6) \textit{$E(N(Z_1) \cap N(Z_3)) \subseteq E(C_1)$, and $\text{ins}(C_1) - U(C_1)$ is a region of $K$, and $A \subseteq Z_1$.}
+
+\textit{Subproof.} $(Z_1', Z_2 \cup A, Z_3')$ is a partition of $\mathscr{R}(\Gamma)$, and $Z_1', Z_3'$ are small by (4). Moreover, $N(Z_1', Z_2 \cup A, Z_3')$ is a subgraph of $K$ and it is a proper subgraph because some edge of $C_1$ belongs to $N(Z_2)$ by (3), and hence, by (2), does not belong to $N(Z_1', Z_2 \cup A, Z_3')$. From the choice of $Z_1, Z_2, Z_3$ it follows that $Z_2 \cup A$ is not small. Moreover $|\Omega \cap V(N(Z_2 \cup A))| < \omega$ by (5). From (5.2) we deduce that $\mathscr{R}(\Gamma) - (Z_2 \cup A) = Z_1' \cup Z_3'$ is small. Hence $(A, Z_2', Z_1' \cup Z_3')$ is a partition of $\mathscr{R}(\Gamma)$ into three small sets, by (4) (for $A$ is small since $N(A) = C_1$). Moreover, $N(A, Z_2', Z_1' \cup Z_3') \subseteq K$, and so equality holds, from the choice of $Z_1, Z_2, Z_3$. Let $e \in E(N(Z_1) \cap N(Z_3))$. Then $e$ is incident with no region of $Z_2$ and hence with none of $Z_2'$; and since $e \in E(N(A, Z_2', Z_1' \cup Z_3'))$ it follows that $e \in E(N(A)) = E(C_1)$. This proves the first claim. The second is clear, for $\text{ins}(C_1) - U(C_1)$ includes no edges of $N(A, Z_2', Z_1' \cup Z_3')$. The third follows from (5.1), for $\text{ins}(C_1) - U(C_1)$ certainly includes at least one region in $Z_1$.
+
+\hspace*{12pt}(7) \textit{$Z_1 = A$.}
+
+\textit{Subproof.} Suppose that $Z_1 \ne A$. By (6), there is another $Z_1$-ring, and so the graph $G$ defined before (1) has at least two vertices of valency $\le 1$. Let $C_1' \ne C_1$ be another $Z_1$-ring satisfying (1). By (6) applied to $C_1'$, there exists $j \in \{2, 3\}$ such that $E(N(Z_1) \cap N(Z_j)) \subseteq E(C_1')$. But $j \ne 2$, by (3), since

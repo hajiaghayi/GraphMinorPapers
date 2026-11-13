@@ -1,0 +1,24 @@
+\origpage{47}{}
+\sectionhead{12 Path-width}
+
+We recall that a \textit{path-decomposition} of $G$ is a tree-decomposition $(T, W)$ of $G$ such that $T$ is a path, and the \textit{path-width} of $G$ is the minimum width of all path-decompositions of $G$. We saw in (1.2) that for $p \le 5$, every graph with a vital $p$-linkage has path-width $\le p$, and our next objective is to show that (1.1) holds in general with tree-width replaced by path-width. This result is not needed for anything, and is included only as a curiosity.
+
+First, we need the following lemma.
+
+\textbf{12.1} \textit{Let $(A, B), (A', B')$ be separations of a graph, both of order $k$ and with $A \subseteq A'$ and $B' \subseteq B$. Suppose that in $B \cap A'$ there is a unique set of $k$ mutually vertex-disjoint paths between $V(A \cap B)$ and $V(A' \cap B')$, and every vertex of $B \cap A'$ belongs to one of these paths. Then there is a path-decomposition $(P, W)$ of $G$ where $|V(P)| \ge 2$ with the following properties:}
+
+\textit{(i) $P$ has ends $s, s'$ where $W(s) = A, W(P \setminus s) = B, W(P \setminus s') = A'$ and $W(s') = B'$}
+
+\textit{(ii) $|W(e)| = k$ for every edge $e$ of $P$}
+
+\textit{(iii) for each $t \in V(P)$ with $t \ne s, s'$, $|E(W(t))| = 1$ and if $e, e'$ are the two edges of $P$ incident with $t$, then either}
+
+\textit{(a) $W(e) = W(e') = V(W(t))$, or}
+
+\textit{(b) $W(e) \cap W(e') = X$ say where $|X| = k - 1$, and the unique edge of $W(t)$ has ends $v, v'$ say, where $W(e) = X \cup \{v\}$ and $W(e') = X \cup \{v'\}$.}
+
+\textbf{Proof.} We proceed by induction on $|E(B \cap A')|$. Let $V(A \cap B) = Z$ and $V(A' \cap B') = Z'$.
+
+\textit{(1) We may assume that no edge of $B \cap A'$ has both ends in $Z$.}
+
+\textit{Subproof.} If some edge $e$ of $B \cap A'$ has both ends in $Z$, let $A_1$ be obtained from $A$ by adding the edge $e$, and let $B_1 = B \setminus e$. Then $A_1 \subseteq A'$ and $B' \subseteq B_1$, and in $B \cap A'$ there is a unique set of $k$ disjoint paths between $V(A_1 \cap B_1)$ and $V(A' \cap B')$, so from the inductive hypothesis there is a path-decomposition $(P_1, W_1)$ of \delm{$B \cap A_1$}\fix{$G$} as in the theorem.\fixnote{fix:12.1-claim1-G}{The theorem, applied to $(A_1, B_1)$ and $(A', B')$, gives a path-decomposition of $G$, and $W_1(s_1) = A_1$ is not a subgraph of $B \cap A_1$ in general.} Let $P_1$ have ends $s_1, s_1'$ where $W_1(s_1) = A_1$; let $P$ be obtained from $P_1$ by adding a new vertex $s$ of degree 1, adjacent to $s_1$; and define $W(s) = A, V(W(s_1)) = V(A \cap B), E(W(s_1)) = \{e\}$, and $W(t) = \delm{W'(t)}\fix{W_1(t)}$ for $t \in V(P) \setminus \{s, s_1\}$.\fixnote{fix:12.1-claim1-W1}{The other graphs are those of $W_1$. No $W'$ is defined here.}

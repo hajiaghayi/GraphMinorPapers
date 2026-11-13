@@ -1,0 +1,28 @@
+\origpage{140}{ROBERTSON AND SEYMOUR}
+Now $(A', \Omega') \neq (A, \Omega)$ because $\alpha_0(A, \Omega) \nsubseteq \Delta_i$, and so $V(A \cap A') \subseteq \bar{\Omega} \cap \bar{\Omega}'$, since $\mathscr{S}_0$ is a segregation. Hence $x \in \bar{\Omega}' \subseteq V(\mathscr{S}_0)$, and so $\alpha_0(x) \in bd(\alpha_0(A', \Omega')) \subseteq \Delta_i$, contrary to our assumption. Hence $x \in V(\mathscr{S}_0)$ (in particular, $x$ is a vertex), and $\alpha_0(x) \in \Delta_i$. Now since $V(A) \cap V(\mathscr{S}_0) = \bar{\Omega}$, it follows that $x \in \bar{\Omega}$, and so $\alpha_0(x) \in bd(\alpha_0(A, \Omega))$. But $\alpha_0(A, \Omega) \cap \Delta_i \subseteq bd(\Delta_i)$, and $\alpha_0(x) \in \Delta_i$, and so $\alpha_0(x) \in bd(\Delta_i)$. Consequently $x \in \bar{\Omega}_i^*$. This proves (1).
+
+Let $\mathscr{S} = \mathscr{S}_0 \cup \mathscr{S}_1 \cup \cdots \cup \mathscr{S}_k$.
+
+\hspace*{12pt}(2) \textit{$\mathscr{S}$ is a segregation of $G$.}
+
+\textit{Subproof.} We must show
+
+\hspace*{12pt}(i) $A \subseteq G$ for each $(A, \Omega) \in \mathscr{S}$, and $\bigcup (A : (A, \Omega) \in \mathscr{S}) = G$
+
+\hspace*{12pt}(ii) for distinct $(A, \Omega), (A', \Omega') \in \mathscr{S}$, $V(A \cap A') \subseteq \bar{\Omega} \cap \bar{\Omega}'$ and $E(A \cap A') = \emptyset$.
+
+We first show (i). Certainly $A \subseteq G$ for each $(A, \Omega) \in \mathscr{S}$. Let $x$ be a vertex or edge of $G$; to show that $\bigcup (A : (A, \Omega) \in \mathscr{S}) = G$ it suffices to show that $x$ belongs to $A$ for some $(A, \Omega) \in \mathscr{S}$. If $x$ belongs to $G_i^*$ for some $i \ge 1$, then $x$ belongs to $A$ for some $(A, \Omega) \in \mathscr{S}_i \subseteq \mathscr{S}$, as required. If not, then $x$ does not belong to $J_1, \dots, J_k$, and so $x$ belongs to $G_0$. Hence there exists $(A, \Omega) \in \mathscr{S}_0$ such that $x$ belongs to $A$. For $1 \le i \le k$, since $x$ does not belong to $G_i^*$ and $\alpha_0^{-1}(\Delta_i) \subseteq G_i^*$, it follows that $\alpha_0(A, \Omega) \nsubseteq \Delta_i$. Hence $(A, \Omega) \in \mathscr{S}$. This proves (i).
+
+For (ii), let $(A, \Omega), (A', \Omega') \in \mathscr{S}$ be distinct. If they both belong to $\mathscr{S}_0$, or for some $i \ge 1$ they both belong to $\mathscr{S}_i$, then (ii) holds since $\mathscr{S}_0, \mathscr{S}_1, \dots, \mathscr{S}_k$ are segregations. We may assume then that $(A, \Omega) \in \mathscr{S}_i$ for some $i \ge 1$, and $(A', \Omega') \notin \mathscr{S}_i$. If $(A', \Omega') \in \mathscr{S}_j$ for some $j \neq i$, then $A \cap A' \subseteq G_i^* \cap G_j^*$, which is null by (7.6), and (ii) holds. Otherwise, $(A', \Omega') \in \mathscr{S}_0$, and from (1), $E(A \cap A') = \emptyset$ and
+\begin{equation*}
+V(A \cap A') \subseteq \bar{\Omega}_i^* \subseteq V(\mathscr{S}_i) \cap V(\mathscr{S}_0);
+\end{equation*}
+and since $V(A) \cap V(\mathscr{S}_i) = \bar{\Omega}$ and $V(A') \cap V(\mathscr{S}_0) = \bar{\Omega}'$, it follows that (ii) holds. This proves (2).
+
+\hspace*{12pt}(3) \textit{$\mathscr{S}$ is of type $(\rho, k)$.}
+
+\textit{Subproof.} $\mathscr{S}_0$ is a 3-segregation, and each $\mathscr{S}_i$ is of type $(3\pi + 9, 1)$, and so $\mathscr{S}$ is of type $(3\pi + 9, k)$. This proves (3).
+
+\hspace*{12pt}(4) \textit{$\mathscr{S}$ is $\mathscr{T}^*$-central.}
+
+\textit{Subproof.} Let $(A, \Omega) \in \mathscr{S}$, and let $B \subseteq G$ so that $(A, B)$ is a separation of $G$ and $V(A \cap B) = \bar{\Omega}$. Suppose that there exists $(A^*, B^*) \in \mathscr{T}^*$ with $B^* \subseteq A$. By (2.1) we may assume that $(A^*, B^*)$ has order $\le 16\pi + 19$. Since

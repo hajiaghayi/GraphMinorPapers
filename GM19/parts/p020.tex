@@ -1,0 +1,26 @@
+\origpage{344}{N. Robertson, P.D. Seymour / Journal of Combinatorial Theory, Series B 90 (2004) 325--385}
+If $\Gamma$ is a painting then $(V(\Gamma), E(\Gamma))$ (with the natural incidence relation) is a hypergraph, and to avoid proliferating notation we shall also call this hypergraph $\Gamma$. Thus, we may speak of subhypergraphs, tangles etc. of a painting $\Gamma$.
+
+Let $\Gamma$ be a 2-cell painting in $\Sigma$ with $E(\Gamma)\ne \emptyset$, and let $\mathscr{T}$ be a tangle in $\Gamma$. We define $rep(\mathscr{T})$ to be the maximum $k\le ord(\mathscr{T})$ such that for every circuit $F$ of $\Gamma^*$ with $\frac{1}{2}|E(F)|<k$ there is a disc $\Delta\subseteq \hat{\Sigma}$ bounded by $U(F)$, such that $(\Gamma\cap \Delta, \Gamma\cap \Delta')\in \mathscr{T}$, where $\Delta'$ is the closure of $\hat{\Sigma}\setminus \Delta$. If $\frac{1}{2}|E(F)|<rep(\mathscr{T})$ and $\Delta$ is as described, we write $\Delta = ins(F), \Delta' = out(F)$. We make the convention that when we are dealing with more than one tangle in the same painting, $ins(F)$ and $out(F)$ will always be defined with reference to the tangle currently called $\mathscr{T}$ (the others will be called $\mathscr{T}', \mathscr{T}_1$ etc.). When there is only one tangle specified in the painting, $ins(F)$ and $out(F)$ are defined with reference to that.
+
+Let $\Gamma$ be a 2-cell painting in $\Sigma$. The \textit{atoms} of $\Gamma$ are the sets $\{v\} (v\in V(\Gamma))$, the edges of $\Gamma$, and the regions of $\Gamma$ in $\hat{\Sigma}$; and the set of atoms is denoted by $A(\Gamma)$. To every atom of $\Gamma$ there corresponds an atom of $\Gamma^*$ in the natural way. Now assume in addition that $E(\Gamma)\ne \emptyset$, and let $\mathscr{T}$ be a tangle in $\Gamma$. If $W$ is a closed walk in $\Gamma^*$, we define $\Gamma^*|W$ to be the subdrawing of $\Gamma^*$ consisting of all vertices and edges in $W$. If $W$ has length $<2\,rep(\mathscr{T})$, we define $ins(W)$ to be the union of $U(\Gamma^*|W)$ and all the closed discs $ins(F)$ where $F$ is a circuit of $\Gamma^*|W$. It is easy to see that if $x\in A(\Gamma)$ and $x^*$ is the corresponding atom of $\Gamma^*$, then $x\cap ins(W)\ne \emptyset$ if and only if $x^*\subseteq ins(W)$, and we frequently use this fact without further explanation.
+
+In Theorem 9.1 of [6], we defined a metric on the set of atoms of $\Gamma^*$, using so-called ``restraints''. However, from Theorems 8.5 and 9.2 of that paper, the same metric can be defined using the sets $ins(W)$ instead of general restraints; and since every atom of $\Gamma$ corresponds to an atom of $\Gamma^*$, this induces a metric on $A(\Gamma)$. In summary, for $a, b\in A(\Gamma)$, we define $d(a, b)$ as follows:
+
+\hspace*{12pt}$\bullet$ if $a = b$ then $d(a, b) = 0$,
+
+\hspace*{12pt}$\bullet$ if $a\ne b$ and there is a closed walk $W$ of $\Gamma^*$ with length $<2\,rep(\mathscr{T})$ and with $a\cap ins(W), b\cap ins(W)\ne \emptyset$, we define $d(a, b)$ to be half the minimum length of such a walk,
+
+\hspace*{12pt}$\bullet$ if neither of the above applies then $d(a, b) = rep(\mathscr{T})$.
+
+We call $d$ the \textit{metric of} $\mathscr{T}$ (it is indeed a metric on $A(\Gamma)$, as explained earlier). When $v\in V(\Gamma)$ and $z\in A(\Gamma)$, we often write $d(v, z)$ for $d(\{v\}, z)$.
+
+In Theorem 9.2 of [8], we proved a useful result about this metric, but only for drawings, not paintings. Now we need to generalize that to paintings, as follows.
+
+\textbf{7.1.} \textit{Let $\Gamma$ be a 2-cell painting with $E(\Gamma)\ne \emptyset$ in a surface $\Sigma$, and let $\mathscr{T}$ be a tangle in $\Gamma$ with metric $d$. Let $z\in A(\Gamma)$, and let $\kappa$ be an integer with $4\le \kappa\le rep(\mathscr{T}) - 6$. Then there is a circuit $C$ of $sk(\Gamma)$, bounding an open disc $\Lambda\subseteq \hat{\Sigma}$ with $z\subseteq \Lambda$, such that}
+
+\hspace*{12pt}$\bullet$ \textit{$d(z, x)\le \kappa + 5$ for every $x\in A(\Gamma)$ with $x\cap \bar{\Lambda}\ne \emptyset$,}
+
+\hspace*{12pt}$\bullet$ \textit{$d(z, x)\ge \kappa$ for every $x\in A(\Gamma)$ with $x\cap \Lambda = \emptyset$,}
+
+\hspace*{12pt}$\bullet$ \textit{$x\subseteq \Lambda$ for every $x\in A(\Gamma)$ with $d(z, x)\le \kappa - 2$,}

@@ -1,0 +1,26 @@
+\origpage{81}{N. Robertson, P. Seymour / Journal of Combinatorial Theory, Series B 89 (2003) 77--108}
+\noindent with $x$ in $\tau(t')$. Let $e$ be the edge of $T$ incident with $t$ such that $t, t'$ are in different components of $T \setminus e$, and let $(A, B) \in \mathscr{L}$ be the corresponding separation. Then $A \cap B \subseteq \tau(t)$, and so $x$ is not in $A \cap B$; but $x$ is in $A$, and so is not in $B$. Hence $x$ is not in $M(G, \mathscr{L})$. This proves 2.5. $\square$
+
+For several purposes it would be convenient if there were at most one smallest order separation with a given property, and we can more or less arrange this by a refinement in the definition of the order of separation. A \textit{tie-breaker} in a hypergraph $G$ is a function $\lambda$ which maps each separation $(A, B)$ of $G$ to some member $\lambda(A, B)$ of a linearly ordered set $(\Lambda, \le)$ (we call $\lambda(A, B)$ the \textit{$\lambda$-order} of $(A, B)$) in such a way that
+
+\hspace*{12pt}$\bullet$ $\lambda(A, B) = \lambda(C, D)$ if and only if $(A, B) = (C, D)$ or $(A, B) = (D, C)$,
+
+\hspace*{12pt}$\bullet$ for all separations $(A, B)$, $(C, D)$, either $\lambda(A \cup C, B \cap D) \le \lambda(A, B)$, or $\lambda(A \cap C, B \cup D) < \lambda(C, D)$,
+
+\hspace*{12pt}$\bullet$ if $|V(A \cap B)| < |V(C \cap D)|$ then $\lambda(A, B) < \lambda(C, D)$.
+
+It was shown in Theorem 9.2 of [3] that every hypergraph has a tie-breaker.
+
+Let $\mathscr{T}_1, \mathscr{T}_2$ be tangles in a hypergraph $G$. If $(A, B) \in \mathscr{T}_1$ and $(B, A) \in \mathscr{T}_2$ we say that $(A, B)$ \textit{distinguishes} $\mathscr{T}_1$ \textit{from} $\mathscr{T}_2$. If there is such an $(A, B)$, then for a given tie-breaker $\lambda$ in $G$ there is a unique $(A, B) \in \mathscr{T}_1$ such that $(B, A) \in \mathscr{T}_2$ of minimum $\lambda$-order, called the \textit{$(\mathscr{T}_1, \mathscr{T}_2)$-distinction}; and if $(A, B)$ is the \textit{$(\mathscr{T}_1, \mathscr{T}_2)$-distinction} then $(B, A)$ is the \textit{$(\mathscr{T}_2, \mathscr{T}_1)$-distinction}. By Theorem 10.3 of [3], we have
+
+\textbf{2.6.} \textit{Let $\mathscr{T}_1, \dots, \mathscr{T}_n$ be distinct tangles of order $\theta$ in a hypergraph $G$ with $n \ge 1$, and let $\lambda$ be a tie-breaker. Then there is a tree-decomposition $(T, \tau)$ of $G$ where $V(T) = \{t_1, \dots, t_n\}$, with the following properties:}
+
+\hspace*{12pt}1. \textit{if $e \in E(T)$ and $T_1, T_2$ are the components of $T \setminus e$ and $1 \le i \le n$ and $t_i \in V(T_2)$ then $(\tau \times T_1, \tau \times T_2) \in \mathscr{T}_i$,}
+
+\hspace*{12pt}2. \textit{for $1 \le i < j \le n$, let $e$ be the edge of the path of $T$ between $t_i, t_j$ making separations of minimum $\lambda$-order; then these separations are the $(\mathscr{T}_i, \mathscr{T}_j)$- and $(\mathscr{T}_j, \mathscr{T}_i)$-distinctions.}
+
+We call $(T, \tau)$ a \textit{standard decomposition} of $G$ relative to $\mathscr{T}_1, \dots, \mathscr{T}_n$ in which $t_i$ represents $\mathscr{T}_i$ for $i = 1, \dots, n$.
+
+A separation $(A, B)$ of a hypergraph $G$ is \textit{robust} if for every separation $(C, D)$ of $A$, one of the separations $(C, B \cup D)$, $(D, B \cup C)$ has order at least that of $(A, B)$. A tree-decomposition $(T, \tau)$ of a hypergraph $G$ is \textit{rotund} if for every two edges $f_1, f_2 \in E(T)$, making separations $(A_1, B_1)$ and $(A_2, B_2)$ of the same order $k$, where $B_2 \subseteq A_1$ and $B_1 \subseteq A_2$, the following holds: if there is a separation $(H_1, H_2)$ of $G$ with $B_1 \subseteq H_1$ and $B_2 \subseteq H_2$ of order $< k$, then some edge of $F$ makes a separation of order $< k$, where $F$ is the path of $T$ with first and last edges $f_1, f_2$.
+
+\textbf{2.7.} \textit{Let $\mathscr{T}_1, \dots, \mathscr{T}_n$ be distinct tangles of order $\theta$ in a hypergraph $G$ with $n \ge 1$, and let $\lambda$ be a tie-breaker. Let $(T, \tau)$ be as in 2.6. Then $(T, \tau)$ is proper and rotund, and every separation made by an edge of $T$ under $(T, \tau)$ is robust.}

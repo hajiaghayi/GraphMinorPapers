@@ -1,0 +1,16 @@
+\origpage{85}{GRAPH MINORS. XI}
+\noindent $E(C_1 \cap C_1') = \emptyset$, and so $j = 3$. By (6), $E(N(Z_1) \cap N(Z_3)) = \emptyset$. Consequently, $N(Z_1), N(Z_3) \subseteq N(Z_2)$ and so $N(Z_2)$ captures every region of $\Gamma$, contrary to (4.4). This contradiction shows that $Z_1 = A$.
+
+\hspace*{12pt}(8) \textit{For $i = 1, 2, 3$, $N(Z_i)$ is a circuit $C_i$ say, and $Z_i = \{r \in R(\Gamma) : r \subseteq \text{ins}(C_i)\}$, and $\text{ins}(C_i) - U(C_i)$ is a region of $K$. In particular, $K$ has precisely three regions.}
+
+\textit{Subproof.} By (7), $Z_1 = \{r \in R(\Gamma) : r \subseteq \text{ins}(C_1)\}$ and therefore $N(Z_1) = C_1$ and $\text{ins}(C_1) - U(C_1)$ is a region of $K$; and similar arguments apply to $Z_2, Z_3$. Since $r_i = \text{ins}(C_i) - U(C_i)$ includes all members of $Z_i$ and $Z_1 \cup Z_2 \cup Z_3 = R(\Gamma)$, it follows that $K$ has no regions other than $r_1, r_2, r_3$.
+
+\hspace*{12pt}(9) \textit{Every circuit of $K$ is null-homotopic in $\Sigma$.}
+
+\textit{Subproof.} Every circuit $C$ of $K$ of length $< 2\theta$ is null-homotopic in $\text{ins}(C)$ and hence in $\Sigma$. In particular, $C_1$ and $C_2$ are null-homotopic in $\Sigma$. Since $\theta \ge 1$, every loop of $K$ is null-homotopic, and so we may speak of homotopy for walks. Now $C_1 \cup C_2 = K$; let $W$ be a simple-closed walk of $K$, and let
+\begin{equation*}
+V(\Gamma | W) \cap V(C_1) \cap V(C_2) = \{v_1, \dots, v_t\}
+\end{equation*}
+numbered in order on $W$. We shall show that $W$ is null-homotopic. If $t \le 1$ then either $\Gamma | W = C_1$ or $\Gamma | W = C_2$ and the result is true. We assume then that $t \ge 2$. Let $v_0 = v_t$, and for $1 \le i \le t$ let $P_i$ be a simple walk of $\Gamma | W$ from $v_{i-1}$ to $v_i$, with no internal vertex in $V(C_1) \cap V(C_2)$, such that $P_1 + P_2 + \dots + P_t$ is a reinitializing of $W$. For $1 \le i \le t$, let $Q_i$ be a simple walk of $C_1$ from $v_{i-1}$ to $v_i$. If for all $i$ with $1 \le i \le t$ $P_i$ is homotopic to $Q_i$, then some reinitializing of $W$ is homotopic to a closed walk of $C_1$, and hence $W$ is null-homotopic, as required. We assume, for a contradiction, that $P_1$ is not homotopic to $Q_1$ (say). Now $P_1$ is a simple walk of $C_1 \cup C_2$ with no internal vertex in $V(C_1 \cap C_2)$, and so $P_1$ is a walk of one of $C_1$, $C_2$. It is not a walk of $C_1$, since it is not homotopic to $Q_1$, and so $P_1$ is a walk of $C_2$. Let $P_1'$ be the other simple walk of $C_2$ from $v_0$ to $v_1$ and let $Q_1'$ be the simple walk of $C_1$ different from $Q_1$ from $v_0$ to $v_1$. Then $P_1$ is homotopic to $P_1'$, and $Q_1$ is homotopic to $Q_1'$, and so neither of $P_1$, $P_1'$ is homotopic to either of $Q_1$, $Q_1'$. Now some one, say $P_1''$, of $P_1$, $P_1'$ has length $< \theta$, since $C_2$ has length $< 2\theta$, and similarly some one, say $Q_1''$, of $Q_1$, $Q_1'$ has length $< \theta$. Then $P_1'' + Q_1''^{-1}$ has length $< 2\theta$, and is not null-homotopic, which is impossible. Thus $W$ is null-homotopic. The result follows.
+
+Now by (8), the closure of every region of $K$ is a closed disc, and so by (9) and (3.1), $\Sigma$ is simply-connected. Hence $\Sigma$ is a sphere. From (8), $K$ is

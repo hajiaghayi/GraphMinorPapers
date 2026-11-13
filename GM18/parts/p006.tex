@@ -1,0 +1,24 @@
+\origpage{82}{N. Robertson, P. Seymour / Journal of Combinatorial Theory, Series B 89 (2003) 77--108}
+\textbf{Proof.} Let $V(T) = \{t_1, \dots, t_n\}$ where $t_i$ represents $\mathscr{T}_i (1 \le i \le n)$. Let $e \in E(T)$, making separations $(A, B)$, $(B, A)$. Then $(A, B)$ is the $(\mathscr{T}_i, \mathscr{T}_j)$-distinction where $t_i, t_j$ are the ends of $e$, and so $(A, B) \in \mathscr{T}_i$, and $V(A) \ne V(G)$ by (T3). Thus $(T, \tau)$ is proper. From Theorem 10.2 of [3], $(A, B)$ is robust. It remains to show that $(T, \tau)$ is rotund.
+
+Thus, let $f_1, f_2 \in E(T)$, and let $F$ be the path of $T$ with first and last edges $f_1, f_2$. Let $f_1, f_2$ make separations $(A_1, B_1)$, $(A_2, B_2)$ respectively, where $B_1 \subseteq A_2$ and $B_2 \subseteq A_1$; and suppose that both these separations have order $k$. Let $(H_1, H_2)$ be a separation of $G$ of order $k' < k$ with $B_1 \subseteq H_1$ and $B_2 \subseteq H_2$, and let the first and last vertices of $F$ be $t_1, t_2$ say. Now $(A_1, B_1) \in \mathscr{T}_1$, and so $(H_1, H_2) \notin \mathscr{T}_1$ by (T2), since $A_1 \cup H_1 \supseteq A_1 \cup B_1 = G$; and so $(H_2, H_1) \in \mathscr{T}_1$ by (T1), since $k' < k < \theta$. Similarly $(H_1, H_2) \in \mathscr{T}_2$, and so $(H_2, H_1)$ distinguishes $\mathscr{T}_1$ from $\mathscr{T}_2$. Thus the $(\mathscr{T}_1, \mathscr{T}_2)$-distinction $(A, B)$ has order $\le k' < k$, and by 2.6.2 $(A, B)$ is made by some edge of $F$. It follows that $(T, \tau)$ is rotund. This proves 2.7. $\square$
+
+\sectionhead{3. Tree-width of a location}
+
+A separation $(A, B)$ of $G$ is \textit{titanic} if at least one of the inequalities
+\begin{align*}
+|V((X \cup Y) \cap Z)| &\ge |V((X \cup Y) \cap B)| \\
+|V((Y \cup Z) \cap X)| &\ge |V((Y \cup Z) \cap B)| \\
+|V((Z \cup X) \cap Y)| &\ge |V((Z \cup X) \cap B)|
+\end{align*}
+holds for every choice of $X, Y, Z \subseteq A$ such that $A = X \cup Y \cup Z$ and $E(X), E(Y), E(Z)$ are mutually disjoint. We observe that whether or not $(A, B)$ is titanic depends only on $A$ and on $V(A \cap B)$; more precisely,
+
+\textbf{3.1.} \textit{Let $(A, B)$ be a separation of a hypergraph $G$, and let $(A, B')$ be a separation of a hypergraph $G'$, with $A \cap B = A \cap B'$. Then $(A, B)$ is titanic if and only if $(A, B')$ is titanic.}
+
+The proof is clear. From Theorem 8.3 of [3], we have the following.
+
+\textbf{3.2.} \textit{Let $(C, D)$ be a separation of a hypergraph $G$, and let $(C', D)$ be a titanic separation of a hypergraph $G'$, with $V(C \cap D) = V(C' \cap D)$. Let $\mathscr{T}$ be a tangle in $G$ of order $\theta \ge 2$ with $(C, D) \in \mathscr{T}$. Let $\mathscr{T}'$ be the set of all separations $(A', B')$ of $G'$ of order $< \theta$ such that there exists $(A, B) \in \mathscr{T}$ with $E(A \cap D) = E(A' \cap D)$. Then $\mathscr{T}'$ is a tangle in $G'$ of order $\theta$.}
+
+If $\mathscr{T}$ is a tangle in a hypergraph $G$, we say that $(A, B) \in \mathscr{T}$ is \textit{linked to} $\mathscr{T}$ if there is no $(A', B') \in \mathscr{T}$ of smaller order with $A \subseteq A'$ and $B' \subseteq B$.
+
+\textbf{3.3.} \textit{Let $\mathscr{T}$ be a tangle of order $\ge \theta$ in a hypergraph $G$ and let $(B, A) \in \mathscr{T}$ be linked to $\mathscr{T}$ and have order $\le \frac{3}{4}\theta$. Then $(A, B)$ is titanic.}

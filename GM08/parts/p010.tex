@@ -1,0 +1,96 @@
+\origpage{264}{ROBERTSON AND SEYMOUR}
+\stmt
+(6.2) \textit{Let $\Sigma$ be a sphere and let $F_1, F_2$ be $O$-arcs of $\Sigma$ with $|F_1 \cap F_2| \ge 2$. Let $z \in \Sigma - (F_1 \cup F_2)$. Then there is an $O$-arc $F_3 \subseteq F_1 \cup F_2$ such that the component of $\Sigma - F_3$ which contains $z$ contains no point of $F_1 \cup F_2$.}
+
+The proof of this is straightforward point-set topology\del{, and we omit it}\fix{, but we give it}.
+
+\fix{By the Jordan curve theorem, for $i = 1, 2$ the closure of the component of
+$\Sigma - F_i$ that does not contain $z$ is a closed disc $D_i$ with boundary $F_i$. We use several times that a connected set that misses
+the boundary of a closed disc lies either in its interior or outside it. If
+$D_1 \subseteq D_2$, we may take $F_3 = F_2$, since then the component of $\Sigma - F_2$ containing
+$z$ is $\Sigma - D_2$, which contains no point of $F_2$ or of $F_1 \subseteq D_1$. So we may assume
+that some point of $D_1$ is not in $D_2$.
+
+First we find a part of $F_1$ that we shall keep. Since $\Sigma - D_2$ is connected, it contains a
+path from $z$ to a point of $D_1 - D_2$, and the first point of this path in $D_1$ is a point $p$ of
+$F_1 - D_2$. Let $Z$ be the component of $\Sigma - (D_1 \cup D_2)$ containing $z$. Then $p$ is in the
+closure of $Z$, since the part of the path before $p$ is connected, contains $z$, and misses $D_1 \cup D_2$. Choose an arc $Q \subseteq F_1 - D_2$ with $p$ in $Q$ but not an end of $Q$, and let
+$A$ be the closure of $F_1 - Q$, which is also an arc.
+
+Since $F_2 \cap D_1$ includes $F_1 \cap F_2$, which has at least two points, each component $J$ of
+$F_2 - D_1$ is an open subarc of $F_2$ whose two ends are distinct points of $F_1$, and its closure
+$\bar{J}$ meets $D_1$ only in these ends. We call $\bar{J}$ an \textit{excursion}. It is a chord of the
+closed disc $\overline{\Sigma - D_1}$, and so it splits this disc into two closed discs. Adding to
+$D_1$ the one that does not contain $z$ gives a closed disc $R(J)$ with $D_1 \subseteq R(J)$, whose
+boundary consists of $\bar{J}$ and an arc of $F_1$. The rest of $F_1$ is an open arc, which we say is
+\textit{removed} by $J$, and it lies in the interior of $R(J)$. No point of $Q$ is removed. For $Z$
+is connected, contains $z$, and misses $D_1 \cup F_2$, which includes the boundary of $R(J)$, and
+so $Z$ lies outside $R(J)$. Hence $p$, which is in the closure of $Z$, is not removed by $J$. The ends of
+the arc removed by $J$ are in $F_2 \subseteq D_2$, and so not in $Q$. Since $Q$ is connected and
+contains $p$, it misses the removed arc. Thus every removed arc is included in $A$.
+
+There may be infinitely many excursions, but for each $\epsilon > 0$ only finitely many of them have
+diameter at least $\epsilon$, in a fixed metric on $\Sigma$. This holds since a map from a circle onto
+$F_2$ is uniformly continuous, so an excursion of diameter at least $\epsilon$ comes from an interval
+of the circle of length at least some $\delta > 0$, and these intervals are disjoint. If
+$R(J) \subseteq R(J')$, then the arc removed by $J$ lies in the interior of $R(J')$, and so it is
+included in the arc removed by $J'$, whose ends are the ends of $\bar{J'}$. These ends lie in the
+arc $A$ on the two sides of the arc removed by $J$, and so, by compactness, their distance is at
+least a positive number that depends only on $J$. Hence only finitely many sets $R(J')$ include
+$R(J)$, and $R(J)$ is included in a maximal one. Next, let $J \ne J'$, and suppose that the arcs removed by
+$J$ and $J'$ meet. We claim that one of $R(J)$, $R(J')$ includes the other. The set $J'$ is
+connected and misses the boundary of $R(J)$. If $J'$ is in the interior of $R(J)$, then the
+boundary of $R(J')$ is included in $R(J)$, and $\Sigma - R(J)$ is connected and contains $z$, so it
+lies outside $R(J')$, and $R(J') \subseteq R(J)$. Otherwise $J'$ lies outside $R(J)$. The closure $K$
+of $R(J) - D_1$ is a closed disc, whose interior misses $F_1$ and $\bar{J'}$, and so misses the
+boundary of $R(J')$. A common point of the two removed arcs lies in the interiors of $R(J)$ and $R(J')$, and the points
+near it outside $D_1$ lie in the interior of $K$, and so the interior of $K$ meets the interior of
+$R(J')$. Hence $K \subseteq R(J')$, and $R(J) \subseteq R(J')$. This proves the claim.
+So the arcs removed by $J$ and $J'$ are disjoint when $R(J)$ and $R(J')$ are distinct maximal
+ones.
+
+Now let $F_3$ be obtained from $F_1$ by replacing the arc removed by $J$ with $J$, for each maximal
+$R(J)$. Then $F_3 \subseteq F_1 \cup F_2$ and $Q \subseteq F_3$. We claim that $F_3$ is an $O$-arc. It
+is the image of a one-to-one map from a circle, since the removed arcs are disjoint, and the open
+arcs $J$ are disjoint from each other and from $F_1$. This map is continuous, since each replacement
+agrees with $F_1$ at its ends, and for each $\epsilon > 0$ only finitely many replacements have
+diameter at least $\epsilon$. This proves the claim. Let $E$ be the closure of the component of
+$\Sigma - F_3$ that does not contain $z$, a closed disc with boundary $F_3$.
+
+We show that $D_1 \subseteq E$. The interior of $D_1$ misses $F_3$, since $F_3$ consists of points of
+$F_1$ and of open arcs $J$, which are outside $D_1$. The set $Z$ is connected, contains $z$, and
+misses $F_3 \subseteq D_1 \cup D_2$, and so it lies outside $D_1 \cup E$. Since $p$ is in $Q$ but not an end of $Q$, there is
+a closed disc $N$ containing $p$ that meets $F_1 \cup F_3$ only in a subarc of $Q$, and this subarc
+splits $N$ into two connected sides. Since $p$ is in the closure of $Z$, one side meets $Z$. This
+side misses $F_1$ and $F_3$, and so it lies outside both $D_1$ and $E$. Every point of $Q$ is a limit
+of points in the interior of $D_1$, and also of points in the interior of $E$, since $Q$ is in the
+boundary of both. Hence the other side meets the interiors of both $D_1$ and $E$. Since the interior of $D_1$ is connected, misses $F_3$ and meets the interior of $E$, it is
+included in $E$, and so $D_1 \subseteq E$.
+
+Each maximal $R(J)$ is included in $E$. For its boundary is included in
+$D_1 \cup \bar{J} \subseteq E$, and $\Sigma - E$ is connected and contains $z$, so it lies outside
+$R(J)$. Every point of $F_2$ is in $D_1$ or in some excursion, and so in $D_1$ or in a maximal
+$R(J)$. Hence $F_1 \cup F_2 \subseteq E$. The component of $\Sigma - F_3$ containing $z$ is
+$\Sigma - E$, and so it contains no point of $F_1 \cup F_2$, as
+required.\fixnote{fix:6.2-proof-added}{The paper omits the proof of (6.2). The argument above is the one
+used in the formalization.}}
+
+\stmt
+(6.3) \textit{Let $\Sigma$ be a sphere and let $F_1, F_2$ be $O$-arcs in $\Sigma$. Let $z_1, z_2 \in \Sigma - (F_1 \cup F_2)$, and be in distinct components of $\Sigma - F_i$ ($i = 1, 2$). Then there are $O$-arcs $F_3, F_4$ in $\Sigma$ such that}
+
+\hspace*{12pt}(i) \textit{$F_3 \cup F_4 \subseteq F_1 \cup F_2$, $F_3 \cap F_4 \subseteq F_1 \cap F_2$}
+
+\hspace*{12pt}(ii) \textit{the component of $\Sigma - F_3$ which contains $z_1$ contains no point of $F_1 \cup F_2$}
+
+\hspace*{12pt}(iii) \textit{the component of $\Sigma - F_4$ which contains $z_2$ contains no point of $F_1 \cup F_2$.}
+
+\textit{Proof.} If $|F_1 \cap F_2| \le 1$ this is obvious. If $|F_1 \cap F_2| \ge 2$ then (6.2) applies. Let $F_3, F_4$ be the boundaries of the components of $\Sigma - (F_1 \cup F_2)$ containing $z_1, z_2$, respectively. Then (ii) and (iii) are satisfied and $F_3 \cup F_4 \subseteq F_1 \cup F_2$. It remains to show that $F_3 \cap F_4 \subseteq F_1 \cap F_2$. Let $x \in F_3 \cap F_4$. Then $x$ is a limit point both of the component of $\Sigma - (F_1 \cup F_2)$ containing $z_1$ and of the component containing $z_2$. It follows that $x \in F_1 \cap F_2$ as required. $\square$
+
+\stmt
+(6.4) \textit{Let $\Gamma$ be a drawing in a disc $\Sigma$, and let $C_1, C_2$ be circuits of $\Gamma$. Let $F_i$ be a $C_i$-ring ($i = 1, 2$), such that some point of $C_1$ is inside $F_2$, and no point of $F_2$ is inside $C_1$. Then there is a $C_1$-ring enclosed by both $F_1$ and $F_2$.}
+
+\textit{Proof.} Extend $\Sigma$ to a sphere $\Sigma'$, and let $z_2$ be a point of $\Sigma' - \Sigma$. Let $z_1$ be a point of $\Sigma$ inside $C_1$. Now some point of $C_1$ is inside $F_2$, and so $z_1$ is inside $F_2$, since no point of $F_2$ is inside $C_1$. Hence $z_1$ and $z_2$ are in different components of both $\Sigma' - F_1$ and $\Sigma' - F_2$. By (6.3) there are $O$-arcs $F_3, F_4 \subseteq F_1 \cup F_2$, with $F_3 \cap F_4 \subseteq F_1 \cap F_2$, such that
+\begin{equation*}
+D_1 \cap (F_1 \cup F_2) = \emptyset = D_2 \cap (F_1 \cup F_2),
+\end{equation*}
+where $D_1$ is the component of $\Sigma' - F_3$ containing $z_1$, and $D_2$ is the component of $\Sigma' - F_4$ containing $z_2$. Now no point of $D_1$ is in $F_1$, and so $D_1$ is a subset of a component of $\Sigma' - F_1$. Similarly, $D_2$ is a subset of a component of $\Sigma' - F_2$. It follows that $D_1 \subseteq \Sigma$, for no point of $\Sigma' - \Sigma$ is in the same component of $\Sigma' - F_1$ as $z_1$. We deduce that $z_1$ is inside $F_3$, and so $F_3$ encloses $C_1$. Since no point of $F_1 \cup F_2$ is inside $F_3$, and $z_1$ is inside $F_1, F_2$, and $F_3$, it follows that $F_1$ encloses $F_3$, and $F_2$ encloses $F_3$. On the other hand, $z_2 \in D_2$ and so $\Sigma' - \Sigma \subseteq D_2$; hence $C_2 \cap D_2 = \emptyset$, since no point

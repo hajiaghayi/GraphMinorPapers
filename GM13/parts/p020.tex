@@ -1,0 +1,27 @@
+\origpage{84}{ROBERTSON AND SEYMOUR}
+\textit{(iii) subject to (i) and (ii), $(A, B)$ has minimum order}
+
+\textit{(iv) subject to (i), (ii), and (iii), $A$ is maximal.}
+
+\textit{Let $v \in V(B) - V(A)$. Then $v$ is irrelevant to the $\delta$-folio of $G$ relative to $Z$.}
+
+\textit{Proof.} By (2.3), it suffices to show that $v$ is irrelevant to the $\delta$-folio of $B$ relative to $V(A \cap B)$. To prove this, it suffices to show that the $\delta$-folio of $B \setminus v$ relative to $V(A \cap B)$ is generic. Let $V(A \cap B) = Z'$, and $|Z'| = \xi' \le \xi$. Let $G_1, \dots, G_k$ be numbered so that $v \notin V(G_1) \cup \dots \cup V(G_{k-1})$, and let $G'_i = G_i \cap B$ ($1 \le i \le k - 1$). Let $G' = B \setminus v$. We shall apply (5.3) to $G', Z', G'_1, \dots, G'_{k-1}$. Let us verify its hypotheses. We observe that $k - 1 \ge \lfloor \frac{5}{2}\xi' \rfloor + 3\delta$, and $G'_1, \dots, G'_{k-1}$ are subgraphs of $G'$, mutually vertex-disjoint. Moreover, for $1 \le i \le k - 1$, either $G'_i$ is connected or every component of $G'_i$ has a vertex in $Z'$; for if some component of $G'_i$ has no vertex in $Z'$, then it is a component of $G_i$, and so equals $G_i$ since $G_i$ is connected; and so $G'_i$ is connected. Furthermore, for $1 \le i < j \le k - 1$, either $V(G'_i)$ and $V(G'_j)$ both meet $Z$ or there is an edge of $G'$ between $V(G'_i)$ and $V(G'_j)$; for if say $V(G'_i) \cap Z = \emptyset$ then $G'_i = G_i$, and since there is an edge G between $V(G_i)$ and $V(G_j)$, this edge is therefore an edge of $G'$ between $V(G'_i)$ and $V(G'_j)$. Finally, we claim
+
+\hspace*{12pt}(1) \textit{For $1 \le i \le k - 1$, there is no separation $(A', B')$ of $G'$ of order $< \xi'$ with $Z' \subseteq V(A')$ and with $A' \cap G'_i$ null.}
+
+\textit{Subproof.} If $(A', B')$ is such a separation, there is a separation $(A'', B'')$ of $B$ of order $\le \xi'$ with $v \in V(A'' \cap B'')$ and $A'' \setminus v = A'$, $B'' \setminus v = B'$. Then $(A \cup A'', B'')$ is a separation of $G$ of order $\le \xi'$. Now $Z \subseteq V(A \cup A'')$, and $(A \cup A'') \cap G_i$ is null, and $A \cup A'' \ne A$ since $v \in V(A'')$. This contradicts hypothesis (iv), and proves (1).
+
+From (1) and (5.3) we deduce that the $\delta$-folio of $G'$ relative to $Z'$ is generic, as required. $\square$
+
+We use (6.1) for the following algorithm. Let $\xi, \delta \ge 0$ be integers, and let $p = \lfloor \frac{5}{2}\xi \rfloor + 3\delta + 1$.
+
+\stmt
+(6.2) \textsc{Algorithm}.
+
+\textit{Input:} A digraph $G$, a subset $Z \subseteq V(G)$ with $|Z| \le \xi$, and $p$ mutually vertex-disjoint connected subgraphs $G_1, \dots, G_p$ of $G$ such that for $1 \le i < j \le p$ there is an edge of $G$ between $G_i$ and $G_j$.
+
+\textit{Output:} A vertex of $G$ irrelevant to the $\delta$-folio of $G$ relative to $Z$.
+
+\textit{Running time:} $O(\varepsilon)$.
+
+\textit{Description:} For each $i$ with $1 \le i \le p$ such that $Z \cap V(G_i) = \emptyset$ we find a separation $(A_i, B_i)$ of $G$ with $Z \subseteq V(A_i)$ and $A_i \cap G_i$ null, of minimum order and subject to that with $A_i$ maximal. (The usual max-flow min-cut algorithm provides a ``min-cut'' which yields a separation $(A, B)$ with $A$

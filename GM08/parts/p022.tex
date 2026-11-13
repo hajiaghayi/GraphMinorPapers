@@ -1,0 +1,27 @@
+\origpage{276}{ROBERTSON AND SEYMOUR}
+\hspace*{12pt}(i) \textit{for $1 \le i \le r$, there is no edge of $G$ with one end in $\bigcup_{j < i} V(G_j)$, the other in $\bigcup_{j > i} V(G_j)$, and neither end in $V(G_i)$}
+
+\hspace*{12pt}(ii) \textit{if $1 \le h \le i \le j \le r$, every path of $G$ from $V(G_h)$ to $V(G_j)$ meets $V(G_i)$}
+
+\hspace*{12pt}(iii) \textit{for $0 \le i \le r$ and $1 \le p \le k$, $|Y_i \cap V(P_p)| = 1$}
+
+\hspace*{12pt}(iv) \textit{for $1 \le i \le r$ and $1 \le p \le k$ the intersection of $P_p$ and $G_i$ is a path}
+
+\hspace*{12pt}(v) \textit{for $1 \le p \le k$, $P_p$ is obtained from the paths $P_p \cap G_i$ ($i = 1, 2, \dots, r$) by concatenating them in order.}
+
+\textit{Proof.} Suppose $e$ is an edge as in (i). Choose $h$ with $1 \le h \le r$ such that $e \in E(G_h)$. By symmetry, we may assume $h \le i$. Let $v$ be the end of $e$ with $v \in \bigcup_{j > i} V(G_j)$, and choose $j > i$ with $v \in V(G_j)$. Then
+\begin{equation*}
+v \in V(G_h) \cap V(G_j) \subseteq V(G_i),
+\end{equation*}
+a contradiction. Thus there is no such edge, and (i) holds. From this, (ii) follows immediately.
+
+To prove (iii) we show first that for $0 \le i \le r$ and $1 \le p \le k$, $Y_i \cap V(P_p) \ne \emptyset$. This is true if $i = 0$ or $i = r$, since $P_p$ is a path from $Y_0$ to $Y_r$. If $0 < i < r$, then $P_p$ meets $V(G_i)$ by (ii), since it meets $V(G_1)$ and $V(G_r)$; and the last vertex of $P_p$ in $V(G_i)$ is also in $V(G_{i+1})$, by (ii), and hence is in $Y_i$. Thus $Y_i \cap V(P_p) \ne \emptyset$. But since $|Y_i| = k$ and $P_1, \dots, P_k$ are mutually vertex-disjoint, (iii) follows.
+
+Now let $1 \le p \le k$ and $1 \le i \le r$. Any vertex of $P_p$ in $V(G_i)$ which is incident with an edge not in $G_i$ is in $Y_{i-1} \cup Y_i$, and so by (iii) there are at most two such vertices; and the same argument shows that if there are two such vertices, the subpath of $P_p$ between them is a subgraph of $G_i$. Thus (iv) holds, and (v) follows from (iv) and (ii). $\square$
+
+\stmt
+(14.2) \textit{If $\mathcal{A}$ is well-rooted and $k \ge 0$ is an integer, the class of all $k$-chains over $\mathcal{A}$ is well-rooted.}
+
+\textit{Proof.} It suffices to prove that for every $k'$ the class of all $k$-chains over $\mathcal{A}$ with index $k'$ is well-rooted. Let $(G^1, T^1), (G^2, T^2), \dots$ be a sequence of $k$-chains over $\mathcal{A}$, all with the same index, and for $i = 1, 2, \dots$ let $(G^i_j, Y^i_{j-1}, Y^i_j)$ ($1 \le j \le r_i$) be the corresponding path-decomposition. For $i = 1, 2, \dots$ let $P^i_1, \dots, P^i_k$ be mutually vertex-disjoint paths of $G^i$ from $Y^i_0$ to $Y^i_{r_i}$.
+
+Let $i \ge 1$ be an integer. For $j = 1, 2, \dots, r_i$, and for $p = 1, \dots, k$, let $\tau^i_j(p)$ be the first vertex of $P^i_p$ in $V(G^i_j)$ (which is necessarily in $Y^i_{j-1}$), and let $\tau^i_j(p+k)$ be the last vertex of $P^i_p$ in $V(G^i_j)$ (which is necessarily in $Y^i_j$). Then $(G^i_j, \tau^i_j)$ is a rooted graph. Since $|Y^i_{j-1}| = k$ and $P^i_1, \dots, P^i_k$ are mutually vertex-disjoint, it follows that $\{\tau^i_j(1), \dots, \tau^i_j(k)\} = Y^i_{j-1}$, and similarly that

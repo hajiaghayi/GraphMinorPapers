@@ -1,0 +1,25 @@
+\origpage{179}{GRAPH MINORS, X}
+\noindent and so $Z = Z'$ from (ii) above. Moreover, since $N_3 = N_3'$,
+\begin{equation*}
+\sum (\mu(x, y) : x \in X, y \in Y) = \sum (\mu(x, y) : x \in X', y \in Y').
+\end{equation*}
+Hence
+\begin{equation*}
+\{\{x, y\} : x \in X, y \in Y\} = \{\{x, y\} : x \in X', y \in Y'\},
+\end{equation*}
+and the claim follows.
+
+\hspace*{12pt}(2) \textit{Let $(A, B)$, $(C, D)$ be separations of $G$. Then so are $(A \cup C, B \cap D)$, $(A \cap C, B \cup D)$, and the sum of their $\lambda$-orders is at most the sum of the $\lambda$-orders of $(A, B)$, $(C, D)$.}
+
+This follows by comparing (for each $x, y \in L(G)$) the number of occurrences of $\mu(x, y)$ and $\mu(y, x)$ in the expressions for the $\lambda$-orders of $(A, B)$ and $(C, D)$ with the corresponding numbers for the other two separations.
+
+From (1) and (2), it follows that the first and second tie-breaker axioms are satisfied, and clearly so is the third, as required. $\square$
+
+The following strengthening of the second axiom is sometimes useful.
+
+\stmt
+(9.3) \textit{Let $\lambda$ be a tie-breaker in a hypergraph $G$, and let $(A, B)$, $(C, D)$ be separations of $G$. Then either} (i) \textit{$(A \cup C, B \cap D)$ has smaller $\lambda$-order than $(A, B)$, or} (ii) \textit{$(A \cap C, B \cup D)$ has smaller $\lambda$-order than $(C, D)$, or} (iii) \textit{$C \subseteq A$ and $B \subseteq D$, or} (iv) \textit{$B = C = G$ and $A = D$ and $E(A) = \emptyset$.}
+
+\textit{Proof.} Since we may assume that (ii) is false, it follows from the second axiom that $(A \cup C, B \cap D)$ has $\lambda$-order at most that of $(A, B)$, and we may assume that equality holds, for otherwise (i) holds. Thus, by the first axiom, $(A \cup C, B \cap D) = (A, B)$ or $(B, A)$. If $(A \cup C, B \cap D) = (A, B)$ then $C \subseteq A$ and $B \subseteq D$ and (iii) holds, and so we may assume that $(A \cup C, B \cap D) = (B, A)$. Hence $A \cup C = B$ and $B \cap D = A$. In particular, $A \subseteq B$, and since $A \cup B = G$, it follows that $B = G$, and $A = D$ since $B \cap D = A$.
+
+By the second axiom applied to $(D, C)$, $(B, A)$, we deduce that either $(B \cup D, A \cap C)$ has $\lambda$-order at most that of $(D, C)$ or $(B \cap D, A \cup C)$ has $\lambda$-order less than $(B, A)$. In the second case, (i) holds, and if strict inequality holds in the first case, then (ii) holds. Thus we may assume that $(B \cup D, A \cap C)$ has the same $\lambda$-order as $(D, C)$, and so $(B \cup D, A \cap C) = (D, C)$ or $(C, D)$, by the first axiom. In the first case, $B \subseteq D$ and $C \subseteq A$, and (iii) holds, and so we may assume that $(B \cup D, A \cap C) = (C, D)$; that is, $C = G$ and $A = D$. Since $B = G$, it follows that (iv) holds. $\square$

@@ -1,0 +1,58 @@
+\sectionhead{\textbf{About this copy}}
+
+This is a corrected copy of the paper cited above. The text is retyped from the printed paper.
+It keeps the paper's wording and the numbering of its results, equations and footnotes, and a
+marker such as \origpagemark{$N$} shows where page $N$ of the printed paper begins.
+
+The corrections come from a formalization of the Graph Minors series in the Lean proof
+assistant, \href{https://github.com/mahdi-jfri/GraphMinor}{github.com/mahdi-jfri/GraphMinor},
+in which the results of this paper are proved. Where the formalization found that a statement
+or a step of a proof is wrong as printed, this copy corrects it in place. Where the paper leaves a proof or a step to the reader, this
+copy adds it, also in blue. Text \del{struck
+through in red} is removed and text \fix{in blue} is inserted. Each change has a note, marked
+\textcolor{fixcolor}{\sffamily F1}, \textcolor{fixcolor}{\sffamily F2}, \dots, that gives the
+reason. The file
+\href{https://github.com/mahdi-jfri/GraphMinor/blob/main/corrections/GM17.md}{corrections/GM17.md}
+of the formalization describes each correction in full. Each note, and each item in the list below, begins with the kind of the change. A \kindname{misprint} is a wrong symbol, index or word. A \kindname{statement} is a result or a claim of the text that is false as printed. A \kindname{degenerate} is a statement that fails only in a trivial case, such as an empty graph or a parameter equal to~$0$. A \kindname{gap} is a step of a proof that does not follow as written. A \kindname{missing} is a proof that the paper omits, leaves to the reader or only sketches, and that this copy adds.
+
+The corrections and added proofs, in the order of the pages:
+\begin{enumerate}\setlength{\itemsep}{1pt}
+\item \kindtag{fix:1.1}\hyperref[fix:1.1]{Statement of (1.1)(ii), page 163}: $a + 2b = a' + 2b'$ becomes
+$2a + b = 2a' + b'$.
+\item \kindtag{fix:1-simpler}\hyperref[fix:1-simpler]{Section 1, page 164}: the second definition of ``simpler than''
+is used, and it is not equivalent to the first.
+\item \kindtag{fix:2.1-claim1}\hyperref[fix:2.1-claim1]{Claim (1) in the proof of (2.1), page 167}: $\alpha(C_2)$
+becomes $\alpha(c_2)$.
+\item \kindtag{fix:2.1-claim3}\hyperref[fix:2.1-claim3]{Claim (3) in the proof of (2.1), page 167}:
+$\tilde{c} \cup \tilde{c}_2$ becomes $\tilde{c} \cap \tilde{c}_2$.
+\item \kindtag{fix:3-warp}\hyperref[fix:3-warp]{Section 3, page 168}: the warp of a portrayal is at least $1$.
+\item \kindtag{fix:4.3-claim2}\hyperref[fix:4.3-claim2]{Claim (2) in the proof of (4.3), page 170}:
+$\beta(n_k) \cup \beta(n_j)$ becomes $\beta(n_1) \cup \beta(n_{j+1})$.
+\item \kindtag{fix:7.3-paths}\hyperref[fix:7.3-paths]{Proof of (7.3), page 179}: $P_0, \dots, P_n$ becomes
+$P_0, \dots, P_p$.
+\item \kindtag{fix:7.3-Bh}\hyperref[fix:7.3-Bh]{Proof of (7.3), page 179}: $\bigcap$ becomes $\bigcup$ in the
+definition of $B_h$.
+\item \kindtag{fix:7.3-p180}\hyperref[fix:7.3-p180]{Proof of (7.3), page 180}: $V(\alpha(c') \cup \alpha(-c'))$
+becomes $V(\alpha(c') \cap \alpha(-c'))$.
+\item \kindtag{fix:7.4-axioms-added}\hyperref[fix:7.4-axioms-added]{Proof of (7.4), page 180}: the verification of
+\textbf{(P1)}--\textbf{(P5)} and \textbf{(P7)} is added.
+\item \kindtag{fix:9.3-proof}\hyperref[fix:9.3-proof]{Proof of (9.3), page 184}: $\{n_0\} \cap \bar{c}_0$ becomes
+$\{n_0\} \cup \bar{c}_0$.
+\item \kindtag{fix:10.1-proof-added}\hyperref[fix:10.1-proof-added]{Proof of (10.1), page 188}: the proof is added.
+\item \kindtag{fix:12.6-proof}\hyperref[fix:12.6-proof]{Proof of (12.6), page 200}: the text is unchanged, and the note
+gives the missing argument.
+\item \kindtag{fix:13.1}\hyperref[fix:13.1]{Statement and proof of (13.1), page 202}: the statement is for
+graphs, not hypergraphs, and the proof applies [2, (3.1)] to the graph obtained from $H$ by
+subdividing every edge twice.
+\item \kindtag{fix:13.1-P2}\hyperref[fix:13.1-P2]{Proof of (13.1), page 203}: in (P2), $n_1$ becomes $n_i$, and an
+extra opening bracket before $c$ is removed.
+\item \kindtag{fix:13.1-P4}\hyperref[fix:13.1-P4]{Proof of (13.1), page 203}: in (P4), $\delta(c_i)$ becomes
+$\delta(c_1)$.
+\item \kindtag{fix:13.1-P7}\hyperref[fix:13.1-P7]{Proof of (13.1), page 204}: in (P7), $\kappa(n_{j-1})$ becomes
+$\kappa(n_{f-1})$.
+\item \kindtag{fix:13.2-proof}\hyperref[fix:13.2-proof]{Proof of (13.2), page 205}: the second $\alpha'$ becomes $a'$.
+\item \kindtag{fix:14.2-claim1}\hyperref[fix:14.2-claim1]{Claim (1) in the proof of (14.2), page 209}: $\alpha(v)$
+becomes $\eta(v)$, twice.
+\item \kindtag{fix:14.2-claim2}\hyperref[fix:14.2-claim2]{Claim (2) in the proof of (14.2), page 210}: $a_2(c)$ becomes
+$\alpha_2(c)$, and $B_4 = B_4/Z$ becomes $B_4 = B_3/Z$.
+\end{enumerate}

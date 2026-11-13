@@ -1,0 +1,33 @@
+\origpage{79}{GRAPH MINORS. XIII}
+\hspace*{12pt}(ii) \textit{for $1 \le i < j \le k$, if there is no edge of $G$ between $G_i$ and $G_j$ then $i, j \le \xi$.}
+
+\textit{Then the $\delta$-folio of $G$ relative to $Z$ is generic.}
+
+\textit{Proof.} We delete every vertex of $G$ not in $V(G_1) \cup \dots \cup V(G_k)$, and then contract every edge of each $G_i$. We obtain a digraph $G'$ with $|V(G')| = k$. Let $Z' \subseteq V(G')$ correspond to $Z$. By (5.1), the $\delta$-folio of $G'$ relative to $Z'$ is generic, and so the $\delta$-folio of $G$ relative to $Z$ is generic, as required. $\square$
+
+We shall use (5.2) to prove the following lemma.
+
+\stmt
+(5.3) \textit{Let $G$ be a graph and let $Z \subseteq V(G)$ with $|Z| = \xi$. Let $k \ge \lfloor \frac{3}{2}\xi \rfloor$ and let $G_1, \dots, G_k$ be subgraphs of $G$, mutually vertex-disjoint, such that}
+
+\hspace*{12pt}(i) \textit{for $1 \le i \le k$, either $G_i$ is connected or every component of $G_i$ has a vertex in $Z$,}
+
+\hspace*{12pt}(ii) \textit{for $1 \le i < j \le k$, either $V(G_i)$ and $V(G_j)$ both meet $Z$ or there is an edge of $G$ between $G_i$ and $G_j$, and}
+
+\hspace*{12pt}(iii) \textit{for $1 \le i \le k$, there is no separation $(A, B)$ of $G$ of order $< \xi$ with $Z \subseteq V(A)$ and with $A \cap G_i$ null.}
+
+\textit{Then for some $\mu$ with $0 \le \mu \le \xi$ there are $\kappa = k - \lfloor \frac{1}{2}(\xi - \mu) \rfloor$ non-null connected subgraphs $H_1, \dots, H_\kappa$ of $G$, mutually vertex-disjoint, such that}
+
+\hspace*{12pt}(a) \textit{$|V(H_i) \cap Z| = 1$ ($1 \le i \le \xi$) and $V(H_i) \cap Z = \emptyset$ ($\xi + 1 \le i \le \kappa$), and}
+
+\hspace*{12pt}(b) \textit{for $1 \le i < j \le \kappa$, if there is no edge of $G$ between $H_i$ and $H_j$ then $i, j \le \mu$.}
+
+\textit{In particular, for any $\delta \ge 0$, if $k \ge \lfloor \frac{5}{2}\xi \rfloor + 3\delta$ and $G$ is a digraph then the $\delta$-folio of $G$ relative to $Z$ is generic.}
+
+\textit{Proof.} The second assertion follows from the first and (5.2). For if $\mu, \kappa, H_1, \dots, H_\kappa$ satisfy the first assertion of the theorem, and $k \ge \lfloor \frac{5}{2}\xi \rfloor + 3\delta$, then
+\begin{equation*}
+\kappa \ge k - \lfloor \frac{1}{2}\xi \rfloor \ge 2\xi + 3\delta
+\end{equation*}
+and so the second assertion follows from (5.2).
+
+We prove the first assertion by contradiction. Suppose it is false and choose a counterexample $G$, $Z$ with $|V(G)| + |E(G)|$ minimum. Clearly (using hypothesis (iii) for vertices in $Z$), $G$ has no loops or multiple edges, or isolated vertices. We shall show that

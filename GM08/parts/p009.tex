@@ -1,0 +1,21 @@
+\origpage{263}{GRAPH MINORS. VIII}
+Let $\Gamma$ be a drawing in $\Sigma$, and let $(G, T)$ be a graft. $\Gamma$ is said to be a \textit{drawing of} $(G, T)$ (\textit{in $\Sigma$}) if there is a bijection $\alpha$ from $V(G)$ to $V(\Gamma)$ and a bijection $\beta$ from $E(G)$ to the set of edges of $\Gamma$, such that
+
+\hspace*{12pt}(i) for $v \in V(G)$ and $e \in E(G)$, $v$ is incident with $e$ if and only if $\alpha(v) \in \overline{\beta(e)}$
+
+\hspace*{12pt}(ii) for $v \in V(G)$, $\alpha(v) \in bd\ \Sigma$ if and only if $v \in T$.
+
+In this situation, we shall say $\alpha(v)$ \textit{represents} $v \in V(G)$. If $(G, T)$ has a drawing in $\Sigma$, we say that $\Sigma$ \textit{embeds} $(G, T)$. If $\mathcal{A}$ is a set of grafts (respectively, rooted graphs), we say that $\Sigma$ \textit{embeds} $\mathcal{A}$ if $\Sigma$ embeds (the underlying graft of) each member of $\mathcal{A}$.
+
+If $\Gamma$ is a drawing in $\Sigma$, we shall often use graph-theoretic terminology for $\Gamma$, speaking of the vertices, paths, circuits, etc., of $\Gamma$ in the natural way, when we expect no confusion to arise. If $\Gamma$ is a drawing in $\Sigma$ and $X \subseteq \Sigma$, we say that $X$ is \textit{$\Gamma$-normal} if $X \cap U(\Gamma) \subseteq V(\Gamma)$. If $Y \subseteq \Sigma$ is closed and no edge of $\Gamma$ meets both $Y$ and $\Sigma - Y$, then $(U(\Gamma) \cap Y, V(\Gamma) \cap Y)$ is a drawing which we denote by $\Gamma \cap Y$.
+
+\sectionhead{6. Foundations on a Disc}
+
+We can now state our main theorem, and begin its proof. The theorem is the following.
+
+\stmt
+(6.1) \textit{If $\mathcal{A}$ is a class of graphs with bounded index, and some surface $\Sigma$ embeds $\mathcal{A}$, then $\mathcal{A}$ is well-rooted.}
+
+This result clearly implies (1.2), which is its special case when $\mathcal{A}$ has index zero. The first and most difficult part of the proof is to show that (6.1) is true when $\Sigma$ is the disc $\Sigma(0, 0, 1)$, and this we shall do in the next seven sections.
+
+Let $\Sigma$ be a disc. For each $O$-arc $F \subseteq \Sigma$, exactly one component of its complement does not intersect $bd\ \Sigma$ and points of it we say are \textit{inside} $F$. If $X \subseteq \Sigma$, we say $X$ is \textit{inside} $F$ if $x$ is inside $F$ for all $x \in X$. We say $F$ \textit{encloses} $X$ if $X - F$ is inside $F$. If $\Gamma$ is a drawing in $\Sigma$, and $C$ is a circuit of $\Gamma$, then the union of closures of its edges is an $O$-arc; and we shall often denote this $O$-arc by $C$. We define $\rho(C)$ to be the maximum number of mutually disjoint paths of $\Gamma$ between $C$ and $bd\ \Sigma$. By a form of Menger's theorem, $\rho(C)$ equals the minimum of $|U(\Gamma) \cap F|$ taken over all $\Gamma$-normal $O$-arcs $F$ with $C - F$ inside $F$. A \textit{$C$-ring} is such an $O$-arc $F$ which attains the minimum, that is, with $|V(\Gamma) \cap F| = \rho(C)$. We next study $C$-rings, and to do so we need the following lemmas.

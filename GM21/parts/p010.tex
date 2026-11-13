@@ -1,0 +1,30 @@
+\origpage{8}{}
+\textbf{2.7} \textit{For all integers $p, k \ge 0$ there exists $n \ge 0$ with the following property. Let $L, L'$ be vital $p$-linkages in a graph $G$, and for $1 \le i \le n$ let $(A_i, B_i)$ be as in (2.6), satisfying (2.6)(i) and (ii). Then there exist $i, i'$ as in (ii) such that $L \cap B_i \cap A_{i'} = L' \cap B_i \cap A_{i'} = M_{ii'}$.}
+
+\textbf{Proof.} First we prove an analogous version of (2.5) for two linkages $L, L'$ instead of one. We let $Z$ be the terminals of either $L$ or $L'$, and then follow the proof of (2.5), taking
+\begin{equation*}
+n = (4p + 1)(2p + k + 1)^{2(2p+k)} + 1.
+\end{equation*}
+Statement (1) in the proof of (2.5) holds with $2p + 1$ replaced by $4p + 1$, since $|Z| \le 2p$. We find distinct $i, j$ with $1 \le i, j \le n$ such that $V(A_i) \cap Z = V(A_j) \cap Z, V(B_i) \cap Z = V(B_j) \cap Z, \phi_i(\pi_i) = \phi_j(\pi_j)$, and $\phi_i(\pi'_i) = \phi_j(\pi'_j)$, where $\pi'_i$ is the pattern of $L' \cap B_i$. Then the proof of (2.5) yields that $L \cap B_i \cap A_{i+1} = M_i$ and $L' \cap B_i \cap A_{i+1} = M_i$, as required.
+
+Now we use this modified version of (2.5) to prove (2.7), by modifying the proof of (2.6) in the obvious way. $\square$
+
+\sectionhead{3 Tangles}
+
+A \textit{tangle of order} $\theta \ge 1$ in a graph $G$ is a set $\mathcal{T}$ of separations of $G$, all of order $< \theta$, such that
+
+\hspace*{12pt}(i) one of $(A, B), (B, A)$ belongs to $\mathcal{T}$, for every separation $(A, B)$ of $G$ of order $< \theta$
+
+\hspace*{12pt}(ii) if $(A_i, B_i) \in \mathcal{T}$ $(1 \le i \le 3)$ then $A_1 \cup A_2 \cup A_3 \ne G$
+
+\hspace*{12pt}(iii) if $(A, B) \in \mathcal{T}$ then $V(A) \ne V(G)$.
+
+We write $ord(\mathcal{T}) = \theta$. Tangles were introduced in [6]. We shall need several lemmas about tangles, which we establish in this section. First, the following was shown in theorem (5.2) of [6].
+
+\textbf{3.1} \textit{If a graph $G$ has tree-width $w$, then $G$ has a tangle of order $\ge \frac{2}{3}(w + 1)$, and has no tangle of order $> w + 1$.}
+
+If $\mathcal{T}$ is a tangle of order $\theta$ in a graph $G$, and $W \subseteq V(G)$ with $|W| < \theta$, we denote
+\begin{equation*}
+\{(A \setminus W, B \setminus W) : (A, B) \in \mathcal{T}, W \subseteq V(A \cap B)\}
+\end{equation*}
+by $\mathcal{T} \setminus W$. The following is theorem (8.5) of [6].

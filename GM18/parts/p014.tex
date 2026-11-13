@@ -1,0 +1,32 @@
+\origpage{90}{N. Robertson, P. Seymour / Journal of Combinatorial Theory, Series B 89 (2003) 77--108}
+The patchwork is robust if each $\Delta(e)$ ($e \in E(G)$) is robust. (This is automatic for $e \notin dom(\mu)$, since free patches are robust.)
+
+A \textit{quasi-order} $\Omega$ is a pair $(E(\Omega), \le)$, where $E(\Omega)$ is a class and $\le$ is a reflexive transitive relation on $E(\Omega)$. It is a \textit{well-quasi-order} if for every countable sequence $x_i$ ($i = 1, 2, \dots$) of elements of $E(\Omega)$ there exist $j > i \ge 1$ such that $x_i \le x_j$. If $\Omega_1, \Omega_2$ are quasi-orders with $E(\Omega_1) \cap E(\Omega_2) = \emptyset$ we denote by $\Omega_1 \cup \Omega_2$ the quasi-order $\Omega$ with $E(\Omega) = E(\Omega_1) \cup E(\Omega_2)$ in which $x \le y$ if and only if for some $i \in \{1, 2\}$, $x, y \in E(\Omega_i)$ and $x \le y$ in $\Omega_i$. If $\Omega_1, \Omega_2$ are quasi-orders we write $\Omega_1 \subseteq \Omega_2$ if $E(\Omega_1) \subseteq E(\Omega_2)$ and for all $x, y \in E(\Omega_1)$, $x \le y$ in $\Omega_1$ if and only if $x \le y$ in $\Omega_2$.
+
+If $\Omega$ is a quasi-order, a \textit{partial $\Omega$-patchwork} is a quadruple $(G, \mu, \Delta, \phi)$, where $(G, \mu, \Delta)$ is a patchwork and $\phi$ is a function from a subset $dom(\phi)$ of $E(G)$ into $E(\Omega)$. It is an \textit{$\Omega$-patchwork} if $dom(\phi) = E(G)$. It is \textit{robust} if $(G, \mu, \Delta)$ is robust. The underlying rooted hypergraph $G$ of a partial $\Omega$-patchwork $P = (G, \mu, \Delta, \phi)$ will be denoted by $\|P\|$.
+
+If $V$ is a finite set, $N_V$ denotes the graph with vertex set $V$ and no edges. A \textit{realization} of a patchwork $(G, \mu, \Delta)$ is a subgraph of $K_{V(G)}$ expressible in the form
+\begin{equation*}
+N_{V(G)} \cup \bigcup (\delta_e \colon e \in E(G))
+\end{equation*}
+where $\delta_e \in \Delta(e)$ for each $e \in E(G)$. A realization of a partial $\Omega$-patchwork $(G, \mu, \Delta, \phi)$ is a realization of $(G, \mu, \Delta)$. If $\mu_1, \mu_2$ are marches with the same length, we denote the bijection of $\bar{\mu}_1$ onto $\bar{\mu}_2$ mapping $\mu_1$ to $\mu_2$ by $\mu_1 \to \mu_2$. Let $P = (G, \mu, \Delta)$, $P' = (G', \mu', \Delta')$ be patchworks. An \textit{expansion} of $P$ in $P'$ is a function $\eta$ with domain $V(G) \cup E(G)$ such that
+
+\hspace*{12pt}$\bullet$ for each $v \in V(G)$, $\eta(v)$ is a non-empty subset of $V(G')$, and for each $e \in E(G)$, $\eta(e) \in E(G')$,
+
+\hspace*{12pt}$\bullet$ for distinct $v_1, v_2 \in V(G)$, $\eta(v_1) \cap \eta(v_2) = \emptyset$,
+
+\hspace*{12pt}$\bullet$ for distinct $e_1, e_2 \in E(G)$, $\eta(e_1) \ne \eta(e_2)$,
+
+\hspace*{12pt}$\bullet$ for each $e \in E(G)$, $e \in dom(\mu)$ if and only if $\eta(e) \in dom(\mu')$,
+
+\hspace*{12pt}$\bullet$ for each $e \in E(G) \setminus dom(\mu)$, if $v$ is an end of $e$ in $G$ then $\eta(v)$ contains an end of $\eta(e)$ in $G'$,
+
+\hspace*{12pt}$\bullet$ for each $e \in dom(\mu)$, $\mu(e)$ and $\mu'(\eta(e))$ have the same length, $k$ say, and for $1 \le i \le k$, $\eta(v)$ contains the $i$th term of $\mu'(\eta(e))$ where $v$ is the $i$th term of $\mu(e)$,
+
+\hspace*{12pt}$\bullet$ $\pi(G)$ and $\pi(G')$ have the same length, $k$ say, and for $1 \le i \le k$ $\eta(v)$ contains the $i$th term of $\pi(G')$ where $v$ is the $i$th term of $\pi(G)$,
+
+\hspace*{12pt}$\bullet$ for each $e \in dom(\mu)$, $\mu(e) \to \mu'(\eta(e))$ maps $\Delta(e)$ to $\Delta'(\eta(e))$.
+
+If $P = (G, \mu, \Delta, \phi)$, $P' = (G', \mu', \Delta', \phi')$ are partial $\Omega$-patchworks, an \textit{expansion} of $P$ in $P'$ is an expansion $\eta$ of $(G, \mu, \Delta)$ in $(G', \mu', \Delta')$ such that $\eta(e) \in dom(\phi')$ and $\phi(e) \le \phi'(\eta(e))$ for each $e \in dom(\phi)$.
+
+If $G$ is a hypergraph and $F \subseteq E(G)$, $G \setminus F$ denotes the subhypergraph with the same vertex set and edge set $E(G) \setminus F$. If $G$ is a rooted hypergraph, $G \setminus F$ denotes $(G^- \setminus F, \pi(G))$. If $P = (G, \mu, \Delta, \phi)$ is an $\Omega$-patchwork and $F \subseteq E(G)$, $P \setminus F$ denotes the $\Omega$-patchwork $(G \setminus F, \mu', \Delta', \phi')$ where $\mu', \Delta', \phi'$ are the restrictions of $\mu, \Delta, \phi$ to $dom(\mu) \cap E(G \setminus F)$, $E(G \setminus F)$, $E(G \setminus F)$ respectively. Similarly, if $P = (G, \mu, \Delta)$ is a

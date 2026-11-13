@@ -1,0 +1,44 @@
+\origpage{75}{N. Robertson, P.D. Seymour / Journal of Combinatorial Theory, Series B 89 (2003) 43--76}
+\noindent be the last vertex of $P_0$ in $V(H)$ before $v$. (This exists, because $s_1 \in V(H)$ is before $v$.) Let $P$ be the subpath of $P_1$ between $u$ and $v$.
+
+\hspace*{12pt}(15) $i + \psi + 2 \le d(u, y_1) \le 3\beta + 3 + \psi$.
+
+\textit{Subproof.} Now $u \notin M_i$ and hence $u \notin M_{i+\psi+2}$ by (14). The first inequality follows from the choice of $M_{i+\psi+2}$. For the second, it follows from (7) and (8) if $u = s_1$, because
+\begin{equation*}
+d(s_1, y_1) \delm{\ge}\fix{\le} d(s_1, t_1) + d(t_1, y_1) < \psi + 3\beta + 3.\fixmark{fix:8.1-p75a}
+\end{equation*}
+\fixnotetext{A misprint: the triangle inequality gives $\le$. In the next sentence, $d(u, y_1)$ is meant, since $u$ is the vertex in $\Lambda_1$.}%
+If $u \ne s_1$, then $u \in \Lambda_1$ by the choice of $v$ and so $d(\delm{v}\fix{u}, y_1) \le 3\beta + 3$. This proves (15).
+
+From (15), $d(u, y_1) \ge \psi$; and for $2 \le j \le \delta$,
+\begin{equation*}
+d(u, y_j) \ge d(y_1, y_j) - d(u, y_1) \ge \theta - (3\beta + 3 + \psi) \ge \psi
+\end{equation*}
+by (15). Since $P$ is an $H$-path with ends $u, v$, it follows from (1) that $d(u, v) < \psi$. Now if $v \in M_i$ then $d(y_1, v) \le i + 2$, and so
+\begin{equation*}
+d(u, y_{\delm{j}\fix{1}}) \delm{\ge}\fix{\le} d(u, v) + d(y_1, v) < \psi + i + 2,\fixmark{fix:8.1-p75b}
+\end{equation*}
+\fixnotetext{A misprint: the triangle inequality bounds $d(u, y_1)$ from above, and this contradicts (15).}%
+contrary to (15). Thus $v \notin M_i$, and so $v \notin \Lambda_1$ from the definition of $v$. But $v \ne s_2$ by (1), and so $v \in \Lambda_j$ for some $j$ with $2 \le j \le \delta$, since $P_0$ is an $H'$-path. Consequently $d(v, y_j) \le 3\beta + 3$. Hence
+\begin{equation*}
+\theta \le d(y_1, y_j) \le d(y_1, u) + d(u, v) + d(v, y_j) < (3\beta + 3 + \psi) + \psi + (3\beta + 3) < \theta,
+\end{equation*}
+a contradiction. Thus, our assumption that 8.1.3 is not satisfied was false. This proves 8.3. $\square$
+
+\sectionhead{References}
+
+[1] G. Dirac, A property of 4-chromatic graphs and remarks on critical graphs, J. London Math. Soc. 27 (1952) 85--92.
+
+[2] R.J. Duffin, Topology of series-parallel networks, J. Math. Anal. Appl. 10 (1965) 303--318.
+
+[3] P. Erd\"os, G. Szekeres, A combinatorial problem in geometry, Composito. Math. 2 (1935) 463--470.
+
+[4] N. Robertson, P.D. Seymour, Graph minors. V. Excluding a planar graph, J. Combin. Theory Ser. B 41 (1986) 92--114.
+
+[5] N. Robertson, P.D. Seymour, Graph minors. IX. Disjoint crossed paths, J. Combin. Theory Ser. B 49 (1990) 40--77.
+
+[6] N. Robertson, P.D. Seymour, Graph minors. X. Obstructions to tree-decomposition, J. Combin. Theory Ser. B 52 (1991) 153--190.
+
+[7] N. Robertson, P.D. Seymour, Graph minors. XII. Distance on a surface, J. Combin. Theory Ser. B 64 (1995) 240--272.
+
+[8] N. Robertson, P.D. Seymour, Graph minors. XIV. Extending an embedding, J. Combin. Theory Ser. B 65 (1995) 23--50.

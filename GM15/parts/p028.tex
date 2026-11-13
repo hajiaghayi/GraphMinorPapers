@@ -1,0 +1,28 @@
+\origpage{139}{GRAPH MINORS. XV. GIANT STEPS}
+From (iii) we see that $V(J_i \cap H) \subseteq \Delta_i$ for $1 \le i \le k$, since $\theta' + 13\mu + 13 < \beta$. Moreover, $\Delta_1, \dots, \Delta_k$ are mutually disjoint; for if, say $\sigma \in \Delta_i \cap \Delta_j$ where $i \ne j$, then $d(r_i, \sigma), d(r_j, \sigma) \le 3\beta + 6$ by (ii), and so $d(r_i, r_j) \le 6\beta + 12 < \theta$, a contradiction. Hence (i) holds, as required. $\square$
+
+Henceforth we assume that $\Lambda_i, \Delta_i, \Omega_i$ are as in (7.5). For $1 \le i \le k$, let $\Omega_i^* = \alpha_0^{-1}(\text{bd}(\Delta_i))$ and $G_i^* = J_i \cup \alpha_0^{-1}(\Delta_i)$.
+
+\stmt
+(7.6) $G^*_1, \dots, G^*_k$ \textit{are mutually disjoint.}
+
+\textit{Proof.} Let $1 \le i < j \le k$, and suppose that $v \in V(G^*_i \cap G^*_j)$. If $v \notin V(\alpha_0^{-1}(\Delta_i))$ then $v \in V(J_i)$ and $v \notin V(H)$, and so $v \notin V(H \cup J_0 \cup J_j)$; and consequently $v \notin V(G^*_j)$, a contradiction. We assume then that $v \in V(\alpha_0^{-1}(\Delta_i))$, and similarly $v \in V(\alpha_0^{-1}(\Delta_j))$. Now either $v \in V(A)$ for some $(A, \Omega) \in \mathcal{S}_0$ with $\alpha_0(A, \Omega) \subseteq \Delta_i$, or $v \in V(\mathcal{S}_0)$ and $\alpha_0(v) \in \Delta_i$; and either $v \in V(A')$ for some $(A', \Omega') \in \mathcal{S}_0$ with $\alpha_0(A', \Omega') \subseteq \Delta_j$, or $v \in V(\mathcal{S}_0)$ and $\alpha_0(v) \in \Delta_j$.
+
+Suppose that $v \in V(\mathcal{S}_0)$. Since $\Delta_i \cap \Delta_j = \emptyset$, we may assume that $\alpha_0(v) \notin \Delta_i$. Hence there exists $(A, \Omega) \in \mathcal{S}_0$ with $\alpha_0(A, \Omega) \subseteq \Delta_i$ such that $v \in V(A)$. Since $v \in V(A)$ and $v \in V(\mathcal{S})$, it follows that $v \in \bar{\Omega}$, and hence $\alpha_0(v) \in \text{bd}(\alpha(A, \Omega)) \subseteq \Delta_i$, a contradiction. Hence $v \notin V(\mathcal{S}_0)$.
+
+We deduce that $v \in V(A \cap A')$ for some $(A, \Omega), (A', \Omega') \in \mathcal{S}_0$ with $\alpha_0(A, \Omega) \subseteq \Delta_i$ and $\alpha_0(A', \Omega') \subseteq \Delta_j$. Since $\Delta_i \cap \Delta_j = \emptyset$ it follows that $(A, \Omega) \ne (A', \Omega')$, and so $V(A \cap A') \subseteq \bar{\Omega} \cap \bar{\Omega}' \subseteq V(\mathcal{S})$; and hence $v \in V(\mathcal{S})$, a contradiction. Thus there is no such $v$, as required. $\square$
+
+\stmt
+(7.7) \textit{If there is no crooked transaction of cardinality} $\pi$ \textit{in} $(G_i^*, \Omega_i^*)$ \textit{for} $1 \le i \le k$, \textit{then (S3) holds.}
+
+\textit{Proof.} By (6.1), there is a segregation $\mathcal{S}_i$ of $G_i^*$ of type $(3\pi + 9, 1)$ with $\bar{\Omega}_i^* \subseteq V(\mathcal{S}_i)$, and an arrangement $\alpha_i$ of $\mathcal{S}_i$ in a closed disc $\Delta$, such that $\Omega_i^* = \alpha_i^{-1}(\text{bd}(\Delta))$. By applying a suitable homeomorphism, we may assume that $\Delta = \Delta_i$, and $\alpha_0(v) = \alpha_i(v)$ for each $v \in \bar{\Omega}_i^*$. Let
+\begin{equation*}
+\mathcal{S}' = \{(A, \Omega) \in \mathcal{S}_0 \colon \alpha_0(A, \Omega) \not\subseteq \Delta_1, \dots, \Delta_k\}.
+\end{equation*}
+\hspace*{12pt}(1) \textit{For} $1 \le i \le k$, \textit{if} $(A, \Omega) \in \mathcal{S}'$ \textit{then} $E(G_i^* \cap A) = \emptyset$ \textit{and} $V(G_i^* \cap A) \subseteq \bar{\Omega}_i^*$.
+
+\textit{Subproof.} Let $x$ be a vertex or edge of $G$ which belongs to $G_i^* \cap A$. Since
+\begin{equation*}
+G_i^* \cap A \subseteq (J_i \cup \alpha_0^{-1}(\Delta_i)) \cap G_0
+\end{equation*}
+and $J_i \cap G_0 \subseteq \alpha_0^{-1}(\Delta_i)$, it follows that $A \subseteq \alpha_0^{-1}(\Delta_i)$. Suppose that it is not the case that $x \in V(\mathcal{S}_0)$ and $\alpha_0(x) \in \Delta_i$. Then there exists $(A', \Omega') \in \mathcal{S}_i$ with $\alpha_0(A', \Omega') \subseteq \Delta_i$, such that $x$ belongs to $A'$, since $x$ belongs to $\alpha_0^{-1}(\Delta_i)$.

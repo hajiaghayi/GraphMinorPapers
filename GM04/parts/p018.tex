@@ -1,0 +1,31 @@
+\origpage{244}{ROBERTSON AND SEYMOUR}
+\noindent patches are free is well-quasi-ordered by our containment relation, provided that $\Omega$ is a well-quasi-order; and in particular, it is important that we do not require the size of edges to be bounded. It is clear, therefore, that if our relation is to yield a well-quasi-order, it must permit edges to change size.)
+
+The definition is as follows. If $\pi, \pi'$ are marches of the same length, we denote by $\pi \to \pi'$ the bijection from $\bar{\pi}$ onto $\bar{\pi}'$ mapping $\pi$ to $\pi'$. Let $P = (G, \mu, \Delta, \phi)$, $P' = (G', \mu', \Delta', \phi')$ be $\Omega$-patchworks. An \textit{expansion} of $P$ in $P'$ is a function $\eta$ with domain $V(G) \cup E(G)$ such that
+
+\hspace*{12pt}(i) for each $v \in V(G)$, $\eta(v)$ is a non-empty subset of $V(G')$, and for each $e \in E(G)$, $\eta(e) \in E(G')$
+
+\hspace*{12pt}(ii) for distinct $v_1, v_2 \in V(G)$, $\eta(v_1) \cap \eta(v_2) = \emptyset$
+
+\hspace*{12pt}(iii) for distinct $e_1, e_2 \in E(G)$, $\eta(e_1) \neq \eta(e_2)$
+
+\hspace*{12pt}(iv) for each $e \in E(G)$, $e \in \operatorname{dom}(\mu)$ if and only if $\eta(e) \in \operatorname{dom}(\mu')$
+
+\hspace*{12pt}(v) for each $e \in E(G) - \operatorname{dom}(\mu)$, if $v$ is an end of $e$ in $G$ then $\eta(v)$ contains an end of $\eta(e)$ in $G'$
+
+\hspace*{12pt}(vi) for each $e \in \operatorname{dom}(\mu)$, $\mu(e)$ and $\mu'(\eta(e))$ have the same length, $k$, say, and for $1 \le i \le k$, $\eta(v)$ contains the $i$th term of $\mu'(\eta(e))$ where $v$ is the $i$th term of $\mu(e)$
+
+\hspace*{12pt}(vii) $\pi(G)$ and $\pi(G')$ have the same length, $k$, say, and for $1 \le i \le k$, $\eta(v)$ contains the $i$th term of $\pi(G')$ where $v$ is the $i$th term of $\pi(G)$
+
+\hspace*{12pt}(viii) for each $e \in \operatorname{dom}(\mu)$, $\mu(e) \to \mu'(\eta(e))$ maps $\Delta(e)$ to $\Delta'(\eta(e))$
+
+\hspace*{12pt}(ix) for each $e \in E(G)$, $\phi(e) \le \phi'(\eta(e))$.
+
+If $G$ is a hypergraph and $F \subseteq E(G)$, $G \setminus F$ denotes the subhypergraph with the same vertex set and edge set $E(G) - F$. If $G$ is a rooted hypergraph, $G \setminus F$ denotes $(G^- \setminus F, \pi(G))$. If $P = (G, \mu, \Delta, \phi)$ is an $\Omega$-patchwork and $F \subseteq E(G)$, $P \setminus F$ denotes the $\Omega$-patchwork $(G \setminus F, \mu', \Delta', \phi')$ where $\mu', \Delta', \phi'$ are the restrictions of $\mu, \Delta, \phi$ to $\operatorname{dom}(\mu) \cap E(G \setminus F)$, $E(G \setminus F)$, $E(G \setminus F)$, respectively. Let $\eta$ be an expansion of $P = (G, \mu, \Delta, \phi)$ in $P' = (G', \mu', \Delta', \phi')$. A realization $H$ of $P' \setminus \eta(E(G))$ is said to \textit{realize} $\eta$ if for every $v \in V(G)$, $\eta(v)$ is the vertex set of some component of $H$; and if there is such a realization, $\eta$ is said to be \textit{realizable}. Let us say that $P$ is \textit{simulated} in $P'$ if there is a realizable expansion of $P$ in $P'$. This is our containment relation.
+
+\stmt
+(7.1) \textit{Let $\eta$ be a expansion of $P = (G, \mu, \Delta, \phi)$ in $P' = (G', \mu', \Delta', \phi')$, and let $\eta'$ be an expansion of $P'$ in $P'' = (G'', \mu'', \Delta'', \phi'')$. Let $\eta''$ be defined by}
+\begin{align*}
+\eta''(v) &= \bigcup (\eta'(v') \colon v' \in \eta(v)) & (v \in V(G)) \\
+\eta''(e) &= \eta'(\eta(e)) & (e \in E(G)).
+\end{align*}

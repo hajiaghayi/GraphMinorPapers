@@ -1,0 +1,32 @@
+\origpage{554}{N. Robertson, P. Seymour / Journal of Combinatorial Theory, Series B 102 (2012) 530--563}
+\textit{Subproof.} Now $\Gamma$ is connected since it is 2-cell, and $U(\Gamma) \not\subseteq ins(F)$ by the third axiom for tangles. Consequently $ins(F) \cap U(\Gamma) = \emptyset$. Suppose that $D(A_0) \subseteq ins(F)$ for some $A_0 \in \mathcal{A}$ with $d(D(A_0), \Sigma \setminus \Delta) < \theta$. Let $C$ be the union of $A \setminus W$ over all $A \in \mathcal{A}$ with $D(A) \subseteq ins(F)$, and let $D$ be the union of $K \setminus W$, $\Gamma$ and $A \setminus W$ over all $A \in \mathcal{A}$ with $D(A) \not\subseteq ins(F)$. Let $z \in A(\Gamma)$ with $F \subseteq z$; then $D(A_0) \subseteq z$, and so $d(z, \Sigma \setminus \Delta) = d(D(A_0), \Sigma \setminus \Delta) < \theta$. Consequently $d(D(A), \Sigma \setminus \Delta) = d(z, \Sigma \setminus \Delta) < \theta$ for all $A \in \mathcal{A}$ with $D(A) \subseteq ins(F)$, and by hypothesis, $A \cap K = N_W$ for every such $A$. Since $V(A \cap A') = (\bar{\pi}(A) \cap \bar{\pi}(A')) \cup W = W$ if $A, A' \in \mathcal{A}$ and $D(A) \subseteq ins(F)$ and $D(A') \not\subseteq ins(F)$, it follows that $C \cap D$ is null. But $(C \cap \Gamma, D \cap \Gamma) \in \mathcal{T}$ since $C \cap \Gamma$ is null, and this contradicts (J7) since $|\bar{\pi}(A_0)| \ge 1$ by (J2). Hence (3) holds.
+
+\hspace*{12pt}(4) \textit{Every $A \in \mathcal{A}$ with $d(D(A), \Sigma \setminus \Delta) < \theta$ is good.}
+
+\textit{Subproof.} Suppose that $A \in \mathcal{A}$ is bad and $d(D(A), \Sigma \setminus \Delta) < \theta$. By (2), $D(A) \cap U(\Gamma) = \emptyset$; let $r$ be the region of $\Gamma$ with $D(A) \subseteq r$. Since $d(D(A), \Sigma \setminus \Delta) < \theta$, it follows that $d(r, \Sigma \setminus \Delta) < \theta$. By (3), there is a sequence $A^1, A^2, \dots, A^k$ of members of $\mathcal{A}$ such that $A^1 = A$, $D(A^k) \cap U(\Gamma) \ne \emptyset$, and for $1 \le i < k$, $D(A^i) \cap D(A^{i+1}) \ne \emptyset$. By choosing $k$ minimum, we may assume that $D(A^1), \dots, D(A^{k-1})$ are all disjoint from $U(\Gamma)$, and hence $D(A^i) \cap r \ne \emptyset$ for $1 \le i \le k$. Consequently,
+\begin{equation*}
+d(D(A^i), \Sigma \setminus \Delta) \le d(r, \Sigma \setminus \Delta) < \theta
+\end{equation*}
+for $1 \le i \le k$. Choose $i$ with $1 \le i \le k$ maximum so that $A^i$ is bad. Since $A^k$ is good by (2), it follows that $i < k$, and $A^{i+1}$ is good, and so $\bar{\pi}(A^{i+1}) \subseteq V(\Gamma)$. But
+\begin{equation*}
+\emptyset \ne D(A^i) \cap D(A^{i+1}) = \bar{\pi}(A^i) \cap \bar{\pi}(A^{i+1}) \subseteq V(\Gamma)
+\end{equation*}
+and so $D(A^i) \cap V(\Gamma) \ne \emptyset$, a contradiction. This proves (4).
+
+Let $Z$ be a basis for $\phi$ with $Z \subseteq V(K \cup \bigcup(A : A \in \mathcal{B}))$; this exists, since $\mathcal{B}$ is sufficient for $\phi$. Let $L = \bigcup(\phi(v) : v \in V(H))$.
+
+\hspace*{12pt}(5) \textit{If $L'$ is a subgraph of $L \cup \Gamma$ with $\phi(E(H)) \cap E(L') = \emptyset$ and with the same effect on $Z$ as $L$, then $L' \cup \Gamma = L \cup \Gamma$, and if $L' \subseteq L$ then $L' = L$.}
+
+\textit{Subproof.} By 6.2 there is a model $\phi'$ of $(H, \chi)$ in $(G, \omega)$ such that $\phi'(e) = \phi(e)$ for all $e \in E(H)$ and $\bigcup(\phi'(v) : v \in V(H)) \subseteq L'$. Now $\mathcal{B}$ is sufficient for $\phi'$, from the choice of $Z$; and (J1)--(J7) and the other hypotheses of 7.4 remain satisfied if we replace $\phi$ by $\phi'$. From (1), $L' \cup \Gamma = L \cup \Gamma$, and from (1), if $L' \subseteq L$ then $L' = L$. This proves (5).
+
+\hspace*{12pt}(6) \textit{$L$ is a forest, and every vertex of $L$ with degree at most 1 belongs to $Z$.}
+
+\textit{Subproof.} This follows from the second assertion of (5).
+
+\hspace*{12pt}(7) \textit{If $A \in \mathcal{A} \setminus \mathcal{B}$, then $L \cap A \subseteq \Gamma \cup N_W$.}
+
+\textit{Subproof.} Since $A \notin \mathcal{B}$, it follows that $d(D(A), \Sigma \setminus \Delta) < \theta$. Since $A \in \mathcal{A}$, we deduce from (4) that $A$ is good, and therefore $\bar{\pi}(A) \subseteq V(\Gamma)$, and for all $u, v \in \bar{\pi}(A)$ there is a path of $\Gamma \cap A$ with ends $u, v$ and with no internal vertex in $\bar{\pi}(A)$. Since no edge of $L \cap A$ has an end in $W$ (because $A \notin \mathcal{B}$) there is a subgraph $L'$ of $(\Gamma \cap A) \cup N_W$ with the same effect in $\bar{\pi}(A) \cup W$ as $L \cap A$. Since $d(D(A), \Sigma \setminus \Delta) < \theta$, it follows that $A \cap K$ is null, and so there is a subgraph $B$ of $G$ such that $(A, B)$ is a separation and $V(A \cap B) = \bar{\pi}(A) \cup W$. Since $Z \subseteq V(B)$, it follows from 2.6 (with $Z$ replaced by $Z \cup \bar{\pi}(A)$) that $L' \cup (L \cap B)$ has the same effect on $Z$ as $L$. Now $L' \subseteq (\Gamma \cap A) \cup N_{\delm{w}\fix{W}} \subseteq \Gamma \cup L$\fixnote{fix:7.4-claim7a}{Here $N_W$ is the graph of (J1), with vertex set $W$ and no edges, as in the sentence before. No $w$ is defined here.}, and
+\begin{equation*}
+\phi(E(H)) \cap E(L') \subseteq \phi(E(H)) \cap E(A) = \emptyset
+\end{equation*}
+since $A \notin \mathcal{B}$ and $\mathcal{B}$ is sufficient for $\phi$. Consequently, $L' \cup (L \cap B) \subseteq \Gamma \cup L$, and $\phi(E(H)) \cap E(L' \cup (L \delm{\cup}\fix{\cap} B)) = \emptyset$.\fixnote{fix:7.4-claim7b}{The graph is $L' \cup (L \cap B)$, named in the first half of the same sentence, to which the proof goes on to apply (5) and (6).} By (6),

@@ -1,0 +1,21 @@
+\origpage{192}{ROBERTSON AND SEYMOUR}
+\textit{Proof.} Let $X = \{n \in N(\Gamma) : \gamma(n) \in V(A)\}$, and $Y = \{n \in N(\Gamma) : \gamma(n) \in V(B)\}$. Then $X \cup Y = N(\Gamma)$, $\tilde{c}_0 \subseteq X$, $|X \cap Y| \le |\tilde{c}_0|$ and $\tilde{c} \subseteq X$ or $\tilde{c} \subseteq Y$ for every cell $c$. Moreover, $\gamma(I) \subseteq X$ and $\gamma(J) \subseteq Y$, and so
+\begin{equation*}
+|\gamma(I) \cap \gamma(J)| \le |X \cap Y| \le |c_0| \le 3.
+\end{equation*}
+Since $A$ is small and has $<ord(\mathscr{T}) - 2p$ attachments, it follows from (4.3) that $\gamma(n) \notin V(A)$ for some $n \in N(\Gamma)$, and consequently $X \ne N(\Gamma)$ and so $\gamma(I) \ne N(\Gamma)$. Suppose first that $\gamma(J) \ne N(\Gamma)$. Then by (11.1), $|\gamma(I) \cap \gamma(J)| = 3$ and there is a disc $\Delta$ as in (11.1). Since
+\begin{equation*}
+|\gamma(I) \cap \gamma(J)| \le |X \cap Y| \le |c_0| \le 3
+\end{equation*}
+it follows that equality holds throughout, and in particular $\gamma(I) \cap \gamma(J) = X \cap Y$, and $|X \cap Y| = |c_0| = 3$. Moreover, $X = \gamma(I)$ and $Y = \gamma(J)$. Since $A$ has $<ord(\mathscr{T}) - 4p - 3$ attachments and $\alpha(\Delta)$ has $\le 2p + 3$ attachments, it follows that $A \cup \alpha(\Delta)$ has $<ord(\mathscr{T}) - 2p$ attachments; and since $A$ and $\alpha(\Delta)$ are small, we deduce from (4.1)(ii) that $A \cup \alpha(\Delta)$ is small. By (4.3) there exists $n \in N(\Gamma)$ with $\gamma(n) \notin V(A \cup \alpha(\Delta))$. Hence $n \notin \Delta$, and $n \notin X$, and so every cell $c$ with $n \in \tilde{c}$ belongs to $J$. Since there is such a cell, it follows that $\{c \in C(\Gamma) : c \subseteq \Delta\} \ne J$, and so $\{c \in C(\Gamma) : c \subseteq \Delta\} = I$. We deduce that $X \subseteq \Delta \cap N(\Gamma)$ and $Y \subseteq \Sigma - \Delta \cap N(\Gamma)$ (because $X = \gamma(I)$ and $Y = \gamma(J)$).
+
+Let us investigate the two cases of (11.1)(iii). Suppose, first, that $bd(\Delta)$ is a $\Gamma$-normal $O$-arc in $\Sigma$. Since $c_0 \in I$ and hence $c_0 \subseteq \Delta$, it follows from (8.5) that $\Delta \cap N(\Gamma) \subseteq bd(\Delta)$, and so $Y = N(\Gamma)$ contrary to our assumption. Thus $bd(\Delta)$ is not a $\Gamma$-normal $O$-arc in $\Sigma$, and by (11.1)(iii) there is a $\Gamma$-normal $I$-arc $F$ with $F \subseteq bd(\Delta) \subseteq F \cup bd(\Sigma)$ and $N(\Gamma) \cap F = \gamma(I) \cap \gamma(J)$. Then $N(\Gamma) \cap F = X \cap Y$, and (11.2)(iii) holds. We conclude that the theorem is true if $\gamma(J) \ne N(\Gamma)$.
+
+Now let us assume that $\gamma(J) = N(\Gamma)$, and consequently $Y = N(\Gamma)$. Since $|X \cap Y| \le |\tilde{c}_0|$ we deduce that $|X| \le |\tilde{c}_0|$; and since $\tilde{c}_0 \subseteq X$ it follows that $X = \tilde{c}_0$. But then (11.2)(i) holds, as required. $\square$
+
+\stmt
+(11.3) \textit{Let $F \subseteq \Sigma$ be a $\Gamma$-normal $I$-arc with $F \cap N(\Gamma) = \{n_1, n_2, n_3\}$, where $F$ has ends $n_1, n_2$, and let $\Delta \subseteq \Sigma$ be the disc with $\alpha(\Delta)$ small and $F \subseteq bd(\Delta) \subseteq F \cup bd(\Sigma)$. Suppose that there is a cell $c_0 \subseteq \Delta$ with $|\tilde{c}_0| = 3$. Then either}
+
+\hspace*{12pt}(i) \textit{$\tilde{c}_0 = \Delta \cap N(\Gamma)$ or}
+
+\hspace*{12pt}(ii) \textit{there is no separation $(A_1, A_2)$ of $\alpha(\Delta)$ with $V(A_1 \cap A_2) = \{\gamma(n_1), \gamma(n_2)\}$, $\gamma(n_3) \in V(A_1)$, and $\beta(n_1) \cup \beta(n_2) \subseteq V(A_2)$.}

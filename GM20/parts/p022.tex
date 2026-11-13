@@ -1,0 +1,30 @@
+\origpage{346}{N. Robertson, P.D. Seymour / Journal of Combinatorial Theory, Series B 92 (2004) 325--357}
+\sectionhead{7. Another adjustment}
+
+Before we apply 6.3 to Wagner's conjecture, it is convenient to make one further small adjustment to it. We begin with the following lemma. A patchwork $(G, \mu, \Delta)$ or $\Omega$-patchwork $(G, \mu, \Delta, \phi)$ is free if $\Delta(e)$ is free for all $e \in E(G)$.
+
+\textbf{7.1.} \textit{Let $P = (G, \mu, \Delta)$ be a free patchwork and $W \subseteq \bar{\pi}(G)$. Let $K$ be a grouping with $V(K) = \bar{\pi}(G) \setminus W$. Then $K$ is feasible in $P/W$ if and only if $K \cup N_W$ is feasible in $P$.}
+
+\textbf{Proof.} If $K$ is feasible in $P/W$, let
+\begin{equation*}
+H' = N_{V(G) \setminus W} \cup \bigcup(\delta'_e : e \in E(G))
+\end{equation*}
+be a realization of $P/W$ such that for distinct $x, y \in \bar{\pi}(G) \setminus W$, $x$ and $y$ are connected in $H$ if and only if they are adjacent in $K$. For each $e \in E(G)$ there exists $\delta_e \in \Delta(e)$ such that the vertices of $\delta_e$ in $W$ are isolated vertices of $\delta_e$ and their removal yields $\delta'_e$. Let
+\begin{equation*}
+H = N_{V(G)} \cup \bigcup(\delta_e : e \in E(G)).
+\end{equation*}
+Then for distinct $x \ y \in \bar{\pi}(G)$, $x$ and $y$ are connected in $H$ if and only if they are adjacent in $K \cup N_W$, as required. For the converse, let $K \cup N_W$ be feasible in $P$, and choose a corresponding realization
+\begin{equation*}
+H = N_{V(G)} \cup \bigcup(\delta_e : e \in E(G)).
+\end{equation*}
+Since $P$ is free, we may choose $H$ and the $\delta_e$'s such that for each $e \in E(G))$ every vertex of $W$ in $V(\delta_e)$ is an isolated vertex of $\delta_e$. Then $H/W$ is a realization of $P/W$ with the required properties. This proves 7.1. $\square$
+
+\textbf{7.2.} \textit{Let $\mathcal{F}$ be a well-behaved set of patchworks and let $\theta \ge 1$. Then there is a well-behaved set of patchworks $\mathcal{F}'$ with the following property. Let $P = (G, \mu, \Delta)$ be a free patchwork, let $\mathcal{T}$ be a tangle in $G$ of order $\ge \theta$, let $W \subseteq V(G)$ with $|W| < \theta$, and let $\mathcal{L}$ be a fine rooted location in $G/W$ such that $\mathcal{L}$ is linked to $\mathcal{T}/W$, and $\mathcal{F}$ contains a heart of $(P/W, \mathcal{L})$. Then there is a fine rooted location $\mathcal{L}'$ in $G$ such that}
+
+\hspace*{12pt}$\bullet$ \textit{$W \subseteq \bar{\pi}(A)$ for all $A \in \mathcal{L}'$,}
+
+\hspace*{12pt}$\bullet$ \textit{$\mathcal{L}'/W = \mathcal{L}$ and hence is linked to $\mathcal{T}/W$, and}
+
+\hspace*{12pt}$\bullet$ \textit{$\mathcal{F}'$ contains a heart of $(P, \mathcal{L}')$.}
+
+\textbf{Proof.} Let $\mathcal{F}'$ be related to $\mathcal{F}$ as $\mathcal{F}_2$ is related to $\mathcal{F}_1$ in 4.9. By 4.9, $\mathcal{F}'$ is well-behaved, and we claim it satisfies the theorem. For let $P$, $\mathcal{T}$, $W$, $\mathcal{L}$ be as above. Let $\mathcal{L}'$ be the rooted location in $G$ such that $W \subseteq \bar{\pi}(A)$ for every $A \in \mathcal{L}'$ and $\mathcal{L}'/W = \mathcal{L}$. We claim that $\mathcal{L}'$ has the desired properties. Certainly the first two statements holds. To see the third, let $P' = (G', \mu', \Delta')$ be a heart of $(P, \mathcal{L}')$. Then $P'/W$ is defined. We claim that $P'/W$ is a

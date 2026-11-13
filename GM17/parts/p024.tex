@@ -1,0 +1,25 @@
+\origpage{185}{GRAPH MINORS, XVII}
+It is straightforward to verify that $\pi' = (\Sigma', \Gamma', \alpha', \beta', \gamma)$ is a portrayal of $G$. Moreover, it has warp $\le q$ at $\Theta$, for $|V(A_1 \cap A_2)| \le q$, and there is no linkage in $\alpha'(c_1)$ between $\beta(n_1 +)$ and $\beta(n_0 +)$ of cardinality $q + 1$ since $\gamma(n_0)$ is an isolated vertex of $\alpha'(c_1)$ and is not in $\beta(n_1 +)$ (and similarly for $\alpha'(c_2)$). Since $A_i$ is small and hence $A'_i$ is small $(i = 1, 2)$ by (4.1) (ii), it follows that $\pi'$ is $\mathcal{T}$-central. But it is truer than $\pi$, a contradiction. $\square$
+
+\stmt
+(9.4) \textit{Let $\pi$ have warp $q$ at a cuff $\Theta$; then $|\beta(n)| = q$ for all $n \in N(\Gamma) \cap \Theta$.}
+
+\textit{Proof.} Let $n_1 \in N(\Gamma) \cap \Theta$, and suppose that $|\beta(n_1)| < q$. Let $c_0$ be a border cell with $n_1 \in \tilde{c}_0$. Since $|\beta(n_1)| < q$ there are not $q + 1$ mutually vertex-disjoint paths as in (9.3), and so by (9.3) there is an internal cell $c_3$ with $\tilde{c}_0 \subseteq \tilde{c}_3$. By (8.8) $|\tilde{c}_3| = 3$ and by (8.6) the third node of $\tilde{c}_3$ is internal. Let $\tilde{c}_3 = \{n_1, n_2, n_3\}$ where $\tilde{c}_0 = \{n_1, n_2\}$ and $n_3$ is internal.
+
+Let $F_i \subseteq c_3 \cup \{n_i, n_3\}$ be a closed line segment with ends $n_i$, $n_3$ and $F_i \cap bd(\bar{c}_3) = \{n_i, n_3\}$ $(i = 1, 2)$, chosen so that $F_1 \cap F_2 = \{n_3\}$. Let $\Delta \subseteq \Sigma$ be the disc bounded by $F_1 \cup F_2 \cup (c_0 \cap \Theta)$ and let $\Sigma' = \Sigma - (\Delta - (F_1 \cup F_2))$. Let $F'_1$ be the closed line segment in $bd(\bar{c}_3)$ between $n_3$ and $n_1$ not containing $n_2$, and define $F'_2$ similarly. For $i = 1, 2$, let $\Delta_i$ be the disc bounded by $F_i \cup F'_i$, and let $c_i = \Delta_i - \{n_i, n_3\}$. Let
+\begin{equation*}
+\Gamma' = (U(\Gamma) - (\Delta - (F_1 \cup F_2)), N(\Gamma));
+\end{equation*}
+then $\Gamma'$ is a painting in $\Sigma'$ and $c_1$, $c_2$ are cells of it. By (8.3), $C(\Gamma') = (C(\Gamma) - \{c_0, c_3\}) \cup \{c_1, c_2\}$. Define
+\begin{align*}
+\alpha'(c_1) &= \alpha(c_0) \cup \alpha(c_3) \\
+V(\alpha'(c_2)) &= \beta(n_1) \cup \{\gamma(n_1), \gamma(n_3)\}, \quad E(\alpha'(c_2)) = \emptyset \\
+\alpha'(c) &= \alpha(c) \quad (c \in C(\Gamma) - \{c_0, c_3\}) \\
+\beta'(n_3) &= \beta(n_1 +) \\
+\beta'(n) &= \beta(n) \quad (n \in N(\Gamma) \cup bd(\Sigma)).
+\end{align*}
+Let $\pi' = (\Sigma', \Gamma', \alpha', \beta', \gamma)$; we claim that $\pi'$ is a portrayal of $G$. \textbf{(P1)}-\textbf{(P6)} are obvious; let us verify \textbf{(P7)}. Let $\Theta'$ be the cuff of $\Sigma'$ corresponding to $\Theta$, and let $m_1, m_2, m_3, m_4 \in N(\Gamma')$ border $\Theta'$ in order. We must show that
+\begin{equation*}
+\beta(m_1 +) \cap \beta(m_3 +) \subseteq \beta(m_2 +) \cup \beta(m_4 +).
+\end{equation*}
+We may assume that $m_1, m_2, m_3, m_4$ are all distinct, and that one of them is $n_3$; indeed, we may assume that $m_1 = n_3$ or $m_2 = n_3$. If $m_1 = n_3$, then $n_1$,

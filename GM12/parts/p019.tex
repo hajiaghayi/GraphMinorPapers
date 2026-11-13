@@ -1,0 +1,29 @@
+\origpage{258}{ROBERTSON AND SEYMOUR}
+\stmt
+(6.1) \textit{In these circumstances,} \fix{\textit{if $\theta \ge 4$ then}} $d(e_1, e_{\theta/2}) \ge \theta$.\fixnote{fix:6.1}{As printed, (6.1) fails for $\theta = 2$: then $\theta/2 = 1$, so $e_1 = e_{\theta/2}$ and $d(e_1, e_1) = 0 < 2$. For even $\theta \ge 4$, (6.1) holds.}
+
+\textit{Proof.} The lines $U(P_1), \dots, U(P_{\theta/2})$ divide $\Delta - F$ into $\theta/2 + 1$ open discs $D_0, D_1, \dots, D_{\theta/2}$, say, where $U(P_i) = \bar{D}_{i-1} \cap \bar{D}_i$ ($1 \le i \le \theta/2$). For $0 \le i \le \theta/2$ let $r_i$ be the region of $\Gamma$ including $D_i$. Since $\Gamma_1$ is 2-cell it follows that $r_0, r_1, \dots, r_{\theta/2}$ are all distinct. Hence we may choose a radial drawing $K$ of $\Gamma$ such that for $0 \le i \le \theta/2$, $D_i$ contains a vertex $v_i$ say of $K$, and $D_i$ includes edges of $K$ from $v_i$ to every vertex of $P_i$ (if $i \ge 1$) and to every vertex of $P_{i+1}$ (if $i < \theta/2$). \fix{The metric $d$ was defined on page 242 from some radial drawing of $\Gamma$, but it does not depend on which one. For if $d'$ is the metric computed from another radial drawing, then (7.7)(ii), applied with $\Gamma' = \Gamma$ and $\mathscr{T}' = \mathscr{T}$ in both orders, gives $d \ge d'$ and $d' \ge d$; and the proof of (7.7) uses only (1.2) and (2.1), not (6.1). So we may compute $d$ in $K$.}\fixnote{fix:6.1-proof-metric}{The paper computes $d$ in this special $K$ without saying why $d$ is the same for every radial drawing. Graph Minors XI, page 75, says that a radial drawing is unique up to homeomorphisms of $\Sigma$ fixing $U(\Gamma)$, but neither paper says how the metric changes under them. The inserted text gives the reason.}
+
+\hspace*{12pt}(1) $\text{ins}(C) \subseteq \Delta$ \textit{for every circuit} $C$ \textit{of} $K$ \textit{with} $U(C) \subseteq \Delta$.
+
+\textit{Subproof.} Let $D \subseteq \Delta$ be the closed disc bounded by $U(C)$ for some circuit $C$ of $K$ with $U(C) \subseteq \Delta$. Then there is no circuit of $\Gamma \cap D$, and so by [4, Theorem (2.10)], $(\Gamma \cap \overline{\Sigma - D}, \Gamma \cap D) \notin \mathscr{T}$. Hence $(\Gamma \cap D, \Gamma \cap \overline{\Sigma - D}) \in \mathscr{T}$, and so $D = \text{ins}(C)$, as required.
+
+Let $W$ be a trace of a homeomorphism of $S^1$ onto $F$. Then $U(W) \subseteq \Delta$ from our choice of $K$, and $W$ has length $2\theta$ since $|F \cap V(\Gamma)| = \theta$. Since $\theta_1 > \theta$ it follows that $\text{ins}(W)$ is defined, and by (1) $\text{ins}(W) \subseteq \Delta$.
+
+\hspace*{12pt}(2) \textit{There is no closed walk} $W'$ \textit{of} $K$ \textit{of length} $< 2\theta$ \textit{with} $\text{ins}(W) \subseteq \text{ins}(W')$, \textit{such that} $U(W')$ \textit{is included in the closure of} $\Sigma - \text{ins}(W')$.
+
+\textit{Subproof.} Suppose that such $W'$ exists. Let $\Delta' = \text{ins}(W')$, $\Sigma' = \overline{\Sigma - \Delta'}$, so that $\Delta' \cap \Sigma' = U(W')$, $\Delta' \cup \Sigma' = \Sigma$. Let $A = \Gamma \cap \Delta'$, $B = \Gamma \cap \Sigma'$; then $(A, B)$ is a separation of $\Gamma$ of order
+\begin{equation*}
+|V(\Gamma) \cap \Delta' \cap \Sigma'| = |V(\Gamma) \cap U(W')| < \theta
+\end{equation*}
+since $W'$ has length $< 2\theta$. Now for every $e \in E(A)$, since $e \subseteq \text{ins}(W')$ and $e \cap U(W') = \emptyset$, there is a circuit $C$ of $K | W'$ with $e \subseteq \text{ins}(C)$, and for such a circuit $C$,
+\begin{equation*}
+V(C) \cap V(\Gamma) \subseteq U(W') \cap V(\Gamma) = \Delta' \cap \Sigma' \cap V(\Gamma) = A \cap B.
+\end{equation*}
+By (1.1), $(A, B) \in \mathscr{T}$, and so $(A \cap \Gamma_1, B \cap \Gamma_1) \in \mathscr{T}_1$. But
+\begin{equation*}
+F \cap V(\Gamma_1) = U(W) \cap V(\Gamma) \subseteq V(A \cap \Gamma_1)
+\end{equation*}
+and $|F \cap V(\Gamma_1)| = \theta$, and $F \cap V(\Gamma_1)$ is free with respect to $\mathscr{T}_1$, a contradiction since $(A \cap \Gamma_1, B \cap \Gamma_1)$ has order $< \theta$. This proves (2).
+
+Now there is no closed walk $W^*$ of $K$ of length $< 2\theta$ with $U(W^*) \subseteq \Delta$ and with $e_1, e_{\theta/2} \subseteq \text{ins}(W^*)$. \fix{For every edge of $K$ in $\Delta$ lies in some $\bar{D}_i$ and joins $v_i$ to a vertex of $P_i$ or $P_{i+1}$ (since $v_i$ is the vertex of $K$ in $r_i$, and $r_i \cap \Delta \subseteq \bar{D}_i$). Give $v_i$ the level $2i$ ($0 \le i \le \theta/2$), and each vertex of $P_i$ the level $2i - 1$ ($1 \le i \le \theta/2$); then each edge of $K$ in $\Delta$ changes the level by one. Now let $W^*$ be such a walk. Since $e_1 \cap U(W^*) = \emptyset$, there is a circuit $C$ of $K | W^*$ with $e_1 \subseteq \text{ins}(C)$, and $\text{ins}(C) \subseteq \Delta$ by (1). Suppose that $v_0 \notin V(C)$. Then $U(C)$ is disjoint from $D_0$ and from the open arc of $F$ in $\bar{D}_0$. But $\text{ins}(C)$ meets $D_0$, since $e_1 \subseteq \bar{D}_0$; so $D_0 \subseteq \text{ins}(C)$, as $D_0$ is connected and misses $U(C)$, and then $\text{ins}(C)$ contains a point of $F$ not in $U(C)$, which is impossible for a closed disc in $\Delta$ bounded by $U(C)$. Thus $v_0 \in V(W^*)$, and in the same way $v_{\theta/2} \in V(W^*)$. A closed walk through a vertex of level $0$ and a vertex of level $\theta$ has length at least $2\theta$.}\fixnote{fix:6.1-proof-walk}{The paper gives no proof of this sentence. The proof inserted here uses a level function on the vertices of $K$ in $\Delta$.} In particular, since $\text{ins}(W) \subseteq \Delta$, there is no such $W^*$ with $U(W^*) \subseteq \text{ins}(W)$. By (2) and [5, Theorem (8.13)], $d(e_1, e_{\theta/2}) \ge \theta$, as required. $\square$

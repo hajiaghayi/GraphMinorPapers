@@ -1,0 +1,35 @@
+\origpage{251}{GRAPH MINORS IV}
+By repeating this for each $\rho$ and piecing together the resulting injections $\beta$, we deduce that there is an infinite $I_6 \subseteq I_4$ such that
+
+\hspace*{12pt}(8) \textit{For all $i, i' \in I_6$ with $i' > i$ there is an injection $\beta \colon U(S_i) \to U(S_{i'})$ such that for each $s \in U(S_i)$,}
+
+\hspace*{12pt}(i) $\pi(\sigma_i(s)) = \pi(\sigma_{i'}(\beta(s)))$
+
+\hspace*{12pt}(ii) \textit{there is a realizable expansion of $P_i \mid \sigma_i(s)$ in $P_{i'} \mid \sigma_{i'}(\beta(s))$.}
+
+Choose $i, i' \in I_6$ with $i' > i$. We claim that $P_i$ is simulated in $P_{i'}$. For let $\alpha$, $\beta$ be as in (6), (8). Let $\eta_0$ be defined by
+\begin{align*}
+\eta_0(v) &= \{v\} && (v \in V_0), \\
+\eta_0(e) &= \alpha(e) && (e \in E(\sigma_i(o(S_i)))).
+\end{align*}
+Then $\eta_0$ is an expansion of $P_i \mid \sigma_i(o(S_i))$ in $P_{i'} \mid \sigma_{i'}(o(S_{i'}))$. Moreover, $N_{V_0}$ is a realization of
+\begin{equation*}
+(P_{i'} \mid \sigma_{i'}(o(S_{i'}))) \setminus \eta_0(E(\sigma_i(o(S_i))))
+\end{equation*}
+since $P_{i'}$ is removable, and $N_{V_0}$ realizes $\eta_0$.
+
+By applying (8.2) to $P_i$, $P_{i'} \mid (\sigma_{i'} \times T)$ we deduce that $P_i$ is simulated in $P_{i'} \mid (\sigma_{i'} \times T)$, where $T$ is the subtree of $S_{i'}$ with
+\begin{equation*}
+V(T) = \{o(S_{i'})\} \cup \beta(U(S_i)).
+\end{equation*}
+But $P_{i'} \mid (\sigma_{i'} \times T)$ is simulated in $P_{i'}$, since $P_{i'}$ is removable, and hence $P_i$ is simulated in $P_{i'}$ by (7.1). This completes the proof. $\square$
+
+\sectionhead{9. \textsc{Verifying} \textsc{The} \textsc{Axioms}}
+
+Let $\Omega$ be a well-quasi-order, and let $P_i = (G_i, \mu_i, \Delta_i, \phi_i)$ $(i = 1, 2, \dots)$ be a countable sequence of robust $\Omega$-patchworks, where for $i' > i \ge 1$, $G_i$ and $G_{i'}$ are disjoint. Let $\mathscr{R}$ be the set of all rooted hypergraphs $G$ such that $G^- \subseteq G_i^-$ for some $i$. For each $G \in \mathscr{R}$ we define $P(G)$ to be $P_i \mid G$ where $G^- \subseteq G_i^-$. (This is well-defined since such a value of $i$ is unique unless $G$ is null.) Let us say that $G \in \mathscr{R}$ is simulated in $G' \in \mathscr{R}$ if $P(G)$ is simulated in $P(G')$. We verify Axioms 1-4.
+
+Axiom 1. This is clear from the definition of $\mathscr{R}$.
+
+Axiom 2. This is immediate from (7.1).
+
+Axiom 3. Let $G \in \mathscr{R}$, and let $(G_1, G_2)$ be a separation of $G$ of order $k = |\bar{\pi}(G)|$, such that there is no separation $(H_1, H_2)$ of $G$ of order $< k$ with $G_1^- \subseteq H_1^-$. Then every separation $(J_1, J_2)$ of $G_2^-$ with $V(G_1^- \cap G_2^-) \subseteq V(J_1)$

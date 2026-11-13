@@ -1,0 +1,31 @@
+\origpage{378}{N. Robertson, P.D. Seymour / Journal of Combinatorial Theory, Series B 90 (2004) 325--385}
+\noindent $\Omega_{\chi'}(k)$ defined by
+\begin{equation*}
+E(\Omega_{\chi'}(k)) = \{x \in E(\Omega_{\chi}(k)) : x \not\ni \omega_0\} \quad (k = 2, 3),
+\end{equation*}
+and for each long side $S$ of $\Phi'$, $\Omega_{\chi'}(S) = \Omega \times R$.
+
+\hspace*{12pt}(5) \textit{$\chi'$ is not orientedly bad.}
+
+\textbf{Subproof.} Since $\omega_0 \in E(\Omega_{\chi}(2)) \cup E(\Omega_{\chi}(3))$, it follows that either $\Omega_{\chi'}(2) < \Omega_{\chi}(2)$ or $\Omega_{\chi'}(3) < \Omega_{\chi}(3)$. Since $\chi$ satisfies $\mathbf{S}_2$, this proves (5).
+
+For each $i \ge 1$, let $\Gamma'_i$ be the painting in $\Sigma'$ defined by
+\begin{align*}
+U(\Gamma'_i) &= (U(\Gamma_i) \cap \Sigma') \cup \text{bd}(\Sigma'), \\
+V(\Gamma'_i) &= V(\Gamma_i) \cap \Sigma',
+\end{align*}
+and for each edge $e$ of $\Gamma'_i$, $\gamma_{\Gamma'_i}(e)$ equals $\gamma_{\Gamma_i}(e)$ if $e \in \Gamma_i$, and \del{$\gamma_{\Gamma_i}(e)$}\fix{$\gamma_{\Gamma'_i}(e)$} agrees with the direction of the \del{short} side of $\Phi'$ containing $e$ otherwise.\fixnote{fix:14.1-side}{The edges of $\Gamma'_i$ not in $\Gamma_i$ are the edges of $\Gamma'_i$ in $bd(\Sigma')$, and some of them lie in long sides of $\Phi'$ (for instance $e_{r^*}$, for $r^*$ regular). Each of them must be directed as the side of $\Phi'$ that includes it, by the third condition in the definition of ``fit''. Also, the march being defined is $\gamma_{\Gamma'_i}(e)$.} For each $e \in E(\Gamma'_i)$, if $e \in E(\Gamma_i)$ let $\phi'_i(e) = \phi_i(e)$; if $e$ is a short side let $\phi'_i(e) = e$; and otherwise $\phi'_i(e)$ has already been defined. We see that
+
+\hspace*{12pt}(6) \textit{For each $i \ge 1$, $(\Gamma'_i, \phi'_i)$ is a $\chi'$-coloured painting, and the set $\{(\Gamma'_i, \phi'_i) : i \ge 1\}$ is similarly oriented.}
+
+By (5), we deduce
+
+\hspace*{12pt}(7) \textit{There exist $j > i \ge 1$ and a linear inflation $\sigma'$ of $(\Gamma'_i, \phi'_i)$ in $(\Gamma'_j, \phi'_j)$.}
+
+For each $A \in \mathscr{L}_i$, if $A$ is a hub sector or an $r^*$-sector for some singular $r^*$, then let $\tau(A)$ be the corresponding sector of $\mathscr{L}_j$. If $A$ is an $r^*$-sector of some $W \in \mathscr{W}$ for some regular $r^*$, let $e$ be the border edge of $\Gamma'_i$ with $r^* \in e$, and let $s^* \in (V(\Gamma^*_j) \setminus V(\Gamma_j)) \cap \sigma'(e)$. Let $\tau(A)$ be the $s^*$-sector of $(\Gamma_j, \phi_j, \lambda_j, \mathscr{T}_j)$ at $W$. We claim that $\tau \colon \mathscr{L}_i \to \mathscr{L}_j$ is an outline, satisfying $\xi_i(A) \le \xi_j(\tau(A))$ for all $A \in \mathscr{L}_i$.
+
+\hspace*{12pt}(8) \textit{For every $A \in \mathscr{L}_i$, $\xi_i(A) \le \xi_j(\tau(A))$.}
+
+\textbf{Subproof.} If $A$ is a hub sector or an $r^*$-sector for some singular $r^*$, this follows from (3) and (4). If $A$ is an $r^*$-sector for some regular $r^*$, then $\tau(A)$ is an $s^*$-sector for some regular $s^*$, and $\xi_i(A) \le \xi_j(\tau(A))$ since $\phi'_i(e) \le \phi'_j(\sigma'(e))$, where $e$ is the border edge of $\Gamma'_i$ with $r^* \in e$. This proves (8).
+
+\del{Let $G' = \bigcup(\sigma'(v) : v \in V(\Gamma'_i))$. Now $G'$ is not necessarily a subgraph of $\text{sk}(\Gamma_j)$, because some of its edges are included in $\text{bd}(\Sigma')$. Let $E'$ be $\{e \in E(G') : e \subseteq \text{bd}(\Sigma')\}$. For each $e \in E'$, choose $v \in V(\Gamma^*_j) \setminus V(\Gamma_j)$ with $v \in e$. Then $v$ is regular, because $e$ is not a short side of $\Phi'$. Let $P(e)$ be the union of the paths given by 13.6. Let $G$ be the}

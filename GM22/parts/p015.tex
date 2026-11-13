@@ -1,0 +1,30 @@
+\origpage{544}{N. Robertson, P. Seymour / Journal of Combinatorial Theory, Series B 102 (2012) 530--563}
+\hspace*{12pt}$\bullet$ \textit{for distinct edges $e, e' \in \phi(E(H)) \cap E(A_i)$, $\psi_i(e) \ne \psi_i(e')$; for $e \in \phi(E(H)) \cap E(A_i)$, $\psi_i(e) \notin E(\psi_i(P))$ for each component $P$ of $L_i$; and if in $A_i$, $e \in \phi(E(H)) \cap E(A_i)$ has head (respectively, tail) $u$, then in $A'_i$, $\psi_i(e)$ has head (respectively, tail) in $V(\psi_i(P))$, where $P$ is the component of $L_i$ containing $u$.}
+
+For each $e \in E(H)$, let $\phi'(e) = \psi_i(\phi(e))$, where $\phi(e) \in E(A_i)$ and $1 \le i \le k$ (such an $i$ exists and is unique, from the hypothesis). For $1 \le i \le k$, let
+\begin{equation*}
+L'_i = \bigcup(\psi_i(P) : \text{$P$ is a component of $L_i$}).
+\end{equation*}
+Then $L'_i$ is a subgraph of $A'_i$. Let $L' = L'_0 \cup L'_1 \cup \dots \cup L'_k$, where $L'_0$ is as in the theorem.
+
+\hspace*{12pt}(4) \textit{For $0 \le i \le k$, $Z_i \subseteq V(L_i)$ and $Z'_i \subseteq V(L'_i)$.}
+
+\textit{Subproof.} From the choice of $L$ it follows that $Z_0 = Z \subseteq V(L_0)$. If $u' \in Z'_0 = Z'$, then $\alpha(u') \in Z_0 \subseteq V(L_0)$, and so $u' \in V(L'_0)$ from the hypothesis about $L'_0$ (with $u = v$). Thus (4) holds if $i = 0$, and we assume that $i \ge 1$. Again $Z_i \subseteq V(L_i)$ since $Z \subseteq V(L)$. If $u' \in Z'_i$, let $u'$ be the $j$th term of $\pi'_i$, let $u$ be the $j$th term of $\pi_i$, and let $P$ be the component of $L_i$ with $u \in V(P)$. By (3)(i), $u' \in V(\psi_i(P)) \subseteq V(L')$. Hence $Z'_i \subseteq V(L'_i)$, as required. This proves (4).
+
+\hspace*{12pt}(5) \textit{For $0 \le i \le k$, $u, v \in Z'_i$ are $L'_i$-connected if and only if $\alpha(u), \alpha(v)$ are $L_i$-connected.}
+
+\textit{Subproof.} For $i = 0$ this is a hypothesis of the theorem, and so we assume that $1 \le i \le k$. Let $u, v \in Z'_i$. Let $\pi_i$ be the sequence $p_1, \ldots, p_t$, let $\pi'_i$ be $p'_1, \ldots, p'_t$, and for $1 \le j \le t$ let $P_{\delm{i}\fix{j}}$ be the component of $L_i$ containing $p_{\delm{i}\fix{j}}$.\fixnote{fix:6.3-claim5}{As in the note to the proof of 6.3 on page 543, the index $i$ is fixed, and the next sentences use $P_r$ and $P_s$.} Let $u = p'_r, v = p'_s$ say. Now $\psi_i(P_r)$ is the component of $L'_i$ containing $p'_r$, by (3)(i), and so $u, v$ are $L'_i$-connected if and only if $\psi_i(P_r) = \psi_i(P_s)$. By (3)(i), $\psi_i(P_r) = \psi_i(P_s)$ if and only if $P_r = P_s$. But $P_r = P_s$ if and only if $\alpha(u), \alpha(v)$ are $L_i$-connected, for $\alpha(u) = p_r \in V(P_r)$ and $\alpha(v) = p_s \in V(P_s)$. This proves (5).
+
+\hspace*{12pt}(6) \textit{$L'_i = L' \cap A'_i$ for $0 \le i \le k$, and $u, v \in Z'$ are $L'$-connected if and only if $\alpha(u), \alpha(v)$ are $L$-connected.}
+
+\textit{Subproof.} This follows from (5) and 2.5.
+
+For $v \in V(H)$ we define $\phi'(v)$ to be a component of $L'$, as follows. If $V(\phi(v)) \cap Z \ne \emptyset$, choose $z' \in Z'$ such that $\alpha(z') \in V(\phi(v)) \cap Z$, and let $\phi'(v)$ be the component of $L'$ containing $z'$. (This exists, by (4).) If $V(\phi(v)) \cap Z = \emptyset$, then since $\phi(v) \cap (A_1 \cup \dots \cup A_k)$ is non-null by hypothesis, there is a unique $i$ ($1 \le i \le k$) with $\phi(v) \subseteq A_i$. Then $\phi(v)$ is a component of $L_i$; let $\phi'(v) = \psi_i(\phi(v))$. Since $\phi'(v) \subseteq A'_i$ and by (3)(i), $V(\phi'(v)) \cap Z'_i = \emptyset$, it follows that $\phi'(v)$ is a component of $L'$.
+
+\hspace*{12pt}(7) \textit{For $v \in V(H)$, if $z \in Z'$, then $z \in V(\phi'(v))$ if and only if $\alpha(z) \in V(\phi(v))$.}
+
+\textit{Subproof.} Suppose that $z \in Z'$ and $\alpha(z) \in V(\phi(v))$. Then $V(\phi(v)) \cap Z \ne \emptyset$, and so there exists $z' \in Z'$ with $\alpha(z') \in V(\phi(v))$, such that $z' \in V(\phi'(v))$. Thus $\alpha(z)$ and $\alpha(z')$ are $L$-connected, and so by (6), $z$ and $z'$ are $L'$-connected, that is, $z \in V(\phi'(v))$, as required. Conversely, suppose that $z \in Z' \cap V(\phi'(v))$. If $V(\phi(v)) \cap Z = \emptyset$, then $V(\phi'(v)) \cap Z' = \emptyset$ from the definition of $\phi'(v)$, a contradiction. Thus $V(\phi(v)) \cap Z \ne \emptyset$, and so there exists $z' \in V(\phi'(v)) \cap Z'$ such that $\alpha(z') \in V(\phi(v))$. Then $z$ and $z'$ are $L'$-connected, and so by (6), $\alpha(z)$ and $\alpha(z')$ are $L$-connected, that is, by (1), $\alpha(z) \in V(\phi(v))$. This proves (7).
+
+\hspace*{12pt}(8) \textit{If $v_1, v_2 \in V(H)$ are distinct then $\phi'(v_1) \cap \phi'(v_2)$ is null.}
+
+\textit{Subproof.} Suppose that $\phi'(v_1) \cap \phi'(v_2)$ is non-null. Since $\phi'(v_1)$ and $\phi'(v_2)$ are both components of $L'$, it follows that $\phi'(v_1) = \phi'(v_2)$. If $V(\phi'(v_1)) \cap Z' = \emptyset$, then $V(\phi(v_1)) \cap Z = \emptyset = V(\phi(v_2)) \cap Z$, and so there exists $i$ with $1 \le i \le k$ such that $\phi'(v_1) \subseteq A'_i \setminus Z'_i$; and hence $\phi(v_1), \phi(v_2) \subseteq A_i$. Then
